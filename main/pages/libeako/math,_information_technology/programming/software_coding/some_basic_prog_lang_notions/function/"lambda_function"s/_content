@@ -1,0 +1,30 @@
+*  are function literals; all practical functional programming languages are built on the lambda calculus, thus lambda functions are the only possible function literals in them
+* the syntax
+	* is usually similar to "<intro> <input> <sep> <value>", where
+		* <intro> is usually one of these
+			* "fun"
+				* as a shorter version of "function"
+			* "lambda"
+			* "λ"
+				* the greek alphabet character pronounced as "lambda"
+			* ""
+			* "\"
+				* for example in haskell
+				* looks slightly similar to "λ"
+		* <input> is a symbol for the input of the function
+		* <sep>
+			* separates the symbol of the input from the rest of the function definition
+			*  is usually one of these
+				* "->"
+					* this is most common in practical programming languages
+				* "."
+					* this is most common in mathematical text, especially lambda calculus
+				* ":"
+					* rare
+		* <value>
+			* is an expression whose value to be mapped by the function to the input
+			* may contain reference to the input
+	* example
+		* fun x -> x +1
+			* ## class
+				* code-block

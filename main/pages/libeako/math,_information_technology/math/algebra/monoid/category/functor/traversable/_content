@@ -1,0 +1,11 @@
+* introduction
+	* Traversable: A Remix
+		# links-to external http://duplode.github.io/posts/traversable-a-remix.html
+	* Jeremy Gibbons and Bruno Oliveira : The Essence of the Iterator Pattern
+		# links-to external http://web.comlab.ox.ac.uk/oucl/work/jeremy.gibbons/publications/#iterator
+* the most precise source is perhaps
+	* An Investigation of the Laws of Traversals
+		# links-to external https://arxiv.org/pdf/1202.2919.pdf
+	* requires a solid knowledge of category theory
+* proof that traversable functors are exactly the finit containers
+	* "A representation theorem for second-order functionals"

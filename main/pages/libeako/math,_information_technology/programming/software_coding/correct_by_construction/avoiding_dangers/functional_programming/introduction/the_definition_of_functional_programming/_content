@@ -1,0 +1,35 @@
+* there are 2 important definitions of functional programming :
+* theoretical
+	* the theoretical definition is the accurate one, it tells what functional programming exactly is
+	* in functional programming procedures [as pieces of code] represent real mathematical functions
+	* what is a real mathematical function ?
+		* in math there are multiple possible definitions for 'function' but i will use the most straightforward one, the set theoretical one
+		* a function from I to O is a special binary relation [a set of pairs (i, o), where i is element of I and o is element of O]
+			* for the programmer this translates to that the function is a set of input-output pairs
+		* such that for each i in I : there is exactly one o in O such that the pair (i, O) is an element of the function
+			* for the programmer this translates to the facts that
+				* for each input there is an output
+					* that is : the evaluation of the procedure for that input ends with returning a valid output; that is : the procedure is not left with an exception, by terminating the program and does not get stuck in an infinite loop or infinite recursion
+					* this property of a function is known as "totality"; iff a function has this property then we may say that the function is "total", otherwise that the function is "partial"
+					* wikipedia article
+						# links-to external https://en.wikipedia.org/wiki/Partial_function
+				* for each input the output is single, that is "deterministic"
+					* with other words :
+						* a function invoked with the same input value returns the same output value, always
+							* independently from 
+								* the context the function is invoked from
+								* the actual state of any variable
+								* the number of times the function has been invoked
+								* the number of threads and processor cores the function is being evaluated in
+								* ...
+		* because this is a mathematical definition : a function is "pure"ly this, nothing else, nothing else is part of a function
+			* for the programmer this translates to the fact that the procedure does not do anything other than calculating the output, that is : the procedure does not have a "side effect"
+	* summary :
+		* a procedure is functional if and only if it is
+			* total [the evaluation ends with a valid return value]
+			* deterministic [returns the same output for the same input]
+			* pure [does not have side effect]
+* practical
+	* the practical definition tells what functional programming is in the practice of software coding, that is functional programming as a software coding paradigm
+	* determinism and totality are considered to be mandatory by every software coder, but not purity; that is : having side effect is and only it is the difference between a functional and imperative software coding
+	* expressed simple : in practise : functional programming is avoiding side effects

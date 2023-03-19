@@ -1,0 +1,22 @@
+* by computerphile
+	* the color analogy
+		# links-to external https://youtu.be/NmM9HA2MQGI
+	* the mathematical bits
+		# links-to external https://youtu.be/Yjrfm_oRO0w
+	* with man in the middle
+		# links-to external https://youtu.be/vsXMMT2CqqE
+* how to find multiplicative generators of a finite field Fp*
+	* theorem used
+		* if
+			* p is prime, y is integer not divisable by p
+			* y ^ n = 1 mod p
+		* then
+			* the n is multiple of the order of y mod p
+	* assuming 
+		* p and q are primes and q divides p-1
+	* choose x in Fp*
+	* y : = x ^ ((p-1)*q)
+	* then y ^ q = 1 mod p
+	* by the theorem above : q is multiple of the order of y 
+	* q is prime, hence the order of y is either 1 [then y = 1 mod p] or q [because q is prime]
+	* (x ^ ((p-1)*q) = 1 mod p) is easy to test

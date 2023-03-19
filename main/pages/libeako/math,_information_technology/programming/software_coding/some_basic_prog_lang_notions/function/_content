@@ -1,0 +1,82 @@
+* syntax of the type
+	* of functions from type x to type y is 
+		* x -> y
+			* ## class
+				* code-block
+* "lambda function"s
+	# links-to internal kofbgukzdvgkwkxsn
+* syntax of function definition
+	* literal
+		* f = fun x -> ... x ...
+			* ## class
+				* code-block
+	* syntax sugar
+		* f x = ... x ...
+			* ## class
+				* code-block
+* function application
+	* function application is a very common kind of expression in programming, especially in functional programming languages; hence many language designers think it deserves the most simple syntax :
+	* f x
+		* ## class
+			* code-block
+	* this is the invocation of function f with argument x
+* type as parameter
+	* the input of a function can be a type too; then the output of the function is said to be "parametrically polymorph" in Haskell and "generic" in Java, C#
+	* f : (t : Type) -> (... t ...)
+		* ## class
+			* code-block
+	* where (...  t ...) is a type expression depending on t
+	* in some languages [notably Haskell] we just write
+	* f : (... t ...)
+		* ## class
+			* code-block
+	* and the compiler automatically infers that that t, not known for it, is an implicit type input
+* the "identity" function
+	* id : (t : Type) -> (t -> t) id x = x
+		* ## class
+			* code-block
+	* the name is from the fact that the output is "identical" to the input
+* implicit arguments
+	* an argument in a function application is implicit iff it is not specified by the coder explicitly, but let the compiler infer it; a formal input is implicit iff its corresponding argument in applications can be implicit; which formal inputs are implicit; in Haskell the type inputs are implicit; in Idris the coder can specify any input to be implicit, by enclosing them in curly braces, but still lets the coder to explicitly specify them in applications, in curly braces
+	* for example in Idris:
+		* in declaration:
+			* f : { t : Type } -> t -> ...
+				* ## class
+					* code-block
+		* in application
+			* explicitly: (f {t = Integer} 5) or implicitly: (f 5)
+* multi-input functions
+	* most functional programming languages adopt the simplicity of math: a function has exactly 1 input and exactly 1 output; still: this simplicity is enough to express multi-input functions too; let us see how:
+	* the intuitive solution is to pack the multiple inputs into one, their product:
+		* (x1, x2) -> y
+			* ## class
+				* code-block
+	* an other solution is:
+	* currying
+		# links-to internal rjvsfevdnztyxdlzn
+	* flipping the order of the inputs
+		* flip : (a->b->c) -> (b->a->c) flip f b a = f a b
+			* ## class
+				* code-block
+	* application of a function in this form is like "(f x) y"; function application is chosen to be left-associative to make us able to omit the braces: "f x y"
+* infix naming
+	* chaining multiple applications of the same binary function can look ugly with the regular syntax; for example here is the summation of 5 values:
+	* (plus (plus (plus a b) c) d) e
+		* ## class
+			* code-block
+	* we wish instead the following syntax:
+	* a + b + c + d + e
+		* ## class
+			* code-block
+	* to enable this: functions may have names with irregular characters and be applied by placing the arguments to both sides of them
+	* because this is an irregular syntax of function application: the syntax needs to disambiguate between the application of the function and regular referencing it; for example: how should the compiler know that "(x+y)" is the invokation of "+" with "x" and "y" instead of the invokation of "x" with "+" and 'y'; to resolve this ambiguity the language designers decided to obligate the coder to disambiguate with special syntax: the invokation is as intuitively guessed but the normal reference is with round braces, for example: "x + y" and "(+) x y" denote the same thing
+	* do not overuse this syntax
+		* this irregular syntax is to make chains of binary function applications neater; but outisde of this usage: they do not have advantage; but they do always have disadvantage relative to the regular naming: it is often difficult to guess their meaning from their name, search for them on the web, pronounce them
+* function composition
+	* (>>>) : (t1 -> t2) -> (t2 -> t3) -> (t1 -> t3) f >>> g = fun x -> g (f x)  (<<<) = flip (>>>)
+		* ## class
+			* code-block
+* partial function application
+	# links-to internal xbcsbisjcnxjnneun
+* point-free style
+	# links-to internal oqmgrzzqokpkuawgn

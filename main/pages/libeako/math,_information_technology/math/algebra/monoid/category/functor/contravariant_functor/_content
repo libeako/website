@@ -1,0 +1,12 @@
+* the ordinary functor is also named "covariant functor" :
+* interface Functor tf where   map : (x -> y) -> (tf x -> tf y)
+	* ## class
+		* code-block
+* the name "covariant" means "varying together" and refers to the property that the objects of the output arrow [tf x -> tf y] of the map function varies together with the objects of the input arrow [x -> y]
+* in this sene : the contra-variant functor is the same as the co-variant functor, but the objects vary in opposite direction :
+	* interface ContravariantFunctor tf where   map : (y -> x) -> (tf x -> tf y)
+		* ## class
+			* code-block
+* a more mathematical expression
+	* a [co-variant] functor is a function-pair between the respective slots of 2 categories, that is a homomorphism
+	* a contra-variant functor is a function-pair between the respective slots of 2 categories, that is a homomorphism if the source category is reversed [changed to its dual]

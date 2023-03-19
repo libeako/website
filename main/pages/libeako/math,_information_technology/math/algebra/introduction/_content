@@ -1,0 +1,31 @@
+* the word "algebra" is used for multiple unrelated things in mathematics; the one this section is about is a field of mathematics that studies collections of values with "additional structure"
+* what is an "algebra" ?
+	* it  is similar [in certain aspects] to what a type is in programming
+	* it is a tuple (values operations laws)
+		* "values" is a set of values [also named "objects"]
+			* like a type in programming has a set of values
+		* "operations" are functions from a tuple of values to a value
+			* like methods of types in programming; though in an algebra the output has the same single type as the values
+			* also can be named with "method"
+		* laws
+			* these are mathematical statements about ["properties" of] the operations
+				* most often equalities
+* the collection of values is often named with these other phrases : "base collection", "sort", "slot", "type", "carrier"
+* "arity" of an operation
+	* is the number of inputs of the operation
+	* an "n-ary" operation has n inputs
+	* some common aliases
+		* "nullary" = 0-ary
+			* a 0-ary operation is a constant; it points out an element of the collection
+		* "unary" = 1-ary
+		* "binary" = 2-ary
+* 2-ary operations
+	* in the following when an algebra has only 1 of them : i will use symbol ⊕ for its infix form
+	* some famous predicates on them:
+		* commutativity
+			* for-all x y
+				* x ⊕ y = y ⊕ x
+		* associativity
+			# links-to internal zupoyjhzjznssfcbn
+* abstract algebra
+	# links-to internal ynlpmhvhaztlsbqsn

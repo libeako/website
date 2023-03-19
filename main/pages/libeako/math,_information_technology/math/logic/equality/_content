@@ -1,0 +1,82 @@
+* equality is so fundamental that we can easily overlook the fact that it can be studied on its own
+* in this section i will try to define equality, even more : to derive its definition; and in the meantime : see some interesting connections between the pieces
+* technically equality is a 2-ary relation; but we definately would not consider all 2-ary relations as equalities; all task that remains here for us is to find good condition when a 2-ary relation is considered an equality
+* according to my first intuition :
+	* 2 things are equal iff they behave the same way
+* a more precise expression of this is :
+	* iff all functions relate the same output value to them
+* formally :
+	* (x = y) := (forall function f : f x = f y)
+* from equality to equivalence
+	* i see problems with this definition :
+		* it is circular
+		* some trivial relations [the empty, the full] satisfy it
+			* according to the empty relation : no 2 values are equal, not even any value to itself
+			* according to the full relation : all values are equal, even different ones
+			* this contradicts our intuition about equality 
+	* our intuition about equality
+		* all values are equal to themselves
+		* all pairs of 2 different values are not equal to each other
+	* we can study these intuitive requirements on a type that has at least 2 values; for the sake of simplicity let us consider a type that has exactly 2 values; all such types are isomorphic to each other, thus it does not matter which one we pick; let us pick the famous type "bool"; to remedy the triviality problem for type bool : i fix the equality relation for it as follows : let the values of bool be named with "ff", "tt" and the equality relation for it be { ff = ff, tt = tt }
+	* fixing the equality relation for type bool alone solves the circularity and triviality problem for all types other than bool
+		* because  :
+			* (forall function f : f x = f y) <=> (forall predicate f : f x = f y)
+				* i use word "predicate" here as a synonym of ordinary function whose output type is bool
+				* proof of the equivalence :
+					* => is trivial
+					* <= can be done by contradiction :
+						* let us assume that x0 y0 are values of a type so that ((a function f exist :  f x0 =/= f y0) and (forall predicate p : p x0 = p y0))
+						* p x : = (f x = f x0)
+						* then (f x0 = f x0) = (f y0 = f x0)
+							* the left side of this is trivially true, hence the right side must be true too; we arrived at a contradiction
+* the definition of equality so far is  :
+	* (x = y) := (forall predicate p : p x = p y)
+* to remedy the problem for type bool too : i move the usage of bool to the meta level
+	* (x = y) := (forall proposition p : p x <=> p y)
+* from <=> to =>
+	* it is enough to use implication instead of equivalence
+	* formally :
+		* (forall predicate p : p x <=> p y) <=> (forall predicate p : p x => p y)
+	* proof :
+		* => : trivial
+		* <= : predicate p is quantified universally, hence for all p : the statement (p x => p y) also holds for the negations of p, which gives (p x <= p y)
+* the definition of equality so far is :
+	* formally :
+		* (x = y) := (forall predicate p : (p x => p y))
+	* with natural language :
+		* equality is a relation that preserves truth of all logical propositions
+* validation
+	* i am satisfied with this version of the definition of equality; the following is its validation
+	* necessity
+		* i do expect the real equality relation to preserve truth
+	* sufficiency
+		* trooth preservation seems to be strong enough to imply equality because it implies the usually expected properties of equality
+		* here i will list the intuitively required properties of equality and for each : state it formally, substitute equality in it with my definition of equality, proove the property
+		* substitutivity
+			* (x = y) => forall f : (f x = f y)
+			* with my definition :
+				* (forall proposition p : (p x => p y)) => (forall proposition q : (q (f x) => q (f y)))
+			* proof :
+				* choose p := (q <<< f)
+		* equivalence
+			* reflexivity
+				* forall x : x = x
+				* with my definition :
+					* forall x : forall proposition p : (p x => p x)
+				* proof :
+					* reduce to reflexivity of implication in logic
+			* symmetry
+				* forall x y : ((x = y) => (y = x))
+				* with my definition :
+					* forall x y : ((forall proposition p : (p x => p y)) => (forall proposition q : (q y => q x)))
+				* proof :
+					* choose p := not <<< q
+			* transitivity
+				* forall x y z : (((x = y) and (y = z)) => (y = z))
+				* with my definition :
+					* forall x y z :
+						* (forall proposition p : (p x => p y)) and (forall proposition q : (q y => q z))
+						* =>
+						* forall proposition r : (r y => r z)
+				* proof :
+					* choose (p := r) and (q := r) and use the transitivity of implication in logic

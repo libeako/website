@@ -1,0 +1,43 @@
+* a runtime performance improvement
+	* lens is lift, it can lift a function from the content level to the container level : 
+	* lift : Lens e c -> (e -> e) -> (c -> c) lift lens f c = set lens (f (get lens c) c
+		* ## class
+			* code-block
+	* the 'lift' function uses both the 'get' and 'set' methods of Lens and it uses them separately; this can be wasteful, especially when the path between container and the focused element is long; this is the case for example when lens represents an element in an associative data structure at a fixed index
+	* this problem can be easily eliminated by modifying the data structure representing lens to an equivalent one but which merges the 2 accessors
+	* the data structure i used to introduce lens :
+		* let Lens e c = { get : c -> e, set : e -> c -> c }
+			* ## class
+				* code-block
+	* after flipping the input order in 'set' :
+		* let Lens e c = { get : c -> e, set : c -> e -> c }
+			* ## class
+				* code-block
+	* now both data members are functions with common input type ['c']; we can swap a product of 2 such functions to a function into product :
+		* let Lens e c = c -> (e (e -> c))
+			* ## class
+				* code-block
+	* the lift function with the new lens representation is
+		* lift : Lens e c -> (e -> e) -> (c -> c) lift lens f c_old =  	let r = lens c_old 	in (second r) (f (first r))
+			* ## class
+				* code-block
+		* by sharing the output of the lens function ['r'] we avoid to reach the focused element twice
+* comparing to c#'s properties
+	* if you are a c# programmer then the lens concept may remind you about what is known as "properties" in the c# language
+	* generally in any imperative language one would write 
+		* w.x.y = new_value
+			* ## class
+				* code-block
+	* to set the value of a member 2 layers below an object
+	* functional programmers would not do that to avoid state mutation, but instead they would use lens as follows :
+		* put (lens_x <<< lens_y) new_value w
+			* ## class
+				* code-block
+		* this syntactlcally looks longer, but conceptually has the same complexity as in imperative language
+	* but optics are much better than language-level "references"
+		* they are first class
+			* lens is the reification of language level references; we can store them, get them as input of function, give them as output of function
+		* they are functional
+		* properties as in c# correspond to only lens; but lens is only one category of optics
+		* optics are not constrained technically by the language; a c# property must be in the container class; with lens one can focus the element of a map - without having to modify the code of the map data structure
+		* lens can merge the get and set methods to save execution time

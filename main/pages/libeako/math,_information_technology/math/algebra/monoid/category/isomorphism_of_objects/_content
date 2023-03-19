@@ -1,0 +1,6 @@
+* definition : 2 objects [X, Y] in a category are isomorphic iff 2 arrows between them exists and they are inverses of each other
+	* formally
+		* exist arrows (i : x->y), (j : y->x) : (((i >>> j) = empty x) and ((j >>> i) = empty y))
+* if x and y are isomorphic then
+	* it is easy to see that arrows {from | to } x have a one-to-one correspondence with arrows {from | to } y; this means that the objects x, y are indistinguishable by their connections with other objects, that is from the category theoretical point of view; hence in category theory one often considers a collection of isomorphic objects "unique up to isomorphism"
+* if the category is algebras as objects with homomorphisms as arrows then the category theoretical definition of isomorphism corresponds to the algebraic definition

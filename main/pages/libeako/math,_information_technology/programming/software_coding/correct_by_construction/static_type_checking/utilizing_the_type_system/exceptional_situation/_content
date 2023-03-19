@@ -1,0 +1,6 @@
+* value that perhaps do not exist should be represented by an "optional type", which is usually named "Option" or rather "Maybe"; this is better solution than the null value
+	* link to explanation
+		# links-to internal fbctgaodsnjovflln
+* exceptional return values should be returned by wrapping the return value of the function into an "Either" type that is an algebraic data type that has 2 states : either the normal value or the exceptional one; this is better solution than throwing and catching exceptions
+	* link to explanation
+		# links-to internal jiwpglhclkfxvqohn

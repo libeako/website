@@ -1,0 +1,29 @@
+* pair
+	* the value-set of the pair of types x, y is the cartesian product of the value-sets of types x, y; with other words : it is a pair of values of type x and of type y
+	* the size [as the number of values] of a product type is the product of the sizes of its member types ; hence the name "product type"
+	* syntax of type : "x y"
+	* syntax of literal :  "(vx, vy)", where (vx : x) and (vy : y)
+* the components of the product are also often named "field", "member"
+* tuple
+	* "tuple" is a generalization of pair, in which the number of components is not fixed to be 2, but can be any non-negative integer; an "n-ary" tuple has exactly n components
+	* tuple is a structural type construction : 2 tuples with the same number, order, type of components are considered equal
+		* because of this generality the names of the components of a tuple refer their positions; for example "_1", "_2", ... or "first", "second", ...
+* record
+	* the nominal correspondent of tuple is "record"
+		* summary : a record type is just like a tuple but it has a distinguishing name and names for its components
+		* in c#, java, c, c++ the record types are some of {"struct", "class"}
+		* the nominal nature gives us the ability to distinguish product types different in intent but accidentally with same structure
+		* the represented concept may provide special names for the components
+	* to read the value of a field f from record r
+		* i will use the syntax
+			* get f r
+				* ## class
+					* code-block
+		* for tuple types i will use the ordinal as name of the field
+* canonicity
+	* records are mathematically equivalent to the tuple of their fields
+	* all tuples can be represented by multiple application of a pair
+		* for example : a tuple consisting of 3 components a, b, c is equivalent to ((a b) c) 
+	* the pair tuple is the simplest one capable of this; hence it is considered to be the "canonical" product type; hence it is named with (*) too
+* 0-tuple
+	* a tuple with exactly zero members is also a thing; just as other tuples: its syntax is just a list of the members in round braces: "()", both for the types and for the literals; in the case of 0-tuples: nothing is in the braces because no member is of a zero-tuple; hence () : (); () is the only member of (), hence () is a singleton type, and due to its fundamental nature: it is often chosen in practice when a singleton type is needed

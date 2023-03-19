@@ -1,0 +1,23 @@
+* semanticity
+	* the versioning scheme should be semantic - that is the components of the version should mean a level of seriousness of change; a usual list of such levels is (backward compatibility broke).(new feature).(bug elimination).(internal)
+* uniform 0 usage
+	* the usage of 0 should be uniform across all the components of the version; this is what i want to convince you about here on
+	* currently a habit is widespread in the versioning scheme culture that the first component of the version starts from 1 and the other components start from 0
+	* this is an inconsistency, introducing additional complexity, hurting theoretical beauty
+	* no need exists for this inconsistency, never did
+	* this bad habit stems probably simply from stupidity, confusing the behavior of the components of a version with the behavior of the digits in single numbers
+	* the only cause of this habit living on is the strength of habits in humans
+	* if you do not understand what i mean by uniform usage of 0 across the components of the version: here is an example: the very first ready version should be 1.1.1.and not 1.0.0.*
+	* starting numbering things [versions and other things too] from 1 is good, it is natural and intuitive; one can test this by asking a person not yet affected by the programmers' habbit of starting from zero, like a 6 years old, to number his|her toys : [s]he will start from 1
+	* starting from 1 has a very useful practical advantage too: we can use the 0 as one that predecesses the others and is special; what version would that be? the not yet ready version, which is still under development
+	* this exact thinking is applied in the bad versioning culture too, but only in the first component of the version
+	* my suggestion is to apply it in all the components
+		* that is: a 0 at position p should mean that the version is not yet ready at level (p+1); yes: at one level higher
+		* why is the shift? well: we can not use a component to indicate the non-rediness of the corresponding level because we need that component to represent the version at that level that is being developed
+		* thus: a 0 means a not ready version of what is before it; foo.0 is a development version of foo
+		* some examples:
+			* 3.2.5.1 is totally ready; though the users will probably meet only the 3 highest level components
+			* 3.2.5.0 is ready at higher levels but not in quality, fixes are to come
+			* 3.2.0.is ready at the backward compatibility level but is not ready at the features level [new features are to come]
+			* 3.0.*.is not ready even at the backward compatibility level
+			* 0.*.*.- what does this mean though?; here the highest component is 0; nothing is before it; looks like my propagated unifmority is broken; well, it is not broken, we just need to think about it more generally; what is before the highest component of the version?; the name of the product; we can think of the full product name as the base name then the version which is a list of numbers; then any prefix of the full name [or full version] is the name of a set of properties characteristic to the corresponding version branch; the name itself is also a prefix of the full version and it also has some properties that is characteristic to it throughout the whole life of the product, even through the backward compatibility breakages; this set of characteristics constitute the concept of the product; this 0.*.*.is a version from the development phase when not even the concept of the product is clear yet, a development version towards the proof of concept

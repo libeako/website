@@ -1,0 +1,8 @@
+* content addressing is getting used fast and largely; we already rely on software that almost depend on content addressing
+* examples
+	* git
+	* nix
+	* ipfs
+	* unison [programming language]
+* i am sad and worried by seeing this trend; because i have a problem with content addressing : it is incorrect : the probability of hash collision is positive; insignificantly small, but still positive; most people do not worry about this, they are satisfied by the fact that the probability is small; but i feel that software should be correct, almost correct is not enough; i learned about the fact that the underlying physics may fail too, for example by quantum tunneling; but a software is a mathematical entity, i feel that hence we should strive for full theoretical correctness, regardless of the imperfection in the physical implementation of computing
+* content addressing uses cryptographic secure hashing, which is advanced math; relying on advanced math in a software whose task is just organizing information is a design smell

@@ -1,0 +1,5 @@
+* on nix : everything is in /nix/store
+* ls /nix/store/*searched-software*
+* you can write 
+	* echo /nix/store/*searched-software
+	* to make the shell write the full concrete path

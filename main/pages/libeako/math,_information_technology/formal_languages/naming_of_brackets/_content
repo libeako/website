@@ -1,0 +1,12 @@
+* brackets have multiple names, depending on the shape of the bracket character
+	* "bracket"
+	* "parentheses"
+	* "braces"
+* my opinion
+	* there should be a general name for them
+		* "bracket" seems okay
+	* and the difference between the shape kinds should be expressed with an adjective
+		* [square bracket]
+		* (round bracket)
+		* <angle bracket>
+		* {curly bracket}

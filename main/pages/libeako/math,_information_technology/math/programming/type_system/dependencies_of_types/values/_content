@@ -1,0 +1,13 @@
+* compile-time values
+	* we usually think about types as compile type entities; we usually think about values as runtime entities; so how could a type depend on a value? a very simple answer is : sometimes the value is known in compile time
+	* a good example is linear algebra
+		* we can and should write our vector, matrix types and all the functions around them so that they take the number of dimensions as input
+		* we also want the number of dimensions to be at type level
+			* runtime storing and passing around this info would cause runtime efficiency decrease
+			* we want the type system to catch errors that are mismatch of the number of dimensions; for example we want to make it impossible to accidentally sum to vectors with different number of components
+	* c++, rust are good example of languages that enable types to depend on some types of values that are known in compile time
+	* what types of values may be type dependencies?
+	* c++ constrains them to be of integral types
+	* haskell is very lenient in this : it permits dependency on values of custom algebraic datatypes
+* run-time values ["dependent types"]
+	# links-to internal svwipwixjxnwcfern

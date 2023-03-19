@@ -1,0 +1,36 @@
+* in your imperative language
+	* simple local variables 
+		* do not change them, instead make a new one for the new value
+		* trust the compiler in optimization for efficiency [variable life analysis]
+		* the compilers perhaps do this under the hood anyway
+			* see static single assignment
+				# links-to external https://en.wikipedia.org/wiki/Static_single_assignment_form
+	* loop
+		* wrap the general loop control structure into a pure function :
+		* loop : (State -> Bool) -> (State -> State) -> State -> State loop iterate_if iter init =     if cond_to_cont init         then loop (iter init) iter iterate_if         else init
+			* ## class
+				* code-block
+	* collection
+		* instead of traversing a collection with iterator | enumerator use a "fold" function :
+		* fold : (initial_value : t) (combine_values : t -> e -> t) (collection : c e) -> t
+			* ## class
+				* code-block
+		* in the .Net base library such a function exists with name "Aggregate"
+	* effects
+		* in functional programming effects are allowed and possible
+		* just they happen not to the side, hence they are not side-effects, instead they are returned by the function as a value that represent an action; by this the function only computes the effect, does not perform it, thus remains pure
+		* you can do this (delegating the performance of effects up) in java and c# too; and you should
+		* how far up should the delegation continue? generally till a function swallows it [performs it but without its entirety having side-effect]
+			* escapable effects
+				* these are ones that can be performed by an ordinary function without its entirety having side-effect; example : mutation of a local variable
+			* inescapable effects
+				* such effect is inherited by the calling function; example : input, output; the calling function of the main function is the runtime system, which is outside of the language semantics and hence is allowed to perform the effect as a side-effect
+* switch programming language
+	* if you are using an imperative language i encourage you to change to a functional one; at least for weekend coding; it is not a waste of time to learn a good functional language; they are going to take over the software engineering worlds anyway
+	* functional languages do not keep punishing you for being functional, hence with them you are more likely to fall in love with functional programming; by the way : after that you will be more brave to embrace functional programming even in non-functional languages
+	* which language?
+		* some people find it useful to start with one that does not have much capability; to avoid distractions; one such popular language is elm; its type system is weak enough to make it impossible to express advanced mathematical abstractions, hence you will not find those anywhere near elm; thus elm's type system being weak is a feature that provides you with a safe learning space for functional programming; elm is a way for those who want to step one at a time
+		* but it is not necessary to start with a weak language; once i needed to write a small program; i was very noob, i even did not know what a monad is, still i managed to write the program in haskell [which is the most advanced mature general purpose language] by restraining myself to only the essential features of haskell; it was not difficult, you also can jump straight into haskell too
+* hide mutation in laziness
+	* by travis ...
+		# links-to external http://travis.athougies.net/posts/2018-05-05-dynamic-programming-is-recursion.html

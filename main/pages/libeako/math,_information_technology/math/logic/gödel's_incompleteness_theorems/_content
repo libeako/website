@@ -1,0 +1,9 @@
+* informally :
+	* if a logic is consistent then it is incomplete
+	* proof without mathematical rigour :
+		* "this sentence is not provable"
+		* is the sentence above provable ?
+			* yes :
+				* it is true [because of the soundness precondition], thus it is not provable; provable and not-provable => the logic is inconsistent
+			* no :
+				* the sentence is true; we have a sentence which is true and not provable, that is the logic is incomplete

@@ -1,0 +1,41 @@
+* same as a magma but has + 1 law: the binary operation is associative
+*  i will use the name "composition" for this operation
+* in programming
+	* interface Semigroup t     (⊕) : t -> t -> t     -- associative
+		* ## class
+			* code-block
+	* the law is written as comment; this is because the type system of most programming languages [including haskell] is not strong enough to conveniently express most of the laws [for example associativity]
+* some examples of semigroups
+	* i denote the examples with juxtaposition [separate the (collection of values) and the operation with only a space]
+	* 
+		* numbers +
+		* numbers *
+		* numbers minimum
+		* numbers maximum
+		* lists (list concatenation)
+		* endo-functions (function composition)
+			* f is endo-function iff exists t : (f : t -> t)
+		* sets union
+		* sets intersection
+		* propositions and
+		* propositions or
+* the convenience of implicit semigroup inputs
+	* the associative composing operation makes us able to compose some values, for example the elements of a collection
+	* recall the fold function:
+		* fold : i -> (i -> e -> i) -> Collection e -> i
+	* this form is general, the accumulating value has type [i] different from the element type of the collection [e]
+	* in the special case when (i = e and a semigroup implementation of e exists)
+		* fold_semigroup : Semigroup e => e -> Collection e -> e fold_semigroup i = fold i (⊕)
+			* ## class
+				* code-block
+		* this version has one less inputs : the element combining function is missing; it is replaced by one more implicit input, a Semigroup implementation for e, which contains such combining function; this example implementation is just forwarding the call to the general fold function, explicitly forwarding the implicitly got combining function
+* creating new semigroups from existing ones
+	* composing via product type construction
+		* instance Semigroup (t1 t2) <= (Semigroup t1, Semigroup t2) where     (x11, x12) ⊕ (x21, x22) = (x11 ⊕ x21, x21 ⊕ x22)
+			* ## class
+				* code-block
+		* of course this works with any kind of product type [any tuples, vectors]
+	* through non-existance
+		* instance Semigroup (Maybe x) <= Semigroup x where     just x1 ⊕ just x2 = just (x1 ⊕ x2)     _ -> none
+			* ## class
+				* code-block

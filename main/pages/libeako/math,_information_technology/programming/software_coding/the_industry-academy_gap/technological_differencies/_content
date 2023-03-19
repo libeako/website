@@ -1,0 +1,28 @@
+* this is a short overview of the differences between the attitudes of industry and academy to software coding technology
+* functional programming
+	* the industry was not interested in functional programming, the imperative style is deeply in the industry, even without any practical reason, just as a culture; side-effects are everywhere
+	* the academy fell into love with functional programming at first sight and their marriage was strong and became fruitful
+	* since the beginning till now and in the future : most of what the academy does is done in the framework of functional programming
+* the type system
+	* strength
+		* the academy is obsessed with making the type system so strong as practically possible
+		* the industry did not appreciate much the strength of the type system
+			* much of the coding work in the industry even in 2019 happens in programming languages without static type checking
+			* the very popular Java, C# languages
+				* started even without generics
+				* even now [2019] they do not provide even type alias and sum type
+			* type function polymorphism was folklore in the academic programming language Haskell already in 1998 for great good; then C# did not even exist; 20 years later this feature is not even scheduled into Java or C#
+	* kind
+		* the academy
+			* based its practical programming language type systems on mathematical type theory
+		* the industry
+			* did not think that mathematical foundation of the type system is useful at all; somewhat as an alternative it heavily pursued the intuitive but wrong idea of object orientation
+	* type interface system
+		* the academy based its one on static method dispatch ["type classes"]
+		* the industry based its one on dynamic method dispatch ["object-orientation"]
+* the fight against complexity
+	* the industry invented so named "object-oriented design patterns", which are mostly just overcomplications of very simple things like higher order functions
+	* the academy turned towards mathematical tools, mostly monoid compositionality
+* the fight against bugs
+	* the industry capitulated to the fact that practical software development produces many bugs, and established the practice of heavy, systemized testing
+	* the academy pursued the "correct by construction" direction, which is to construct code so that certain bugs are not possible to make

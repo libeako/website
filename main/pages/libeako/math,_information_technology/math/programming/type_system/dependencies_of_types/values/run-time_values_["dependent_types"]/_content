@@ -1,0 +1,18 @@
+* at first think it seems impossible for a type to depend on a value that is known only in runtime; but it is possible; such types are mostly referred to as "dependent types"; the key in solving this seemingly contradiction is to realize that in some situations the compiler can reason about values [for example determine the equality between 2 of them] without knowing their values exactly; the compiler treats these values symbolically
+* dependent types are basically sorted into 2 groups
+	* dependent pair type
+		* a value of it is a pair, the type of the second member being able to refer to the first member; the type of these pairs has the form (x y) where y may refer to the actual value of the first member of the pair, of type x
+		* refinement types can be represented by dependent pair types
+	* dependent function type
+		* a value of it is a function, the output type of which may refer to the input value of the function
+* the coder usually marks value dependencies of types indicating if the value should or not be availably in runtime, to avoid unnecessary runtime efficiency decrease
+* dependent types can represent statements from quantified logic
+* availability
+	* haskell
+		* does not yet have dependent types directly; the type system is strong enough to express them, but only in a cumbersome way; direct support for dependent types is planned
+	* some languages exists with good dependent type support, notably idris, f*; but they are not mature yet for industrial usage
+* other sources
+	* Datatypes of Datatypes - by Conor McBridge
+		* this is a big collection of usages of dependent types
+		* link
+			# links-to external http://www.cs.ox.ac.uk/projects/utgp/school/conor.pdf

@@ -1,0 +1,10 @@
+* though i already used this category, for the very introduction into category theory, still it is worth to see it separately, because it is very important; so i repeat the correspondence between programs and category here
+* 
+	* programs --- category
+	* type --- object
+	* function between types --- arrow between objects
+* several names of this correspondence
+	* "category of programming" - i like this one
+	* "category of types"
+	* "category of types and functions"
+	* "syntactic category"

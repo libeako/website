@@ -1,0 +1,47 @@
+* all notations should be used for 1 purpose only
+	* "()"
+		* the main purpuse of the round braces is grouping
+		* thus do not use them for anything else
+		* unfortunately : currently they are used for
+			* in natural languge
+				* additional information
+					* instead : "[]" is good for this purpose
+			* in formal language
+				* function invokation
+				* sectioning
+					* in haskell like syntax
+				* tuples
+* english
+	* postfix "s" at end of verb (in singular 3rd person)
+		* is unnecessary
+		* is inconsistent with the other cases
+			* singularity and subject
+				* singularity
+					* single
+					* plural
+				* subject
+					* i
+					* you
+					* it
+				* these are conceptually independent dimensions and hence should be treated such
+					* the s postfix [singular, 3 person] break this rule
+			* 3 subject cases exist - why only 1 of them is distinguished from the other 2? what is the difference between it and the rest that is false to the other 2?; nothing
+	* past tense as hypothesis
+		* example
+			* "if i was rich then i would not have to work"
+		* is bad idea
+			* because past tense and hypothesis are not related at all
+		* (simply using "would" in the hypthesis part too) is more sensible
+* in writing
+	* the {small, big} character difference
+		* is unnecessary
+		* its only purpose is to visualize the start of a sentence, but that can be done more simple and economically by a special sentence starting letter
+			* the following example sentence proves that capital letter usage is a conceptually bad way to visualize sentence start : "[some not essential detail] in a  gib sentence"; the previous sentence contains a some not essential detail as its beginning; where do you apply capitalization?; in the detail or in the rest?; both feels weird
+		* causes errors
+			* for example in
+				* passwords
+				* file paths
+					* including URLs
+		* requires convention
+	* formal
+		# links-to internal oeyeaezscdudpsshn

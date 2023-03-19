@@ -1,0 +1,7 @@
+* it is an intuitive, simple, but powerful type system feature; it has very good benefit/cost value
+* it is a generalization of algebraic data types : it has type parameters and the constructors of it may specify the exact type they return
+* usefulness
+	* ...
+	* it is practically indispensable for embedded languages
+* on the haskell wiki
+	# links-to external https://en.wikibooks.org/wiki/Haskell/GADT

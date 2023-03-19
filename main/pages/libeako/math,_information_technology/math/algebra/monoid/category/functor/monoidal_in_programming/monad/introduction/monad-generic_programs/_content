@@ -1,0 +1,11 @@
+* examples :
+	* the kliesli composition
+	* loop
+		* a simple loop : 
+			* loop : (s -> bool) -> (s -> s) -> (s -> s) loop cond iter actual =      if (cond actual)          then loop iter cond (iter actual)         else actual
+				* ## class
+					* code-block
+		* a monadic version [the iteration may have effect] : 
+			* loop : Monad m => (s -> bool) -> (s -> m s) -> (s -> m s) loop cond iter actual =      if (cond actual)         then loop iter cond =<< iter actual         else return actual
+				* ## class
+					* code-block

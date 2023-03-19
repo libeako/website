@@ -1,0 +1,19 @@
+* git
+	* deleting history
+		* to save storage cost for github hosting a website
+		* this algorithm deletes all the history
+			* take the storage of the history away from git
+				* mv .git .git-backup
+			* create the repository like it would not exist before
+				* git init
+			* get back the configuration of the repository
+				* cp .git-backup/config .git/config
+			* create a first commit in the new history
+				* git add --all git commit -m "1"
+					* ## class
+						* code-block
+			* push this whole renewal of the history to the server
+				* git push -u --force origin master
+			* delete folder .git-backup
+		* to delete only part of the history is also possible
+			# links-to external https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history

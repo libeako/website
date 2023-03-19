@@ -1,0 +1,25 @@
+* alignment was invented in order to start a block of code [which is a subtree in the concrete syntax tree] at the end of the line of the header of the block
+* example
+	* my_awesome_function x = let local_value = some_value                         in do_something_with local_value
+		* ## class
+			* code
+			* code-block
+* the obvious competitor of this style is
+	* my_awesome_function x =     let local_value = some_value     in do_something_with local_value
+		* ## class
+			* code
+			* code-block
+* i will refer
+	* to the former one with "aligned"
+	* to the latter one with "indented"
+* looking at this simple artificial static example : the reason to like the aligned one seems obvious
+	* looks better because the name of the declared thing is separated, it does not overlap horizontally with the value it is given
+	* uses 1 less line, due to utilizing the header line of the whole code block
+* but in realistic scenario the table turns
+	* in the aligned version the value side of the equation starts more to the right, hence it has less room horizontally; if the block is bigger, then the probability is also bigger of having to break a line compared to the same line in the indented version and by this making the aligned version to use more lines
+	* if the name of the defined thing or its parameters changes
+		* to longer
+			* then in the aligned version the left horizontal space decreases, hence breaking of long lines may become necessary
+		* to shorter
+			* then also, not from necessity but to save space
+		* such reformatting is almost impossible to do perfectly via automation

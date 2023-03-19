@@ -1,0 +1,32 @@
+* quantity, unit
+	* they are distinct notions; thus replacing one with the other is never valid
+	* unfortunately a lot of people has the bad habbit to use its unit instead of the quantity
+	* here are the corrections in some common instances of mistakes of this type
+		* "milage" -> distance
+		* "tonnage" -> weight
+* "electronc" -> "digital"
+	* there is a difference between them and neither one contains the other
+	* unfortunately most people has the bad habit to use "electronic" when they mean "digital"
+		* for example "email" is a usually incorrect term
+			* because the underlying physical implementation
+				* is not intended to refer to
+				* is not even totally electronic
+					* a large part of current digital mailing is optical or magnetic
+* "{ left | right } hand side"
+	* "hand" is irrelevant here
+* a "telephone number" is not a number
+	* it is just an identifier
+	* a number expresses quantity
+	* it is only a tradition to use only digits in the identifier text
+	* hence please use "telephone identifier" or "tel id" for short instead of "telephone number"
+	* the story is the same with "car number plates"
+* "hard" -> "difficult"
+	* as you do not say "soft" instead of "easy" either
+* non-commutative infix binary functions - their symbol should indicate direction
+	# links-to internal nxzlijntqwyqbotrn
+* naming by writing convention is confusing
+	# links-to internal lrqkxdxhiergjzbtn
+* inertia of bad naming
+	# links-to internal lzlbissatagvlidrn
+* english
+	# links-to internal psdnbveuovaulfvkn

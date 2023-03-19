@@ -1,0 +1,8 @@
+* see monoid
+	# links-to internal cabjryjnnstdjmvbn
+* some new notation from me
+	* (>>>) = the composition function
+	* (<<<) = flip (>>>)
+* introductory example
+	* category to monoid is like static type checking to dynamic
+		# links-to internal acpczjniflsjxgxhn

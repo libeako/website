@@ -1,0 +1,24 @@
+* this is abstraction of values over types according to the data structures of the types
+* example
+	* think about the equality test function (==) : t -> t -> bool; what is the natural, sensible implementation of it? for built-in types it is trivial and supplied by the language semantics; what about composite types? for product types it is natural and common to define the equality test as the conjunction of all the equality tests on the members of the product type, that is : the corresponding data members are compared and the overall equality is true iff all the members are equal; for sum types it is natural and common to define the equality so that to be true their case must equal and then the data stored in it must equal; thus we give a natural and common definition of all types, which are constructed from built-in types composed by the product and sum type construction
+* generally
+	* we can define a value abstract over multiple of types in the following way
+		* define it on some ground types
+		* define it for a subset of data structure constructions
+			* product, sum, function type constructions
+* more examples
+	* equality test
+	* comparison by ordering
+	* serialization
+	* functorial map
+	* fold
+* terminology
+	* this method has multiple names in use ["generic", "polytypic"], but none of them seems good for me
+	* "polymorphic" <-> "polytypic"
+		# links-to internal fcatpqbmpylblknyn
+* haskell
+	* haskell provides tool for such generic definitions; but its implementation is cheap in the sense that the evaluation of such generic values often comes with [asymptotically constant] calculational overhead
+* other sources
+	* a first tuturial
+		* Generic programming in Haskell - by Wolfgang Jeltsch
+			# links-to external https://jeltsch.wordpress.com/2016/02/22/generic-programming-in-haskell/

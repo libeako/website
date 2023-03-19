@@ -1,0 +1,52 @@
+* this section presents the famous and very important correspondence between programming and logic
+* it has been one of the greatest piece of knowledge i have ever learned in programming
+* this correspondence is known by several names
+	* the most popular ones are
+		* "propositions-as-types"
+		* "curry-howard correspondence"
+* i want to present it by not immediately telling it to you, but leading you to it on a path step-by-step; my derivation will resemble how one could get to it on his|her own; my goal with choosing this approach is to show that it is not some lucky arbitrary correspondence, but a deep, strong, natural connection
+* the derivation
+	# links-to internal oirlocgmsfwjamlin
+* i stop using category theory from here
+	* programming --- logic
+	* type --- statement
+	* function between types --- proof of implication between statements
+	* inhabited type --- constant true
+	* empty type --- constant false
+* so far coders thought that they can use their programming language mainly for  implementing programs only; but with the programming-logic correspondence we gain the ability to use the same programming language for logic tasks too
+* in the following i will use
+	* function (rep : Statement -> Type) that outputs the type representing the input statement; answering the questions which statements can be represented [the domain of this function] and how [the implementation of this function] is postponed
+	* function (derep : Type -> Set Statement)
+		* is the inverse of rep [as a relation]
+		* it returns a collection of statements
+* proving
+	* completing the definition (x : T = ...) proves that a value of T exists, but then [by the programming-logic correspondence] (derep T) is true; so one can prove statement S by showing up a value of (rep S); so values of (rep S) act like witnesses of S
+	* expressions ["programs"] that produce a witness are proofs
+	* static type checking verifies the proof; proving do not require runtime work from the program that the proof is in
+	* what about (x : Empty = x) ?
+		* the problem
+			* this x witnesses that the Empty type has a value, thus it proves falsity and in turn falsity implies every statement; thus we can prove everything; however it feels like a logic does not have any value if it can prove everything; it looks like i contradicted my derivation, the whole programming-logic correspondence is buggy; fortunately : that is false, the programming-logic correspondence is not buggy; so (x : Empty = x) must be wrong; it smells anyway, because we know for sure that Empty does not have any value; but it passes static type-checking !
+		* the solution
+			* remember that the programming-logic correspondence is a mathematical phenomena, so it needs to be true only for real mathematical objects; but (x : Empty = x) does not define a real mathematical object, because its evaluation recurses forever; the lesson learned : the programming-logic correspondence to be sound requires totality
+		* this is the big reason why the importance of totality checking in the future will grow [as the practice of proving grows]; preferably the programming language and the compiler will do much of the totality checking
+* representing logical constructs
+	# links-to internal huktyxsxcfntvnbjn
+* modern type systems [for example the calculus of constructions] are powerful enough to express higher order logical statements and their proofs, and also are simple and intuitive; hence we can expect that future programming languages will build on them; the idris programming language is already an example of this; in these simple but powerful languages we can do all of the following activities
+	* creata a data type model of the domain of the program
+	* state mathematical theorems about the domain of the program
+	* proove those theorems
+	* specify the task of the program
+	* implement the program
+	* verify that the program complies to the specification
+* it is worth to stress again : all these activities can be performed in the same, simple programming language; one does not need to learn a new language for the logic tasks, but can use the same programming language as he|she is accustomed to from program implementation; also : all the tools of coding invented to construct programs can be used to construct statements and proofs
+* additional source
+	* philip wadler is a researcher in computer science and did much of his work around the programming-logic correspondence; he produced good introductory material; i highly recommend to you to watch and read them
+		* talk from 2016
+			# links-to external https://www.youtube.com/watch?v=aeRVdYN6fE8
+		* article
+			* Propositions as Types
+				# links-to external http://homepages.inf.ed.ac.uk/wadler/papers/propositions-as-types/propositions-as-types.pdf
+			* this text is a masterpiece
+			* i read it twice
+				* once when i was very noobish, i hardly knew anything about this or related subjects; the text was still understandable somewhat
+				* but when i already knew some lambda calculus, type theory and logic then it struck me how well phil wadler could explain the topic; the text is structured very well, it is compact, precise, deep, understandable, interesting

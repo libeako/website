@@ -1,0 +1,17 @@
+* my fundamental law of user interface design is that the structure of the representation should correspond to the structure of the represented
+* the structure
+	* of the program code
+		* is the concrete syntax tree
+	* of the text is
+		* indentation and alignment
+		* indentation is nestable, alignment is not; hence the winner among the 2 is indentation; but do they fight against each other? can they not be both applied? they can; but i think readability would be better if people sticked to a single method
+* the structural correspondence law implies that (parts of the text that are closer to each other by meaning [in the syntax tree] are also closer to each other in appearance [formatting]); this makes the formatting easier to
+	* read
+		* a great example for this is ordinary natural language text in books, websites, pdf articles; in them one may easily observe that the higher in the structure of the text a sequence of parts are, the more white-space is interleaved into it to separate the parts; with other words : bigger parts need stronger separation
+		* the part types in descending order
+			* section
+			* paragraph
+			* word
+			* letter
+	* edit
+		* for example it is easier to select and move a block of text then if the part partially occupies some lines

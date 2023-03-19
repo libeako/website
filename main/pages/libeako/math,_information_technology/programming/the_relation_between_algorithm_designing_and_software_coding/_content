@@ -1,0 +1,7 @@
+* a clear, strong separation is between algorithm designing and software coding; but so far as i see : companies do not utilize it
+* algorithm design and coding are different professions, the skill-sets required are almost distinct;
+* the algorithm designer designs algorithms and data structures, abstract stuff, he probably must know math; he does not need to know anything about how to implement his algorithms
+* the coder does not need to be able to design algorithms, to know math, instead must know everything about implementing algorithms : the programming language, the compiler, the version control software, the debugger, the profiler, certain common libraries and must have practice in using them, should know their weaknesses and how to work around them; should feel how to organize code for best readability and maintainability
+* as you can see : both professions does not have to know anything what the other has to know
+* of course it helps to know a little about the neighbor profession; for example i would suggest that the algorithm designer reviews the implementing code of the algorithm and that the coder tries to understand how and why should the algorithm work and the design decisions in it; but while these are healthy : they are not necessary and can be learned during the cooperation between the algorithm designer and coder
+* hence companies [which can afford to employ multiple persons for the job] should employ distinct algorithm designers and coders to utilize specialization in their professions

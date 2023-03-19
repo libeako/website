@@ -1,0 +1,34 @@
+* the definition of functional programming
+	# links-to internal ahdbojilddohjnkjn
+* functional programming is a special case of avoiding danger, where the danger is not being a real function; hence it is a special case of correct by construction
+	* link to 'avoiding danger'
+		# links-to internal brqzviybtynlulwln
+	* link to 'correctness by construction'
+		# links-to internal ftkadhwzfhvfbwnkn
+* functional programming is much easier than imperative
+	# links-to internal zuvhnxrfcdqijbjen
+* applicability
+	* the functional paradigm is not domain specific, it can do everything
+* "purely" functional
+	* a purely functional programming language is one of which the core semantics does not allow side-effects
+	* since before 2000 programming language theorists know that anything reasonably expected from a general purpose programming language can be provided by a purely functional programming language
+	* purity unleashes the benefits of functional programming, because in a pure language the properties of functional programming are not only anticipated but guaranteed, they may not be violated even accidentally, they can be relied on surely
+	* this has an important consequence : any general purpose programming language should be purely functional by design
+	* the most notable purely functional programming language is haskell
+* "higher-order" function
+	* is one an input of which is also a function
+	* they are very common in everyday functional programming
+* disadvantages
+	* none that i know of
+* advantages
+	# links-to internal xaxqaihzanoadflln
+* requirements
+	# links-to internal nnktlttxsmtkjnncn
+* some other motivation sources
+	# links-to internal ljokksishyxkxzjxn
+* how to be functional
+	# links-to internal ikqxdpeebyuocqcun
+* no objects in functional programming
+	# links-to internal hgbplzteiwrjegurn
+* some misconceptions about functional programming
+	# links-to internal vrdegqmtgfexpvcvn

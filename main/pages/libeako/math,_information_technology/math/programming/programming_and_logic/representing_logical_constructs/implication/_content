@@ -1,0 +1,22 @@
+* from the derivation you already know that functions correspond to implications
+* representation of implication
+	* rep (S1 => S2) := (rep S1 -> rep S2)
+* justification of the representation
+	* proposition
+		* (S1 => S2) <=> (exists f : rep S1 -> rep S2)
+		* intuitively
+			* a witness of the type (rep S1 -> rep S2) is a method of producing a witness of S2 from any witness of S1
+	* proof
+		* part =>
+			* a proof by contradiction
+				* assume such f does not exist, then
+					* both
+						* rep S1 is inhabited [= (S1 is true)]
+						* S2 is empty [= (S2 is false)]
+					* hence (S1 => S2) is false
+		* part <=
+			* reorganizing the statement
+				* ((exists f : rep S1 -> rep S2) and S1) => S2
+			* S1 => (exists s1 : S1)
+			* f s1 : S2
+			* S2 is true

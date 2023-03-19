@@ -1,0 +1,17 @@
+* each presentation style should have exactly 1 meaning
+* each meaning should be presented with exactly 1 style
+* consistency of presentation style is important
+* menu
+	* use single menu
+		* multiple menus make the navigation, search difficult, because the user does not know which menu to search in
+	* if you present cross-links between branches of the menu then make sure to give them a different style than the main menu items; for example they should be listed under a "see also" section; the goal is : the user should know that this route is not the most straight from the trunk of the menu to the searched item; in order for these links to not take part in a systematic search over the whole menu
+	* the categorization of menu items should optimize for 5-8 menu items in a menu - the optimality of these number were established based on psychological tests
+* the user is the commander
+	* actions by the software product should happen only on the explicit command of the user
+	* moving the mouse, hovering it above some element of the interface is not an expression of command [it happens all the time, even without practical purpose]
+	* pressing button is an expression of command
+	* for example : try to avoid pop-ups [including hints, previews], timeouts
+* nothing should move on the user interface unless a clear, specific, strong need
+	* the unconscious vision analysis in our brain is developed for tens of millions of years to alert for moving objects [in order to avoid being eaten by sneaky predators]; movements on the user interface strongly grab the attention, makes concentration on other parts of the user interface difficult, and for some people : almost impossible
+* art should not decrease practicality
+	* do not try to be extravagant, to amaze

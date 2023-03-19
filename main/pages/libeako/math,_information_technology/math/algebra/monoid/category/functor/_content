@@ -1,0 +1,25 @@
+* introduction
+	* definition
+		* category is a very important variety of algebras and homomorphism is a very important type of function, hence homomorphism between categories got a special name : "functor"
+	* a functor consists of 2 functions
+		* category has 2 sorts [objects, arrows], thus a mapping between categories consists of 2 functions : (one from objects to objects) and (one from arrows to arrows)
+	* functor in software coding
+		# links-to internal dkrtqrqtctaagtrxn
+* contravariant functor
+	# links-to internal fhdcexkhowvzxltxn
+* bifunctor
+	# links-to internal nzgnwlkzblthwetkn
+* profunctor
+	# links-to internal evecfkoaaczzekyan
+* naturality
+	# links-to internal nisopwyprssrsvggn
+* yoneda lemma
+	# links-to internal kopilawcleduvioyn
+* monoidal in programming
+	# links-to internal kaxxmpbkqesnqecyn
+* representable
+	# links-to internal mkybecwcndywdoosn
+* traversable
+	# links-to internal uatqvzoqdjbcizxwn
+* other
+	# links-to internal pwumwldvilzzldjvn

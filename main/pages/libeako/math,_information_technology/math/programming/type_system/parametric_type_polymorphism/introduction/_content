@@ -1,0 +1,14 @@
+* the function type annotation (f : x -> y) is just a shorter version of (f : (x : Type) -> (y : Type) -> x -> y); with other words : the type polymorph function f can be considered as a function from types to function-value; when f is parametric in a type input then we say that f is "parametrically type polymorph in" that type input, or more shortly : "parametrically polymorph in"
+	* link to 'parametricity'
+		# links-to internal qkpkvuxwtzdigyudn
+* a good example of parametric polymorphism is regular "generics" in java and c#
+* some [badly designed] programming languages provide escape hatches out of parametricity
+	* for example
+		* in .net : reflection
+		* in c++ : template specialization
+			* a famous example is std::vector<bool>, which is now considered a design mistake
+* usefulness of parametric type polymorphism
+	* genericity as paradigm
+		# links-to internal ipmcnbqgopeplpisn
+	* "free theorem"s
+		# links-to internal ejqpvlbcoexibqkun

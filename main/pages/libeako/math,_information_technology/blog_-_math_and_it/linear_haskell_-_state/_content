@@ -1,0 +1,14 @@
+* 2018-07-26
+* linear typing is a type system feature; as such it makes some runtime efficiency improvements possible and some bugs impossible; linear typing tracks that some values are used exactly once and is very useful feature
+* the idea of linear typing for haskell has been explored for some years; a proof of concept version is implemented; i estimate the final product is 2-5 years away
+* Simon Peyton Jones's presentation
+	# links-to external https://youtu.be/t0mhvd3-60Y
+* this presentation is very concise but still more understandable then most sources in this topic; it does not require prior knowledge in the topic; i highly recommend it as an introduction
+* we have some causes by which to be optimistic about linear haskell 
+	* Simon Peyton Jones feels it feasible
+	* the solution is fully backward compatible
+	* they implemented a proof of concept version and it works [compiles the haskell compiler]
+	* the implementation is small
+	* laziness does not interfere
+	* the design space seems widely explored
+* summary : the future of linear haskell seems bright though far

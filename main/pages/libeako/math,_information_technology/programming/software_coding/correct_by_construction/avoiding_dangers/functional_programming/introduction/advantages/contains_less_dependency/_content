@@ -1,0 +1,35 @@
+* in functional programming the amount of dependency in the code is an order of magnitude smaller than in imperative programming
+* reason
+	* in an imperative program the positions of mutations in the execution order is significant, moving a mutation in a procedure changes the meaning of whatever it changes place with; with other words : both the code before and after a mutation depend on the mutation relatively being where it is
+* consequences
+	* readability ease
+		* imagine that at a certain point in a procedure you want to know the value of a variable
+			* in an imperative environment you need to scan the entire part of the procedure before the point of interest to be sure you do not miss a mutation of that variable [and also do this same with the variables it depends on, transitively]
+			* in a functional environment you only need to jump to the definition of the symbol and you know its value, because you know nothing changes
+	* bug-resilience
+		* certain kinds of bugs [like not properly initializing a variable, performing a mutation too many times or earlier or later than correct] may not happen in a functional program
+	* modularity
+		* dependencies make the code difficult to change, the structure of it rigid; in a functional program : definitions can be freely reordered, with surely knowing that it will not change the meaning of the program; functional programs are very modular compared to imperative programs, pure functions can easily be built from simple other functions, even complex existing functions can be easily fragmented into several simpler ones
+		* i here quote from someone
+			* I learned programming plunging right into C , C++, Java. ... Of course, i was clueless. ... learning functional programming changed it all. ... one of my most vivid recollections of that time is my discovery of the power of simplicity. ... i realised in wonder that that beautiful and powerful world was constructed out of extremely simple pieces.
+			* link
+				# links-to external https://jaortega.wordpress.com/2006/03/17/programmers-go-bananas/
+		* this makes functional programming fun, the coder feels like he|she is playing with building blocks; hence functional programming deserves the shorter name "fun programming"
+		* modularity improves hierarchicity
+			* i wrote an example of functional programming
+				# links-to internal nxwwqhqhdzpldxmsn
+			* this discussion builds on it
+			* the dotproduct function sums the component-wise results
+			* summing some values consists of starting from a default value and accumulating the values one-by-one
+			* the dealing with the initial value is unavoidable because we need to handle the degenerate case (n = 0)
+			* i claim the conceptual closeness of these : (+), 0
+				* these are 2 of the inputs of function 'fold'
+					* the initial value [in our example : 0]
+					* the combining function [in our example : (+)]
+				* to better see why : imagine a change in requirement : the mathematicians may realize that the dotproduct function by definition should not sum but multiply the per-component values; then with the change of the combining function the initial value would have to change too [to 1, because the neutral value of multiplication is 1]
+			* where are the (+) and the 0 in the code ?
+				* in the imperative version they are far from each other
+					* are almost in the opposing ends visually; more importantly : share only the highest level node in the syntax tree as ancestor
+				* in the functional version they are right beside each other; they share a simple function application [fold 0 (+)]
+			* as shown by the previous example : by "hierarchicity" i mean that conceptually close pieces of the code are close to each other in the syntax tree too; this increases readability, bug-resilience, especially in the maintenance phase of software development
+				* in the imperative code it is easy to change (+) to (*) and forget to change the initial value too from 0 to 1

@@ -1,0 +1,9 @@
+* you should not name a thing about how you express it in writing; especially not if the choice of expression in writing is arbitrary
+* examples
+	* "left-, right-cancellable"
+		* in algebra : regarding a binary operation ∘ : f is left-cencalleble when for all x, y : f ∘ x = f ∘ y => x = y
+		* from this writing of the definition it is easy how the name originated; but it is wrong name
+		* "f ∘ x" is arbitrary syntax, we could also use "f <<< x" or "x >>> f"
+		* hence we could use "x >>> f", the order in which is opposite; welcome to a hell of confusion
+		* instead use "early-", "late-cancellable", which are independent of choice of writing
+	* "left-, right-adjoint"

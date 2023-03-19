@@ -1,0 +1,7 @@
+* gtk-3.0
+	* problem : the default scollbar size is too small
+	* solution : put
+		* .scrollbar.vertical slider, scrollbar.vertical slider  { 	min-width: 10px; }  
+			* ## class
+				* code-block
+		* into ~/.config/gtk-3.0/gtk.css

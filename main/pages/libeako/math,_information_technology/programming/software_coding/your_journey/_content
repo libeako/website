@@ -1,0 +1,64 @@
+* this part of this site is not well maintained; instead of this i recommend to you to read my newer book
+	* link to the book
+		# links-to external https://drive.google.com/drive/folders/1kiFr_OGXP6olNQjmShaPeCXiKhnA08Rp?usp=sharing
+* this part of my site is for the average industrial programmer, who works all day, in an industrial language, like Java, C++, or any non-typed or imperative or object-oriented language; i want to show you much better methods and programming languages to code with
+* you can think of this content as a book, a walkthrough, an order of topics and references to guide and more importantly: motivate you through 
+* the same journey as i went
+	# links-to internal ruwyqtccsonzjloin
+* why is this knowledge so good?
+	* emotional advantages
+		* decreases frustration
+		* increases the fun
+	* practical advantages
+		* first implementation of a program is much faster 
+		* maintainability and refactorability are much easier
+		* reusability of code is much better
+		* hugely decreases the bug-prone nature of coding ["correct by construction"]
+	* it makes one about [3-10] more efficient in coding compared to the average industrial practice
+	* its destiny is to take over the coding world, because the huge advantages
+	* it fundamentally changes how programmers think about the code and even about its task
+* this walkthrough will cover the road from JavaScript to Idris
+* i try to make the whole course both compact and explaining
+* for each method i advocate : i explain why i advocate it, hopefully in a convincing way
+* short overview about the content
+	# links-to internal idwgoifpeoznatfkn
+* the steps
+	* the industry-academy gap
+		# links-to internal ezrdpkjrokawnikjn
+	* some basic prog lang notions
+		# links-to internal jaxbiyrfnbhaormbn
+	* static typing
+		# links-to internal crulbcjvhzgpkjisn
+	* utilizing the type system
+		# links-to internal ratihdffwublrlihn
+	* functional programming
+		# links-to internal rqeeitsvmgrogdjpn
+	* structural polymorphism
+		# links-to internal xkvczulejoaflnjfn
+	* have a break
+		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in : it helps to have some practical experience with functional programming
+	* parametricity
+		* introduction
+			# links-to internal kmzluqnwmjudyuhtn
+		* free theorem
+			# links-to internal ejqpvlbcoexibqkun
+	* abstraction by mathematics
+		# links-to internal flktedmyhawaehusn
+	* increasing the strength of the type system
+		# links-to internal qzfwvslnetipqgqun
+	* a little more category theory
+		* some trivial knowledge, very good (usefulness / difficulty) value :
+		* isomorphism of objects
+			# links-to internal qxijfmdcfenjblwcn
+		* duality
+			# links-to internal yimhrxhreprkjkfkn
+		* contravariant functor
+			# links-to internal fhdcexkhowvzxltxn
+		* profunctor
+			# links-to internal evecfkoaaczzekyan
+	* programming and logic
+		# links-to internal kdtdlfyrudrcnrrln
+	* arithmetic of data types
+		# links-to internal criytwacwdgeqemun
+	* optics
+		# links-to internal ndgkrnbojyputpecn

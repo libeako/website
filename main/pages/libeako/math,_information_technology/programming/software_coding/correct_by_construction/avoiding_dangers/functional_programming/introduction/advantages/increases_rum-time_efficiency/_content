@@ -1,0 +1,29 @@
+* functional programming is good for runtime efficiency; here is why
+* optimizations 
+	* functional programming enables optimizations 
+	* runtime-efficiency optimization is program transformation; the transformed program must semantically be equivalent to the original program; the possibility of side effects often make this false or at least hard or impossible to prove, which is enough to prevent the transformation; hence functional programs, especially purely functional ones are more easy to optimize, both at low and high levels; both by the compiler, runtime system and the human coder
+	* low level
+		* efficient c++ code contains lot of "const" declaration, to enable more micro-transformation by the compiler; in functional programming languages things are constant by default
+		* a garbage collection algorithm can have competitive efficiency only if it is generational; the idea behind the generational ones is that old references are not likely to change; if this assumption is false then the generational collector can suffer; in functional programming references [like everything else] does not change [except lazy initialization]
+	* high level
+		# links-to internal iarklboiropwlnyfn
+* high level
+	* functional programming is higher level than imperative programming,
+	* but high level does not cause efficiency decrease
+		* link to explanation
+			# links-to internal yjnweovfnkfncnhpn
+	* higher level is only a useful possibility enabled by functional programming and not a prerequisite
+		* example
+			* look at the dotproduct example
+				# links-to internal nxwwqhqhdzpldxmsn
+			* it can be rewritten to low level
+				* let dp m acc = if m == 0 then 0 else (dp (m-1) (acc + a[m] b[m])) in dp n
+					* ## class
+						* code-block
+				* this version
+					* does not create temporary vertors
+					* is monomorphic [though a good compiler automatically monomorphises in the background too anyway]
+					* the recursion occurs in a tail call
+						* though this is probably true for the high level version too
+						* the compiler will reuse the execution stack frame for the recursive function call, turn the recursion into a loop using additional constant memory
+			* many of such transformations are done automatically by the compiler as optimization; so functional programming becomes both high level and runtime-efficient; but when not then a manual rewrite to lower level style to take over control remains possible

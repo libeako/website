@@ -1,0 +1,10 @@
+* introduction
+	# links-to internal rqeeitsvmgrogdjpn
+* fix-point combinator
+	* a very good explanation of the fixpoint combinator "fix" in Haskell
+		# links-to external https://www.vex.net/~trebla/haskell/fix.xhtml
+* recursion schemes
+	* Kwan : unfold and fold 
+		# links-to external https://kseo.github.io/posts/2016-12-12-unfold-and-fold.html
+	* Traversing syntax trees [Twan van Laarhoven]
+		# links-to external https://twanvl.nl/blog/haskell/traversing-syntax-trees

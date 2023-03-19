@@ -1,0 +1,17 @@
+* representation of negation
+	* rep (not S) := (rep S -> Empty)
+* justification of the representation
+	* proposition
+		* (not S) <=> (exists f : rep S -> Empty)
+	* proof
+		* part =>
+			* not S
+			* S is false
+			* rep S is empty
+			* a function exists from (rep S) to every type, including Empty
+		* part <=
+			* exists f : rep S -> Empty
+			* the only function to Empty is the empty one; thus f is empty
+			* the empty function's domain is empty; thus rep S is empty
+			* S is false
+			* not S

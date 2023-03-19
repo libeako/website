@@ -1,0 +1,72 @@
+* the strategy
+	* you may have already read
+	* my writing about the correspondence between programming and category theory
+		# links-to internal gxrbghpwcjceccgun
+	* i will show the correspondence between category theory and logic
+	* by the transitivity of correspondence we get the correspondence between programming and logic
+* propositions as types
+	* i start with the recap of correspondence between programming and category
+		* programming --- category theory
+		* type --- object
+		* function between types --- arrow between objects
+	* i intend this to be a table, just the formatting is poor
+	* so the plan is to extend this table with a new column, for logic
+		* programming --- category theory --- logic
+		* type --- object --- ...
+		* function between types --- arrow between objects --- ...
+	* to find out what objects and arrows in a category correspond to from logic : we search for famous categories from logic; one such is the category of implications between logical statements
+		* programming --- category theory --- logic
+		* type --- object --- statement
+		* function between types --- arrow between objects --- implication between statements
+	* immediately using the transitivity on what we have so far : we get that
+		* logical statements correspond to types in programming
+			* this is where the popular name "propositions-as-types" comes from for this correspondence
+		* a multiplicity mismatch exists in this correspondence
+			* in logic : exactly 0 or 1 implications exist between 2 statements
+			* in programming : multiple distinct functions may exist between 2 types
+			* ups
+			* a solution to this problem is to change our choice of implication as a correspondent of arrows in the category to proofs of the implication; multiple proofs may exist of an implication, hence this solves the multiplicity problem
+			* the updated correspondence table so far
+				* programming --- category theory --- logic
+				* type --- object --- statement
+				* function between types --- arrow between objects --- proof of implication between statements
+* truth values
+	* what we have so far is a poor world of logic, we have only statements, implications and proofs; we miss fundamental notions of logic : the truth values; i will allow myself to treat the truth values as constant statements; we already have statements in our system, thus they will fit in well
+		* programming --- category theory --- logic
+		* type --- object --- statement
+		* function between types --- arrow between objects --- proof of implication between statements
+		* ... --- ... --- true
+		* ... --- ... --- false
+	* following the main strategy : i seek corresponding things to these new logical things [the truth values] in category; these new things are statements, hence in category i seek objects; this plan seems hopeless at first : the objects in a category seem homogenous from our general perspective, how could we select from among them? the solution is to analyze the properties of the truth values inside the system of logic and translate those properties in the category; hence i analyze the properties of the truth values; how could we define these in our small system of logic developed so far? i can not use the truth values themselves in the definition, because they are what i am trying to define; so i can use only the rest of my small system of logic; what does that small system contain? statements, implications, proofs; the solution is in implication; remember : an implication m => n is true iff (n is true) or (m is false); so (truth is implicated by everything) and (false implicates everything); because our perspective on logic is general, the truth value are the only statements which have these properties; so these properties specify the false and true statements precisely
+		* programming --- category theory --- logic
+		* type --- object --- statement
+		* function between types --- arrow between objects --- proof of implication between statements
+		* ... --- object that has arrow from every object --- constant true
+		* ... --- object that has arrow into every object --- constant false
+	* accordingly : the new things in category are
+		* object that has arrow from every object
+		* object that has arrow into every object
+	* the next subtask is to find correspondents to these in programming
+		* it is trivial
+			* type that has function from every type ---- object that has arrow from every object
+			* type that has function into every type --- object that has arrow into every object
+		* in these expressions the existence of functions mean mathematical existence; with other words : not that john doe has actually typed their code into the source of a concrete program, but rather [with his words] the implementability of such functions
+* habitation
+	* we can improve the intuition in these new things in programming
+	* i will use a property of types named "inhabited", it means the type has at least one element
+	* if you find multiplicity mismatch in the correspondence here then do not worry about it, it does not cause problem
+	* type that has function from every type
+		* including from inhabited types; such function must map the existing elements of the source type to some elements of such type; that is possible if such type is inhabited
+		* if a type is inhabited then function to it from every other type exists
+		* putting the 2 statements above together results in that these types are exactly the inhabited types
+	* type that has function to every type
+		* including into empty types; such function must be empty [in the set theoretical sense]; an empty function's domain is empty
+		* if a type is un-inhabited then function from it to every other type exists [the empty function]
+		* putting the 2 statements above together results in that these types are exactly the un-inhabited types
+	* with these more intuitive expressions the table so far is
+		* programming --- category theory --- logic
+		* type --- object --- statement
+		* function between types --- arrow between objects --- proof of implication between statements
+		* inhabited type --- object that has arrow from every object --- true
+		* empty type --- object that has arrow into every object --- false
+	* from here let Empty be a fixed empty type

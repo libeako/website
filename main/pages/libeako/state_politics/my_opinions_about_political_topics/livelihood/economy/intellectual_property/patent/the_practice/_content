@@ -1,0 +1,28 @@
+* the patent officers are subjects of too high professional requirements, motivation for corruption, practically 0 responsibility; the quality of the patents generally is horrible : most of them is trivial idea, their text is difficult to understand
+* the patent officers can not be expected to do a good enough job
+	* their salary is small relative to the business value of their decisions
+	* there is no total solution to feedback bad decisions to the patent officer; bad decisions are usually brought to discussion only when some victims of it attack it, that usually happens after years or never
+* the quality of the patents is horrible
+	* most of them are just small trivial ideast
+		* these are often not lawful and then can be attacked but such attacks are expensive and long, usually only big firms can afford them, the small ones usually have to pay for the patent owner; this is why patent troll s often target small companies.
+		* patenting trivial ideas is attractive not only because those ideas do not require much work, but also because monopolies of trivial ideas are worth more; because usually the most natural, simple, intuitive solutions are the best, the most difficult to work without
+		* here are some trivial patents so that the reader have some feeling about them
+			* double click with mouse
+				# links-to external http://www.google.com/patents/US6727830
+			* concrete fields
+				* programming
+					* Lazy stack memory allocation in systems with virtual memory
+						# links-to external http://www.google.com/patents/US20050198464
+			* Rediculous patents [at Scriptol]
+				# links-to external http://www.scriptol.com/web/patents.php
+	* they are difficult to understand
+		* the reading and understanding of an average patent for a professional in the field is at least 2 hours [this is my own experience]
+		* the text of the patent is worded so that it is the most sure for legal purposes, not for informing, explaining, teaching
+		* the writer of the text is motivated in the reader to not understand the text, let the reader be an officer, a judge, a competitor
+* fining infringement is problematic
+	* the judgement about the size of the fine is very subjective
+	* in the current practice the fines are often a magnitude bigger than the value of the discovery protected by the patent; the cause of this is probably the strong lack of professional insight of the courts [and of the whole state]
+* patents are a minefield
+	* users of an idea do not get notified when the idea gets patented; but if even if did, it would be late, because then a lot of investment is already committed [design, building of production lines, ...]; even worse : the user of an idea gets notified only when the owner of the patent legally attacks it; and the attacker obviously is motivated to time the attack at the end of the business process, because the more the user of the idea have invested in using the idea - the more the attacker can squeeze out of it
+	* if someone gets an idea, but does not patent it [because for example feels it too trivial, hence does not even occur to patent it, or the firm is too small and hence they generally do not patent] but later someone else does then the earlier discoverer will not be allowed to use the idea and may easily infringe it without knowing
+	* one million patents / year are created on the planet; to monitor this many is impossible; thus anybody can become an infringer without knowing; even if someone suspects that the idea to be used is already patented by someone else : has too many patents to check; hence every firm [even just slightly innovative, like a small shop taking orders via internet] risks becoming an infringer; thus the patent system obstructs innovation

@@ -1,0 +1,50 @@
+* - is a method to branch on the structure of a data value and give new names to parts of it; the structure of the value is matched to the structure of a "pattern"; (sub-values in the value) are matched to (the symbols in the pattern); by this giving names to those sub-values
+* some people say pattern matching "destruct"s the value; this phrase may be slightly misguiding for novices; of course : the value as an object in memory does not get destroyed or modified by pattern matching
+* a simple example
+	* a pair data type
+		* Pair = Man Woman
+	* a value of the above data type
+		* a_pair = (adam, eva)
+	* pattern matching on the value
+		* (xy, xx) = a_pair
+		* here "(xy, xx)" is the pattern, in which "xy", "xx" are the symbols that to be the names of the sub-values of the value; in this case they are the components of the pair
+		* now
+			* 'xy' denotes 'adam' 'xx' denotes 'eva'
+				* ## class
+					* code-block
+		* it is equivalent to introducing these names one-by-one
+			* xy = get 1 a_pair xx = get 2 a_pair
+				* ## class
+					* code-block
+		* you probably already see advantages of pattern matching : it is often shorter, less repetitive, more readable, less error-prone
+* branching with pattern matching
+	* the following example implements the well-known if-then-else function
+	* if_then_else : Bool -> T -> T -> T if_then_else c a b =     case c         true  -> a         false -> b
+		* ## class
+			* code-block
+	* the 'case' keyword introduces the "case expression"; the value after the 'case' keyword is pattern-matched on; the case-expression continues with the list of cases; each case has a (pattern -> value) form; the value of the case expression is the value of the first case whose pattern manages to match
+	* the compiler should check in compile time that at least one of the patterns will match in runtime, with other wording: that the pattern matching is "exhaustive"
+		* warning: the haskell compiler ghc does not check this by default, you have to turn it on with an argument to the compiler
+* point-free case
+	* for "\ x -> case x ..." we have a point-free syntax sugar: "\ case ..."
+* deep pattern matching
+	* pattern matching can reach sub-values at any depth
+	* size : List e -> Integer size =     \ case         nil          -> 0         head :: tail -> 1 + (size tail)
+		* ## class
+			* code-block
+	* the following example implements a size function for Lists which takes a List of Maybes and counts only the existing elements
+	* effective_size : List (Maybe a) -> Int effective_size =     \ case         nil              -> 0         (just _) :: tail -> 1 + (size tail)         none     :: tail -> size tail
+		* ## class
+			* code-block
+	* in this example pattern matching reaches not only the elements of a List value, but also inside the Maybe structure in it
+* simultanious pattern matching
+	* matching multiple values simultaniously is possible by building a tuple of those values and matching the tuple; the following example hopefully demonstrates why sometimes this is useful
+	* unsure_sum : Maybe Int -> Maybe Int -> Maybe Int unsure_sum a b =>     case (a, b)         (just x, just y) => just (x + y)         _                => none
+		* ## class
+			* code-block
+* match on function input with branching
+	* some programming languages [for example haskell] provide a syntax sugar to combine pattern matching on inputs of functions with branching
+	* unsure_sum : Maybe Int -> Maybe Int -> Maybe Int unsure_sum     | (just x) (just y) = just (x + y)     | _        _        = none
+		* ## class
+			* code-block
+	* the purpose is to save us from having to name the inputs

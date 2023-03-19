@@ -1,0 +1,8 @@
+* category theory is a field in mathematics; it is very abstract, theoretical, foundational, even inside mathematics; one would wonder how such abstract science would be useful for the practical task of software coding; but practice has already shown that it is actually tremendously useful for software coding
+* the properties of it that make this usefulness :
+	* compose
+		* category is a generalization of monoid, which is a mathematical expression of convenient composition; in software coding composability makes tools of implementation powerful
+	* interface
+		* category theory does not use the internal properties of objects, but only the properties of the interaction between the objects; hence it is a theory of interfacing
+	* programs form a category
+		* the world of programming [the types and functions between them] itself too is a category

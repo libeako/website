@@ -1,0 +1,22 @@
+* i derive a free theorem for function of monoidal
+* its type is
+	* G X Y := (F X, F Y) -> F (X, Y)
+* forall X1 X2 : Type forall x : X1 -> X2 forall Y1 Y2 : Type forall y : Y1 -> Y2 -- equiv ((**) {X1 Y1}) ((**) {X2 Y2})   forall fxfy1 : (F X1, F Y1)   forall fxfy2 : (F X2, F Y2)   -- equiv fxfy1 fxfy2 => equiv (uncurry (**) fxfy1) (uncurry (**) fxfy2)     forall fx1 : F X1     forall fx2 : F X2     forall fy1 : F Y1     forall fy2 : F Y2     --       ((equiv fx1 fx2) and (equiv fy1 fy2)) =>       equiv (fx1 fy1) (fx2 fy2)
+	* ## class
+		* code-block
+* fxfy1, fxfy2 are not needed from here, deleting it :
+* forall X1 X2 : Type forall x : X1 -> X2 forall Y1 Y2 : Type forall y : Y1 -> Y2   forall fx1 : F X1   forall fx2 : F X2   forall fy1 : F Y1   forall fy2 : F Y2     ((equiv fx1 fx2) and (equiv fy1 fy2)) =>     equiv (fx1 fy1) (fx2 fy2)
+	* ## class
+		* code-block
+* using rule for equivalence of functors
+	* link to 'parametric equivalence of functors'
+		# links-to internal wqbrusvmsxteurmsn
+* forall X1 X2 : Type forall x : X1 -> X2 forall Y1 Y2 : Type forall y : Y1 -> Y2   forall fx1 : F X1   forall fx2 : F X2   forall fy1 : F Y1   forall fy2 : F Y2     (map x fx1 = fx2) and (map y fy1 = fy2) =>         map (x y) (fx1 fy1) = (fx2 fy2)
+	* ## class
+		* code-block
+* in the implication : from the premise i move the definition of fx2, fy2 into the consequence; this makes the premise empty, hence i drop it
+* forall X1 X2 : Type forall x : X1 -> X2 forall Y1 Y2 : Type forall y : Y1 -> Y2   forall fx1 : F X1   forall fy1 : F Y1     map (x y) (fx1 fy1) = map x fx1 map y fy1
+	* ## class
+		* code-block
+* changing notation "fx1" -> "x'",  "fy1" -> "y'" i get the desired result
+* map (x y) (x' y') = map x x' map y y'

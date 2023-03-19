@@ -1,0 +1,2 @@
+* when software components declare only a version intervals oftheir dependees then these requirements brake [and hence the build is rejected] when newer versions of the dependees come out, new than the upper bound in the required version interval
+* in my opinion the only way out of this hell is a central declaration of all the names that the component import from its dependees and the ones that itself exports; similarly as it currently is done at the module level; because it is already done at the module level manually, the central declaration can be automated

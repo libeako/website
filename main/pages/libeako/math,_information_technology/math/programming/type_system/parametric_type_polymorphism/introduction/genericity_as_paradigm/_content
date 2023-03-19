@@ -1,0 +1,29 @@
+* a duality exists between the interface and implementation of a function; the more the type of a function provides [more genericity] [more use-cases] the more difficult to implement the function is [less ways exist to implement], and vice versa
+* a benefit of less ways to implement a function is less opportunity to make mistake in the implementation, that is : less bugs; mine and many other programmers' practical experience is that genericity usually leads the implementation towards the sensible one; this implies that genericity is a tool in combating bugs [in addition to combating code repetition]; the current most popular view is : do not be more abstract than necessary, because abstraction has its cost [for example difficulty of understanding]; genericity as paradigm says : yes, it is more difficult to be more abstract, but this extra difficulty is spent against bugs and in that is more efficient then the replaced amount of test-debug-loop, hence the coder should aim for maximal genericity even if that amount of genericity is not promptly needed otherwise
+* a very simple introductory example
+	* the task is to write a function that swaps the components of a homogeneous pair
+	* solution
+		* swap : t t -> t t swap (v1, v2) = (v2, v1)
+			* ## class
+				* code-block
+	* some bugs are possible that the compiler can not detect
+		* swap (v1, v2) = (v1, v2)  -- forget to swap swap (v1, v2) = (v1, v1)  -- one of the component pushes out the other
+			* ## class
+				* code-block
+	* genericity as paradigm says in this example to allow heterogeneous pairs
+		* swap : x y -> y x swap (v1, v2) = (v2, v1)
+			* ## class
+				* code-block
+		* only the type is different, it is more general, the implementation is the same; with this type the compiler does not let the coder make the bugs mentioned earlier
+* a similar simple example
+	* the task is to write a function that composes 2 given functions
+	* non-general solution
+		* compose : (t -> t) (t -> t) -> (t -> t) compose (a, b) = λ x -> b (a x)
+			* ## class
+				* code-block
+		* what is the order of the input functions in the output composition? it is hidden in the implementation, perhaps a comment for the function would contain this information
+	* general solution
+		* compose : (x -> y) (y -> z) -> (x -> z) compose (a, b) = λ x -> b (a x)
+			* ## class
+				* code-block
+		* only the type of the function is different; this more general type constrains the order of the functions in the composition, making the comment unnecessary and eliminating the possible error of mismatch between the comment and the implementation

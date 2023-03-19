@@ -1,0 +1,4 @@
+* for any algebraic variety V :
+	* the free V, by definition, is a data structure that for any algebra A of variety V : is able to represent any algorithm consisting of only the values and methods of A and is not able to represent anything else
+	* free V is itself an algebra of variety V
+		* some people phrase this fact as "the free V gives as a V for free"; some people may thing that this is where the word "free" comes from; but that is false; "free" comes from math, more precisely from the fact that free v can not represent anything else than algorithms in an algebra of V

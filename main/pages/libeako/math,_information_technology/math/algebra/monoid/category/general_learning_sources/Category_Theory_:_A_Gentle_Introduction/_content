@@ -1,0 +1,20 @@
+* author is Peter Smith
+* it is free to download
+* this book is the most gentle, most introductory among category theory books, but still mathematically precise; to anyone serious about learning category theory i recommend to start with this book; but some parts in it are incorrect or difficult to understand in it; here i will list them and try to give some advise how to move over them
+* some problematic parts
+	* i read version 2016 february 8
+	* product
+		* the author introduces the product definition in a special way; he explains the intuition about it, develops the definition instead of just stating it; i appreciate this intent very much; but i feel that the particular development that the author presents is not totally okay
+		* first, the author draws the attention to the difference between defining and implementing products; this is very good point and the presentation of it is also okay; but in the next section the author describes the "pairing schemes"; this section is very formal, labourous to work through and on the other side it does not feel okay to me; though perhaps i just did not understand it; also : i was perfectly okay to move on to the the categorical definition of product without understanding the pairing schemes topic without problem; for me the categorical definition is intuitive on its own : a product is something from which one can project the components and vice versa and these 2 directions are compatible [the diagram commutes]; the one significant difference from a set theoretical point of view is that in category theory cartesian product is not given to work with, hence 2-input functions are also not given; instead this in category theory we can assume that an object represents pairs of objects by having 2 arrows into the components [forming a "wedge"]
+	* pullback
+		* introduction
+			* the author suggests a connection between pullbacks and products; later important special cases of pullbacks are explained via this connection; hence i think this connection is important and should be more explicit in the book
+			* wikipedia gives some hints
+				# links-to external https://en.wikipedia.org/wiki/Pullback_(category_theory)#Pullback_and_product
+			* the pullbacks can be decomposed into a pair of such a product and a 3d object in the pullback; the opposite direction also works : each product with a suitable 3rd object forms a pullback; this could be a theorem; i proved it; the proof is easy; but perhaps i just made a mistake in it
+		* special case : inverse image
+			* the text and the diagram here is incorrect; 'Y' should not be unified with 'Z', Z should be allowed to be any subset of Y; g should be the inclusion function
+			* for example
+				* here
+					# links-to external https://ncatlab.org/nlab/show/preimage
+				* you can find a correct diagram, 'S' playing the role of 'Z'

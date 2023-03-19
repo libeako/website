@@ -1,0 +1,57 @@
+* this section introduces categories from the world of [functional] programming
+* i will investigate the structure of programs
+* i will abstract away from the domain of the program, from what the actual functions do
+* programs form a monoid
+	* a program is just a function
+	* programs can be composed by function composition [which is associative]
+	* the empty program is the identity function
+	* this structure sounds like the monoid of functions with function composition
+* but we do not have a monoid of general functions, but only of endo-functions
+	* an endo-function is a function whose input and output type are equal
+* [dynamic] typing
+	* hence i will restrict the values of the programs to a single type "t"; this is equivalent to how we view dynamically typed programs in compile time
+	* in the following you should draw on a paper what i say to you to draw or at least imagine doing so
+	* draw a point that represents t
+		* draw a dot and label it with "t"
+	* we are dealing with functions, so you will draw some arrows demonstrating functions
+		* these functions go from t to t, so the arrows demonstrating them will start and end in the dot representing t
+		* surely : an identity function exists, whatever t is
+			*  so draw a small arrow and label it with "id"
+		* other endo-functions may also exist
+			* so draw some more arrows
+	* the drawing now illustrates the monoidal structure of dynamically type-checked programs [the arrows are the programs]
+* static typing
+	* but dynamic type-checking is unsatisfactory; hence i will try to extend the picture to multiple types
+	* draw some more dots to represent some other types
+		* you may want to label some of them with familiar simple types, like "integer", "string"
+	* for each type x an identity function (id : x -> x) exists
+		* draw such for each new dots
+	* functions may be between different types
+		* so draw some arrows between different dots
+		* for example
+			* size : string -> integer
+	* the drawing now illustrates what a category is; it is an algebra in which the values are still the arrows [in our example : programs], but compared to the simpler monoidal version : the arrows are between mutliple objects [in our example : programs have input and output types]; in a category : for each value f : we associate a property (x ~> y) indicating that f goes from x to y
+	* in monoid [in our example : dynamic type checking] all values [in our example : functions] had the same "type"; hence composition was simple : (>>>) : t -> t -> t
+	* in category [in our example : static type checking] values [in our example : functions] may have different "types"
+		* with these more complex types of the values their composition would look like the following, at least at first try
+			* (>>>) : (a ~> b) -> (c ~> d) -> (e ~> f)
+		* but the whole point of types is to constrain the composition : we will allow composition of values only of compatible "type"s
+			* (>>>) : (a ~> b) -> (b ~> c) -> (a ~> c)
+			* (the source of the second input) must equal to (the target of the first input)
+	* how is the empty element of monoid affected by the generalization ?
+		* empty must behave neutrally in the composition function; this can be expressed by these equations : 
+			* for all f : 
+				* empty >>> f = f
+				* f  >>> empty= f
+		* these 2 equations are symmetric and studying only one of them will suffice; let that one be (empty >>> f = f)
+		* some new notations to ease the formal work
+			* let
+				* fs = source of f
+				* ft = target of f
+				* es = source of empty
+				* et = target of empty
+		* the studied equation at the type level is (type of (empty >>> f) = type of f); that is ((es ~> ft) = (fs ~> ft); hence (es = fs)
+		* from the type constraint of composition : et = fs
+		* hence the source and target of empty are both equal to fs and hence to each other
+		* hence the generalization of empty to category theory is endo-arrow
+		* in monoid empty must be composable with any other value; this constraint in category theory corresponds to the requirement that for all objects : an endo-arrow exists that behaves neutrally in arrow-composition; thus empty in a category is not necessarily a single value, but rather one for each object

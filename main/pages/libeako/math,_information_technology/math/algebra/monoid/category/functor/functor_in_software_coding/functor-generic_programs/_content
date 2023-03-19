@@ -1,0 +1,15 @@
+* this section presents an example : lens
+* a lens represents a property [data member] [here 'p'] of a product type [here 't'] by the 2 accessors [a getter, a setter]
+* type Lens t p = (t -> p) (p -> t -> t)
+* get = first set = second
+	* ## class
+		* code-block
+* map-lens : lens t p -> (p -> p) -> (t -> t)   =       λ l f old -> flip (set l) old (f (get l  old))
+	* ## class
+		* code-block
+* this function takes a parameter function with type (p -> p)
+* but what if the client of our function 'map-lens' can not provide such a function, but can provide only one with effect? for example his|her function may fail, log, need to read from a database
+* this is why we should provide a version of 'map-lens' that accepts function with effect
+* map-lens-f : Functor c => lens t p -> (p -> c p) -> (t -> c p)  =      λ l f old -> map (flip (set l) old) (f (get l old))
+	* ## class
+		* code-block

@@ -1,0 +1,8 @@
+* lazy initialization of variables is used when the programmer can not or does not want to know when to compute the initial value and hence delegates this task to the run-time system, lets the control out of his hands
+* effects
+	* the order of side-effects is important, hence lazy evaluation in side-effect-ful environment is error-prone
+	* in functional programming (because of absense of side-effects) evaluation may freely happen in any order [Church-Rosser theorem]; [non-side-] effects may still be in a functional program; the order of constituent effects in a complex effect is explicitly expressed in the calculated value that represents the complex effect
+		* link to 'Church-Rosser theorem'
+			# links-to external https://en.wikipedia.org/wiki/Church-Rosser_theorem
+* automation
+	# links-to internal gvlvjsxsrqfqfghtn

@@ -1,0 +1,5 @@
+* main menu
+	* the main menu should have an "Application" sub-menu, to not put :
+		* Quit into File
+		* Preferences into Edit
+		* About into Help

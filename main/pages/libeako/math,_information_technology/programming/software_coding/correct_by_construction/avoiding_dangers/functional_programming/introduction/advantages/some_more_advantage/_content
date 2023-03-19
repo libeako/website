@@ -1,0 +1,7 @@
+* debugging is easier
+	* the execution of functional code is just evaluation, it can be evaluated any times; one can put the execution point back in the debugged function, without worry of performing a side-effect twice
+* parallel programming
+	* is very difficult with the possible presence of data race [multiple threads accessing the same variable, at least 1 of them to write]
+	* functional programming, by its absence of mutation eliminates this problem naturally
+* generally good language
+	* the programming language being purely functional makes the programming language design and implementation easier too, hence the saved effort can be spent on making the language better in other areas [for example : stronger type system]

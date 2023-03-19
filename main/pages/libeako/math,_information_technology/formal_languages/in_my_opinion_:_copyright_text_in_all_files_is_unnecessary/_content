@@ -1,0 +1,10 @@
+* it is inconvenient because
+	* changing it [when necessary] in multiple files requires a special script
+	* makes the main content of the file further, the navigation a bit more work-intensive
+* my humble understanding about copyright law [i am not a professional lawyer]
+	* is the intellectual product distributed ?
+		* yes
+			* what is determining is not the unit of storage [file], but the unit of distribution; placing a single copyright file into the root folder of the distributed package is enough
+		* no
+			* the product does not have to be protected with copyright notice
+	* copyright comes automatically without a copyright notice in almost all countries and in all significant countries

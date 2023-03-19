@@ -1,0 +1,13 @@
+* the phrase "marginal x" is frequent in this part, in which x is some quantitative property of the good; the meaning of this phrase is : (the change of property x) / (the change of the quantity of the good) as (the change of the quantity of the good) approaches zero; mathematically : the derivative of the property x in the function of the quantity; in loose language : how does property x change as the quantity changes
+* the effect of the quantity on the marginal value and cost 
+	* usage value of a good
+		* generally : as more of it exists : less one unit of it is worth; for example : if we have only one small piece of food then its value equals to the value of human life; but if we have much food then we do not want to eat some of it, perhaps we give the extra to our animals, ...; as more of it is : more usage possibilities gets filled, less usefully we can use the extra
+		* thus the marginal usage value of good decreases when the quantity of the good increases
+	* production cost of a good
+		* generally : as more of a good the economy is to produce : more the production needs to consume from resources [other goods], which [by getting scarcer] get more valuable
+		* thus the marginal cost of the good increases when the produced quantity increases
+		* this is a macro-economical phenomena
+		* there is an effect with the opposite direction too, in micro-economics : when a person produces more, the constant costs gets proportionally smaller, thus the marginal cost of production decreases; this is often mentioned with the phrase "economies of scale"; this does not affect any political opinion here, hence i will ignore it
+	* the graphs of these 2 functions [usage value, production cost] draw a cross, often mentioned with "Marshall cross"
+		* on wikipedia
+			# links-to external http://hu.wikipedia.org/wiki/Marshall-kereszt

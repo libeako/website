@@ -1,0 +1,25 @@
+* "+" "-" "=="
+* naming
+	* most coders name these with "operator"
+	* in contrast : by "ordinary function name"s : i mean things like "plus" "minus" "equal"
+	* the ordinary ones contain only alphanumerical characters, the "operator"s contain only "special" characters; i saw one person to use the name "sigil" for this special characters; i do not know other name for this character class, hence i will also use this name
+	* i do not like the name "operator" because these things do not operate on their parameters any more or other way than the ordinarily named functions; the difference is only in the name syntax
+	* my suggestion : "sigil name"
+* i dislike sigil names because 2 causes : their infix syntax order, their special character content; both these hurt the uniformity, hence the ergonomics of the text
+* the problems of sigil names
+	* the sigil names tell very little to the reader about the thingss they denote; i know : some regular names also are badly chosen or even impossible to get perfect, but sigil names are much worse
+	* usually  sigil names can not be pronounced
+	* sigil names are difficult to search for on the web
+	* some coders feel affinity to sigil names, which becomes a nightmare for newcomers to his|her code
+	* they bring yet other syntax for something [[partial] function application, function denotation]; having different presentations for the same concept is generally bad for ergonomics
+	* they bring in the problem of precedense which is a pain to get right and to memorize
+* we could do well without sigil names
+	* "plus x y" is not less readable than "x + y"; apart from being used to the sigil version, but habit can be changed, it should not be taken into account
+	* "x + y + z" is more readable than "plus x (plus y z)" or "x ´plus´ y ´plus´ z"
+		* but
+			* with the help of a new language syntax feature we could write "fold plus '[x y z]", where ' would mean that that the argument list after it is special : it should be inlined into the function which is applied to it in compile time till all the constructors of the list literal disappear
+			* also : this solution would eliminate the redundancy in "x + y + z", which in principle is a good property
+				* "but it is not really redundancy," you could say "for example i may want to use "-" instead of one of the "+"s"
+					* but i answer
+						* in most of those case you do not mind to replace the flat structure with a more hierarchical one
+						* if not then the precedence rules may come into play, which is usually a pain to work with and hence most coders would rather opt back to grouping the expression tree with round brackets

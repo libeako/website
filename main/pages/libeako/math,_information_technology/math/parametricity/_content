@@ -1,0 +1,24 @@
+* the input of a function can be categorized thus
+	* parameter
+	* index
+* definintion
+	* an input i is parameter when the definition of the function does not branch on the actual value of i, with other words : when all possible values of i are treated uniformly
+		* example : \ x -> (x, x)
+	* an input i is index when it is not parameter
+* some terminology
+	* if the input of a function (f : x -> y) is parameter then we often say that f is "parametric in" x; an alternative phrase could be "f is uniform in input x", but "parametricity" is the popular phrase
+* the reason
+	* of this distinction in function inputs is that parametricity may make us able to deduce interesting mathematical properties of the function
+	* example :
+		# links-to internal iuvbupavbjmhfrxjn
+* in data types
+	* in sum types we also have a parametricity <-> index distinction; it looks different from but related to the distinction in function inputs
+	* the input of a sum type is parameter if all constructors of it return an instance of the type with surely the same value; the input is index if it is not a parameter
+	* example
+		* data Vector (E : Set) : Natural -> Set where     Nil : Vector E Zero     Cons : (n : Natural) -> E -> Vector n E -> Vector (Suc n) E
+			* ## class
+				* code-block
+		* this example uses the syntax of the agda programming language; the 'Vector' data type is a sum type; it has 2 inputs : ('E' - the element type of the vector), (a Natural - the size of the vector) 
+		* agda distincts the 2 kinds of input syntactically; in this example E is declared to be a parameter and the size input is declared to be an index
+		* agda accepts input E as parameter because all constructors of the 'Vector' sum type return a instance of this type with the same value of this input; but the constructors return instances with different size value, hence the size input may only be an index
+		* in processing an instance of Vector one can branch on the value of the size input of that particular Vector value; agda does not allow the same with a parameter of a data type

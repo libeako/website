@@ -1,0 +1,8 @@
+* gadt
+	# links-to internal pvsvkykppprsnbnen
+* refinement type
+	* is a pair of a type and a logical statement about the values of the type that constrains the value-set of the type
+	* example
+		* Integer refined by (> 0) denotes the positive integers
+* dependencies of types
+	# links-to internal enjlgzgdnjxyjcckn

@@ -1,0 +1,15 @@
+* the logical quantifications are {forall, exists}
+* forall
+	* example
+		* forall x ∊ Human : x is mortal
+	* general form
+		* forall x ∊ S1 : S2 x
+	* the difficulty in representing quantified statements comes from that the statement depends on an object x, hence the type representing the statement must depend on value; fortunately dependent types can do exactly that, thus
+	* (rep (forall x ∊ S1 : S2 x)) = (x : rep S1 -> (rep S2) x)
+		* here (rep S2) "depends" on x, it is a dependent type, more precisely : a dependent product type
+		* more thorough justification is left for the reader
+* exists
+	* is dual to forall
+	* (rep (exists x ∊ S1 : S2 x)) = ((x : rep S1) (rep S2) x)
+		* here (rep S2) "depends" on x, it is a dependent type, more precisely : a dependent sum type
+		* more thorough justification is left for the reader

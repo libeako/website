@@ -1,0 +1,5 @@
+* for example : collections are type functions
+* polymorphism on type functions as a programming language feature is also know as "higher kinded types"
+* certain interfaces of type functions are indispensable in software coding
+	* for example: functor, applicative, monad
+* thus type function polymorphism is a must-have programming language feature for efficient software coding;  currently the only industrial programming languages prividing this feature are haskell and scala

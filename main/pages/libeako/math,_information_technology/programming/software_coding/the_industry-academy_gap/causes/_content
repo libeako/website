@@ -1,0 +1,31 @@
+* the network effect
+	* for compatibility
+* the herd effect
+	* it always seems safer to go where the herd goes
+* technical inertia
+	* replacing a programming language or library would require to redo the work based on the old technology
+* the industry does not know that it could do better
+	* why this is can be demonstrated by studying the motivations and behaviors of the players in the story :
+	* the academy
+		* researchers do not try enough to convince the industry about their results; they just share them, tell they like the results, but do not push them; i observed that academy is too polite to point out the mistakes that industry does; they do not initiate discussions, let alone debates about why the industry does not use some research result that they think it should
+	* the industry
+		* Philip Wadler, a famous researcher : "for many years people in industry have managed to pretty much ignore everything we do"
+		* the industry people do not know about the academic results and do not imagine that they can be of any good
+		* i
+			* when i was a beginner coder : for several years i thought the following
+				* what the academy people do is only mental masturbation; they think about mathematical problems that interest them, but are not helpful in everyday coding practice
+				* coding is mainly about fighting complexity and bugs, practise and not theory is what helps in that
+				* coding is a very practical activity, hence may be known only by the people who do the practice, that is : by the industrial coders, who do it full time, for many years; researchers code very little
+				* if some academy knowledge was good for anything then practitioners would know about it; after all : the whole globe would not let something useful in waste
+				* math is important in algorithm design, but why would it be even just slightly useful in coding?
+			* when i learned the basic results of the academy : i realized to my amusement : all of these previous presumptions of me were wrong
+			* i guess most industrial people fall into these same thought traps that i did
+		* coders
+			* according to my observation of how coders usually choose programming language and programming methodology :
+			* they learn technologies that are demanded in the industry, to make money
+			* mostly they do not look further than where they get a job, to learn good but rare technologies, because they are loaded with other tasks to do
+				* this is perfectly correct behaviour from them, it would be horrendously inefficient if ordinary coders had to learn programming theory, language design and such
+			* because they do not look out : they do not find whatever better things exist
+			* whatever they do not know about : they do not want it, do not demand it
+		* the programming language decision makers
+			* the people who design or choose programming languages for a big firm are the ones who show the way for the rest of us; it is their job to know programming language theory and programming methodology, in order to make good decisions; but they seem to not know; they too come from an industrial background

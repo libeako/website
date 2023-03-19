@@ -1,0 +1,7 @@
+* using 3rd party libraries is a fundamental need of an efficient software development world; but how do we know that libraries that we download from the internet do not contain malware? the sad truth is : we do not; we often do not know the author and even if we do and trust him then still his development machine or his repository may have been cracked
+* fortunately pure functional programming can provide a perfect solution to this problem in most cases
+* all malware work via calls to the operating system, which are considered to be side-effects in a purely functional programming language; a purely functional language requires that any computation performing a side-effect acknowledges this fact in the type of the computed value; the computation of a pure value is not allowed to perform side-effect
+* example
+	* i download a linear algebra library; a function in it is (invert : Matrix -> Maybe Matrix); can i trust it? if the compiler checked that the types are honest [the function implementation does not opt out from static typing constraints] then yes; the involved types are pure, thus no possibility of side effect
+* in haskell
+	* such a technology is in haskell with the name "safe haskell"; unfortunately it is rarely switched on in practice due to some technical problems currently; but because such feature is very important : it will be a fundamental part of future programming environments

@@ -1,0 +1,26 @@
+* the function pair that functor consists of is usually coded as a type-function interface :
+* interface Functor c where   map : (x -> y) -> (c x -> c y)
+	* ## class
+		* code-block
+* in this code fragment :
+	* the mapping of types is 'c'
+	* the mapping of functions is 'map'
+* the laws
+	* the above defining code described Functor as a pair of functions; what is missing from it is the requirement that this function-pair is a homomorphism; that is what is left for the laws
+	* a transformation is homomorphism between algebras iff for all operation of the algebra : (the operation-result of transformed values) = (transformation of the operation-result)
+	* let us go through all the methods in our algebra [category] and investigate when homomorphism would hold
+		* for easier understanding : keep in mind that 'c' and 'map' are the 2 components of the same mapping
+		* the methods one-by-one :
+			* composition [of arrows]
+				* (map g >>> map h) = map (g >>> h)
+			* objects of an arrow
+				* c (source f) = source (map f)
+					* this equality is true because :
+						* c (source f) = c (source (f : x -> y)) = c x = source (_ : c x -> c y) = source (map (f : x -> y)) = source (map f)
+					* hence we do not need to extend the laws regarding this method
+				* analogously for the 'target' operation
+			* identity arrow of an object
+				* id (tf x) = map (id x)
+	* summing up : the laws are [without showing the types] :
+		* map id = id
+		* (map g >>> map h) = map (g >>> h)

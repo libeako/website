@@ -1,0 +1,34 @@
+* what is a category?
+	* a generalization of monoid
+		# links-to internal kdrjpfoaockqycybn
+	* formally :
+		* the slots :
+			* objects
+			* arrows
+		* the operations :
+			* here i use very precise types, parameterizing the type of arrows and objects with object values
+			* source : (x ~> y) -> x target : (x ~> y) -> y
+				* ## class
+					* code-block
+			* empty : x -> (x ~> x)
+				* ## class
+					* code-block
+			* (>>>) : (f : x ~> y) -> (g : y ~> z) -> (x ~> z)
+				* ## class
+					* code-block
+		* the laws are like of monoid
+			* the composition is associative
+			* the empty values must behave neutrally in composition
+* some examples of categories
+	* some famous ones
+		* functions between sets
+		* the category of programming
+			# links-to internal gxrbghpwcjceccgun
+		* in logic
+			* implications between statements
+			* proofs of implications between statements
+		* homomorphisms between algebras
+		* [partial] orderings
+		* paths of directed graphs
+		* transformations between coordinate systems
+	* it is easy to create interesting sub-categories of these by constraining the collection of objects or the collection of arrows

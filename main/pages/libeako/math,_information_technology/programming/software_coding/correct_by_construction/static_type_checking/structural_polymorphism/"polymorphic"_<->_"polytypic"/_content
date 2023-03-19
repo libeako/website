@@ -1,0 +1,4 @@
+* polymorphic and polytypic [also known as "generic" in haskell] are both abstractions; the former is over type, the later is over shape of data structure; but notice that their names suggest the exact opposite; "poly" means many, which really means abstraction; "morph" means shape [like shape of data structure]; "typ..." is from "type"; thus the meaning of these 2 words are interchanged
+* i wrote about the inertia of bad naming
+	# links-to internal lzlbissatagvlidrn
+* let us avoid the fallacy of it; this bad naming is connected with the word fragment "poly", hence replacing that can help in the name change; "abstract" is good candidate instead; then "polymorphic" -> "abstract over type", "polytypic" -> "abstract via [data] shape"

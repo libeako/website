@@ -1,0 +1,30 @@
+* "last" -> "previous"
+	* unfortunately  many people has the bad habit to use "last" when they mean "previous"
+	* they differ
+	* if more instances of the kind of event in discourse will happen then the previous one was not the last one
+	* the correct schema
+		* first
+		* ...
+		* previous
+		* current
+		* next
+		* ...
+		* last
+* { "she" "he" } -> { "it" }
+	* the gender is
+		* rarely important
+		* usually determined by the context
+		* often not known
+	* no real wrong exists with the neutral "it"
+* "there is" -> "exists"
+	* "there" is a specification of location
+		* it is opposite of "here"
+	* we should not use "there"
+		* at least when we do not really intend to specify the location
+		* when we specify the location strictly more precisely anyway
+			* example
+				* "there is meal in the fridge"
+		* in these cases "exists" is a good alternative
+* "dependency" -> { "dependendee", "depender" }
+	# links-to internal rxhtvkknsoeqoaqen
+* do not use "hack" in place of "crack"

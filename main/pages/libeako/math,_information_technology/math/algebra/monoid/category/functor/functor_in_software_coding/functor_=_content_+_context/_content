@@ -1,0 +1,33 @@
+* functor is like collection, but more general
+* the "content" of the functor is everything that is dependent on the type parameter of the functor
+* the "context" is the complementer of the content [that is : everything that is not content]
+* the context is
+	* in the case of List : the elements are multiple and their order is stored
+	* in the case of Maybe : possible non-existance
+	* in case of function : dependency [on the input of the function]
+* 'map' replaces all the content with the got function and does not change the context
+	* informal proof
+		* this is a consequence of parametricity and the functor laws
+		* let us assume the signature
+			* map : (h : x -> y) -> (c x -> c y)
+		* a helper theorem : map behaves uniformly for all h
+			* proof
+				* parametricity prevents it from distinguishing based on the type of h
+				* the programming language does not provide a way to look into the implementation of h; a function can be examined only by its behavior, that is only by its output for each possible input; but h is parametric in its output type, so map can not examine the output values of h, again because of parametricity
+		* theorem : map replaces all the element values (v : x) with (h v)
+			* proof
+				* in the special case (not (x = y))
+					* map replaces an (c x) by an (c y)
+					* thus map replaces the element values from type x to type y
+					* because map does not know anything about y [because of parametricity]: it can create value of it only by invoking h
+				* because of the behavior of map being uniform : map always does this, in case (x = y) too
+		* theorem : map does not change the context
+			* proof
+				* in the special case (h = id)
+					* map h = map id = id
+					* map does not change the context
+				* because of the behavior of map being uniform : map never changes the context
+* 'map' is about the content, hence the type function 'c' is about the context
+* since the content can be replaced : it is the context that really characterizes a functor
+* parametricity makes the second law admissible
+	* observe that in the previous derivation i did not use the second law  [(map g >>> map h) = map (g >>> h)]; still i managed to completely characterize what (map f) does [changes the content by f, does not alter the context]; i was able to do this with the assumption of parametricity; from this characterization the second law follows

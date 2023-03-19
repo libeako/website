@@ -1,0 +1,19 @@
+* the programming-logic correspondence gives us a proof method that consists of constructing witnesses; the analogue of this in mathematics is named "constructive" proving, and the logic it enables "constructive logic" [or "intuitionistic logic"]; "classical logic" contains more proving tools than constructive logic; it may be at least inconvenient to lack some tools; our proof method fundamentally implements constructive logic, but it would be nice if we still could use all the tools of classical logic in some way
+* the additional tools in "classical logic" :
+	* law of the excluded middle
+		* it says :
+			* forall S ∊ Statement : (S or (not S))
+			* in natural language : for each statement : either the statement or its negation is true
+		* it can not be proved
+			* hence it is an axiom of classical logic
+			* the reason of non-provability in programming
+				* we represent conjunction ["or"] by sum type; proving a disjunction corresponds to constructing a witness of the corresponding sum type; constructing an instance of a sum type needs us to know which case of the sum type we are constructing; but in the generality of the law [the statement S is unknown] we may not know which case is true
+		* a solution
+			* like in mathematics we accept the law as an axiom : we can make the programming language provide a value with type (rep (S or (not S))) : (lem : (S + (S -> Empty))); but such a value does not exist, even if the programming language designer wants it; the solution to this contradiction is to pretend that it exists; the downside of pretending is that one can not compute with a value that does not exist; this drawback is not show-stopper because we want to use it only for proving, not for computation
+			* in order to defend against accidental computing with non-existing values : it is enough to wrap it into a monad whose purpose is to indicate that the contained value can not be evaluated and the compiler knows that
+				* lem : CanNotBeEvaluated (S (S -> Empty)))
+	* double negation
+		* it enables proof by contradiction
+		* wikipedia article
+			# links-to external https://en.wikipedia.org/wiki/Double_negation
+		* the solution is the same as for the law of excluded middle

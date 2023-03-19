@@ -1,0 +1,36 @@
+* history of programming methodologies
+	* both industrial and academic and their relation
+* then i move to the real professional topics
+* i start them with basic stuff and leave some advanced topics to later
+* static type checking
+	* i claim that dynamic type checking does not have any legitimacy; all programming languages should be statically type checked
+* utilizing the static type checking
+	* once we use a language with static type checking : we should make out the max of it
+	* some important examples : 
+		* do not use null values; use a Maybe type instead
+		* do not use exceptions; use a Result type instead
+* basic programming notions from the academic world
+	* both concepts and syntax
+	* i present them to prepare the audience to understand my future examples; but they are worth to know anyway because they are to overtake the programming world by popularity
+* functional programing
+	* this is an easy and beautiful topic; also probably the most bang for the buck during the whole course; [though not equally well but still] can be used in any programming language right from now
+* structural polymorphism
+	* a feature in some programming languages [for example Haskell] that lets the programmer abstract via the shape of the data type
+* from here on the content is mathematically related
+	* do not worry, the course is self-contained, you do not need any math knowledge
+* parametricity
+	* i present a programming paradigm of generality [by parametric type polymorphism], a simple, very cheap technique to improve software-correctness and source-readability
+* compositionality
+	* "design patterns" done well
+	* the supoer-power of compositionality, taken from the well-established mathematical field abstract algebra, especially category theory; i explain only the very basic, but very useful concepts : monoid, functor, applicative, monad
+	* this stuff is not only not misguiding as object-oriented programming is, but they increase the economy of code by magnitudes
+* dependent typing
+	* parameterizing our types with more stuff : type functions, custom algebraic data types, runtime values ["dependent typing"]
+	* the more our type system can express - the more properties of our programs we can ensure
+* proposition as type
+	* strong connection is between programming and logic - the "proposition as type correspondence"
+	* this is a beautiful topic; the most interesting thing i ever learned in programming; it shows how programming and logic are the same thing at a certain level, via a surprisingly simple connection; this connection makes us able to use a single simple programming language to not only implement software but also : 
+		* model its domain
+		* state mathematical theorems about the domain
+		* prove those theorems and have the compiler verify the proofs
+		* specify the software and have the compiler verify the correctness of the implementation according to the specification

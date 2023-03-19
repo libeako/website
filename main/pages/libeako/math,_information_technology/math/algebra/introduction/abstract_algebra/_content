@@ -1,0 +1,3 @@
+* an algebra is "abstract" iff we do not know what its values actually are
+* in software coding abstract types representing algebras are analogous to abstract algebras in math; abstract types are often in the form of type interfaces
+* in programming languages like haskell abstract algebras are very popular; a popular method of encoding them is type interfaces ["type classes"]
