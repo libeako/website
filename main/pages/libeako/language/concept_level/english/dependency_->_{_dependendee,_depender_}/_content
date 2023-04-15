@@ -2,8 +2,8 @@
 * hence i suggest to constrain the usage of "dependency" to the dependency relation
 * when we want to denote the things with one role only then we have these possibilities
 	* using words originating from "depend"
-		* "dependee" := thing that is depended on
 		* "depender" [, "dependent"] := thing that depends
+		* "dependee" := thing that is depended on
 		* this is similar to { "employer", "employee" }
 			* though : an employee as employed, but a dependee is not depended, it is depended on
 		* this topic on wiktionary
@@ -11,5 +11,5 @@
 	* using totally different words
 		* "client" := depender
 		* "requisite", "supplier", provider := dependee
-* "dependence" <-> "dependency"
+* dependence <-> dependency
 	* "dependency" denotes a relation or an element of it [i mean the "element" in the set theoretical sense];  "dependence" denotes a phenomena
