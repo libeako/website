@@ -1,6 +1,0 @@
-* the functions being real mathematical functions makes it easier to reason about the program
-* functional code is just a set of real mathematical equations, which are true always during the execution of the program; one can use the fact that if he sees "y = f x" in the code then that equation [as a property of the program] will always be true; this property is often referred to by the phrase "referential transparency" and it enables "equational reasoning"
-* equational reasoning is useful both for the humans and for the compiler to
-	* prove other interesting properties
-	* runtime efficiency optimization
-		# links-to internal iarklboiropwlnyfn
