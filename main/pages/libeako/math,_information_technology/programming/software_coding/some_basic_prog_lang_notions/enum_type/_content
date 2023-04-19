@@ -1,20 +1,12 @@
 * an enum type is one with its values enumerated with names in the definition
 * to introduce the syntax, here is an example:
-* datatype Color =     | green     | blue     | red
-	* ## class
-		* code-block
+* datatype Color = green | blue | red
 * just as an interesting example : the Bool type can be defined with it :-)
-	* datatype Bool =     | false     | true
-		* ## class
-			* code-block
+	* datatype Bool = false | true
 * the number of cases may = 1
-	* datatype Singleton =     | single
-		* ## class
-			* code-block
+	* datatype Singleton = single
 	* though in practice: more often the 0-tuple is used as a singleton type, becaue that one is part of the language, while such a 'Singleton' is at library level
 * the number of cases may = 0
 	* datatype Void =
-		* ## class
-			* code-block
 	* exactly 0 value exists with type Void
 	* such type is sometimes named "Absurd"

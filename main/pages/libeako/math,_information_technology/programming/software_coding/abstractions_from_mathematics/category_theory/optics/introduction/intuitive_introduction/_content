@@ -1,45 +1,35 @@
 * in this intuitive introduction i use one particular category of optics : "lens"; it is a reification of data membership in a product type; it consists of the accessor functions characterizing the membership :  a getter and a setter :
 * let Lens member product = { get : product -> member, set : member -> product -> product }
-	* ## class
-		* code-block
 * 'set' works by taking an old product and replacing the value of the member in it to the taken new value
 * an example
-	* let Circle = { ..., radius : Number } lens_radius_in_Circle : Lens Number Circle lens_radius_in_Circle = Lens { get = radius, set = \ r c -> c with { radius = r } }
-		* ## class
-			* code-block
+	* let Circle = { ..., radius : Number }
+	* lens_radius_in_Circle : Lens Number Circle
+	* lens_radius_in_Circle = Lens { get = radius, set = \ r c -> c with { radius = r } }
 * then we can use such a lens for example to change the value of the 'radius' member of a circle 'c' to a new value 'r'
 	* set lens_radius_in_Circle r c
-		* ## class
-			* code-block
 * this does not seem to bring any advantage compared to a built-into-syntax solution, like 
 	* c with { radius = r }
-		* ## class
-			* code-block
 	* the way with lens is even more indirect and verbose
 * the real advantage of optics [and lens in particular] is their [type-polymorph] composability :
-	* compose : Lens t1 t2 -> Lens t2 t3 -> Lens t1 t3 compose l12 l23 =  	let 		new_get = get l12 >>> get l23 		new_set m p = set l23 (set l12 m (get23 p)) p 	in 		Lens new_get new_set
-		* ## class
-			* code-block
+	* compose : Lens t1 t2 -> Lens t2 t3 -> Lens t1 t3 
+	* compose l12 l23 =
+		* let
+			* new_get = get l12 >>> get l23
+			* new_set m p = set l23 (set l12 m (get23 p)) p
+			* in Lens new_get new_set
 * now we can have composite lenses to access members arbitrarily deep :
-	* let Cylinder = { cross_section : Circle, ... } lens_cs_in_Cylinder : Lens Circle Cylinder lens_cs_in_Cylinder = Lens { get = cross_section, set = \ ci cyl -> cyl with { circle = ci } }
-		* ## class
-			* code-block
-	* lens_radius_in_Cylinder : Lens Number Cylinder lens_radius_in_Cylinder = compose lens_radius_in_Circle lens_cs_in_Cylinder
-		* ## class
-			* code-block
+	* let Cylinder = { cross_section : Circle, ... }
+	* lens_cs_in_Cylinder : Lens Circle Cylinder
+	* lens_cs_in_Cylinder = Lens { get = cross_section, set = \ ci cyl -> cyl with { circle = ci } }
+	* lens_radius_in_Cylinder : Lens Number Cylinder
+	* lens_radius_in_Cylinder = compose lens_radius_in_Circle lens_cs_in_Cylinder
 * infix function symbol can increase the comfort in long composition chains :
 	* let x >>> y = compose x y let y <<< x = compose x y
-		* ## class
-			* code-block
 * an advantage of the reification is that we can represent abstract data membership, for example when the part is not technically a data member of the whole, but mathematically is :
 	* get_lens_at_key : Map key value -> key -> Maybe (Lens value (Map key value))
-		* ## class
-			* code-block
 * lens can decrease the size of interfaces
 	* (Map k v) is a container associating values with type v to keys with type k; central to a map are the tasks to get, set and transform the values associated with a certain key; for this we can create one lens for each key in a map; here comes a nice trick : with a slight change in how we view maps we can use lenses even to insert and delete values; normally we think about a map so that it stores only those keys for which they store values; but we may also pretend that the map stores all keys and the values are wrapped into Maybe indicating if a real value is stored for the corresponding key
 		* lens_value_at :: k -> Lens (Maybe v) (Map k v)
-			* ## class
-				* code-block
 	* then insertion is done by setting to Just _, deletion is done by setting to Nothing [where 'Just' and 'Nothing' are the 2 constructors of the Maybe type]
 * a convincing real-world example
 	# links-to internal ypnccchncfaeqhzhn

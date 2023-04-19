@@ -1,17 +1,16 @@
 * alignment was invented in order to start a block of code [which is a subtree in the concrete syntax tree] at the end of the line of the header of the block
 * example
-	* my_awesome_function x = let local_value = some_value                         in do_something_with local_value
-		* ## class
-			* code
-			* code-block
-* the obvious competitor of this style is
-	* my_awesome_function x =     let local_value = some_value     in do_something_with local_value
-		* ## class
-			* code
-			* code-block
-* i will refer
-	* to the former one with "aligned"
-	* to the latter one with "indented"
+	* my_awesome_function x =
+		* let local_value = some_value
+			* in do_something_with local_value
+* this is a semantical indentation - the indentation mimics the semantical structure of the code [the meaning of the code]
+* a usual competitor of this style is
+	* my_awesome_function x = let local_value = some_value
+		* in do_something_with local_value
+* , to save 1 line; but this breaks with the semantical structure, as one part of the right side of the equation is seaprated from the rest with a line break, despite it is not so separated from the right side of the equation; to give back the block appearance for the right side of the equation: alignment is used sometimes, that is aligning the line 
+	* in do_something_with local_value
+* to start where the block starts ["let ..."]
+* i will refer to the semantically indented version with "indented"
 * looking at this simple artificial static example : the reason to like the aligned one seems obvious
 	* looks better because the name of the declared thing is separated, it does not overlap horizontally with the value it is given
 	* uses 1 less line, due to utilizing the header line of the whole code block

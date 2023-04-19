@@ -16,14 +16,10 @@
 	* let us walk through the way of their possible thinking; we have to ensure at compile time that dispatches are always successful; our best idea: restrict the dispatching to only 1 of the inputs; which one sould that be? for the sake of simplicity and uniformity: let it be the first one always; we do not need to know its type in compile time, as the core OO idea is to defer that to run-time; this input is always present and has special status, hence we can fix its name to "this" or "self" of it in the language specification; hence this input can be implicit - this saves the coder from some verbosity
 	* it is important to see that this solution was not a conceptual desire but a compromise, accepting conceptual mismatch for the sake of type-safety; thus was the now popular ["Java-like"] version of OO born; as a child of the forced marriage of static typing and the inherently dynamic OO behavior; crippled from birth, it can not properly represent interface methods with multiple inputs with the same role; for example:
 	* the Equatable interface in c#:
-		* interface IEquatable {     bool Equals (??? other); }
-			* ## class
-				* code-block
+		* interface IEquatable { bool Equals (??? other); }
 		* what should go in place of "???", what should the type of the 'other' input be? OO itself does not give a type-safe answer; type-unsafety was accepted in this situation in the Java like languages for years
 		* when later generics came into Java and .Net: it finally provided a type-safe solution via "F-bounded quantification"
-			* interface IEquatable<T> {     bool Equals (T other); }
-				* ## class
-					* code-block
+			* interface IEquatable<T> { bool Equals (T other); }
 			* the name of the type that implements the interface is smuggled into the interface definition with type polymorphism
 			* in practice this worked acceptably, but conceptually it is only a work-around
 		* spend some seconds to observe that the above source-code suggests that the 2 inputs of the method are somehow differnt in their roles, which is false
@@ -31,9 +27,8 @@
 	* i repeat: Java-like OO [distinguishing the first input of methods] is not some natural idea at the concept level; but a problematic technical necessity of integrating OO into static typing
 * fortunately: static typing may have type interfaces, without any OO too, with totally static method dispatch; not only it is possible, but it also lacks the problems of OO and has great advantages, as i will show
 * basics of type interface definition
-	* interface Equatable t where     (==) : t -> t -> Bool
-		* ## class
-			* code-block
+	* interface Equatable t where 
+		* (==) : t -> t -> Bool
 	* "interface" is a keyword here
 		* haskell uses the "class" keyword
 		* idris uses the "interface" keyword
@@ -50,25 +45,25 @@
 	* how common such situation arises? quite
 	* the trivial case is when the method does not take any input at all, when it is not even a function, instead it just selects a value from the type
 	* a trivial but useful example:
-	* interface HasDefault t     default : t
-		* ## class
-			* code-block
+	* interface HasDefault t
+		* default : t
 	* also: having some input does not make the method run-time dispatchable, because the input may be totally independent from the type that is to implement the interface; this is the case for example in methods of the very important Monoid, Applicative, Monad interfaces [which i am going to teach later]
 * multiple methods in an interface:
-	* interface Equatable t     (==)   :   t -> t -> bool     (/=)   :   t -> t -> bool
-		* ## class
-			* code-block
+	* interface Equatable t
+		* (==)   :   t -> t -> bool
+		* (/=)   :   t -> t -> bool
 * default method implementations
-	* interface Equatable t     (==)   :   t -> t -> bool     (/=)   :   t -> t -> bool     x == y   =   not (x /= y)     x /= y   =   not (x == y)
-		* ## class
-			* code-block
+	* interface Equatable t
+		* (==)   :   t -> t -> bool
+		* (/=)   :   t -> t -> bool
+		* x == y   =   not (x /= y)
+		* x /= y   =   not (x == y)
 	* even mutually recursively
 * instances
 	* an "instance" of a type interface is an implementation of a type interface for a given type
 	* a simple example:
-		* implements Equatable Int     (==) = Integer.equality
-			* ## class
-				* code-block
+		* implements Equatable Int
+			* (==) = Integer.equality
 		* "instance" is a keyword here
 		* (==) of 'Equatable' is defined by this implementation as the equation test provided by module 'Integer'
 		* (/=) [not equal] does not have to be implemented, because the definition of 'Equatable' contains a suitable default implementation of it
@@ -76,17 +71,14 @@
 		* The definition of the instance is not fixed to the definition of the type; it can be also in the module of the interface; this makes it possible to implement new interfaces for types without modifying the definition of the type; in OO the set of interface implementations is fixed at the definition of the type
 	* instance condition
 		* example
-			* instance (Equatable a, Equatable b) => Equatable (a b) where     (x1, y1) == (x2, y2)   =   x1 == x2  &&  y1 == y2
-				* ## class
-					* code-block
+			* instance (Equatable a, Equatable b) => Equatable (a b) where
+				* (x1, y1) == (x2, y2)   =   x1 == x2  &&  y1 == y2
 		* at the source side of the fat arrow is the condition
 		* this is a very important capability, because modifying a type by putting a container [Maybe, Either, List, newtype wrappers, ...] around it is ubiquitous in everyday software coding; OO can not do this
 * usage
 	* functions may take type interface implementations as implicit input
 	* for example:
 		* minimum : Ordered e => List e -> Maybe e
-			* ## class
-				* code-block
 		* function 'minimum' takes an implicit parameter specifying how type 'e' implements interface 'Ordered'
 * type methods
 	* an advantage of static dispatch is that the methods can output compile time information, including types; by this we associate types to types; in many languages such capability is known as "associated types"
@@ -96,9 +88,9 @@
 	* "laws" are often attached to type classes; they are addional requirements that the instances must obey; additional to what the types of the methods of the interface impose; it is generally better to state requirements in types, but sometimes [often because of the weakness of the type system] it is not possible or not economical; then we state them in comment and refer to them as "laws"
 	* example:
 		* the laws of 'Equatable' should be the usual mathematical properties of equality: substitutivity
-		* interface Equatable t where 	(==) : t -> t -> Bool 	// law "substitutivity": x == y <=> (for all f : f x == f y)
-			* ## class
-				* code-block
+		* interface Equatable t where
+			* (==) : t -> t -> Bool
+				* // law "substitutivity": x == y <=> (for all f : f x == f y)
 	* not all interfaces have to have laws
 		* some examples for interfaces that do not have laws:
 			* Default

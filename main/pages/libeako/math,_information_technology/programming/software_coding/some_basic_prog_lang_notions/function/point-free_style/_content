@@ -3,12 +3,8 @@
 * example
 	* instead of
 		* increment x = add 1 x
-			* ## class
-				* code-block
 	* using
 		* increment = add 1
-			* ## class
-				* code-block
 * advantages
 	* the big ones
 		* avoids bugs possibly caused by incorrect references to the inputs

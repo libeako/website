@@ -19,9 +19,9 @@
 			* if date is built-in then why not IP addresses, email addresses, ... too?
 	* the basic syntax
 		* a basic configuration file consists of a list of properties, their keys and values, separated by " = "
-			* name = banana color = yellow taste = sweet
-				* ## class
-					* code-block
+			* name = banana
+			* color = yellow
+			* taste = sweet
 		* keys may contain only regular letters, decimal digits, '-'
 		* keys may not be empty
 		* the values may not contain leading or ending whitespace; this is for safety
@@ -30,50 +30,32 @@
 			* multi-line values are not normal in configurations and when one is needed then it is probably healthier anyway to have it in a separate text file and only its file path in the configuration file
 	* tree structure
 		* the simple properties can be organized into categories
-			* boot 	loader = grub2 	command = print "hello master"; system-package-manager --update network 	machine-name = main-pc
-				* ## class
-					* code-block
+			* boot
+				* loader = grub2
+				* command = print "hello master"; system-package-manager --update
+			* network
+				* machine-name = main-pc
 		* the names of the categories are keys and have the same syntax as keys of simple properties
 		* the indentation encode sthe parent-child relationships between the nodes
 		* the indentation is done with tabs
 			* motivation
 				# links-to internal awitstdmdccwokwln
 		* categories can be nested in whatever tree structure, with any depth and complexity
-			* system 	boot 		loader = grub2 		command = print "hello master"; system-package-manager --update 	network 		machine-name = main-pc applications = geany firefox tor-browser users 	-  		name = john 		real-world-name = John Doe 	- 		name = jane 		real-word-name = Jane Doe
-				* ## class
-					* code-block
+			* system
+				* boot
+					* loader = grub2
+					* command = print "hello master"; system-package-manager --update 
+				* network
+					* machine-name = main-pc
+			* applications = geany firefox tor-browser
+			* users
+				* -
+					* name = john
+					* real-world-name = John Doe
+				* -
+					* name = jane
+					* real-word-name = Jane Doe
 		* > 1 occurance of the same key, under the same node is allowed
-	* comments
-		* individual nodes can be comments
-		* a comment node is prefixed by "// "
-		* key = value 	// this is a comment
-			* ## class
-				* code-block
-		* comments can be nested
-			* key = value 	// this is a comment 		// and this one is a comment too
-				* ## class
-					* code-block
-		* comment nodes can be top-level
-	* inactivation
-		* branches can be inactivated; then its content is handled as if it was not in the file; this is similar to the commenting-out technique, but in simco a separate language feature is given for it, to enable automaic syntax and other changes for inactive content and to enable quick inactivation and reactivation with small amount of editing
-		* a branch is inactivated by prefixing its root with "/ "
-			* system 	boot 		loader = grub2 		command = print "hello master"; system-package-manager --update 	network 		machine-name = main-pc applications = geany firefox tor-browser users 	/ -  		name = john 		real-world-name = John Doe 	- 		name = jane 		real-word-name = Jane Doe
-				* ## class
-					* code-block
-			* here user "john" is inactive
-	* further ideas
-		* the following are additional ideas for the language, but i feel that they are not worth the extra complexity :
-		* enable the replacement of long nesting with composite keys
-			* example
-				* write
-					* system boot 	loader = grub2 	command = print "hello master" system network machine-name = main-pc
-						* ## class
-							* code-block
-				* instead of
-					* system 	boot 		loader = grub2 		command = print "hello master" 	network 		machine-name = main-pc
-						* ## class
-							* code-block
-			* perhaps this may be useful to make deep trees more human readable
 * the recommended file name extension for simco is ".simco.text"
 	* ".text" is to signal for the users, who are not familiar with simco, that the file can be viewed and edited with simple text viewer and editor
 	* ".simco" is useful for special editors to colorize and otherwise help the editing of simco files specifically

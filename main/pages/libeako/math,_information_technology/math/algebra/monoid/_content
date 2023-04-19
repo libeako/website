@@ -10,12 +10,11 @@
 			* choice of them is decided mostly by personal flavor or the topic of discourse; in category theory almost everyone names it with "identity"; i do not like "identity", because i associate it with something very different, like identifier, identity of a person
 	* has 1 more law, which describes that the empty value behaves neutrally with the composition function from both sides
 		* for-all x
-			* empty ∙ x  = x
-			* x ∙ empty  = x
+			* empty ∙ x = x
+			* x ∙ empty = x
 * in programming
-	* interface Monoid t <= Semigroup t     empty : t      -- behaves neutrally in the Semigroup's composition function
-		* ## class
-			* code-block
+	* interface Monoid t <= Semigroup t
+		* empty : t -- behaves neutrally in the Semigroup's composition function
 	* Monoid inherits the composing function (∙) from Semigroup
 * examples
 	* i denote the examples with juxtaposition [separate the members of the monoid instance with only a space], the empty value is in the middle in the triple
@@ -32,22 +31,19 @@
 	* note that not all instances of Semigroup can be extended to Monoid; for example numbers with (min or max); this is expected, as Monoid contains more information [capability] [an additional empty operation], hence is more difficult to implement
 * list is the "free" monoid
 	* among the instances of monoid one is very important: list
-	* instance Monoid (List e) where 	empty = List.empty 	(⊕) = List.concatenate
-		* ## class
-			* code-block
+	* instance Monoid (List e) where
+		* empty = List.empty
+		* (⊕) = List.concatenate
 	* why?
 		* it is the so called "free" monoid; by "free" mathematicians mean that it does not have any other algebraic property than monoid has; no more abstract equalities are true for it; thus: the set of algebraic equalities true for lists with the List.empty and List.concatenate methods is exactly the set of algebraic equalitons of monoids; in this sense the list data structure is mathematically equivalent to the monoid algebra
 * convenience of implicit monoid inputs
 	* monoid makes us able to compose any number of values, for example the elements of a collection
 	* the story is almost like with semigroup, but because monoid specifies an empty value too, it makes us able to drop the initial value input of the fold function too
 	* fold_monoid : Monoid e => Collection e -> e fold_monoid = fold_semigroup empty
-		* ## class
-			* code-block
 * creating new monoids from old ones
 	* composing via product type construction
-		* instance Monoid (t1 t2) <= (Monoid t1, Monoid t2) where     empty = (empty x1, empty x2)
-			* ## class
-				* code-block
+		* instance Monoid (t1 t2) <= (Monoid t1, Monoid t2) where
+			* empty = (empty x1, empty x2)
 		* of course this works with any kind of product type [any tuples, vectors]
 * usefulness
 	* if we have a monoid implementation of a type t then we can compose any number of values of t, without knowing anything additional about t

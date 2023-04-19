@@ -17,8 +17,6 @@
 	* to read the value of a field f from record r
 		* i will use the syntax
 			* get f r
-				* ## class
-					* code-block
 		* for tuple types i will use the ordinal as name of the field
 * canonicity
 	* records are mathematically equivalent to the tuple of their fields

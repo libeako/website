@@ -1,7 +1,5 @@
 * the function pair that functor consists of is usually coded as a type-function interface :
 * interface Functor c where   map : (x -> y) -> (c x -> c y)
-	* ## class
-		* code-block
 * in this code fragment :
 	* the mapping of types is 'c'
 	* the mapping of functions is 'map'

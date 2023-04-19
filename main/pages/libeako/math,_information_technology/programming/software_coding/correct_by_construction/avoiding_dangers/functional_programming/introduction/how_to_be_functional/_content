@@ -7,14 +7,14 @@
 				# links-to external https://en.wikipedia.org/wiki/Static_single_assignment_form
 	* loop
 		* wrap the general loop control structure into a pure function :
-		* loop : (State -> Bool) -> (State -> State) -> State -> State loop iterate_if iter init =     if cond_to_cont init         then loop (iter init) iter iterate_if         else init
-			* ## class
-				* code-block
+		* loop : (State -> Bool) -> (State -> State) -> State -> State
+		* loop iterate_if iter init =
+			* if cond_to_cont init
+				* then loop (iter init) iter iterate_if
+				* else init
 	* collection
 		* instead of traversing a collection with iterator | enumerator use a "fold" function :
 		* fold : (initial_value : t) (combine_values : t -> e -> t) (collection : c e) -> t
-			* ## class
-				* code-block
 		* in the .Net base library such a function exists with name "Aggregate"
 	* effects
 		* in functional programming effects are allowed and possible

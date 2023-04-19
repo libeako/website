@@ -17,9 +17,8 @@
 			* look at the dotproduct example
 				# links-to internal nxwwqhqhdzpldxmsn
 			* it can be rewritten to low level
-				* let dp m acc = if m == 0 then 0 else (dp (m-1) (acc + a[m] b[m])) in dp n
-					* ## class
-						* code-block
+				* let dp m acc = 
+					* if m == 0 then 0 else (dp (m-1) (acc + a[m] b[m])) in dp n
 				* this version
 					* does not create temporary vertors
 					* is monomorphic [though a good compiler automatically monomorphises in the background too anyway]

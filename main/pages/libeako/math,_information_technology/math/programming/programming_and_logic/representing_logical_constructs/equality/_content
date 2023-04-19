@@ -29,8 +29,6 @@
 		* the truth value of the statement corresponds to the inhabitation of the type
 	* here i start to build the type to express equality; i will name it by "Eq"; equality is interpreted only on values of the same type, hence its expressing type must depend on the type of the values whose equality is proposed : Eq := Type -> ...; the equality proposition is about 2 values of this type, hence the type must depend on these value
 	* s : Eq := (t : Type) -> (a : t) -> (b : t) -> ...
-		* ## class
-			* code-block
 		* link to 'dependent type'
 			# links-to internal svwipwixjxnwcfern
 		* link to 'dependent value'
@@ -43,9 +41,8 @@
 			* EqLo := (t : Type) -> (x : t) -> (y : t) -> (p : t -> Type) -> (p x -> p y)
 			* "EqLo" is short of "equality from logic"
 		* generalized algebraic data type
-			* EqGa (t : Type) (a : t) (b : t) :=   refl : EqGa t a a
-				* ## class
-					* code-block
+			* EqGa (t : Type) (a : t) (b : t) :=
+				* refl : EqGa t a a
 			* "EqGo" is short of "equality as gadt"
 			* 'refl' is short for "reflexivity"; reflecting the fact that it constructs reflexive pairs
 			* converting
@@ -61,15 +58,13 @@
 					* summing up : the type has exactly one constructor whose requirement is that (a = b) intensionally
 				* to intensional
 					* this is possible by pattern matching
-						* p : EqualGa t a b ... (   case p of     refl  {-- here the compiler learns --} -> ... ) ...
-							* ## class
-								* code-block
+						* p : EqualGa t a b ... (case p of refl  {-- here the compiler learns --} -> ... ) ...
 						* the compiler unifies the output type of the constructor with the type of the whole gadt, which in this case leads to the conclusion that (a = b), which intensional information can be used in the handler side of the pattern match
 	* equivalence between the different representations of equality
 		* equivalence between different types expressing the same proposition can be proved by showing any pair of functions between the 2 types
-		* lo_ga : EqLo t a b -> EqGa t a b lo_ga lo = lo (EqGa t a) refl ga_lo : EqGa t a b -> EqLo t a b ga_lo ga =    case ga of     refl -> identity
-			* ## class
-				* code-block
+		* lo_ga : EqLo t a b -> EqGa t a b lo_ga lo = lo (EqGa t a)
+		* refl ga_lo : EqGa t a b -> EqLo t a b ga_lo ga =
+			* case ga of refl -> identity
 		* in lo_ga : 
 			* we want to construct an EqGa t a b; the only way to do that is to invoke a constructor of it, which it has only one; the output type of the constructor is EqGa t a a, but we need to create EqGa t a b; introducing (p : = EqGa t a) : refl is a (p a) but we want a (p b); but this is exactly the kind of tranlation that the logic inspired equality can perform [check its definition]
 			* in the invokation of lo : i left its first few arguments [t a b] implicit

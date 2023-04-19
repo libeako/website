@@ -13,8 +13,6 @@
 	* several kinds [categories] of optics exist; for each category : the optics inside the category compose with each other
 	* if 'Optic content container' is the type of optics of a certain category then
 	* compose : Optic l1 l2 -> Optic l2 l3 -> Optic l1 l3
-		* ## class
-			* code-block
 * in the code examples i will use an imaginary haskellish programming language
 	* link to description of that language
 		# links-to internal jaxbiyrfnbhaormbn

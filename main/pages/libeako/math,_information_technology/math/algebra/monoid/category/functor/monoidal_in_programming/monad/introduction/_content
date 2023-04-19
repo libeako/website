@@ -19,42 +19,30 @@
 		* a monadic type contains some arbitrary data with a context that represents effect; thus a monadic type is a container; hence it is reasonable to assume that functor is a superclass of monad
 		* using the functor property we can easily implement something close to the kliesli composition :
 			* kliesli_try_1 : (x -> m y) -> (y -> m z) -> (x -> m (m z)) kliesli_try_1 f g = f >>> map g 
-				* ## class
-					* code-block
 		* but this is not exactly klieli composition, because the result is in a 2 layer container
 		* if we could collapse the 2 layers into 1 then we would be able to implement the kliesli composition exactly; and that is what the exact definition of monad requires, such a collapsing method; it is traditionally named "join" :
 			* join : m (m x) -> m x 
-				* ## class
-					* code-block
 		* then the definition of the kliesli composition is :
 			* kliesli : (x -> m y) -> (y -> m z) -> (x -> m z) kliesli f g = f >>> map g >>> join 
-				* ## class
-					* code-block
 		* associativity
 			* to make the previous argument simple for first time learners : i omitted something important : the kliesli composition must be associative; is our definition for it associative? not necessarily; but it is if we require that the join function is associative in the sense that it does not matter in which order we collapse adjacent layers of the container, formally :
-				* join >>> join = (map join) >>> join 
-					* ## class
-						* code-block
+				* join >>> join = (map join) >>> join
 			* and this is what the definition of monad requires, that the join method has this associativity property
 		* pure
 			* associativity is not the only requirement for arrows in a category to have; an other one is the "identity" : there must be an arrow for each object from it to it, behaving neutrally with the arrow composition
 			* the arrows in the category i am discussing here are the (x -> m y) functions, hence the requirement is that there is a (x -> m x) function; the traditional name of this method is "pure"
-				* pure : x -> m x 
-					* ## class
-						* code-block
+				* pure : x -> m x
 			* hence the definition of monad requires this method
 			* neutrality
 				* the neutral behavior of 'pure' with composition is expressed by laws :
 					* kliesli f pure = f kliesli pure f = f
-						* ## class
-							* code-block
 				* the neutrality [and the parametricity of the kliesli composition] imply that the effect in the result of 'pure' is empty, that is 'pure' returns a "pure" value - from this is the name "pure"
 		* as you hopefully see: monad is a monoid in the layers of contexts, 'join' being the composition method and 'pure' being the empty method
 * the signature
 	* putting together all the conclusions gathered in the "intuition" part : the definition of monad is :
-	* interface Functor m => Monad m where 	pure : x -> m x 	join : m (m x) -> x
-		* ## class
-			* code-block
+	* interface Functor m => Monad m where
+		* pure : x -> m x 	
+		* join : m (m x) -> x
 	* with the before mentioned laws [associativity of 'join' and neutrality of 'pure']
 * in practice often a different definition is used, in which is a "monad bind" method instead of 'join'; these 2 definitions are mathematically equivalent; the advantage of the definition with bind is assumed run-time efficiency [i assume], the advantage of the definition with join is elegance
 * other sources
@@ -67,12 +55,12 @@
 		# links-to external https://wiki.haskell.org/Typeclassopedia
 * the signatures
 	* you probably should read the external sources about monad i referred to in this section; but if you did not then here are the signatures of the 2 alternative, equivalent monad definitions [without the laws] :
-	* interface Monad m where   pure : x -> m x   (>>=) : m x -> (x -> m y) -> m y
-		* ## class
-			* code-block
-	* interface Monad m <= Functor c where   pure : x -> m x   join : m (m x) -> m x
-		* ## class
-			* code-block
+	* interface Monad m where
+		* pure : x -> m x
+		* (>>=) : m x -> (x -> m y) -> m y
+	* interface Monad m <= Functor c where
+		* pure : x -> m x
+		* join : m (m x) -> m x
 * monad-generic programs
 	# links-to internal kqwejllsptnclmqzn
 * no general method to extract content from a monad

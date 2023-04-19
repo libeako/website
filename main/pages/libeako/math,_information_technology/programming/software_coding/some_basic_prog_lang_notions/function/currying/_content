@@ -1,13 +1,10 @@
 * x1 -> (x2 -> y)
-	* ## class
-		* code-block
 * we may drop the brackets for elegance, because "->" is right associative
 	* x1 -> x2 -> y
-		* ## class
-			* code-block
 * sometimes this is said to be "the curried form" of ((x1, x2) -> y)
 * converting between these 2 usual representations of functions is a common task
-	* curry : ((a, b) -> c) -> (a -> b -> c) curry f a b = f (a, b) uncurry : (a -> b -> c) -> ((a, b) -> c) uncurry : f p = f (_1 p) (_2 p)
-		* ## class
-			* code-block
+	* curry : ((a, b) -> c) -> (a -> b -> c)
+	* curry f a b = f (a, b)
+	* uncurry : (a -> b -> c) -> ((a, b) -> c)
+	* uncurry : f p = f (_1 p) (_2 p)
 * the name "currying" comes from the fact that Haskell Curry was one of the first who used the curried form; [though he stated that he learned it from Schönfinkel]

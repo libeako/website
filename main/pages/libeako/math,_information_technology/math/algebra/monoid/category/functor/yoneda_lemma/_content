@@ -17,8 +17,6 @@
 	* is a popular name for the right side of the yoneda isomorhism as expressed above
 	* in haskell can be expressed like this
 		* newtype Yoneda f c = forall r . (c -> r) -> f r
-			* ## class
-				* code-block
 * the dual
 	* 2 possibilities of dualizing the yoneda lemma are interesting :
 	* for contravariant functor

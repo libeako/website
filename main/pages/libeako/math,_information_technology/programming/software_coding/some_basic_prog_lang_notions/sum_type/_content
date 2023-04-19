@@ -1,22 +1,16 @@
 * sum types are generalization of enum types, as they can store additional values, of different types for each case; in the definition of the sum type: in each case: we just list the types of values that to be stored
 * example:
-* datatype Maybe (e : Type) =     | none     | just e
-	* ## class
-		* code-block
+* datatype Maybe (e : Type) = none | just e
 * 'Maybe' is a container type that maybe contains a single element or nothing; it is often used as the return type of functions which can fail
 * the syntax allows us to list zero or multiple values to store in any case, but mathematically we can think that each case stores exactly 1 value, because 0 and multiple values are mathematically equivalent of their single tuple
 * the 'Either' type
 	* the most simple sum type that can be used to construct equivalent type with any sum type is
-	* datatype Either (l : Type) (r : Type) =     | left  l     | right r
-		* ## class
-			* code-block
+	* datatype Either (l : Type) (r : Type) = left  l | right r
 	* hence it is known as the "canonical" sum type
 	* it is a generalization of 'Maybe', as (Either ()) is equivalent to Maybe
 	* naming
 		* because of the equivalance to 'Maybe': it is also usable to represent result of computation, even more cleverly, as it can store information about [perhaps the reason of] failure too; in the case of Maybe it is obvious which case corresponds to success and which case corresponds to failure of computation, as no reason to successfully compute a nothing; but with 'Either' it is not obvious, as its cases are mathematically equivalent; this is an ergonomic problem; which to solve it is tempting to change the naming:
-		* datatype Result (a : Type) (b : Type) =     | error a     | success b
-			* ## class
-				* code-block
+		* datatype Result (a : Type) (b : Type) = error a | success b
 		* but this is a design mistake, because though the most notable usage of 'Either' is to represent result of computation: its full usage is significantly broader
 		* the communities of Haskell and similar languages chose to use 'Either' always; they are satisfied with this choice after tens of years of practice; important cause of this is that to disambiguate the cases for representing result is not so difficult as one usually thinks at first
 		* we have luck from the english language; "right" means not only a side, but also means 'correct' and a success is obviouosly more correct than a failure

@@ -2,55 +2,50 @@
 * motivation
 	* the map function of functor makes us able to lift a function to the level of the functor
 		* map : (x -> y) -> (c x -> c y)
-			* ## class
-				* code-block
 	* what if the function i want to lift has more inputs ?
 		* for example
 			* (x1 -> x2 -> r) -> (c x1 -> c x2 -> c r)
-				* ## class
-					* code-block
 			* for example to add 2 lists of numbers by elements
 	* can i implement a lift function for 2-input functions with using only the map function of functor? it is a good excercise for you to try
 	* answer : no, it is impossible
 	* but it feels very clear that it is desired in the same way as for 1-input functions; hence we want a generalization of functor that supports lifting functions with other arity [number of inputs]; this interface will be named "monoidal"
 	* to make my notation unambiguous : i will write into the name of the map functions the arity of their first input; thus the unambiguous name of the map function from functor will be map_1
-	* map_n : (x1 -> ... -> xn -> r) (c x1 -> ... -> c xn -> c r)
-		* ## class
-			* code-block
+	* map_n : (x1 -> ... -> xn -> r) -> (c x1 -> ... -> c xn -> c r)
 	* map_1 is the functorial map function
 	* we want map_n functions for all n > 1 too
 	* thus the set of map_n functions is infinite; but it is technically impossible to put infinitely many requirements into an interface; luckily it is not necessary, because map_2 alone is enough to implement all of { map_n | n > 1 }
 		* the key is this function
-			* (<*>) : c (x -> y) -> (c x -> c y) (<*>) = map_2 (\ f x -> f x)
-				* ## class
-					* code-block
+			* (<*>) : c (x -> y) -> (c x -> c y)
+			* (<*>) = map_2 (\ f x -> f x)
 			* with natural words : map_2 is enough to lift the function application function
 		* (<*>) makes me able to implement map_n for every desired n inductively; by "inductively" i mean : implement the next map function from the previous one, that is implement map_k from map_n where k = n+1
 			* the input of map_k is a function of type (x1 -> ... -> xn -> xk -> r)
 			* this can be thought of as a function with one less inputs : (x1 -> ... -> xn -> (xk -> r))
 				* this is just using the right associativity of (->)
 			* to this we can apply map_n, which exists by inductive hypothesis
-			* applying it we get a function with type (c x1 -> ... -> c xn -> c (xk -> r)); but we want (c x1 -> ... -> c xn -> c xk -> c r); this conversion is implementable via the conversion f (xk -> r) -> (c xk -> c r), which (<*>) does
+			* applying it we get a function with type
+				* (c x1 -> ... -> c xn -> c (xk -> r))
+			* but we want (c x1 -> ... -> c xn -> c xk -> c r)
+			* this conversion is implementable via the conversion f (xk -> r) -> (c xk -> c r), which (<*>) does
 			* finally : the implementation of map_k building on map_n and (<*>)
-				* map_k : (x1 -> ... -> xn -> xk -> r) -> (c x1 -> ... -> c xn -> c xk -> c r) map_k func cx1 cx2 ... cxn cxk = (map_n func cx1 cx2 ... cxn) <*> cxk
-					* ## class
-						* code-block
+				* map_k : (x1 -> ... -> xn -> xk -> r) -> (c x1 -> ... -> c xn -> c xk -> c r)
+				* map_k func cx1 cx2 ... cxn cxk = (map_n func cx1 cx2 ... cxn) <*> cxk
 		* thus by extending the functor interface with the requirement for map_2 : we achieve the ability to lift any function with arity >= 1
 	* but what about arity = 0 ? i did not mention this case till now for simplicity, but it is now time to think about it; and it can be felt that we desire it the same way as the others; unluckily the other map_n functions where n >=1 are not enough to implement map_0, hence we choose to just add it to interface monoidal as a separate requirement
 	* this motivation leads to this signature
-		* interface Monoidal c <= Functor c wehere   map_0 : r -> c r   map_2 : (x1 -> x2 -> r) -> (c x1 -> c x2 -> c r)
-			* ## class
-				* code-block
+		* interface Monoidal c <= Functor c wehere
+			* map_0 : r -> c r
+			* map_2 : (x1 -> x2 -> r) -> (c x1 -> c x2 -> c r)
 	* but the actual signature will be a simpler, but equivalent one; i will not prove this equivalance, but and because it is a very easy and good excercise
 * the signature
-	* interface Monoidal c <= Functor c wehere   unit : c ()   -- empty   (**) : c x -> c y -> c (x*y)   -- associative
-		* ## class
-			* code-block
+	* interface Monoidal c <= Functor c wehere
+		* unit : c ()
+			* -- empty
+		* (**) : c x -> c y -> c (x*y)
+			* -- associative
 * the laws
 	* the methods behave like the operations of monoid [hence the name "monoidal"] with the slight loosening that instead of equality, only isomorphism ["≅"] is required
 	* unit x ≅ x x unit ≅ x (x y) z ≅ x (y z)
-		* ## class
-			* code-block
 	* the naturality law
 		* in category theory the monoidal also contains a naturality law
 			* map (x y) (x' y') = map x x' map y y'
@@ -66,9 +61,9 @@
 			# links-to internal thfnzywxpqkcvtdhn
 * applicative
 	* in practice often an equivalent alternative formation is used, and is named "applicative"
-	* interface Applicative c where   pure : x -> c x   (<*>) : c (x -> y) -> (c x -> c y)   implements Functor c where     fmap = pure >>> (<*>)
-		* ## class
-			* code-block
+	* interface Applicative c where
+		* pure : x -> c x
+		* (<*>) : c (x -> y) -> (c x -> c y)
 	* in this formation the laws are chosen to be equivalent with monoidal; this formation of the laws is less intuitive, hence i omit them here
 	* this alternative formation does not take Functor as requirement, because its methods are powerful enough to implement Functor
 * monoidal-generic programs

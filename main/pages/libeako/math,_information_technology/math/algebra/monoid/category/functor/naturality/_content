@@ -28,28 +28,42 @@
 			* you may be confused now, because this type seems not contain anything resebling the commutativity condition which is essential in the category theoretical definition of natural transformation; but it is in it; in "forall X"; the type is parametric in X; assuming parametricity : the commutativity condition is a free theorem of this type
 		* derivation of the commutativity condition of natural transformation as free theorem
 			* by wadler's method we get
-			* forall X1, X2 : Type forall f : X1 -> X2   forall nt1 : F X1 -> G X1   forall nt2 : F X2 -> G X2     forall fx1 : F X1     forall fx2 : F X2       (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
-				* ## class
-					* code-block
+			* forall X1, X2 : Type
+			* forall f : X1 -> X2
+			* forall nt1 : F X1 -> G X1
+			* forall nt2 : F X2 -> G X2
+			* forall fx1 : F X1
+			* forall fx2 : F X2 
+			* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
 			* this contains relation statements about functor values; i need to translate these to relation statements on their base types; this can be done by using the logical relation corresponding to functors
 				* link to 'parametric equaivalence of functors'
 					# links-to internal wqbrusvmsxteurmsn
-			* forall X1, X2 : Type forall f : X1 -> X2   forall nt1 : F X1 -> G X1   forall nt2 : F X2 -> G X2     forall fx1 : F X1     forall fx2 : F X2       (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
-				* ## class
-					* code-block
+			* forall X1, X2 : Type
+			* forall f : X1 -> X2
+			* forall nt1 : F X1 -> G X1
+			* forall nt2 : F X2 -> G X2
+			* forall fx1 : F X1
+			* forall fx2 : F X2
+			* (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
 			* the last line is an implication
 			* i choose fx2 := map f fx1
 			* this makes the premise of the implication true; hence i can drop it
-			* forall X1, X2 : Type forall f : X1 -> X2   forall nt1 : F X1 -> G X1   forall nt2 : F X2 -> G X2     forall fx1 : F X1       map f (nt1 fx1) = nt2 (map f fx1)
-				* ## class
-					* code-block
+			* forall X1, X2 : Type
+			* forall f : X1 -> X2
+			* forall nt1 : F X1 -> G X1
+			* forall nt2 : F X2 -> G X2
+			* forall fx1 : F X1
+			* map f (nt1 fx1) = nt2 (map f fx1)
 			* making it point-free:
-			* forall X1, X2 : Type forall f : X1 -> X2   forall nt1 : F X1 -> G X1   forall nt2 : F X2 -> G X2       (map f <<< nt1) = (nt2 <<< map f)
-				* ## class
-					* code-block
+			* forall X1, X2 : Type
+			* forall f : X1 -> X2
+			* forall nt1 : F X1 -> G X1
+			* forall nt2 : F X2 -> G X2
+			* (map f <<< nt1) = (nt2 <<< map f)
 			* unifying with the choice nt1 = nt2 [= nt]:
-			* forall X1, X2 : Type forall f : X1 -> X2   forall nt : F X1 -> G X1       (map f <<< nt) = (nt <<< map f)
-				* ## class
-					* code-block
+			* forall X1, X2 : Type
+			* forall f : X1 -> X2
+			* forall nt : F X1 -> G X1
+			* (map f <<< nt) = (nt <<< map f)
 			* this is the commutativity property i wanted to prove
 		* this theorem can be used for automatic runtime-efficiency improvement

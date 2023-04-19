@@ -15,9 +15,9 @@
 	* in sum types we also have a parametricity <-> index distinction; it looks different from but related to the distinction in function inputs
 	* the input of a sum type is parameter if all constructors of it return an instance of the type with surely the same value; the input is index if it is not a parameter
 	* example
-		* data Vector (E : Set) : Natural -> Set where     Nil : Vector E Zero     Cons : (n : Natural) -> E -> Vector n E -> Vector (Suc n) E
-			* ## class
-				* code-block
+		* data Vector (E : Set) : Natural -> Set where
+			* Nil : Vector E Zero
+			* Cons : (n : Natural) -> E -> Vector n E -> Vector (Suc n) E
 		* this example uses the syntax of the agda programming language; the 'Vector' data type is a sum type; it has 2 inputs : ('E' - the element type of the vector), (a Natural - the size of the vector) 
 		* agda distincts the 2 kinds of input syntactically; in this example E is declared to be a parameter and the size input is declared to be an index
 		* agda accepts input E as parameter because all constructors of the 'Vector' sum type return a instance of this type with the same value of this input; but the constructors return instances with different size value, hence the size input may only be an index

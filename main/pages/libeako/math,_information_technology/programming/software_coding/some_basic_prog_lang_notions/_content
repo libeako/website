@@ -13,19 +13,13 @@
 	* (s is a symbol of type t with value v) is written as follows
 		* in mathematical text
 			* s : t := v
-				* ## class
-					* code-block
 		* many practical programming languages use simply "=" instead of ":="
 	* some programming languages make it possible to separate the type annotation from the value assignment into separate lines
 		* s : t s = v
-			* ## class
-				* code-block
 * let-expression
 	* an expression letting the coder declare a new symbol with scope limited to the expression
 	* example
-		* let     square x = x x in     (square a) + (square b)
-			* ## class
-				* code-block
+		* let square x = x x in (square a) + (square b)
 		* "let", "in" are keywords
 * product type
 	# links-to internal zlfhoqikoudywfzun

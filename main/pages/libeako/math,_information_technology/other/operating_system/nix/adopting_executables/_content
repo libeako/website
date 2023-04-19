@@ -5,15 +5,11 @@
 	* glibc is the most important library an executable wants to be able to find
 	* but to make sure to find all the dependencies : use these instructions on the executable
 		* patchelf --print-interpreter patchelf --print-rpath
-			* ## class
-				* code-block
 * environment variable
 	* export LD_LIBRARY_PATH=/nix/store/2kcrj1ksd2a14bm5sky182fv2xwfhfap-glibc-2.26-131/lib
 * script to patch executables
 	* example :
-		* patchelf --set-interpreter /nix/store/2kcrj1ksd2a14bm5sky182fv2xwfhfap-glibc-2.26-131/lib/ld-linux-x86-64.so.2 $1  patchelf --set-rpath "/nix/store/2kcrj1ksd2a14bm5sky182fv2xwfhfap-glibc-2.26-131/lib:/nix/store/8qfd8gx0j3yzamkrbrfz5kc00h4cqd1q-gmp-6.1.2/lib:/nix/store/jbs6zz82d59znrc53xdbmc47qvmjwjzd-libffi-3.2.1/lib" $1 
-			* ## class
-				* code-block
+		* patchelf --set-interpreter /nix/store/2kcrj1ksd2a14bm5sky182fv2xwfhfap-glibc-2.26-131/lib/ld-linux-x86-64.so.2 $1  patchelf --set-rpath "/nix/store/2kcrj1ksd2a14bm5sky182fv2xwfhfap-glibc-2.26-131/lib:/nix/store/8qfd8gx0j3yzamkrbrfz5kc00h4cqd1q-gmp-6.1.2/lib:/nix/store/jbs6zz82d59znrc53xdbmc47qvmjwjzd-libffi-3.2.1/lib" $1
 	* unfortunately one needs to update these each time those library packages get updated
 		* because the path to any package version is unique in nix
 * methods to run a non-nixos executable on nixos

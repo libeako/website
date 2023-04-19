@@ -7,8 +7,6 @@
 * components
 	* by fixing a component of the source product category : we get a functor on the other component :
 	* map_1 f = bimap f id map_2 f = bimap id f
-		* ## class
-			* code-block
 	* in haskell folklore the naming is "first" = 'map_1', "second" = 'map_2'
 * playing with the composition law :
 	* writing the arrows as pairs of arrows in the source categories :

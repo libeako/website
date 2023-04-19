@@ -10,8 +10,6 @@
 				* cp .git-backup/config .git/config
 			* create a first commit in the new history
 				* git add --all git commit -m "1"
-					* ## class
-						* code-block
 			* push this whole renewal of the history to the server
 				* git push -u --force origin master
 			* delete folder .git-backup

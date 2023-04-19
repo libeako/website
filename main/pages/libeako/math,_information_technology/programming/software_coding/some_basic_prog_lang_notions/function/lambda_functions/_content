@@ -26,5 +26,3 @@
 			* may contain reference to the input
 	* example
 		* fun x -> x +1
-			* ## class
-				* code-block

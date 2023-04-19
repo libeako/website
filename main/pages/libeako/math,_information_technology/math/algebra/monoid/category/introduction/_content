@@ -8,14 +8,8 @@
 		* the operations :
 			* here i use very precise types, parameterizing the type of arrows and objects with object values
 			* source : (x ~> y) -> x target : (x ~> y) -> y
-				* ## class
-					* code-block
 			* empty : x -> (x ~> x)
-				* ## class
-					* code-block
 			* (>>>) : (f : x ~> y) -> (g : y ~> z) -> (x ~> z)
-				* ## class
-					* code-block
 		* the laws are like of monoid
 			* the composition is associative
 			* the empty values must behave neutrally in composition

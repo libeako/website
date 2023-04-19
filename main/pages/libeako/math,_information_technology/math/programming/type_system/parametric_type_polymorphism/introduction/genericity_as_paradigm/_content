@@ -4,26 +4,19 @@
 	* the task is to write a function that swaps the components of a homogeneous pair
 	* solution
 		* swap : t t -> t t swap (v1, v2) = (v2, v1)
-			* ## class
-				* code-block
 	* some bugs are possible that the compiler can not detect
-		* swap (v1, v2) = (v1, v2)  -- forget to swap swap (v1, v2) = (v1, v1)  -- one of the component pushes out the other
-			* ## class
-				* code-block
+		* swap (v1, v2) = (v1, v2)  -- forget to swap
+		* swap (v1, v2) = (v1, v1)  -- one of the component pushes out the other
 	* genericity as paradigm says in this example to allow heterogeneous pairs
 		* swap : x y -> y x swap (v1, v2) = (v2, v1)
-			* ## class
-				* code-block
 		* only the type is different, it is more general, the implementation is the same; with this type the compiler does not let the coder make the bugs mentioned earlier
 * a similar simple example
 	* the task is to write a function that composes 2 given functions
 	* non-general solution
-		* compose : (t -> t) (t -> t) -> (t -> t) compose (a, b) = λ x -> b (a x)
-			* ## class
-				* code-block
+		* compose : (t -> t) (t -> t) -> (t -> t)
+		* compose (a, b) = λ x -> b (a x)
 		* what is the order of the input functions in the output composition? it is hidden in the implementation, perhaps a comment for the function would contain this information
 	* general solution
-		* compose : (x -> y) (y -> z) -> (x -> z) compose (a, b) = λ x -> b (a x)
-			* ## class
-				* code-block
+		* compose : (x -> y) (y -> z) -> (x -> z)
+		* compose (a, b) = λ x -> b (a x)
 		* only the type of the function is different; this more general type constrains the order of the functions in the composition, making the comment unnecessary and eliminating the possible error of mismatch between the comment and the implementation

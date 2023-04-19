@@ -2,55 +2,32 @@
 * then the result of the function application expression is a function that expects actual inputs for the rest of the designed formal inputs
 	* formally:
 		* f   : a -> b -> c
-			* ## class
-				* code-block
 		* =>
 		* f x :      b -> c
-			* ## class
-				* code-block
 * function application is left associative
 	* examples
 		* f x y = (f x) y f x y z = ((f x) y) z
-			* ## class
-				* code-block
 	* this is in nice consistency with partial function application, because by this (f x) is a sub-expression of (f x y); by this: partial function application is not a special language construct, but a natural capability, which is awesome
 * example
 	* plus x y = x + y  increment x = plus 1 x
-		* ## class
-			* code-block
 	* remember that 
 	* increment x = plus 1 x
-		* ## class
-			* code-block
 	* is only a syntactical sugar of 
 	* increment = (\ x -> plus 1 x)
-		* ## class
-			* code-block
 	* because (\ x -> f x) is equivalent to f:
 	* increment = plus 1
-		* ## class
-			* code-block
 	* is a valid way to define 'increment; and a neat one
 * order of the inputs
 	* to enable partial function application in greatest scope: inputs are often ordered flipeed to what imperative programmers are used to
 	* examples
-		* map : (a -> b) -> List a -> List b  filter : (a -> Bool) -> List a -> List a
-			* ## class
-				* code-block
+		* map : (a -> b) -> List a -> List b
+		* filter : (a -> Bool) -> List a -> List a
 		* the advantage of this "reverse" order is hopefully demonstrated by the following example:
 		* filter_then_map : (a -> bool) -> (a -> b) -> List a -> List b
-			* ## class
-				* code-block
 		* first attempt to define 'filter_then_map':
 		* filter_then_map p f l = map f (filter p l)
-			* ## class
-				* code-block
 		* using that f (g x) = (g >>> f) x:
 		* filter_then_map p f l = ((filter p) >>> (map f)) l
-			* ## class
-				* code-block
 		* dropping l from both sides:
 		* filter_then_map p f = filter p >>> map f
-			* ## class
-				* code-block
 		* this is much neater than the first attempt to define 'filter_then_map'; to make ourselves able to use 'filter' and 'map' such neatly is why the input order of them are what they are

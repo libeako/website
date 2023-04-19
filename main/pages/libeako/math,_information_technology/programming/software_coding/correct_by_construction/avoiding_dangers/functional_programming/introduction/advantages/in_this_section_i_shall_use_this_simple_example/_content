@@ -3,13 +3,10 @@
 	* it takes 2 vectors, both with n scalar components, multiplies them component-wise and sums these multiplication results
 * the competing implementations
 	* imperative
-		* c := 0 for (int i = 0; i < n; ++n)     c := c + a[i] b[i]
-			* ## class
-				* code-block
+		* c := 0 for (int i = 0; i < n; ++n)
+			* c := c + a[i] b[i]
 	* functional
 		* uncurry (lift2 (*)) >>> fold 0 (+)
-			* ## class
-				* code-block
 		* some explanation
 			* '>>>' - function composition
 			* 'lift2' - lifts a 2-ary function (from the space of scalars) (to the space of vectors of scalars of the same length)
