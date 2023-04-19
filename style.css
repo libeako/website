@@ -24,7 +24,7 @@ body
     margin: auto;
 	padding: 1em;
     max-width: 70em;
-    font-family: sans-serif;
+    font-family: sans-serif,monospace;
 }
 
 nav
