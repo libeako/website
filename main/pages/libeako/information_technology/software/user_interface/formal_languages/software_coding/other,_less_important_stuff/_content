@@ -61,5 +61,11 @@
 * totality
 	* the compiler can usually check automatically
 		* exmaples
-			* size l = case l of     nil -> 0     head::tail -> 1 + (size tail)
-			* fold f z l = case l of     nil -> z     head::tail -> foldl f (f z head) tail
+			* size l =
+				* case l of
+					* nil -> 0
+					* head::tail -> 1 + (size tail)
+			* fold f z l =
+				case l of
+					* nil -> z
+					* head::tail -> foldl f (f z head) tail
