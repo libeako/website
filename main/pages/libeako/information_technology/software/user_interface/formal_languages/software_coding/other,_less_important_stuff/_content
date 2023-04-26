@@ -66,6 +66,6 @@
 					* nil -> 0
 					* head::tail -> 1 + (size tail)
 			* fold f z l =
-				case l of
+				* case l of
 					* nil -> z
 					* head::tail -> foldl f (f z head) tail
