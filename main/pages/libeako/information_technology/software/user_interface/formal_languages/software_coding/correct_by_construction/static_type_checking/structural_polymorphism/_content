@@ -15,7 +15,7 @@
 * terminology
 	* this method has multiple names in use ["generic", "polytypic"], but none of them seems good for me
 	* "polymorphic" <-> "polytypic"
-		# links-to internal fcatpqbmpylblknyn
+		# links-to internal fcatpqbmpylblkny
 * haskell
 	* haskell provides tool for such generic definitions; but its implementation is cheap in the sense that the evaluation of such generic values often comes with [asymptotically constant] calculational overhead
 * other sources

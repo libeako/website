@@ -21,7 +21,7 @@
 * ((equiv fx1 fx2) and (equiv fy1 fy2)) => equiv (fx1 fy1) (fx2 fy2)
 * using rule for equivalence of functors
 	* link to 'parametric equivalence of functors'
-		# links-to internal wqbrusvmsxteurmsn
+		# links-to internal wqbrusvmsxteurms
 * forall X1 X2 : Type
 * forall x : X1 -> X2
 * forall Y1 Y2 : Type

@@ -20,7 +20,7 @@
 	* how does this generalization effect the laws?
 	* this new type of isomorphism looks strange and suspicious at first glance; isomorphism has a simple law : its 2 conversion functions must be inverses of each other, but with this new general typing the conversion functions do not even look composable; but note that when the law can be proposed [when the typing allows composition [when eo == en and co = cn]] is still a special case and we can require the law to hold at least then; that is better than nothing, but it still feels bad that in the other cases this data type seems to be out of control of the law; in such cases we usually turn to parametricity, hoping that it constrains the value set of the general type to sensible values; [if you do not understand this reasoning then do not be afraid, because i was very hand-wavy and i do not really understand it either; to achieve parametricity we would want to make the container and content types parameterized by the old-new choice
 		* link to 'parametric polymorphosm'
-			# links-to internal kmzluqnwmjudyuhtn
+			# links-to internal kmzluqnwmjudyuht
 	* let Lens e c  = forall o n . { get : c o -> e o, set :  e n -> c o -> c n }
 	* let Isomorphism e c = forall o n . { get : c o -> e n, build : e o -> c n }
 	* this would be nice, but unfortunately the typesystems of some programming languages [including haskell] is not flexible enough to work with this
@@ -41,4 +41,4 @@
 * less bugs
 	* by this generalization [as with any towards parametric polymorphism] : we also gain defence against some bugs in the implementations of functions around optics [for example of the 'compose' and 'lift' functions], which gain even alone is worth the extra complexity in the typing [at least in an implementation layer]
 		* link to 'parametric polymorphism'
-			# links-to internal kmzluqnwmjudyuhtn
+			# links-to internal kmzluqnwmjudyuht

@@ -6,16 +6,16 @@
 		* efficient c++ code contains lot of "const" declaration, to enable more micro-transformation by the compiler; in functional programming languages things are constant by default
 		* a garbage collection algorithm can have competitive efficiency only if it is generational; the idea behind the generational ones is that old references are not likely to change; if this assumption is false then the generational collector can suffer; in functional programming references [like everything else] does not change [except lazy initialization]
 	* high level
-		# links-to internal iarklboiropwlnyfn
+		# links-to internal iarklboiropwlnyf
 * high level
 	* functional programming is higher level than imperative programming,
 	* but high level does not cause efficiency decrease
 		* link to explanation
-			# links-to internal yjnweovfnkfncnhpn
+			# links-to internal yjnweovfnkfncnhp
 	* higher level is only a useful possibility enabled by functional programming and not a prerequisite
 		* example
 			* look at the dotproduct example
-				# links-to internal nxwwqhqhdzpldxmsn
+				# links-to internal nxwwqhqhdzpldxms
 			* it can be rewritten to low level
 				* let dp m acc = 
 					* if m == 0 then 0 else (dp (m-1) (acc + a[m] b[m])) in dp n

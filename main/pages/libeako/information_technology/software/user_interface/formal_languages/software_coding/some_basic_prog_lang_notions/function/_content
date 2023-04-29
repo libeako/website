@@ -2,7 +2,7 @@
 	* of functions from type x to type y is 
 		* x -> y
 * "lambda function"s
-	# links-to internal kofbgukzdvgkwkxsn
+	# links-to internal kofbgukzdvgkwkxs
 * syntax of function definition
 	* literal
 		* f = fun x -> ... x ...
@@ -36,7 +36,7 @@
 		* (x1, x2) -> y
 	* an other solution is:
 	* currying
-		# links-to internal rjvsfevdnztyxdlzn
+		# links-to internal rjvsfevdnztyxdlz
 	* flipping the order of the inputs
 		* flip : (a->b->c) -> (b->a->c)
 		* flip f b a = f a b
@@ -54,6 +54,6 @@
 	* (>>>) : (t1 -> t2) -> (t2 -> t3) -> (t1 -> t3)
 	* f >>> g = fun x -> g (f x)  (<<<) = flip (>>>)
 * partial function application
-	# links-to internal xbcsbisjcnxjnneun
+	# links-to internal xbcsbisjcnxjnneu
 * point-free style
-	# links-to internal oqmgrzzqokpkuawgn
+	# links-to internal oqmgrzzqokpkuawg

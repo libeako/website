@@ -4,7 +4,7 @@
 		* x ≅ λ (r : Type) -> (x -> r) -> r
 	* you can easily find the functions that map from one side to the other; that gives you an intuitive justification of the isomorphism; but proving that they are inverses of each other is difficult because it needs a free theorem
 		* link to 'free theorems'
-			# links-to internal ejqpvlbcoexibqkun
+			# links-to internal ejqpvlbcoexibqku
 	* you can find the proof including the free theorem in the article (Philip Wadler : Theorems for free!)
 * the general form of the yoneda lemma
 	* adds a functor "F"
@@ -12,7 +12,7 @@
 	* the previously shown concrete version can be recovered from this general version by F := the identity functor
 	* the proof of this theorem in its full category-theoretic generality is easy and available in almost all category-theory introductory books
 		* link to 'categrory theory: sources to learn from'
-			# links-to internal yupvqrvgexyesprrn
+			# links-to internal yupvqrvgexyesprr
 * "the yoneda functor"
 	* is a popular name for the right side of the yoneda isomorhism as expressed above
 	* in haskell can be expressed like this

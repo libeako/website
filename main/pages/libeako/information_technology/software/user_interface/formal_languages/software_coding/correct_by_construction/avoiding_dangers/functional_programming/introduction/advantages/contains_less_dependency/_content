@@ -17,7 +17,7 @@
 		* this makes functional programming fun, the coder feels like he|she is playing with building blocks; hence functional programming deserves the shorter name "fun programming"
 		* modularity improves hierarchicity
 			* i wrote an example of functional programming
-				# links-to internal nxwwqhqhdzpldxmsn
+				# links-to internal nxwwqhqhdzpldxms
 			* this discussion builds on it
 			* the dotproduct function sums the component-wise results
 			* summing some values consists of starting from a default value and accumulating the values one-by-one

@@ -5,6 +5,6 @@
 	* the only reason to use space is alignment
 	* but
 	* aligning is bad practice
-		# links-to internal afkgdbwfehvtemtgn
+		# links-to internal afkgdbwfehvtemtg
 * automatic resize of indentation is not possible with spaces; because the algorithm may not know in all situation if the author intended the spaces for alignment or for indentation
 * choosing tab can not be the wrong decision; because you can change it to spaces any time without problem, with a simple automatic solution; the other direction is difficult though [you chose spaces probably because you wanted to use alignment]

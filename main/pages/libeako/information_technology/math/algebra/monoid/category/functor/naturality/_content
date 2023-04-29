@@ -4,7 +4,7 @@
 * functor
 	* naturality builds on the notion of
 		* functor
-			# links-to internal yboclzmzvuwqxcdtn
+			# links-to internal yboclzmzvuwqxcdt
 	* a little remembering about functors
 		* mathemticians probably like to think about them as mathematical constructions; i [as a programmer] like to think about them as data structures, more concretely "collection" types
 		* the choice of the type of data the collection holds corresponds to the choice of the object in the target category of the functor; thus a collection type can contain any type of data ["content"]; but the "structure" of it is fixed by the type of the collection, that is by the functor
@@ -18,9 +18,9 @@
 * in software coding
 	* in programming naturality happens naturally, by which i mean : without any direct effort by the programmer; by the phenomena which in programming is named " parametricity", which means that the value of a type-polymorphic value [for example the behavior of a type-polymorphic function] is uniform for all concrete instantiations of its type-variable; parametricity implies certain mathematical properties of all the values of a type; the derivation of such properties is done based on the type only, hence they are named free theorems; in particular naturality conditions in category theory are free theorems in programming
 		* link to parametricity
-			# links-to internal iuvbupavbjmhfrxjn
+			# links-to internal iuvbupavbjmhfrxj
 		* free theorem
-			# links-to internal ejqpvlbcoexibqkun
+			# links-to internal ejqpvlbcoexibqku
 	* i will illustrate this on the example of natural transformation itself
 		* the type of a natural transformation in a haskell-like programming language is as follows 
 			* NT (F : Functor) (G : Functor) = forall X . F X -> G X
@@ -37,7 +37,7 @@
 			* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
 			* this contains relation statements about functor values; i need to translate these to relation statements on their base types; this can be done by using the logical relation corresponding to functors
 				* link to 'parametric equaivalence of functors'
-					# links-to internal wqbrusvmsxteurmsn
+					# links-to internal wqbrusvmsxteurms
 			* forall X1, X2 : Type
 			* forall f : X1 -> X2
 			* forall nt1 : F X1 -> G X1

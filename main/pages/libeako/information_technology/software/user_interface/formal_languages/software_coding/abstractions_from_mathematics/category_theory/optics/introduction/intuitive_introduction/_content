@@ -32,4 +32,4 @@
 		* lens_value_at :: k -> Lens (Maybe v) (Map k v)
 	* then insertion is done by setting to Just _, deletion is done by setting to Nothing [where 'Just' and 'Nothing' are the 2 constructors of the Maybe type]
 * a convincing real-world example
-	# links-to internal ypnccchncfaeqhzhn
+	# links-to internal ypnccchncfaeqhzh

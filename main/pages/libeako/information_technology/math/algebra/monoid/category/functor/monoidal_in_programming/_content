@@ -52,13 +52,13 @@
 			* where creates a function from 2 input functions that applies the 2 input functions by-component to a pair of inputs
 		* as generally : in programming naturality is given by parametricity as a free theorem
 			* link to 'naturality'
-				# links-to internal nisopwyprssrsvggn
+				# links-to internal nisopwyprssrsvgg
 			* link to 'parametricity'
-				# links-to internal iuvbupavbjmhfrxjn
+				# links-to internal iuvbupavbjmhfrxj
 			* link to 'free theorems'
-				# links-to internal ejqpvlbcoexibqkun
+				# links-to internal ejqpvlbcoexibqku
 		* my derivation of the free theorem
-			# links-to internal thfnzywxpqkcvtdhn
+			# links-to internal thfnzywxpqkcvtdh
 * applicative
 	* in practice often an equivalent alternative formation is used, and is named "applicative"
 	* interface Applicative c where
@@ -69,9 +69,9 @@
 * monoidal-generic programs
 	* a good example:
 		* the sequence function that swaps container layers
-			# links-to internal nuckddbslvpvzupyn
+			# links-to internal nuckddbslvpvzupy
 * more sources
 	* Marcin Szamotulski : Monoidal and Applicative Functors
 		# links-to external https://coot.me/posts/monoidal-functors.html
 * monad
-	# links-to internal mtcrpjujemznyvuen
+	# links-to internal mtcrpjujemznyvue

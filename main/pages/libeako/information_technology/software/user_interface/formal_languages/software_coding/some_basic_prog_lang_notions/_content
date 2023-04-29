@@ -22,18 +22,18 @@
 		* let square x = x x in (square a) + (square b)
 		* "let", "in" are keywords
 * product type
-	# links-to internal zlfhoqikoudywfzun
+	# links-to internal zlfhoqikoudywfzu
 * function
-	# links-to internal acsyovgrmdzvytozn
+	# links-to internal acsyovgrmdzvytoz
 * enum type
-	# links-to internal keopxbnbneqhcmwrn
+	# links-to internal keopxbnbneqhcmwr
 * sum type
-	# links-to internal iarpgpjgytyzcamqn
+	# links-to internal iarpgpjgytyzcamq
 * "algebraic data type"
 	* "algebraic data type" construction is just a common name for product and sum type consturction
 * pattern matching
-	# links-to internal ybfruhnhbcxrqyoln
+	# links-to internal ybfruhnhbcxrqyol
 * "generalized algebraic datatypes"
-	# links-to internal oornolrtruyzbnttn
+	# links-to internal oornolrtruyzbntt
 * type classes
-	# links-to internal biuqwfqzzkpjuqobn
+	# links-to internal biuqwfqzzkpjuqob

@@ -10,7 +10,7 @@
 * the reason
 	* of this distinction in function inputs is that parametricity may make us able to deduce interesting mathematical properties of the function
 	* example :
-		# links-to internal iuvbupavbjmhfrxjn
+		# links-to internal iuvbupavbjmhfrxj
 * in data types
 	* in sum types we also have a parametricity <-> index distinction; it looks different from but related to the distinction in function inputs
 	* the input of a sum type is parameter if all constructors of it return an instance of the type with surely the same value; the input is index if it is not a parameter

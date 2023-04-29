@@ -5,9 +5,9 @@
 	* state mutation
 		* it is important to see that Alan Kay thought about OOP as something that fundamentally involves mutable state; many people even till now think so; but state is perhaps the most "evil" thing in programming ; you may now defend OOP with the statement that functional programming is not to be applied for all programs; for example high efficiency programs may drop the functional methodology at certain places; but : note that these high efficiency programs are relatively rare, most programs are written at the application level, where functional programming is not only efficient enough but is even more efficient than imperative programming; and even in highly efficient programs : the highly optimized parts of it are small compared to the full size of the program; thus the scope of legitimately using imperative mutable state is very small; and even in that small scope : OOP is not good fit because some other aspects of it [dynamic memory allocation, late binding] is usually incompatible with high optimizability of runtime efficiency; thus we arrive to the conclusion that OOP does not have any place
 			* link to 'functional programming'
-				# links-to internal rqeeitsvmgrogdjpn
+				# links-to internal rqeeitsvmgrogdjp
 			* link to (runtime efficiency of functional programs)
-				# links-to internal nmzlpnpnrsfmunrfn
+				# links-to internal nmzlpnpnrsfmunrf
 	* anything else?
 		* but this is just one interpretation of "object oriented programming"; one "modern" view of it is that mutable state does not have to be considered a part of it; this view is strongly reflected by the scala programming language for example
 		* an "object" is a value coupled with the memory part it is stored in; the only reason to distinguish between different objects with the same value is the possibility of mutation; hence with dropping mutation from our toolbox : we drop "object"s too; hence the name "OOP" looses its original meaning; hence "functional OOP" contains a striking contradiction at least as a name 
@@ -15,14 +15,14 @@
 		* in the following i use comparison to the haskell programming language which is considered to be not an object oriented language; thus i allow to myself to exclude from OOP any feature that is in haskell
 		* an other fundamental component of OOP is late binding; at least Alan Kay thought so ["extreme late-binding of all things"]; and this view is reflected by the current mainstream OOP languages : everything depends on a special, implicit first input : a "this" or "self" object; i consider late binding a legitimate feature, but i think that making it a base of type interfacing was a programming language design mistake; this is nicely demonstrated by the contrast with the haskell solution of type interfacing ["type classes"] which builds on static dispatch by default; the static strategy gives vast improvement in runtime efficiency [because of inlining], type inference, most importantly: domain modeling capability [including nullary methods, conditional implementation, late implementation]
 			* link to (type classes)
-				# links-to internal biuqwfqzzkpjuqobn
+				# links-to internal biuqwfqzzkpjuqob
 		* if we would drop late binding too from the definition of OOP then what would remain of OOP? 
 			* run-time type testing ? - even the OO culture considers it a dirty practise, to be avoided
 			* methods inheritance between interfaces ? - not a significant feature
 			* dynamic binding ? - haskell also has it, though with more code verbosity
 		* i did find though one important thing that distinguishes OOP languages : they base their type interfacing on late binding; not only base, but constrain :  static methods may not be in OOP type interfaces; i fail to see any advantage that this constrain can give; type classes are much better
 			* link to (why type classes are better)
-				# links-to internal biuqwfqzzkpjuqobn
+				# links-to internal biuqwfqzzkpjuqob
 * main conclusion
 	* till here i came to the conclusion that OOP is mainly state mutation and unnecessary push of dynamic binding; the earlier ruins our software coding efficiency, the later makes type interfacing hardly usable; giving nothing significant in return that we would expect from a programming paradigm
 * shame on OO type interfacing
@@ -58,7 +58,7 @@
 			* = access control + mutable state
 		* "null object"
 			* monoid
-				# links-to internal cabjryjnnstdjmvbn
+				# links-to internal cabjryjnnstdjmvb
 		* "template method"
 			* = "strategy"
 		* "prototype"

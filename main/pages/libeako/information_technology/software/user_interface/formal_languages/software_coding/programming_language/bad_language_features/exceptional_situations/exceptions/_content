@@ -4,7 +4,7 @@
 	* one pays a huge price for not having to bother with propagating the exceptional value through the call stack: it becomes necessary to memorize the whole exception structure that became hidden, moving the system from the code and the static type checker to the coding human's head - this is a horrible deal, which brings big regret as the time goes, the code grows, colleagues become involved
 	* propagating exceptional value through function call stack is much easier than most coders think - with the help of container layer swapping helper functions
 		* link to (swapping container layers)
-			# links-to internal nuckddbslvpvzupyn
+			# links-to internal nuckddbslvpvzupy
 * this is the same story as with the null value
 	* i wrote about that too
-		# links-to internal fbctgaodsnjovflln
+		# links-to internal fbctgaodsnjovfll

@@ -6,7 +6,7 @@
 		* "curry-howard correspondence"
 * i want to present it by not immediately telling it to you, but leading you to it on a path step-by-step; my derivation will resemble how one could get to it on his|her own; my goal with choosing this approach is to show that it is not some lucky arbitrary correspondence, but a deep, strong, natural connection
 * the derivation
-	# links-to internal oirlocgmsfwjamlin
+	# links-to internal oirlocgmsfwjamli
 * i stop using category theory from here
 	* programming --- logic
 	* type --- statement
@@ -30,7 +30,7 @@
 			* remember that the programming-logic correspondence is a mathematical phenomena, so it needs to be true only for real mathematical objects; but (x : Empty = x) does not define a real mathematical object, because its evaluation recurses forever; the lesson learned : the programming-logic correspondence to be sound requires totality
 		* this is the big reason why the importance of totality checking in the future will grow [as the practice of proving grows]; preferably the programming language and the compiler will do much of the totality checking
 * representing logical constructs
-	# links-to internal huktyxsxcfntvnbjn
+	# links-to internal huktyxsxcfntvnbj
 * modern type systems [for example the calculus of constructions] are powerful enough to express higher order logical statements and their proofs, and also are simple and intuitive; hence we can expect that future programming languages will build on them; the idris programming language is already an example of this; in these simple but powerful languages we can do all of the following activities
 	* creata a data type model of the domain of the program
 	* state mathematical theorems about the domain of the program

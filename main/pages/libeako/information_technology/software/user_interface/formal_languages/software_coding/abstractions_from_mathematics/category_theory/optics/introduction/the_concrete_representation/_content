@@ -90,11 +90,11 @@
 		* this is equivalent to the well known Traversable interface
 		* if you do not know what interface Applicative is
 			* here is my introduction
-				# links-to internal kaxxmpbkqesnqecyn
+				# links-to internal kaxxmpbkqesnqecy
 		* laws
 			* same as of the Traversable interface
 				* traversal pure = pure
 				* traversal f >>> map (traversal g) = getCompose (traversal (g >>> map f >>> Compose))
 					* where : newtype Compose f g x = Compose { getCompose : g (f x) }
 * more about Lens
-	# links-to internal zpvtqfvuyntejjdtn
+	# links-to internal zpvtqfvuyntejjdt
