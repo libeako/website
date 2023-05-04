@@ -6,6 +6,11 @@
 	* they lack base; the 560S has the strongest technicalities for base but even its base is airy, loose
 	* they lack grandness, punch and slam, the sound source feels to be point-like
 	* all of them has bad soundstage, except the 569, interestingly, as it is the only closed-back among them
+	* most of them has a problem aroun 9 KH
+		* i can not see this problem in a simple tone sweep, so it must be not a frequency response problem
+		* it makes the headphone difficult to listen with to music for long time
+		* different types have this problem with different manner and magnitude
+		* the 569 is an exception, i did not hear this problem with it
 * concrete types
 	* 558
 		* thin, slightly metalic, even after equalization
@@ -16,10 +21,16 @@
 		* contains some grain in the 100-1000 region, that is bothering my quite much, it is unpleasant - this is its main problem for me
 		* highs are good, smooth, not metalic
 	* 599
-		* less thin sounding than other Sennheiser 5 headphones
-		* more dynamic sounding than most other Sennheiser 5 headphones, including the 560S, but less than the 559
-		* highs are sparky or glaring; at abtou 12 - 13 KH; i mean that as a negative; i could not get rid of it with equalization; this was my problem with it and this is why i did not even test it for long, i could not accept that
-		* midbass is bumped by about 3 - 5 dB; this is the biggest problem for some users; for me it was not a problem, it is not very unpleasant and it is easy to erase with equalization
+		* a '599 SE' ["special edition"] also exists, it is black, instead of bone-brown; i had 1 instance of both types, i think the only difference is the color
+		* comfort it good, but the other types with all foam headband padding are even more comfy
+		* sound
+			* more dynamic sounding than most other Sennheiser 5 headphones, including the 560S, but less than the 559
+			* with the nomal 599 highs wre sparky or glaring
+				* at about 12 - 13 KH; i mean that as a negative; i could not get rid of it with equalization; this was my problem with it and this is why i did not even test it for long, i could not accept that
+				* i did not have this problem with the special edition
+			* midbass is bumped by about 3 - 5 dB; this is the biggest problem for some users, understandably; it is not very unpleasant and it is easy to erase with equalization
+			* boring at least, can not make myself to like this headphone, even though i can not point out any hard problem
+			* stage is not so good as i would expect from a good open back headphone
 	* Game One
 		* it has a built-in volume control, which is very elegant, handy and easy to use
 		* very comfy
@@ -31,14 +42,22 @@
 			* macrodetail is quite good
 			* feels very smoothed
 				* microdetail is low
+				* contains some problem
+					* perhaps in the transients because i hear it almost always in music
+					* i do not hear it in a simple tone sweep, it is not a graring frequency response problem
+					* it is unpleasant and makes the headphone difficult to listen to music with for long time
+					* out of my 3-4 amplifiers only 1 could make this problem disappear - the Beyerdynamic A 20
 				* no punch or slam, no dynamism, music is very slow and boring
 					* this always made me to remain unsatisfied and in search for better equalization or other headphone
 					* this is an example of headphones which impress me at first but than leave me totally unsatisfied musically
 					* this was my biggest problem with this headphone: overly smoothed and boring
-				* on the other side: it is very laid back
+				* very laid back
 					* perhaps this is what is optimal for gaming, to be able to listen to gun-shots and explosions for long time; but for music i disliked this
+				* the highs are 
+					* smooth
+					* too airy - not in a harsh manner but in a muddy manner
 			* stock frequency response is quite good, almost 560S level good; it has a 3 db midbase bump, which some users may find annoying, easy to equalize out
-			* stage is annoyingly small
+			* stage is small
 			* separation and layering is low, not even noticable for me; sounds just flow together
 			* conclusion: may be good for kids playing, to pretect their hearing from harsh sounds of game but for grown-up people enjoying music: look for something else
 	* 569
