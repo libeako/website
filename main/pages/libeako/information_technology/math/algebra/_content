@@ -1,8 +1,26 @@
-* in this section i often use my programming notation
-	* see it here
-		# links-to internal jaxbiyrfnbhaormb
-* introduction
-	# links-to internal yzxyxjpihhuuloeb
+* what is an "algebra" ?
+	* it  is similar [in certain aspects] to what a type is in programming
+	* it is a tuple (values operations laws)
+		* "values" is a set of values [also named "objects"]
+			* like a type in programming has a set of values
+		* "operations" are functions from a tuple of values to a value
+			* like methods of types in programming; though in an algebra the output has the same single type as the values
+			* also can be named with "method"
+		* laws
+			* these are mathematical statements about ["properties" of] the operations
+				* most often equalities
+* the collection of values is often named with these other phrases : "base collection", "sort", "slot", "type", "carrier"
+* an algebra is "abstract" iff we do not know what its values actually are
+	* in software coding abstract types representing algebras are analogous to abstract algebras in math; abstract types are often in the form of type interfaces
+	* in programming languages like haskell abstract algebras are very popular; a popular method of encoding them is type interfaces ["type classes"]
+* 2-ary operations
+	* notation: when an algebra has only 1 of them: i will use symbol ⊕ for its infix form
+	* some famous predicates on them:
+		* commutativity
+			* for-all x y
+				* x ⊕ y = y ⊕ x
+		* associativity
+			# links-to internal zupoyjhzjznssfcb
 * homomorphism
 	# links-to internal bizliksuerpywvfs
 * free
