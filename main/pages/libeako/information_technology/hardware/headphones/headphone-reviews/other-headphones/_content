@@ -1,3 +1,19 @@
+* Beyerdynamic DT 1990
+	* comfort
+		* ear
+			* cup is more comfy than i thought; i was afraid of it being seemingly small and round; but it is good, does not touch my ears, nor the cover of the transducer
+			* clamp is certainly higher than average but bearable
+		* headband - no hotspot after 5 minutes
+	* sound
+		* with stock tuning the headphone is very intensive at the high frequencies
+		* eq
+			* for me the peak is not at 8500 but at 7500 - i decreased there by 8 dB
+			* at 9000 with Q = 3: 6 dB
+			* i also applied some more, less deep, more wide decrease to the highgs, and for the base
+		* even after equalization: has a certain rough texture: it gives much perception of micro-detail but is it real detail? some of it is not, because it is unpleasant, difficult to listen to for long time and is unnatural
+		* separation seems good
+		* stage is average
+		* summary: i disrecommend this headphone type; the bad frequency response and especially the rough texturization of everything makes it bad, even for 3 times less price
 * Cooler Master MH (751 | 752)
 	* i suspect that the difference between the 751 and 752 versions is only that the 752 also contains an inline volume control
 		* the 7.1 feature on it is a bullshit, like almost always, it only adds some reverb and perhaps some other effects - it is a conscious and heavy degradation of the sound quality, in all use-cases, just to sell it as something "surround", which attracts the stupid buyers
@@ -36,7 +52,18 @@
 	* comfort
 		* suspension arms give good comfort, i almost did not feel where it was on my head
 		* the earcups were too small for me, this is also reported by others
-* Shure SHR 440 A
+* Shure SRH 1540
+	* comfort
+		* mass is very low for such big headphone
+		* earcups are big both in radius and depth
+		* clamp force is low
+		* the headband could be more comfy, but is not uncomfy, it is okay
+	* sound isolation is realtively small
+	* sound
+		* surprisingly smooth from a closed-back headphone
+		* sounds realatively detailed
+		* leans toward dryness
+* Shure SRH 440 A
 	* comfort is very pleasant
 	* sound
 		* surprisingly good stage for a closed back
@@ -67,9 +94,12 @@
 	* at around 300 Herz some resonance or other problem is present, i could not get rid of it with equalization
 	* timbre is woody
 * Sennhesier GSP 500
-	* sound was okay
+	* sound is good
 		* its transducer is totally different from the transducer of Sennheiser 5__ headphones
-	* comfort was not good enough from a Sennheiser
+		* warm, sweet, 
+		* apart from some [not very problematic] coloration: the sound is quite good, no big problem, better than of any Sennheiser 5** types
+		* separation is good, dynamics is good, no troubling resonance or lingering or harshness or sibilance or such
+	* comfort is bad, not only for a Sennheiser, but even more generally too; both the headband and the earcups are not comfy enough
 * Behringer BH 470
 	* this headphone is designed for travel: it is closed, base is elevated [this is usual with travel headphones], it is small, nice and elegant
 	* mids have so prominant dip that equalization is very important with this headphone
