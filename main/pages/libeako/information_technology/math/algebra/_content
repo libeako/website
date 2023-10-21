@@ -1,18 +1,22 @@
-* what is an "algebra" ?
-	* it  is similar [in certain aspects] to what a type is in programming
-	* it is a tuple (values operations laws)
-		* "values" is a set of values [also named "objects"]
-			* like a type in programming has a set of values
-		* "operations" are functions from a tuple of values to a value
-			* like methods of types in programming; though in an algebra the output has the same single type as the values
-			* also can be named with "method"
-		* laws
-			* these are mathematical statements about ["properties" of] the operations
-				* most often equalities
-* the collection of values is often named with these other phrases : "base collection", "sort", "slot", "type", "carrier"
-* an algebra is "abstract" iff we do not know what its values actually are
-	* in software coding abstract types representing algebras are analogous to abstract algebras in math; abstract types are often in the form of type interfaces
-	* in programming languages like haskell abstract algebras are very popular; a popular method of encoding them is type interfaces ["type classes"]
+* an 'algebra', by definition, is some collections with some functions over them
+	* the collections in an algebra are 
+		* sets, in more traditional mathematics
+		* types, in modern mathematics
+		* elements of the collections are also said to be "instances", "objects" or "values" of them
+		* the collections in an algebra are often named with these other phrases : "base collections", "sorts", "slots", "types", "carriers"
+	* the functions in an algebra
+		* the functions must be 'over the types', which means that their inputs and outputs must be of those types; this is a strict requirement, is an  essencial property of algebras
+		* the functions of an algebra are often referred to via
+			* "operations", by mathematicians
+			* "methods", by programmers
+		* laws are mathematical statements about ["properties" of] the methods
+			* i treat them as parts of the methods, because they can be parts of the types of the methods, with a sufficiently expressive type-system
+			* the laws are most often equalities
+* 'algebra' is similar to 'module' or 'namespace' in programming
+	* the difference is that in algebras the rule that (the methods work only on the types of the algebra) is strict
+		* most often equalities
+* an algebra is "abstract" iff we do not know what its types are
+	* in software coding abstract algebras are type interfaces
 * 2-ary operations
 	* notation: when an algebra has only 1 of them: i will use symbol ⊕ for its infix form
 	* some famous predicates on them:
@@ -26,8 +30,6 @@
 * free
 	# links-to internal xvdouingmcyaahxq
 * some variety of algebras
-	* magma
-		# links-to internal jtaeoyfrjenhcavl
 	* semigroup
 		# links-to internal eovnsnrjngyuihhx
 	* monoid

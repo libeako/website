@@ -1,9 +1,0 @@
-* has
-	* 1 sort
-	* 1 2-ary operation
-	* 0 laws
-* the operation may be named "combine"
-* in programming :
-	* interface Magma t
-		* combine : t -> t -> t
-* because the absence of laws, we do not know anything about the operation; so this structure is equivalent to a function of type t->t->t and hence is not interesting; at this point i can admit to you : its most numerous usage is like here, as the most introductory example of abstract algebra
