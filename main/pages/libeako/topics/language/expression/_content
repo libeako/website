@@ -1,0 +1,22 @@
+* the words "expression", "message", "term", "phrase", "formula" - all mean the same concept: something that has a meaning
+* expressions can be
+	* primitive, like "Julia", "Earth", "pi", "log", "sine"
+	* composite, which are composed of smaller expressions
+* thus: expressions have a tree structure
+* composition requires some grammer, to signal the type of composition and separate the neighboring expressions from each other
+	* the word "grouping" is often used instead of "separation"
+	* in voice the separation is often a break in speach, an interval of silence
+	* in text
+		* white-space, comma, point, ...
+		* the best techniques for grouping in text are the ones that visually look like boxing the parts of the text
+			* brackets
+				* multiple types of brackets are in use, but for grouping specifically round brackets are used, usually
+					* in formal languages curly and square brackets are used instead for constructing sets and lists
+				* it is a basic ergonomics principle to not use visuals for multiple purposes; currently we use round brackets for purposes that we could use other things for
+					* in natural languge round brackets are currently widely used for additional information; but square bracktes instead are [would be] good for this purpose
+						* if humanity switched to using square brackets for additional information then only one purpose of the round brackets would remain, which is grouping; then the use of round brackets for grouping would be unambiguous, making it much more frequent; grouping with round brackets instead of commas or nothing would make our written text more readable; i (as a language renewer) try to do this switch
+					* in formal language
+						* round brackets are used for function invokation too, but for that purpose space juxtaposition is a better choice and is coming up; space juxtaposition has already won the competition in modern, well designed programming languages [the functional languages] and in the command line
+			* blocks with indentation
+				* in formal text 
+					* indentation is almost always used for blocking, even if only for visual ergonomy; but nothing else is needed, indentation is enough for blocking, "indentation-significant" syntax proved to not only look good but also be enough and practical in for example Haskell-like programming languages

@@ -1,16 +1,3 @@
-* all notations should be used for 1 purpose only
-	* "()"
-		* the main purpuse of the round braces is grouping
-		* thus do not use them for anything else
-		* unfortunately : currently they are used for
-			* in natural languge
-				* additional information
-					* instead : "[]" is good for this purpose
-			* in formal language
-				* function invokation
-				* sectioning
-					* in haskell like syntax
-				* tuples
 * english
 	* postfix "s" at end of verb (in singular 3rd person)
 		* is unnecessary
