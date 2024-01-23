@@ -1,0 +1,7 @@
+* the statement
+	* for any set S: no surjection exists from S to (power-set S)
+* proof
+	* suppose the opposite, let f be such a surjection
+	* T := { x in S | x is not in (f x) }
+	* by the main supposition: exists e in S . f e = T
+	* is e in (f e)? from both answer we get to contradiction
