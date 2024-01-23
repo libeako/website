@@ -1,6 +1,4 @@
 * in this section i describe some basic notion of programming, including syntax, terminology; i use this throughout this site and they are common in functional programming languages; but note: this syntax is not necessarily the real precise syntax of any programming language, but is only similar to them, a mix of what is common in them; by "them" i mean mostly the programming languages haskell, idris, agda, f#, f*, elm, purescript
-* indentation-significant syntax
-	* is what we use, because it is simple, neat and works well in practice
 * type annotation
 	* (x is a value of type t) is usually written as "x : t"
 	* haskell, purescript use double ":"
@@ -13,12 +11,8 @@
 			* s : t := v
 		* many practical programming languages use simply "=" instead of ":="
 	* some programming languages make it possible to separate the type annotation from the value assignment into separate lines
-		* s : t s = v
-* let-expression
-	* an expression letting the coder declare a new symbol with scope limited to the expression
-	* example
-		* let square x = x x in (square a) + (square b)
-		* "let", "in" are keywords
+		* s : t
+		* s = v
 * product type
 	# links-to internal zlfhoqikoudywfzu
 * function

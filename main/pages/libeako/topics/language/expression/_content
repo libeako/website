@@ -1,6 +1,8 @@
 * the words "expression", "message", "term", "phrase", "formula" - all mean the same concept: something that has a meaning
 * expressions can be
-	* primitive, like "Julia", "Earth", "pi", "log", "sine"
+	* primitive
+		* "known" or "constant", like "Julia", "Earth", "pi", "log", "sine"
+		* "unknown" or "variable", like "a", "b", "c", "f", "x", "y", "z"
 	* composite, which are composed of smaller expressions
 * thus: expressions have a tree structure
 * composition requires some grammer, to signal the type of composition and separate the neighboring expressions from each other
