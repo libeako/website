@@ -1,2 +1,13 @@
-* comment
+* comment syntaxes that i may use
 	# links-to internal tajtjkqzetruzejb
+* a message is a tree of expressions
+	# links-to internal pizvixaihbpagbqz
+* "name definition" is giving a name to a value
+	* most usual syntax is: name = value
+	* sometimes a double-dot precedes the equality letter, ":="
+	* sometimes the tripple line equality letter is used, "≡"
+* let-expression
+	* an expression letting the coder declare a new name with scope limited to the expression
+	* example
+		* let square x = x x in (square a) + (square b)
+		* "let" and "in" are keywords
