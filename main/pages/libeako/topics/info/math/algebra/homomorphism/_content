@@ -1,30 +1,16 @@
-* homomorphism is a function between the value sets of 2 algebras of the same variety, so that the structural properties of that variety are kept
-* such functions are often named "mapping"s
-	* though "mapping" is sometimes also used for functions which are not necessarily homomorphisms
+* "homomorphism" is a function between the base sets of 2 algebras of the same class, so that the structural properties of that class are kept
 * example
-	* to understand this example, you need to know :
+	# paragraph
+		* a homomorphism between 
 		* monoid
 			# links-to internal cabjryjnnstdjmvb
+		* s	
 	* size : List e -> Integer
 	* the size function is a homomorphism from (the monoid of lists with list concatenation) to (the monoid of integers with addition), because
 		* it maps (the empty element of the list monoid [the empty list]) to (the empty element of the integer monoid [0])
 		* it maps (the concatenation of 2 lists) to (the addition of the sizes of those lists)
-* only the structure of the variety is to be kept
-	* note that the size homomorphism does not preserve all the structure of lists; for example the order of the elements of the lists is lost; this is okay; a homomorphism needs to preserve only the structure which is specified by the algebra variety, in this case : the properties that make the collection of lists a monoid; the structure of an individual list is the internal structure of that list, that is of a value of the algebra; a homomorphism needs to preserve only the structure between the values [the structure of the algebra variety] and not the structure inside the individual values of the algebra
-* any-time transition
-	* a homomorphism is like a one-way travel between 2 worlds [algebras] which possibly contain different elements, but same [algebraic] structure between the elements
-	* the nice thing about homomoprhisms is that one can make the move [the travel between the worlds] any time during an algorithm that uses only the methods of the algebra
-	* imagine we have this algorithm
-		* have some value of the source algebra
-		* compute with them using the methods of the algebra
-		* move
-			* that is : transform the resultant values into the other algebra with the homomorphism
-		* compute with the transformed values in the target algebra
-	* the move could be at the beginning of the algorithm, or at the end, or anywhere; with other words : it does not matter in which algebra we perform the methods of the algebra
-	* this can be used in justifying optimizing program transformations
-		* the (size : List e -> Integer) function is a good example 
-			* if we are interested only in the size of the concatenation of some lists then we better sum the sizes of the individual lists then concatenate the lists and count its elements, because integer addition is cheaper than list concatenation
-	* the homomorphism property does not enable us to go back, from the target world to the source world
+* only the structure of the algebra-class is to be kept
+	* note that the size homomorphism does not preserve all the structure of lists; for example the order of the elements of the lists is lost; this is okay; a homomorphism needs to preserve only the structure which is specified by the algebra variety, in this case : the properties that make the collection of lists a monoid; the structure of an individual list is the internal structure of that list, that is of a value of the algebra; a homomorphism needs to preserve only the structure between the values [the structure of the algebra-class] and not the structure inside the individual values of the algebra
 * isomorphism
 	* makes it possible to go back
 	* it is an invertible function between values of algebras which preserves the algebraic structure in both directions [that is : both it and its inverse are homomorphisms]

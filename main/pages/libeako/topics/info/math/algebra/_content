@@ -1,22 +1,26 @@
-* an 'algebra', by definition, is some collections with some functions over them
-	* the collections in an algebra are 
-		* sets, in more traditional mathematics
-		* types, in modern mathematics
-		* elements of the collections are also said to be "instances", "objects" or "values" of them
-		* the collections in an algebra are often named with these other phrases : "base collections", "sorts", "slots", "types", "carriers"
+* what is an "algebra"?
+	* i do not know if a precise definition exists, Wikipedia [for example] seems to me to be inconsistent about it; i do not think that we need a precise definition; here my one follows
+	* an algebra is a list of sets and functions over them
+	* instead of sets we may use types
+	* a set in an algebra is often said to be a "slot" or "base set" or "underlying set" or "carrier set"
 	* the functions in an algebra
-		* the functions must be 'over the types', which means that their inputs and outputs must be of those types; this is a strict requirement, is an  essencial property of algebras
-		* the functions of an algebra are often referred to via
-			* "operations", by mathematicians
-			* "methods", by programmers
+		* a functions of an algebra is often said to be
+			* "operation"
+				* this is the most used name
+				* i strongly dislike this name because nothing operational is in it mathematically
+			* "method"
+				* software developers are used to use "method" for function that is related to a type
+			* "feature"
+				* this name choice i would like the most
+			* "structure"
 		* laws are mathematical statements about ["properties" of] the methods
 			* i treat them as parts of the methods, because they can be parts of the types of the methods, with a sufficiently expressive type-system
-			* the laws are most often equalities
-* 'algebra' is similar to 'module' or 'namespace' in programming
-	* the difference is that in algebras the rule that (the methods work only on the types of the algebra) is strict
-		* most often equalities
-* an algebra is "abstract" iff we do not know what its types are
-	* in software coding abstract algebras are type interfaces
+			* the laws are often equalities
+* an algebra is "abstract" iff we do not know what its base sets are
+	* it is also said to be the "type" of its concrete versions
+	* often it is said to be a "variety" of algebras
+	* we could also say that it is a "class" of algebras
+	* in software coding abstract algebras are usually represented by type interfaces ["by type classes"]
 * 2-ary operations
 	* notation: when an algebra has only 1 of them: i will use symbol ⊕ for its infix form
 	* some famous predicates on them:
@@ -29,7 +33,7 @@
 	# links-to internal bizliksuerpywvfs
 * free
 	# links-to internal xvdouingmcyaahxq
-* some variety of algebras
+* some classes of algebras
 	* semigroup
 		# links-to internal eovnsnrjngyuihhx
 	* monoid
