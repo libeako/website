@@ -1,10 +1,8 @@
 * "homomorphism" is a function between the base sets of 2 algebras of the same class, so that the structural properties of that class are kept
 * example
-	# paragraph
-		* a homomorphism between 
-		* monoid
+	* a homomorphism between monoids
+		* see monoid
 			# links-to internal cabjryjnnstdjmvb
-		* s	
 	* size : List e -> Integer
 	* the size function is a homomorphism from (the monoid of lists with list concatenation) to (the monoid of integers with addition), because
 		* it maps (the empty element of the list monoid [the empty list]) to (the empty element of the integer monoid [0])
