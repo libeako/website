@@ -1,3 +1,4 @@
+# id vzdcxxawjkqmcakz
 * compile-time values
 	* we usually think about types as compile type entities; we usually think about values as runtime entities; so how could a type depend on a value? a very simple answer is : sometimes the value is known in compile time
 	* a good example is linear algebra

@@ -1,1 +1,2 @@
+# id orgfahgabawqcrut
 * ideally we want to automate our tasks, including the checking of correctness properties of our programs, definitions and proofs by a compiler, by static type-checking; however often the type system of the [programming] language we use is too weak to express certain properties; in this case we fall back to simply state these properties in comments and have the human to make sure that these properties are actually hold

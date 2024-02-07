@@ -1,3 +1,4 @@
+# id okbqwsokzocmyuul
 * in this intuitive introduction i use one particular category of optics : "lens"; it is a reification of data membership in a product type; it consists of the accessor functions characterizing the membership :  a getter and a setter :
 * let Lens member product = { get : product -> member, set : member -> product -> product }
 * 'set' works by taking an old product and replacing the value of the member in it to the taken new value

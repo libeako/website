@@ -1,3 +1,4 @@
+# id fbctgaodsnjovfll
 * ("optional" | "maybe") instead of null
 	* i advise to use optional type instead of the 'null' value
 	* null represents non-existence

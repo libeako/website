@@ -1,3 +1,4 @@
+# id jiwpglhclkfxvqoh
 * properly wiring exceptional return values through a long function call stack seems boring work; hence the "exceptions" were invented; their very design purpose is to opt out from the static type checking for the exceptional values of the return type
 * this of course destroys the advantages of static type checking to the extent of the exception; one better scrap exceptions and instead use a type that is similar to Maybe but also stores the reason of failure; it is usually named with "Result" or "Either"
 * exceptions are a language design mistake, because

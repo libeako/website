@@ -1,3 +1,4 @@
+# id fnndrxxfqpohzabe
 * i had trouble understanding "defunctionalization"; the reason was i expected it to be some complex compiler technique; but in reality it is something very basic : the reification of functions, that is : representing functions by plain data structures
 * the opposite of defunctionalization is functionalization of plain data, like church encoding
 * Defunctionalization at Work

@@ -1,3 +1,4 @@
+# id ehkzjhakowbjyhsj
 * nix does not follow the FHS [file hierarchy standard]
 	* hence the executables produced for other linux variants contain library paths that are incorrect on nix
 	* hence we have to replace those paths in the executables or set our environmental variable LD_LIBRARY_PATH

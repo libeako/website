@@ -1,3 +1,4 @@
+# id kmzluqnwmjudyuht
 * the function type annotation (f : x -> y) is just a shorter version of (f : (x : Type) -> (y : Type) -> x -> y); with other words : the type polymorph function f can be considered as a function from types to function-value; when f is parametric in a type input then we say that f is "parametrically type polymorph in" that type input, or more shortly : "parametrically polymorph in"
 	* link to 'parametricity'
 		# links-to internal qkpkvuxwtzdigyud

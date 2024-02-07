@@ -1,2 +1,3 @@
+# id czyfsnjzsjoxtgmp
 * the following settings are highly recommended and do not work by default :
 	* powerManagement = { enable = true; cpuFreqGovernor = "ondemand"; };

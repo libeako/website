@@ -1,3 +1,4 @@
+# id zugxbnomaikxpvco
 * lazy initialization of variables is used when the programmer can not or does not want to know when to compute the initial value and hence delegates this task to the run-time system, lets the control out of his hands
 * effects
 	* the order of side-effects is important, hence lazy evaluation in side-effect-ful environment is error-prone

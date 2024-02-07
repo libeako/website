@@ -1,3 +1,4 @@
+# id wrxsketmorrzdnsf
 * transactional memory was a hot research topic in the [2005-2015] time interval; i wanted to understand it but did not manage to for some time; then a video helped me to finish my understanding process; now that i think i understand it: i do not like it; my big objection against it is the optimistic scheduling; this is not acceptable in my opinion because the atomic tasks may be expensive to perform; and if a solution does not scale well then it can not be considered as a normal, to be generally used solution
 	* that video
 		# links-to external https://youtu.be/CMMH46R9VSY

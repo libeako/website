@@ -1,3 +1,4 @@
+# id ypnccchncfaeqhzh
 * as mentioned in the part about the abstractness of the lens concept : we can manage the getting, setting, transforming, inserting, deleting of values in the map via lenses; instead of implementing these functionalities separately [and hence redundantly] : the following simple single Lens will do :
 	* lens_value_at : Lens (Maybe v) (Map k v)
 * by doing so we save some implementation time, possibly avoid some bugs and make the code and the API smaller and cleaner; we also make the API more uniform, familiar, as it builds on the lens API; this amount of advantage is already significant, but optics can do more, by their composability property, as i will demonstrate next :

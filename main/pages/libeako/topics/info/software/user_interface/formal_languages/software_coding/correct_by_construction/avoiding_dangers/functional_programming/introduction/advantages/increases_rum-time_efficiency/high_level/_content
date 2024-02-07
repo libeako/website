@@ -1,3 +1,4 @@
+# id iarklboiropwlnyf
 * equational reasoning in functional programming enables high level program transformations for runtime efficiency increase
 * example
 	* in absence of side effects : ((map f) >>> (map g)) is semantically equivalent to (map (f >>> g)); but the later one is more runtime-efficient, because it iterates the collection once [with the function (f >>> g)] while the former one iterates the collection twice [first with function f then with function g]; hence it is worth to perform the transformation

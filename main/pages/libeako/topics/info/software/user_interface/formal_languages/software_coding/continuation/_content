@@ -1,3 +1,4 @@
+# id yyxfqsbtbljqfyla
 * imagine the middle of execution of function f : x -> y; the computation of a partial result p is finished; the rest of f is a continuation; technically it is a function p -> y; conversely : any function can be thought of as continuation; then why not just use the phrase "function", why a new name for it? we use "continuation" when we want to emphasise that the function we talk about plays a continuation role
 * continuations are very powerful tool to control the execution path of a program
 * "delimited continuation"

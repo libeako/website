@@ -1,3 +1,4 @@
+# id jaxbiyrfnbhaormb
 * in this section i describe some basic notion of programming, including syntax, terminology; i use this throughout this site and they are common in functional programming languages; but note: this syntax is not necessarily the real precise syntax of any programming language, but is only similar to them, a mix of what is common in them; by "them" i mean mostly the programming languages haskell, idris, agda, f#, f*, elm, purescript
 * type annotation
 	* (x is a value of type t) is usually written as "x : t"

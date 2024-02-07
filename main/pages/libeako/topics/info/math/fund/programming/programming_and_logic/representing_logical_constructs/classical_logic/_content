@@ -1,3 +1,4 @@
+# id fisoqvstmqdyvaqi
 * the programming-logic correspondence gives us a proof method that consists of constructing witnesses; the analogue of this in mathematics is named "constructive" proving, and the logic it enables "constructive logic" [or "intuitionistic logic"]; "classical logic" contains more proving tools than constructive logic; it may be at least inconvenient to lack some tools; our proof method fundamentally implements constructive logic, but it would be nice if we still could use all the tools of classical logic in some way
 * the additional tools in "classical logic" :
 	* law of the excluded middle

@@ -1,3 +1,4 @@
+# id zlfhoqikoudywfzu
 * pair
 	* the value-set of the pair of types x, y is the cartesian product of the value-sets of types x, y; with other words : it is a pair of values of type x and of type y
 	* the size [as the number of values] of a product type is the product of the sizes of its member types ; hence the name "product type"

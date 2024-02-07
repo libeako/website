@@ -1,3 +1,4 @@
+# id yjnweovfnkfncnhp
 * low level control in a programming language is for manual optimization
 * but that does not mean that low level is good for efficiency; rather : it only changes the efficiency story [optimizability =/= efficiency]
 	* human capacity is limited to handle complexity; though the human is more clever than the compiler algorithm in optimizing program for simple task, with the increase of the complexity of the task the human loses his|her ability to optimize, while the compiler is not affected by complexity; hence a level of complexity exists at which the human is already worse than the compiler

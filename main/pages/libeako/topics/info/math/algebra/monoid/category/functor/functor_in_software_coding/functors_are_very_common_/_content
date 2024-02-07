@@ -1,3 +1,4 @@
+# id bzefktrxsjcdpwwk
 * for product and sum type construction one can define functors in the natural way
 * functions by their output type also form functors; one can thing about a function as a container with exactly one element but whose evaluation is postponed because it has a dependency, which is the input of the function
 * very many important data types are constructed by the above ones, hence form functors

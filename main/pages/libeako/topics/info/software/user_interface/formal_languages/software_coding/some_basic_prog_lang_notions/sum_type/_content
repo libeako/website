@@ -1,3 +1,4 @@
+# id iarpgpjgytyzcamq
 * sum types are generalization of enum types, as they can store additional values, of different types for each case; in the definition of the sum type: in each case: we just list the types of values that to be stored
 * example:
 * datatype Maybe (e : Type) = none | just e

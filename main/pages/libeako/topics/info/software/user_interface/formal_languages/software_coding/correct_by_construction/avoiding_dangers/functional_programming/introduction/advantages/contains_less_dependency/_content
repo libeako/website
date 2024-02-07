@@ -1,3 +1,4 @@
+# id vmpbmlfwwxjiteqh
 * in functional programming the amount of dependency in the code is an order of magnitude smaller than in imperative programming
 * reason
 	* in an imperative program the positions of mutations in the execution order is significant, moving a mutation in a procedure changes the meaning of whatever it changes place with; with other words : both the code before and after a mutation depend on the mutation relatively being where it is

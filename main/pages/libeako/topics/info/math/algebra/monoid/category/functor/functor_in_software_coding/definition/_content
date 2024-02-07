@@ -1,3 +1,4 @@
+# id dxbpdtsqcxaipqez
 * the function pair that functor consists of is usually coded as a type-function interface :
 * interface Functor c where   map : (x -> y) -> (c x -> c y)
 * in this code fragment :

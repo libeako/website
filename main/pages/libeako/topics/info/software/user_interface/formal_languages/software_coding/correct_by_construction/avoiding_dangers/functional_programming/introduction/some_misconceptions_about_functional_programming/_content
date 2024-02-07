@@ -1,3 +1,4 @@
+# id vrdegqmtgfexpvcv
 * "the big reason to do functional programming is parallel programming"
 	* functional programming helps much in parallel programming, but this advantage is just one of the many and one of the small ones; readability, bug-resistance, reusability, maintainability, equational reasoning, fun are much more important advantages
 	* people were falling in love into functional programming starting from the 1960s, when multi-core processors existed not even at the idea level yet

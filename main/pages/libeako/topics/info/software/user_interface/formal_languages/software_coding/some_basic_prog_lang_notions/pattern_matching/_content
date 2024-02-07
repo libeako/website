@@ -1,3 +1,4 @@
+# id ybfruhnhbcxrqyol
 * - is a method to branch on the structure of a data value and give new names to parts of it; the structure of the value is matched to the structure of a "pattern"; (sub-values in the value) are matched to (the symbols in the pattern); by this giving names to those sub-values
 * some people say pattern matching "destruct"s the value; this phrase may be slightly misguiding for novices; of course : the value as an object in memory does not get destroyed or modified by pattern matching
 * a simple example

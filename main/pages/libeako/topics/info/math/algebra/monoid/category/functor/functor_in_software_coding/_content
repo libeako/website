@@ -1,3 +1,4 @@
+# id dkrtqrqtctaagtrx
 * the most important category in programming is the one whose objects are types and arrows are functions between those types; in this section by "functor" i mean a functor between such categories
 * between such categories a functor is a pair of functions, (one from types to types) and (one from functions to functions)
 * definition

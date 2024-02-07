@@ -1,3 +1,4 @@
+# id ndgkrnbojyputpec
 * optics are very useful in the everyday coding work; but despite this : most programmers do not know the topic; this tutorial is for them
 * optics represent some kind of relationship between data and a construction built on it; with other words : the relationship between container and its content
 * we can use an optic from a container to "zoom in" on its content and from the content to "zoom out" on the container; hence the name "optic"
