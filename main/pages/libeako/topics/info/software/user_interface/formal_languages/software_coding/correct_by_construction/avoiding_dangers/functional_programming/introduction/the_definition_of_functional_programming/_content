@@ -1,4 +1,4 @@
-# id ahdbojilddohjnkj
+\ id ahdbojilddohjnkj
 * there are 2 important definitions of functional programming :
 * theoretical
 	* the theoretical definition is the accurate one, it tells what functional programming exactly is
@@ -13,7 +13,7 @@
 					* that is : the evaluation of the procedure for that input ends with returning a valid output; that is : the procedure is not left with an exception, by terminating the program and does not get stuck in an infinite loop or infinite recursion
 					* this property of a function is known as "totality"; iff a function has this property then we may say that the function is "total", otherwise that the function is "partial"
 					* wikipedia article
-						# links-to external https://en.wikipedia.org/wiki/Partial_function
+						\ links-to external https://en.wikipedia.org/wiki/Partial_function
 				* for each input the output is single, that is "deterministic"
 					* with other words :
 						* a function invoked with the same input value returns the same output value, always

@@ -1,2 +1,2 @@
-# id qwvinutsmlsumuxx
+\ id qwvinutsmlsumuxx
 * the extra cost of taxing is not linear by the tax rate, but rather (cost rate = _ rate / (1-rate)); this is an approximation, inspired by the recognition of that a 9/10 rate is 2worse than a 8/10 rate, because leaves 2less at the taxpayer; thus the marginal cost is increasing

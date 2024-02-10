@@ -1,4 +1,4 @@
-# id thfnzywxpqkcvtdh
+\ id thfnzywxpqkcvtdh
 * i derive a free theorem for function of monoidal
 * its type is
 	* G X Y := (F X, F Y) -> F (X, Y)
@@ -22,7 +22,7 @@
 * ((equiv fx1 fx2) and (equiv fy1 fy2)) => equiv (fx1 fy1) (fx2 fy2)
 * using rule for equivalence of functors
 	* link to 'parametric equivalence of functors'
-		# links-to internal wqbrusvmsxteurms
+		\ links-to internal wqbrusvmsxteurms
 * forall X1 X2 : Type
 * forall x : X1 -> X2
 * forall Y1 Y2 : Type

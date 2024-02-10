@@ -1,4 +1,4 @@
-# id nxzlijntqwyqbotr
+\ id nxzlijntqwyqbotr
 * example
 	* in category theory : the main function is arrow composition, it usually is expressed in writing by "∘"; this choice is wrong; because arrow composition in general is not commutative and symbol ∘ is symmetric; how do you know the order in the composition "f ∘ g"? only convention tells; "∘" puts an additional constant burden on our brain : the task to remember the convention about the order; instead the choice of the infix symbol should express direction; for example "f <<< g" or "g >>> f"; from one of these latter anybody would immediately guess the intended order and as a bonus : by flipping the symbol we get a trivially dual version and we can easily choose between the 2 versions flexibly as locally convenient
 * my message is true for any 2-ary function that is generally not commutative

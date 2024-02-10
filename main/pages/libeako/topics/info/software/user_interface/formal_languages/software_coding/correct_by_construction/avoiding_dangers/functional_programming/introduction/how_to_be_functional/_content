@@ -1,11 +1,11 @@
-# id ikqxdpeebyuocqcu
+\ id ikqxdpeebyuocqcu
 * in your imperative language
 	* simple local variables 
 		* do not change them, instead make a new one for the new value
 		* trust the compiler in optimization for efficiency [variable life analysis]
 		* the compilers perhaps do this under the hood anyway
 			* see static single assignment
-				# links-to external https://en.wikipedia.org/wiki/Static_single_assignment_form
+				\ links-to external https://en.wikipedia.org/wiki/Static_single_assignment_form
 	* loop
 		* wrap the general loop control structure into a pure function :
 		* loop : (State -> Bool) -> (State -> State) -> State -> State
@@ -34,4 +34,4 @@
 		* but it is not necessary to start with a weak language; once i needed to write a small program; i was very noob, i even did not know what a monad is, still i managed to write the program in haskell [which is the most advanced mature general purpose language] by restraining myself to only the essential features of haskell; it was not difficult, you also can jump straight into haskell too
 * hide mutation in laziness
 	* by travis ...
-		# links-to external http://travis.athougies.net/posts/2018-05-05-dynamic-programming-is-recursion.html
+		\ links-to external http://travis.athougies.net/posts/2018-05-05-dynamic-programming-is-recursion.html

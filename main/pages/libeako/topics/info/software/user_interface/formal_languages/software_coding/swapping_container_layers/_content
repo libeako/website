@@ -1,4 +1,4 @@
-# id nuckddbslvpvzupy
+\ id nuckddbslvpvzupy
 * here i introduce an often occuring coding pattern; it is related to containers; by container i mean things like List, Array, Maybe, Either, ...
 * consider composite containers with 2 layers :
 	* x (y t)
@@ -30,15 +30,15 @@
 	* one problem with these swap functions is that it is boring to write them; in case of m different x container types and n different y container types : one may need to implement asymptotically m*n swap functions
 	* in programming languages with type function polymorphism this can be decreased to just 1
 		* link to 'type function polymorphism'
-			# links-to internal eyfagqcuwwajcnmt
+			\ links-to internal eyfagqcuwwajcnmt
 	* alternatives
 		* via distributive functor
-			# links-to external http://hackage.haskell.org/package/distributive
+			\ links-to external http://hackage.haskell.org/package/distributive
 		* via representable functor
 			* transpose :: (Representable f, Representable g) => f (g x) -> g (f x)
 			* see
 				* representable functor
-					# links-to internal mkybecwcndywdoos
+					\ links-to internal mkybecwcndywdoos
 		* via Traversable and Applicative
 			* sequence : Traversable x, Applicative y => x (y t) -> y (x t)
 	* then one only needs to write the implementations of the interfaces (Representable or (Traversable and Applicative)) for its container types; this brings down the asymptotic amount of coding work to m+n

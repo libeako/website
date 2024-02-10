@@ -1,4 +1,4 @@
-# id fhdcexkhowvzxltx
+\ id fhdcexkhowvzxltx
 * the ordinary functor is also named "covariant functor" :
 * interface Functor tf where   map : (x -> y) -> (tf x -> tf y)
 * the name "covariant" means "varying together" and refers to the property that the objects of the output arrow [tf x -> tf y] of the map function varies together with the objects of the input arrow [x -> y]

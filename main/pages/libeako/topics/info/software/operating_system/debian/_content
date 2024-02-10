@@ -1,4 +1,4 @@
-# id xpvvsvhaifsisqzw
+\ id xpvvsvhaifsisqzw
 * updating kernel [for example : to update drivers]
 	* make the bakcports into the list of sources
 		* echo deb http://http.debian.net/debian stretch-backports main > /etc/apt/sources.list.d/stretch-backports.list

@@ -1,4 +1,4 @@
-# id amjqhetkjpnxhnql
+\ id amjqhetkjpnxhnql
 * representation of conjunction and disjunction
 	* rep (S1 and S2) := S1 S2
 	* rep (S1 or S2) := S1 + S2

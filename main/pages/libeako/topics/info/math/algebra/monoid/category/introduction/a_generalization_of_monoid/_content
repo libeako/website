@@ -1,9 +1,9 @@
-# id kdrjpfoaockqycyb
+\ id kdrjpfoaockqycyb
 * see monoid
-	# links-to internal cabjryjnnstdjmvb
+	\ links-to internal cabjryjnnstdjmvb
 * some new notation from me
 	* (>>>) = the composition function
 	* (<<<) = flip (>>>)
 * introductory example
 	* category to monoid is like static type checking to dynamic
-		# links-to internal acpczjniflsjxgxh
+		\ links-to internal acpczjniflsjxgxh

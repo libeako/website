@@ -1,4 +1,4 @@
-# id nxwwqhqhdzpldxms
+\ id nxwwqhqhdzpldxms
 * description
 	* it is the well-known "dotproduct" function from linear algebra
 	* it takes 2 vectors, both with n scalar components, multiplies them component-wise and sums these multiplication results
@@ -13,7 +13,7 @@
 			* 'lift2' - lifts a 2-ary function (from the space of scalars) (to the space of vectors of scalars of the same length)
 			* 'fold i f c' - combines the components in collection c with 2-ary function f starting from the initial value i
 			* 'uncurry' - serves  a technical task
-				# links-to internal rjvsfevdnztyxdlz
+				\ links-to internal rjvsfevdnztyxdlz
 * first intuitions
 	* the functional version looks overly abstract
 		* in reality just it is alian to you, you are not used to its ingredients; they are very commonly used in functional programming and are provided by base libraries

@@ -1,4 +1,4 @@
-# id oornolrtruyzbntt
+\ id oornolrtruyzbntt
 * these are a generalization of sum types; the generalization is that the constructors [the members] of the sum type specify their exact return type; of course: all constructors have to return a value that is of the sum type the constructor is a member of; but GADTs allow more precise specification of the return type; how can it be more precise? remember that types [as type functions], including sum types, can have inputs too; constructors of GADTs can fix those
 * an example:
 * datatype Expression =

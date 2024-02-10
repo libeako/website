@@ -1,4 +1,4 @@
-# id xyymnqdrzcegxrbn
+\ id xyymnqdrzcegxrbn
 * haskell is amazing
 	* it is free as free speach
 	* it became the best teaching ground for programmers
@@ -16,50 +16,50 @@
 * general learning source
 	* Haskell wiki
 	* wikibook
-		# links-to external https://en.wikibooks.org/wiki/Haskell
+		\ links-to external https://en.wikibooks.org/wiki/Haskell
 	* TypeClassopedia
 	* StackOverflow
 * compiling
 	* ghc
-		# links-to internal xgasjmlsnagvmvom
+		\ links-to internal xgasjmlsnagvmvom
 * type system
 	* existentials
 		* Kwan : Encoding existentials
-			# links-to external http://kseo.github.io/posts/2016-12-19-encoding-existentials.html
+			\ links-to external http://kseo.github.io/posts/2016-12-19-encoding-existentials.html
 	* Matt Parsons : Basic Type Level Programming in Haskell
-		# links-to external http://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html
+		\ links-to external http://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html
 	* fixed sized vector
-		# links-to external https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html
+		\ links-to external https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html
 	* structural polymorphism
 		* a very nice article from Wolfgang Jeltsch
-			# links-to external https://jeltsch.wordpress.com/2016/02/22/generic-programming-in-haskell/
+			\ links-to external https://jeltsch.wordpress.com/2016/02/22/generic-programming-in-haskell/
 	* Richard Eisenberg, Peyton Jones : Levity Polymorphism
 		* i recommend this article to every Haskell programmer; it is about polymorphism with boxed types
 	* type class
 		* Kwang : Context reduction
-			# links-to external http://kseo.github.io/posts/2017-02-02-context-reduction.html
+			\ links-to external http://kseo.github.io/posts/2017-02-02-context-reduction.html
 		* Kwang : Reified dictionaries
-			# links-to external http://kseo.github.io/posts/2017-02-06-reified-dictionaries.html
+			\ links-to external http://kseo.github.io/posts/2017-02-06-reified-dictionaries.html
 		* Kwang : Avoid overlapping instances with closed type families
-			# links-to external https://kseo.github.io/posts/2017-02-05-avoid-overlapping-instances-with-closed-type-families.html
+			\ links-to external https://kseo.github.io/posts/2017-02-05-avoid-overlapping-instances-with-closed-type-families.html
 	* constraint kind
 		* The Constraint kind - by Wolfgang Jeltsch 
-			# links-to external https://jeltsch.wordpress.com/2013/02/14/the-constraint-kind/
+			\ links-to external https://jeltsch.wordpress.com/2013/02/14/the-constraint-kind/
 		* Kwang : Constraint Kinds
-			# links-to external https://kseo.github.io/posts/2017-01-13-constraint-kinds.html
+			\ links-to external https://kseo.github.io/posts/2017-01-13-constraint-kinds.html
 		* abstractions on constrained categories
 			* Dominic Orchard : Subcategories & “Exofunctors” in Haskell
-				# links-to external https://dorchard.wordpress.com/2011/10/18/subcategories-in-haskell-exofunctors/
+				\ links-to external https://dorchard.wordpress.com/2011/10/18/subcategories-in-haskell-exofunctors/
 	* inference
 		* OutsideIn - Modular type inference with local assumptions
-			# links-to external https://wiki.haskell.org/Simonpj/Talk:OutsideIn
+			\ links-to external https://wiki.haskell.org/Simonpj/Talk:OutsideIn
 		* Preventing inference
-			# links-to external https://kcsongor.github.io/ambiguous-tags/
+			\ links-to external https://kcsongor.github.io/ambiguous-tags/
 	* linear typing
-		# links-to external https://youtu.be/t0mhvd3-60Y
+		\ links-to external https://youtu.be/t0mhvd3-60Y
 	* singletons
 		* a tutorial from justin le
-			# links-to external https://blog.jle.im/entry/introduction-to-singletons-1.html
+			\ links-to external https://blog.jle.im/entry/introduction-to-singletons-1.html
 * syntax
 	* extensions
 		* ApplicativeDo
@@ -69,24 +69,24 @@
 				* its compile algorithm runs for n^3 time; i would not use it with n^2 time
 				* it is easy to introduce infinite recursion by using do-notation in the implementation of fmap, (<*>)
 * text types
-	# links-to external https://markkarpov.com/post/short-bs-and-text.html
+	\ links-to external https://markkarpov.com/post/short-bs-and-text.html
 * "Inlining and Specialisation" by Matthew Pickering
-	# links-to external http://mpickering.github.io/posts/2017-03-20-inlining-and-specialisation.html
+	\ links-to external http://mpickering.github.io/posts/2017-03-20-inlining-and-specialisation.html
 * base library
 	* fold
 		* Well-Type : Fixing foldl
-			# links-to external http://www.well-typed.com/blog/90/
+			\ links-to external http://www.well-typed.com/blog/90/
 	* Kwang : Data.Typeable and Data.Dynamic in Haskell
-		# links-to external http://kseo.github.io/posts/2014-02-03-data-typeable-and-data-dynamic-in-haskell.html
+		\ links-to external http://kseo.github.io/posts/2014-02-03-data-typeable-and-data-dynamic-in-haskell.html
 	* Kwang : How to read arrow combinators
-		# links-to external http://kseo.github.io/posts/2016-12-11-how-to-read-arrow-combinators.html
+		\ links-to external http://kseo.github.io/posts/2016-12-11-how-to-read-arrow-combinators.html
 * Kwan : Pattern Synonyms
-	# links-to external http://kseo.github.io/posts/2016-12-22-pattern-synonyms.html
+	\ links-to external http://kseo.github.io/posts/2016-12-22-pattern-synonyms.html
 * exceptions [thrown and caught]
 	* The three kinds of Haskell exceptions and how to use them
-		# links-to external https://www.tweag.io/posts/2020-04-16-exceptions-in-haskell.html
+		\ links-to external https://www.tweag.io/posts/2020-04-16-exceptions-in-haskell.html
 	* by Michael Snoyman
 		* writing
-			# links-to external https://www.fpcomplete.com/blog/2018/04/async-exception-handling-haskell
+			\ links-to external https://www.fpcomplete.com/blog/2018/04/async-exception-handling-haskell
 		* video
-			# links-to external https://youtu.be/T5y8sFmCFnA
+			\ links-to external https://youtu.be/T5y8sFmCFnA

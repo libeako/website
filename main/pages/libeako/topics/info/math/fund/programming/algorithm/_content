@@ -1,19 +1,19 @@
-# id jqfejjmyqvtfjdzf
+\ id jqfejjmyqvtfjdzf
 * hard
 	* "zipper"s
-		# links-to internal obkyecvuxaoqaoxy
+		\ links-to internal obkyecvuxaoqaoxy
 * soft
 	* artificial intelligence
 		* neuron network
 			* introduction
 				* by Brandon Rohrer
-					# links-to external https://www.youtube.com/watch?v=ILsA4nyG7I0
+					\ links-to external https://www.youtube.com/watch?v=ILsA4nyG7I0
 				*  3Blue1Brown :
 					* But what is a Neural Network? | Deep learning, chapter 1
-						# links-to external https://youtu.be/aircAruvnKk
+						\ links-to external https://youtu.be/aircAruvnKk
 					* Gradient descent, how neural networks learn | Deep learning, chapter 2
-						# links-to external https://youtu.be/IHZwWFHWa-w
+						\ links-to external https://youtu.be/IHZwWFHWa-w
 					* What is backpropagation really doing? | Deep learning, chapter 3
-						# links-to external https://youtu.be/Ilg3gGewQ5U
+						\ links-to external https://youtu.be/Ilg3gGewQ5U
 					* Backpropagation calculus | Deep learning, chapter 4
-						# links-to external https://youtu.be/tIeHLnjs5U8
+						\ links-to external https://youtu.be/tIeHLnjs5U8

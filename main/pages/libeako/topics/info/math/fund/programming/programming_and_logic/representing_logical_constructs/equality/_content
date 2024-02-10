@@ -1,4 +1,4 @@
-# id cteoxhjanjufrioe
+\ id cteoxhjanjufrioe
 * this section talks about equality propositions that are prooved in compile time, not about equality propositions that are tested at run time
 * roles of equality propositions in programming in compile time :
 	* type checking
@@ -8,7 +8,7 @@
 * 2 types are considered equal iff all their structure and all their components [dependencies] are equal
 * modern type systems are powerful, thus their types may contain all kinds of stuff in them
 	* link to 'dependencies of types'
-		# links-to internal enjlgzgdnjxyjcck
+		\ links-to internal enjlgzgdnjxyjcck
 * hence modern compilers must have an equality testing mechanism general for all kinds of terms
 * how can the compiler test equality between general terms? a straightforward method is checking identity between them; but in practice very often the same value is denoted by different terms; thus most compilers in practice evaluate the terms so much as they can and only after that do they perform the identity test, hoping that the evaluation leads to simpler terms, which hence may become identical
 * but even this may be not enough
@@ -26,19 +26,19 @@
 		* hence the programmer expresses equality proposition as type 
 		* the whole thing is done in the spirit of
 		* the programming-logic correspondence
-			# links-to internal kdtdlfyrudrcnrrl
+			\ links-to internal kdtdlfyrudrcnrrl
 		* the truth value of the statement corresponds to the inhabitation of the type
 	* here i start to build the type to express equality; i will name it by "Eq"; equality is interpreted only on values of the same type, hence its expressing type must depend on the type of the values whose equality is proposed : Eq := Type -> ...; the equality proposition is about 2 values of this type, hence the type must depend on these value
 	* s : Eq := (t : Type) -> (a : t) -> (b : t) -> ...
 		* link to 'dependent type'
-			# links-to internal svwipwixjxnwcfer
+			\ links-to internal svwipwixjxnwcfer
 		* link to 'dependent value'
-			# links-to internal svwipwixjxnwcfer
+			\ links-to internal svwipwixjxnwcfer
 	* for the rest we have different options
 		* inspired by logic
 			* this is just the translation of the definition of equality in logic to programming
 				* see equality in mathematics
-					# links-to internal dxhxiloqezsthksz
+					\ links-to internal dxhxiloqezsthksz
 			* EqLo := (t : Type) -> (x : t) -> (y : t) -> (p : t -> Type) -> (p x -> p y)
 			* "EqLo" is short of "equality from logic"
 		* generalized algebraic data type

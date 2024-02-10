@@ -1,4 +1,4 @@
-# id laqqwpxmfjiqpgtd
+\ id laqqwpxmfjiqpgtd
 * dependency on a c library
 	* sometimes cabal [or stack] fails with a project because it can not find a required c library [for example "zlib"]
 	* then letting nix-shell do magical communication to the c compiler can help

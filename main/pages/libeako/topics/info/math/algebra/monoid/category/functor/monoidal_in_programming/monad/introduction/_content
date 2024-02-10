@@ -1,7 +1,7 @@
-# id myypaoqejobaajxe
+\ id myypaoqejobaajxe
 * monad is an interface of type functions; special version of monoidal
 	* link to 'monoidal'
-		# links-to internal kaxxmpbkqesnqecy
+		\ links-to internal kaxxmpbkqesnqecy
 * intuition
 	* you could have invented monads in programming; here is how :
 	* kliesli composition
@@ -49,11 +49,11 @@
 * other sources
 	* philip wadler wrote an introductory article about using monads in functional programming; the article contains many examples
 		* Monads for functional programming
-			# links-to external http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf
+			\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf
 	* a haskell intro article to monad laws
-		# links-to external https://wiki.haskell.org/Monad_laws
+		\ links-to external https://wiki.haskell.org/Monad_laws
 	* at typeclassopedia
-		# links-to external https://wiki.haskell.org/Typeclassopedia
+		\ links-to external https://wiki.haskell.org/Typeclassopedia
 * the signatures
 	* you probably should read the external sources about monad i referred to in this section; but if you did not then here are the signatures of the 2 alternative, equivalent monad definitions [without the laws] :
 	* interface Monad m where
@@ -63,7 +63,7 @@
 		* pure : x -> m x
 		* join : m (m x) -> m x
 * monad-generic programs
-	# links-to internal kqwejllsptnclmqz
+	\ links-to internal kqwejllsptnclmqz
 * no general method to extract content from a monad
 	* certain concrete monad type functions provide a method to extract content stored in them; a good example is the identity monad, which is just a simple wrapper around the pure content; but such feature is given by monads only individually; no general method exists to extract content from a monad [to see this : look at the methods of interface Monad; each return a monad]; thus if the concrete monad does not provide access to its data then nothing does; in such case one can perform computation on the data inside a monad [with the monadic bind function (>>=)] but will get the output in the same monad type; we can say : "one can not escape from monad"; this is an essential property; certain concrete monads represent a property of computation; a property of computation may be for example : possibility of performing input|output operation, possibility-to-fail; such computations must output their result in an appropriate monad, that marks the possible effect to be performed; but such properties are usually inherited, i mean : all the functions invoking these functions have these properties too; hence their output must also be in the same monad; with other words : once a produced value is in a monad representing an inherited property of computation : any value derived from it must also remain in that monad; non-escapabability from monads and static type checking guarantees this; with other words : this is a method to track computational properties by the static type system
 	* in the section about functional programming i tought that among of the all 3 "function-bugs" side effects are the most interesting and i neglected the other 2; but now you may see that the other 2 [non-determinism, partiality] can be easily handled with monads

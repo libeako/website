@@ -1,4 +1,4 @@
-# id kaxxmpbkqesnqecy
+\ id kaxxmpbkqesnqecy
 * monoidal is an interface of type functions; special version of functor
 * motivation
 	* the map function of functor makes us able to lift a function to the level of the functor
@@ -53,13 +53,13 @@
 			* where creates a function from 2 input functions that applies the 2 input functions by-component to a pair of inputs
 		* as generally : in programming naturality is given by parametricity as a free theorem
 			* link to 'naturality'
-				# links-to internal nisopwyprssrsvgg
+				\ links-to internal nisopwyprssrsvgg
 			* link to 'parametricity'
-				# links-to internal iuvbupavbjmhfrxj
+				\ links-to internal iuvbupavbjmhfrxj
 			* link to 'free theorems'
-				# links-to internal ejqpvlbcoexibqku
+				\ links-to internal ejqpvlbcoexibqku
 		* my derivation of the free theorem
-			# links-to internal thfnzywxpqkcvtdh
+			\ links-to internal thfnzywxpqkcvtdh
 * applicative
 	* in practice often an equivalent alternative formation is used, and is named "applicative"
 	* interface Applicative c where
@@ -70,9 +70,9 @@
 * monoidal-generic programs
 	* a good example:
 		* the sequence function that swaps container layers
-			# links-to internal nuckddbslvpvzupy
+			\ links-to internal nuckddbslvpvzupy
 * more sources
 	* Marcin Szamotulski : Monoidal and Applicative Functors
-		# links-to external https://coot.me/posts/monoidal-functors.html
+		\ links-to external https://coot.me/posts/monoidal-functors.html
 * monad
-	# links-to internal mtcrpjujemznyvue
+	\ links-to internal mtcrpjujemznyvue

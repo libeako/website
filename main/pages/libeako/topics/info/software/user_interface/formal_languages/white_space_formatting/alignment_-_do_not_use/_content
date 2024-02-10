@@ -1,4 +1,4 @@
-# id afkgdbwfehvtemtg
+\ id afkgdbwfehvtemtg
 * alignment was invented in order to start a block of code [which is a subtree in the concrete syntax tree] at the end of the line of the header of the block
 * example
 	* my_awesome_function x =

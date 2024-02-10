@@ -1,21 +1,21 @@
-# id ljokksishyxkxzjx
+\ id ljokksishyxkxzjx
 * LispCast
 	* Functional programming is fun
-		# links-to external https://www.youtube.com/watch?v=3cFvnxd9J78
+		\ links-to external https://www.youtube.com/watch?v=3cFvnxd9J78
 	* Functional code is shorter
-		# links-to external https://www.youtube.com/watch?v=TOrsFp0MOAA
+		\ links-to external https://www.youtube.com/watch?v=TOrsFp0MOAA
 	* Functional Programming will Improve All of Your Programming
-		# links-to external https://www.youtube.com/watch?v=YRgxZI50rAI
+		\ links-to external https://www.youtube.com/watch?v=YRgxZI50rAI
 	* Functional Programming has a Long and Storied History
-		# links-to external https://www.youtube.com/watch?v=4DziAUkltQw
+		\ links-to external https://www.youtube.com/watch?v=4DziAUkltQw
 	* Functional Programming Embodies Lots of Good Software Engineering Practices
-		# links-to external https://www.youtube.com/watch?v=mtMVJnw81YU
+		\ links-to external https://www.youtube.com/watch?v=mtMVJnw81YU
 * testimonies
 	* this section lists some testimonies from programmers, managers who used functional programming, Haskell successfully.
 	* A founder's perspective on 4 years with Haskell
-		# links-to external http://baatz.io/posts/haskell-in-a-startup/
+		\ links-to external http://baatz.io/posts/haskell-in-a-startup/
 	* Haskell in Production: Bdellium
-		# links-to external https://medium.com/@folsen/haskell-in-production-bdellium-1df48de40e19#.53ec2xqsg
+		\ links-to external https://medium.com/@folsen/haskell-in-production-bdellium-1df48de40e19#.53ec2xqsg
 	* my verse about Haskell in Hungarian language
 		* mit nekem te Scala nyelvnek sok sok munkahelyje?
 		* mit nekem a funkciókban gazdag IDE?

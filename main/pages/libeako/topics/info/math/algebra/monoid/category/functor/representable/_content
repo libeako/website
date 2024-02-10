@@ -1,7 +1,7 @@
-# id mkybecwcndywdoos
+\ id mkybecwcndywdoos
 * a blog post "Representable functors in Haskell"
-	# links-to external http://covariant.me/notes/rep-functors.html
+	\ links-to external http://covariant.me/notes/rep-functors.html
 * APLicative Programming with Naperian Functors
-	# links-to external https://www.semanticscholar.org/paper/APLicative-Programming-with-Naperian-Functors-Gibbons/6aa4f31561d39e56002c54e95e8048712b9a9020
+	\ links-to external https://www.semanticscholar.org/paper/APLicative-Programming-with-Naperian-Functors-Gibbons/6aa4f31561d39e56002c54e95e8048712b9a9020
 * by pigworker
-	# links-to external https://stackoverflow.com/questions/46489376/which-haskell-functors-are-equivalent-to-the-reader-functor
+	\ links-to external https://stackoverflow.com/questions/46489376/which-haskell-functors-are-equivalent-to-the-reader-functor

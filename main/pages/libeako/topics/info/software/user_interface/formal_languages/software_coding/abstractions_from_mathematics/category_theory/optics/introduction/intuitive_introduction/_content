@@ -1,4 +1,4 @@
-# id okbqwsokzocmyuul
+\ id okbqwsokzocmyuul
 * in this intuitive introduction i use one particular category of optics : "lens"; it is a reification of data membership in a product type; it consists of the accessor functions characterizing the membership :  a getter and a setter :
 * let Lens member product = { get : product -> member, set : member -> product -> product }
 * 'set' works by taking an old product and replacing the value of the member in it to the taken new value
@@ -33,4 +33,4 @@
 		* lens_value_at :: k -> Lens (Maybe v) (Map k v)
 	* then insertion is done by setting to Just _, deletion is done by setting to Nothing [where 'Just' and 'Nothing' are the 2 constructors of the Maybe type]
 * a convincing real-world example
-	# links-to internal ypnccchncfaeqhzh
+	\ links-to internal ypnccchncfaeqhzh

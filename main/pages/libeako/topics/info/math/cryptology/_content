@@ -1,23 +1,23 @@
-# id flywgepfcilbuavn
+\ id flywgepfcilbuavn
 * book : A Computational Introduction to Number Theory and Algebra
-	# links-to internal sdrtobfyjrdultkx
+	\ links-to internal sdrtobfyjrdultkx
 * book : Serious Cryptography
-	# links-to internal wxrjbcwmunbxdzrv
+	\ links-to internal wxrjbcwmunbxdzrv
 * privacy
 	* anonymity
 		* onion routing
 			* computerphile
-				# links-to external https://youtu.be/QRYzre4bf7I
+				\ links-to external https://youtu.be/QRYzre4bf7I
 		* steganography
 			* computerphile : Secrets Hidden in Images
-				# links-to external https://youtu.be/TWEXCYQKyDc
+				\ links-to external https://youtu.be/TWEXCYQKyDc
 	* differential survey [by savjee]
-		# links-to external https://youtu.be/gI0wk1CXlsQ
+		\ links-to external https://youtu.be/gI0wk1CXlsQ
 * secret key exchange
 	* diffie-hellman
-		# links-to internal fpwucgroxogzkili
+		\ links-to internal fpwucgroxogzkili
 * integrity
 	* Securing Stream Ciphers (HMAC) [by Computerphile]
-		# links-to external https://youtu.be/wlSG3pEiQdc
+		\ links-to external https://youtu.be/wlSG3pEiQdc
 * Magic "Nothing Up My Sleeve" Numbers [by Computerphile]
-	# links-to external https://youtu.be/oJWwaQm-Exs
+	\ links-to external https://youtu.be/oJWwaQm-Exs

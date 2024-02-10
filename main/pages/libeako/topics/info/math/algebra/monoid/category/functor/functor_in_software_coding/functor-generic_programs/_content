@@ -1,4 +1,4 @@
-# id gmxnnexlvjvpclrd
+\ id gmxnnexlvjvpclrd
 * this section presents an example : lens
 * a lens represents a property [data member] [here 'p'] of a product type [here 't'] by the 2 accessors [a getter, a setter]
 * type Lens t p = (t -> p) (p -> t -> t)

@@ -1,4 +1,4 @@
-# id bzefktrxsjcdpwwk
+\ id bzefktrxsjcdpwwk
 * for product and sum type construction one can define functors in the natural way
 * functions by their output type also form functors; one can thing about a function as a container with exactly one element but whose evaluation is postponed because it has a dependency, which is the input of the function
 * very many important data types are constructed by the above ones, hence form functors
@@ -12,4 +12,4 @@
 		* (x -> )
 * hence functor is a good candidate for generic implementation via the data structure; because functor is a very important interface : the haskell compiler provides built-in automatism that can implement it for most types [without run-time overhead]
 	* link to "abstraction over data-structure"
-		# links-to internal xkvczulejoaflnjf
+		\ links-to internal xkvczulejoaflnjf

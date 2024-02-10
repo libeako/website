@@ -1,4 +1,4 @@
-# id ogxjrjwmhpamaeme
+\ id ogxjrjwmhpamaeme
 * here i present a partially applicable solution for the boolean blindness problem, via the Maybe type; it is very simple but surprisingly i have not encountered it anywhere, hence even though i am probably not the first one to think about it : at least i plug some gap in the advocating side
 * once upon a time i had a client with a task from it : write a program that prints "hello world"; i implemented the program and it worked perfectly, my client was satisfied; but later the client wished a new feature : write an exclamation mark after the "hello world", but enable this feature only if a certain command line flag is passed [not everyone likes exclamation marks]; how should i represent internally whether to activate this feature? a computer scientist would immediately answer : the boolean type is the canonical solution to represent choice between 2 value [active, inactive]; but we software engineers know that a disadvantage of it is the boolean blindness problem : does 'true' mean that the feature is requested or that it is suppressed?; hence a software engineer would rather write a new type :
 * data FeatureActivity = Enabled | Disabled
@@ -9,4 +9,4 @@
 	* it is naturally expectable that later the client will want some kind of coloring feature for the exclamation mark and then our code will be ready for the extension, all needed will be to add the appropriate data members to ExclamationMarkConfig; i see this as a strong sign that this solution is better than simply a renamed boolean type
 * after i published this article on Facebook and when was just about to publish in Twitter i learned from a Twitter tweet about someone else's new article in this same topic
 	* link to that article
-		# links-to external https://runtimeverification.com/blog/code-smell-boolean-blindness/
+		\ links-to external https://runtimeverification.com/blog/code-smell-boolean-blindness/

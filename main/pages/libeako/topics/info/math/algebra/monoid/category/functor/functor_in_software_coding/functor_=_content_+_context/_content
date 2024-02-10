@@ -1,4 +1,4 @@
-# id yofhsfgzemzzonmk
+\ id yofhsfgzemzzonmk
 * functor is like collection, but more general
 * the "content" of the functor is everything that is dependent on the type parameter of the functor
 * the "context" is the complementer of the content [that is : everything that is not content]

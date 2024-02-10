@@ -1,6 +1,6 @@
-# id fnndrxxfqpohzabe
+\ id fnndrxxfqpohzabe
 * i had trouble understanding "defunctionalization"; the reason was i expected it to be some complex compiler technique; but in reality it is something very basic : the reification of functions, that is : representing functions by plain data structures
 * the opposite of defunctionalization is functionalization of plain data, like church encoding
 * Defunctionalization at Work
-	# links-to external http://www.brics.dk/RS/01/23/BRICS-RS-01-23.pdf
+	\ links-to external http://www.brics.dk/RS/01/23/BRICS-RS-01-23.pdf
 * by Olivier Danvy and Lasse Nielsen investigates how these 2 functions may be considered as mathematical inverses

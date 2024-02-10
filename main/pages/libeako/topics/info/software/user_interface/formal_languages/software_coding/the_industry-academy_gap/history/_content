@@ -1,4 +1,4 @@
-# id eummejpqlcwwftpg
+\ id eummejpqlcwwftpg
 * the dark age
 	* when the 2 worlds [industry, academy] were almost totally separate :
 	* academy
@@ -14,7 +14,7 @@
 		* some major industry languages were Fortran, C, C++, Java, C#, Python
 		* they all were imperative, and the later ones are all "object-oriented"
 			* object orientation is bad
-				# links-to internal kgmqzsduacpzvbxy
+				\ links-to internal kgmqzsduacpzvbxy
 		* C and especially Fortran are very early languages and their design were also loaded with the requirement to be very fast and easy to implement; with this in mind : i think they are good enough for their time and purpose
 		* but C++, Java, C#, Python are from the 1990s, when the academy languages have already proved how to do much better; the designs of these industry languages are totally amature for their time; their designers seemingly did not even look in the academy world of programming language theory, which is more than 20 years ahead of them; these industry languages are spread very wide; but not because the [non-existent] merits in their design, but because some other, practical reasons
 * the gap shrinking

@@ -1,4 +1,4 @@
-# id vmpbmlfwwxjiteqh
+\ id vmpbmlfwwxjiteqh
 * in functional programming the amount of dependency in the code is an order of magnitude smaller than in imperative programming
 * reason
 	* in an imperative program the positions of mutations in the execution order is significant, moving a mutation in a procedure changes the meaning of whatever it changes place with; with other words : both the code before and after a mutation depend on the mutation relatively being where it is
@@ -14,11 +14,11 @@
 		* i here quote from someone
 			* I learned programming plunging right into C , C++, Java. ... Of course, i was clueless. ... learning functional programming changed it all. ... one of my most vivid recollections of that time is my discovery of the power of simplicity. ... i realised in wonder that that beautiful and powerful world was constructed out of extremely simple pieces.
 			* link
-				# links-to external https://jaortega.wordpress.com/2006/03/17/programmers-go-bananas/
+				\ links-to external https://jaortega.wordpress.com/2006/03/17/programmers-go-bananas/
 		* this makes functional programming fun, the coder feels like he|she is playing with building blocks; hence functional programming deserves the shorter name "fun programming"
 		* modularity improves hierarchicity
 			* i wrote an example of functional programming
-				# links-to internal nxwwqhqhdzpldxms
+				\ links-to internal nxwwqhqhdzpldxms
 			* this discussion builds on it
 			* the dotproduct function sums the component-wise results
 			* summing some values consists of starting from a default value and accumulating the values one-by-one

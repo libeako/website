@@ -1,4 +1,4 @@
-# id biuqwfqzzkpjuqob
+\ id biuqwfqzzkpjuqob
 * type classes are type interfaces that use static method dispatch
 * type classes do not increase the expressive power of the type system; but they still save us from some repetitions and they generally give extra convenience
 * type classes are very popular and it looks that in the future they will be part of most well designed programming languages

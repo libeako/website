@@ -1,4 +1,4 @@
-# id ofkaceiyrpugjkfg
+\ id ofkaceiyrpugjkfg
 * git
 	* deleting history
 		* to save storage cost for github hosting a website
@@ -15,4 +15,4 @@
 				* git push -u --force origin master
 			* delete folder .git-backup
 		* to delete only part of the history is also possible
-			# links-to external https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history
+			\ links-to external https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history

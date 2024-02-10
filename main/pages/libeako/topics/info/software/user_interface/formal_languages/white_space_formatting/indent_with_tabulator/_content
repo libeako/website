@@ -1,4 +1,4 @@
-# id awitstdmdccwokwl
+\ id awitstdmdccwokwl
 * tabulator is more correct theoretically, because it expresses exactly indentation
 * it separates meaning from display, which is almost always the good way to go; tabulator can be viewed by everyone so big as it likes, just a trivial setting in the editor
 * it is more convenient to press a key once, then 4 times; editors are not always smart enough to do the wanted action; for example my Visual C# 2013 does not delete 4 spaces when i press backspace [i do not care what the cause of this, at the end it does not do what i want]
@@ -6,6 +6,6 @@
 	* the only reason to use space is alignment
 	* but
 	* aligning is bad practice
-		# links-to internal afkgdbwfehvtemtg
+		\ links-to internal afkgdbwfehvtemtg
 * automatic resize of indentation is not possible with spaces; because the algorithm may not know in all situation if the author intended the spaces for alignment or for indentation
 * choosing tab can not be the wrong decision; because you can change it to spaces any time without problem, with a simple automatic solution; the other direction is difficult though [you chose spaces probably because you wanted to use alignment]

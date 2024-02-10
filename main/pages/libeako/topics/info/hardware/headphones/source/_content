@@ -1,4 +1,4 @@
-# id zvltomdkctnzolbm
+\ id zvltomdkctnzolbm
 * stored sound data resolution
 	* i can hear the difference between Youtube resolution [about 130 Kb/s] and max mp3 resolution [320 Kb/s]; i do not hear difference above that; mos of the times the sound hardware will be more important than data resolution
 * DAC+amp
@@ -17,9 +17,9 @@
 	* how much do DACs matter? less than even the amplifiers
 		* what matters in DACs is probably not the DAC itself but the  amplifier built into them; yes, DACs themselves may contain a small amplifier, which amplifies the analog output of the DAC to the line level
 	* tube amp
-		# links-to internal xpvehvlxeyfegzec
+		\ links-to internal xpvehvlxeyfegzec
 	* amp reviews
-		# links-to internal zdbijnmknsilyzvd
+		\ links-to internal zdbijnmknsilyzvd
 * cables
 	* cables do not matter
 		* electromagnetic noise almost never cause audible amount of distortion in sound; the biggest source of electromagnetic noise around a headphone cabling is probably the computer but even its noise is too weak to matter

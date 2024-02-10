@@ -1,4 +1,4 @@
-# id zrkytxcddvexdxso
+\ id zrkytxcddvexdxso
 * representation of negation
 	* rep (not S) := (rep S -> Empty)
 * justification of the representation

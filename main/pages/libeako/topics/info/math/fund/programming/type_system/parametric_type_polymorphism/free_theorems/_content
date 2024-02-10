@@ -1,7 +1,7 @@
-# id ejqpvlbcoexibqku
+\ id ejqpvlbcoexibqku
 * assuming type parametricity one can deduce useful mathematical properties about functions just from the type of the function
 	* link to 'parametricity'
-		# links-to internal kmzluqnwmjudyuht
+		\ links-to internal kmzluqnwmjudyuht
 * for example:
 	* what can you tell about the functions with these following types? [assuming the functions are parametric in all their type inputs]
 		* x -> x
@@ -24,19 +24,19 @@
 * philip wadler discovered a method to automatically derive a free theorem from the function type
 	* still the main source of information about it is
 		* his scientific article
-			# links-to external http://homepages.inf.ed.ac.uk/wadler/papers/free/free.dvi
+			\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/free/free.dvi
 * advanced
 	* Amal Ahmed gave a very explaining lecture about the topic, including the formalization of the theorem and its proof; i highly recommend this lecture to anyone trying to understand the story of free theorems; though it is probably too formal and not enough useful for an average software developer
 		* on youtube
 			* the first half of her lecture is about unary logical relations
 			* she starts the topic of free theorem at
 				* here
-					# links-to external https://youtu.be/F8E2_8b1hS4?t=53m44s
+					\ links-to external https://youtu.be/F8E2_8b1hS4?t=53m44s
 			* but it is worth to watch the lecture from
 				* its beginning
-					# links-to external https://www.youtube.com/watch?v=bio5BYECzF8&index=27&list=PLiHLLF-foEeykV1sxQFZdQZvchYVkW5Tw
+					\ links-to external https://www.youtube.com/watch?v=bio5BYECzF8&index=27&list=PLiHLLF-foEeykV1sxQFZdQZvchYVkW5Tw
 				* because she is very good explainer
 		* in writing
 			* someone created a written version of the lecture
 			* link
-				# links-to external https://www.cs.uoregon.edu/research/summerschool/summer16/notes/AhmedLR.pdf
+				\ links-to external https://www.cs.uoregon.edu/research/summerschool/summer16/notes/AhmedLR.pdf

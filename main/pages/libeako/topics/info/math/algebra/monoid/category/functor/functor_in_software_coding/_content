@@ -1,13 +1,13 @@
-# id dkrtqrqtctaagtrx
+\ id dkrtqrqtctaagtrx
 * the most important category in programming is the one whose objects are types and arrows are functions between those types; in this section by "functor" i mean a functor between such categories
 * between such categories a functor is a pair of functions, (one from types to types) and (one from functions to functions)
 * definition
-	# links-to internal dxbpdtsqcxaipqez
+	\ links-to internal dxbpdtsqcxaipqez
 * map "lift"s
 	* intuitively : function 'map' "lift"s a function from the normal type level to the level of the container
 * functor = content + context
-	# links-to internal yofhsfgzemzzonmk
+	\ links-to internal yofhsfgzemzzonmk
 * functors are very common 
-	# links-to internal bzefktrxsjcdpwwk
+	\ links-to internal bzefktrxsjcdpwwk
 * functor-generic programs
-	# links-to internal gmxnnexlvjvpclrd
+	\ links-to internal gmxnnexlvjvpclrd

@@ -1,7 +1,7 @@
-# id cabjryjnnstdjmvb
+\ id cabjryjnnstdjmvb
 * is a special semigroup
 	* see semigroup
-		# links-to internal eovnsnrjngyuihhx
+		\ links-to internal eovnsnrjngyuihhx
 	* has 1 more operation, a 0-ary one
 		* it points out a value; the operation and the value it points out has the same name; but multiple names are in use
 			* 
@@ -55,4 +55,4 @@
 		* the most fundamental structure of programs is the list; imperative programs are lists of instructions and functional programs are compositions of lists of functions
 		* a lot of abstractions in software coding are monoidically composable; people even consciously try to design their abstractions to be monoidically composable; some important examples of monoidically composable things are Semigroup, Monoid, Applicative, Monad, Optics
 	* category
-		# links-to internal edsabrzmtmhnwgml
+		\ links-to internal edsabrzmtmhnwgml

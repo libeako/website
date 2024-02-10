@@ -1,6 +1,6 @@
-# id fmscxupazhuktrwh
+\ id fmscxupazhuktrwh
 * the text structure should match the syntax tree structure
-	# links-to internal wndpwtiwdwsvwwzc
+	\ links-to internal wndpwtiwdwsvwwzc
 	* this ergonomics consideration is the basis of this section
 * when a block of code uses multiple lines then parts of it are separated from each other by line-break, hence the block itself should also be separated from its neighbor by at least a line-break
 * example

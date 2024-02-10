@@ -1,4 +1,4 @@
-# id ehkzjhakowbjyhsj
+\ id ehkzjhakowbjyhsj
 * nix does not follow the FHS [file hierarchy standard]
 	* hence the executables produced for other linux variants contain library paths that are incorrect on nix
 	* hence we have to replace those paths in the executables or set our environmental variable LD_LIBRARY_PATH
@@ -14,4 +14,4 @@
 	* unfortunately one needs to update these each time those library packages get updated
 		* because the path to any package version is unique in nix
 * methods to run a non-nixos executable on nixos
-	# links-to external https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos
+	\ links-to external https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos

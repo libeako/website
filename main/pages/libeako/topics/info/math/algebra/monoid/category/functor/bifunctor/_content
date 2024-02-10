@@ -1,8 +1,8 @@
-# id nzgnwlkzblthwetk
+\ id nzgnwlkzblthwetk
 * definition
 	* a bifunctor is a functor whose source is a product category
 * link to 'product of categories'
-	# links-to internal ikvfsncpnlcnxfvi
+	\ links-to internal ikvfsncpnlcnxfvi
 * i will use programmers' language in this part
 * i will name the curried version of the map function of a bifunctor with "bimap"
 * components

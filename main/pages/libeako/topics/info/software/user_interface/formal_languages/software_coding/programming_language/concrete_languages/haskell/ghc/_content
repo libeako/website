@@ -1,11 +1,11 @@
-# id xgasjmlsnagvmvom
+\ id xgasjmlsnagvmvom
 * a praise
 	* the haskell compiler ["The Glasgow Haskell Compiler"] is one of the most successful software projects of all human history till 2018, it is a shining star, that shows some hope in the darkness of usual software development practice
 	* it is built on a beautiful dream of a concept : lazy purely function programming
 	* initially multiple compilers existed for the haskell programming language, but after time the success of ghc kicked out its competitors
 	* it became industry-strong; now i confidently advise the selection of it for high level programming tasks for software development business owners who consider their wealth their only goal function; more then that: the competitive advantage of haskell provides in business is significant enough to base business on it
 		* a testimony
-			# links-to external https://youtu.be/riJuXDIUMA0?t=3m17s
+			\ links-to external https://youtu.be/riJuXDIUMA0?t=3m17s
 	* it is leading the development of programming language and compiler technology; already before c#'s release, in 1998 : it was more advanced then c# is now in 2018; i estimate that is is about 30 years ahead of industrial programming languages
 	* not only haskell leads the way, does the difficult job of real bleeding edge research but it does it 
 		* even faster than industrial languages [like c#, java] can keep up copying from haskell the successful research results
@@ -13,10 +13,10 @@
 		* from a budget probably multiple times smaller than that of the industrial languages
 	* all this success is due to the great work its authors performed; special praise is deserved by Simon Peyton Jones, who is the father and leader of the compiler
 		* link to Simon Peyton Jones
-			# links-to internal yjuspwkoubzgucdh
+			\ links-to internal yjuspwkoubzgucdh
 * warnings recommended to turn on
 	* https://functor.tokyo/blog/2017-07-28-ghc-warnings-you-should-enable#fn2
 * simon peyton jones
-	# links-to internal yjuspwkoubzgucdh
+	\ links-to internal yjuspwkoubzgucdh
 * managing multiple versions
-	# links-to external https://qfpl.io/posts/multiple-ghcs-ghcup/
+	\ links-to external https://qfpl.io/posts/multiple-ghcs-ghcup/

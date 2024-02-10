@@ -1,7 +1,7 @@
-# id qgynnejyblmswscl
+\ id qgynnejyblmswscl
 * i implemented all the science in this part of the tutorial in haskell
 	* link
-		# links-to external https://bitbucket.org/libeako/haskell-fana/src/default/Haskell/Fana/Optic/Concreter/
+		\ links-to external https://bitbucket.org/libeako/haskell-fana/src/default/Haskell/Fana/Optic/Concreter/
 * laws
 	* i will express the laws via the accessors of the optic category under examination; for clarity : in the application of the accessor functions : i am going to omit the argument for the optic parameter [as it is the same optic value in the whole scope of the laws]
 * i will not show how composition works, because it is trivial or easy to figure out for all categories; but you should do figure them out for each category
@@ -39,7 +39,7 @@
 						* set something >>> set at_last = set at_last
 				* it is possible to derive the laws from the comonad concept
 					* Lenses Are Exactly the Coalgebras for the Store Comonad 
-						# links-to external https://r6research.livejournal.com/23705.html
+						\ links-to external https://r6research.livejournal.com/23705.html
 			* lens is a very widely used category of optic; so much that the first optic libraries for example in haskell had "lens" in their names and many people still use "lens" as a synonym of "optic" [ambiguously]; 
 			* the most straightforward scenario of lens is that it focuses from a product type to a member of that type
 				* examples
@@ -81,7 +81,7 @@
 		* name
 			* the most common name is "semantic editor combinator"
 				* it is coined by Conal Elliot
-					# links-to external http://conal.net/blog/posts/semantic-editor-combinators
+					\ links-to external http://conal.net/blog/posts/semantic-editor-combinators
 				* i think that the name "semantic editor combinator" is wierd and does not make sense to me
 			* an other name is "setter"; i do not like this either because it collides with the set function of lens and they are not equivalent
 			* other possible name is "map" or "mapping" or "mapper" or "change" or ... or "lift" or ...
@@ -91,11 +91,11 @@
 		* this is equivalent to the well known Traversable interface
 		* if you do not know what interface Applicative is
 			* here is my introduction
-				# links-to internal kaxxmpbkqesnqecy
+				\ links-to internal kaxxmpbkqesnqecy
 		* laws
 			* same as of the Traversable interface
 				* traversal pure = pure
 				* traversal f >>> map (traversal g) = getCompose (traversal (g >>> map f >>> Compose))
 					* where : newtype Compose f g x = Compose { getCompose : g (f x) }
 * more about Lens
-	# links-to internal zpvtqfvuyntejjdt
+	\ links-to internal zpvtqfvuyntejjdt

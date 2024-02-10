@@ -1,9 +1,9 @@
-# id qzfwvslnetipqgqu
+\ id qzfwvslnetipqgqu
 * gadt
-	# links-to internal pvsvkykppprsnbne
+	\ links-to internal pvsvkykppprsnbne
 * refinement type
 	* is a pair of a type and a logical statement about the values of the type that constrains the value-set of the type
 	* example
 		* Integer refined by (> 0) denotes the positive integers
 * dependencies of types
-	# links-to internal enjlgzgdnjxyjcck
+	\ links-to internal enjlgzgdnjxyjcck

@@ -1,4 +1,4 @@
-# id vzdcxxawjkqmcakz
+\ id vzdcxxawjkqmcakz
 * compile-time values
 	* we usually think about types as compile type entities; we usually think about values as runtime entities; so how could a type depend on a value? a very simple answer is : sometimes the value is known in compile time
 	* a good example is linear algebra
@@ -11,4 +11,4 @@
 	* c++ constrains them to be of integral types
 	* haskell is very lenient in this : it permits dependency on values of custom algebraic datatypes
 * run-time values ["dependent types"]
-	# links-to internal svwipwixjxnwcfer
+	\ links-to internal svwipwixjxnwcfer

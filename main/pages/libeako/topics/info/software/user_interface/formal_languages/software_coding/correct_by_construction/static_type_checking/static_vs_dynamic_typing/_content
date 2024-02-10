@@ -1,6 +1,6 @@
-# id crulbcjvhzgpkjis
+\ id crulbcjvhzgpkjis
 * an audio version of this topic
-	# links-to external https://youtu.be/CpQb9D_X4cM
+	\ links-to external https://youtu.be/CpQb9D_X4cM
 * here i advocate that static type systems are better
 * advantages
 	* prevents many bugs
@@ -35,6 +35,6 @@
 * the human
 	* whatever you do not check with the compiler nor with unit tests : the human coder must do it
 	* but the compiler is much better in it
-		# links-to internal nelvtoguoomgxthl
+		\ links-to internal nelvtoguoomgxthl
 * conclusion
 	* the only disadvantage static type checking has is that it takes time to create a static type system, it is more difficult to design the language and it is more difficult to implement a compiler for it; but now, in 2019 this is relatively a very small price and the advantages of static type checking are many and big

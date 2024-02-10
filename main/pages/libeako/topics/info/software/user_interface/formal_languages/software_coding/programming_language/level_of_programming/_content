@@ -1,4 +1,4 @@
-# id aazyevaigtxptsjs
+\ id aazyevaigtxptsjs
 * i mean "level" in the sense of this order : hardware -> assembly programming language -> c -> java -> haskell
 * i know about 2 kinds of levels
 	* conceptual - how we humans think about the program
@@ -9,7 +9,7 @@
 	* functional
 		* the program is a set of equations 
 		* see more
-			# links-to internal zxsbxwlppaypmpnn
+			\ links-to internal zxsbxwlppaypmpnn
 	* logic
 		* the program is a set of logical statements about the input and output of the program
 		* the computation of a program specified thus takes often asymptotically more runtime than an equivalent functional program
@@ -28,7 +28,7 @@
 			* layout management
 				* whether an object contains an other [as in memory] or refers to it with a pointer
 		* evaluation order
-			# links-to internal gvlvjsxsrqfqfght
+			\ links-to internal gvlvjsxsrqfqfght
 		* maintaining thread pools, the programmer only needs to specify "task"s
 	* effect on runtime efficiency
-		# links-to internal yjnweovfnkfncnhp
+		\ links-to internal yjnweovfnkfncnhp

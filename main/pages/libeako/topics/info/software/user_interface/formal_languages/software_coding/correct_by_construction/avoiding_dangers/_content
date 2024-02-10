@@ -1,9 +1,9 @@
-# id brqzviybtynlulwl
+\ id brqzviybtynlulwl
 * identify the likely kinds of sources of bugs
 	* some examples : goto instruction, side effect, infinite recursion, null reference
 * try to do without them, perhaps replace them with something better
 * honest interfacing
-	# links-to internal njtdhahteeccqhdi
+	\ links-to internal njtdhahteeccqhdi
 * some concrete manifestations :
 	* functional programming
-		# links-to internal zxsbxwlppaypmpnn
+		\ links-to internal zxsbxwlppaypmpnn

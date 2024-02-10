@@ -1,4 +1,4 @@
-# id svwipwixjxnwcfer
+\ id svwipwixjxnwcfer
 * at first think it seems impossible for a type to depend on a value that is known only in runtime; but it is possible; such types are mostly referred to as "dependent types"; the key in solving this seemingly contradiction is to realize that in some situations the compiler can reason about values [for example determine the equality between 2 of them] without knowing their values exactly; the compiler treats these values symbolically
 * dependent types are basically sorted into 2 groups
 	* dependent pair type
@@ -16,4 +16,4 @@
 	* Datatypes of Datatypes - by Conor McBridge
 		* this is a big collection of usages of dependent types
 		* link
-			# links-to external http://www.cs.ox.ac.uk/projects/utgp/school/conor.pdf
+			\ links-to external http://www.cs.ox.ac.uk/projects/utgp/school/conor.pdf

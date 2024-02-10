@@ -1,4 +1,4 @@
-# id prznupkjbqhncndw
+\ id prznupkjbqhncndw
 * abstractions
 	* category theory
 		* Edward Kmett : "I "categorically" refuse to turn off the flashlight I'm using to find my way around in the dark. =P "
@@ -20,13 +20,13 @@
 				* in Haskell
 					* good first intuition for programmers
 						* Reverse Engineering Machines with the Yoneda Lemma
-							# links-to external http://blog.sigfpe.com/2006/11/yoneda-lemma.html
+							\ links-to external http://blog.sigfpe.com/2006/11/yoneda-lemma.html
 					* awesome proof
 						* https://scturtle.me/posts/2015-06-16-yoneda.html
 				* coyoneda is the free functor
 	* lens
 		* lens over tea
-			# links-to external https://artyom.me/#lens-over-tea
+			\ links-to external https://artyom.me/#lens-over-tea
 	* monoid
 		* Notions of Computation as Monoids
 			* authors
@@ -44,21 +44,21 @@
 					* difference list
 					* codensity monad
 				* download here
-					# links-to external https://arxiv.org/pdf/1406.4823.pdf
+					\ links-to external https://arxiv.org/pdf/1406.4823.pdf
 	* parser combination
 		* applicative
 		* monadic
 * embedded
 	* Abstract Syntax Graphs for Domain Specific Languages
-		# links-to external https://www.andres-loeh.de/ASGDSL/ASGDSL.pdf
+		\ links-to external https://www.andres-loeh.de/ASGDSL/ASGDSL.pdf
 * type size homomorphism
 	* this interesting homomorphism is extended much beyond to what i told previously
 		* you do not need to learn it at this point; and i advise you not to go deep into it because it is somewhat difficult area for someone who just started to learn about algebraic data types
 		* but if you are interested then here are some links
 			* by chris taylor
-				# links-to external http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/
+				\ links-to external http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/
 			* by joel burget
-				# links-to external https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types
+				\ links-to external https://codewords.recurse.com/issues/three/algebra-and-calculus-of-algebraic-data-types
 * totality
 	* the compiler can usually check automatically
 		* exmaples

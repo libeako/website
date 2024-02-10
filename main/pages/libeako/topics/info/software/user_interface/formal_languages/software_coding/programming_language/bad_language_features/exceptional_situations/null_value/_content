@@ -1,4 +1,4 @@
-# id fbctgaodsnjovfll
+\ id fbctgaodsnjovfll
 * ("optional" | "maybe") instead of null
 	* i advise to use optional type instead of the 'null' value
 	* null represents non-existence
@@ -8,7 +8,7 @@
 		* "I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."
 	* using an optional type is much better from all perspective
 		* what is an optional type
-			# links-to external https://en.wikipedia.org/wiki/Option_type
+			\ links-to external https://en.wikipedia.org/wiki/Option_type
 		* i may use the name "Maybe" for the optional type constructor function
 		* even in programming language that contain null, one should adopt the practise to almost never use it
 		* just pretend that the value set of type T does not contain null, and make this a convention

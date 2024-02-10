@@ -1,4 +1,4 @@
-# id rjvsfevdnztyxdlz
+\ id rjvsfevdnztyxdlz
 * x1 -> (x2 -> y)
 * we may drop the brackets for elegance, because "->" is right associative
 	* x1 -> x2 -> y

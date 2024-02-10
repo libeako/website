@@ -1,4 +1,4 @@
-# id whnhxywpnumizrxe
+\ id whnhxywpnumizrxe
 * semanticity
 	* the versioning scheme should be semantic - that is the components of the version should mean a level of seriousness of change; a usual list of such levels is (backward compatibility broke).(new feature).(bug elimination).(internal)
 * uniform 0 usage

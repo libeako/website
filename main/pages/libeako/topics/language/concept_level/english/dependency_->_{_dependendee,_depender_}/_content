@@ -1,4 +1,4 @@
-# id rxhtvkknsoeqoaqe
+\ id rxhtvkknsoeqoaqe
 * the word "dependency" is often used to mean thing that some thing x depends on; especially in software development; but this is wrong practice; nothing implies that "dependency" should not denote thing that depend on x;
 * hence i suggest to constrain the usage of "dependency" to the dependency relation
 * when we want to denote the things with one role only then we have these possibilities
@@ -8,7 +8,7 @@
 		* this is similar to { "employer", "employee" }
 			* though : an employee as employed, but a dependee is not depended, it is depended on
 		* this topic on wiktionary
-			# links-to external https://en.wiktionary.org/wiki/dependee
+			\ links-to external https://en.wiktionary.org/wiki/dependee
 	* using totally different words
 		* "client" := depender
 		* "requisite", "supplier", provider := dependee

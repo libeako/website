@@ -1,4 +1,4 @@
-# id vrdegqmtgfexpvcv
+\ id vrdegqmtgfexpvcv
 * "the big reason to do functional programming is parallel programming"
 	* functional programming helps much in parallel programming, but this advantage is just one of the many and one of the small ones; readability, bug-resistance, reusability, maintainability, equational reasoning, fun are much more important advantages
 	* people were falling in love into functional programming starting from the 1960s, when multi-core processors existed not even at the idea level yet
@@ -15,7 +15,7 @@
 			* not necessarily at all; for example : the purely functional language "elm" has a weak type system; even purely functional language with no static type checking exists [for example : clojure]
 * "functional programming, being higher level must be bad for runtime efficiency"
 	* the situation is the opposite
-		# links-to internal nmzlpnpnrsfmunrf
+		\ links-to internal nmzlpnpnrsfmunrf
 * "functional programming is about higher order functions"
 	* though functional programmers use higher order functions a lot, they are not the main idea
 * "functional programming is about immutability"

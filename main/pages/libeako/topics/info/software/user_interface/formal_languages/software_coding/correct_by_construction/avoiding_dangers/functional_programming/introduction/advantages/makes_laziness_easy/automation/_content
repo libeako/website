@@ -1,4 +1,4 @@
-# id gvlvjsxsrqfqfght
+\ id gvlvjsxsrqfqfght
 * some purely functional programming language compilers [for example haskell] automate the evaluation order, hence the programmer has one less task
 * how does the compiler do this ?
 	* it tries to determine for each function input whether the function surely needs it; if yes then uses eager evaluation; if no then errs to the side of less efficiency risk, which is lazy evaluation [erroneous eagerness is much more dangerous for efficiency then erroneous laziness, it may even introduce infinite recursion]

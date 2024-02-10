@@ -1,4 +1,4 @@
-# id keopxbnbneqhcmwr
+\ id keopxbnbneqhcmwr
 * an enum type is one with its values enumerated with names in the definition
 * to introduce the syntax, here is an example:
 * datatype Color = green | blue | red

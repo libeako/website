@@ -1,4 +1,4 @@
-# id obkyecvuxaoqaoxy
+\ id obkyecvuxaoqaoxy
 * a "zipper" is a variant of a linked data structure with a focus point, suitable for functional processing
 * in my opinion : the name "zipper" is bad, because it is really not like zipping and "zip" (is also used and is really suitable) for something else : forming a collection of pairs of corresponding elements from 2 same-structured collections [: (c x, c y) -> c (x, y) ]
 * the linked list is a simplest linked data structure, hence i will use it as example to introduce zippers

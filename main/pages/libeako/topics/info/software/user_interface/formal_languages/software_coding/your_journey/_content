@@ -1,11 +1,11 @@
-# id wdfyijgzinmnmzpn
+\ id wdfyijgzinmnmzpn
 * this part of this site is not well maintained; instead of this i recommend to you to read my newer book
 	* link to the book
-		# links-to external https://drive.google.com/drive/folders/1kiFr_OGXP6olNQjmShaPeCXiKhnA08Rp?usp=sharing
+		\ links-to external https://drive.google.com/drive/folders/1kiFr_OGXP6olNQjmShaPeCXiKhnA08Rp?usp=sharing
 * this part of my site is for the average industrial programmer, who works all day, in an industrial language, like Java, C++, or any non-typed or imperative or object-oriented language; i want to show you much better methods and programming languages to code with
 * you can think of this content as a book, a walkthrough, an order of topics and references to guide and more importantly: motivate you through 
 * the same journey as i went
-	# links-to internal ruwyqtccsonzjloi
+	\ links-to internal ruwyqtccsonzjloi
 * why is this knowledge so good?
 	* emotional advantages
 		* decreases frustration
@@ -22,44 +22,44 @@
 * i try to make the whole course both compact and explaining
 * for each method i advocate : i explain why i advocate it, hopefully in a convincing way
 * short overview about the content
-	# links-to internal idwgoifpeoznatfk
+	\ links-to internal idwgoifpeoznatfk
 * the steps
 	* the industry-academy gap
-		# links-to internal ezrdpkjrokawnikj
+		\ links-to internal ezrdpkjrokawnikj
 	* some basic prog lang notions
-		# links-to internal jaxbiyrfnbhaormb
+		\ links-to internal jaxbiyrfnbhaormb
 	* static typing
-		# links-to internal crulbcjvhzgpkjis
+		\ links-to internal crulbcjvhzgpkjis
 	* utilizing the type system
-		# links-to internal ratihdffwublrlih
+		\ links-to internal ratihdffwublrlih
 	* functional programming
-		# links-to internal rqeeitsvmgrogdjp
+		\ links-to internal rqeeitsvmgrogdjp
 	* structural polymorphism
-		# links-to internal xkvczulejoaflnjf
+		\ links-to internal xkvczulejoaflnjf
 	* have a break
 		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in : it helps to have some practical experience with functional programming
 	* parametricity
 		* introduction
-			# links-to internal kmzluqnwmjudyuht
+			\ links-to internal kmzluqnwmjudyuht
 		* free theorem
-			# links-to internal ejqpvlbcoexibqku
+			\ links-to internal ejqpvlbcoexibqku
 	* abstraction by mathematics
-		# links-to internal flktedmyhawaehus
+		\ links-to internal flktedmyhawaehus
 	* increasing the strength of the type system
-		# links-to internal qzfwvslnetipqgqu
+		\ links-to internal qzfwvslnetipqgqu
 	* a little more category theory
 		* some trivial knowledge, very good (usefulness / difficulty) value :
 		* isomorphism of objects
-			# links-to internal qxijfmdcfenjblwc
+			\ links-to internal qxijfmdcfenjblwc
 		* duality
-			# links-to internal yimhrxhreprkjkfk
+			\ links-to internal yimhrxhreprkjkfk
 		* contravariant functor
-			# links-to internal fhdcexkhowvzxltx
+			\ links-to internal fhdcexkhowvzxltx
 		* profunctor
-			# links-to internal evecfkoaaczzekya
+			\ links-to internal evecfkoaaczzekya
 	* programming and logic
-		# links-to internal kdtdlfyrudrcnrrl
+		\ links-to internal kdtdlfyrudrcnrrl
 	* arithmetic of data types
-		# links-to internal criytwacwdgeqemu
+		\ links-to internal criytwacwdgeqemu
 	* optics
-		# links-to internal ndgkrnbojyputpec
+		\ links-to internal ndgkrnbojyputpec

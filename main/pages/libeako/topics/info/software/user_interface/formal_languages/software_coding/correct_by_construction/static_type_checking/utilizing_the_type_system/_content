@@ -1,18 +1,18 @@
-# id ratihdffwublrlih
+\ id ratihdffwublrlih
 * shortly
 	* i advise to use the static type system to guarantee so many correctness properties as the type system is naturally capable of
 	* this has the same advantage as static type checking over dynamic
 * examples
 	* exceptional situation
-		# links-to internal frwelthtfwqzkjsm
+		\ links-to internal frwelthtfwqzkjsm
 	* maybe a solution of boolean blindness
-		# links-to internal ogxjrjwmhpamaeme
+		\ links-to internal ogxjrjwmhpamaeme
 	* advanced
 		* Ghosts of Departed Proofs
 			* this is a technique for correctness prooving, building on existentials and rank-2 functions
 			* the description of the technique
-				# links-to external https://kataskeue.com/gdp.pdf
+				\ links-to external https://kataskeue.com/gdp.pdf
 			* an implementation as a haskell library
-				# links-to external https://hackage.haskell.org/package/gdp
+				\ links-to external https://hackage.haskell.org/package/gdp
 * the other side
 	* my practical experience tells that it is usually questionably to push the static type system usage further than what it can do naturally [is designed for]

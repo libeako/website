@@ -1,8 +1,8 @@
-# id bwuhcjgkoclzcopv
+\ id bwuhcjgkoclzcopv
 * bootstrappability
-	# links-to external http://bootstrappable.org/
+	\ links-to external http://bootstrappable.org/
 * reproducible building
-	# links-to external https://reproducible-builds.org/
+	\ links-to external https://reproducible-builds.org/
 * Build Systems à la Carte
 	* this project is an elegant modelling of the math behind build systems
 	* the writing

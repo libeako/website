@@ -1,18 +1,18 @@
-# id ybwmxqdoenunvcsk
+\ id ybwmxqdoenunvcsk
 * introduction
-	# links-to internal ndgkrnbojyputpec
+	\ links-to internal ndgkrnbojyputpec
 * laarhoven representation
 	* lens over tea
-		# links-to external https://artyom.me/#lens-over-tea
+		\ links-to external https://artyom.me/#lens-over-tea
 	* derivation
-		# links-to external https://github.com/ekmett/lens/wiki/Derivation
+		\ links-to external https://github.com/ekmett/lens/wiki/Derivation
 	* indexed
 		* by Matthew Pickering
-			# links-to external http://mpickering.github.io/posts/2017-04-10-indexed-optics.html
+			\ links-to external http://mpickering.github.io/posts/2017-04-10-indexed-optics.html
 * profunctor representation
 	* Profunctor Optics - Modular Data Accessors
 		* link
-			# links-to external http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/poptics.pdf
+			\ links-to external http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/poptics.pdf
 		* note
 			* this document implements the traversal optic via FunList; this method may be outdated
 				* edward kmett wrote in a forum that it breaks down on infinite collections
@@ -20,17 +20,17 @@
 				* edward kmett's library 'lens' uses the type 'Bazaar' instead
 				* library 'mezzolens' uses the elegant 'Wandering' constraint instead
 	* Phil Freeman - Fun with Profunctors
-		# links-to external https://www.youtube.com/watch?v=OJtGECfksds
+		\ links-to external https://www.youtube.com/watch?v=OJtGECfksds
 	* by Oleg Grenrus
-		# links-to external http://oleg.fi/gists/posts/2017-04-18-glassery.html
+		\ links-to external http://oleg.fi/gists/posts/2017-04-18-glassery.html
 	* indexed
 		* Indexed Profunctor optics
 			* by Oleg Grenrus
-				# links-to external http://oleg.fi/gists/posts/2017-04-26-indexed-poptics.html#indexed-profunctor
+				\ links-to external http://oleg.fi/gists/posts/2017-04-26-indexed-poptics.html#indexed-profunctor
 	* Profunctor Optics: The Categorical Approach - Bartosz Milewski
 		* in this video bartosz gives a categorical explanation of why the profunctor representation of ptics work; it may be worth to listen because it is followable with little knowledge of category theory [functor, bifunctor, profunctor, product category, yoneda, adjunction] and interesting; but it does not add to your practical programming skill
 		* link to youtube video
-			# links-to external https://www.youtube.com/watch?v=l1FCXUi6Vlw
+			\ links-to external https://www.youtube.com/watch?v=l1FCXUi6Vlw
 * other sources
 * Lenses are the coalgebras for the costate comonad
-	# links-to external https://patternsinfp.wordpress.com/2011/01/31/lenses-are-the-coalgebras-for-the-costate-comonad/
+	\ links-to external https://patternsinfp.wordpress.com/2011/01/31/lenses-are-the-coalgebras-for-the-costate-comonad/

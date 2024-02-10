@@ -1,7 +1,7 @@
-# id vklgnrmtoqvxspkk
+\ id vklgnrmtoqvxspkk
 * package management
 	* Nix
-		# links-to external https://nixos.org/nix/
+		\ links-to external https://nixos.org/nix/
 		* is the best package manager in my opinion; it is functional
 * operating system
 	* it is a kind of tradition in the Unix world to build new operating system distributions on revolutionary package managers; Nix [a very revolutionary one] did not avoid this fate either; meet NixOS, an operating system which not only uses a functional package manager, but also applies the functional idea to operating system matters, unrelated to package management, NixOS is the best operating system in my opinion

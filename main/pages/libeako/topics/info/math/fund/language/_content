@@ -1,8 +1,8 @@
-# id znuvgowivqvqbdhr
+\ id znuvgowivqvqbdhr
 * comment syntaxes that i may use
-	# links-to internal tajtjkqzetruzejb
+	\ links-to internal tajtjkqzetruzejb
 * a message is a tree of expressions
-	# links-to internal pizvixaihbpagbqz
+	\ links-to internal pizvixaihbpagbqz
 * "name definition" is giving a name to a value
 	* most usual syntax is: name = value
 	* sometimes a double-dot precedes the equality letter, ":="
