@@ -1,0 +1,12 @@
+\ id hmcrangmmxzmagyc
+* preorder
+	\ id dmwxbvrqoicvgxfv
+	* a binary relation which is reflexive and transitive
+* partially ordered set ["poset"]
+	\ id xpcrgldjsphzyebu
+	* a
+		* preorder
+			\ links-to internal dmwxbvrqoicvgxfv
+	* which is 
+		* antisymmetric
+			\ links-to internal qnpbgaefycizjytu

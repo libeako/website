@@ -1,0 +1,17 @@
+\ id vzoiyhgtnilkddyf
+* irreflexive
+	\ id jehrdufohogsplvb
+	* * is irreflexive := (not exist s: x * x)
+* antisymmetry
+	\ id qnpbgaefycizjytu
+	* * is antisymmetric := (x * y and y * x => x = y)
+* asymmetry
+	\ id osqrfefnqyuwqmyh
+	* asymmetricity :=
+		* and
+			* antisymmetricity
+				\ links-to internal qnpbgaefycizjytu
+			* irreflexivity
+				\ links-to internal jehrdufohogsplvb
+* order
+	\ links-to internal hmcrangmmxzmagyc

@@ -1,11 +1,17 @@
 \ id edsabrzmtmhnwgml
-* category theory is the mathematical field studying typed typed monoidal compositionality
-* is very abstract
-* has high value in practice too, for example : some things from it are now basic building blocks of everyday software source code
 * motivation for software coders
 	\ links-to internal vupzazrdkbzocwdi
 * introduction
 	\ links-to internal hdawzncgtnabaocq
+* category theory is very abstract
+	* abstractness gives power
+	* abstractness makes understanding difficult
+		* you can decrease the difficulty of this abstractness by separating it into the 2 aspects: objects and arrows; categories can have multiple objects and multiple arrows; for every category theoretical idea one can try to understand it first for categories with single objects [monoids] and for categories with single or zero arrows between pairs of objects [preorders]
+		* see
+			* monoid
+				\ links-to internal cabjryjnnstdjmvb
+			* preorder
+				\ links-to internal hmcrangmmxzmagyc
 * isomorphism of objects
 	\ links-to internal qxijfmdcfenjblwc
 * duality
