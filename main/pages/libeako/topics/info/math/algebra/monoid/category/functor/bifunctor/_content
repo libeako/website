@@ -1,8 +1,7 @@
 \ id nzgnwlkzblthwetk
-* definition
-	* a bifunctor is a functor whose source is a product category
-* link to 'product of categories'
-	\ links-to internal ikvfsncpnlcnxfvi
+* a bifunctor is a functor whose source is a product category
+	* see 'product of algebras'
+		\ links-to internal wfkoexrvspdbfjom
 * i will use programmers' language in this part
 * i will name the curried version of the map function of a bifunctor with "bimap"
 * components
