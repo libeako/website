@@ -2,11 +2,21 @@
 * preorder
 	\ id dmwxbvrqoicvgxfv
 	* a binary relation which is reflexive and transitive
-* partially ordered set ["poset"]
+* partial order
 	\ id xpcrgldjsphzyebu
-	* a
-		* preorder
-			\ links-to internal dmwxbvrqoicvgxfv
-	* which is 
-		* antisymmetric
-			\ links-to internal qnpbgaefycizjytu
+	* definition
+		* a
+			* preorder
+				\ links-to internal dmwxbvrqoicvgxfv
+		* which is 
+			* antisymmetric
+				\ links-to internal qnpbgaefycizjytu
+	* "poset" is short of "partially ordered set"
+* total order is a partitial order where every pair is comparable
+	\ id kpbjyeivuyyhfdqu
+	* "toset" is short of "totally ordered set"
+* extreme elements
+	\ links-to internal zwkbiyogscsqbnte
+* well-founded an ordering is iff each subset has a minimal element
+	* link to minimal element
+		\ links-to internal tamhgiftsvhkahfs

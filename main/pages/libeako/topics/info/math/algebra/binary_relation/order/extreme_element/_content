@@ -1,0 +1,17 @@
+\ id zwkbiyogscsqbnte
+* to work easier in this section: if not stated otherwise: let s : Type, r : s -> s -> Bool
+* "smallest" and "greatest" elements
+	* definition
+		* x is smallest <=> forall y . r x y
+		* y is greatest <=> forall x . r x y
+	* smallest and greates are dual of each other through flipping r
+* "minimal" and "maximal" elements
+	\ id tamhgiftsvhkahfs
+	* definition
+		* x is minimmal <=> (forall y . r y x => x = y)
+		* y is maximmal <=> (forall x . r y x => x = y)
+	* minimal and maximal are dual of teach other through flipping r
+* smallest is minimal, greatest is maximal
+* in a total ordering {minimal, maximal} elements are {smallest, greates}
+	* link to total ordering
+		# links-to internal kpbjyeivuyyhfdqu
