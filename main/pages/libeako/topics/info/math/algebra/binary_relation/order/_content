@@ -1,9 +1,14 @@
 \ id hmcrangmmxzmagyc
+* in this section i will often use the function symbols 
+	* "s" = "smaller"
+	* "se" = "smaller or equal"
+	* similarly for "greater"
 * preorder
 	\ id dmwxbvrqoicvgxfv
 	* a binary relation which is reflexive and transitive
 * partial order
 	\ id xpcrgldjsphzyebu
+	* also just "order"
 	* definition
 		* a
 			* preorder

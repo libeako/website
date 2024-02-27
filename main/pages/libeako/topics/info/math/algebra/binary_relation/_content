@@ -1,7 +1,7 @@
 \ id vzoiyhgtnilkddyf
 * irreflexive
 	\ id jehrdufohogsplvb
-	* * is irreflexive := (not exist s: x * x)
+	* * is irreflexive := (not exist x: x * x)
 * antisymmetry
 	\ id qnpbgaefycizjytu
 	* * is antisymmetric := (x * y and y * x => x = y)

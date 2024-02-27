@@ -1,0 +1,19 @@
+\ id ixzcmqqgliligeti
+* as definition, "join" and "meet" are the binary versions of the extremums 
+	* join : X -> X -> Maybe X
+	* meet : X -> X -> Maybe X
+	* join x1 x2 = supremum {x1, x2}
+	* meet x1 x2 =  infimum {x1, x2}
+* for the common name of join and meet i may use "jomee" or "mejo"; derived from that i may also use the words "mejoical", "mejoical", ...
+* join and meet are
+	* reflexive
+	* idempotent
+	* commutative
+		* obviously, because they are built on the sets of their arguments
+	* associative
+		* proof by the 'extremum extremums do not depend on construction' theorem
+			* link to the theorem
+				\ links-to internal hhrudacnunyzxaxq
+	* not dependent on some extra containing set, as extremums do
+* lattices
+	\ links-to internal itknuxndzyspgrag

@@ -1,6 +1,0 @@
-\ id zupoyjhzjznssfcb
-* for-all x y z
-	* (x ⊕ y) ⊕ z = x ⊕ (y ⊕ z)
-* with equivalent but perhaps more intuitive expressions
-	* grouping of the operations does not matter
-	* the order of the evaluation of the operations does not matter

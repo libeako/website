@@ -1,0 +1,39 @@
+\ id itknuxndzyspgrag
+* "semilattice"
+	* definition
+		* let
+			* S : Set
+			* se : S -> S -> Bool
+			* j be the join function induced by se; let j be total
+		* then (S, j) is a "join-semilattice"
+	* thus: a "join-semilattice" is just a total join function
+	* analogously for meet
+* equivalence of 2 definitions of semilattice 
+	\ id yfrehcdkxqrbrkoy
+	* the 2 definitions, based on:
+		* operation
+			\ links-to internal xizqxawbezpbbtcb
+		* order
+			\ links-to internal itknuxndzyspgrag
+	* order-based definition => operation based definition
+		* proof is trivial
+	* operation based definition => order-based definition
+		* proof
+			* se x y := x <> y = y
+			* we prove that se is an ordering:
+				* reflexive
+					* <> is idempotent => x <> x = x => se x x
+				* transitive
+					* suppose:
+						* se x y and se y z
+					* then:
+						* after substituting the definition of se:
+							* x <> y = y and y <> z = z
+						* => x <> z = x <> (y <> z) = {- <> is associative -} (x <> y) <> z) = y <> z = z
+						* thus: x <> z = z
+						* => {- by definition of se-} se x z 
+				* antisymmetric
+					* suppose: se x y and se y x
+					* then:
+						* by definition of se: x <> y = y and y <> x = x
+						* by commutativity of <>: x = y

@@ -1,0 +1,45 @@
+\ id eovnsnrjngyuihhx
+* associativity: 
+	* forall x y z :
+		* (x <> y) <> z = x <> (y <> z)
+	\ id zupoyjhzjznssfcb
+	* with equivalent but perhaps more intuitive expressions:
+		* grouping of the operations does not matter
+		* the order of the evaluation of the operations does not matter
+* definition
+	* class Semigroup t
+		* (<>) : t -> t -> t
+			* -- is associative
+* thus semigroup is a type-class equivalent to an associative magma
+* some examples of semigroups
+	* i notate the examples with juxtaposition [separate the (collection of values) and the method with only a space]
+	* 
+		* numbers +
+		* numbers *
+		* numbers minimum
+		* numbers maximum
+		* lists (list concatenation)
+		* endo-functions (function composition)
+			* f is endo-function iff exists t : (f : t -> t)
+		* sets union
+		* sets intersection
+		* propositions and
+		* propositions or
+* creating new semigroups from existing ones
+	* by product type construction
+		* instance Semigroup (t1 t2) <= (Semigroup t1, Semigroup t2) where
+			* (x11, x12) <> (x21, x22) = (x11 <> x21, x21 <> x22)
+		* of course this works with any kind of product type [any tuples, vectors]
+	* by non-existance
+		* instance Semigroup (Maybe x) <= Semigroup x where
+			* just x1 <> just x2 = just (x1 <> x2) 
+			* _ -> none
+* monoid is a semigroup with a neutral element
+	\ links-to internal cabjryjnnstdjmvb
+* semilattice is a semigroup that is also commutative and idempotent
+	\ id xizqxawbezpbbtcb
+	* this operation-based definition of "semilattice"
+		* is equivalent to 
+			\ links-to internal yfrehcdkxqrbrkoy
+		* the order-based definition
+			\ links-to internal itknuxndzyspgrag

@@ -1,0 +1,62 @@
+\ id kkmbjwiwqqcdfcie
+* deflation does not eliminate extremum bounds
+	\ id jilgchnxcucnfcri
+	* judgement
+		* let
+			* XX, YY be sets of sets
+			* the supremums of their elements exist
+			* (the union of the elements of XX) contain (the union of the elements of YY)
+				* i may use "union containment" to refer to this condition
+		* then the (upper bounds of the supremums of the elements of XX) are (upper bounds of the supremums of elements of YY)
+	* proof
+		* let b be an upper bound of the supremums
+		* then
+			* forall x element of element of XX: se x b
+				* by transitivity of se
+			* forall y element of element of YY: se y b
+				* by the union containment
+			* hence forall Y element of YY: 
+				* b is an upper bound of Y
+				* supremum Y is also an upper bound of Y
+				* supremum Y is the smallest one among them => se (supremum Y) b
+	* the same with infimums and lower bounds
+* extremum bounds do not depend on construction
+	\ id sgjjrsmzonhzhuiu
+	* judgement
+		* let
+			* XX, YY be sets of sets
+			* the supremums of their elements exist
+			* (the union of the elements of XX) = (the union of the elements of YY)
+		* then (the upper bounds of the supremums of the elements of XX) = (the upper bounds of the supremums of elements of YY)
+	* this theorem is the equality version of the
+		* 'deflation does not eliminate extremum bounds' theorem
+			\ links-to internal jilgchnxcucnfcri
+	* hence the proof is a trivial application of that theorem in the 2 directions
+	* the same with infimums and lower bounds
+* extremum extremums do not depend on construction
+	\ id hhrudacnunyzxaxq
+	* judgement
+		* let
+			* XX, YY be sets of sets
+			* the extremums of their elements exist
+			* (the union of the elements of XX) = (the union of the elements of YY)
+		* then 
+			* the existence of either of
+				* the supremum of the supremums of the elements of XX
+				* the supremum of the supremums of the elements of YY
+			* implies the existence of the other
+			* and then they are equal
+	* this theorem is a straightforward consequence of the 
+		* 'extremum bounds do not depend on construction' theorem
+			\ links-to internal sgjjrsmzonhzhuiu
+	* analogously with infimum
+	* an important case of this theorem is when one of the set of sets contains only 1 set:
+		* let
+			* X be a set of sets
+			* the extremums of its elements exist
+		* then
+			* the existence of either of
+				* the supremum of the supremums of the elements of X
+				* the supremum of the union of the elements of x
+			* implies the existence of the other
+			* and then they are equal

@@ -1,0 +1,25 @@
+\ id patuouwjayjfzqhl
+* definition
+	* let ss be a subset of s
+	* let r be an 
+		* ordering
+			\ links-to internal xpcrgldjsphzyebu
+	* x is lower bound of ss in s <=> forall y in ss . r x y
+	* y is upper bound of ss in s <=> forall x in ss . r x y
+* note
+	* the bound of a set does not have to be in that set
+	* the bound concept depends on a containing set
+	* the upper and lower bound concepts are dual of each other through flipping r
+* "smallest" and "greatest" element - when the containing set is the same
+	\ id amjhlrfsqefgrhhq
+	* this concept is a special version of
+		* bound
+			\ links-to internal patuouwjayjfzqhl
+	* definition
+		* x is smallest <=> x is lower bound of s in s
+		* y is greatest <=> y is upper bound of s in s
+	* theorem: smallest and greates elements are unique
+		* proof
+			* suppose values x, y are both smallest [similarly of greatest] bounds
+				* then r x y and r y x
+				* r is an ordering, hence it is antisymmetric, hence x = y

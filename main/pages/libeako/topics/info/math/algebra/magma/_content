@@ -1,0 +1,12 @@
+\ id nfoegqpcgzhctwbv
+* "magma" meass just a binary function (t -> t -> t)
+* it is rather known as a type class:
+	* class Magma t where
+		* (<>) : t -> t -> t
+* some famous potential properties of magmas
+	* associative: (x <> y) <> z = x <> (y <> z)
+		\ links-to internal zupoyjhzjznssfcb
+	* commutative: x <> y = y <> x
+	* idempotent: x <> x = x
+* semigroup is the associative magma
+	\ links-to internal eovnsnrjngyuihhx
