@@ -1,0 +1,26 @@
+\ id pguqcogtfsaopamu
+* statement
+	* semilattice
+		\ links-to internal xweqdmlprrkvorbq
+	* is
+	* ordered magma
+		\ links-to internal iihqgewkfaxwuyio
+* proof:
+	* need: forall x y c:
+		* and
+			* se x y => se (x <> s) (y <> s)
+			* se x y => se (s <> x) (s <> y)
+	* one of them is enough to prove, because <> is commutative
+	* i will use the
+		* isomorphism of the 2 representations of semilattices
+			\ links-to internal yfrehcdkxqrbrkoy
+	* thus we need:
+		* x <> y = y => (x <> s) <> (y <> s) = (y <> s)
+	* proving chain of equations:
+		* (x <> s) <> (y <> s)
+		* = -- <> is associative
+		* (x <> y) <> (s <> s)
+		* = -- assumption
+		* y <> (s <> s)
+		* = -- <> is idempotent
+		* y <> s

@@ -1,0 +1,12 @@
+\ id itknuxndzyspgrag
+* this is one possible representation of 
+	* semilattice
+		\ links-to internal xweqdmlprrkvorbq
+* the definition:
+	* let
+		* S : Set
+		* se : S -> S -> Bool
+		* j be the join function induced by se; let j be total
+	* then (S, j) is a "join-semilattice"
+	* thus: a "join-semilattice" is just a total join function
+	* analogously for meet

@@ -1,6 +1,8 @@
 \ id xizqxawbezpbbtcb
-* definition of "semilattice":
-	* a semigroup that is also commutative and idempotent
+* this is one possible representation of 
+	* semilattice
+		\ links-to internal xweqdmlprrkvorbq
+* the definition: a semigroup that is also commutative and idempotent
 * is determined by its selecting core
 	\ id jnkggvgzfpsajuid
 	* let "selective" mean that for function "<>" on values "x" and "y": 
@@ -18,8 +20,3 @@
 			* proof:
 				* it is enough to prove one of the consequences, because <> is commutative
 				* x <> b = x <> (x <> y) = (x <> x) <> y = x <> y = b
-* this operation-based definition of "semilattice"
-	* is equivalent to 
-		\ links-to internal yfrehcdkxqrbrkoy
-	* the order-based definition
-		\ links-to internal itknuxndzyspgrag
