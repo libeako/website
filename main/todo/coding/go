@@ -1,0 +1,11 @@
+Compared to Java, C#:
+	Type interface implementation is implicit.	
+	Named return value - useless, but comlicates the language.
+	'Defer' - what for?
+	'Map's should not be part of the language.
+Compared to most industrial languages:
+	Wants to be high level language, but is very imperative; a high level language should be functional.
+	No higher kinded types.
+	Methods require an actual input.
+	Methods can not be implemented conditionally.
+	Dynamic type test.

@@ -1,0 +1,9 @@
+\ id iihqgewkfaxwuyio
+* an "ordered" magma is a magma with an ordering such that the ordering and the operation are compatible
+* compatinility of relation r and operation o means that
+	* forall x y s . 
+		* r x y =>
+			* and
+				* r (o x s) (o y s)
+				* r (o s x) (o s y)
+* more sophisticated algebras, subtypes of magma, also have ordered versions, like ordered monoid

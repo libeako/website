@@ -1,0 +1,43 @@
+\ id yfrehcdkxqrbrkoy
+* an isomorphism exists between the 2 representations of semilattices, between the ones based on:
+	* operation
+		\ links-to internal xizqxawbezpbbtcb
+	* order
+		\ links-to internal itknuxndzyspgrag
+* let "make-se" be the function that maps an operation to an order as:
+	* make_se <> x y := x <> y = y
+* let "make-<>" be the function in the opposite direction that maps a [partial] order to its join function
+* statement: make-se and make-<> are inverse of each other
+* proof
+	* mapping into the other representation:
+		* make-<> creates a semilattical operation
+			* proof is trivial
+		* make-se creates an order
+			* proof:
+				* se x y := make-se <> x y
+				* we prove that se is an ordering:
+					* reflexive
+						* <> is idempotent => x <> x = x => se x x
+					* transitive
+						* suppose:
+							* se x y and se y z
+						* then:
+							* after substituting the definition of se:
+								* x <> y = y and y <> z = z
+							* => x <> z = x <> (y <> z) = {- <> is associative -} (x <> y) <> z) = y <> z = z
+							* thus: x <> z = z
+							* => {- by definition of se-} se x z 
+					* antisymmetric
+						* suppose: se x y and se y x
+						* then:
+							* by definition of se: x <> y = y and y <> x = x
+							* by commutativity of <>: x = y
+	* proof of isomorphism:
+		* make-<> >>> make-se = id
+			* proof is trivial, just branch on (se x y)
+		* make-<> is surjective, because
+			* and
+				* any semilattical operation can be represented by an ordering
+					* this is proved in the previous section 
+				* the selecting core of semilattical operation determines the rest of its domain
+					\ links-to internal jnkggvgzfpsajuid

@@ -36,10 +36,5 @@
 			* _ -> none
 * monoid is a semigroup with a neutral element
 	\ links-to internal cabjryjnnstdjmvb
-* semilattice is a semigroup that is also commutative and idempotent
-	\ id xizqxawbezpbbtcb
-	* this operation-based definition of "semilattice"
-		* is equivalent to 
-			\ links-to internal yfrehcdkxqrbrkoy
-		* the order-based definition
-			\ links-to internal itknuxndzyspgrag
+* semilattice
+	\ links-to internal xizqxawbezpbbtcb
