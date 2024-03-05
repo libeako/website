@@ -2,10 +2,17 @@
 * this is one possible representation of 
 	* semilattice
 		\ links-to internal xweqdmlprrkvorbq
+	* order
+		* \ links-to internal xpcrgldjsphzyebu
+* to understand you will need:
+	* extremums
+		\ links-to internal ixzcmqqgliligeti
+	* partial order
+		\ links-to internal xpcrgldjsphzyebu
 * the definition:
 	* let
 		* S : Set
-		* se : S -> S -> Bool
+		* se : S -> S -> Bool, a partial order
 		* j be the join function induced by se; let j be total
 	* then (S, j) is a "join-semilattice"
 	* thus: a "join-semilattice" is just a total join function

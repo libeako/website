@@ -1,0 +1,5 @@
+\ id oeltcgippeesnvsd
+* let f g be commutative binary operations
+* f absorbs g iff
+	* forall x y:
+		* f x (g x y) = x

@@ -1,5 +1,5 @@
 \ id nfoegqpcgzhctwbv
-* "magma" meass just a binary function (t -> t -> t)
+* "magma" means just a binary function (t -> t -> t)
 * it is rather known as a type class:
 	* class Magma t where
 		* (<>) : t -> t -> t
@@ -8,5 +8,7 @@
 		\ links-to internal zupoyjhzjznssfcb
 	* commutative: x <> y = y <> x
 	* idempotent: x <> x = x
+	* absorb
+		\ links-to internal oeltcgippeesnvsd
 * semigroup is the associative magma
 	\ links-to internal eovnsnrjngyuihhx

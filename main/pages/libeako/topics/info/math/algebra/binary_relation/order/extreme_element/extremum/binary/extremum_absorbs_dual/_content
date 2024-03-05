@@ -1,0 +1,23 @@
+\ id tugucisahybhtgpt
+* statement:
+	* extremums 
+	* absorb
+		\ links-to internal oeltcgippeesnvsd
+	* their dual
+* proof:
+	* it is enough to prove only one of the situations, the other is automatically proved by the duality principle
+	* we need:
+		* forall x y:
+			* join x (meet x y) = x
+	* using 
+		* the isomorphism between the 2 main representations of semilattice
+			\ links-to internal yfrehcdkxqrbrkoy
+	* we need:
+		* and
+			* se (join x (meet x y)) x
+			* ge (join x (meet x y)) x
+	* the ge goal is given by join being an upper bound of its arguments
+	* the se goal is given by
+		* and
+			* meet being a lower bound of its arguments
+			* x being an upper bound of both of the arguments of join here and join by definition being the minimal among such
