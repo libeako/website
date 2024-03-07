@@ -23,3 +23,5 @@
 			* thus we need:
 				* forall x y. (meet x y = x <=> join x y = y)
 			* which is a trivial consequence of the absorptions assumption
+* bounded
+	\ links-to internal pyrodbqatbfjuayc

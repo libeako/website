@@ -1,0 +1,21 @@
+\ id pyrodbqatbfjuayc
+* definitions
+	* let S be a set
+	* let se be an order on S
+	* the differing parts of the definitions based on
+		* extremum
+			* let S contain all its finite extremums
+			* then (S, se) is a "bounded lattice"
+		* extremal
+			* let S contain both of its extremals [minimal, maximal elements]
+		* bound
+			* let S be bounded
+	* then (S, se) is a "bounded lattice"
+* equivalence of the definitions
+	* extremal <=> bound
+		* proof is trivial
+	* extremal => extremum
+		* proof: inner bounds are extremums
+	* extremum => extremal
+		* proof:
+			* "finite" contains the possibility of 0 too, the empty sets also have their extremums in S; the extremums of the empty set in S are the dual extremals of S
