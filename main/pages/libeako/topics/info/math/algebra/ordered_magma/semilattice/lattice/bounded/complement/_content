@@ -1,0 +1,6 @@
+\ id vpgkjgohovfvzlrz
+* in a bounded lattice:
+	* c is a "complement" of x iff
+		* join c x = top
+		* meet c x = bottom
+* the word "complement" comes from the world "complete", the complement of x is what is needed to make x complete; do not confuse with "compliment", which is saying something nice

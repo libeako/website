@@ -36,3 +36,6 @@
 			* join (meet x y) z
 		* j1m => m1j
 			* dual of 'm1j => j1m'
+* duality
+	* statement: a lattice is dual iff its dual is distributive
+	* proof: trivial, because the distributivity equations are dual of each other
