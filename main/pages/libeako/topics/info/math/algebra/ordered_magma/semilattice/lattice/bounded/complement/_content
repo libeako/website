@@ -4,3 +4,15 @@
 		* join c x = top
 		* meet c x = bottom
 * the word "complement" comes from the world "complete", the complement of x is what is needed to make x complete; do not confuse with "compliment", which is saying something nice
+* a lattice is "complemented" when all elements have complement
+	* a lattice is uniquely "complemented" when all elements have unique complement
+		* complement of complement is identity
+			* proof
+				* c being complement of x means:
+					* join c x = top
+					* meet c x = bottom
+				* join and meet are commutative, hence:
+					* join x c = top
+					* meet x c = bottom
+				* thus x is a complement of c, which is a complement of x, thus x is a complement of a complement of itself
+				* uniqueness is by supposition
