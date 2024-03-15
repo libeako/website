@@ -1,0 +1,13 @@
+\ id mokalrcgtrmwucjs
+* join x x = x
+	* proof
+		* join x x
+		* =
+			* by top being neutral value in meet
+		* join (meet x top) (meet x top)
+		* =
+			* by distributivity of meet join over meet
+		* meet x (join top top)
+		* =
+		* meet x top = x
+* dually for meet 

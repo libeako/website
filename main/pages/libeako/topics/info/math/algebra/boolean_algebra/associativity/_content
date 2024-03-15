@@ -1,0 +1,85 @@
+\ id raujdiixodtdwhxf
+* statement
+	* primary representation of boolean algebra => associativity of the binary methods
+* proof
+	* some other theorems used
+		* absorption
+			\ links-to internal iilgxjkyigsgiljm 
+		* cancellation of join
+			* links-to internal kjyghzsausenawxt
+	* meet (meet c x) y = meet (c (meet x y))
+		* proof
+			* let
+				* m = meet (meet c x) y
+				* n = meet c (meet x y)
+			* we need to prove (m = n)
+			* d := complement c		
+			* we will use
+				* cancellation of join
+					* links-to internal kjyghzsausenawxt
+			* using cancellation of join
+				* join c m = join c n
+					* proof
+						* join c m = c
+							* proof
+								* join c m
+								* =
+									* by definition of m
+								* join c (meet (meet c x) y)
+								* =
+									* by distributivity of join over meet
+								* meet (join c (meet c x)) (join c y)
+								* =
+									* by absorption
+								* meet c (join c y)
+								* =
+									* by absorption
+								* c
+						* join c n = c
+							* proof
+								* join c n
+								* =
+									* by definition of n
+								* join c (meet c (meet x y))
+								* =
+									* by absorption
+								* c
+				* join d m = join d n
+					* proof
+						* join d m = join d (meet x y)
+							* proof
+								* join d m
+								* =
+									* by definition of m
+								* join d (meet (meet c x) y)
+								* =
+									* by distributivity of join over meet
+								* meet (join d (meet c x)) (join d y)
+								* =
+									* by distributivity of meet over join
+								* meet (meet (join d c) (join d x)) (join d y)
+								* =
+									* by complementation
+								* meet (meet top (join d x)) (join d y)
+								* =
+									* by top being neutral value of meet
+								* meet (join d x) (join d y)
+								* =
+									* by distributivity of join over meet
+								* join d (meet x y)
+						* join d n = join d (meet x y)
+							* proof
+								* join d n
+								* = 
+									* by definition of n
+								* join d (meet c (meet x y))
+								* =
+									* by distributivity of join over meet
+								* meet (join d c) (join d (meet x y))
+								* =
+									* by complementation
+								* meet top (join d (meet x y))
+								* =
+									* by top being neutral value of meet
+								* join d (meet x y)
+	* dually for join

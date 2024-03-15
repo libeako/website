@@ -1,0 +1,26 @@
+\ id xmdueabjmqdlafrc
+* primary -> secondary
+	* S is not empty
+		* is implied by the existence of bottom and top
+	* proof of absorption
+		\ links-to internal iilgxjkyigsgiljm
+	* proof of associativity
+		\ links-to internal raujdiixodtdwhxf
+	* proof of (extremum with complement behaves like neutral)
+		* join (meet c (complement c)) = id
+			* proof is trivial
+		* meet (join c (complement c)) = id
+			* dually
+* secondary -> primary
+	* proof
+		* this proof is elaborated only for meet, but dually for join
+		* mic x := meet x (complement x)
+		* we only need to prove
+			* foreach p q . mic p = mic q
+		* let s be an element of S
+			* S is not empty, by the secondary representation
+		* n x := (join (mic x) = id)
+		* forall x . n x, by the "secondary representation"
+		* by (n q): mic p = join (mic q) (mic p)
+		* by (n p): mic q = join (mic p) (mic q)
+		* by commutativity of join: (mic p = mic q)

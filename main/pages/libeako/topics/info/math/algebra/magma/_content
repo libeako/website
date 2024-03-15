@@ -10,6 +10,8 @@
 	* idempotent: x <> x = x
 	* absorb
 		\ links-to internal oeltcgippeesnvsd
+	* a value x is "idempotent" under a function f iff (f x x = x)
+	* a function is idempotent iff all values are idempotent under it
 * semigroup is the associative magma
 	\ links-to internal eovnsnrjngyuihhx
 * neutral element

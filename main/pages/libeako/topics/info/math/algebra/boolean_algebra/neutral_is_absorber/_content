@@ -1,0 +1,25 @@
+\ id vxeyztjnkoixqacs
+* some required other topics
+	* absorber
+		\ links-to internal juchknabrgkcpwyb
+* statement
+	* representation "primary" of boolean algebra => (top is abrorber of join) and (bottom is absorber of meet)
+* proof
+	* proof of top being absorber value of join
+		* join x top
+		* =
+			* by top being a neutral value of meet
+		* meet top (join x top)
+		* =
+			* by complementation
+		* meet (join x (complement x)) (join x top)
+		* =
+			* by distributivity of meet over join
+		* join x (meet (complement x) top)
+		* =
+			* by top being a neutral value of meet
+		* join x (complement x) =
+		* =
+			* by complementation
+		* top
+	* proof of bottom being absorber value of join: dually

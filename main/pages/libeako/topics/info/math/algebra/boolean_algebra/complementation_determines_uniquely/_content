@@ -1,0 +1,27 @@
+\ id zrobznmnhavkbwhp
+* foreach x. uniquely exists c
+	* join x c = top
+	* meet x c = bottom
+* proof
+	* assume complementation is true for c1, c2
+	* c1 = meet c1 c2
+		* proof
+			* c1
+			* =
+				* by top being neutral value of meet
+			* meet c1 top
+			* =
+				* by premiss
+			* meet c1 (join x c2)
+			* =
+				* by distributivity of join over meet
+			* join (meet c1 x) (meet c1 c2)
+			* =
+				* by premiss
+			* join bottom (meet c1 c2)
+			* =
+				* by bottom being neutral value in join
+			* meet c1 c2
+		* c2 = meet c1 c2
+			* dually
+		* => (c1 = c2)

@@ -1,0 +1,74 @@
+\ id dtxwuoulngkceyma
+* De Morgan's law is the distributivity of complement of the binary methods of a boolean algebra
+* statement
+	* forall x y
+		* complement (meet x y) = join (complement x) (complement y)
+		* complement (join x y) = meet (complement x) (complement y)
+* proof
+	* only one part of the conclustion will be proved because the other one is dual
+	* by
+		* complementation determines the complement uniquely
+			\ links-to internal zrobznmnhavkbwhp
+	* we only need to prove that
+		* join x y
+		* complements
+		* meet (complement x) (complement y)
+	* thus we need to prove:
+	* and
+		* join (join x y) (meet (complement x) (complement y)) = top
+			* proof
+				* join (join x y) (meet (complement x) (complement y))
+				* =
+					* by associativity of join
+				* join x (join y (meet (complement x) (complement y)))
+				* =
+					* by distributivity of join over meet
+				* join x (meet (join y (complement x)) (join y (complement y)))
+				* =
+					* by complementation
+				* join x (meet (join y (complement x)) top)
+				* =
+					* by top being neutral value in meet
+				* join x (join y (complement x))
+				* =
+					* by commutativity of join
+				* join x (join (complement x) y)
+				* =
+					* by distributivity of join
+				* join (join x (complement x)) y
+				* =
+					* by complementation
+				* join top y
+				* =
+					* by top being absorber value of join
+				* top
+		* meet (join x y) (meet (complement x) (complement y)) = bottom
+			* proof
+				* meet (join x y) (meet (complement x) (complement y))
+				* =
+					* by meet being commutative
+				* meet (meet (complement x) (complement y)) (join x y)
+				* =
+					* by meet being associative
+				* meet (complement x) (meet (complement y) (join x y))
+				* =
+					* by distributivity of meet over join
+				* meet (complement x) (join (meet (complement y) x) (meet (complement y) y))
+				* =
+					* by complementation
+				* meet (complement x) (join (meet (complement y) x) bottom)
+				* =
+					* by bottom being neutral value of join
+				* meet (complement x) (meet (complement y) x)
+				* =
+					* by meet being commutative
+				* meet (complement x) (meet x (complement y))
+				* =
+					* by meet being associative
+				* meet (meet (complement x) x) (complement y)
+				* =
+					* by complementation
+				* meet bottom (complement y)
+				* =
+					* by bottom being absorber value of meet
+				* bottom

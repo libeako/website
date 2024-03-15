@@ -1,3 +1,47 @@
 \ id agnyffsamrpgydql
-* to read the proofs
-	\ links-to external http://mines.humanoriented.com/410/books/boolean_algebra.pdf
+* some required other topics
+	* absorption of function by other function
+		\ links-to internal oeltcgippeesnvsd
+	* absorber value
+		\ links-to internal juchknabrgkcpwyb
+* note that join and meet are dual of each other
+* representation
+	* S : Set
+	* join, meet : S -> S -> S
+	* join, meat are commutative and distributive over the other
+	* complement : S -> S
+	* either of:
+		* these:
+			* "primary"
+				* join has neutral value "bottom", meet has neutral value "top"
+				* property "complementation"
+					* foreach x in S.
+						* join x (complement x) = top
+						* meet x (complement x) = bottom
+			* "secondary"
+				* S is not empty
+				* join, lean are associative
+				* join, lean absorb the other
+				* extremum with complement behaves like neutral
+					* forall c:
+						* join (meet c (complement c)) = id
+						* meet (join c (complement c)) = id
+		* proof of equivalence
+			\ links-to internal xmdueabjmqdlafrc
+* complementation determines the complement uniquely
+	\ links-to internal zrobznmnhavkbwhp
+* complement >>> complement = id
+	* proof is trivial, using (complementation determines the complement uniquely)
+* the neutral element is absorber
+	\ links-to internal vxeyztjnkoixqacs
+* neutral values of the binary methods are complement of each other
+	\ links-to internal ypmsmwtkbwvehlkh
+* cancellability of join and meet
+	\ links-to internal kjyghzsausenawxt
+* the binary methods are idempotent
+	\ links-to internal mokalrcgtrmwucjs
+* De Morgan law
+	\ links-to internal dtxwuoulngkceyma
+* other sources
+	* to read the proofs
+		\ links-to external http://mines.humanoriented.com/410/books/boolean_algebra.pdf

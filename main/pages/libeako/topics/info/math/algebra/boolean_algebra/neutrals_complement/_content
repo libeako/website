@@ -1,0 +1,12 @@
+\ id ypmsmwtkbwvehlkh
+* statement
+	* "primary" representation of boolean algebra => the neutral values (of the binary methods) complement each other
+* proof of (complement bottom = top)
+	* complement bottom
+	* =
+		* by bottom being neutral value of join
+	* join (complement bottom) bottom
+	* =
+		* by complementation
+	* top
+* proof of (complement top = bottom): dually

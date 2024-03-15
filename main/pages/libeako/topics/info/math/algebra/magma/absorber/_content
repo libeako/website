@@ -1,8 +1,8 @@
 \ id juchknabrgkcpwyb
 * a "left-absorber" value of a binary function f is 'al' iff
-	* forall x. f al x = x
+	* forall x. f al x = al
 * a "right-absorber" value of a binary function f is 'ar' iff
-	* forall x. f x ar = x
+	* forall x. f x ar = ar
 * an "absorber" value is one that is both left- and right-absorber
 * the words "absorber" and "absorbing" and "zero" are all used for this concept
 * absorber values are unique

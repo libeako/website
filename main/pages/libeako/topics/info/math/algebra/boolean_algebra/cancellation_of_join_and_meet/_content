@@ -1,0 +1,28 @@
+\ id kjyghzsausenawxt
+* statement
+	* the join method can be cancelled:
+	* if for each x y c d
+		* and
+			* d = complement c
+			* join x c = join y c
+			* join x d = join y d
+	* then x = y
+* proof
+	* x = meet (join x c) (join x d)
+		* proof
+			* x
+			* =
+				* by bottom being neutral value of join
+			* join x bottom
+			* =
+				* by complementation
+			* join x (meet c d)
+			* =
+				* by distributivity of meet join over meet
+			* meet (join x c) (join x d)
+	* y = meet (join y c) (join y d)
+		* proof: dually
+	* hence
+		* by the assumption of the theorem
+	* x = y
+* dually for meet

@@ -1,0 +1,21 @@
+\ id iilgxjkyigsgiljm
+* statement
+	* primary representation of boolean algebra => absorption of meet and join
+* proof
+	* proof of (meet c >>> join c = id)
+		* join c (meet c x)
+		* =
+			* by top being identity of meet
+		* join (meet c top) (meet c x)
+		* =
+			* by distributivity of join over meet
+		* meet c (join top x)
+		* =
+			* by 
+				* top being absorber value of join
+					\ links-to internal vxeyztjnkoixqacs
+		* meet c top
+		* =
+			* by top bing identity of meet
+		* c
+	* proof of (join c >>> meet c = id): dually
