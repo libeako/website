@@ -1,4 +1,6 @@
 \ id znuvgowivqvqbdhr
+* naming of brackets
+	\ links-to internal kzeauuuxozwfvhje
 * comment syntaxes that i may use
 	\ links-to internal tajtjkqzetruzejb
 * a message is a tree of expressions
@@ -7,8 +9,16 @@
 	* most usual syntax is: name = value
 	* sometimes a double-dot precedes the equality letter, ":="
 	* sometimes the tripple line equality letter is used, "≡"
+* lower case camel naming is difficult to read
+	\ links-to internal uurppsvofbpqdjwm
 * let-expression
 	* an expression letting the coder declare a new name with scope limited to the expression
 	* example
 		* let square x = x x in (square a) + (square b)
 		* "let" and "in" are keywords
+* white space formatting
+	\ links-to internal rtzwlwftjrttlmew
+* infix and sigil function symbols - i consider them bad
+	\ links-to internal fjumpwympgxjnokk
+* "simco" - a simple configuration language
+	\ links-to internal zjawuykqlasfhrcp

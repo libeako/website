@@ -9,5 +9,13 @@
 	\ links-to internal mhwolwyjddvhovlc
 * hardware
 	\ links-to internal lfqqfmkcdtjpvsll
-* a blog of me about math and programming
-	\ links-to external https://effipro.blogspot.hu/
+* some works of i
+	* a book about software coding
+		\ links-to external https://drive.google.com/drive/folders/1kiFr_OGXP6olNQjmShaPeCXiKhnA08Rp
+	* haskell-fana
+		\ links-to external https://github.com/libeako/haskell-fana
+		* a library containing many general purpose stuff in haskell programming
+	* simco - a simple configuration language
+		\ links-to internal zjawuykqlasfhrcp
+	* a blog of me about math and programming
+		\ links-to external https://effipro.blogspot.hu/
