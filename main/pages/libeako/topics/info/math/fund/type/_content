@@ -10,11 +10,12 @@
 * is having to declare types not too much burdon on the worker? sometimes it is; but usually the info specified by the types would have to be specified in comments or other natural language anyway; having those info in types is much better, because:
 	* types are checked automatically; comments and other natural texts are not checked, hence they are not guaranteed to be present and be in synchron with the code
 	* types being part of the formal language makes them more concise and easy to read than natural text
-* the outer-most framework of a typing process is the deduction system; it is the set of rules that specify how to deduce statements, potentially out of earlierly deduced statements
-* "type theory" means the theoretic science of typing
-* "a type theory" means a concrete type system
+* the outer-most framework of a typing process is the deduction system; it is the set of rules that specify how to deduce statements, potentially out of earlierly deduced statements; the statements thus deduced are said to be "judgements"
+* what "type theory" is?
+	* "type theory" means the theoretic science of typing
+	* "a type theory" means a concrete type system
 * proposition as type
-	\ links-to internal zdxruzhjrevtjynt
+	\ links-to internal kdtdlfyrudrcnrrl
 * recursion in types
 	\ links-to internal phpdubounappbqkj
 * to be reviewed
