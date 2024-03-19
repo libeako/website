@@ -5,7 +5,7 @@
 	* is
 	* ordered magma
 		\ links-to internal iihqgewkfaxwuyio
-* proof:
+* proof
 	* need: forall x y c:
 		* and
 			* se x y => se (x <> s) (y <> s)
@@ -14,9 +14,9 @@
 	* i will use the
 		* isomorphism of the 2 representations of semilattices
 			\ links-to internal yfrehcdkxqrbrkoy
-	* thus we need:
+	* thus we need
 		* x <> y = y => (x <> s) <> (y <> s) = (y <> s)
-	* proving chain of equations:
+	* proving chain of equations
 		* (x <> s) <> (y <> s)
 		* = -- <> is associative
 		* (x <> y) <> (s <> s)

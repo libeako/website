@@ -1,5 +1,5 @@
 \ id lgroojsngaebvgmo
-* definitions based on
+* representations based on
 	* order
 		* "lattice" is an order with all binary extremums existing
 		* with other wording: it is both a join and meet semilattice, both corresponding to the same order
