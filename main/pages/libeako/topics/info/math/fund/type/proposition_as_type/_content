@@ -1,0 +1,108 @@
+\ id kdtdlfyrudrcnrrl
+* logic emerges from type theory; logical concepts can be represented by the most basic type theoretical concepts; logical propsitions can be represented by types, logical proofs can be represented by constructed objects; the importance of this simple and natural idea is fundamental and huge
+	* it is not overstatement that this is a most fundamental development science in the 20th century
+* this idea can be used both in mathematics and in programming and gives a simple, natural and powerful theoretical foundation for both of them
+	* the similarities between math and programming is not a coincidence, the outer-most layer of programming is math, as both of them are just about construction of mathematial objects, programs are mathematical objects, even if their use case of the program is not specially mathematical
+* it is one of the greatest piece of knowledge i have ever learned in programming
+* the name of this idea is "propositions as types" or sometimes "Curry Howard correspondence"
+* this idea connects the logical and the constructive worlds, by expressing logics with type-theory; what are these 2 worlds? the constructive world lets us construct mathematical objects, like lambda calculus; the logical world is the propositions and their proofs; of course the constructive world can and always could express anything generally, including logical concepts, but before 'propositions as types' the logical part existed above the constructive world, treated separately, had a separate dedicated language and separate rules [of validity]; with 'props as types' the logical world exists inside the constructive world [same level], does not need a separate language (other than the language of construction) and can be about the objects of the constructive world
+* this idea is not tricky, it is not only a human invention; instead it has a deep and simple and natural theoretical foundation; the core of the foundation is that both of the 2 worlds have a common structure-
+	* categorical
+		\ links-to internal edsabrzmtmhnwgml
+	* both in the constructive world and in the logical world the practicioners are composing some kind of things, and that is a very important way of practising
+		* in the constructive world the practitioners are composing functions
+			* this can be more intuitive if you look at it from a software engineer point of view; software engineers compose programs from smaller programs
+				* as imperative program are lists of instructions, so are functional programs lists of functions to be composed as normal function composition
+		* in the logical world the practitioners are composing proofs of theorems; the theorems are generally in implication form [they have premiss and consequence]
+* acquired correspondence: proofs of implications - functions
+* in the categorical view: these are the arrows of the repsective categories; the logical world is a category of proofs of implications, the constructive world is a category of functions
+* the functions are between types and the implications proofs are between propositions; with the categorical view: the in the logical world the objects propositions, in the constructive world the objects are types
+* acquired correspondence: propositions - types
+* how to represent propositions with types? let us start with the most basic question: which types represent true and false propositions?
+	* we can answer that question in the same way that we did so far: using category theory; try to give category theoretical definition to the meaning of truth and false, as proposition values; think about it for a little before reading on;
+	* ready? here it comes
+		* the true propositions are the ones the are implied by any other proposition
+			* intuitively: true is already true, it does not require any more precondition
+		* the false propositions are the ones that imply every other proposition
+			* intuitively: if false is true then everything else is true too
+		* how does this translate to the construction world?
+			* and
+				* the true propositions are represented by types that have function into them from all types
+				* the false propositions are represented by types that have functions from them to all types
+			* which these types are?
+				* type from which function exists into every type
+					* and
+						* those target types include empty types; only empty types can be sources of functions going into empty types
+						* from empty types function do exist into every type
+					* => these are exactly the empty types
+				* type into which function exists from every type
+					* and
+						* those source types include non-empty types; only non-empty types can be targets of functions coming from non-empty types
+						* into non-empty types functions exist from every type
+					* => these are exactly the non-empty types
+* acquired correspondence
+	* false propositions - empty types
+	* true propositions - non-empty types
+* true and false propositions are a partitioning of propositions and the correspondence we found for them in the construction world - the empty and non-empty types - are also a partitioning of types; this is necessary, but it is still appriciatable that we achieved it without explicitely trying to achieve it, as this consistency gives to us a reassuring feedback that we are on good track
+* habitation
+	* we can improve the intuition in these new things in programming
+	* i will use a property of types named "inhabited", it means the type has at least one element
+	* if you find multiplicity mismatch in the correspondence here then do not worry about it, it does not cause problem
+	* type that has function from every type
+		* including from inhabited types; such function must map the existing elements of the source type to some elements of such type; that is possible if such type is inhabited
+		* if a type is inhabited then function to it from every other type exists
+		* putting the 2 statements above together results in that these types are exactly the inhabited types
+	* type that has function to every type
+		* including into empty types; such function must be empty [in the set theoretical sense]; an empty function's domain is empty
+		* if a type is un-inhabited then function from it to every other type exists [the empty function]
+		* putting the 2 statements above together results in that these types are exactly the un-inhabited types
+	* with these more intuitive expressions the table so far is
+		* programming --- category theory --- logic
+		* type --- object --- statement
+		* function between types --- arrow between objects --- proof of implication between statements
+		* inhabited type --- object that has arrow from every object --- true
+		* empty type --- object that has arrow into every object --- false
+	* from here let Empty be a fixed empty type
+* i stop using category theory from here
+	* programming --- logic
+	* type --- statement
+	* function between types --- proof of implication between statements
+	* inhabited type --- constant true
+	* empty type --- constant false
+* so far coders thought that they can use their programming language mainly for  implementing programs only; but with the programming-logic correspondence we gain the ability to use the same programming language for logic tasks too
+* in the following i will use
+	* function (rep : Statement -> Type) that outputs the type representing the input statement; answering the questions which statements can be represented [the domain of this function] and how [the implementation of this function] is postponed
+	* function (derep : Type -> Set Statement)
+		* is the inverse of rep [as a relation]
+		* it returns a collection of statements
+* proving
+	* completing the definition (x : T = ...) proves that a value of T exists, but then [by the programming-logic correspondence] (derep T) is true; so one can prove statement S by showing up a value of (rep S); so values of (rep S) act like witnesses of S
+	* expressions ["programs"] that produce a witness are proofs
+	* static type checking verifies the proof; proving do not require runtime work from the program that the proof is in
+	* what about (x : Empty = x) ?
+		* the problem
+			* this x witnesses that the Empty type has a value, thus it proves falsity and in turn falsity implies every statement; thus we can prove everything; however it feels like a logic does not have any value if it can prove everything; it looks like i contradicted my derivation, the whole programming-logic correspondence is buggy; fortunately : that is false, the programming-logic correspondence is not buggy; so (x : Empty = x) must be wrong; it smells anyway, because we know for sure that Empty does not have any value; but it passes static type-checking !
+		* the solution
+			* remember that the programming-logic correspondence is a mathematical phenomena, so it needs to be true only for real mathematical objects; but (x : Empty = x) does not define a real mathematical object, because its evaluation recurses forever; the lesson learned : the programming-logic correspondence to be sound requires totality
+		* this is the big reason why the importance of totality checking in the future will grow [as the practice of proving grows]; preferably the programming language and the compiler will do much of the totality checking
+* representing logical constructs
+	\ links-to internal huktyxsxcfntvnbj
+* modern type systems [for example the calculus of constructions] are powerful enough to express higher order logical statements and their proofs, and also are simple and intuitive; hence we can expect that future programming languages will build on them; the idris programming language is already an example of this; in these simple but powerful languages we can do all of the following activities
+	* creata a data type model of the domain of the program
+	* state mathematical theorems about the domain of the program
+	* proove those theorems
+	* specify the task of the program
+	* implement the program
+	* verify that the program complies to the specification
+* it is worth to stress again : all these activities can be performed in the same, simple programming language; one does not need to learn a new language for the logic tasks, but can use the same programming language as he|she is accustomed to from program implementation; also : all the tools of coding invented to construct programs can be used to construct statements and proofs
+* additional source
+	* philip wadler is a researcher in computer science and did much of his work around the programming-logic correspondence; he produced good introductory material; i highly recommend to you to watch and read them
+		* talk from 2016
+			\ links-to external https://www.youtube.com/watch?v=aeRVdYN6fE8
+		* article
+			* Propositions as Types
+				\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/propositions-as-types/propositions-as-types.pdf
+			* this text is a masterpiece
+			* i read it twice
+				* once when i was very noobish, i hardly knew anything about this or related subjects; the text was still understandable somewhat
+				* but when i already knew some lambda calculus, type theory and logic then it struck me how well phil wadler could explain the topic; the text is structured very well, it is compact, precise, deep, understandable, interesting
