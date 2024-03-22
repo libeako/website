@@ -3,10 +3,10 @@
 	* c is a "complement" of x iff
 		* join c x = top
 		* meet c x = bottom
-* the word "complement" comes from the world "complete", the complement of x is what is needed to make x complete; do not confuse with "compliment", which is saying something nice
+* the word "complement" comes from the word "complete", the complement of x is what is needed to make x complete; do not confuse with "compliment", which is saying something nice about something
 * a lattice is "complemented" when all elements have complement
 	* a lattice is uniquely "complemented" when all elements have unique complement
-		* complement of complement is identity
+		* complement >>> complement = identity
 			* proof
 				* c being complement of x means:
 					* join c x = top

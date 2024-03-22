@@ -1,23 +1,21 @@
 \ id pyrodbqatbfjuayc
-* definitions
-	* let S be a set
-	* let se be an order on S
-	* the differing parts of the definitions based on
+* representation of "bounded lattice"
+	* S : Set
+	* se, an order on S
+	* either
 		* extremum
-			* let S contain all its finite extremums
-			* then (S, se) is a "bounded lattice"
+			* S contains all its finite extremums
 		* extremal
-			* let S contain both of its extremals [minimal, maximal elements]
-		* bound
-			* let S be bounded
-	* then (S, se) is a "bounded lattice"
-* equivalence of the definitions
-	* extremal <=> bound
-		* proof is trivial
-	* extremal => extremum
-		* proof: inner bounds are extremums
+			* (S, se) is a lattice
+			* S contains both of its extremals [minimal, maximal elements]
+				* this can also be expressed by 'S is bounded'
+* equivalence of the represenations
 	* extremum => extremal
 		* proof:
 			* "finite" contains the possibility of 0 too, the empty sets also have their extremums in S; the extremums of the empty set in S are the dual extremals of S
+	* extremal => extremum
+		* proof: 
+			* being a lattice implies the existence of all the binary extremums, which implies the existence of the non-empty input extremums
+			* the existence of both of the extremals implies the existence of the empty-input extremums
 * complement
 	\ links-to internal vpgkjgohovfvzlrz
