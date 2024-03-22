@@ -7,7 +7,7 @@
 			* join c2 x = top
 			* meet c1 x = bottom
 			* meet c2 x = bottom
-		* c1 = join (meet c2 c1) (meet x c1)
+		* c1 = join (meet c2 c1) bottom
 			* proof
 				* c1
 				* =
@@ -22,14 +22,9 @@
 				* =
 					* by distributivity
 				* join (meet c2 c1) (meet x c1)
-		* c2 = join (meet c1 c2) (meet x c2)
+				* =
+					* by premiss
+				* join (meet c2 c1) bottom
+		* c2 = join (meet c1 c2) bottom
 			* dually
-		* statment
-			* =
-				* join (meet c2 c1) (meet x c1)
-				* join (meet c1 c2) (meet x c2)
-			* proof
-				* meet x c1 = bottom = meet x c2
-				* meet c2 c1 = meet c1 c2
-					* because commutativity of meet
-		* hence c1 = c2
+		* => c1 = c2

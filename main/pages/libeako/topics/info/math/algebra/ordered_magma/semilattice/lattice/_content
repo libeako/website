@@ -1,12 +1,12 @@
 \ id lgroojsngaebvgmo
-* representations based on
+* representations, based on
 	* order
 		* "lattice" is an order with all binary extremums existing
 		* with other wording: it is both a join and meet semilattice, both corresponding to the same order
 	* operation
 		* "lattice" is a join and a meet semilattice operation so that they absorb each other
-			* join x (meet x y) = x
-			* meet x (join x y) = x
+			* meet x >>> join x = const x
+			* join x >>> meet x = const x
 * equivalence of the 2 possible representations
 	* order => operation
 		* this direction is just an application of
@@ -20,7 +20,7 @@
 				* forall x y. (se x y <=> join x y = y)
 			* se corresponds to the meet operation iff
 				* forall x y. (meet x y = x <=> se x y)
-			* thus we need:
+			* thus we need
 				* forall x y. (meet x y = x <=> join x y = y)
 			* which is a trivial consequence of the absorptions assumption
 * bounded

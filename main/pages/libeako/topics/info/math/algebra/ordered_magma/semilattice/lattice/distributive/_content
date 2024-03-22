@@ -1,18 +1,16 @@
 \ id gxneuftlwojzmfiq
 * representation
-	* let (S, se) be a lattice
-	* the distributivity equalities: for all x y z:
+	* (S, se), a lattice
+	* definition of the "distributivity equalities": for all x y z
 		* "m1j" - meet (join x y) z = join (meet x z) (meet y z)
 		* "m2j" - meet x (join y z) = join (meet x y) (meet x z)
 		* "j1m" - join (meet x y) z = meet (join x z) (join y z)
 		* "j2m" - join x (meet y z) = meet (join x y) (join x z)
-	* let either of these of the distributivity equations be true:
-		* either
-		* all
-* equivalence of the representations
-	* all => either : trivial
+	* either or all of the distributivity equalities:
+* proof of equivalence of the representations
+	* all => either: trivial
 	* either => all
-		* the equivalence between p1q and p2q is trivial, just use commutativity of the extremums and some shuffle of the x y z
+		* the equivalence between p1q and p2q is trivial, just use commutativity of the extremums and some shuffle of the names x y z
 		* m1j => j1m
 			* meet (join x z) (join y z)
 			* =
@@ -37,5 +35,5 @@
 		* j1m => m1j
 			* dual of 'm1j => j1m'
 * duality
-	* statement: a lattice is dual iff its dual is distributive
+	* statement: a lattice is distributive iff its dual is distributive
 	* proof: trivial, because the distributivity equations are dual of each other
