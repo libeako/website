@@ -1,0 +1,17 @@
+\ id wqprnfeeaunrpwmm
+* complement is unique
+	\ links-to internal fksqybycbgevtfqr
+* "boolean lattice" is as definition a complemented distributive lattice
+* "boolean algebra" is an alternative representation of boolean lattice
+	\ links-to internal agnyffsamrpgydql
+	* boolean lattice => boolean algebra
+		* proof is trivial
+			* mostly only the applications of the definitions
+			* with addition of
+				* complement is unique
+					\ links-to internal fksqybycbgevtfqr
+	* boolean algebra => boolean lattice
+		* during the proof we use
+			* the binary methods are idempotent
+				\ links-to internal mokalrcgtrmwucjs
+		* otherwise the proof is just the usage of both of the representations of boolean algebra

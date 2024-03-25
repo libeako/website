@@ -4,7 +4,7 @@
 		* join c x = top
 		* meet c x = bottom
 * the word "complement" comes from the word "complete", the complement of x is what is needed to make x complete; do not confuse with "compliment", which is saying something nice about something
-* a lattice is "complemented" when all elements have complement
+* a bounded lattice is "complemented" when all elements have complement
 	* a lattice is uniquely "complemented" when all elements have unique complement
 		* complement >>> complement = identity
 			* proof
@@ -16,3 +16,5 @@
 					* meet x c = bottom
 				* thus x is a complement of c, which is a complement of x, thus x is a complement of a complement of itself
 				* uniqueness is by supposition
+* distributive
+	\ links-to internal wqprnfeeaunrpwmm

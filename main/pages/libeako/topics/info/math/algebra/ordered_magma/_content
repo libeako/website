@@ -1,11 +1,12 @@
 \ id iihqgewkfaxwuyio
-* an "ordered" magma is a magma with an ordering such that the ordering and the operation are compatible
-* compatibility of relation r and operation o means that
-	* forall x y s . 
+* an "ordered" magma is a magma with an ordering such that the operation is "monotone" in it
+* "monotonity" of operation o with relation r means by definition that
+	* forall x y s
 		* r x y =>
 			* and
 				* r (o x s) (o y s)
 				* r (o s x) (o s y)
+* an other name of this property is that the operation and the order are "compatible"
 * more sophisticated algebras [subtypes of magma] also have ordered versions, like ordered monoid
 	* semilattice
 		\ links-to internal xweqdmlprrkvorbq

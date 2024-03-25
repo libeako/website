@@ -1,0 +1,31 @@
+\ id fksqybycbgevtfqr
+* statement
+	* complement in bounded distributive lattice is unique
+* proof
+	* suppose c1 and c2 are complements of x
+	* then
+		* join c1 x = top
+		* join c2 x = top
+		* meet c1 x = bottom
+		* meet c2 x = bottom
+	* c1 = join (meet c2 c1) bottom
+		* proof
+			* c1
+			* =
+				* by
+					* absorption
+						\ links-to internal oeltcgippeesnvsd
+			* meet (join c1 x) c1 
+			* =
+				* because
+					* join c1 x = top = join c2 x
+			* meet (join c2 x) c1
+			* =
+				* by distributivity
+			* join (meet c2 c1) (meet x c1)
+			* =
+				* by premiss
+			* join (meet c2 c1) bottom
+	* c2 = join (meet c1 c2) bottom
+		* dually
+	* => c1 = c2
