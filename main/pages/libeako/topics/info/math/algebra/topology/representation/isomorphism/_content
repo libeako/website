@@ -1,0 +1,51 @@
+\ id othlpoxtsmpcfmfe
+* this page proves that the following 2 representations of topology are isomorphic
+	* subset
+		\ links-to internal fncairveofiuykdb
+	* kuratowski
+		\ links-to internal kenmblteriiqrbwu
+* induces subset representation
+	* the interior making function
+		* make-in (S : Set) (ss : Set (S -> Bool)) (s : S) = union { b in ss : b <= s }
+			* proof that output of make-in fullfills the axioms of the Kuratowski representation is trivial
+		* make-subsets (S : Set) (in : endo function on (S -> Bool)) = { s in S : in s = s }
+			* proof that output of make-in fullfills the axioms of the subsets representation
+				* closedness under union
+					* let I be a set of indexes
+					* ss := make-subsets in
+						* the set of open sets of the topology
+					* suppose forall i in I : (in (x i)) is in ss
+						* using the definition of ss: in (x i) = x i
+					* then (in (union { x i : i in I })) is in ss too
+						* using the definition of ss: 
+							* in (union { x i : i in I }) = union { x i : i in I }
+						* <=
+							* the proof of this direction is trivial because of the Kuratowski axiom
+								* forall s : in s <= s
+						* >=
+							* to prove this direction it is enough to prove
+								* forall j in I
+									* in (union { x i : i in I }) >= x j
+							* the proof of which is simply
+								* in (union { x i : i in I }) >= in (x j) = x j
+				* closedness under intersection
+					* the proof is simple application of the corresponding Kuratowski axiom
+		* proof that make-subsets and make-in are inverses of each other
+			* make-in >>> make-subset = id
+				* make-subset (make-in ss) = ss
+				* make-subset (\ s -> union { o in ss : o <= s }) = ss
+				* { t : (\ s -> union { o in ss : o <= s }) t = t } = ss
+				* { t : (union { o in ss : o <= t }) = t } = ss
+					\ links-to internal oktpeykraqoigtre
+			* make-subset >>> make-in = id
+				* (make-subset >>> make-in) in = id in
+				* make-in (make-subset in) = in
+				* make-in (make-subset in) s = in s
+				* make-in { b : b = in b } s = in s
+				* union { b : (b = in b) and b <= s } = in s
+				* union { b : (b = in b) and b <= s } <= in s
+					* proof is trivial, because
+						* forall b : b <= s
+				* union { b : (b = in b) and b <= s } >= in s
+					* (in s) is among the arguments of the union
+						* because of (idempotence of in) and (in s <= s), which both are Kuratowski axioms

@@ -1,0 +1,19 @@
+\ id fncairveofiuykdb
+* the "open" "subset" representation
+	* S : Set
+		* the base set
+	* P : Set (S -> Bool)
+		* subsets of S
+		* this is why i name this representation by "subset", it just specifies a set of subsets of the base set
+		* these subsets are said to be the "open" sets in the topology
+		* the "closed" sets are the complements of the open sets
+	* axioms
+		* union of open sets is open
+		* intersection of finite number of open sets is open
+* the "closed" "subset" representation
+	* is the dual of the open one representation, it specifies the closed subsets instead of the open ones
+	* the axioms are also inverted
+		* union of finite number of closed sets is closed
+		* intersection of closed sets is closed
+	* the open and closed subset representation are isomorphic
+		* proof is trivial

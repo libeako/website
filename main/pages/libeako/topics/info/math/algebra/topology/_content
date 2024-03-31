@@ -1,0 +1,8 @@
+\ id nchabqnythptflqo
+* representation
+	\ links-to internal mmnneqyrulkprhdg
+* the "interior" of a set is the union of its open subsets
+* theorem (is open = equals to its interior)
+	\ id oktpeykraqoigtre
+	* with other words: the open sets are exactly those which equal to their interior
+	* proof is trivial

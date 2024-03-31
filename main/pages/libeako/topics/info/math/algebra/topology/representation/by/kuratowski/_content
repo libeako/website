@@ -1,0 +1,10 @@
+\ id kenmblteriiqrbwu
+* the kuratowski "interior" function representation
+	* S : Set
+	* in : (S -> Bool) -> (S -> Bool)
+		* the "interior" function maps to a subset its interior
+		* this is why i name this representation by "interior function"
+	* axioms
+		* forall X : se X S => se (in X) (in S)
+		* in >>> in = in
+		* forall xi [i in 0..n] : in (intersect {xi}) = intersect {(in xi)}
