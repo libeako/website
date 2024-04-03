@@ -1,8 +1,8 @@
 \ id amjqhetkjpnxhnql
 * representation of conjunction and disjunction
-	* rep (S1 and S2) := S1 S2
+	* rep (S1 and S2) := S1 * S2
 	* rep (S1 or S2) := S1 + S2
 	* where
-		* (*) is the product type constructor
-		* (+) is the sum type constructor
+		* * is the product type constructor
+		* + is the sum type constructor
 * justification of the representation is left for the reader

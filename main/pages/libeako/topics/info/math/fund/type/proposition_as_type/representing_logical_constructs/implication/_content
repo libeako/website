@@ -12,8 +12,10 @@
 			* a proof by contradiction
 				* assume such f does not exist, then
 					* both
-						* rep S1 is inhabited [= (S1 is true)]
-						* S2 is empty [= (S2 is false)]
+						* rep S1 is inhabited
+							* hence S1 is true
+						* rep S2 is empty
+							* hence S2 is false
 					* hence (S1 => S2) is false
 		* part <=
 			* reorganizing the statement
