@@ -1,0 +1,14 @@
+\ id aftxnrifybbyixbn
+* the famous ones are: hilbert style, natural deduction, sequent calculus
+* for long i did not understand the difference between them, so here is what helped me:
+* the difference between hilbert style and natural deduction
+	* i start from programming
+		* the lambda calculus and the ski calculus are equivalent : each formula in one can be expressed with the other in an isomorphic way; the difference between them is rather formal: lambda calculus has something extra: lambda definitions
+	* the same is the difference between these 2 deduction systems, because
+		* lambda calculus corresponds to natural deduction
+			* for explanation see for example Wadler: Propositions as Types
+		* ski calculus corresponds to hilbert style deduction
+	* the "lambda variable" corresponds to the "assumption" in the natural deduction; the ski calculus does not have lambdas and the corresponding deduction system, the hilbert style one does not have assumptions; this is the difference: the assumptions
+* the difference between sequence calculus and natural deduction
+	* in natural deduction the consequent contains exactly 1 statement
+	* in sequent calculus the consequent may contain any number of statement

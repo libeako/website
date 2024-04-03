@@ -1,7 +1,16 @@
 \ id jcyvqyaxmangyrkj
 * logic is the science of deriving mathematical knowledge; hence it is the most foundational field of mathematics
-* deduction systems
-	\ links-to internal elyvqmuiqexjaxuu
+* the derivation happens in the framework which is 
+	* deduction system
+		\ links-to internal aacixgsdjlspuizr
+	* where the objects are statements
+* "a "proposition" is a statement that can potentially be proved or disproved
+	* it got this name from the fact that it is proposed for scrutiny of its truth value
+	* in a logical deduction system
+		* a proposition is a statement at the object level
+		* a judgement is a statement at the meta level [the level of the deduction system]
+* technical categorization of deduction systems
+	\ links-to internal aftxnrifybbyixbn
 * gödel's incompleteness theorems
 	\ links-to internal ifstddnsohuudftp
 * equality

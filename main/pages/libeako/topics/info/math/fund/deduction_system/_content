@@ -1,0 +1,7 @@
+\ id aacixgsdjlspuizr
+* a deduction system is a set of rules which produce objects, possible from previously deduced objects
+* when the objects are interpreted as statements
+	* they are not propositions
+		* because they can not be disproved, only deduced; 
+	* instead: these statements are said to be "judgements"
+	* deduction of statements can be considered as proving if the deduction rules are consistent with some logic
