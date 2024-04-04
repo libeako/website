@@ -1,0 +1,27 @@
+\ id oqevkjmczblcaxrb
+* here i describe a representation of equality proposition as a sum type
+* EqS (t : Type) (a : t) (b : t) :=
+	* refl : EqS t a a
+* "EqS" is short of "equality as sum type"
+* 'refl' is short for "reflexivity"; reflecting the fact that it constructs reflexive pairs among the equality as binary relation
+* converting to and from definitional equality
+	* from
+		* at conversion site this type is required:
+			* EqS a b
+		* the constructor function produces a
+			* EqS a a
+		* hence the constructor can be invoked iff a and b unifies, that is iff a = b
+			* this is why 
+				* the existence of an instance of 
+				* EqS a b
+				* is a proof of (a == b)
+	* to - this is possible by pattern matching
+		* p : EqS t a b ... (case p of refl  {-- here the compiler learns --} -> ... ) ...
+		* the compiler learns that a and b are equal
+		* because
+			* p will have 2 types
+				* EqS t a b
+					* from the declaration of p
+				* EqS t a a
+					* from the pattern matching, where the only constructor of the sum type is supposed to have been used to create p
+			* which [of course] must be the same

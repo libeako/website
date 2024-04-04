@@ -1,0 +1,29 @@
+\ id cteoxhjanjufrioe
+* this section talks about representing propositional equality
+	* as type
+		\ links-to internal kdtdlfyrudrcnrrl
+	* "propositional" means that the equality statement is a proposition, it is at the object level [the coder write it], can be disproved
+* the type representing equality of 2 values depends on those values, hence we need
+	* dependent types
+		\ links-to internal svwipwixjxnwcfer
+* we have different options
+	* as function
+		* EqF := (t : Type) -> (x : t) -> (y : t) -> (p : t -> Type) -> (p x -> p y)
+			\ links-to internal dxhxiloqezsthksz
+		* "EqF" is short of "equality as function"
+	* as simple sum type
+		\ links-to internal oqevkjmczblcaxrb
+* equivalence between the function and sum type representations of equality
+	* fs : EqF t a b -> EqS t a b
+	* fs f = f (EqS t a) (refl : EqS t a a)
+	* sf : EqS t a b -> EqF t a b
+	* sf = \case { refl -> identity }
+	* in fs:
+		* we want to construct an EqS t a b; the only way to do that is to invoke its constructor
+			* from this the type system infers that
+				* p = EqS t a
+		* we need to create EqS t a b
+			* which is (p a)
+		* the output type of the constructor is EqS t a a
+			* which is (p a)
+		* we have refl, whic is a (p a) but we want a (p b); but this is exactly the kind of translation that the function representation of equality can perform

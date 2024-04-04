@@ -46,6 +46,9 @@
 * true and false propositions are a partitioning of propositions and the correspondence we found for them in the construction world - the empty and non-empty types - are also a partitioning of types; this is necessary, but it is still appriciatable that we achieved it without explicitely trying to achieve it, as this consistency gives to us a reassuring feedback that we are on good track
 * rephrasing the previous result: the proposition represented by a type is true if and only if the type is habited
 * here is the right place to think about prooving; how can we prove a proposition? the question translates to types as follows: how can we prove that a type is habited? the answer is trivial: we show an instance of the type; by 'show' i mean we declare it to have that type and give a definition to it that is well-typed; the static type-checking is the verification of the proof
+* for example of representing simple statements
+	* equality
+		\ links-to internal cteoxhjanjufrioe
 * it is remarkable that now we can use a single simple functional programming language to model the world [domain of the client], propose statements about the world, prove those statements, specify the task of a program, implement the program, verify that the program fulfills the specification
 * in the following i will use
 	* function (rep : Proposition -> Type) that outputs the type representing the input proposition; answering the questions which propositions can be represented [the domain of this function] and how [the implementation of this function] is postponed

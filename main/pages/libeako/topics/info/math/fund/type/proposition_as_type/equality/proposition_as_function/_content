@@ -1,5 +1,5 @@
 \ id dxhxiloqezsthksz
-* here i describe a propositional representation of equality
+* here i describe a representation of equality proposition as a function type
 * equality is a 2-ary relation; but we surely would not consider all 2-ary relations as equalities; all task that remains here for us is to find good condition when a 2-ary relation is considered an equality
 * derivation of the idea
 	* my first intuitive idea for the definition of equality would be
