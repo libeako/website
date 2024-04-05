@@ -1,8 +1,8 @@
 \ id amjqhetkjpnxhnql
 * representation of conjunction and disjunction
 	* rep (S1 and S2) := S1 * S2
-	* rep (S1 or S2) := S1 + S2
-	* where
-		* * is the product type constructor
-		* + is the sum type constructor
-* justification of the representation is left for the reader
+	* rep (S1 or  S2) := S1 + S2
+* this is very simple and intuitive
+	* it is the product type that has a value exactly when both of its components types have values
+	* similarly for disjunction
+* these 2 type constructions [product, sum] are duals of each other and the logical construct types that they induce are duals of each other too

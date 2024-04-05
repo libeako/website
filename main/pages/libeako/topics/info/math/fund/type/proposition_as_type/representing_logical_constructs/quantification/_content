@@ -5,12 +5,14 @@
 		* forall x ∊ Human : x is mortal
 	* general form
 		* forall x ∊ S1 : S2 x
-	* the difficulty in representing quantified statements comes from that the statement depends on an object x, hence the type representing the statement must depend on value; fortunately dependent types can do exactly that, thus
+	* the difficulty in representing quantified statements comes from that the statement depends on the qualified object [here: 'x'], hence the type representing the statement must depend on value
+	* fortunately:
+		* dependent types are about doing that
+			\ links-to internal vzdcxxawjkqmcakz
+	* thus:
 	* (rep (forall x ∊ S1 : S2 x)) = (x : rep S1 -> (rep S2) x)
-		* here (rep S2) "depends" on x, it is a dependent type, more precisely : a dependent product type
-		* more thorough justification is left for the reader
+		* here (rep S2) "depends" on x, it is a dependent type and the whole type is a dependent product type
 * exists
-	* is dual to forall
 	* (rep (exists x ∊ S1 : S2 x)) = ((x : rep S1) (rep S2) x)
-		* here (rep S2) "depends" on x, it is a dependent type, more precisely : a dependent sum type
-		* more thorough justification is left for the reader
+		* here (rep S2) "depends" on x, it is a dependent type and the whole type is a dependent sum type
+	* forall and exists are dual of each other and their representations [dependent product type, dependent sum type] are dual of each other too
