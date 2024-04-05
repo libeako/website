@@ -1,0 +1,11 @@
+\ id ekondytrrodzxtui
+* Philip Wadler is a researcher in computer science and did much of his work around the (prop as type) correspondence; he produced good introductory material; i highly recommend to you to watch and read them
+	* talk from 2016
+		\ links-to external https://www.youtube.com/watch?v=aeRVdYN6fE8
+	* article
+		* Propositions as Types
+			\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/propositions-as-types/propositions-as-types.pdf
+		* this text is a masterpiece
+		* i read it twice
+			* once when i was very noobish, i hardly knew anything about this or related subjects; the text was still understandable somewhat
+			* but when i already knew some lambda calculus, type theory and logic then it struck me how well Philip Wadler could explain the topic; the text is structured very well, it is compact, precise, deep, understandable, interesting

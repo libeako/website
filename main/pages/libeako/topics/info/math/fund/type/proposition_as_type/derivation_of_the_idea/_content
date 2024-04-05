@@ -1,0 +1,39 @@
+\ id xzqooeqxufbhkxvs
+* the core of the foundation is that both of the 2 worlds have a common structure-
+	* categorical
+		\ links-to internal edsabrzmtmhnwgml
+	* both in the constructive world and in the logical world the practicioners are composing some kind of things, and that is a very important aspect of practising
+		* in the constructive world the practitioners are composing functions
+			* this can be more intuitive if you look at it from a software engineer point of view; software engineers compose programs from smaller programs
+				* as imperative program are lists of instructions, so are functional programs lists of functions to be composed as normal function composition
+		* in the logical world the practitioners are composing proofs of theorems; the theorems are generally in implication form [they have premiss and consequence]
+* acquired correspondence: proofs of implications - functions
+* in the categorical view: these are the arrows of the repsective categories; the logical world is a category of proofs of implications, the constructive world is a category of functions
+* the functions are between types and the implications proofs are between propositions; with the categorical view: the in the logical world the objects propositions, in the constructive world the objects are types
+* learned correspondence: propositions - types
+* how to represent propositions with types? because the value-set of propositions have 2 elements [false, true]: the question is: which types represent true and which types represent false propositions?
+* we can answer that question in the same way that we did so far: using category theory; try to give category theoretical definition to the meaning of truth and false, as proposition values; think about it for a little before reading on;
+* ready? here it comes
+* the true propositions are the ones the are implied by any other proposition
+	* intuitively: true is already true, it does not require any more precondition
+* the false propositions are the ones that imply every other proposition
+	* intuitively: if false is true then everything else is true too
+* how does this translate to the construction world?
+	* the true propositions are represented by types that have function into them from all types
+	* the false propositions are represented by types that have functions from them to all types
+* which these types are?
+	* type from which function exists into every type
+		* and
+			* those target types include empty types; only empty types can be sources of functions going into empty types
+			* from empty types function do exist into every type
+		* => these are exactly the empty types
+	* type into which function exists from every type
+		* and
+			* those source types include non-empty types; only non-empty types can be targets of functions coming from non-empty types
+			* into non-empty types functions exist from every type
+		* => these are exactly the non-empty types
+* learned correspondence
+	* false propositions - empty types
+	* true propositions - non-empty types
+* true and false propositions are a partitioning of propositions and the correspondence we found for them in the construction world - the empty and non-empty types - are also a partitioning of types; this is necessary, but it is still appriciatable that we achieved it without explicitely trying to achieve it, as this consistency gives to us a reassuring feedback that we are on good track
+* rephrasing the previous result: the proposition represented by a type is true if and only if the type is inhabited
