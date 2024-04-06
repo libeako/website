@@ -1,0 +1,32 @@
+\ id qkpkvuxwtzdigyud
+* the input of a function can be either of
+	* parameter
+	* index
+* definition
+	* "parameter"
+		* an input i is parameter when the output may not depend on the particular value of the input, other than simple referring to the input
+		* a more down-to-earth explanation
+			* assume that the function maps
+				* x to ...x...
+					* by "...x..." i mean an evaluated expression that refer to x
+			*  then the function must map
+				* y to ...y..., where ...y... is the same as ...x... with the only exception that the "x"s are replaced with "y"s
+		* examples
+			* \ x -> 5
+			* \ x -> x
+			* \ x -> (x, x)
+	* "index"
+		* an input is "index" when it is not parameter
+* some terminology
+	* iff the input of a function is parameter then we can say that the function is "parametric"
+	* a multi-input function can be parametric "in" some of its inputs and not in some others
+* in sum types
+	* data type definitions can take inputs, thus they are functions mathematically
+	* sum is a special type construction method, in that it is the one and only that may have multiple constructors with different output types; this makes an input of a sum type definition to constrain the defined data type, different index value being mapped to differently structured outputs; with other wording: the output data type will different for different index values, as the set of its constructors will be different
+	* the classical example is the Vector data type
+	* example
+		* data Vector (e : Set) : Natural -> Set where
+			* Nil : Vector e Zero
+			* Cons : (implicit n : Natural) -> e -> Vector n e -> Vector (Suc n) e
+		* the 'Vector' data type is a sum type; it has 2 inputs : ('E' - the element type of the vector), (a Natural - the size of the vector) 
+		* i differentiate the 2 kinds of input syntactically; they take place at different sides to the ":" in the header
