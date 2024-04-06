@@ -11,13 +11,8 @@
 	* types are checked automatically; comments and other natural texts are not checked, hence they are not guaranteed to be present and be in synchron with the code
 	* types being part of the formal language makes them more concise and easy to read than natural text
 * the outer-most framework of a typing process is the deduction system; it is the set of rules that specify how to deduce statements, potentially out of earlierly deduced statements; the statements thus deduced are said to be "judgements"
-* what "type theory" is?
-	* "type theory" means the theoretic science of typing
-	* "a type theory" means a concrete type system
 * proposition as type
 	\ links-to internal kdtdlfyrudrcnrrl
-* logical propositional equality
-	\ links-to internal dxhxiloqezsthksz
 * recursion in types
 	\ links-to internal phpdubounappbqkj
 * to be reviewed
@@ -29,7 +24,5 @@
 		\ links-to internal bvqepmrycoxtmaxe
 	* dependencies of types
 		\ links-to internal enjlgzgdnjxyjcck
-	* programming and logic
-		\ links-to internal kdtdlfyrudrcnrrl
 * book reviews
 	\ links-to internal ghvbimhdxhsqiufu
