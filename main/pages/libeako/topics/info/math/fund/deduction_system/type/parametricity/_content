@@ -1,7 +1,5 @@
 \ id qkpkvuxwtzdigyud
-* the input of a function can be either of
-	* parameter
-	* index
+* the input of a function can be a "parameter", which means [loosely speaking] that the structure of the output may not depend on the actual value of the input; knowing such fact [perhaps because it is declared in the type of the function] makes as able to sometimes deduce useful properties of the function, without knowing its definition, only knowing its type
 * definition
 	* "parameter"
 		* an input i is parameter when the output may not depend on the particular value of the input, other than simple referring to the input

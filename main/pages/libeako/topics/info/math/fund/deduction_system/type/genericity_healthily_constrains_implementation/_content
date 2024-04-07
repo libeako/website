@@ -1,0 +1,25 @@
+\ id ipmcnbqgopeplpis
+* a duality exists between the interface and implementation of a thing; the more the type of the thing provides [more genericity] [more use-cases] the more difficult to implement the thing is [less ways exist to implement], and vice versa
+* a benefit of less ways to implement a function is less opportunity to make mistake in the implementation, that is: less bugs; mine and many other programmers' practical experience is that genericity usually leads the implementation towards the sensible one; this implies that genericity is a tool in combating bugs; on the other side: type parameters are very cheap; hence i recommend coders to not avoid any type parameters that feel natural
+* a very simple introductory example
+	* the task is to write a function that swaps the components of a homogeneous pair
+	* solution
+		* swap : t t -> t t
+		* swap (v1, v2) = (v2, v1)
+	* some bugs are possible that the type-checker can not detect
+		* swap (v1, v2) = (v1, v2)  -- forget to swap
+		* swap (v1, v2) = (v1, v1)  -- copy-paste then rewrite only a portion of the parts
+	* my recommendation in this example would be to allow heterogeneous pairs
+		* swap : x y -> y x
+		* swap (v1, v2) = (v2, v1)
+		* only the type is different, it is more general; the implementation is the same; with this type the type-checker does not let the coder make the bugs described earlier
+* a similar simple example
+	* the task is to write a function that composes 2 given functions
+	* non-general solution
+		* compose : (t -> t) -> (t -> t) -> (t -> t)
+		* compose (a, b) = λ x -> b (a x)
+		* what is the order of the input functions in the output composition? it is hidden in the implementation, perhaps a comment for the function would contain this information, but that can easily be omitted or incorrect
+	* general solution
+		* compose : (x -> y) -> (y -> z) -> (x -> z)
+		* compose (a, b) = λ x -> b (a x)
+		* only the type of the function is different; this more general type constrains the order of the functions in the composition, making the comment unnecessary and eliminating the possible error of mismatch between the comment and the implementation
