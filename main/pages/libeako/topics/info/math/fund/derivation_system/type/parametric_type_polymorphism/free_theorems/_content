@@ -1,8 +1,6 @@
 \ id ejqpvlbcoexibqku
-* assuming type parametricity one can deduce useful mathematical properties about functions just from the type of the function
-	* link to 'parametricity'
-		\ links-to internal iuvbupavbjmhfrxj
-* for example:
+* assuming type parametricity one can deduce useful mathematical properties about values just from their types
+* example:
 	* what can you tell about the functions with these following types? [assuming the functions are parametric in all their type inputs]
 		* x -> x
 		* x -> y
@@ -12,31 +10,29 @@
 		* ((x, y) -> r) -> (x -> y -> r)
 	* here are the solutions, in order:
 		* is the identity function
-		* foes not exist
+		* does not exist
 		* is the function application function
-		* is the contant function
+		* is the constant function
 		* flips the inputs of the function
 		* is the curry function
-* what useful properties can we prove about parametrically polymorph functions ?
-	* equivalences between expressions for program transformations to improve runtime efficiency [as in the example (List x -> Maybe x)]
-	* properties that are building blocks in other mathematical properties, especially category theoretical ones, which can greatly improve code reuse
-* we are talking about properties of a function deduced from only the type of the function, independent of the implementation of the function; many implementations may exist of a function type, but we do not have to pay the cost of the proof of these properties for all the implementations one-by-one; but instead only for once : based on the type only - this is the source of the name "free theorem"; in my opinion the name "parametricity consequence" may have been a better name, but "free theorem" is more popular
-* philip wadler discovered a method to automatically derive a free theorem from the function type
+	* these properties are intutitive, but also can be proved formally
+* we are talking about properties of a value deduced from only the type of the value, independent of the implementation of the value; many implementations may exist of a type, but we do not have to pay the cost of the proof of these properties for all the implementations one-by-one; but instead only for once : based on the type only - this is the source of the name "free theorem"; in my opinion the name "parametricity consequence" may have been a better name, but "free theorem" is more popular
+* philip wadler discovered a method to automatically derive a free theorem from a type-parametric type
 	* still the main source of information about it is
 		* his scientific article
 			\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/free/free.dvi
+			* this article is difficult to understand for amateurs
+			* i managed to grasp some intuition for a less general version of it
+				* in my model i use function instead of relation
+					* this is less powerful, but for me was good enough for many cases
+				* my intuition is based on data type equivalence
+				* the program should be the same if we replace some data with equivalent but differently typed data
+				* this equivalence in my model is not total, the replacement can lose some information
 * advanced
-	* Amal Ahmed gave a very explaining lecture about the topic, including the formalization of the theorem and its proof; i highly recommend this lecture to anyone trying to understand the story of free theorems; though it is probably too formal and not enough useful for an average software developer
-		* on youtube
-			* the first half of her lecture is about unary logical relations
-			* she starts the topic of free theorem at
-				* here
-					\ links-to external https://youtu.be/F8E2_8b1hS4?t=53m44s
-			* but it is worth to watch the lecture from
-				* its beginning
-					\ links-to external https://www.youtube.com/watch?v=bio5BYECzF8&index=27&list=PLiHLLF-foEeykV1sxQFZdQZvchYVkW5Tw
-				* because she is very good explainer
-		* in writing
-			* someone created a written version of the lecture
+	* Amal Ahmed gave a detailed lecture about the topic, including the formalization of the theorem and its proof
+		* link
+			\ links-to external https://www.cs.uoregon.edu/research/summerschool/summer15/curriculum.html
+		* you can download only 2 videoes simultaneously
+		* someone created a written version of the lecture
 			* link
 				\ links-to external https://www.cs.uoregon.edu/research/summerschool/summer16/notes/AhmedLR.pdf
