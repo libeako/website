@@ -1,6 +1,20 @@
 \ id iuvbupavbjmhfrxj
-* introduction
-	\ links-to internal kmzluqnwmjudyuht
+* when x is parametric in a type input then we say that x is "parametrically type polymorph in" that type input, or more shortly: "parametrically polymorph in"
+	* link to 'parametricity'
+		\ links-to internal qkpkvuxwtzdigyud
+* a good example of parametric type-polymorphism is regular "generics" in java and c#
+* usefulness of parametric type polymorphism
+	* genericity of types healthily constrains implementation
+		\ links-to internal ipmcnbqgopeplpis
+	* "free theorem"s
+		\ links-to internal ejqpvlbcoexibqku
+* some programming languages provide escape hatches out of parametricity, which are not tracked by the type system
+	* example
+		* in .net: reflection
+		* in c++: template specialization
+			* a famous example is std::vector<bool>, which now is considered a design mistake
+	* this language design decision is wrong
+		* to track type parametricity with the type system is useful and cheap
 * free theorems
 	\ links-to internal ejqpvlbcoexibqku
 * of functor

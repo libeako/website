@@ -1,7 +1,7 @@
 \ id ejqpvlbcoexibqku
 * assuming type parametricity one can deduce useful mathematical properties about functions just from the type of the function
 	* link to 'parametricity'
-		\ links-to internal kmzluqnwmjudyuht
+		\ links-to internal iuvbupavbjmhfrxj
 * for example:
 	* what can you tell about the functions with these following types? [assuming the functions are parametric in all their type inputs]
 		* x -> x
