@@ -1,0 +1,6 @@
+\ id wqbrusvmsxteurms
+* link to parametricity
+	\ links-to internal iuvbupavbjmhfrxj
+* the parametricity relation corresponding to functors is 
+	* (related (fx1 : F X1) (fx2 : F X2) by (f : X1 -> X2)) = (map f fx1 = fx2)
+	* i can not prove it, but it is intuitive: when we thinking about functors as containers: 2 containers are equivalent iff their elements are equivalent

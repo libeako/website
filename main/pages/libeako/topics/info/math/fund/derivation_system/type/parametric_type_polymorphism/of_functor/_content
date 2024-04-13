@@ -1,6 +1,0 @@
-\ id wqbrusvmsxteurms
-* this page needs revision
-* link to 'functor'
-	\ links-to internal yboclzmzvuwqxcdt
-* the logical relation corresponding to functors is easily spotted intuitively by thinking about functors as containers: 2 containers are equivalent iff their elements are equivalent; the element-wise connection is provided by the map function of the functor:
-* (equiv (fx1 : F X1) (fx2 : F X2) by (f : X1 -> X2)) = (map f fx1 = fx2)

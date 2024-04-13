@@ -1,70 +1,59 @@
 \ id nisopwyprssrsvgg
-* link to natural transformation
+* on Wikipedia
 	\ links-to external https://en.wikipedia.org/wiki/Natural_transformation
-* natural transformation and natural isomorphism are very important notions in mathematics and software coding; they are defined by many sources on the web; but intuition behind them is not well explained; this part tries to fill this gap
-* functor
-	* naturality builds on the notion of
-		* functor
-			\ links-to internal yboclzmzvuwqxcdt
-	* a little remembering about functors
-		* mathemticians probably like to think about them as mathematical constructions; i [as a programmer] like to think about them as data structures, more concretely "collection" types
-		* the choice of the type of data the collection holds corresponds to the choice of the object in the target category of the functor; thus a collection type can contain any type of data ["content"]; but the "structure" of it is fixed by the type of the collection, that is by the functor
+* natural transformation and natural isomorphism are important notions in mathematics and software coding; they are defined by many sources on the web; but intuition behind them is not well explained; this part tries to fill this gap
 * the intuition
 	* a simple example of collection type [functor] is homogeneous pair [X X]; let us move to heterogeneous pairs [X Y]; this has 2 element-type parameters, thus it can not be a functor technically; but if we fix one of them then only one varying parameter is left and such pair data construction is a functor; thus X C is a functor in X for all constant choice of C
 	* and obviously so is C X; X C and C X are not the same functors; they feel like they are the same, but they are not; they are only isomorphic to each other
-	* can you think of an invertible function that witnesses this isomorphism? of course, it is trivial; here is the fun part : i know which one you think of : the one that reverses the component order in the pair structure; how do i know? it is a "natural" choice and in this particular example it is the only choice; you was constrained by not knowing what X and C concretely are; you only knew the structures of the collections, thus you could come up only with a solution that relates the structures, independently of what the contents are; this independence is the "naturality" property of the isomorphism between X*C and C*X
-	* the word "independence" is not rigorous enough for a mathematical definition; hence i here try to make it more mathematically rigorous; a first rephrase : 2 aspects are independent if both of them can freely vary without interfering with the other; the word "interfere" is still far from rigor; for further development of rigor : i use a concrete example : threads in computer programs; the scheduling of threading is non-deterministic, thus from the programmer's point of view : 2 threads do not interfere with each other iff they produce correct results|effects for all possible scheduling; to decide this is a too difficult task for the programmer, hence an equivalent but much easier to decide phrasing is used : iff for any 2 atomic instructions {i1, i2}, taken from different threads : their execution order relative to each other does not matter, that is iff i1;i2 has the same behavior as i2;i1; this is the intuition, the key in this introduction of mine to natural transformations; we can translate this picture to mathematics by thinking about the [atomic] instructions as endo-functions on the state-space of the program; then the condition is : iff the [function-]composition of state-space-mutating-functions [of different threads] is commutative; and this is exactly what the definition of natural isomorphism says with its commutative diagram : 2 changes of the 2 different aspects [(transition between objects inside category | moving along an arrow between the objects) and (transition between the functors | moving along the natural transformation)], may happen in any order, the result must be the same; to further support the intuition : go back to the (functor as data structure) view; in it naturality says : it does not matter if (we change the content first and then the structure) or (we change the structure first and then the content); more concretely in my previous heterogeneous pair example : it does not matter if (we change the content of the "X" component of the pair first and then the order of the 2 components) or (we change the order of the 2 components first and then the content of the "X" component)
+	* can you think of an invertible function that witnesses this isomorphism? of course, it is trivial; here is the fun part: i know which one you think of : the one that reverses the component order in the pair structure; how do i know? it is a "natural" choice and in this particular example it is the only choice; you was constrained by not knowing what X and C concretely are; you only knew the structures of the collections, thus you could come up only with a solution that relates the structures, independently of what the contents are; this independence is the "naturality" property of the isomorphism between X*C and C*X
+	* the word "independence" is not rigorous enough for a mathematical definition; hence i here try to make it more mathematically rigorous; a first rephrase: 2 aspects are independent if both of them can freely vary without interfering with the other; the word "interfere" is still far from rigor; for further development of rigor: i use a concrete example: threads in computer programs; the scheduling of threading is non-deterministic, thus from the programmer's point of view: 2 threads do not interfere with each other iff they produce correct results|effects for all possible scheduling; to decide this is a too difficult task for the programmer, hence an equivalent but much easier to decide phrasing is used: iff for any 2 atomic instructions {i1, i2}, taken from different threads: their execution order relative to each other does not matter, that is iff i1;i2 has the same behavior as i2;i1; this is the intuition, the key in this introduction of mine to natural transformations; we can translate this picture to mathematics by thinking about the [atomic] instructions as endo-functions on the state-space of the program; then the condition is: iff the [function-]composition of state-space-mutating-functions [of different threads] is commutative; and this is exactly what the definition of natural isomorphism says with its commutative diagram: 2 changes of the 2 different aspects [(transition between objects inside category | moving along an arrow between the objects) and (transition between the functors | moving along the natural transformation)], may happen in any order, the result must be the same; to further support the intuition: go back to the (functor as data structure) view; in it naturality says: it does not matter if (we change the content first and then the structure) or (we change the structure first and then the content); more concretely in my previous heterogeneous pair example: it does not matter if (we change the content of the "X" component of the pair first and then the order of the 2 components) or (we change the order of the 2 components first and then the content of the "X" component)
 * natural { transformation | isomorphism }
-	* naturality in "natural transformation" and "natural isomorphism" is the same property; the difference between the 2 notion is in the components of them : a transformation is any function, an isomorphism must be invertible
-* in software coding
-	* in programming naturality happens naturally, by which i mean : without any direct effort by the programmer; by the phenomena which in programming is named " parametricity", which means that the value of a type-polymorphic value [for example the behavior of a type-polymorphic function] is uniform for all concrete instantiations of its type-variable; parametricity implies certain mathematical properties of all the values of a type; the derivation of such properties is done based on the type only, hence they are named free theorems; in particular naturality conditions in category theory are free theorems in programming
-		* link to parametricity
-			\ links-to internal iuvbupavbjmhfrxj
-		* free theorem
-			\ links-to internal ejqpvlbcoexibqku
+	* naturality in "natural transformation" and "natural isomorphism" is the same property; the difference between the 2 notion is in the components of them: a transformation is any function, an isomorphism must be invertible
+* parametricity implies naturality of transformations between functors
+	* link to free theorem by parametricity
+		\ links-to internal ejqpvlbcoexibqku
+	* functions with the type
+		* (Functor f, Functor g) => forall x . f x -> g x
+	* are parametric in x, hence are natural transformations
 	* i will illustrate this on the example of natural transformation itself
-		* the type of a natural transformation in a haskell-like programming language is as follows 
-			* NT (F : Functor) (G : Functor) = forall X . F X -> G X
-			* "NT" is short of "natural transformation"
-			* you may be confused now, because this type seems not contain anything resebling the commutativity condition which is essential in the category theoretical definition of natural transformation; but it is in it; in "forall X"; the type is parametric in X; assuming parametricity : the commutativity condition is a free theorem of this type
-		* derivation of the commutativity condition of natural transformation as free theorem
+		* vague proof
 			* by wadler's method we get
-			* forall X1, X2 : Type
-			* forall f : X1 -> X2
-			* forall nt1 : F X1 -> G X1
-			* forall nt2 : F X2 -> G X2
-			* forall fx1 : F X1
-			* forall fx2 : F X2 
-			* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
-			* this contains relation statements about functor values; i need to translate these to relation statements on their base types; this can be done by using the logical relation corresponding to functors
-				* link to 'parametric equaivalence of functors'
+				* forall X1, X2 : Type
+					* forall f : X1 -> X2
+					* forall nt1 : F X1 -> G X1
+					* forall nt2 : F X2 -> G X2
+					* forall fx1 : F X1
+					* forall fx2 : F X2 
+						* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
+			* this contains relation statements about functor values; i need to translate these to relation statements on their content types; this can be done by using
+				* the parametricity relation corresponding to functors
 					\ links-to internal wqbrusvmsxteurms
-			* forall X1, X2 : Type
-			* forall f : X1 -> X2
-			* forall nt1 : F X1 -> G X1
-			* forall nt2 : F X2 -> G X2
-			* forall fx1 : F X1
-			* forall fx2 : F X2
-			* (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
+				* forall X1, X2 : Type
+					* forall f : X1 -> X2
+					* forall nt1 : F X1 -> G X1
+					* forall nt2 : F X2 -> G X2
+					* forall fx1 : F X1
+					* forall fx2 : F X2
+						* (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
 			* the last line is an implication
-			* i choose fx2 := map f fx1
+			* i choose
+				* fx2 := map f fx1
 			* this makes the premise of the implication true; hence i can drop it
-			* forall X1, X2 : Type
-			* forall f : X1 -> X2
-			* forall nt1 : F X1 -> G X1
-			* forall nt2 : F X2 -> G X2
-			* forall fx1 : F X1
-			* map f (nt1 fx1) = nt2 (map f fx1)
-			* making it point-free:
-			* forall X1, X2 : Type
-			* forall f : X1 -> X2
-			* forall nt1 : F X1 -> G X1
-			* forall nt2 : F X2 -> G X2
-			* (map f <<< nt1) = (nt2 <<< map f)
-			* unifying with the choice nt1 = nt2 [= nt]:
-			* forall X1, X2 : Type
-			* forall f : X1 -> X2
-			* forall nt : F X1 -> G X1
-			* (map f <<< nt) = (nt <<< map f)
+				* forall X1, X2 : Type
+					* forall f : X1 -> X2
+					* forall nt1 : F X1 -> G X1
+					* forall nt2 : F X2 -> G X2
+					* forall fx1 : F X1
+						* map f (nt1 fx1) = nt2 (map f fx1)
+			* making it point-free
+				* forall X1, X2 : Type
+					* forall f : X1 -> X2
+					* forall nt1 : F X1 -> G X1
+					* forall nt2 : F X2 -> G X2
+						* (map f <<< nt1) = (nt2 <<< map f)
+			* unifying with the choice nt1 = nt2 [= nt]
+				* forall X1, X2 : Type
+					* forall f : X1 -> X2
+					* forall nt : F X1 -> G X1
+						* (map f <<< nt) = (nt <<< map f)
 			* this is the commutativity property i wanted to prove
-		* this theorem can be used for automatic runtime-efficiency improvement
