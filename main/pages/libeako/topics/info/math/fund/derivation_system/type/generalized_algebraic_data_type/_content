@@ -3,3 +3,15 @@
 	\ links-to internal pvsvkykppprsnbne
 * encoding gadt via type equality
 	\ links-to internal hfwfyymaxmsgpfho
+* parametricity in generalized sum types
+	* link to parametricity
+		\ links-to internal qkpkvuxwtzdigyud
+	* data type definitions can take inputs, thus they are functions mathematically
+	* sum is a special type construction method, in that it is the one and only that may have multiple constructors with different output types; this makes an input of a sum type definition to constrain the defined data type, different index value being mapped to differently structured outputs; with other wording: the output data type will different for different index values, as the set of its constructors will be different
+	* the classical example is the Vector data type
+	* example
+		* data Vector (e : Set) : Natural -> Set where
+			* Nil : Vector e Zero
+			* Cons : (implicit n : Natural) -> e -> Vector n e -> Vector (Suc n) e
+		* the 'Vector' data type is a sum type; it has 2 inputs : ('E' - the element type of the vector), (a Natural - the size of the vector) 
+		* i differentiate the 2 kinds of input syntactically; they take place at different sides to the ":" in the header
