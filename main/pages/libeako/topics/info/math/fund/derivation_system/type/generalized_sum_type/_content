@@ -1,14 +1,12 @@
 \ id bvqepmrycoxtmaxe
 * introduction
 	* it is an intuitive, simple, but powerful type system feature; it has very good benefit/cost value
-	* it is a generalization of sum types: it has inputs and the constructors of it may specify to return the exact arguments for those
+	* it is a generalization of sum types: it has inputs and its constructors may specify to return the exact arguments for those
 	* usefulness
 		* ...
 		* it is practically indispensable for embedded languages
 	* on the haskell wiki
 		\ links-to external https://en.wikibooks.org/wiki/Haskell/GADT
-* encoding gadt via type equality
-	\ links-to internal hfwfyymaxmsgpfho
 * parametricity in generalized sum types
 	* link to parametricity
 		\ links-to internal qkpkvuxwtzdigyud
@@ -21,3 +19,7 @@
 			* Cons : (implicit n : Natural) -> e -> Vector n e -> Vector (Suc n) e
 		* the 'Vector' data type is a sum type; it has 2 inputs : ('E' - the element type of the vector), (a Natural - the size of the vector) 
 		* i differentiate the 2 kinds of input syntactically; they take place at different sides to the ":" in the header
+* emulation with type-equality fields
+	\ id hfwfyymaxmsgpfho
+	\ links-to external https://www.cs.ox.ac.uk/files/3060/gadtless.pdf
+	* by Martin Sulzmann and Meng Wang
