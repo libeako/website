@@ -1,6 +1,12 @@
 \ id bvqepmrycoxtmaxe
 * introduction
-	\ links-to internal pvsvkykppprsnbne
+	* it is an intuitive, simple, but powerful type system feature; it has very good benefit/cost value
+	* it is a generalization of sum types: it has inputs and the constructors of it may specify to return the exact arguments for those
+	* usefulness
+		* ...
+		* it is practically indispensable for embedded languages
+	* on the haskell wiki
+		\ links-to external https://en.wikibooks.org/wiki/Haskell/GADT
 * encoding gadt via type equality
 	\ links-to internal hfwfyymaxmsgpfho
 * parametricity in generalized sum types
