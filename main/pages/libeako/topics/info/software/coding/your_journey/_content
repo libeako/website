@@ -1,51 +1,73 @@
 \ id wdfyijgzinmnmzpn
-* this part of this site is not well maintained; instead of this i recommend to you to read my newer book
-	* link to the book
+* some beginning part of this content is also available as
+	* my free book
 		\ links-to external https://drive.google.com/drive/folders/1kiFr_OGXP6olNQjmShaPeCXiKhnA08Rp?usp=sharing
+	* the book probably has better quality
 * this part of my site is for the average industrial programmer, who works all day, in an industrial language, like Java, C++, or any non-typed or imperative or object-oriented language; i want to show you much better methods and programming languages to code with
 * you can think of this content as a book, a walkthrough, an order of topics and references to guide and more importantly: motivate you through 
 * the same journey as i went
 	\ links-to internal ruwyqtccsonzjloi
-* why is this knowledge so good?
+* this walkthrough will cover the road from JavaScript to Idris
+* why are these knowledge so good?
 	* emotional advantages
 		* decreases frustration
-		* increases the fun
+		* increases fun
 	* practical advantages
+		* hugely decrease the bug-prone nature of coding ["correct by construction"]
 		* first implementation of a program is much faster 
-		* maintainability and refactorability are much easier
-		* reusability of code is much better
-		* hugely decreases the bug-prone nature of coding ["correct by construction"]
-	* it makes one about [3-10] more efficient in coding compared to the average industrial practice
-	* its destiny is to take over the coding world, because the huge advantages
-	* it fundamentally changes how programmers think about the code and even about its task
-* this walkthrough will cover the road from JavaScript to Idris
-* i try to make the whole course both compact and explaining
-* for each method i advocate : i explain why i advocate it, hopefully in a convincing way
-* short overview about the content
-	\ links-to internal idwgoifpeoznatfk
+		* understandability, maintainability, refactorability are much easier
+		* more modularity
+	* they make the coding work about [3-10] more efficient compared to the average industrial practice
+	* their destiny is to take over the coding world, because they are natural very useful
+	* they fundamentally changes how coders think about the code and even about its task
 * the steps
 	* the industry-academy gap
 		\ links-to internal ezrdpkjrokawnikj
+		* history of programming methodologies
+			* both industrial and academic and their relation
+		* why does the industry behind the academy by multiple decades?
 	* some basic prog lang notions
 		\ links-to internal jaxbiyrfnbhaormb
+		* both concepts and syntax
+		* i present this to prepare the audience to understand my later examples; but they are worth to know anyway because they are to overtake the programming world by popularity
 	* static typing
 		\ links-to internal crulbcjvhzgpkjis
+		* i claim that dynamic type checking does not have legitimacy in a normal programming tasks; programming languages should be statically type checked
 	* utilizing the type system
 		\ links-to internal ratihdffwublrlih
+		* it is not enough to have a good static type system, you should use it too
+			* some important examples:
+				* do not use null values; use a Maybe type instead
+				* do not use exceptions; use a Result type instead
 	* functional programming
 		\ links-to internal rqeeitsvmgrogdjp
+		* this is an easy and beautiful topic; also probably the most bang for the buck in this course; [though not equally well but still] can be used in any programming language without preparation
 	* structural polymorphism
 		\ links-to internal xkvczulejoaflnjf
+		* a feature in some programming languages [for example Haskell] that lets the programmer abstract over data types and traverse their shape
 	* have a break
-		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in : it helps to have some practical experience with functional programming
-	* parametricity
+		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in: it helps to have some practical experience with functional programming
+	* type parametricity
 		\ links-to internal iuvbupavbjmhfrxj
+		* a coding paradigm of generality [by parametric type polymorphism], a simple, very cheap technique to improve software-correctness and source-readability
 	* abstraction by mathematics
 		\ links-to internal flktedmyhawaehus
+		* "design patterns" done well
+		* the super-power of compositionality, taken from the well-established mathematical field abstract algebra, especially category theory; i explain only the very basic, but very useful concepts: monoid, functor, applicative, monad
+	* proposition as type
+		\ links-to internal kdtdlfyrudrcnrrl
+		* strong connection is between programming and logic - the "proposition as type correspondence"
+		* this is a beautiful topic; the most interesting thing i ever learned in programming; it shows how programming and logic are the same thing at a certain level, via a surprisingly simple connection; this connection makes us able to use a single simple programming language to not only implement software but also:
+			* model its domain
+			* state mathematical theorems about the domain
+			* prove those theorems and have the compiler verify the proofs
+			* specify the software and have the compiler verify the correctness of the implementation according to the specification
 	* increasing the strength of the type system
 		\ links-to internal qzfwvslnetipqgqu
+		* parameterizing our types with more stuff: type functions, custom algebraic data types, runtime values ["dependent typing"]
+		* the more our type system can express - the less repetition we need in the code and more properties of our programs we can ensure
 	* a little more category theory
-		* some trivial knowledge, very good (usefulness / difficulty) value :
+		* some trivial knowledge, very good (usefulness / difficulty) value:
 		* isomorphism of objects
 			\ links-to internal qxijfmdcfenjblwc
 		* duality
@@ -54,9 +76,7 @@
 			\ links-to internal fhdcexkhowvzxltx
 		* profunctor
 			\ links-to internal evecfkoaaczzekya
-	* programming and logic
-		\ links-to internal kdtdlfyrudrcnrrl
-	* arithmetic of data types
-		\ links-to internal criytwacwdgeqemu
 	* optics
 		\ links-to internal ndgkrnbojyputpec
+	* arithmetic of data types
+		\ links-to internal criytwacwdgeqemu
