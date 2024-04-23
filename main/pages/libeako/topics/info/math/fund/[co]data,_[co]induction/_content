@@ -2,8 +2,7 @@
 * least fixed point [knaster-tarski theorem]
 	* a good source
 		* "A Tutorial on Co-induction and Functional Programming"
-		* by andrew gordon
-		* link
 			\ links-to external https://www.microsoft.com/en-us/research/wp-content/uploads/1994/01/fp94.pdf
-		* section 1 : A Tutorial on Induction and Co-induction
+		* by andrew gordon
+		* section 1: A Tutorial on Induction and Co-induction
 		* the rest of the article seemed to be too notation-heavy for me to read
