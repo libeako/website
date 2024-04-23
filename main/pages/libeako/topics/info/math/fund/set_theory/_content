@@ -1,5 +1,5 @@
 \ id bdzbslajcgtwsrtp
-* in mathematics : reasoning about non-existent mathematical objects may lead to invalid judgements; hence it is necessary to know that a mathematical object exists before we use that object; the science field of existence is "ontology"
+* in mathematics: reasoning about non-existent mathematical objects may lead to invalid judgements; hence it is necessary to know that a mathematical object exists before we use that object; the science field of existence is "ontology"
 * ontology
 	* set theory is very good for ontology
 	* pure sets
@@ -21,13 +21,5 @@
 				* 2 := {{{}}}
 				* 3 := {{{{}}}}
 				* ...
-* abstraction
-	* foundational set theory is good in implementing interfaces but bad in defining interfaces
-	* example : in the representation of natural numbers by pure sets
-		* one natural number is an element of its successor
-		* this is a property not of the natural numbers but of this representation of it
-		* so this representation captures the natural numbers imprecisely
-	* because of this : set theory does not help mathematicians and software coders in defining abstractions
-	* in this role category theory and type theory are emerging
 * Cantor's theorem
 	\ links-to internal wdkpqypkxzfjxffs
