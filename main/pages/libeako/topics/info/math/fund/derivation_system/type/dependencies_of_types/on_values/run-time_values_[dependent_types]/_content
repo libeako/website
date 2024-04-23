@@ -1,0 +1,18 @@
+\ id svwipwixjxnwcfer
+* types are static entities, hence at first think it seems impossible for a type to depend on a value that is not known statically; but it is possible, because the type-checker can treat them symbolically
+* dependent types are basically sorted into 2 groups
+	* "dependent sum type" ["dependent pair type"]
+		* a value of it is a pair, the type of the second member being able to refer to the first member; the type of these pairs has the form x*y where y may refer to the actual value of the first member of the pair, of type x
+		* refinement types are dependent pair types, with implicit conversion behavior to the first component
+	* "dependent product type" ["dependent function type"]
+		* a value of it is a function, the output type of which may refer to the input value of the function
+* modern type systems are quantitative, allowing the coder to declare the number of occasions the input of a function is used in the definition; that number can be 0, meaning that the value should not be availably in runtime, to avoid unnecessary runtime efficiency decrease
+* dependent types can represent quantified propositions
+* availability
+	* haskell
+		* does not yet have dependent types directly; the type system is strong enough to express them, but only in a cumbersome way; direct support for dependent types is planned for the far future
+	* some languages exists with good dependent type support [notably lean], but they are not mature yet for industrial usage
+* other sources
+	* Datatypes of Datatypes - by Conor McBridge
+		\ links-to external http://www.cs.ox.ac.uk/projects/utgp/school/conor.pdf
+		* this is a big collection of usages of dependent types

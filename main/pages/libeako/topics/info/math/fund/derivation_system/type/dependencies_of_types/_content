@@ -1,10 +1,12 @@
 \ id enjlgzgdnjxyjcck
-* in current type systems a type may depend on things; on what kind of things?; the more kinds of dependencies a type system permits, the higher the expressive power of it is; in this section i will walk step-by-step towards higher expressive power
+* what kind of things may a type depend on? the more kinds of dependencies a type system provides - the more expressive power it has
+* currently (in 2024) industrial languages heavily lack in this regard, despite that providing the ability to depend on compile-time things is very cheap
+	* the cause of this is simply that these languages are designed by professional idiots
 * depending on
 	* concrete types
-		* "generics" in java and c# is well known; in it a type may depend on other type; that other type though must be a concrete type
+		* this is "generics" in java and c#
 	* type functions
 		\ links-to internal eyfagqcuwwajcnmt
 	* values
 		\ links-to internal vzdcxxawjkqmcakz
-* all these type system capabilities are simple, intuitive and hugely valuable; hence in the future all well-designed programming languages will provide them
+* all these type system capabilities are natural, simple and hugely valuable; hence in the future all well-designed programming languages will provide them
