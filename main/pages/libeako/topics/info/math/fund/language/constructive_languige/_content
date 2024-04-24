@@ -1,0 +1,42 @@
+\ id jaxbiyrfnbhaormb
+* in this section i describe some basic notion of constructive languages, including syntax, terminology; i use this throughout this site and they are common in functional programming languages; but note: this syntax is not necessarily the real precise syntax of any concrete language, but is only similar to a mix of them; by "them" i mean mostly the programming languages Haskell, Lean, Idris, Agda
+* type annotation
+	* (x is a value of type t) is usually written as "x : t"
+	* haskell, purescript use double ":"
+	* idris, agda use single ":"
+	* as type systems get more capable, the use of type annotation is getting more important, it deserves the simple syntax
+	* mathematical type theory uses single ":"
+* "name definition" is giving a name to a value
+	* most usual syntax is: 
+		* name = value
+		* but this is a wrong choice because "=" should be left for propositions
+	* sometimes a double-dot precedes the equality letter, ":="
+	* sometimes the tripple line equality letter is used, "≡"
+	* with type annotation
+		* (n is an element of type t with value v) is written as follows
+			* in mathematical text
+				* n : t := v
+		* some programming languages make it possible to separate the type annotation from the value assignment into separate lines
+			* n : t
+			* n = v
+* let-expression
+	* an expression letting the coder declare a new name with scope limited to the expression
+	* example
+		* let square x = x x in (square a) + (square b)
+		* "let" and "in" are keywords
+* product type
+	\ links-to internal zlfhoqikoudywfzu
+* function
+	\ links-to internal acsyovgrmdzvytoz
+* enum type
+	\ links-to internal keopxbnbneqhcmwr
+* sum type
+	\ links-to internal iarpgpjgytyzcamq
+* "algebraic data type"
+	* "algebraic data type" construction is just a common name for product and sum type construction
+* pattern matching
+	\ links-to internal ybfruhnhbcxrqyol
+* "generalized algebraic datatypes"
+	\ links-to internal oornolrtruyzbntt
+* type classes
+	\ links-to internal biuqwfqzzkpjuqob
