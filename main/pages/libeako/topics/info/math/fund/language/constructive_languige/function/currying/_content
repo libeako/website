@@ -1,8 +1,10 @@
 \ id rjvsfevdnztyxdlz
-* x1 -> (x2 -> y)
-* we may drop the brackets for elegance, because "->" is right associative
+* the most natural method to represent multi-input function is to pack the inputs by product type construction
+	* ((x1, x2) -> y)
+* an alternative is the "curried" form
+	* x1 -> (x2 -> y)
+* we may drop the brackets for elegance, -> is right associative for this ability
 	* x1 -> x2 -> y
-* sometimes this is said to be "the curried form" of ((x1, x2) -> y)
 * converting between these 2 usual representations of functions is a common task
 	* curry : ((a, b) -> c) -> (a -> b -> c)
 	* curry f a b = f (a, b)

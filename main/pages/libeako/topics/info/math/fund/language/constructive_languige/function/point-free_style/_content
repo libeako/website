@@ -1,6 +1,5 @@
 \ id oqmgrzzqokpkuawg
-* definition
-	* the code of a function is in point-free style iff it does not name [and hence does not refer to] its input
+* definition: the implementation code of a function is "point-free" iff it does not name and does not refer to its input
 * example
 	* instead of
 		* increment x = add 1 x
@@ -8,15 +7,13 @@
 		* increment = add 1
 * advantages
 	* the big ones
-		* avoids bugs possibly caused by incorrect references to the inputs
+		* avoids bugs possibly caused by incorrect references to inputs
 		* makes the structure of the code more appearant
-	* also
-		* often but not always : it results in more short, readable, elegant code
-* balancing
-	* often debate exists about whether to use point-free style
+	* also: often but not always: it is more short, readable, elegant
+* often debate exists about whether to use point-free style
 	* usually for those who understand it: the beauty of the pure structure is appealing
 	* usually for those who do not understand it: it is senseless, annoying succinctness
 	* with practise of functional programming quickly comes the ability to
 		* understand point-free code
 		* judge when to use it
-	* my feeling from my practice is that usually the version that results in syntactically smaller code happens to be the practically better
+	* my feeling from my practice is that usually the version that results in syntactically smaller code happens to be the practically better one
