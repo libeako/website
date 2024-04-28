@@ -1,26 +1,23 @@
 \ id iarpgpjgytyzcamq
-* sum types are generalization of enum types, as they can store additional values, of different types for each case; in the definition of the sum type: in each case: we just list the types of values that to be stored
+* sum types are generalization of enum types, as they can store additional values, of different types for each case; in the definition of the sum type: in each case: we just list the types of values to be stored
 * example:
 * datatype Maybe (e : Type) = none | just e
-* 'Maybe' is a container type that maybe contains a single element or nothing; it is often used as the return type of functions which can fail
-* the syntax allows us to list zero or multiple values to store in any case, but mathematically we can think that each case stores exactly 1 value, because 0 and multiple values are mathematically equivalent of their single tuple
-* the 'Either' type
-	* the most simple sum type that can be used to construct equivalent type with any sum type is
-	* datatype Either (l : Type) (r : Type) = left  l | right r
-	* hence it is known as the "canonical" sum type
+* 'Maybe' is a container type that maybe contains a single element or contains nothing; it is often used as the output type of functions which can fail
+* the syntax allows us to list zero or multiple values to store in one case, but mathematically we can think that each case stores exactly 1 value, because 0 and multiple values are mathematically equivalent of the single tuple of those values
+* datatype Either (l : Type) (r : Type) = left  l | right r
 	* it is a generalization of 'Maybe', as (Either ()) is equivalent to Maybe
 	* naming
-		* because of the equivalance to 'Maybe': it is also usable to represent result of computation, even more cleverly, as it can store information about [perhaps the reason of] failure too; in the case of Maybe it is obvious which case corresponds to success and which case corresponds to failure of computation, as no reason to successfully compute a nothing; but with 'Either' it is not obvious, as its cases are mathematically equivalent; this is an ergonomic problem; which to solve it is tempting to change the naming:
+		* because of the equivalance to 'Maybe': it is also usable to represent result of computation; even more cleverly, as it can store information about the reason of the failure too; in the case of Maybe it is obvious which case corresponds to success and which case corresponds to failure of computation, as no reason to successfully compute a nothing; but with 'Either' it is not obvious, as its cases are mathematically equivalent; to solve this problem it is tempting to change the naming:
 		* datatype Result (a : Type) (b : Type) = error a | success b
-		* but this is a design mistake, because though the most notable usage of 'Either' is to represent result of computation: its full usage is significantly broader
-		* the communities of Haskell and similar languages chose to use 'Either' always; they are satisfied with this choice after tens of years of practice; important cause of this is that to disambiguate the cases for representing result is not so difficult as one usually thinks at first
-		* we have luck from the english language; "right" means not only a side, but also means 'correct' and a success is obviouosly more correct than a failure
-		* if representing a result then we think about 'Either' as a container containing the successul result; for this fit: we need the last type parameter to correspond to the succesful case, as partial application of the 'Either' type function ["Either l"] then is a container type
+		* but this is a design mistake, because though the most notable usage of Either' is to represent result of computation: its full usage is surely broader
+		* the communities of Haskell and similar languages chose to use ("Either", "left", "right") always; they are satisfied with this choice after tens of years of practice; important cause of this is that to disambiguate the cases for representing result is not so difficult as one usually thinks at first
+		* we have luck from the english language; "right" means not only a side, but also means 'correct' and a success feels more correct than a failure
+		* if representing a result then we think about 'Either' as a container containing the successful result; container types have their element type as their last type parameter, hence it is the "right" case which have to correspond to the success
 * duality with product
-	* product and sum type construction is essentially the same thing; surprising but true; they both are well defined by mathematics, in an exact and very abstract manner; as categories; you can think of categories as directed graphs, with certain properties, which i do not want to present here; product and sum type constructions are defined by graphs that have the same structure with opposite edges; that is the only difference: all the edge directions are opposite; otherwise they have the same structure; with this in mind it is not surprising that we observe dualities between them; here are some:
-	* if x is a value of a { product  | sum } type t then the members of t list the possible datas that we can { project x down to | build x up to from }
+	* product and sum type construction is essentially the same thing; this is surprising but true; they both are well defined by mathematics, in an exact and very abstract manner; as categories; you can think of categories as directed graphs, with certain properties, which i do not want to present here; product and sum type constructions are defined by graphs that have the same structure with oppositely directed edges; that is the only difference: all the edge directions are opposite; otherwise they have the same structure; with this in mind it is not surprising that we observe dualities between them; here are some:
+	* if x is a value of a { product | sum } type t then the members of t list the possible datas that we can { project x down to | build x up to from }
 	* the compiler automatically generates { projection | construction } functions from the members of the { product | sum } type
-	* the number of values of a { product | sum } type equals the { product | sum } of the numbers of values of the member types; this is the origin of the { "product" | "sum" } names for these type constructions
+	* the number of values of a { product | sum } type equals the { product | sum } of the numbers of values of the member types; this is the origin of the { "product" | "sum" } name for this type construction
 	* from a logic perspective: a value of a { product | sum } type contains a value of its member 1 type { and | or } a value of its member 2 type { and | or } ... { and | or } a value of its member n type
 	* a value of a { product | sum } type contains a value for { each | exactly one } member; this is also true for value with exactly zero members, vacously
 * sum-typing - sub-typing
