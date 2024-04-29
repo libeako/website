@@ -1,31 +1,21 @@
 \ id biuqwfqzzkpjuqob
 * type classes are type interfaces that use static method dispatch
-* type classes do not increase the expressive power of the type system; but they still save us from some repetitions and they generally give extra convenience
-* type classes are very popular and it looks that in the future they will be part of most well designed programming languages
-* type classes were introduced by the haskell programming language and haskell always remained to be the testbed for new research in this topic; lately popular industrial languages also started to adopt it: c++'s "concept"s and rust's "traits" are type classes under other names 
-* the name
-	* from the name "type classes": do not try to extract accurate meaning, it is just one name, that happened to be chosen but is not distinctive
-	* in Idris the name "type interface" is used; i may also use "interface" instead of "class"
+* type classes is a langauge feature that does not make any additional type of abstractions possible but they give extra convenience
+* type classes are very popular and it looks that in the future they will be part of most languages
+* type classes were introduced by the Haskell language and Haskell always remained to be the testbed for new research in this topic and to have the best current implementation
+* the name can be "type class" or "type interface", depending on the mood of the language designer
+	* Haskell chose "class", Idris chose "interface"
 * no dynamic dispatch language feature
 	* half of the "object oriented" paradigm is its type interfacing solution; the main difference between that and haskell-like type-classes is that in OO methods are dispatched in run-time ["dynamically"]
 	* haskell-like languages do not provide dedicated support for dynamic type interfacing
-	* they provide other language features [existential types] with which dynamic dispatch can be implemented, in case it is needed, with only slightly more verbosity than in OO languages
-	* dynamic method dispatch is needed very rarely
-	* this may surprise you, if you are used to object-oriented languages, like java and c#, which force the coder to use their type interfacing solution with dynamic dispatch machinery, even when simpler but not provided tools [like sum types or higher order functions] would suffice; when a coder gets to use a well-designed language, like haskell: then the coder quickly sees that dynamic method dispatch is needed very rarely
+		* they provide other language features [existential types] with which dynamic dispatch can be implemented, in case it is needed, with only slightly more verbosity than in OO languages
+		* dynamic method dispatch is needed very rarely
+			* this may surprise you, if you are used to object-oriented languages, like java and c#, which force the coder to use their type interfacing solution with dynamic dispatch machinery, even when simpler but not provided tools [like sum types or higher order functions] would suffice; when a coder gets to use a well-designed language, like haskell: then the coder quickly sees that dynamic method dispatch is needed very rarely
 * OO
-	* the type interface design in the OO paradigm is developed from the idea that the dispatch should be dynamic; dynamic dispatch queries the run-time type of the actual inputs of the invoked method to find the appropriate concrete function to invoke; the type of which inputs? so far as i know: the original OO idea was to use all the inputs for this; what happens when we do not have a method implementation matching the types of the actual inputs? run-time execution failure; that is okay for dynamically typed langauges, as the possibility of such run-time failure is normal for them anyway; but in a statically typed language it is questionable at least; hence some people did insist to try to fuse the 2: OO and static typing
-	* let us walk through the way of their possible thinking; we have to ensure at compile time that dispatches are always successful; our best idea: restrict the dispatching to only 1 of the inputs; which one sould that be? for the sake of simplicity and uniformity: let it be the first one always; we do not need to know its type in compile time, as the core OO idea is to defer that to run-time; this input is always present and has special status, hence we can fix its name to "this" or "self" of it in the language specification; hence this input can be implicit - this saves the coder from some verbosity
-	* it is important to see that this solution was not a conceptual desire but a compromise, accepting conceptual mismatch for the sake of type-safety; thus was the now popular ["Java-like"] version of OO born; as a child of the forced marriage of static typing and the inherently dynamic OO behavior; crippled from birth, it can not properly represent interface methods with multiple inputs with the same role; for example:
-	* the Equatable interface in c#:
-		* interface IEquatable { bool Equals (??? other); }
-		* what should go in place of "???", what should the type of the 'other' input be? OO itself does not give a type-safe answer; type-unsafety was accepted in this situation in the Java like languages for years
-		* when later generics came into Java and .Net: it finally provided a type-safe solution via "F-bounded quantification"
-			* interface IEquatable<T> { bool Equals (T other); }
-			* the name of the type that implements the interface is smuggled into the interface definition with type polymorphism
-			* in practice this worked acceptably, but conceptually it is only a work-around
-		* spend some seconds to observe that the above source-code suggests that the 2 inputs of the method are somehow differnt in their roles, which is false
-	* the story is similar with the also important 'Comparable' interface
-	* i repeat: Java-like OO [distinguishing the first input of methods] is not some natural idea at the concept level; but a problematic technical necessity of integrating OO into static typing
+	* the type interface design in the OO paradigm is developed from the idea that the dispatch should be dynamic; dynamic dispatch queries the run-time type of the actual inputs of the invoked method to find the appropriate concrete function to invoke; the type of which inputs? so far as i know: the original OO idea was to use all the inputs for this; what happens when we do not have a method implementation matching the types of the actual inputs? run-time execution failure; that is okay for dynamically typed langauges, as the possibility of such run-time failure is normal for them anyway; but in a statically typed language it is questionable at least; but some people did insist to try to fuse the 2: OO and static typing
+	* let us walk through the way of their possible thinking; we have to ensure at compile time that dispatches are always successful; our best idea: restrict the dispatching to only 1 of the inputs; which one sould that be? for the sake of simplicity and uniformity: let it be the first one always;
+	* we do not need to know its type in compile time, as the core OO idea is to defer that to run-time; this input is always present and has special status, hence we can fix its name to "this" or "self" in the language specification; hence this input can be implicit
+	* it is important to see that this solution was not a conceptual goal but a compromise; thus was the now popular ["Java-like"] version of OO born; as a child of the forced marriage of static typing and the inherently dynamic OO behavior; crippled from birth
 * fortunately: static typing may have type interfaces, without any OO too, with totally static method dispatch; not only it is possible, but it also lacks the problems of OO and has great advantages, as i will show
 * basics of type interface definition
 	* interface Equatable t where 
@@ -34,21 +24,27 @@
 		* haskell uses the "class" keyword
 		* idris uses the "interface" keyword
 	* "Equatable" is the name of the defined type interface
-	* "where" is a keyword separating the header from the rest of the definition
+	* "where" is a keyword separating the header from the rest of the code
 	* the rest of the lines lists the methods of the interface
 	* in static type interfacing we do not have the implicit input story; all the inputs are explicit and we must declare their types too
-	* the language specification could fix the name of the type that is to implement the interface being defined [to "This" or "Self", for example], but Haskell-like languages usually choose to let the coder choose a custom name instead; this syntax design decision makes us able to use short, usually 1-letter names, to make the structures of the types of the methods more readable
-	* in the above 'Equatable' interface definition "t" is this name
-	* having such name is not only a necessity; it also gives to us the ability to effortlessly express the fact that the 2 inputs of the equality checking method have the same type; we have type safety, naturally, without the use of parametric type-polymorphism
+	* the language specification could fix the name of the type that is to implement the interface being defined [to "This" or "Self", for example], but Haskell-like languages usually choose to let the coder choose a custom name instead; this syntax design decision makes us able
+		* to use short, usually 1-letter names, to make the structures of the types of the methods more readable
+		* to have multi-type interfaces [where several types mutually implement an interface]
+			* the usefulness of this ability is doubtful
 	* the above source-code of the 'Equatable' interface perfectly mirrors the concept that it ought to rerpresent, including that the method's inputs have the same role
-* no run-time input to dispatch on
-	* such a situation is impossible to handle with OO, but with static dispatching it is not a problem
-	* how common such situation arises? quite
-	* the trivial case is when the method does not take any input at all, when it is not even a function, instead it just selects a value from the type
+	* OO can not properly represent interface methods with multiple inputs with the same role; for example:
+		* the Equatable interface in c#:
+			* interface IEquatable<T> { bool Equals (T other); }
+			* spend some seconds to observe that the above source-code suggests that the 2 inputs of the method are somehow differnt in their roles, which is false
+		* the story is similar with the also important 'Comparable' interface
+* static dispatch does not require run-time input
 	* a trivial but useful example:
 	* interface HasDefault t
 		* default : t
-	* also: having some input does not make the method run-time dispatchable, because the input may be totally independent from the type that is to implement the interface; this is the case for example in methods of the very important Monoid, Applicative, Monad interfaces [which i am going to teach later]
+	* such an interface is impossible to handle with OO
+	* how common such situation arises? quite
+		* the trivial case is when the method does not take any input at all, when it is not even a function, instead it just selects a value from the type
+		* also: having some input does not make the method run-time dispatchable, because the input may be totally independent from the type that is to implement the interface; this is the case for example some methods of the very important Monoid, Applicative, Monad interfaces
 * multiple methods in an interface:
 	* interface Equatable t
 		* (==)   :   t -> t -> bool
@@ -60,40 +56,42 @@
 		* x == y   =   not (x /= y)
 		* x /= y   =   not (x == y)
 	* even mutually recursively
-* instances
-	* an "instance" of a type interface is an implementation of a type interface for a given type
+* an "instance" of a type interface is an implementation of a type interface for a given type
 	* a simple example:
 		* implements Equatable Int
 			* (==) = Integer.equality
 		* "instance" is a keyword here
 		* (==) of 'Equatable' is defined by this implementation as the equation test provided by module 'Integer'
-		* (/=) [not equal] does not have to be implemented, because the definition of 'Equatable' contains a suitable default implementation of it
-	* independence from the type definition
-		* The definition of the instance is not fixed to the definition of the type; it can be also in the module of the interface; this makes it possible to implement new interfaces for types without modifying the definition of the type; in OO the set of interface implementations is fixed at the definition of the type
-	* instance condition
+		* (/=) [not equal] does not have to be implemented, because the 'Equatable' class contains a suitable default implementation of it
+	* the independence of the instance
+		* the code of the instance can be either in the module of the class or in the module of the type; hence new instances can be introduced both for types and for classes whose code can not be modified
+		* when the code of both the class and the type is not modifiable then an instance for them can not be defined directly; in such case the solution is to wrap the type with a new type
+	* instance conditioning
 		* example
 			* instance (Equatable a, Equatable b) => Equatable (a b) where
 				* (x1, y1) == (x2, y2)   =   x1 == x2  &&  y1 == y2
 		* at the source side of the fat arrow is the condition
-		* this is a very important capability, because modifying a type by putting a container [Maybe, Either, List, newtype wrappers, ...] around it is ubiquitous in everyday software coding; OO can not do this
+		* this is a very important capability
+			* for example for container types, because modifying a type by putting a container [Maybe, Either, List, newtype wrappers, ...] around it is ubiquitous in everyday software coding
+			* OO can not do this
 * usage
-	* functions may take type interface implementations as implicit input
-	* for example:
+	* functions may take instances as implicit inputs
+	* example
 		* minimum : Ordered e => List e -> Maybe e
-		* function 'minimum' takes an implicit parameter specifying how type 'e' implements interface 'Ordered'
+			* takes an implicit parameter specifying how interface 'Ordered' is implemented for type 'e'
 * type methods
 	* an advantage of static dispatch is that the methods can output compile time information, including types; by this we associate types to types; in many languages such capability is known as "associated types"
 * run-time efficiency
-	* knowing the function to invoke in compile time makes the compiler able to inline it; this is a big gain, as inlining is a crucial optimization; OO languages force the dispatch to happen at run-time, which is in most cases not necessary; some people claim that these languages [Java, .Net] solve this run-time efficiency problem in the execution engine; but that is far from the truth; all that is in the execution engine is the prediction of which function will get the dispatch, based on previous dispatch results, and then inlining that function; this is close to being so fast as a compile time inlined invokation but works only if the dispatched result is the same in a big interval of time, which is only the simple cases
+	* knowing the function to invoke in compile time makes the compiler able to inline it; this is a big advantage of static dispatch, as inlining is a crucial optimization; OO languages force the dispatch to happen at run-time, which is in most cases not necessary; some people claim that some of these languages [Java, .Net] solve this run-time efficiency problem in the execution engine; but that is far from the truth; all that is in the execution engine is the prediction of which function will get the dispatch, based on previous dispatch results, and then inlining that function; this is close to being so fast as a compile time inlined invokation but works only if the dispatched result is the same in a long sequence of calls, which happens only the simple cases
 * laws
-	* "laws" are often attached to type classes; they are addional requirements that the instances must obey; additional to what the types of the methods of the interface impose; it is generally better to state requirements in types, but sometimes [often because of the weakness of the type system] it is not possible or not economical; then we state them in comment and refer to them as "laws"
-	* example:
+	* "laws" are requirements that the instances must obey; additional to what the types of the methods of the interface impose; it is generally better to state requirements in types, but sometimes (because of the weakness of the type system) it is not possible or not economical; then we state them in comment and refer to them as "laws"
+	* example
 		* the laws of 'Equatable' should be the usual mathematical properties of equality: substitutivity
 		* interface Equatable t where
 			* (==) : t -> t -> Bool
 				* // law "substitutivity": x == y <=> (for all f : f x == f y)
 	* not all interfaces have to have laws
-		* some examples for interfaces that do not have laws:
+		* some examples for interfaces that do not have laws
 			* Default
 			* Foldable
-				* you may know this as "Enumerable"
+				* you may know this from .Net as "Enumerable"
