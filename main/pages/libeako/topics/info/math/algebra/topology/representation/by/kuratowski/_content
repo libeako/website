@@ -5,6 +5,9 @@
 		* the "interior" function maps to a subset its interior
 		* this is why i name this representation by "interior function"
 	* axioms
-		* forall X : se X S => se (in X) (in S)
-		* in >>> in = in
-		* forall xi [i in 0..n] : in (intersect {xi}) = intersect {(in xi)}
+		* intensivity
+			* forall x : se x S => se (in x) x
+		* idempotence
+			* in >>> in = in
+		* distributivity of intersection over interior-taking
+			* in (intersect {for i in I : xi}) = intersect {for i in I : in xi}
