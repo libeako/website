@@ -9,5 +9,21 @@
 			* forall x : se x S => se (in x) x
 		* idempotence
 			* in >>> in = in
-		* distributivity of intersection over interior-taking
+		* distributivity of interior-taking over intersection
 			* in (intersect {for i in I : xi}) = intersect {for i in I : in xi}
+* results
+	* in is monotone: 
+		\ id hkvjhutkeqeslbqw
+		* statement:
+			* forall x y . (x <= y) => (in x <= in y)
+		* proof
+			* in x
+			* =
+				* x = intersect {x, y}
+					* because x <= y
+			* in (intersect {x, y})
+			* =
+				* by distributivity of in over intersection
+			* intersect ({in x, in y})
+			* <=
+			* in y

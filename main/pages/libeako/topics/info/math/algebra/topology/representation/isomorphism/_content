@@ -50,9 +50,22 @@
 			* make-in (make-subset in) s = in s
 			* make-in { b : b = in b } s = in s
 			* union { b : (b = in b) and b <= s } = in s
-			* union { b : (b = in b) and b <= s } <= in s
-				* proof is trivial, because
-					* forall b : b <= s
-			* union { b : (b = in b) and b <= s } >= in s
-				* (in s) is among the arguments of the union
-					* because of (idempotence of in) and (in s <= s), which both are Kuratowski axioms
+			* the proof will be the conjunction of the proofs of the ineualities
+				* union { b : (b = in b) and b <= s } <= in s
+					* proof
+						* for each b in the union in the left side
+							* in b <= s
+							* hence
+								* in is monotone
+									* \ links-to internal hkvjhutkeqeslbqw
+							* in (in b) <= in s
+							* hence
+								* idempotence of in
+							* in b <= in s
+							* hence
+								* because b = in b
+							* b <= in s
+						* hence also for the union of such bs
+				* union { b : (b = in b) and b <= s } >= in s
+					* b = (in s) is among the arguments of the union
+						* because of (idempotence of in) and (in s <= s), which both are Kuratowski axioms
