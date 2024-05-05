@@ -1,5 +1,5 @@
 \ id kenmblteriiqrbwu
-* the kuratowski "interior" function representation
+* the Kuratowski "interior" function representation
 	* S : Set
 	* in : (S -> Bool) -> (S -> Bool)
 		* the "interior" function maps to a subset its interior
@@ -11,6 +11,11 @@
 			* in >>> in = in
 		* distributivity of interior-taking over intersection
 			* in (intersect {for i in I : xi}) = intersect {for i in I : in xi}
+* the Kuratowski closure function representation
+	* analogous to the interior function representation
+	* the closure function's name may be "closure" or "close" or "cl"
+	* cl = complement >>> in >>> complement
+	* all the Kuratowski axioms can be easily phrased with the closure function instead of the interior function
 * results
 	* in is monotone: 
 		\ id hkvjhutkeqeslbqw
