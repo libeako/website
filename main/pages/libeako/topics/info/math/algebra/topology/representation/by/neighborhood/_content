@@ -1,0 +1,14 @@
+\ id pyiovdwtceolqgki
+* the neighborhood representation of topology is a function from points to its neighborhoods
+* let S be the base type
+* neighborhoods : S -> Set (S -> Bool)
+	* forall point x
+		* (neighborhood x) are the "neighborhoods" of x
+		* all neighborhoods of x contains x
+		* forall neighborhood n of x: all supersets of n are also neighborhoods of n
+		* the intersection of 2 neighborhood of x is a neighborhood of x
+		* forall neighborhood n of x
+			* exists o: 
+				* o contains x
+				* o <= n
+				* n is a neighborhood of all points of o

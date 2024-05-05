@@ -1,0 +1,77 @@
+\ id keiilocwhqisgziu
+* this part shows isomorphism between these representations of topology
+	* subset
+		\ links-to internal fncairveofiuykdb
+	* neighborhoods function
+		\ links-to internal pyiovdwtceolqgki
+* let the names of the conversion functions [the witnesses of the isomorphism] be "to-neighborhood" and "to-subset"
+* definition of the conversion functions
+	* to-neighborhood ss = \ x -> {n : exists o in ss . ({x} <= o) and (o <= n)}
+	* to-subset p-n = {o : forall x in o . ({o} <= (p-n x))}
+* proofs of conversions to comply with the axioms of the output representations
+	* to-neighborhood
+		* neighborhood of point contains the point
+			* the neighbohood [n] includes o, which contains the point [x]
+		* superset of neighborhood is neighborhood
+			* the only constraint on neighborhood [n] is (o <= n), which holds for supersets of n too
+		* intersection of any 2 neighborhoods is neighborhood
+			* the only constraint on neighborhood [n] is (o <= n), which holds for intersections of ns too [being a superset property is kept by intersection]
+		* open neighbohood inclusion
+			* forall neighborhood n of x
+				* exists o:
+					* o contains x
+						* proof is trivial
+					* o <= n
+						* proof is trivial
+					* n is a neighborhood of all points of o
+						* true because o itself is a neighborhood of all of its points
+	* to-subset
+		* intersection
+			* of 0 neighborhoods
+				* is the full base set, which is trivially a neighborhood of all points
+					* with the choise o = (the full base set)
+			* of 2 neighborhoods
+				* let the 2 neighborhoods of x be named with "n1" and "n2"
+				* let "no" be a function that maps from n to o
+				* oi := intersection {no n1, no n2}
+				* {oi} <= ss
+					* because forall o in {no n1, no n2}: {o} <= ss
+				* hence oi is a neighbohood of x, with the choice o = oi
+				* intersect {n1, n2} is also a neighborhood of x
+					* because o <= intersect {n1, n2}
+* proof of being inverses
+	* to-neighborhood >>> to-subset = id
+		* (to-neighborhood >>> to-subset) ss = id ss
+		* (to-neighborhood >>> to-subset) ss = ss
+		* to-subset (to-neighborhood ss) = ss
+		* to-subset (\ x -> {n : exists o in ss . ({x} <= o) and (o <= n)}) = ss
+		* {m : forall y in m . {m} <= ((\ x -> {n : exists o in ss . ({x} <= o) and (o <= n)}) y)} = ss
+		* {m : forall y in m . {m} <= {n : exists o in ss . ({y} <= o) and (o <= n)}} = ss
+		* {m : forall y in m . exists o in ss . ({y} <= o) and (o <= m)} = ss
+		* ({m} <= ss) <=> (forall y in m . (exists o in ss . ({y} <= o) and (o <= m))
+		* =>
+			* suppose { m } <= ss and { y } <= m
+			* we need to prove 
+				* exists o in ss . ({y} <= o) and (o <= m)}
+					* m is a suitable such o
+		* <=
+			* let "yo" be a function from y to o, as on the right side of the equivalence
+			* u := union { forall y in m . yo y }
+			* each o is in ss, hence their union is also in ss [because of one of the axioms of the subsets representation]
+			* their union is m, hence
+				* u <= m
+					* because each o <= m
+				* u >= m
+					* because each y in m is covered by an o
+			* hence m is in ss
+	* to-subset >>> to-neighborhood = id
+		* (to-subset >>> to-neighborhood) p-n = id p-n
+		* (to-subset >>> to-neighborhood) p-n = p-n
+		* to-neighborhood {m : forall y in m . {m} <= (p-n y)} x = p-n x
+		* to-neighborhood {m : m is neighborhood of all its points} x = p-n x
+		* {n : exists o in {m : m is neighborhood of all its points} . ({x} <= o) and (o <= n)} = p-n x
+		* {n : exists o . (o is neighborhood of all its points) and ({x} <= o) and (o <= n)} = p-n x
+		* p-n x = {n : exists o . (o is neighborhood of all its points) and ({x} <= o) and (o <= n)}
+		* (n is neighborhood of x) <=> (exists o . (o is neighborhood of all its points) and ({x} <= o) and (o <= n))
+		* => : axiom of neighborhood representation
+		* <= : o is neighborhood of x, hence n >= o is also
