@@ -1,8 +1,24 @@
 \ id nchabqnythptflqo
 * representation
 	\ links-to internal mmnneqyrulkprhdg
+* "clopen" means (open and closed)
+* theorem: the extremal sets are clopen
+	* the empty set is open
+		* because it is the union of zero open sets
+	* the full set is open
+		* because it is the intersection of zero open sets
+	* hence the full and the empty sets are closed
+		* because they are the complements of the empty and full sets, which are open
+	* hence both extremal sets are both open and closed
 * the "interior" of a set is the union of its open subsets
-* theorem (is open = equals to its interior)
+* theorem: is open = equals to its interior
 	\ id oktpeykraqoigtre
 	* with other words: the open sets are exactly those which equal to their interior
+	* proof is trivial
+* the "neighborhood" of a set s is a set which has an open subset which includes s
+* the "neighborhood" of a point x is a neighborhood of {x}
+* theorem: n is neighborhood of set s <=> n is neighborhood of all points of s
+	* =>: trivial
+	* <=: use the property that the union of open sets is open
+* theorem: s is open <=> s is neighborhood of itself
 	* proof is trivial
