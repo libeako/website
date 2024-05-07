@@ -1,35 +1,52 @@
 \ id kgmqzsduacpzvbxy
-* the year is 2018; object oriented programming is not alive and has not achieved any good till now; i know : this sounds surprising, seeing thw wide spread of OOP, but this section will explain 
-* theoretical research about "object oriented programming" is not done currently in significant amount; the rest of this section deals with rather practical side
-* what is object oriented programming?
-	* to explain such bold claim that OOP is not alive : i should first define OOP; this task is more difficult than one might first think; its meaning is widely debated; when the meaning of a term is debated then a way out may be to turn back to the original meaning of the term; the term "object oriented programming" was coined by Alan Kay; the most informative text about his thinking about it that i found is "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things."; to me this sounds like the actor model : the program consists of actors, that are independent of each other but interact with each other; the interaction is done via "messaging", which we now know as method invocation; at those early times OOP was thought about like the program consists of parts that are like cells in a body or individual animals in a complex living environment 
-	* state mutation
-		* it is important to see that Alan Kay thought about OOP as something that fundamentally involves mutable state; many people even till now think so; but state is perhaps the most "evil" thing in programming ; you may now defend OOP with the statement that functional programming is not to be applied for all programs; for example high efficiency programs may drop the functional methodology at certain places; but : note that these high efficiency programs are relatively rare, most programs are written at the application level, where functional programming is not only efficient enough but is even more efficient than imperative programming; and even in highly efficient programs : the highly optimized parts of it are small compared to the full size of the program; thus the scope of legitimately using imperative mutable state is very small; and even in that small scope : OOP is not good fit because some other aspects of it [dynamic memory allocation, late binding] is usually incompatible with high optimizability of runtime efficiency; thus we arrive to the conclusion that OOP does not have any place
-			* link to 'functional programming'
-				\ links-to internal rqeeitsvmgrogdjp
-			* link to (runtime efficiency of functional programs)
-				\ links-to internal nmzlpnpnrsfmunrf
-	* anything else?
-		* but this is just one interpretation of "object oriented programming"; one "modern" view of it is that mutable state does not have to be considered a part of it; this view is strongly reflected by the scala programming language for example
-		* an "object" is a value coupled with the memory part it is stored in; the only reason to distinguish between different objects with the same value is the possibility of mutation; hence with dropping mutation from our toolbox : we drop "object"s too; hence the name "OOP" looses its original meaning; hence "functional OOP" contains a striking contradiction at least as a name 
-		* but supposing the necessity to occasionally accept historical mistakes in terminology : this section continues to investigate the merit of functional OOP; what it is or at least what is widely thought it is?
-		* in the following i use comparison to the haskell programming language which is considered to be not an object oriented language; thus i allow to myself to exclude from OOP any feature that is in haskell
-		* an other fundamental component of OOP is late binding; at least Alan Kay thought so ["extreme late-binding of all things"]; and this view is reflected by the current mainstream OOP languages : everything depends on a special, implicit first input : a "this" or "self" object; i consider late binding a legitimate feature, but i think that making it a base of type interfacing was a programming language design mistake; this is nicely demonstrated by the contrast with the haskell solution of type interfacing ["type classes"] which builds on static dispatch by default; the static strategy gives vast improvement in runtime efficiency [because of inlining], type inference, most importantly: domain modeling capability [including nullary methods, conditional implementation, late implementation]
-			* link to (type classes)
-				\ links-to internal biuqwfqzzkpjuqob
-		* if we would drop late binding too from the definition of OOP then what would remain of OOP? 
-			* run-time type testing ? - even the OO culture considers it a dirty practise, to be avoided
-			* methods inheritance between interfaces ? - not a significant feature
-			* dynamic binding ? - haskell also has it, though with more code verbosity
-		* i did find though one important thing that distinguishes OOP languages : they base their type interfacing on late binding; not only base, but constrain :  static methods may not be in OOP type interfaces; i fail to see any advantage that this constrain can give; type classes are much better
-			* link to (why type classes are better)
-				\ links-to internal biuqwfqzzkpjuqob
+* what is "object oriented" programming?
+	* first of all: a paradigm can not contain something that is not distinctive of other paradigms
+		* if a language feature is present in languages generally than that feature is not distinctive and hence can not be part of a programming paradigm, like OO
+	* to define "object oriented" is difficult task; the meaning is widely debated; in such situation it is good to go to 
+	* objective criteria to interpret the term
+		* the meaning of the term
+			* an "object" is a value with an identity [usually identified by its storage location in memory]; the reason to distinguish between different objects with the same value is and only is the possibility of mutation; the functional paradigm does not have objects; hence "object" is equivalent to imperativeness
+		* the original meaning of the author of the term
+			* the term "object oriented" was coined by Alan Kay; the most informative text about his thinking about it that i found is "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things."
+			* my interpretation of Alan Kay's definition
+				* imperativeness
+					* he talks about state, which suggests [though does not surely imply] that he meant imperativeness
+					* "local retention and protection and hiding of state-process" - i interpret this as just hiding of the representation of the data type of the state; but hiding anyhing is a simple natural feautre, practically all languages provide this feature; hence it is not a distinctive
+				* "late-binding" means that the methods are dispatched dynamically
+		* the practice of using the term
+			* let us identify OO languages and non-OO languages and see what is the differene between them
+			* some of the languages most known as OO are Java, C#
+			* the language most known as not-OO is Haskell
+			* the difference between them mostly is imperativeness and the method dispatch being dynamic; Haskell is famous about being the opposite of these features
+	* conclusion of the objective criteria: OO is imperativeness and the method dispatch being dynamic
+		* these 2 things are independent of each other
+			* this suggests either that my definition of OO is wrong or that OO is something wrong; i think my interpretation is good and OO is wrong
+	* other opinions
+		* one modern interpretation of OO is that imperativeness does not have to be a part of it; this view is strongly shown by the Scala language, for example
+			* this is often referred to with the name "functional OOP"; but the name mainly contains "object", which means imperativeness, hence this name is inconsistent
+		* one opinion is that "object" means not imperativeness but "message passing", but that must be wrong, because message passing of OO is just method invokation, which is part of all languages, not a distinctive feature
+		* what else could OOP be? 
+			* run-time type testing? - even the OO culture considers it a dirty practise, to be avoided
+			* method implementation inheritance? - Haskell has it too
+			* dynamic binding? - haskell also has it, though with more code verbosity
 * main conclusion
 	* till here i came to the conclusion that OOP is mainly state mutation and unnecessary push of dynamic binding; the earlier ruins our software coding efficiency, the later makes type interfacing hardly usable; giving nothing significant in return that we would expect from a programming paradigm
-* shame on OO type interfacing
-	* oo wants to be a paradigm; but a paradigm should be generally applicable; oo interfacing is not generally applicable; it is too ugly and too weak; as you saw from the examples : not only it can not express such basic type interfaces as Equatable and Comparable in a natural way, but even if we accept its ugliness : so soon as wrapping our [now equatable or comparable] type by a Maybe or other container : the oo type interfacing can not follow us; and for interfaces with input-less methods, like the very important Monoid interface : it can not even start
-	* one of the roots of the failure of oo is one of its foundational principle that method dispatch should be dynamic; in the world of type interfacing : this is corrected by type classes
-* why did OO spread ?
+* OO is wrong
+	* to see why we need to decompose OO into its 2 components
+	* imperative programming
+		* may have some legitimacy in simple low level programming, but otherwise it is idiotic
+		* link to 'functional programming'
+			\ links-to internal rqeeitsvmgrogdjp
+	* dynamic method dispatch
+		* may have legitimacy in dynamically typed language, but in statically typed language it is idiotic
+		* an other fundamental component of OOP is late binding; at least Alan Kay thought so ["extreme late-binding of all things"]; and this view is reflected by the current mainstream OOP languages: everything depends on a special, implicit first input: a "this" or "self" object; i consider late binding a legitimate feature, but i think that making it a base of type interfacing was a programming language design mistake; this is nicely demonstrated by the contrast with the haskell solution of type interfacing ["type classes"] which builds on static dispatch by default; the static strategy gives vast improvement in runtime efficiency [because of inlining], type inference, most importantly: domain modeling capability [including nullary methods, conditional implementation, late implementation]
+			* link to (type classes)
+				\ links-to internal biuqwfqzzkpjuqob
+		* shame on OO type interfacing
+			* oo wants to be a paradigm; but a paradigm should be generally applicable; oo interfacing is not generally applicable; it is too ugly and too weak; as you saw from the examples: not only it can not express such basic type interfaces as Equatable and Comparable in a natural way, but even if we accept its ugliness: so soon as wrapping our [equatable or comparable] type by a Maybe or other container: the OO type interfacing can not follow us; and for interfaces with methods without input, like the very important Monoid interface: it can not even start
+			* one of the roots of the failure of OO is one of its foundational principle that method dispatch should be dynamic; in the world of type interfacing: this is corrected by type classes
+	* in most languages both imperativeness and the method dispatch being dynamic are bad ideas, but these 2 features together form an unfortunate combination as this combination is wrong in all languages; imperativeness may be good for simple languages for high manual control over run-time efficiency; but for that dynamic dispatch is wrong, as it is slow
+* why did OO spread?
 	* if OOP would be so clearly bad then why did it spread so widely? because the languages that pushed it became popular; but those became popular not because of OOP but each for some unrelated reason; for example java, c# were backed by big companies, java additionally promised "write once, run everywhere", c++ did not have a competitor
 * OO mania
 	* it is not only the languages, but culture too; so named "OO design patterns", "OO design", "OO architecture" flud the industrial software development world; i think that was a mistake
@@ -98,4 +115,4 @@
 	* how did this OO overusage evolve ?
 		* certain very popular OOP languges [java, c#] initially lacked essential language features [first class function, parametric type polymorphism, sum type] and by this they forced their users to use subtyping for all polymorphic problems; hence OOP became overused and people got used to overusing it
 * without OO
-	* can we do without OO? fortunately we already have enough practical experience to answer this question with confidence; in scala and haskell people are fine without OO; haskell does not provide OO and its users do not miss it; scala provides the most capabilities for OO among the popular industrial languages [variance, mixin inheritance, type members]; still : OO is fading from scala; the well-known scalaz library [whose authors are very knowledgable in both the technicalities of scala and in library level abstractions] chose to say goodby to OO; in both haskell and scalaz programmers rather use alternatives : the functional paradigm, higher order functions, parametric type polymorphism, type classes
+	* can we do without OO? fortunately we already have enough practical experience to answer this question with confidence; haskell people are fine without OO; haskell does not provide OO and its users do not miss it at all
