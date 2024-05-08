@@ -38,13 +38,7 @@
 		* link to 'functional programming'
 			\ links-to internal rqeeitsvmgrogdjp
 	* dynamic method dispatch
-		* may have legitimacy in dynamically typed language, but in statically typed language it is idiotic
-		* an other fundamental component of OOP is late binding; at least Alan Kay thought so ["extreme late-binding of all things"]; and this view is reflected by the current mainstream OOP languages: everything depends on a special, implicit first input: a "this" or "self" object; i consider late binding a legitimate feature, but i think that making it a base of type interfacing was a programming language design mistake; this is nicely demonstrated by the contrast with the haskell solution of type interfacing ["type classes"] which builds on static dispatch by default; the static strategy gives vast improvement in runtime efficiency [because of inlining], type inference, most importantly: domain modeling capability [including nullary methods, conditional implementation, late implementation]
-			* link to (type classes)
-				\ links-to internal biuqwfqzzkpjuqob
-		* shame on OO type interfacing
-			* oo wants to be a paradigm; but a paradigm should be generally applicable; oo interfacing is not generally applicable; it is too ugly and too weak; as you saw from the examples: not only it can not express such basic type interfaces as Equatable and Comparable in a natural way, but even if we accept its ugliness: so soon as wrapping our [equatable or comparable] type by a Maybe or other container: the OO type interfacing can not follow us; and for interfaces with methods without input, like the very important Monoid interface: it can not even start
-			* one of the roots of the failure of OO is one of its foundational principle that method dispatch should be dynamic; in the world of type interfacing: this is corrected by type classes
+		\ links-to internal ejqltwjmfjcvjpnf
 	* in most languages both imperativeness and the method dispatch being dynamic are bad ideas, but these 2 features together form an unfortunate combination as this combination is wrong in all languages; imperativeness may be good for simple languages for high manual control over run-time efficiency; but for that dynamic dispatch is wrong, as it is slow
 * why did OO spread?
 	* if OOP would be so clearly bad then why did it spread so widely? because the languages that pushed it became popular; but those became popular not because of OOP but each for some unrelated reason; for example java, c# were backed by big companies, java additionally promised "write once, run everywhere", c++ did not have a competitor
