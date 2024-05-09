@@ -17,13 +17,13 @@
 		* the academy
 			* based its practical type systems on mathematical type theory
 		* the industry
-			* did not think that mathematical foundation of the type system is useful at all; somewhat as an alternative: it heavily pursued object orientation, which is an idiotic idea
+			* did not think that mathematical foundation of the type system is useful at all; somewhat as an alternative: it heavily pursued object orientation
 	* type interface system
 		* the academy based its one on static method dispatch ["type classes"]
 		* the industry based its one on dynamic method dispatch ["object-orientation"]
 * the fight against complexity
-	* the industry invented so named "object-oriented design patterns", which are mostly just overcomplications of very simple things like higher order functions
+	* the industry invented so named "object-oriented design patterns"
 	* the academy turned towards mathematical tools, mostly monoid compositionality
 * the fight against bugs
-	* the industry capitulated to the fact that coding produces many bugs, and established the practice of heavy, systemized testing
+	* the industry capitulated to the fact that coding produces many bugs and established the practice of heavy, systemized testing
 	* the academy pursued the "correct by construction" direction, which is to construct code so that certain bugs are not possible to make

@@ -8,42 +8,40 @@
 		* yes, there is a lot of code written in them, but that code is similarly shit as the languages they are written in
 	* it is probably not worth to just adopt Haskell
 		* Haskell is the best industry-strong language currently, by far, but still it has some historical baggage and it can be made significantly better [calculus of construction, syntax simplification, base-library redesign]
-	* what should be the goal of the new language : to be the de facto standard high level practical programming language for the next few decades
+	* what should the goal of the new language be: to be the de facto standard high level practical programming language for the next few decades
 * who should create the new language
-	* primarily those who make programming languages now
-	* primarily the big software firms, like Microsoft, Apple, Google, Facebook
-	* some other big firms also use a lot of software nowadays :
-		* chip designers
-		* car manufacturers
-		* ...
-	* the big firms are already regularly doing some free software projects, including programming language ones, but they are doing those separately and their languages tend to be industry-like instead of Haskell-like
-* how should they create the new language?
+	* primarily those firms that make programming languages now
+		* these are
+			* primarily the big software firms, like Microsoft, Apple, Google, Facebook
+			* some other big firms also use a lot of software nowadays:
+				* chip designers
+				* car manufacturers
+				* ...
+		* the big firms are already regularly doing some free software projects, including programming languages, but they are doing those separately and their languages tend to be industry-like instead of Haskell-like
+		* they can even form a small little common firm for the new programming language
+			* like they currently do with the Linux Foundation
+* how should they create the new language
 	* the participating firms should establish a common firm dedicated for this only purpose
 	* perhaps this common firm could even be profitable by providing education, certification, support, ...
 	* or it can be not-for-profit
-		* the big firms spend much more wealth now on much less important free stuff
-	* a committee should be formed of good programming language experts who design the new language; these people should be from those who worked on good programming languages like Haskell, Agda, Idris
+		* the big firms now spend much more capital on much less important free stuff
+	* a committee should be formed of good programming language experts who design the new language; these people should be from those who worked on good programming languages like Haskell, Lean
 * what the new language should be
-	* it should start from high level and later it can be extended with low level optimization capabilities; this language development direction is better because 
+	* it should start from high level and later it can be extended with low level optimization capabilities; this language development direction is better because
 		* most of the software development work currently is done at high level
-		* being able to design without low level features in mind makes it easier to get the basic theory right, which is important because that is difficult to fix later
+		* being able to design without low level features in mind makes it easier to get the basic theory right, which is important because that is the fundamentum, difficult to fix later
 	* it should be purely functional
 		* Haskell already well proved that this does not constrain the usability of the language in practise
 	* the type system
 		* must be based on the calculus of constructions
 		* should be consistent as logic, if practically feasible
-	* the language should be easy to learn
-		* more and more non-programmers are about to have to do some programming or formal modelling
-		* in order to be easy to learn the language should be simple
-	* it should be lazy
-		* Haskell proved that laziness has great value and the run-time efficiency decrease of it is manageable
 	* it should be easy to bootstrap
 		* this is important for security, and is often neglected nowadays unfortunately
 	* it should be strictly type safe by default
 		* if i download for example a linear algebra library and i use a function from it which returns a pure matrix then i should be able to be rightfully sure that that function may not contain side effect, not even hidden one, and hence may not contain malware
 	* familiarity is not needed
-		* now most coders are familiar with bad languages, that is very much what should be changed
-	* academy does like to think too much about some tasks that are not important for practical software development; do not let these to consume capacity and complicate the product
+		* now most coders are familiar with bad languages, that is just what should be changed
+	* do not do
 		* do not strive for too powerful type inference
 			* type annotations are good, they enhance readability, type error descriptions, hole-types
 		* do not dive into program synthesis and proof automation
