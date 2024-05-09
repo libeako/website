@@ -1,40 +1,42 @@
 \ id crulbcjvhzgpkjis
 * an audio version of this topic
 	\ links-to external https://youtu.be/CpQb9D_X4cM
-* here i advocate that static type systems are better
+* here i advocate that static type checking is better
 * advantages
 	* prevents many bugs
 	* documents the code
 	* helps the compiler in the optimization of the executable
 	* helps the IDE in helping the coder
-* debunking the alleged disadvantages
-	* it does not constrain the programmer
-		* static type systems do rule out some valid programs; but all practical programming languages provide a method to opt out from the static type checking [for example by dynamically checked type conversion]; so in case the concrete type system can not express something : the programmer can always write that piece of the program without static typing and still benefit form static typing for the rest of the program
+* debunking alleged disadvantages
+	* the constrains of the static typing are bypassable
+		* static type systems do rule out some valid programs; but all practical programming languages provide a method to opt out from the static type checking [for example by dynamically checked type conversion]; so in case the concrete type system can not express something: the programmer can always write that piece of the program without static typing and still benefit form static typing where applicable
 	* the verbosity that type annotations make is useful, they document the intent of the coder, which should be at least in comment anyway
 	* type inference
 		* if despite all these great arguments you still prefer to not have to write type annotations then you can achieve that while still have static type-checking; by powerful type inference
 			* there are type-systems and accompanying type inference algorithms, implemented, in general purpose, industry-strong programming languages, that can infer everything, you do not have to write a single type annotation
 			* for a theoretical background see "hindley milner type system"
-			* an example for such programming language is Haskell 98; modern Haskell has a powerful type-system, and not all the features of it is covered with total type inference, but the part that is covered [98] is still stronger than the type inference of the current [2019] versions of most industry languages; alternatively : you can use the advanced type features of Haskell too, but then you need to write some type annotations, mostly for top level definitions
+			* an example for such programming language is Haskell 98; modern Haskell has a powerful type-system, and not all the features of it is covered with total type inference, but the part that is covered [98] is still stronger than the type system of the current [2019] versions of most industry languages; alternatively: you can use the advanced type features of Haskell too, but then you need to write some type annotations, mostly for top level definitions
 			* if you try this then you will find that you do want to write type annotations; for code readability, type error descriptions, hole-types
-				* by the way : this is a good proof of that type annotations are good
-			* "aha" you may say "so you still end up writing type annotations"; - yes, but by your own choice only, you do not have to
-	* "but i do not want to see type errors" - by choosing dynamic typing you are still to see those type errors, you just postpone the bad news to run-time, which is usually a much worse place for an error to happen
-	* "okay, i would not let it to run-time but now i want to concentrate on functionality and later deal with type errors" - type errors are usually bugs; you should not normally postpone dealing with a bug to implement new functionality; as your program grows, the more difficult it will be to find the bug in it, to eliminate the bug, to do refactoring; the bug may even hurt the new functionality; getting informed about the existence of a bug before moving on to implement new functionality is a big gift
-	* "but for scripting we need dynamic typing" - false
+				* by the way: this [getting to use it by monotone steps] is a good proof of that type annotations and static type-checking are good
+			* you still end up writing type annotations, but by your own choice only, you do not have to
+	* type errors are always errors, hence you see them the earlier the better
+		* with dynamic typing you still see the type errors, in run-time; you postpone the bad news to run-time, which is usually a much worse place for an error to happen
+		* even during development
+			* type errors are usually bugs; you should not normally postpone dealing with a bug to implement new functionality; as your program grows, the more difficult it will be to find the bug in it, to eliminate the bug, to do refactoring; the bug may even hurt the new functionality
+	* scripting does not require dynamic typing
 		* a script is still a program, just a small one, all the arguments for general programming apply for scripts too
-		* embedding statically typed languaged languages into application is possible theoretically without any difficulty
-			* in practice : all new languages, and most old functional languages come with a read-eval-print loop, which is an example of such embedding
+	* embedding statically typed languages into applications is theoretically possible
+		* almost all new high level languages and most old functional languages come with a read-eval-print loop, which is an example of such embedding
 	* static type checking takes almost no time
-		* it is optimization that takes long; especially in C++; for example : in C# : even big programs are compiled in very short time in debug mode, where optimization is omitted
+		* it is optimization that takes long; especially in C++ [as it compiles all instances of templates separately]; for example: in C#: even big programs are compiled very quickly in debug mode, where optimization is omitted
 * unit testing
 	* unit testing is to complement static type checking, it can not replace it
-		* most of the properties of a program that we want to ensure are very simple ones, and in these cases the cost of type annotations is practically zero, but replacing them with tests takes much work; and that work is horrendously boring
-		* testing usually checks for not all the inputs
-		* executing unit tests takes a considerable amount of time, executing static type checking takes practically 0 time
+		* testing may only show the presence of bug, static typing shows the absence of bugs, only static typing can do that
+		* most of the properties of a program that we want to ensure are very simple ones; in these cases the cost of type annotations is practically zero, but replacing them with tests takes much work; and that work is horrendously boring and has to be redone after changing the program, which makes changing difficult
+		* executing unit tests takes a considerable amount of time, executing static type checking takes only practically 0 time
 * the human
-	* whatever you do not check with the compiler nor with unit tests : the human coder must do it
+	* whatever you do not check with the compiler nor with unit tests: the human coder must do it
 	* but the compiler is much better in it
 		\ links-to internal nelvtoguoomgxthl
 * conclusion
-	* the only disadvantage static type checking has is that it takes time to create a static type system, it is more difficult to design the language and it is more difficult to implement a compiler for it; but now, in 2019 this is relatively a very small price and the advantages of static type checking are many and big
+	* the only disadvantage static type checking has is that it takes time to create a static type system, it is more difficult to design the language and it is more difficult to implement a compiler for it; but now, in 2024 this is relatively a very small cost and the advantages of static typing are many and great
