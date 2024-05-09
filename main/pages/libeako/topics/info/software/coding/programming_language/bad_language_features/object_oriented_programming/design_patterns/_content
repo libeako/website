@@ -1,0 +1,63 @@
+\ id rpkievmcwfnpmvlt
+	* i am not familiar with the "OO design patterns", but i want to show you that they are not valuable; hence i searched the web for OO design patterns and found
+* a website listing many of them
+	\ links-to external https://www.oodesign.com/proxy-pattern.html
+* i worked through all of them, here are my quick impressions about them
+	* "decorator"
+		* = let us decrease the inheritance hierarchy, by replacing some inheritance with aggregation
+		* but: realizing that a more basic language construct [product type] is more adequate than a more involved one [inheritance] is not a "design pattern"; because to apply the more heavy-weight language construct is not a task to be solved
+	* "flyweight"
+		* = data reference :-) ["pointer" if you like]; yes: some people think it needs a different name and articles
+	* "factory"
+		* = stream
+	* "composite"
+		* = tree
+	* "strategy"
+		* = second order function, which is just function with function input : (x -> y) -> z
+	* "command"
+		* = special case of "strategy", where the input function is an action
+	* "builder"
+		* = special case of strategy, where the input function produces something instead of performing an action
+	* "singleton"
+		* = lazy initialization + mutable global state
+	* "state"
+		* = access control + mutable state
+	* "null object"
+		* monoid
+			\ links-to internal cabjryjnnstdjmvb
+	* "template method"
+		* = "strategy"
+	* "prototype"
+		* = changing things slightly = optics
+	* "interpretation"
+		* = denotational semantics
+		* in this role sum types work better because in a language the constructs [the production rules] are usually not extensible
+	* "iterator"
+		* = imperative traversable
+			* see (Jeremy Gibbons and Bruno Oliveira: "The essence of the Iterator pattern")
+				\ links-to external http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/#iterator
+		* this is an example of the rare situation that the OO style is easier to understand, more intuitive
+	* "visitor"
+		* the action performed by the "iterator"; "iterator" and "visitor" are 2 components of a single design pattern
+	* "memento"
+		* = cloning, which is not needed with the absence of mutation
+	* "observer"
+		* is an inherently OO solution; because it extends updating [an imperative thing] and designates a central object through which to drive the update; a perfect example for domain is user interface; i am not knowledgable in the UI domain but i know that functional UI exist and its practitioners like it
+	* "bridge"
+		* i did not understand this one in the 10 minutes i was willing to spend on it
+	* not OO specific
+		* "resource pool"
+		* no real relation to OO
+			* "proxy"
+				* = layering
+			* "mediator"
+				* seems to be equivalent to a 2-input function
+			* "adapter"
+			* "chain of responsibility"
+* i hope i understood most of them correctly
+* note that for most of them at least one of the following statements is true
+	* just renames some very simple notion
+	* unnecessarily overcomplicates some very simple notion with OO clothing
+	* no real relation to OO [its categorization into "OO design patter" is incorrect]
+	* involves state mutation
+		* though in a few cases the functional equivalent is less intuitive: altogether the functional [controlled] state handling is almost always a better solution because of the enormous advantages of the functional paradigm
