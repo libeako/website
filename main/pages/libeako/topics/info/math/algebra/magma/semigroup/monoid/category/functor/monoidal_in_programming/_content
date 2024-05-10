@@ -68,9 +68,9 @@
 	* in this formation the laws are chosen to be equivalent with monoidal; this formation of the laws is less intuitive, hence i omit them here
 	* this alternative formation does not take Functor as requirement, because its methods are powerful enough to implement Functor
 * monoidal-generic programs
-	* a good example:
-		* the sequence function that swaps container layers
-			\ links-to internal nuckddbslvpvzupy
+	* a good example is
+		* the !Traversable' interface
+			\ links-to internal uatqvzoqdjbcizxw
 * more sources
 	* Marcin Szamotulski : Monoidal and Applicative Functors
 		\ links-to external https://coot.me/posts/monoidal-functors.html
