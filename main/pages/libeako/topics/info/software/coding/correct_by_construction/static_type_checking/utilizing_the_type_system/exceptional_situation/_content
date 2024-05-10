@@ -4,4 +4,6 @@
 		\ links-to internal fbctgaodsnjovfll
 * exceptional return ["exceptions"]
 	* it is usually a good practice to leave this language feature for operational-like errors, like out-of-memory, division-by-zero and not use it to react to exceptionality of input; for the latter case consider using instead an "Either" type modifier on the output
-	* propagating exceptional value through function call stacks is much easier than most coders think - with smal functions that help to bubble up the exception, like the 'sequence' method of the "Applicative" interface
+	* propagating exceptional value through function call stacks is much easier than most coders think - with smal functions that help to bubble up the exception, like the 'sequence' method of the "Traversable" interface
+		* see Traversable
+			\ links-to internal uatqvzoqdjbcizxw
