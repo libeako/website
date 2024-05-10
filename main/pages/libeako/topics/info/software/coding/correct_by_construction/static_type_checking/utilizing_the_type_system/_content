@@ -15,4 +15,4 @@
 			* an implementation as a haskell library
 				\ links-to external https://hackage.haskell.org/package/gdp
 * the other side
-	* my practical experience tells that it is usually questionably to push the static type system usage further than what it can do naturally [is designed for]
+	* my practical experience tells that it is usually questionably to push the static type system usage further than what it is designed for

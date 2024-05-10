@@ -10,11 +10,11 @@
 		* what is an optional type
 			\ links-to external https://en.wikipedia.org/wiki/Option_type
 		* i may use the name "Maybe" for the optional type constructor function
-		* even in programming language that contain null, one should adopt the practise to almost never use it
-		* just pretend that the value set of type T does not contain null, and make this a convention
+		* even in programming languages that contain null, one should adopt the practise to almost never use it
+			* just pretend that the value set of type T does not contain null, and make this a convention
 		* when the value is intended to be optional then use Maybe<T>
-		* this gives a big readability boost to the code, because the reader can tell whether a value is optional at first glance
-		* it makes it totally clear where handling of non-existent case have to happen : when a Maybe<T> is given and a T is needed
+		* this gives a big readability boost to the code, because the reader can know at first glance whether a value is optional
+		* it makes it totally clear where handling of non-existent case have to happen: when a Maybe<T> is given and a T is needed
 			* at such places
 				* it force the coder to handle the non-existing case; hence null reference exception will not arise in run-time
 			* at other places
@@ -26,4 +26,4 @@
 		* and no, one can not do this with unit tests; that would require an un-writable, un-maintainable amount of testing code and would not guarantee correctness
 * enum
 	* the same story here as with null
-	* enum values like "unknown", "undefined", "default" should be moved out of the enum type's value set, and represented by wrapping the enum type with Maybe
+	* enum values like "unknown", "undefined", "default" should be moved out of the enum type's value set, and represented by wrapping the enum type with Maybe or similar type modifier

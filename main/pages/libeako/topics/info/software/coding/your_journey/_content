@@ -8,7 +8,7 @@
 * the same journey as i went
 	\ links-to internal ruwyqtccsonzjloi
 * this walkthrough will cover the road from JavaScript to Idris
-* why are these knowledge so good?
+* why is these knowledge good
 	* emotional advantages
 		* decreases frustration
 		* increases fun
@@ -26,13 +26,12 @@
 		* history of programming methodologies
 			* both industrial and academic and their relation
 		* why does the industry behind the academy by multiple decades?
-	* some basic prog lang notions
+	* some basic language notions
 		\ links-to internal jaxbiyrfnbhaormb
 		* both concepts and syntax
-		* i present this to prepare the audience to understand my later examples; but they are worth to know anyway because they are to overtake the programming world by popularity
 	* static typing
 		\ links-to internal crulbcjvhzgpkjis
-		* i claim that dynamic type checking does not have legitimacy in a normal programming tasks; programming languages should be statically type checked
+		* i claim that dynamic type checking does not have legitimacy in normal programming tasks; normal programming languages should be statically typed
 	* utilizing the type system
 		\ links-to internal ratihdffwublrlih
 		* it is not enough to have a good static type system, you should use it too
