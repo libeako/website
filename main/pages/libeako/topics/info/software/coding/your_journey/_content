@@ -61,10 +61,6 @@
 			* state mathematical theorems about the domain
 			* prove those theorems and have the compiler verify the proofs
 			* specify the software and have the compiler verify the correctness of the implementation according to the specification
-	* increasing the strength of the type system
-		\ links-to internal qzfwvslnetipqgqu
-		* parameterizing our types with more stuff: type functions, custom algebraic data types, runtime values ["dependent typing"]
-		* the more our type system can express - the less repetition we need in the code and more properties of our programs we can ensure
 	* a little more category theory
 		* some trivial knowledge, very good (usefulness / difficulty) value:
 		* isomorphism of objects
