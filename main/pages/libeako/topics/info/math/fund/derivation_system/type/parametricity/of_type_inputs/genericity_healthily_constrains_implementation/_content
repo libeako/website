@@ -23,3 +23,5 @@
 		* compose : (x -> y) -> (y -> z) -> (x -> z)
 		* compose (a, b) = λ x -> b (a x)
 		* only the type of the function is different; this more general type constrains the order of the functions in the composition, making the comment unnecessary and eliminating the possible error of mismatch between the comment and the implementation
+* "maybe" a solution for boolean blindness
+	\ links-to internal ogxjrjwmhpamaeme

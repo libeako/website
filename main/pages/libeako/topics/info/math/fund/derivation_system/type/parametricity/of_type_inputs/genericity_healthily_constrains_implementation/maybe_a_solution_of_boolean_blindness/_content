@@ -1,0 +1,14 @@
+\ id ogxjrjwmhpamaeme
+* here i present a type-safe solution for the "boolean blindness" problem, via the 'Maybe' type; it is simple and cheap but not widely used
+* it is an application of the more general (type-generalize for safety and and clarity technique)
+* the wide-spread method against boolean-blindness in 2024 is to choose descriptive, unambiguous names; it is a down-to-earth and cheap method and works well in most cases; the advantages of the method shown here is that it is type-safe and gives generalization that could become practically useful later for the client; 
+* i present it not to advocate its usage but rather only as an interesting method
+* examples
+	* switch
+		* once upon a time i had a client with a task for me: write a program that prints "hello world"; i implemented the program and it worked perfectly, my client was satisfied; but later the client wished a new feature: write an exclamation mark after the "hello world", but do so only if a certain command line flag is passed [not everyone likes exclamation marks]; how should i represent internally whether to write the exclamation mark? the usual method is to introduce a custom boolean type like
+		* datatype FeatureActivity = On | Off
+		* but a type-safe method is possible too, by generalization of the task: instead of an exclamation mark hard-coded let us be able to print anything after the "hello world" greating, let us store the postfix to print:
+		* FeatureActivity := Maybe String
+	* the List select function
+		* select : (x -> Bool) -> List x -> List x
+		* filter : (x -> Maybe y) -> List x -> List y

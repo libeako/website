@@ -1,7 +1,19 @@
 \ id frwelthtfwqzkjsm
-* value that perhaps do not exist should be represented by an "optional type", which is usually named "Option" or rather "Maybe"; this is better solution than the null value
-	* link to explanation
-		\ links-to internal fbctgaodsnjovfll
+* exceptional value
+	* the purpose of the type system is to differentiate among values that need to be handled differently; you work against this if you incorporate exceptional values into the value-set of types; that normally should be done by type modifiers, like optional types
+	* examples
+		* "unknown", "undefined", "default" values in enum types
+	* null value
+		* link to explanation
+			\ links-to internal fbctgaodsnjovfll
+	* usually is much better to use an optional type and exclude the exceptional values from the type [exclude at least by convention]
+		* it makes the code much more readable, because the reader can know at first glance whether a value is optional
+		* it makes it totally clear where handling of non-existent case have to happen: when a 'Maybe t' is given and a 't' is needed
+			* at such places: it forces the coder to handle the exceptional case; hence null reference exception will not arise in run-time
+			* at other places
+				* the coder can totally forget about the topic
+				* the coder does not place unnecessary (exceptional handlings) "just-in-case"
+					* the saving of unnecessary handlings of non-existence [boring, repetitive work] improves the quality of the necessary ones
 * exceptional return ["exceptions"]
 	* it is usually a good practice to leave this language feature for operational-like errors, like out-of-memory, division-by-zero and not use it to react to exceptionality of input; for the latter case consider using instead an "Either" type modifier on the output
 	* propagating exceptional value through function call stacks is much easier than most coders think - with smal functions that help to bubble up the exception, like the 'sequence' method of the "Traversable" interface

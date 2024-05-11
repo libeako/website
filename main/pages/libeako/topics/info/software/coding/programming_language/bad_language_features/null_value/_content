@@ -1,29 +1,9 @@
 \ id fbctgaodsnjovfll
-* ("optional" | "maybe") instead of null
-	* i advise to use optional type instead of the 'null' value
-	* null represents non-existence
-	* all major old programming languages contain null
-	* it is a misfeature
-	* its inventor, Tony Hoare said
-		* "I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."
-	* using an optional type is much better from all perspective
-		* what is an optional type
-			\ links-to external https://en.wikipedia.org/wiki/Option_type
-		* i may use the name "Maybe" for the optional type constructor function
-		* even in programming languages that contain null, one should adopt the practise to almost never use it
-			* just pretend that the value set of type T does not contain null, and make this a convention
-		* when the value is intended to be optional then use Maybe<T>
-		* this gives a big readability boost to the code, because the reader can know at first glance whether a value is optional
-		* it makes it totally clear where handling of non-existent case have to happen: when a Maybe<T> is given and a T is needed
-			* at such places
-				* it force the coder to handle the non-existing case; hence null reference exception will not arise in run-time
-			* at other places
-				* the coder can totally forget about the topic
-				* the coder do not place unnecessary (null checks and handlings) "just-in-case"
-			* the saving of unnecessary handlings of non-existence [boring, repetitive work] improves the quality of the necessary ones
-			* with null usage the responsibility to check null is usually unclear, it is inconvenient to store this info in comments and mine it from comments, and those comments usually even do not exist
-		* using Maybe instead of null is moving the boring work of (tracking the possibility of non-existence) from the human to the compiler
-		* and no, one can not do this with unit tests; that would require an un-writable, un-maintainable amount of testing code and would not guarantee correctness
-* enum
-	* the same story here as with null
-	* enum values like "unknown", "undefined", "default" should be moved out of the enum type's value set, and represented by wrapping the enum type with Maybe or similar type modifier
+* incorporating exceptional values into the types
+	* is normally a bad practice
+		\ links-to internal frwelthtfwqzkjsm
+* the null value lifts this bad idea to the language level, not only giving support for it but fixing the poisoning of all types with null
+* i advise to normally use optional type instead of the 'null' value; even in programming languages that contain null, one should adopt the practise to almost never use it; just pretend that the value set of type T does not contain null, and make this a convention
+* all popular programming languages contain null
+* its inventor, Tony Hoare said
+	* "I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."
