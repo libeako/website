@@ -11,5 +11,3 @@
 			* i consider (Either l) to be a partial application of the multi-input type function Either; its type is still a type function, which has 1 input
 		* (x -> )
 * hence functor is a good candidate for generic implementation via the data structure; because functor is a very important interface : the haskell compiler provides built-in automatism that can implement it for most types [without run-time overhead]
-	* link to "abstraction over data-structure"
-		\ links-to internal xkvczulejoaflnjf

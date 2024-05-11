@@ -41,9 +41,6 @@
 	* functional programming
 		\ links-to internal rqeeitsvmgrogdjp
 		* this is an easy and beautiful topic; also probably the most bang for the buck in this course; [though not equally well but still] can be used in any programming language without preparation
-	* structural polymorphism
-		\ links-to internal xkvczulejoaflnjf
-		* a feature in some programming languages [for example Haskell] that lets the programmer abstract over data types and traverse their shape
 	* have a break
 		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in: it helps to have some practical experience with functional programming
 	* type parametricity
