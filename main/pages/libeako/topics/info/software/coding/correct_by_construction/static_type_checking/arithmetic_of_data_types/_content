@@ -1,7 +1,8 @@
 \ id criytwacwdgeqemu
-* the names of the 2 type composing functions in adts [product, sum] have names like in arithmetic
-* this is founded on a homomorphism from (the algebra of types with product and sum type construction) to (the algebra of non-negative integers with product and sum functions); this homomorphism is the size function that maps to a type t the number of values of t
+* often the names of type composing functions is from arithmetic
+* this is founded on a homomorphism from (the algebra of types) to (the algebra of non-negative integers), which is the size function that maps to a type t the number of values of t
 	* in more earthy language
-		* by "size" of a type t i will mean the number of values of t
+		* by "size" of a type t i mean the number of values of t
 		* the size of a product type is the product of the sizes of types of its members
 		* the size of a sum type is the sum of the sizes of the types of its members
+		* the size of a function type from x to y is (size y) ^ (size x)
