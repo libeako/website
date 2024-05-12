@@ -32,15 +32,9 @@
 	* static typing
 		\ links-to internal crulbcjvhzgpkjis
 		* i claim that dynamic type checking does not have legitimacy in normal programming tasks; normal programming languages should be statically typed
-	* utilizing the type system
-		\ links-to internal ratihdffwublrlih
-		* it is not enough to have a good static type system, you should use it too
-			* some important examples:
-				* do not use null values; use a Maybe type instead
-				* do not use exceptions; use a Result type instead
 	* functional programming
 		\ links-to internal rqeeitsvmgrogdjp
-		* this is an easy and beautiful topic; also probably the most bang for the buck in this course; [though not equally well but still] can be used in any programming language without preparation
+		* this is an easy and beautiful topic; also probably the most bang for the buck; [though not equally well but] can be used in any programming language without preparation
 	* have a break
 		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in: it helps to have some practical experience with functional programming
 	* type parametricity
