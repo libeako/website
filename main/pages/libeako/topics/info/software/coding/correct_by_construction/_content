@@ -3,10 +3,10 @@
 * importance
 	* some software just really must not contain bugs
 	* some bugs are especially expensive
-		* for example : the ones in artificial intelligence algorithm heuristics
+		* example: the ones in artificial intelligence algorithm heuristics
 			* it is difficult to
 				* distinguish such bugs from suboptimal choice of heuristic
-					* first one needs to recognize that a result is not good enough, then answer the question : is the result not good enough because the code contains a bug or because the algorithm is not good enough?
+					* first one needs to recognize that a result is not good enough, then answer the question: is the result not good enough because the code contains a bug or because the algorithm is not good enough?
 				* find such bug with the usual step-through debugging
 					* often such bugs effect the result significantly only for some or only for big inputs
 	* in the regular situation
@@ -14,10 +14,10 @@
 			* even usual bugs are expensive; allegedly Bill Gates once said something like "Microsoft is not a software developer company but a software testing company", referring to the fact that a large part of the work at Microsoft is testing
 		* much frustration save on the side of the coder
 			* investigating bugs is a joy-killer activity for the coder
-* some concrete manifestations :
+* some concrete manifestations:
 	* moving work from the human coder to the compiler
 		\ links-to internal nelvtoguoomgxthl
-	* static type checking
-		\ links-to internal jyulqiuyobsytqwf
+	* static typing
+		\ links-to internal crulbcjvhzgpkjis
 	* avoiding dangers
 		\ links-to internal brqzviybtynlulwl
