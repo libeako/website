@@ -11,6 +11,8 @@
 	* types are checked automatically; comments and other natural texts are not checked, hence they are not guaranteed to be present and be in synchron with the code
 	* types being part of the formal language makes them more concise and easy to read than natural text
 * the outer-most framework of a typing process is the deduction system; it is the set of rules that specify how to deduce statements, potentially out of earlierly deduced statements; the statements thus deduced are said to be "judgements"
+* size-arithmetic of types
+	\ links-to internal criytwacwdgeqemu
 * proposition as type
 	\ links-to internal kdtdlfyrudrcnrrl
 * recursion in types
