@@ -1,11 +1,39 @@
 \ id zxsbxwlppaypmpnn
-* introduction
-	\ links-to internal rqeeitsvmgrogdjp
-* fix-point combinator
-	* a very good explanation of the fixpoint combinator "fix" in Haskell
-		\ links-to external https://www.vex.net/~trebla/haskell/fix.xhtml
-* recursion schemes
-	* Kwan : unfold and fold 
-		\ links-to external https://kseo.github.io/posts/2016-12-12-unfold-and-fold.html
-	* Traversing syntax trees [Twan van Laarhoven]
-		\ links-to external https://twanvl.nl/blog/haskell/traversing-syntax-trees
+* the definition of functional programming
+	\ links-to internal ahdbojilddohjnkj
+* functional programming is much easier than imperative
+	\ links-to internal zuvhnxrfcdqijbje
+* applicability
+	* the functional paradigm is not domain specific, it can do everything
+* "purely" functional
+	* a purely functional programming language is one of which the core semantics does not allow side-effects
+	* since before 2000 programming language theorists know that anything reasonably expected from a general purpose programming language can be provided by a purely functional programming language
+	* purity unleashes the benefits of functional programming, because in a pure language the properties of functional programming are not only anticipated but guaranteed, they may not be violated even accidentally, they can be relied on surely
+	* this has an important consequence : any general purpose programming language should be purely functional by design
+	* the most notable purely functional programming language is haskell
+* "higher-order" function
+	* is one an input of which is also a function
+	* they are very common in everyday functional programming
+* disadvantages
+	* none that i know of
+* advantages
+	\ links-to internal xaxqaihzanoadfll
+* requirements
+	\ links-to internal nnktlttxsmtkjnnc
+* some other motivation sources
+	\ links-to internal ljokksishyxkxzjx
+* how to be functional
+	\ links-to internal ikqxdpeebyuocqcu
+* no objects in functional programming
+	\ links-to internal hgbplzteiwrjegur
+* some misconceptions about functional programming
+	\ links-to internal vrdegqmtgfexpvcv
+* advanced
+	* fix-point combinator
+		* a very good explanation of the fixpoint combinator "fix" in Haskell
+			\ links-to external https://www.vex.net/~trebla/haskell/fix.xhtml
+	* recursion schemes
+		* Kwan : unfold and fold 
+			\ links-to external https://kseo.github.io/posts/2016-12-12-unfold-and-fold.html
+		* Traversing syntax trees [Twan van Laarhoven]
+			\ links-to external https://twanvl.nl/blog/haskell/traversing-syntax-trees

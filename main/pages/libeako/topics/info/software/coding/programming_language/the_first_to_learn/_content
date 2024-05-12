@@ -7,7 +7,7 @@
 * because
 	* it is functional
 		* i wrote about (functional programming) too
-			\ links-to internal rqeeitsvmgrogdjp
+			\ links-to internal zxsbxwlppaypmpnn
 	* it is simple
 		* it is high level; the programmer does not need to deal with [and hence learn] low level things like memory management
 		* its type system is weak : lacks even type function polymorphism; this prevents elm programmers to use abstractions that are difficult for a beginner programmer [like monad]; hence all the material one can find on the internet related to elm is without these advanced topics - this makes elm a safe space to learn programming, where one can comfortably learn only the basics first
