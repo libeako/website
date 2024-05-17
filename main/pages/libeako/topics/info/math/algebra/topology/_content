@@ -10,11 +10,11 @@
 	* hence the full and the empty sets are closed
 		* because they are the complements of the empty and full sets, which are open
 	* hence both extremal sets are both open and closed
-* the "interior" of a set is the union of its open subsets
 * theorem: is open = equals to its interior
 	\ id oktpeykraqoigtre
 	* with other words: the open sets are exactly those which equal to their interior
 	* proof is trivial
+	* dually: is closed = equals to its closure
 * the "neighborhood" of a set s is a set which has an open subset which includes s
 * the "neighborhood" of a point x is a neighborhood of {x}
 * theorem: n is neighborhood of set s <=> n is neighborhood of all points of s
@@ -22,3 +22,21 @@
 	* <=: use the property that the union of open sets is open
 * theorem: s is open <=> s is neighborhood of itself
 	* proof is trivial
+* the "interior" of a set means the union of its open subsets
+	* theorem: the interior of s is the greates open open subset included by s
+		* proof is trivial
+	* the points of an interior are the "interior point"s
+		* theorem: x is interior point of s iff x has an open neighborhood included by s
+			* proof is trivial
+	* the "exterior" of a set means the interior of its complement
+		* the points of the exterior are the "exterior point"s
+	* dually: the "closure" of a set means the intersection of the closed sets which include it
+		* theorem: the closure of a set is the smallest closed set which includes s
+		* the points of a closure are the "adherent" points
+	* x is an "isolated" point of s means that x is exterior of s\{x}
+* the "limit" points are the not isolated adherent points
+	* theorem: this is equivalent to all neighborhoods of it containing point of s other than it
+		* proof is easy
+	* the "derived" set of a set os the set of its limit points
+* theorem: the points of a closing of a set can be partitioned to its limit and isolated points
+	* proof is easy: the points [of the closing] either do or do not have other points of the set in all of their neighborhoods
