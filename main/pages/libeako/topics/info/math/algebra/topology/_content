@@ -10,11 +10,6 @@
 	* hence the full and the empty sets are closed
 		* because they are the complements of the empty and full sets, which are open
 	* hence both extremal sets are both open and closed
-* theorem: is open = equals to its interior
-	\ id oktpeykraqoigtre
-	* with other words: the open sets are exactly those which equal to their interior
-	* proof is trivial
-	* dually: is closed = equals to its closure
 * the "neighborhood" of a set s is a set which has an open subset which includes s
 * the "neighborhood" of a point x is a neighborhood of {x}
 * theorem: n is neighborhood of set s <=> n is neighborhood of all points of s
@@ -22,21 +17,40 @@
 	* <=: use the property that the union of open sets is open
 * theorem: s is open <=> s is neighborhood of itself
 	* proof is trivial
-* the "interior" of a set means the union of its open subsets
-	* theorem: the interior of s is the greates open open subset included by s
-		* proof is trivial
-	* the points of an interior are the "interior point"s
-		* theorem: x is interior point of s iff x has an open neighborhood included by s
+* the "interior" of a set
+	* definition
+		* intuitively
+			* x is interior point of s iff x has a neighborhood included by s
+		* this is equivalent to (the union of its open subsets of s)
+			* proof is trivial
+		* theorem: the interior of s is the greatest open subset included by s
 			* proof is trivial
 	* the "exterior" of a set means the interior of its complement
 		* the points of the exterior are the "exterior point"s
-	* dually: the "closure" of a set means the intersection of the closed sets which include it
-		* theorem: the closure of a set is the smallest closed set which includes s
-		* the points of a closure are the "adherent" points
-	* x is an "isolated" point of s means that x is exterior of s\{x}
-* the "limit" points are the not isolated adherent points
-	* theorem: this is equivalent to all neighborhoods of it containing point of s other than it
+		* x is an "isolated" point of s means that x is exterior of s\{x}
+	* dually: the "adherent" points of a set are the ones that have neighborhood that contains point of the set
+		* this is equivalent to (the intersection of the closed sets including the set)
+		* the closure of a set s is (the smallest closed set which includes s)
+			* thus it is said to be the "closure" of s
+* theorem: is open = equals to its interior
+	\ id oktpeykraqoigtre
+	* with other words: the open sets are exactly those which equal to their interior
+	* proof is trivial
+	* dually: is closed = equals to its closure
+* "limit points" of a set
+	* intuitively these are the ones that have other points of the set arbitrariy close
+		* more formally: x is limit point of s iff all neighborhoof of x contains other than x point from s
+	* theorem: this is equivalent to (border points are the not isolated adherent points)
 		* proof is easy
-	* the "derived" set of a set os the set of its limit points
+	* the "derived" set of a set is the set of its limit points
 * theorem: the points of a closing of a set can be partitioned to its limit and isolated points
 	* proof is easy: the points [of the closing] either do or do not have other points of the set in all of their neighborhoods
+* "border points"
+	* intuitively these are the points which are arbitrarily close to both the set and its complement
+	* more formally
+		* a point x is in the border of set s iff all neighborhood of x contains point both from s and its complement
+	* this is directly equivalent to the point not being either in the interior or exterior of s
+	* this is equivalent to being in the complement of the interior and exterior of s, that is in the intersection of the closure of s and the closure of the complement of s
+	* we can mix the 2 formulations: one part can come from being in the closure of one of the 2 complementing sets and not being in the interior of the other: a point x is in the border of set s iff x is in the closure of s and not in the exterior of s
+	* theorem: the union of a set with its border is the closure of the set
+		* poof is easy
