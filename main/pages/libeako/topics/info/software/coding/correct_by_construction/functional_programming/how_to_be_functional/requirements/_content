@@ -1,0 +1,19 @@
+\ id nnktlttxsmtkjnnc
+* technical
+	* very useful
+		* tracing garbage collection
+			* because of the avoidance of mutation: creating new objects is an important need in functional programming
+			* a tracing garbage collector enables it without the
+				* fear of many small objects degrading the runtime efficiency
+				* hassle of keeping track of circular references
+		* first class function type
+			* for functions whose input or output is function too
+		* let expression syntax
+	* but nothing is strictly necessary
+		* i coded in C# for 1-2 years, in functional style; C# tried to punish me for it, but i insisted - for great good - it helped me immensely; my task was complex with many occasions having to refactor the implementation due to external requests - now i feel that i would not have been able to handle the task without the functional paradigm
+		* even for c++ coders, who can not avoid all side-effects: just trying to avoid some brings big gain in programming efficiency
+* coder skill
+	* no skill or knowledge is necessary for functional programming; just try to avoid side effects, so much of them as you comfortably can
+* schedule
+	* it is possible and okay to do the adoption of functional programming gradually
+	* whatever your obstacle you feel is [technical or cultural]: do not worry about it; you do not have to devote your self or your project fully to functional programming; instead: just lean toward it; if you feel you can avoid a side-effect with reasonable cost then do so; even avoiding only some of them is already very useful; you should not give up on functional programming just because you want or need to leave some side-effects, just try to minimize them

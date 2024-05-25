@@ -1,0 +1,7 @@
+\ id xaxqaihzanoadfll
+* side effects make programming more difficult
+	\ links-to internal zuvhnxrfcdqijbje
+* makes laziness difficult
+	* laziness is automation of evaluation order, which though is error-prone to change in the presence of side-effects
+* maked parallel programming difficult
+	* data race: multiple threads accessing the same variable, at least 1 of them to write

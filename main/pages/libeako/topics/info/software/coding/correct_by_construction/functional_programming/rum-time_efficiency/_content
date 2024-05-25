@@ -1,0 +1,39 @@
+\ id nmzlpnpnrsfmunrf
+* runtime-efficiency optimization is program transformation; the transformed program must semantically be equivalent to the original program; the possibility of side effects often makes this false or at least difficult to prove, which is enough to prevent the transformation to be applied; hence side-effects make optimization more difficult, both at low and high levels; for both the compiler, the runtime system and the human coder
+* level of optimizations 
+	* low
+		* efficient c++ code contains lot of "const" declaration, to enable more micro-optimization by the compiler
+		* a garbage collection algorithm can have competitive efficiency only if it is generational; the idea behind the generational ones is that old references are not frequently changed; if this assumption is false then the generational collector can suffer
+	* high
+		* example
+			* function 'map' lifts the given function to the level of a collection
+			* in absence of side-effects: ((map f) >>> (map g)) is semantically equivalent to (map (f >>> g)); but the later one is more efficient, because it iterates the collection once [with the function (f >>> g)] while the former one iterates the collection twice [first with function f then with function g]
+			* if side-effects may be present in f or g then the 2 versions are not necessarily equivalent semantically
+				* for example
+					* imagine that both f and g logs its name; then
+						* ((map f) >>> (map g)) logs ff...fgg...g
+						* (map (f >>> g)) logs fgfg...fg
+					* so their logs are different, thus they are not equivalent
+		* in haskell such optimization transformations can be specified by the coder, to then be automatically performed by the compiler
+* level of the code
+	* lower level of the code does not make it more efficiency, it is just differently optimized
+		* link to explanation
+			\ links-to internal yjnweovfnkfncnhp
+	* functional programming often can be low level
+		* example
+			* imperative version
+				* c := 0
+				* for (int i = 0; i < n; ++n)
+					* c := c + a[i] * b[i]
+			* it can be rewritten to low level functional
+				* let
+					* dp m acc =
+						* if m == 0
+							* then 0
+							* else dp (m-1) (acc + a[m] * b[m])
+					* in dp n 0
+				* this version
+					* does not create temporary vertors
+					* is monomorphic [though an optimizing compiler automatically monomorphises in the background too anyway]
+					* the recursion occurs in a tail call
+						* hence the compiler will reuse the execution stack frame for the recursive function call, turn the recursion into a loop using only constant memory

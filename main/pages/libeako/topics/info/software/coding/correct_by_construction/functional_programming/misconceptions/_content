@@ -1,0 +1,23 @@
+\ id vrdegqmtgfexpvcv
+* 'functional programming is domain specific'
+	* nope, it is general purpose, though it is usually not applied where low level optimization is necessary
+* 'the big reason to do functional programming is parallel programming'
+	* functional programming helps much in parallel programming, but this advantage is just one of the many and one of the small ones; readability, bug-resistance, modularity, maintainability, fun are much more important advantages
+	* people were falling in love into functional programming starting from the 1960s, when multi-core processors existed not even at the idea level yet
+* 'functional programming needs math knowledge'
+	* functional programming embraces math, for great good; but math in functional programming is an option, not a requirement; it is possible to adopt, love and greatly benefit from functional programming without any math knowledge
+* 'functional programming has language feature x'
+	* functional programming is a good language design decision; good language design is likely to have other goodies [like x]; thus the good language features correlate with functional programming; but this is only because of a common cause and not because some fundamental connection between functional programming and x
+	* examples
+		* 'sum types are functional programming features'
+			* nope; theoretically they both could live without the other
+				* sum types could be implemented by non-functional languages too; even by c++; it is just a design decision that c++ does not do it [a wrong decision]
+		* 'functional programming languages are strongly typed'
+			* not necessarily at all; for example: the purely functional language "elm" has a weak type system; purely functional languages exist with no static type checking [for example: clojure]
+* 'functional programming, being higher level must be bad for runtime efficiency'
+	* see functional programming and run-time efficiency
+		\ links-to internal nmzlpnpnrsfmunrf
+* 'functional programming is about higher order functions'
+	* though functional programmers use higher order functions a lot, higher order functions are not in the main idea; functional programming is possible even in languages that does not provide first class functions
+* 'functional programming is about immutability'
+	* even some purely functional programming languages do allow mutation, inplace, for good runtime efficiency, they just need to be wrapped into functional wrappers

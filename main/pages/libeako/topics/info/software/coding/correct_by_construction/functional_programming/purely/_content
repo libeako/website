@@ -1,0 +1,10 @@
+\ id gonjeyziyomuqhqm
+* a purely functional programming language is one of which the core semantics does not allow side-effects
+* any general purpose programming language should be purely functional by design
+	* anything reasonably expected from a general purpose high level programming language [Java, C#, ...] - can be provided by a purely functional programming language; 
+	* purity is not only trying to avoid side effects but avoiding all of them, surely; we can rely on the total absense of side-effects; this gives additional benefits 
+		* enables secure libraries
+			\ links-to internal cfccueyjcvaohdzb
+		* evaluation order automation
+			\ links-to internal gvlvjsxsrqfqfght
+* the most notable purely functional programming language is haskell

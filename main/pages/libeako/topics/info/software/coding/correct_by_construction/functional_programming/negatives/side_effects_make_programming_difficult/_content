@@ -1,0 +1,11 @@
+\ id zuvhnxrfcdqijbje
+* side effects make programming much more difficult; here i list explanations of this; these explanations may overlap, but they at least approach with different views
+* 
+	* how to determine the value bound to a name
+		* without side effects: if the coder wants to recall the value bound to a name then we only needs to look at the definition of the name; when side effects may be present than they could change that value, hence all the code needs to be viewd from the definition to the use sight
+	* procedures are bigger than expressions
+		* a program without side effects consists of names, bound to values of expressions; thes bindings, as equalities, state relationships between values; if the are correct individually than the whole program is correct too; hence it is enough to oversee the correctness of the bindings one-by-one; when side effects are present than the program consists of instructions, which intract with each other and bindings; hence with side effects the coder must oversee a whole procedure at a time; procedures are usually bigger than expressions
+	* + 1 dimension
+		* programs consists of names, bound to value of expressions; side effects introduce 1 more dimension into the program: time; the values may change in time
+		* + 1 dimension makes the coding task an order of magnitude more difficult
+			* to illustrate: how much more difficulty the additional of a dimension may cause? for an example consider computer graphics; it is much more difficult to render a 3 dimensional scene than to render a 2 dimensional scene

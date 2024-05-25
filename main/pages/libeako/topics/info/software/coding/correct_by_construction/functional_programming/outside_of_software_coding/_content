@@ -1,0 +1,17 @@
+\ id vklgnrmtoqvxspkk
+* package management
+	* Nix
+		\ links-to external https://nixos.org/nix/
+		* is widely considered the best package manager; it is functional
+* operating system
+	* it is a usual in the Linux world to build new operating system distributions on revolutionary package managers; Nix is a very revolutionary one; it did not avoid this fate either; the distribution built on it is NixOS, an operating system which not only uses a functional package manager, but also applies the functional idea to operating system matters, unrelated to package management, NixOS is the best operating system for desktop, in my opinion, it is the choice for me
+* decentralization
+	* functional modelling is needed to run a program on a virtual computer distributed through trustless physical computers ["nodes"]; this is because in the absence of trust the nodes may not have the possibility to modify existing data; thus the functional method brings us decentralization; as in functional programming, a distributed computation may modify state, but only in a controlled way, for example "with consensus" or with eventual consistency
+	* static internet content
+		* static content of the internet may be based on decentralized foundation; notable projects in this field are IPFS, DFinity
+	* cryptographic money
+		* like Bitcoin
+		* the chain is a functional data structure, a linked list [or more generally: directed acyclic graph], the links in which are secured with cryptographic hashing
+	* version control
+		* like Git
+	* instant messaging and social networking
