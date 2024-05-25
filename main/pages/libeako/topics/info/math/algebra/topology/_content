@@ -54,3 +54,5 @@
 	* we can mix the 2 formulations: one part can come from being in the closure of one of the 2 complementing sets and not being in the interior of the other: a point x is in the border of set s iff x is in the closure of s and not in the exterior of s
 	* theorem: the union of a set with its border is the closure of the set
 		* poof is easy
+	* theorem: set is open iff does not intersect with its boundary
+		* proof is trivial

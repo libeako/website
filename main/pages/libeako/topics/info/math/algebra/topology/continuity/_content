@@ -1,0 +1,17 @@
+\ id ijidewelvrqswzry
+* the "continuity" concept is most generally defined in topology
+* continuity is a property of a function between 2 toplogies at a certain point
+* let the name of the function be f and the name of the point be x, if not otherwise stated
+* these definitions are equivalent
+	* neighborhood inclusion
+		* forall neighbood No of (f x): exist neighborhood of x Ni: f Ni <= No
+		* this is the most intuitive definition and the general version of the definition often used in the scalar number fields
+	* open neighborhood inclusion
+		* same as 'neighborhood inclusion' but uses (open neighborhood) instead of neighborhood
+		* proof of equivalence is trivial
+	* neighbohood's inverse image is neighborhood
+		* forall neighbohood Ni of (f x): ((inverse f) Ni) is neighbohood of x
+		* proof of equivalence with definition 'neighborhood inclusion' is trivial
+			* use these facts:
+				* the inverse image of a smaller set is smaller
+				* a set including a neighborhood is a neighborhood
