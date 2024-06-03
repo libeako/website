@@ -35,34 +35,19 @@
 	* functional programming
 		\ links-to internal zxsbxwlppaypmpnn
 		* this is an easy and beautiful topic; also probably the most bang for the buck; [though not equally well but] can be used in any programming language without preparation
-	* have a break
-		* i recommend you to have a time break here; spend some time coding functionally; get to the point where you get it, like it, feel its superiority; the rest of the journey is more advanced; more difficult to understand; for it to make sense, click in: it helps to have some practical experience with functional programming
 	* type parametricity
 		\ links-to internal iuvbupavbjmhfrxj
-		* a coding paradigm of generality [by parametric type polymorphism], a simple, very cheap technique to improve software-correctness and source-readability
 	* abstraction by mathematics
 		\ links-to internal flktedmyhawaehus
 		* "design patterns" done well
-		* the super-power of compositionality, taken from the well-established mathematical field abstract algebra, especially category theory; i explain only the very basic, but very useful concepts: monoid, functor, applicative, monad
+		* the super-power of compositionality, taken from the well-established mathematical field abstract algebra, especially category theory; i explain only the very basic, but very useful concepts: monoid, functor, applicative, monad, traversable
 	* proposition as type
 		\ links-to internal kdtdlfyrudrcnrrl
-		* strong connection is between programming and logic - the "proposition as type correspondence"
+		* static type systems induce logics, by representing propositions as types and proofs as definitions
 		* this is a beautiful topic; the most interesting thing i ever learned in programming; it shows how programming and logic are the same thing at a certain level, via a surprisingly simple connection; this connection makes us able to use a single simple programming language to not only implement software but also:
 			* model its domain
 			* state mathematical theorems about the domain
 			* prove those theorems and have the compiler verify the proofs
-			* specify the software and have the compiler verify the correctness of the implementation according to the specification
-	* a little more category theory
-		* some trivial knowledge, very good (usefulness / difficulty) value:
-		* isomorphism of objects
-			\ links-to internal qxijfmdcfenjblwc
-		* duality
-			\ links-to internal yimhrxhreprkjkfk
-		* contravariant functor
-			\ links-to internal fhdcexkhowvzxltx
-		* profunctor
-			\ links-to internal evecfkoaaczzekya
+			* specify and implement the software and have the compiler verify that the implementation is correct according to the specification
 	* optics
 		\ links-to internal ndgkrnbojyputpec
-	* arithmetic of data types
-		\ links-to internal criytwacwdgeqemu
