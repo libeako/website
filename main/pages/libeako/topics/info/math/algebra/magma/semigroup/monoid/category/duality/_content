@@ -1,14 +1,11 @@
 \ id yimhrxhreprkjkfk
 * definition
-	* for all categories : reversing all the arrows in it results in a category; the resultant category is named the "dual" of the original category
+	* for all categories: reversing all the arrows in it results in a category; the resultant category is named the "dual" of the original category
 * dual is involution
-	* which means that the dual of the dual is the original [for all category c : dual (dual c) = c]
-		* => all categories are dual of some category
+	* which means that the dual of the dual is the original [dual >>> dual = id]
+		* => each category is the dual of some category
 * the "duality principle"
-	* is a theorem : if a proposition is true for all categories then the dual of the proposition [the same but the arrows reversed in it] is also true for all categories
+	* is a theorem: if a proposition is true for all categories then the dual of the proposition [the same but the arrows reversed in it] is also true for all categories
 		* the proof is trivial, based on the observation that all categories are dual of some category
-* the significance of duality
-	* all the results in category theory automatically have a dual version for free
-	* 2 things from other territories that seem unrelated may turn out to have correspondents in category theory that are dual to each other; such turn out reveals structural "sameness" between those seemingly unrelated things, a bridge between them that can be used to copy results from any to the other
-		* example
-			* the product and sum types from programming
+	* importance
+		* all the results in category theory automatically have a dual version for free

@@ -3,7 +3,7 @@
 * then they are not real values, they can not be evaluated
 	* hence they must be encapsulated into some 
 		* monad
-			\ links-to internal myypaoqejobaajxe
+			\ links-to internal mtcrpjujemznyvue
 		* signalling that fact
 * example
 	* excluded-middle : (p : Type) -> CanNotBeEvaluated (Either p (p -> Empty))

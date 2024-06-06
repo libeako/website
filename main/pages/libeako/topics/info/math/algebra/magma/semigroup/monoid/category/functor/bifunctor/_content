@@ -2,37 +2,37 @@
 * a bifunctor is a functor whose source is a product category
 	* see 'product of algebras'
 		\ links-to internal wfkoexrvspdbfjom
-* i will use programmers' language in this part
 * i will name the curried version of the map function of a bifunctor with "bimap"
 * components
-	* by fixing a component of the source product category : we get a functor on the other component :
-	* map_1 f = bimap f id map_2 f = bimap id f
-	* in haskell folklore the naming is "first" = 'map_1', "second" = 'map_2'
-* playing with the composition law :
-	* writing the arrows as pairs of arrows in the source categories :
+	* by fixing a component of the source product category: we get a functor on the other component:
+	* map_1 f := bimap f id
+	* map_2 f := bimap id f
+	* in Haskell folklore the naming is "first" = 'map_1', "second" = 'map_2'
+* playing with the composition law:
+	* writing the arrows as pairs of arrows in the source categories:
 		* map ((f1, f2) >>> (g1, g2)) = map (f1, f2) >>> map (g1, g2)
-	* the left side of this rewritten by the definition of product category : :
+	* the left side of this rewritten by the definition of product category:
 		* map (f1 >>> g1, f2 >>> g2) = map (f1, f2) >>> map (g1, g2)
-	* with the curried map function :
+	* with the curried map function:
 		* bimap (f1 >>> g1) (f2 >>> g2) = bimap f1 f2 >>> bimap g1 g2
-	* because a bifunctor is also a functor : this composition law is ensured by parametricity
+	* because a bifunctor is also a functor: this composition law is ensured by parametricity
 	* by choosing
-		* g1 = f2 = id :
-			* we have :
+		* g1 = f2 = id:
+			* we have:
 				* bimap (f1 >>> id) (id >>> g2) = bimap f1 id >>> bimap id g2
-			* which is :
+			* which is:
 				* bimap f1 g2 = map_1 f1 >>> map_2 g2
-			* by rename :
+			* by rename:
 				* bimap h1 h2 = map_1 h1 >>> map_2 h2
-		* f1 = g2 = id :
-			* we have :
+		* f1 = g2 = id:
+			* we have:
 				* bimap (id >>> g1) (f2 >>> id) = bimap id f2 >>> bimap g1 id
-			* which is :
+			* which is:
 				* bimap g1 f2 = map_2 f2 >>> map_1 g1
-			* by rename :
+			* by rename:
 				* bimap h1 h2 = map_2 h2 >>> map_1 h1
-		* these resultant equations have the same left side, hence their right side must equal too : map_1 and map_2 commute : 
+		* these resultant equations have the same left side, hence their right side must equal too: map_1 and map_2 commute:
 			* (map_1 h1 >>> map_2 h2) = (map_2 h2 >>> map_1 h1)
 * bimap from map_1 and map_2
 	* the (bimap f g = map_1 f >>> map_2 g) equality gives a way to derive bimap from map_1 and map_2
-	* for some bifunctors : it is easier to specify map_1 and map_2 instead of bimap; if we do so then of course we have to make sure that the identity law holds for map_1 and map_2; the composition law is ensured by parametricity; from the identity laws of map_1 and map_2 the identity law of bimap follows and then the composition law of bimap from parametricity
+	* for some bifunctors: it is easier to specify map_1 and map_2 instead of bimap; if we do so then of course we have to make sure that the identity law holds for map_1 and map_2; the composition law is ensured by parametricity; from the identity laws of map_1 and map_2 the identity law of bimap follows and then the composition law of bimap from parametricity

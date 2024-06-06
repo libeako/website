@@ -1,16 +1,17 @@
 \ id eovnsnrjngyuihhx
-* associativity: 
-	* forall x y z :
+* associativity
+	* forall x y z
 		* (x <> y) <> z = x <> (y <> z)
 	\ id zupoyjhzjznssfcb
-	* with equivalent but perhaps more intuitive expressions:
+	* equivalent but perhaps more intuitive expressions:
 		* grouping of the operations does not matter
 		* the order of the evaluation of the operations does not matter
 * definition
 	* class Semigroup t
 		* (<>) : t -> t -> t
 			* -- is associative
-* thus semigroup is a type-class equivalent to an associative magma
+			* often said to be the "composition" or "aggregation" method
+* thus semigroup is equivalent to an associative magma
 * some examples of semigroups
 	* i notate the examples with juxtaposition [separate the (collection of values) and the method with only a space]
 	* 
@@ -29,7 +30,7 @@
 	* by product type construction
 		* instance Semigroup (t1 t2) <= (Semigroup t1, Semigroup t2) where
 			* (x11, x12) <> (x21, x22) = (x11 <> x21, x21 <> x22)
-		* of course this works with any kind of product type [any tuples, vectors]
+		* of course this works with any kind of product type [tuples, vectors]
 	* by non-existance
 		* instance Semigroup (Maybe x) <= Semigroup x where
 			* just x1 <> just x2 = just (x1 <> x2) 

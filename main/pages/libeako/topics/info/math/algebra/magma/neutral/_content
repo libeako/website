@@ -3,8 +3,9 @@
 	* forall x. f nl x = x
 * a "right-neutral" value of a binary function f is 'nr' iff
 	* forall x. f x nr = x
-* a "neutral" value is one that is both left- and right-neutral
+* a "neutral" value is one that is both left- and right- neutral
 * the words "neutral" and "identity" are both used for this concept
+* students often think about neutral as being empty in some way; this is very often true but not always
 * neutral values are unique
 	* proof
 		* suppose n1, n2 are identities

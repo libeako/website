@@ -1,8 +1,38 @@
 \ id edsabrzmtmhnwgml
-* motivation for software coders
-	\ links-to internal vupzazrdkbzocwdi
-* introduction
-	\ links-to internal hdawzncgtnabaocq
+* understand monoid first, because category is a generalization of monoid
+	* link to monoid
+		\ links-to internal cabjryjnnstdjmvb
+* what is a category?
+	* formally
+		* the slots
+			* objects
+			* arrows [between the objects]
+		* the methods
+			* here i use very precise types, parameterizing the type of arrows and objects with object values
+			* the ends
+				* source : (x ~> y) -> x
+				* target : (x ~> y) -> y
+			* the composition methods
+				* (>>>) : (x ~> y) -> (y ~> z) -> (x ~> z)
+				* (<<<) = flip (>>>)
+			* neutral : x ~> x
+		* the laws are like of monoid
+			* the composition is associative
+			* 'neutral' is neutral in composition
+* category to monoid is like static type checking to dynamic type checking
+* 'neutral's having to be endo is a consequence of their neutrality
+* some examples of categories
+	* some famous ones
+		* functions between (sets or types)
+			* this is very important, specially in coding; much of my text here even assumes that the category is functions between some types
+		* in logic
+			* implications between statements
+			* proofs of implications between statements
+		* homomorphisms between algebras
+		* [partial] orderings
+		* paths of directed graphs
+		* transformations between coordinate systems
+	* it is easy to create interesting sub-categories of these by constraining the collection of objects or the collection of arrows
 * category theory is very abstract
 	* abstractness gives power
 	* abstractness makes understanding difficult

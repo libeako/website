@@ -1,0 +1,23 @@
+\ id dkrtqrqtctaagtrx
+* the most important category in coding is the one whose objects are types and arrows are functions between those types; here by "functor" i mean a functor between such categories
+* definition
+	* interface Functor cl ch f <= (Category cl, Category ch) where
+		* map : (cl x y) -> (ch (f x) (f y))
+	* usually cl and ch are the category of functions between types, in which case the definition could simply be
+		* interface Functor f where
+			* map : (x -> y) -> (f x -> f y)
+	* in this code fragment
+		* the mapping of types is 'c'
+		* the mapping of functions is 'map'
+	* the laws say this is a homomorphism
+		* map id = id
+		* (map g >>> map h) = map (g >>> h)
+* map "lift"s
+	* intuitively: function 'map' "lift"s a function from the normal type level to the level of the collection type
+	* i like word "lift" more because it generalizes to multi-input functions more nicely
+* functor = content + context
+	\ links-to internal yofhsfgzemzzonmk
+* functors are very common
+	\ links-to internal bzefktrxsjcdpwwk
+* functor-generic code
+	\ links-to internal gmxnnexlvjvpclrd

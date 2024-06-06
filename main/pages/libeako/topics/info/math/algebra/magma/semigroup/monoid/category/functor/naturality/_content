@@ -1,65 +1,70 @@
 \ id nisopwyprssrsvgg
 * on Wikipedia
 	\ links-to external https://en.wikipedia.org/wiki/Natural_transformation
-* natural transformation and natural isomorphism are important notions in mathematics and software coding; they are defined by many sources on the web; but intuition behind them is not well explained; this part tries to fill this gap
+* natural transformation and natural isomorphism are important notions in mathematics; many pages on the web define it, but do not give intuition; this part tries to do that
 * the intuition from functor as data structure
-	* the type of natural transformations in the constructive world is
+	* the type of natural transformations in code is
 		* (Functor f, Functor g) => forall x . f x -> g x
 	* a simple example of functor is pairs with one of the component type fixed [X*C, C*X]
-	* X*C and C*X are not the same functors; they feel like they are the same, but they are not, they are only isomorphic
-	* can you think of an invertible function that witnesses this isomorphism? of course, it is trivial; here is the fun part: i know which one you think of: the one that reverses the component order in the pair structure; how do i know? in this particular example it is the only natural choice; a "natural" solution does not inspect the type variable [X] and does not branch on it, but works the same way for all values of it
-	* this in type theory is known as 
+	* X*C and C*X are not the same functors; but they are isomorphic
+	* can you think of an invertible function that witnesses this isomorphism? of course, it is trivial; here is the fun part: i know which one you think of: the one that reverses the component order in the pair structure; how do i know? in this particular example this is the only natural choice; a "natural" solution does not inspect the type variable [X] and does not branch on it, but works the same way for all values of it
+	* this 'does not branch on the type' in type theory is known as 
 		* parametricity
 			\ links-to internal ejqpvlbcoexibqku
 	* also the content of a functor can be changed with keeping the structure
-		* this was explained earlier
+		* see explanation
 			\ links-to internal yboclzmzvuwqxcdt
-	* both the structure and the content of a functor can be changed without disturbing the other; this is equivalent to the order of such transformations not mattering; it does not matter if (we change the content of the "X" component of the pair first and then the order of the 2 components) or (we change the order of the 2 components first and then the content of the "X" component); this is exactly what the definition of natural isomorphism says with its commutative diagram: 2 changes of the 2 different aspects [(transition between objects inside category | moving along an arrow between the objects) and (transition between the functors | moving along the natural transformation)], may happen in any order, the result is the same; to further support the intuition: go back to the (functor as data structure) view; in it naturality says: it does not matter if (we change the content first and then the structure) or (we change the structure first and then the content)
+	* both the structure and the content of a functor can be changed without disturbing the other; this is equivalent to the order of such transformations not mattering; it does not matter if (we change the content of the "X" component of the pair first and then the order of the 2 components) or (we change the order of the 2 components first and then the content of the "X" component)
+	* more generally: naturality says: it does not matter if (we change the content first and then the structure) or (we change the structure first and then the content)
+	* this is exactly what the definition of natural isomorphism says with its commuting: 
+	* 2 changes of the 2 different aspects
+		* transition between objects inside category [moving along an arrow between the objects]
+		* transition between the functors [moving along the natural transformation]
+	* may happen in any order, the result is the same
 * natural { transformation | isomorphism }
 	* naturality in "natural transformation" and "natural isomorphism" is the same property; the difference between the 2 notion is in the components of them: a transformation is any function, an isomorphism must be invertible
-* parametricity implies naturality of transformations between functors
+* parametricity of the content type implies naturality of transformations between functors
 	* functions with the type
-		* (Functor f, Functor g) => forall x . f x -> g x
+		* (Functor F, Functor G) => forall x . F x -> G x
 	* are parametric in x, hence are natural transformations
-	* i will illustrate this on the example of natural transformation itself
-		* vague proof
-			* by wadler's method we get
-				* forall X1, X2 : Type
-					* forall f : X1 -> X2
-					* forall nt1 : F X1 -> G X1
-					* forall nt2 : F X2 -> G X2
-					* forall fx1 : F X1
-					* forall fx2 : F X2 
-						* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
-			* this contains relation statements about functor values; i need to translate these to relation statements on their content types; this can be done by using
-				* the parametricity relation corresponding to functors
-					\ links-to internal wqbrusvmsxteurms
-				* forall X1, X2 : Type
-					* forall f : X1 -> X2
-					* forall nt1 : F X1 -> G X1
-					* forall nt2 : F X2 -> G X2
-					* forall fx1 : F X1
-					* forall fx2 : F X2
-						* (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
-			* the last line is an implication
-			* i choose
-				* fx2 := map f fx1
-			* this makes the premise of the implication true; hence i can drop it
-				* forall X1, X2 : Type
-					* forall f : X1 -> X2
-					* forall nt1 : F X1 -> G X1
-					* forall nt2 : F X2 -> G X2
-					* forall fx1 : F X1
-						* map f (nt1 fx1) = nt2 (map f fx1)
-			* making it point-free
-				* forall X1, X2 : Type
-					* forall f : X1 -> X2
-					* forall nt1 : F X1 -> G X1
-					* forall nt2 : F X2 -> G X2
-						* (map f <<< nt1) = (nt2 <<< map f)
-			* unifying with the choice nt1 = nt2 [= nt]
-				* forall X1, X2 : Type
-					* forall f : X1 -> X2
-					* forall nt : F X1 -> G X1
-						* (map f <<< nt) = (nt <<< map f)
-			* this is the commutativity property i wanted to prove
+	* vague proof
+		* by Wadler's method we get
+			* forall X1, X2 : Type
+				* forall f : X1 -> X2
+				* forall nt1 : F X1 -> G X1
+				* forall nt2 : F X2 -> G X2
+				* forall fx1 : F X1
+				* forall fx2 : F X2 
+					* (related fx1 fx2) => (related (nt1 fx1) (nt2 fx2))
+		* this contains relation statements about functor values; i need to translate these to relation statements on their content types; this can be done by using
+			* the parametricity relation corresponding to functors
+				\ links-to internal wqbrusvmsxteurms
+			* forall X1, X2 : Type
+				* forall f : X1 -> X2
+				* forall nt1 : F X1 -> G X1
+				* forall nt2 : F X2 -> G X2
+				* forall fx1 : F X1
+				* forall fx2 : F X2
+					* (map f fx1 = fx2) => (map f (nt1 fx1) = nt2 fx2)
+		* the last line is an implication
+		* i choose
+			* fx2 := map f fx1
+		* this makes the premise of the implication true; hence i can drop it
+			* forall X1, X2 : Type
+				* forall f : X1 -> X2
+				* forall nt1 : F X1 -> G X1
+				* forall nt2 : F X2 -> G X2
+				* forall fx1 : F X1
+					* map f (nt1 fx1) = nt2 (map f fx1)
+		* making it point-free
+			* forall X1, X2 : Type
+				* forall f : X1 -> X2
+				* forall nt1 : F X1 -> G X1
+				* forall nt2 : F X2 -> G X2
+					* (map f <<< nt1) = (nt2 <<< map f)
+		* unifying with the choice nt1 = nt2 [= nt]
+			* forall X1, X2 : Type
+				* forall f : X1 -> X2
+				* forall nt : F X1 -> G X1
+					* (map f <<< nt) = (nt <<< map f)
+		* this is the commutativity property i wanted to prove

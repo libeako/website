@@ -1,0 +1,62 @@
+\ id mtcrpjujemznyvue
+* monad in the function category is an interface of type functions
+* intuition
+	* you could have invented monads in programming; here is how:
+	* kliesli composition
+		* in functional programming effects may not happen to the side, but has to be covered by the output type of the function; if we want to load a function of type (x -> y) with some additional effect then we need to change the type of the function to (x -> c y), where c is a type function, creating a type whose values represent both the y as content and the additional effect as context
+		* these types of functions are said to be the "Kliesli" ("functions" or "arrows")
+			* newtype Kliesli c x y = Kliesli {x -> c y}
+		* to be able to work with effects of type c it is necessary that (Kliesli c) is a category; this is also a sufficient condition, because any algorithm building block type [function application, tuple formation, ...] is derivable from function composition
+		* one of the possible monad definitions is that c is a monad iff (Kliesli c) is a category
+			* interface Monad c <= Category (Kliesli c) where
+		* to be able to work with monad without the Kliesli wrapper we can define it as
+			* interface Monad c where
+				* pure : e -> c e
+				* (>=>) : (x -> c y) -> (y -> c z) -> (x -> c z)
+	* functor provides only very basic functionality, hence we expect it to be provided by monad too; monad does provide functor, indeed, good excercise for you to check
+	* join
+		* an approach to an other definition of monad is to start from functor and try to implement the kliesli composition
+		* using the functor property we can easily implement something close to the kliesli composition:
+			* kliesli_try_1 : Functor m => (x -> m y) -> (y -> m z) -> (x -> m (m z))
+			* kliesli_try_1 f g = f >>> map g 
+		* but this is not exactly klieli composition, because the result is in a 2-layer container
+		* if we could collapse the 2 layers into 1 then we would be able to implement the kliesli composition exactly; and that is what one definition of monad requires, such a collapsing method; it is traditionally named "join":
+			* interface Monad m <= Functor m where
+				* join : m (m x) -> m x
+					* law: must be associative
+				* pure : e -> c e
+					* law: must be neutral in join
+		* this definition of monad makes it easily appearant how monad is a special monoid, on the layers of contexts
+		* then the kliesli composition is
+			* kliesli : Monad m => (x -> m y) -> (y -> m z) -> (x -> m z)
+			* kliesli f g = f >>> map g >>> join 
+* in practice often a different definition of monad is used, in which a "monad bind" method is instead of 'join'
+	* without the laws:
+	* interface Monad m where
+		* pure : x -> m x
+		* (>>=) : m x -> (x -> m y) -> m y
+	* the advantage of the definition with bind is assumed run-time efficiency [i assume], the advantage of the other 2 is elegance
+* other sources
+	* Philip Wadler wrote an introductory article about using monads in functional programming; the article contains many examples
+		* Monads for functional programming
+			\ links-to external http://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf
+	* a Haskell intro article to monad laws
+		\ links-to external https://wiki.haskell.org/Monad_laws
+	* at typeclassopedia
+		\ links-to external https://wiki.haskell.org/Typeclassopedia
+* example for using monad
+	* loop
+		* a simple loop
+			* loop : (s -> bool) -> (s -> s) -> (s -> s)
+			* loop cond iter actual =
+				* if (cond actual)
+					* then loop iter cond (iter actual)
+					* else actual
+		* a monadic version [the iteration may have effect] 
+			* loop : Monad m => (s -> bool) -> (s -> m s) -> (s -> m s)
+			* loop cond iter actual =
+				* if (cond actual)
+					* then loop iter cond =<< iter actual
+					* else pure actual
+		* analysis
+			* notice that the monadic version has the same structure, just the building blocks [function application, lifting a value to the monad level] of it are different

@@ -6,30 +6,29 @@
 	* you can easily find the functions that map from one side to the other; that gives you an intuitive justification of the isomorphism; but proving that they are inverses of each other is difficult because it needs a free theorem
 		* link to 'free theorems'
 			\ links-to internal ejqpvlbcoexibqku
-	* you can find the proof including the free theorem in the article (Philip Wadler : Theorems for free!)
-* the general form of the yoneda lemma
+	* you can find the proof including the free theorem in the article (Philip Wadler: Theorems for free!)
+* the general form of the Yoneda lemma
 	* adds a functor "F"
 	* F x ≅ λ (r : Type) -> (x -> r) -> F r
 	* the previously shown concrete version can be recovered from this general version by F := the identity functor
 	* the proof of this theorem in its full category-theoretic generality is easy and available in almost all category-theory introductory books
 		* link to 'categrory theory: sources to learn from'
 			\ links-to internal yupvqrvgexyesprr
-* "the yoneda functor"
-	* is a popular name for the right side of the yoneda isomorhism as expressed above
-	* in haskell can be expressed like this
+* "the Yoneda functor"
+	* is a popular name for the right side of the Yoneda isomorhism as expressed above
+	* in Haskell it can be expressed like this
 		* newtype Yoneda f c = forall r . (c -> r) -> f r
 * the dual
-	* 2 possibilities of dualizing the yoneda lemma are interesting :
+	* 2 possibilities of dualizing the Yoneda lemma are interesting:
 	* for contravariant functor
 		* this is a very simple possibility of dualizing
 		* F x ≅ λ (r : Type) -> (r -> x) -> F r
 		* here F is contravariant
 	* an other possibility
-		* Coyoneda f x := f c (c -> x)
-		* notice that the type variable c is existentially qualified here
-		* the conyoneda functor is the free functor
+		* Coyoneda f x := exists c. f c * (c -> x)
+		* the Conyoneda functor is the free functor
 		* additional source
 			* by J. Abrahamson
 				\ links-to external https://stackoverflow.com/a/24006085/112298
-			* From Hask Till Dawn : Coyoneda and fmap fusion
+			* From Hask Till Dawn: Coyoneda and fmap fusion
 				\ links-to external http://alpmestan.com/posts/2017-08-17-coyoneda-fmap-fusion.html
