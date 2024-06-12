@@ -1,40 +1,33 @@
 \ id ypnccchncfaeqhzh
-* as mentioned in the part about the abstractness of the lens concept : we can manage the getting, setting, transforming, inserting, deleting of values in the map via lenses; instead of implementing these functionalities separately [and hence redundantly] : the following simple single Lens will do :
+* as mentioned in the part about the abstractness of the lens concept: we can manage the getting, setting, transforming, inserting, deleting of values in the map via lenses; instead of implementing these functionalities separately [and hence redundantly]: the following simple single Lens will do:
 	* lens_value_at : Lens (Maybe v) (Map k v)
-* by doing so we save some implementation time, possibly avoid some bugs and make the code and the API smaller and cleaner; we also make the API more uniform, familiar, as it builds on the lens API; this amount of advantage is already significant, but optics can do more, by their composability property, as i will demonstrate next :
-* think about the ordinary map data structure, which stores a set of (key, value) elements; in the general scenario it is implemented with a search tree; in the case when the key type is string : a specialization is possible that improves the runtime properties asymptotically; the trick is to merge subtrees whose key prefix equal; for example : instead of { "hell" -> x, "hello" -> y } it would store { "hell" -> { "" -> x, "o" -> y } }; i will name my implementation of this data structure with "StringyMap"
-* -- | Maps strings of c-s to v-s. -- "c" is the type of character in the key string.
-* -- "v" is element value of the container;
-* -- 'Base.Map' is the ordinary map data structure from a 'base' library assumed to be available in the programming environment;
-* -- one can think about the right side of the definition as a bucket
-* -- that belongs to a certain key prefix;
-* -- the 'immediate_value' in the bucket is a value of the StringyMap
-* -- that belongs to the corresponding key prefix as a whole key;
-* -- the 'children' in the bucket stores the associations of the StringyMap
-* -- with the continuations of the keys as keys
+* by doing so we save some implementation time, possibly avoid some bugs and make the code and the API smaller and cleaner; we also make the API more uniform, familiar, as it builds on the lens API; this amount of advantage is already significant, but optics can do more, by their composability property, as i will demonstrate next:
+* think about the ordinary map data structure, which stores a set of (key, value) elements; in the general scenario it is implemented with a search tree; in the case when the key type is string: a specialization is possible that improves the runtime properties asymptotically; the trick is to merge subtrees whose key prefix equal; for example: instead of { "hell" -> x, "hello" -> y } it would store { "hell" -> { "" -> x, "o" -> y } }; i will name my implementation of this data structure with "StringyMap"
+* explanation of the following data type
+	* maps strings of cs to vs
+	* c is the type of character in the key string
+	* v is element value of the container
+	* Base.Map is the ordinary map data structure from a base library assumed to be available in the coding environment
+	* one can think about the right side of the definition as a bucket that belongs to a certain key prefix
+	* the 'immediate_value' in the bucket is an element of the StringyMap that belongs to the corresponding key prefix
+	* the 'children' in the bucket stores the associations of the StringyMap with the continuations of the current key
 * let StringyMap c v = { immediate_value : Maybe v, children : Base.Map c (StringyMap c v) }
 	* deriving (Functor, Foldable, Traversable)
-* some utilities as a preparation for the core of the example :
+* some utilities as a preparation for the core of the example:
 	* about emptiness
 		* empty : Map c v
 		* empty = StringyMap Nothing Base.empty
-			* -- a StringyMap is empty iff
-			* -- ('immediate_value' is Nothing) and
-			* -- (the container at the 'children' field is empty)
 		* is_empty : StringyMap c e -> Bool
 		* is_empty = liftA2 (&&) (immediate_value >>> Base.isNothing) (children >>> Base.null)
-	* lenses that focuses from a bucket to its data members
+	* lenses that focuse from a bucket to its data members
 		* lens_immediate_value : Lens (Maybe v)) (StringyMap c v)
-		* lens_immediate_value = <boilerplate>
 		* lens_children : Lens (Base.Map c (StringyMap c v)) (StringyMap c v)
-		* lens_children = <boilerplate>
 	* i also assume that the ordinary 'Map' module in the base library provides lenses to its values
-		* Base.lens_value : List c -> Lens (Maybe v) (Map c v)
-		* explanation : (List c) is the type of the key [it is string]
-* and then finally here is the implementation of the value lens of the StringyMap data structure :
-	* before you start digesting the following code : i want you to know that you do not need to understand all the details, i will extract the main idea
+		* Base.lens_value : c -> Lens (Maybe v) (Map c v)
+* finally here is the implementation of the value lens of the StringyMap data structure
+	* before you start digesting the following code: i want you to know that you do not need to understand all the details, i will extract the main idea
 	* import qualified Data.Map as Base
-	* -- i will refer to the ordinary Map stuff from the base library with the 'Base' qualifier
+		* -- i will refer to the ordinary Map stuff from the base library with the 'Base' qualifier
 	* lens_value_at : Ord c => List c -> Lens' (Maybe v) (StringyMap c v)
 	* lens_value_at = 
 		* \ case
@@ -44,18 +37,18 @@
 					* -- | if a map is empty
 						* -- then it as element should be deleted from its container
 						* -- to save running time and memory.
-						* optimize :: Map c v -> Maybe (Map c v)
-						* optimize m = if is_empty m then Nothing else Just m
+					* optimize :: Map c v -> Maybe (Map c v)
+					* optimize m = if is_empty m then Nothing else Just m
 						* -- this is a Lens that does technical plumbing;
 						* -- it focuses the value in a (Maybe (StringyMap c v));
 						* -- returning an empty StringyMap when Nothing is queried;
 						* -- in addition its set method returns Nothing when the given StringyMap is empty
 						* -- to delete empty subtrees as optimization;
-						* maybeize : Lens (StringyMap c v) (Maybe (StringyMap c v))
-						* maybeize f = Lens.from_get_set (Maybe.fromMaybe empty) (optimize >>> const)
-						* in lens_children <<< Base.lens_value_at c <<< maybeize <<< lens_value_at rest
-	* in the outermost level the function is a branching on the key structure [whether it is empty]; the implementation of the empty case is trivially just a simple lens, the other is challenging, but lenses and their composability tames the task
-	* the core of the code is the composition of 3 lenses :
+					* maybeize : Lens (StringyMap c v) (Maybe (StringyMap c v))
+					* maybeize f = Lens.from_get_set (Maybe.fromMaybe empty) (optimize >>> const)
+					* in lens_children <<< Base.lens_value_at c <<< maybeize <<< lens_value_at rest
+	* in the outermost level the function is a branching on the key structure [whether it is empty]; the implementation of the empty case is trivially just a simple lens, the other case is challenging, but lenses and their composability tames the difficulty
+	* the core of the code is the composition of 3 lenses
 		* 'lens_children' - focuses from the bucket [a StringyMap] to its 'children' data member
 		* 'Base.lens_value_at' - the 'children' data member stores an ordinary map that maps the next character in the key to the rest of the StringyMap; for the ordinary map i have a 'Base.lens_value_at' lens provided by the base library, this lens focuses from the ordinary map to a value in it, which is of type (Maybe (StringyMap c v))
 		* 'lens_value_at' - is a recursive reference to the lens that i am defining

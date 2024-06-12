@@ -10,14 +10,15 @@
 		* by Matthew Pickering
 			\ links-to external http://mpickering.github.io/posts/2017-04-10-indexed-optics.html
 * profunctor representation
+	* it is so much more abstract than the concrete representations that i could not understand the profunctor representation of some of the optic categories
 	* Profunctor Optics - Modular Data Accessors
 		* link
 			\ links-to external http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/poptics.pdf
 		* note
 			* this document implements the traversal optic via FunList; this method may be outdated
-				* edward kmett wrote in a forum that it breaks down on infinite collections
+				* Edward Kmett wrote in a forum that it breaks down on infinite collections
 				* the running time of the '<*>' member of the Applicative interface of FunList is quadratic, but it is not used for the optics, only the member 'pure'  is used
-				* edward kmett's library 'lens' uses the type 'Bazaar' instead
+				* Edward Kmett's library 'lens' uses the type 'Bazaar' instead
 				* library 'mezzolens' uses the elegant 'Wandering' constraint instead
 	* Phil Freeman - Fun with Profunctors
 		\ links-to external https://www.youtube.com/watch?v=OJtGECfksds

@@ -1,24 +1,17 @@
 \ id ndgkrnbojyputpec
-* optics are very useful in the everyday coding work; but despite this : most programmers do not know the topic; this tutorial is for them
-* optics represent some kind of relationship between data and a construction built on it; with other words : the relationship between container and its content
-* we can use an optic from a container to "zoom in" on its content and from the content to "zoom out" on the container; hence the name "optic"
-* for the pieces of data that an optic connects i may use the names  ("content", "element") [("con", "elem") shortly] [("c", "e") more shortly]
+* optics are very useful in the everyday coding work; but despite this: most programmers do not know the topic; this tutorial is for them
+* optics represent some categorically composable relationship between a collection and elements of it
+* we can use an optic from a collection to "zoom in" on its elements and from the content to "zoom out" on the collection; hence the name "optic"
+* for the pieces of data that an optic connects i may use the names ("content", "element") [("con", "elem") shortly] [("c", "e") more shortly]
 	* an other common choice is ("inner", "outer"), but i do not like this because it does not convey containment which is strong part of the optic concept
 * intuitive introduction
 	\ links-to internal okbqwsokzocmyuul
 * one may view the container and content types as levels of data that the optics connect; hence i may use the "l1" = "content", "l2" = "container" short notations
-* the most important characteristic and usefulness of optics is their composability
-	* this composability is as in
-	* category theory
+* the most important characteristic and usefulness of optics is their categorical composability
+	* see category
 		\ links-to internal edsabrzmtmhnwgml
-	* several kinds [categories] of optics exist; for each category : the optics inside the category compose with each other
-	* if 'Optic content container' is the type of optics of a certain category then
-	* compose : Optic l1 l2 -> Optic l2 l3 -> Optic l1 l3
-* in the code examples i will use an imaginary haskellish programming language
-	* link to description of that language
-		\ links-to internal jaxbiyrfnbhaormb
+	* several categories [kinds] of optics exist; for each category: the optics inside the category compose with each other
 * the concrete representation
 	\ links-to internal qgynnejyblmswscl
 * "polymorphic" optics
 	\ links-to internal kaxoqdfxxdoqokez
-* beside this concrete representation : several others exist; they all are more abstract; these have very valuable theoretical and practical advantages, but i found difficulties to understand them well enough [even though i have implemented a profunctor optics library [to exploring the topic]]
