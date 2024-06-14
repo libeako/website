@@ -1,18 +1,20 @@
 \ id aazyevaigtxptsjs
-* i mean "level" in the sense of this order : hardware -> assembly programming language -> c -> java -> haskell
+* i mean "level" in the sense of this order: hardware, assembly programming language, C, Java, Haskell
 * i know about 2 kinds of levels
 	* conceptual - how we humans think about the program
 	* technical - what is done automatically by the compiler and the run-time environment instead of the human coder
 * conceptual level
 	* imperative
-		* the program is a list of instructions; specifies what the machine to do
+		* the program source is a list of instructions; specifies what the machine to do
 	* functional
-		* the program is a set of equations 
+		* the program source is a set of equations 
 		* see more
 			\ links-to internal zxsbxwlppaypmpnn
+	* a functional program is not asymptotically slower than its imperative version
 	* logic
-		* the program is a set of logical statements about the input and output of the program
-		* the computation of a program specified thus takes often asymptotically more runtime than an equivalent functional program
+		* the program source is a set of logical statements about the input and output of the program
+		* the logical program is often asymptotically less efficient than its functional version
+	* informal text, compiled into program by artificial intelligence
 * technical level
 	* automation
 		* memory management
@@ -22,11 +24,12 @@
 				* "disposal" is a better word than "collection"
 					* collection is just a part of disposal, but we also want to reclaim the memory of the identified garbage
 					* some garbage disposal systems are not stop-the-world, do not have a collecting phase
-						* for example : reference counting
+						* for example: reference counting
 				* c++ programming has partially automatic garbage disposal; by RAII, smart pointers; circular references are not discoverable with those though
 				* java, haskell has fully automatic garbage disposal, including of circles
 			* layout management
 				* whether an object contains an other [as in memory] or refers to it with a pointer
+					* the Haskell compiler does some of this
 		* evaluation order
 			\ links-to internal gvlvjsxsrqfqfght
 		* maintaining thread pools, the programmer only needs to specify "task"s

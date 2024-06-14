@@ -1,0 +1,7 @@
+\ id vdgjgzdvkyzrkveg
+* non-existence is best represented by a simple collection type, usually named "Maybe" [sometimes "Option"]
+* hence a language level feature for this purpose is unnecessary increase of language complexity 
+* not only is this a bad idea as a language feature but also its implementation is bad
+	* as it seems: nullable types can not be fully generic; a nullable generic type parameter must be constrained to either nullable value or nullable reference type; fully generic code is indispensable, hence if nullable types can not be used in them then a library level Maybe is still necessary; but then almost every code should use Maybe, to avoid converting from nullable types to Maybe and back
+* thus the nullable types in C# are both unnecessary and mostly useless
+	* characteristic of C# language design work

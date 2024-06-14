@@ -1,5 +1,5 @@
 \ id ftkadhwzfhvfbwnk
-* "correct by construction" is a direction of software development according to which the software construction should happen so that it contain so little bugs as possible; as opposed to later finding the bugs with testing and eliminating them with fixes
+* "correct by construction" is a direction of software development according to which the software construction should happen so that it the constructed software contains so little bugs as possible; as opposed to later finding the bugs with testing and eliminating them with fixes
 * importance
 	* some software just really must not contain bugs
 	* some bugs are especially expensive

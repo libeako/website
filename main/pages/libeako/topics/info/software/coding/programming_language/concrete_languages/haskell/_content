@@ -1,20 +1,20 @@
 \ id xyymnqdrzcegxrbn
-* haskell is amazing
+* Haskell is amazing
 	* it is free as free speach
-	* it became the best teaching ground for programmers
-	* though it was created by the academy, it evolved in the practical side and now is a general purpose programming language suitable for industrial usage
-	* it contributed much for research of many aspects of programming
-	* Haskell is central in academic coding; one of its goals was to be a laboratory for programming language ideas; it served this goal very well
-		* here are just some main results :
-			* it proved that purely functional programming is not only suitable for practical software development, but that it is the right way to go
-			* it proved that laziness by default is not only okay for practical software development, but is probably the better evaluation order to use
-			* it is the first practical programming language to provide higher kinded types
-			* it is the programming language that taught type classes to the world
-		* these features play together very well, and make Haskell an ideal environment for mathematical abstractions; this was used to translate some category theoretical knowledge into software coding; this work produced awesome results; it revolutionized how we think about library level coding solutions; its concrete results, like Functor, Applicative, Monad are now ubiquitous in everyday Haskell coding
-	* despite its awesome performance in research, and its 30 years age : it stayed remarkably clean; i feel Haskell is more simple, intuitive, sane than the industrial programming languages
-	* beside the extraordinary success in the research side : it also beats the industrial languages [java, c# and all] in their territory, in suitability for practical sofware development
+	* it became the best teaching ground for coders
+	* though it was created by the academy, it evolved in the practical side and now is a general purpose language suitable for industrial usage
+	* it contributed much for research of many aspects of languages
+	* Haskell is central in academic coding; one of its goals was to be a laboratory for language ideas; it served this goal very well
+		* here are just some main results:
+			* it proved that purely functional programming is not only suitable for practical software development, but that it is the right way to go for any high [like Java] level language
+			* it proved that laziness by default is okay for practical software development
+			* it is the first practical language to provide higher kinded types
+			* it is the language that taught to the world how to do type interfacing [type-classes]
+		* these features play together very well, and make Haskell an ideal environment for mathematical abstractions; this was used to translate some category theoretical knowledge into software coding; its concrete results, like functor, applicative, monad, traversable are now ubiquitous in everyday Haskell coding
+	* despite its awesome performance in research, and its 30 years age: it stayed remarkably clean relatively to the amount of capabilities; i feel that Haskell is more simple, intuitive, sane than the industrial languages
+	* beside the extraordinary success in the research side: it also beats the industrial languages [java, c# and all] in their territory, in suitability for practical sofware development
 * general learning source
-	* Haskell wiki
+	* the Haskell wiki
 	* wikibook
 		\ links-to external https://en.wikibooks.org/wiki/Haskell
 	* TypeClassopedia
@@ -24,31 +24,31 @@
 		\ links-to internal xgasjmlsnagvmvom
 * type system
 	* existentials
-		* Kwan : Encoding existentials
+		* Kwan: Encoding existentials
 			\ links-to external http://kseo.github.io/posts/2016-12-19-encoding-existentials.html
-	* Matt Parsons : Basic Type Level Programming in Haskell
+	* Matt Parsons: Basic Type Level Programming in Haskell
 		\ links-to external http://www.parsonsmatt.org/2017/04/26/basic_type_level_programming_in_haskell.html
 	* fixed sized vector
 		\ links-to external https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html
 	* structural polymorphism
 		* a very nice article from Wolfgang Jeltsch
 			\ links-to external https://jeltsch.wordpress.com/2016/02/22/generic-programming-in-haskell/
-	* Richard Eisenberg, Peyton Jones : Levity Polymorphism
+	* Richard Eisenberg, Peyton Jones: Levity Polymorphism
 		* i recommend this article to every Haskell programmer; it is about polymorphism with boxed types
 	* type class
-		* Kwang : Context reduction
+		* Kwang: Context reduction
 			\ links-to external http://kseo.github.io/posts/2017-02-02-context-reduction.html
-		* Kwang : Reified dictionaries
+		* Kwang: Reified dictionaries
 			\ links-to external http://kseo.github.io/posts/2017-02-06-reified-dictionaries.html
-		* Kwang : Avoid overlapping instances with closed type families
+		* Kwang: Avoid overlapping instances with closed type families
 			\ links-to external https://kseo.github.io/posts/2017-02-05-avoid-overlapping-instances-with-closed-type-families.html
 	* constraint kind
 		* The Constraint kind - by Wolfgang Jeltsch 
 			\ links-to external https://jeltsch.wordpress.com/2013/02/14/the-constraint-kind/
-		* Kwang : Constraint Kinds
+		* Kwang: Constraint Kinds
 			\ links-to external https://kseo.github.io/posts/2017-01-13-constraint-kinds.html
 		* abstractions on constrained categories
-			* Dominic Orchard : Subcategories & “Exofunctors” in Haskell
+			* Dominic Orchard: Subcategories & “Exofunctors” in Haskell
 				\ links-to external https://dorchard.wordpress.com/2011/10/18/subcategories-in-haskell-exofunctors/
 	* inference
 		* OutsideIn - Modular type inference with local assumptions
@@ -58,7 +58,7 @@
 	* linear typing
 		\ links-to external https://youtu.be/t0mhvd3-60Y
 	* singletons
-		* a tutorial from justin le
+		* a tutorial from Justin Le
 			\ links-to external https://blog.jle.im/entry/introduction-to-singletons-1.html
 * syntax
 	* extensions
@@ -74,13 +74,13 @@
 	\ links-to external http://mpickering.github.io/posts/2017-03-20-inlining-and-specialisation.html
 * base library
 	* fold
-		* Well-Type : Fixing foldl
+		* Well-Typed: Fixing foldl
 			\ links-to external http://www.well-typed.com/blog/90/
-	* Kwang : Data.Typeable and Data.Dynamic in Haskell
+	* Kwang: Data.Typeable and Data.Dynamic in Haskell
 		\ links-to external http://kseo.github.io/posts/2014-02-03-data-typeable-and-data-dynamic-in-haskell.html
-	* Kwang : How to read arrow combinators
+	* Kwang: How to read arrow combinators
 		\ links-to external http://kseo.github.io/posts/2016-12-11-how-to-read-arrow-combinators.html
-* Kwan : Pattern Synonyms
+* Kwan: Pattern Synonyms
 	\ links-to external http://kseo.github.io/posts/2016-12-22-pattern-synonyms.html
 * exceptions [thrown and caught]
 	* The three kinds of Haskell exceptions and how to use them

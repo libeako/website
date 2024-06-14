@@ -1,5 +1,5 @@
 \ id wmgwsxaqagdwwwug
-* Rust became a very popular programming language; so much that despite it is designed for low level [a "systems programming language"] : many fans like to use it even at high level, even think that it is a good choice for high level
+* Rust became a very popular programming language; so much that despite it is designed for low level [a "systems programming language"]: many fans like to use it even at high level
 * this is a widespread mistake
 * in reality Rust is far from being a good choice for high level
 	* its type system is weak
@@ -7,12 +7,12 @@
 		* it does not even support type function polymorphism
 			* link to 'type function polymorphism'
 				\ links-to internal eyfagqcuwwajcnmt
-		* fortunately : according to my knowledge its designers are planning to add type function polymorphism
-	* its memory managmenet is designed for low level and according to my poor knowledge of Rust at least : it does not support the same convenince as programming languages designed around tracing garbage collection
-* the cause of this misconception about Rust that it is a good choice for high level i think comes from the fact that it is not much worse at high level than Java and C#; these latter ones are designed for high level and hence many programmer make the conclusion that Rust is good as a high level language too; but this is incorrect; Rust is not worse than Java and C# not because it is also good at high level but because these other ones are bad at high level; yes, they were designed for high level, but their design was generally idiotic; they lack very basic features, like type alias, sum type and their type interface system is designed around the bad object-oriented idea, while Rust's one is designed around the better "type-class" idea from Haskell; so while Java and C# gain by not having to be suitable for low level : they also lose by the bad design work behind them compared to Rust; this is why Rust can compete with these high level languages, despite their dedication to high level, because these are poorly designed languages
+		* fortunately: according to my knowledge its designers are planning to add type function polymorphism
+	* its memory managmenet is designed for low level and according to my poor knowledge of Rust at least: it does not support the same convenince as programming languages designed around tracing garbage collection
+* the cause of this misconception about Rust that it is a good choice for high level i think comes from the fact that it is not much worse at high level than Java and C#; these latter ones are designed for high level and hence many programmer make the conclusion that Rust is good as a high level language too; but this is incorrect; Rust is not worse than Java and C# not because it is also good at high level but because these other ones are bad at high level; yes, they were designed for high level, but their design was generally idiotic; they are object-oriented, they lack very basic features, like type alias, sum type; so while Java and C# gain by not having to be suitable for low level: they also lose by the bad design work behind them compared to Rust; this is why Rust can compete at high level with these high level languages
 	* link to 'object oriented programming'
 		\ links-to internal kgmqzsduacpzvbxy
 	* link to 'type classes'
 		\ links-to internal biuqwfqzzkpjuqob
-* but if one compares Rust to a well-designed high level language then the picture becomes clear; in my opinion for example Elm is more convenient than Rust and comparing Rust with Haskell is not even sensible, as Haskell is so much better
+* but if one compares Rust to a well-designed high level language then the picture becomes correct; in my opinion for example Elm is more convenient than Rust and comparing Rust with Haskell is not even sensible, as Haskell is so much better at high level
 * Rust's goal was never to compete with high level languages, it was to be the replacer of C++; and i think it did surprisingly well in that task; but i recommend you to stop regarding Rust as good for high level too and instead realize that Java and C# are not good for anything

@@ -1,13 +1,13 @@
 \ id yyxfqsbtbljqfyla
-* imagine the middle of execution of function f : x -> y; the computation of a partial result p is finished; the rest of f is a continuation; technically it is a function p -> y; conversely : any function can be thought of as continuation; then why not just use the phrase "function", why a new name for it? we use "continuation" when we want to emphasise that the function we talk about plays a continuation role
+* imagine the middle of execution of function f : x -> y; the computation of a partial result p is finished; the rest of f is a "continuation"; technically it is a function p -> y; conversely: any function can be thought of as continuation; then why not just use the phrase "function", why a new name for it? we use "continuation" when we want to emphasise that the function we talk about plays a continuation role
 * continuations are very powerful tool to control the execution path of a program
 * "delimited continuation"
-	\ links-to internal pmxpbbaefvdnjqoy
+	* this one sounds more specific by the "delimiated" in it; but it is just continuation; really; then why an other name? if i understood correctly: the cause is historical; originally "continuation" meant something different than continuations generally, some special kind of continuation and "delimied continuation" was invented to distinguish; that old notion is really useless, just a historical mistake and we should forget about them and use "continuations" everywhere
 * "call/cc", "reset", "shift"
-	* these are names of historical [imperative ?] aproaches to the topic of continuation; i recommend that you do not spend time to try to understand them; i did spend and did not manage to understand; they seem to me an overcomplication of the simple meaning of continuation, which is function
-* the continuation monad
-	* continuations fit into a monadic framework; more precisely : the following type is a monad
-		* datatype Suspended r s = MakeSuspended { runSusp : (s -> r) -> r }
-		* it represents a value [of type 's'] whose computation is suspended
+	* these are names of historical [imperative ?] aproaches to the topic of continuation; i recommend that you do not spend time to try to understand them; i did spend and did not manage to understand; they seem to me an overcomplication of the simple meaning of continuation, which is just function in continuation role
+* the "continuation" monad
+	* datatype Suspended r s = MakeSuspended { runSusp : (s -> r) -> r }
+		* represents a value [of type 's'] as the state of a suspended computation
+		* it is an instance of monad
 		* in haskell 'Suspended' is named by "Cont", which is a short for "continuation"
-			* that naming is misleading; 'Suspended' is the exact dual of a continuation, it is the part of the computation that is continued
+			* the "Cont" naming is misleading; 'Suspended' is not only not a  continuation but the exact dual of a continuation: it is the part of the computation that is continued

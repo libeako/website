@@ -1,52 +1,51 @@
 \ id kgmqzsduacpzvbxy
 * what is "object oriented" programming?
-	* first of all: a paradigm can not contain something that is not distinctive of other paradigms
-		* if a language feature is present in languages generally than that feature is not distinctive and hence can not be part of a programming paradigm, like OO
+	* first of all: we can define paradigms only by exclusive traits
+		* if a language feature is present in all languages then that feature is not a defining feature of OO
 	* to define "object oriented" is difficult task; the meaning is widely debated; in such situation it is good to go to 
 	* objective criteria to interpret the term
 		* the meaning of the term
-			* an "object" is a value with an identity [usually identified by its storage location in memory]; the reason to distinguish between different objects with the same value is and only is the possibility of mutation; the functional paradigm does not have objects; hence "object" is equivalent to imperativeness
-		* the original meaning of the author of the term
+			* an "object" is a value with an identity; [the identitiy is usually provided by its in-memory storage location]; the reason to distinguish between different objects with the same value is and only is the possibility of mutation; the functional paradigm does not have objects; hence "object" is equivalent to imperativity
+		* the original intent of the author of the term
 			* the term "object oriented" was coined by Alan Kay; the most informative text about his thinking about it that i found is "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things."
 			* my interpretation of Alan Kay's definition
-				* imperativeness
-					* he talks about state, which suggests [though does not surely imply] that he meant imperativeness
-					* "local retention and protection and hiding of state-process" - i interpret this as just hiding of the representation of the data type of the state; but hiding anyhing is a simple natural feautre, practically all languages provide this feature; hence it is not a distinctive
 				* "late-binding" means that the methods are dispatched dynamically
+				* imperativeness
+					* he talks about state, which suggests [though does not surely imply] that he meant imperativity
+					* "local retention and protection and hiding of state-process" - i interpret this as just hiding of the representation of the data structure of the state; but hiding anything is a simple natural feautre, practically all languages provide this feature; hence it is not a distinguishing trait
 		* the practice of using the term
 			* let us identify OO languages and non-OO languages and see what is the differene between them
 			* some of the languages most known as OO are Java, C#
-			* the language most known as not-OO is Haskell
-			* the difference between them mostly is imperativeness and the method dispatch being dynamic; Haskell is famous about being the opposite of these features
-	* conclusion of the objective criteria: OO is imperativeness and the method dispatch being dynamic
+			* the language most known as not OO is Haskell
+			* the difference between them mostly is imperativity and the method dispatch being dynamic; Haskell is famous about being the opposite of these features
+	* conclusion of the objective criteria: OO is imperativity and the method dispatch being dynamic
 		* these 2 things are independent of each other
-			* this suggests either that my definition of OO is wrong or that OO is something wrong; i think my interpretation is good and OO is wrong
+			* this suggests either OO or my definition of it is wrong; i think my interpretation is good and OO is wrong
 	* other opinions
-		* one modern interpretation of OO is that imperativeness does not have to be a part of it; this view is strongly shown by the Scala language, for example
-			* this is often referred to with the name "functional OOP"; but the name mainly contains "object", which means imperativeness, hence this name is inconsistent
-		* one opinion is that "object" means not imperativeness but "message passing", but that must be wrong, because message passing of OO is just method invokation, which is part of all languages, not a distinctive feature
+		* one modern interpretation of OO is that imperativity does not have to be a part of it; this view is strongly shown by the Scala language, for example
+			* this is often referred to with the name "functional OOP"; but the name mainly contains "object", which means imperativity, hence this name is inconsistent
+		* one opinion is that "object" means not imperativity but "message passing", but that must be wrong, because message passing of OO is just method invokation, which is part of all languages, not a distinguishing trait
 		* what else could OOP be? 
 			* run-time type testing? - even the OO culture considers it a dirty practise, to be avoided
 			* method implementation inheritance? - Haskell has it too
-			* dynamic binding? - haskell also has it, though with more code verbosity
 * main conclusion
-	* till here i came to the conclusion that OOP is mainly state mutation and unnecessary push of dynamic binding; the earlier ruins our software coding efficiency, the later makes type interfacing hardly usable; giving nothing significant in return that we would expect from a programming paradigm
+	* i came to the conclusion that OOP is mainly state mutation and unnecessary push of dynamic binding; the earlier ruins our software coding efficiency, the later makes type interfacing hardly usable; giving nothing significant in return
 * OO is wrong
-	* to see why we need to decompose OO into its 2 components
-	* imperative programming
+	* to see why: we need to decompose OO into its 2 components
+	* imperativity
 		* may have some legitimacy in simple low level programming, but otherwise it is idiotic
 		* link to 'functional programming'
 			\ links-to internal zxsbxwlppaypmpnn
 	* dynamic method dispatch
 		\ links-to internal ejqltwjmfjcvjpnf
-	* in most languages both imperativeness and the method dispatch being dynamic are bad ideas, but these 2 features together form an unfortunate combination as this combination is wrong in all languages; imperativeness may be good for simple languages for high manual control over run-time efficiency; but for that dynamic dispatch is wrong, as it is slow
+	* in most languages both imperativity and the method dispatch being dynamic are bad ideas, but these 2 features together is wrong in all languages; imperativity may be good for simple languages for high manual control over run-time efficiency; but for that dynamic dispatch is wrong, as it is slow
 * why did OO usage grow so big?
-	* because the languages that pushed it became popular; not because of OOP but each for some unrelated reason; for example Java and C# were backed by big companies, Java additionally promised "write once, run everywhere", c++ did not have a competitor
+	* because the languages that pushed it became popular; not because of OOP but each for some unrelated reason; for example Java and C# were backed by big firms, Java additionally promised "write once, run everywhere", C++ did not have a competitor
 * OO mania
 	* it is not only the languages, but culture too; so named "OO design patterns", "OO design", "OO architecture" flud the industrial software development world
 	* a lot of OO design patterns exist
 		\ links-to internal rpkievmcwfnpmvlt
 	* how did this OO overusage happen?
-		* certain very popular OOP languges [java, c#] initially lacked essential language features [first class function, parametric type polymorphism, sum type] and by this they forced their users to use subtyping for all polymorphic problems; hence OOP became overused and people got used to overusing it
+		* certain very popular OOP languges [Java, C#] initially lacked essential language features [first class function, parametric type polymorphism, sum type] and by this they forced their users to use dynamic dispatch instead
 * without OO
-	* can we do without OO? fortunately we already have enough practical experience to answer this question with confidence; Haskell does not provide OO and its users do not miss it at all
+	* can we do without OO? fortunately we already have enough practical experience to answer this question with confidence; Haskell is not OO and its users like this much

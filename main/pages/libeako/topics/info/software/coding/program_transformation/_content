@@ -1,0 +1,7 @@
+\ id myjpqwxlrsmokjut
+* for runtime efficiency improvement
+	* when it is done automatically by the compiler then it may be particularly good
+		* partly because then it is also done in some places where the human coder can not do it, for example across library boundaries
+	* rewrite rules
+		* list build
+			\ links-to external https://github.com/quchen/articles/blob/master/build.md

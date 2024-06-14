@@ -32,3 +32,10 @@
 				\ links-to external https://stackoverflow.com/a/24006085/112298
 			* From Hask Till Dawn: Coyoneda and fmap fusion
 				\ links-to external http://alpmestan.com/posts/2017-08-17-coyoneda-fmap-fusion.html
+* other sources
+	* in Haskell
+		* good first intuition for programmers
+			* Reverse Engineering Machines with the Yoneda Lemma
+				\ links-to external http://blog.sigfpe.com/2006/11/yoneda-lemma.html
+		* awesome proof
+			* https://scturtle.me/posts/2015-06-16-yoneda.html

@@ -1,60 +1,65 @@
 \ id ejqltwjmfjcvjpnf
-* interfaces contain methods; these methods are not concrete functions, but rather function families, containing different concrete functions for different types that implement the interface; the coder invokes the methods, but the underlying system needs to find the concrete function to be invoked: should dispatch the call to a concrete function; the question arises: when to determine which concrete function should get the call [when to perform the dispatch]? in compile time ["statically"] or in run time ["dynamically"]?
+* interfaces contain methods; these methods are not concrete functions, but rather function families, containing different concrete functions for different types that implement the interface; the coder invokes a method, but the underlying system needs to find the concrete function to be invoked: [should "dispatch" the call to a concrete function]; the question arises: when to determine which concrete function should get the call [when to perform the dispatch]? in compile time ["statically"] or in run time ["dynamically"]?
 * in dynamically typed languages: the only possible answer is dynamically, as no type information is available in compile time
 * in statically typed languages: static dispatch is possible and dynamic dispatch is idiotic, because it has only negatives, very big ones; this part explaines those negatives
 * despite being idiotic: dynamic dispatch is chosen for almost all statically typed programming languages by their designers; also: users of such languages [who are almost all software coders in the statically typed world] feel fine with this decision, they do not see why it is bad, they think it is a perfectly legitimate design decision, that it is how it should be
-* the most notable exception is the Haskell language, which is well known for choosing static dispatch [performed in compile-time]
+* the most notable exception is the Haskell language, which is well known for having chosen static dispatch
 * i recommend to you to learn
 	* the static dispatch world
 		\ links-to internal biuqwfqzzkpjuqob
 	* before reading this
-* haskell-like languages do not provide dedicated support for dynamic type interfacing, because it is not necessary and is even not wanted by their users
-	* they provide other language features [existential types] with which dynamic dispatch can be implemented, in case it is needed, with only slightly more verbosity than in the dynamically dispatching languages
+* haskell-like languages do not provide dedicated support for dynamic dispatch
+	* they provide other language features [existential types] with which dynamic dispatch can be implemented at library level, with only slightly more verbosity than in the dynamically dispatching languages
 	* dynamic dispatch is needed only very rarely
-		* this may surprise you, if you are used to dynamically dispatching languages, like java and c#, which even force the coder to use dynamic dispatch machinery, even when simpler but not provided tools [like sum types or higher order functions] would suffice; when a coder gets to use a well-designed language, like Haskell then the coder quickly sees that dynamic method dispatch is needed only very rarely
+		* this may surprise you, if you are used to dynamically dispatching languages, like Java and C#, which even forced the coder to use dynamic dispatch machinery, even when simpler but not provided tools [like sum types or higher order functions] would suffice; when a coder gets to use a well-designed language, like Haskell then the coder quickly sees that dynamic dispatch is needed only very rarely
 * the design of the dynamic dispatch mechanism
-	* the idea to perform the dispatch in run time may have come from the dynamically typed languages, but most language designers wanted to push it into statically typed languages too; this decision was idiotic, but it is how it happened
-	* dynamic dispatch queries the run-time type of the actual inputs of the invoked method to find the corresponding concrete function to invoke; the type of which inputs? so far as i know: the original idea in the dynamically typed languages was to use all the inputs for this; but that can not be used in statically typed languages; what happens when we do not have a method implementation matching the types of the actual inputs? run-time execution failure; that is okay for dynamically typed langauges, as the possibility of such run-time failure is normal for them anyway; but in a statically typed language it is not acceptable; but some people did insist to try to fuse the 2 things: dynamic dispatch and static typing
-	* they had to ensure at compile time that dispatches are always successful; their idea was - restrict the dispatching to only 1 of the inputs
-	* which one sould that input be? for the sake of simplicity and uniformity: they decided that it should be the first one always
-	* we do not need to know its type in compile time, as core of the idea is to defer that to run time; this input is always present and has special status, hence we can fix its name to "this" or "self" in the language specification; hence this input can be implicit
-	* it is important to see that this solution was not a conceptual goal but a compromise; thus was the now popular ["Java-like"] version of dynamic dispatch born; as a child of the forced marriage of static typing and dynamic dispatch; crippled from birth
+	* the idea to perform the dispatch in run time may have come from the dynamically typed languages, but most language designers wanted to push it into statically typed languages too; this decision was idiotic, but it happened
+	* dynamic dispatch queries the run-time type of the actual inputs of the invoked method to find the corresponding concrete function to invoke; the type of which inputs? so far as i know: the original idea in the dynamically typed languages was to use all the inputs for this
+	* but that can not be used in statically typed languages
+		* what happens when we do not have a method implementation matching the types of the actual inputs? run-time execution failure; that is okay for dynamically typed langauges, as the possibility of run-time type-mismatch is normal for them anyway; but in a statically typed language it is not acceptable
+	* but some people did insist to try to fuse the 2 things: dynamic dispatch and static typing
+	* they had to ensure at compile time that dispatches be always successful; their idea was: restrict the dispatching to only 1 of the inputs
+		* which one sould that input be? for the sake of simplicity and uniformity: they decided that it should be the first one always
+		* the dispatching input can be implicit
+			* because
+				* we do not need to know its type in compile time, as core of the idea is to defer that to run-time
+				* it always exists
+			* we can fix its name to "this" or "self" in the language specification
+		* it is important to see that this solution was not a conceptual goal but a compromise; thus was the now popular ["Java-like"] version of dynamic dispatch born; as a child of the forced marriage of static typing and dynamic dispatch; crippled from birth
 * the negatives of dynamic dispatch
-	* run-time efficiency
-		* the dispatch delayed to run-time disables inlining, which though is a crucial optimization; some people claim that some of these dynamically dispatching languages [Java, .Net] solve this run-time efficiency problem in the execution engine; but that is far from the truth; all that is in the execution engine is the prediction of which concrete function will get the dispatch, based on previous dispatch results, and then inlining that function; this is close to being so fast as a compile time inlined invokation but works only if the dispatched result is the same for a long sequence of calls, which happens only in the simple cases
+	* the dispatch being delayed to run-time disables inlining, which is a crucial optimization
+		* some people claim that some of these dynamically dispatching languages [Java, .Net] solve this run-time efficiency problem in the execution engine; but that is far from the truth; all that is in the execution engine is the prediction of which concrete function will get the dispatch, based on previous dispatch results, and then inlining that function; this is close to being so fast as a compile time inlined invokation but works only if the dispatch result is the same for a long sequence of calls, which happens only in the simple cases
 	* coding problems
-		* dynamic dispatch can not properly represent interface methods with multiple inputs with the same role; for example:
-			* the Equatable interface in C#:
-				* interface IEquatable<T> { bool Equals (T other); }
-				* in this code the 2 inputs of the 'Equals' method are written differently syntactically; this suggests that the 2 inputs of the method are somehow differnt in their roles, which is false; dynamic dispatch can not properly express even one of the most simple and fundamental interfaces
-			* in a Haskellish language
-				* interface Equatable t
-					* (==) : t -> t -> bool
-					* this code perfectly mirrors the concept that it ought to rerpresent, including that the method's inputs have the same role
-			* the story is similar with the also important 'Comparable' interface
-		* dynamic dispatch requires a run-time input
-			* that is not present in all interface concepts
-			* a trivial but useful example:
-				* interface HasDefault t
-					* default : t
-			* such an interface is impossible to express with dynamic dispatch
-			* how common such situation is? quite
-				* the trivial case is when the method does not take any input at all, when it is not even a function, instead it just selects a value from the type
-				* also: having some input does not make the method run-time dispatchable, because the input may be totally independent from the type that is to implement the interface; this is the case for example with some methods of the very important Monoid, Applicative, Monad interfaces
-		*  conditional implementations are not possible with dynamic dispatch
-			* it is very common that we need to modify a type slightly, for example by wrapping it into a container [Maybe, Either, List, newtype wrappers, ...] type; for example just a function not always being able to return successful result requires us to wrap its output into a Maybe
+		* dynamic dispatch can not properly represent interface methods with multiple inputs with the same role
+			* example
+				* the Equatable interface in C#:
+					* interface IEquatable<T> { bool Equals (T other); }
+					* in this code the 2 inputs of the 'Equals' method are written differently syntactically; this suggests that the roles of the 2 inputs are differnt; that is a false suggestion; conclusion: dynamic dispatch can not properly express even one of the most simple and fundamental interfaces
+					* in a Haskellish language
+						* interface Equatable t
+							* (==) : t -> t -> bool
+							* this code perfectly mirrors the concept that it ought to rerpresent, including that the roles of the methods are the same
+				* the story is similar with the also important 'Comparable' interface
+		* dynamic dispatch requires a run-time input with proper type
+			* some methods of some interface concepts do not have any input
+				* a trivial but useful example
+					* interface HasDefault t
+						* default : t
+				* associating types to types
+			* having some input does not make the method run-time dispatchable, because the input may be totally independent from the type that is to implement the interface; this is the case for example with some methods of the very important Applicative and Monad interfaces
+		*  conditionality of implementation is not possible with dynamic dispatch
+			* it is very common that we need to modify a type slightly, for example by wrapping it into a container [Maybe, Either, List, newtype wrappers, ...] type; for example just a function sometimes not being able to return successful result requires us to wrap its output into a Maybe
 			* hence it is important that our type interface solution does not brake down when we try to make the container type to inherit the interfaces of their element types
-			* this is easily possible with static typing
+			* this is easily okay with static typing, by conditioning the instance
 				* example
-					* instance Equatable e => Equatable (Maybe e) where
-						* Just x == Just y = x == y
-						* Nothing == Nothing = True
-						* _ = False
-			* but languages with dynamic dispatch do not provide such capability, i guess because it would be too complex for them
+					* equatability of Maybe
+						* instance Equatable (Maybe e) <= Equatable e where
+							* Just x == Just y = x == y
+							* Nothing == Nothing = True
+							* _ = False
+						* the instance is for (Maybe e) and the condition is about e
+			* but languages with dynamic dispatch do not provide such capability; i guess because it would be too complex for them
 		* dynamic dispatch requires the instance declaration at the site of the type
-			* if the coder does not have access to a type then he can not modify which interfaces that type implements; can not, for example, implement an instance for a new interface and old type; in statically dispatching languages one can define a new interface and implement instance sof that new interface for any old type, in the same module
-		* type methods
-			* with dynamic dispatch the methods can not output compile time information, for example types; hence associating types to types may require other language features
+			* if the coder does not have access to the code of a type then he can not modify which interfaces that type implements; can not, for example, implement an instance for a new interface and old type; in statically dispatching languages one can define a new interface and implement instances of that new interface for any old type, in the same module
 		* dynamic dispatch requires that the instance is for a single type
-			* statically dispatching languages can allow multi-type interfaces, where the interface is not of a single type but of a combination of multiple types
-				* but the usefulness of this ability is doubtful
+			* statically dispatching languages can allow multi-type interfaces, where the interface is not for a single type but for a combination of multiple types

@@ -1,27 +1,24 @@
 \ id njbmaqiznfzdylnr
-* this is last maintained in 2020-03
-* i as a programmer was asked multiple times : which programming language an aspiring programmer should learn first; now i think i have the answer settled in my mind
-* it is elm
-* link to elm
-	\ links-to external https://elm-lang.org
+* this is last maintained in 2024-06
+* i as a programmer was asked multiple times: which programming language an aspiring programmer should learn first; now i think i have the answer settled in my mind
+* it is Elm
 * because
 	* it is functional
-		* i wrote about (functional programming) too
+		* see functional programming
 			\ links-to internal zxsbxwlppaypmpnn
 	* it is simple
 		* it is high level; the programmer does not need to deal with [and hence learn] low level things like memory management
-		* its type system is weak : lacks even type function polymorphism; this prevents elm programmers to use abstractions that are difficult for a beginner programmer [like monad]; hence all the material one can find on the internet related to elm is without these advanced topics - this makes elm a safe space to learn programming, where one can comfortably learn only the basics first
-		* most importantly it does not contain any bad feature that are present in many highly popular programming languages; such features not only make the learning significantly more difficult but also mislead the beginner to incorrect knowledge and very bad programming style; the most notable example of such bad language feature is object oriented programming; elm is fortunately not object oriented; this makes it much easier to learn and leads to cleaner programmer mind; other bad stuff that elm avoids include: imperative instructions, control flow structures, null values and exceptions
-			* why is object oriented programming bad
-				\ links-to internal kgmqzsduacpzvbxy
-			* why are null value is bad
-				\ links-to internal fbctgaodsnjovfll
-		* due to its functional nature and the restriction of the features to only the very basic ones : the whole language is super simple, straightforward, intuitive, a breeze to learn
+		* its type system is weak: lacks even type function polymorphism; this prevents Elm coders to use abstractions that are difficult for a beginner coder [like monad]; hence all the material one can find on the web related to Elm is without these advanced topics - this makes Elm a safe space to learn first only the basics of coding
+		* most importantly: it does not contain bad features that are present in many highly popular programming languages
+			* example of bad features that Elm does not have
+				* object orientation
+					\ links-to internal kgmqzsduacpzvbxy
+				* null values
+					\ links-to internal fbctgaodsnjovfll
+			* such features not only make the learning significantly more difficult but also mislead the beginner to incorrect knowledge and bad coding style
 	* ease of simple web GUI construction
-		* this is not necessary to learn programming, but beginners often desire it
+		* this is not necessary to learn coding, but beginners often want it
 * too simple for professional use
-	* one of its advantages is also its big disadvantage: it is too simple; the most hurting problem is the lack of  type function polymorphism; hence if one wants to move beyond the baby steps then must switch to a more advanced language; for that 'haskell' is a perfect choice
-		* link to (type function polymorphism)
+	* one of its advantages is also its big disadvantage: it is too simple; the most hurting problem is the lack of type-function polymorphism; hence if one wants to move beyond the baby steps then eventually must switch to a more advanced language; for that Haskell is a perfect choice
+		* link to (type-function polymorphism)
 			\ links-to internal eyfagqcuwwajcnmt
-		* link to 'haskell'
-			\ links-to external https://www.haskell.org/

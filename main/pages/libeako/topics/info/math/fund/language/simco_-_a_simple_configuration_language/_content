@@ -2,19 +2,18 @@
 * SimCo is to be a simple universal configuration language for practical use
 * the name "SimCo" is from the phrase "simple configuration"
 * the current state of configuration languages
-	* the well known configuration languages are json, yaml, toml, dhall
-		* if you know about other noteworthy one then tell me about it
-	* json is not for humans; its syntax is heavy, and does not support comments
-	* yaml is complex
-	* toml comes closer to what i intend but i think an even simpler language is possible
-	* dhall has a professional and principled design; it is simple too, but only relatively to its expressive power and safety; but absolutely it is complex, heavy; it is a real programming language; though total, but still a programming language; i can imagine complex configuration tasks where that power is good but many [perhaps the majority of] configuration tasks require only a few simple unrelated properties, expressed as strings; for those tasks involving an almost full programming language seems to me too muc
+	* the well known configuration languages are Json, Yaml, Toml, Dhall
+	* Json is not for humans; its syntax is heavy, and does not support comments
+	* Yaml is complex
+	* Toml is closer to what i intend but i think an even simpler language is possible
+	* Dhall has a professional and principled design; it is simple too, but only relatively to its expressive power and safety; but absolutely it is complex, heavy; it is too expressive [a total lambda calculus]; i can imagine complex configuration tasks where that power is good but many [perhaps the majority of] configuration tasks require only a few simple unrelated properties, expressed as strings; for those tasks involving an almost full lambda calculus seems too much to me
 * the description and design rational of simco
 	* simplicity
 		* simco is trying to be very simple; the only boundary of this simplicity is that the stock language ought to be usable for simple practical configuration tasks; it does not strive to be a theoretical minimum, it strives to be a practical minimum
-		* in case some additional features is needed: it is to be implemented outside of the simco project, on the simco language, interpreting the atomic sicmo property values specially
+		* in case some additional features is needed: it is to be implemented outside of the simco project, on the simco language, interpreting the pure text atomic sicmo property values specially
 	* built-in types
 		* simco is unityped: the only type is string
-		* this is because there is not principled way to draw a boundary around non-string types
+		* this is because there is no principled way to draw a boundary around non-string types
 			* if boolean is built-in then why not 3-valued logical values [true, false, unknown] too?
 			* if integer numbers are built-in then why not rational, then floating point, then complex, then ... numbers too?
 			* if date is built-in then why not IP addresses, email addresses, ... too?
@@ -26,37 +25,39 @@
 		* keys may contain only regular letters, decimal digits, '-'
 		* keys may not be empty
 		* the values may not contain leading or ending whitespace; this is for safety
-		* neither the keys nor the value are in apostrophes; this is to keep the syntax clean; this suffices, because in the majority of cases the values do not contain leading or ending whitespace; in case they are: the user can apply whatever apostrophe mechanism it likes
+		* neither the keys nor the value are in apostrophes; this is to keep the syntax clean; this suffices, because in the majority of cases the values do not contain leading or ending whitespace; in case they do: the specific project can apply whatever apostrophe mechanism it likes
 		* the value ends at the new-line character; hence multi-line values are not supported directly; this is for the simplicity and cleanness of the syntax
-			* multi-line values are not normal in configurations and when one is needed then it is probably healthier anyway to have it in a separate text file and only its file path in the configuration file
+			* multi-line values are not normal in configurations and when one is needed then it is probably healthier anyway to have its content in a separate file and only the file path in the configuration file
 	* tree structure
 		* the simple properties can be organized into categories
-			* boot
-				* loader = grub2
-				* command = print "hello master"; system-package-manager --update
-			* network
-				* machine-name = main-pc
+			* example
+				* boot
+					* loader = grub2
+					* command = print "hello master"; system-package-manager --update
+				* network
+					* machine-name = main-pc
 		* the names of the categories are keys and have the same syntax as keys of simple properties
-		* the indentation encode sthe parent-child relationships between the nodes
+		* the indentation encodes the parent-child relationships between the nodes
 		* the indentation is done with tabs
 			* motivation
 				\ links-to internal awitstdmdccwokwl
 		* categories can be nested in whatever tree structure, with any depth and complexity
-			* system
-				* boot
-					* loader = grub2
-					* command = print "hello master"; system-package-manager --update 
-				* network
-					* machine-name = main-pc
-			* applications = geany firefox tor-browser
-			* users
-				* -
-					* name = john
-					* real-world-name = John Doe
-				* -
-					* name = jane
-					* real-word-name = Jane Doe
-		* > 1 occurance of the same key, under the same node is allowed
+			* example
+				* system
+					* boot
+						* loader = grub2
+						* command = print "hello master"; system-package-manager --update 
+					* network
+						* machine-name = main-pc
+				* applications = geany firefox tor-browser
+				* users
+					* -
+						* name = john
+						* real-world-name = John Doe
+					* -
+						* name = jane
+						* real-word-name = Jane Doe
+		* > 1 occurance of the same key (even as siblings) is allowed
 * the recommended file name extension for simco is ".simco.text"
-	* ".text" is to signal for the users, who are not familiar with simco, that the file can be viewed and edited with simple text viewer and editor
-	* ".simco" is useful for special editors to colorize and otherwise help the editing of simco files specifically
+	* ".text" is to signal for the users that are not familiar with simco that the underlying format is text
+	* the additional ".simco" is useful for special editors to colorize and otherwise help the editing of simco files specifically
