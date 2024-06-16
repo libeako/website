@@ -1,8 +1,8 @@
 \ id fmscxupazhuktrwh
-* the text structure should match the syntax tree structure
+* principle: the text structure should match the syntax tree structure
 	\ links-to internal wndpwtiwdwsvwwzc
 	* this ergonomics consideration is the basis of this section
-* when a block of code uses multiple lines then parts of it are separated from each other by line-break, hence the block itself should also be separated from its neighbor by at least a line-break
+* when a block of code uses multiple lines then the line of it are separated from each other by line-break, hence the block itself should also be separated from its neighbor by at least one line-break
 * example
 	* use this
 		* void f (...)
@@ -15,7 +15,9 @@
 		* }
 * the readability is better because
 	* the structure of the text is more similar to the structure of the concrete syntax tree
-	* the appearance reflects the fact that the opening and closing brace have the same meaning; the opening and closing bracket has the same horizontal position, so it is easy to match them; the block has a block-like appearance
+	* the appearance reflects the fact that the opening and closing brace have the same [dual] meaning; the opening and closing bracket has the same horizontal position, so it is easy to match them; the block has a block-like appearance
 	* the function header is cleaner
 	* the block is better separated from the header of the block vertically too
 * the disadvantage is only that +1 line is used
+	* but that is not so important
+		\ links-to internal fgzndiutqpimppkt

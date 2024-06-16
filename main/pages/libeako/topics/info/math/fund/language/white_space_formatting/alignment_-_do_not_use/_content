@@ -4,22 +4,22 @@
 	* my_awesome_function x =
 		* let local_value = some_value
 			* in do_something_with local_value
-* this is a semantical indentation - the indentation mimics the semantical structure of the code [the meaning of the code]
+* this is a semantical indentation - the indentation adheres to the semantical structure of the code [the meaning of the code]
 * a usual competitor of this style is
 	* my_awesome_function x = let local_value = some_value
 		* in do_something_with local_value
-* , to save 1 line; but this breaks with the semantical structure, as one part of the right side of the equation is seaprated from the rest with a line break, despite it is not so separated from the right side of the equation; to give back the block appearance for the right side of the equation: alignment is used sometimes, that is aligning the line 
-	* in do_something_with local_value
-* to start where the block starts ["let ..."]
+* , to save 1 line; but the appearance lost its block appearance; 
+* alignment is used sometimes
+	* that is aligning the line "in do_something_with local_value" horizontally to start where the let-expression starts
 * i will refer to the semantically indented version with "indented"
-* looking at this simple artificial static example : the reason to like the aligned one seems obvious
-	* looks better because the name of the declared thing is separated, it does not overlap horizontally with the value it is given
+* looking at this simple artificial static example: the reason to like the aligned one seems obvious
+	* looks better because the name of the declared thing is separated, it does not overlap horizontally with the value that is bound to it
 	* uses 1 less line, due to utilizing the header line of the whole code block
-* but in realistic scenario the table turns
-	* in the aligned version the value side of the equation starts more to the right, hence it has less room horizontally; if the block is bigger, then the probability is also bigger of having to break a line compared to the same line in the indented version and by this making the aligned version to use more lines
-	* if the name of the defined thing or its parameters changes
+* but in realistic scenarios the table often turns
+	* in the aligned version the value side of the equation starts more to the right, hence it has less space horizontally; if the block is bigger, then the probability is also bigger of having to break a line compared to the same line in the indented version and by this making the aligned version to use more lines
+	* if the name of the defined thing or its arguments changes
 		* to longer
-			* then in the aligned version the left horizontal space decreases, hence breaking of long lines may become necessary
+			* then in the aligned version the horizontal space decreases, hence breaking of long lines may become necessary
 		* to shorter
 			* then also, not from necessity but to save space
 		* such reformatting is almost impossible to do perfectly via automation

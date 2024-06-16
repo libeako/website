@@ -1,5 +1,5 @@
 \ id fgzndiutqpimppkt
-* making the text compact saves number of lines, hence navigation effort during working with the text
-* but the significance of this got decreased much due to
-	* we have much more screen space due to technical advancement
-	* most editors support text folding
+* the importance to save physical space in our code got decreased much due to
+	* screen space grew by hardware advancement
+	* editors got support for text folding
+	* navigation got better supported
