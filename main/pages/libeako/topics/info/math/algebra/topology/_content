@@ -37,7 +37,7 @@
 	* with other words: the open sets are exactly those which equal to their interior
 	* proof is trivial
 	* dually: is closed = equals to its closure
-* "limit points" of a set
+* "cluster" or "accumulation" or "limit" point of a set
 	* intuitively these are the ones that have other points of the set arbitrariy close
 		* more formally: x is limit point of s iff all neighborhoof of x contains other than x point from s
 	* theorem: this is equivalent to (border points are the not isolated adherent points)
@@ -56,3 +56,5 @@
 		* poof is easy
 	* theorem: set is open iff does not intersect with its boundary
 		* proof is trivial
+* lax metric space
+	\ links-to internal xafubahzdsfozqkh

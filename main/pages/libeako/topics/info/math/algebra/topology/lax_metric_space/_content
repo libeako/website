@@ -1,0 +1,37 @@
+\ id xafubahzdsfozqkh
+* name
+	* i use the name "lax metric" but others mostly use "pseudo-metric"; i refuse to use the "pseudo" prefix because it means 'false', which is not appropriate for this concept; this concept is not a false version of the real metric concept, but only a relaxation of its conditions so that the resultant condition-set is even more elegant in my opinion
+* definition
+	* (S : Set, d : (S * S) -> R) is "lax metric" space
+	* iff forall x y z in S
+		* d (x, x) = 0
+		* d (x, y) = d (y, x)
+		* d (x, y) + d (y, z) >= d (x, z)
+* "d" or "dist" or "distance" is the "metric"
+* elements of S are said to be the "points" of the space
+* reflexive, symmetric, transitive
+	* the defining properties of the metric resemble these properties of binary relations; but the metric is a binary function, not a relation
+	* but we can derive a relation from it:
+		* r (x, y) := d (x, y) = 0
+		* it is very easy to derive the reflexive, symmetric, transitive properties of r from the defining properties of d
+		* thus
+			* these property names can stand for the metric too
+				* "transitivity" can be interpreted as transitivity of closeness
+					* (d (x, y) < e) and (d (y, z) < e) => (d (x, z) < 2*e)
+			* r is an equivalence relation
+	* the r-equivalent points are not distinguishable via the metric
+		* proposition
+			* suppose
+				* d (x, y) = 0
+			* then forall c.
+				* d (c, x) = d (c, y)
+		* proof
+			* by transitivity:
+			* d (c, x) + d (x, y) >= d (c, y)
+			* by eliminating d (x, y), which is 0
+			* d (c, x) >= d (c, y)
+			* same way for the other comparison direction
+			* hence the 2 sides are equal
+	* hence 
+		* the name "indiscernible" is justified instead of r
+		* the r-quotient lax metric space exists
