@@ -1,6 +1,6 @@
 \ id xafubahzdsfozqkh
 * name
-	* i use the name "lax metric" but others mostly use "pseudo-metric"; i refuse to use the "pseudo" prefix because it means 'false', which is not appropriate for this concept; this concept is not a false version of the real metric concept, but only a relaxation of its conditions so that the resultant condition-set is even more elegant in my opinion
+	* i use the name "lax metric" or "pre-metric" but others mostly use "pseudo-metric"; i refuse to use the "pseudo" prefix because it means 'false', which is not appropriate for this concept; this concept is not a false version of the real metric concept, but only a relaxation of its conditions so that the resultant condition-set is even more elegant in my opinion
 * definition
 	* (S : Set, d : (S * S) -> R) is "lax metric" space
 	* iff forall x y z in S
@@ -17,7 +17,13 @@
 		* thus
 			* these property names can stand for the metric too
 				* "transitivity" can be interpreted as transitivity of closeness
-					* (d (x, y) < e) and (d (y, z) < e) => (d (x, z) < 2*e)
+					* d (c, x) + d (x, y) >= d (c, y)
+					* rearranged:
+					* d (x, y) >= d (c, y) - d (c, x)
+					* dually:
+					* d (x, y) >= d (c, x) - d (c, y)
+					* merged:
+					* d (x, y) >= abs (d (c, x) - d (c, y))
 			* r is an equivalence relation
 	* the r-equivalent points are not distinguishable via the metric
 		* proposition
@@ -34,4 +40,55 @@
 			* hence the 2 sides are equal
 	* hence 
 		* the name "indiscernible" is justified instead of r
-		* the r-quotient lax metric space exists
+		* the r-quotient lax metric space exists and in it the distance between non-equal points is not zero [hence it is a metric space]
+* distance is non-negative
+	* proof
+		* 2 * d (x, y)
+		* =
+			* by symmetry
+		* d (x, y) + d (y, x)
+		* >=
+			* by transitivity
+		* d (x, x)
+		* =
+			* by reflexivity
+		* 0
+* ball
+	* a "ball" with center c and pozitive radius r is 
+		* the points p. c (d (c, p)) r
+		* where c is a comparison: either strictly smaller or (smaller or equal)
+		* accordingly the ball is said to be "open" or "closed"
+		* notation: ball c r
+	* lax metric space induces a topology
+		* open (s : Set) := forall point p in s. exists open-ball with center p and contained by s
+		* the set of subsets that are open according to this definition form a topology
+			* proof is trivial, because this property is preserved over unions and finite intersections
+		* forall point p in an open ball b: exists an open ball around p intirely inside b
+			* proof is trivial, using the transitivity property of the metric
+		* hence the open balls are open sets in the topology
+		* the closed balls are also closed in the topology
+			* proof
+				* enough to prove that the complementer of any closed ball b is open
+				* the complementer points are all at a more than positive distance from the ball, hence some positive sized open ball contains them but not any content of b; hence all the complementer points are covered by open balls, not intersecting b, the union of the small open balls (which is the complementer of b) is open
+	* a set n is neighborhood of point p iff exists positive e such that (open-ball e p ) is contained by n
+		* proof is trivial
+	* a set is open iff is union of open balls
+		* proof is trivial
+* the empty and full sets are clopen
+	* proof is trivial
+* a subset of a metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
+	* the space is bounded iff its entirety as a subset is bounded
+	* when the subset is non-empty then this is equivalent to
+		* exists point c. exists real number K. forall point p. d (p, c) <= K
+		* proof is trivial
+* continuity
+	* theorem
+		* proposition
+			* f : X -> Y is continuous at x iff
+				* forall open-ball yb with center (f x) and inside Y
+					* exists open-ball xb around center x and inside X
+						* yb containes {f p | p in xb}
+		* proof is trivial
+* metric space
+	\ links-to internal utfnquidytfalntd
+* the quotient space (S / indiscernible) is a metric space
