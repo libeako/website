@@ -56,5 +56,8 @@
 		* poof is easy
 	* theorem: set is open iff does not intersect with its boundary
 		* proof is trivial
+* a sequence "converges" to point l iff forall its neighborhood n. almost all elements of the sequence are in n
+* continuity
+	\ links-to internal ijidewelvrqswzry
 * lax metric space
 	\ links-to internal xafubahzdsfozqkh
