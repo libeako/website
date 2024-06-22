@@ -1,0 +1,29 @@
+\ id crbnohxmjzbhgpwt
+* see also
+	* continuity in topology
+		\ links-to internal ijidewelvrqswzry
+* theorem
+	* proposition
+		* f : X -> Y is continuous at x iff
+			* forall open-ball yb with center (f x) and inside Y
+				* exists open-ball xb around center x and inside X
+					* yb containes {f p | p in xb}
+	* proof is trivial
+* theorem
+	* proposition
+		* if X, Y are metric spaces and f : X -> Y and (x : X)
+			* equivalent
+				* f is continuous at x
+				* f is sequentially continuous at x
+	* proof
+		* => - this is proven generally in topology
+		* <= - easy to prove the contrapositive
+			* being in metric space allows us to have a sequence that converges to zero size; for example (divide 1)
+			* consider the sequence of open-balls with center x and these decreasing radiuses
+			* the contrapositive assumption is that f is not continuous at x, which is (exist neighborhood K of (f x) such that all neighborhood of x contain a point whose image is outside of K)
+			* for neighborhoods of x consider the earlier mentioned balls with radiuses decreaing to zero; let "p" mean the points with outside of K image; then p converges to x, yet (p >>> f) does not converge to (f x); hence f is not sequentially continuous, which is the wanted contrapositive conclusion
+* uniform continuity
+	* f is "uniformly continuous" when
+		* forall dy > 0. exists dx > 0. forall x1 x2. d (x1, x2) < dx => d (f x1, f x2) < dy
+	* uniform continuity implies continuity
+		* proof is trivial
