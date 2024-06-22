@@ -82,13 +82,7 @@
 		* exists point c. exists real number K. forall point p. d (p, c) <= K
 		* proof is trivial
 * continuity
-	* theorem
-		* proposition
-			* f : X -> Y is continuous at x iff
-				* forall open-ball yb with center (f x) and inside Y
-					* exists open-ball xb around center x and inside X
-						* yb containes {f p | p in xb}
-		* proof is trivial
+	\ links-to internal crbnohxmjzbhgpwt
 * metric space
 	\ links-to internal utfnquidytfalntd
 * the quotient space (S / indiscernible) is a metric space
