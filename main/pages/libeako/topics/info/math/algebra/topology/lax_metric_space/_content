@@ -76,6 +76,11 @@
 		* proof is trivial
 * the empty and full sets are clopen
 	* proof is trivial
+* basis
+	* definition
+		* a subset B of the set of open sets is "basis" of the topology iff all open sets are unions of members of B
+	* example: the open intervals are a basis of the standard real numbers topology
+	* the elements of a basis are the "basic" open sets of the topology
 * a subset of a metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
 	* the space is bounded iff its entirety as a subset is bounded
 	* when the subset is non-empty then this is equivalent to
