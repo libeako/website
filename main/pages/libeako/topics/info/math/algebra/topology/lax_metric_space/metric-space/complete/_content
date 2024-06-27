@@ -1,0 +1,19 @@
+\ id vqprearscrrvxdzk
+* representations of completeness
+	* [C]: Cauchy => convergent
+	* [I]: forall (infinite nested sequence s of closed balls with radiuses converging to 0)
+		* the intersection of the elements of s is not empty
+* proof of equivalences
+	* C => I
+		* take an arbitrary sequence of balls as in I
+		* take the sequence of the centers of the balls - it is Cauchy; hence by the assumption [C] it converges; let us name the limit by "p"
+		* p i in all of the balls
+			* proof is by contradiction
+				* suppose at least one of the balls does not contain p; then all the later ones also do not contain p
+				* the balls are closed, hence p is separated from those balls by at least a finite positive distance; hence p is disattached from the sequence it is supposed to be the limit of
+	* I => C
+		* take an arbitrary Cauchy sequence
+		* take the real sequence (divide 1); forall of its elements: create the ball that contains some tail part of the ball sequence; delete the ones that are not fully in the previous one; take the intersection of the remaining balls
+		* by assumption [I] the intersection is not empty
+		* it must consist of only 1 point, otherwise they could not all be contained by the small balls
+		* the taken Cauchy sequence converges to this single point; proof is easy
