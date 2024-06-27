@@ -15,9 +15,12 @@
 			* use these facts:
 				* the inverse image of a smaller set is smaller
 				* a set including a neighborhood is a neighborhood
+*  continuity is preserved by function composition
+	* proof is trivial
 * sequentially continuity
 	* definition
 		* f is "sequentially continuous" at x iff
 			* forall sequence x. x converges to x' => (x >>> f) converges to f (x n)
 	* if a function is continuous somewhere then it is sequentially continuous there
 		* proof is trivial
+	* sequential continuity is preserved by function composition

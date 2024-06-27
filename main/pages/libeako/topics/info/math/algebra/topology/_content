@@ -12,6 +12,7 @@
 	* hence both extremal sets are both open and closed
 * the "neighborhood" of a set s is a set which has an open subset which includes s
 * the "neighborhood" of a point x is a neighborhood of {x}
+	* a neighborhood n of x without x [n \ {x}] is a "deleted" or "punctured" neighborhood of x
 * theorem: n is neighborhood of set s <=> n is neighborhood of all points of s
 	* =>: trivial
 	* <=: use the property that the union of open sets is open
@@ -28,7 +29,7 @@
 	* the "exterior" of a set means the interior of its complement
 		* the points of the exterior are the "exterior point"s
 		* x is an "isolated" point of s means that x is exterior of s\{x}
-	* dually: the "adherent" points of a set are the ones that have neighborhood that contains point of the set
+	* dually: the "adherent" points of a set are the ones around which all neighborhoods contain point of the set
 		* this is equivalent to (the intersection of the closed sets including the set)
 		* the closure of a set s is (the smallest closed set which includes s)
 			* thus it is said to be the "closure" of s
@@ -37,14 +38,12 @@
 	* with other words: the open sets are exactly those which equal to their interior
 	* proof is trivial
 	* dually: is closed = equals to its closure
-* "cluster" or "accumulation" or "limit" point of a set
-	* intuitively these are the ones that have other points of the set arbitrariy close
-		* more formally: x is limit point of s iff all neighborhoof of x contains other than x point from s
-	* theorem: this is equivalent to (border points are the not isolated adherent points)
-		* proof is easy
-	* the "derived" set of a set is the set of its limit points
 * theorem: the points of a closing of a set can be partitioned to its limit and isolated points
 	* proof is easy: the points [of the closing] either do or do not have other points of the set in all of their neighborhoods
+* "cluster" or "accumulation" or "limit" point of a set
+	* intuitively these are the ones that have other points of the set arbitrariy close
+		* more formally: x is limit point of s iff all neighborhood of x contains other than x point from s
+	* the "derived" set of a set is the set of its limit points
 * "border points"
 	* intuitively these are the points which are arbitrarily close to both the set and its complement
 	* more formally
@@ -56,8 +55,19 @@
 		* poof is easy
 	* theorem: set is open iff does not intersect with its boundary
 		* proof is trivial
-* a sequence "converges" to point l iff forall its neighborhood n. almost all elements of the sequence are in n
+* infinite sequence
+	* an infinite sequence "converges" to its "limit" point l iff forall [open] neighborhood n of l. almost all elements of the sequence are in n
+	* an "accumulation" point of a sequence is one all [open] neighborhoods of which contain infinite elements of the sequence
+	* theorem: the limit point of a sequence is an accumulation point of the sequence
+		* proof is trivial
 * continuity
 	\ links-to internal ijidewelvrqswzry
+* compactness
+	* a topological space S is "compact" iff all open covers of S have a finite sub-cover
+		* an open "cover" of S is a set of open sets whose union contains S
+		* a sub-cover is a subset which is also cover
+	* a subset H of a topological space S is "sequentially compact" iff all infinite sequences of H contain subsequence which converges in S
+	* theorem: compact => sequentially compact
+		* proof: countably finite sequence is sequence
 * lax metric space
 	\ links-to internal xafubahzdsfozqkh
