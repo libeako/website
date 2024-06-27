@@ -76,18 +76,26 @@
 		* proof is trivial
 * the empty and full sets are clopen
 	* proof is trivial
-* basis
-	* definition
-		* a subset B of the set of open sets is "basis" of the topology iff all open sets are unions of members of B
-	* example: the open intervals are a basis of the standard real numbers topology
-	* the elements of a basis are the "basic" open sets of the topology
+* a "net" is a set of points, the proximities of which cover the whole space
+	* a 'd-net' is a set of points P so that the (union (lift (ball d) P)) covers the whole space
 * a subset of a metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
 	* the space is bounded iff its entirety as a subset is bounded
 	* when the subset is non-empty then this is equivalent to
 		* exists point c. exists real number K. forall point p. d (p, c) <= K
 		* proof is trivial
+	* a space is "totally bounded" if it is covered by a finite d-net
+		* totally bounded => bounded; proof is trivial
+* Cauchy sequence
+	* definition
+		* a sequence x is "Cauchy" iff 
+		* forall d positive real. exists n natual. forall n1 n2 (> n). d (x n1, x n2) < d
+	* Cauchy <= convergent
+		* proof is trivial
+	* iff (Cauchy => convergent) then the space is said to be "complete"
 * continuity
 	\ links-to internal crbnohxmjzbhgpwt
+* compactness
+	\ links-to internal qwizbwhijbrppnyb
 * metric space
 	\ links-to internal utfnquidytfalntd
 * the quotient space (S / indiscernible) is a metric space

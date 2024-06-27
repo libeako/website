@@ -63,11 +63,22 @@
 * continuity
 	\ links-to internal ijidewelvrqswzry
 * compactness
-	* a topological space S is "compact" iff all open covers of S have a finite sub-cover
+	\ id ecmltgeunwukoeeb
+	* a space S is "compact" iff all open covers of S have a finite sub-cover
 		* an open "cover" of S is a set of open sets whose union contains S
 		* a sub-cover is a subset which is also cover
-	* a subset H of a topological space S is "sequentially compact" iff all infinite sequences of H contain subsequence which converges in S
-	* theorem: compact => sequentially compact
-		* proof: countably finite sequence is sequence
+	* a space is "accumulatively" compact iff all sequencies have an accumulation point in the space
+		* this name is my invention; others use the name "countably compact"
+	* a subset H of a space is "convergently compact" iff all infinite sequences of H contain subsequence which converges in H
+		* the name "convergently compact" is my invention
+			* i do not like the name "sequentially compact" because it does not involve the sequence notion more than the countably compactness does
+		* theorem: compact => convergently compact
+			* proof: countably finite sequence is sequence
+	* a space is "limit point compact" iff any infinite subset of the points have a limit point in the space
+* basis
+	* definition
+		* a subset B of the set of open sets is "basis" of the topology iff all open sets are unions of members of B
+	* example: the open intervals are a basis of the standard real numbers topology
+	* the elements of a basis are the "basic" open sets of the topology
 * lax metric space
 	\ links-to internal xafubahzdsfozqkh
