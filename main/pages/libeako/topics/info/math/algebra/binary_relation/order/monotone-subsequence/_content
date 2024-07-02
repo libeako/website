@@ -1,0 +1,13 @@
+\ id xkwzxpsyafwkzdnx
+* theorem: 
+	* in every infinite subsequence 
+		* exists a subsequence which is monotone increasing
+		* exists a subsequence which is monotone decreasing
+	* proof
+		* let 'peak point' mean the property of a position that the element there is greater or equal to all the later elements
+		* suppose the amount if peak points is infinite
+			* then they form a monotone increasing sub-sequence
+			* else
+				* we can always find a greater element later; this proves that a monotone increasing sequence exists
+		* the existence of a monotone decreasing sequence is similarly provable
+	* usual names fot this theorem include "peak point lemma", "spanish hotel theorem"
