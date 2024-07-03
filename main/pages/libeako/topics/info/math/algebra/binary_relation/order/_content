@@ -22,6 +22,12 @@
 	* "toset" is short of "totally ordered set"
 	* existence of monotone subsequence
 		\ links-to internal xkwzxpsyafwkzdnx
+	* order embedding
+		* let
+			* P, R : (t : Type, 2 ^ t -> Bool)
+		* an "order embedding" from P to R is an f such that
+			* f : fst P -> fst R
+			* snd P (x1, x2) <=> snd R (f x1, f x2)
 * extreme elements
 	\ links-to internal zwkbiyogscsqbnte
 * well-founded an ordering is iff each subset has a minimal element
