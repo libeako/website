@@ -1,0 +1,8 @@
+\ id zdpwouwoptyzxnxb
+* (F, +, *) is a "field" iff
+	* (F, +) and (F \ {0}, *) are commutative groups
+	* * distributes over +
+		* m * (x + y) = (m * x) + (m * y)
+* the precedense of * > the precedense of +
+* real numbers
+	\ links-to internal fqlbuufudaworbis
