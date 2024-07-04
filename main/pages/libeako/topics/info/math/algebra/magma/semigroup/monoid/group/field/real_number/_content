@@ -1,0 +1,28 @@
+\ id fqlbuufudaworbis
+* several methods for representing the real numbers are well known
+* some representations
+	* the symmetric cut representation
+		* similar to Dedekind cuts, but is symmetric
+		* the representation
+			* side-sets : 2 -> (Q -> Prop)
+				* the 2 subsets of the rational numbers, to each side from the represented number; they do not contain the represented number
+		* a potential improvement is to store only one of the side-sets, but do not fix the side, allow both sides
+			* this makes it possible to avoid having to store the 0, which have behavior problem in division
+	* with Cauchy sequences
+		* the relation
+			* \ (x, y : Sequence Rational) -> forall d pozitive rational. exists n0. forall n > n0. abs (x n - y n) < d
+		* is an equivalence relation
+	* digit sequence
+* isomorphism between the symmetric cut and Cauchy representations
+	* symmetric cut => Cauchy
+		* if the represented number is rational then the case is trivial; else:
+		* start with a pair of rational numbers from each side-sets
+		* compute the middle between them; it will fall into exactly one of the side-sets; replace the member of the pair with this new rational number
+		* continue this without end
+		* the resultant sequence is Cauchy and converges to the represented real number
+	* symmetric cut <= Cauchy
+		* any Cauchy sequence is bounded by a sequence of nested closed intervals whose size converges to zero
+		* the end-point-pairs of these intervals determine the side-sets of the symmetric cut rep
+* basic properties
+	* the metric space of the real numbers is complete
+	* the infimum and supremum of all bounded subsets of the real numbers exists
