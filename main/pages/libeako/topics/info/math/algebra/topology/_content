@@ -60,6 +60,9 @@
 	* an "accumulation" point of a sequence is one all [open] neighborhoods of which contain infinite elements of the sequence
 	* theorem: the limit point of a sequence is an accumulation point of the sequence
 		* proof is trivial
+* "limit" of function f at point x is y iff
+	* forall neirhborhood nx of x. exists neighborhood ny of y. forall point p in (nx \ {x}). f p is in ny
+		* this could have been phrased with open neighborhoods only, that is equivalent
 * continuity
 	\ links-to internal ijidewelvrqswzry
 * compactness
