@@ -26,3 +26,23 @@
 * basic properties
 	* the metric space of the real numbers is complete
 	* the infimum and supremum of all bounded subsets of the real numbers exists
+* monotone bounded sequences converge to their extremums
+	* proof is trivial application of the extremum existing
+* bounded sequences contain convergent subsequence
+	* proof 1
+		* sequences contains monotone subsequence
+		* monotone sequences converge
+	* proof 2
+		* divide the bounded interval into 2 halves; at least one of them surely contain infinite number of elements of the sequence; continue recursively on it with those elements only; do this without end
+	* this extends to multiple dimensional space easily
+		* find a convergent subsequence in the first dimension
+		* dropping this dimension and the rest of the sequence go back to the previous step
+	* this theorem says that the real and complex euclidean spaces are compact
+	* a name of this theorem is "Bolzano-Weierstrass"
+* intermediate value theorem
+	* if f is continuous function then it takes all values from (f a) to (f b) on interval [a, b]
+	* proof
+		* keep halving the interval on the domain, continue with the half whose end-point values are mapped by f to different sides of the intermediate value
+		* the half-point sequence is Cuachy, hence converges; f maps its limit point to the intermediate value, because f is continuous
+* the image of a continuous function on an interval in continuous 
+	* easy consequence of the intermediate value theorem
