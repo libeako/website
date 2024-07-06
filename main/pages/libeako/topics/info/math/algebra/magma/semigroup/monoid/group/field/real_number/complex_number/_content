@@ -1,0 +1,47 @@
+\ id swzffxiiqpfldttf
+* Complex n := { real : n, imaginary : n }
+* n is a type of numbers that form a field; it is usually the real number, but could be rational too
+* a short notation of a complex number literal is like a simple pair: (re, im)
+* the computational methods
+	* (xr, xi) + (yr, yi) := (xr + yr, xi + yi)
+	* (xr, xi) * (yr, yi) := (xr * yr - xi * yi, xr * yi + xi * yr)
+* embedding
+	* _ : n -> Complex n := \ x -> (x, 0)
+	* is an embedding of n into Complex n and is a field-homomorphism
+	* hence we can use xr as a short notation of (xr, 0)
+* a short notation of (0, 1) is i
+* a short notation of (0, xi) is (i * xi)
+	* this is because:
+	* i * xi = (0, 1) * (x1, 0) = (0 * xi - 1 * 0, 0 * 0 + 1 * x1) = (0, xi)
+* an other notation of (xr, xi) is (xr + i * xi)
+	* this is because:
+	* xr + i * xi = (xr, 0) + (0, xi) = (xr, xi)
+* (power 2 i) = -1
+	* i * i = (0, 1) * (0, 1) = (0 * 0 - 1 * 1, 0 * 1 + 1 * 0) = (-1, 0) = -1
+* s * (xr, xi) = (s * xr, s * xi)
+	* proof:
+		* s * (xr, yr) = (s, 0) * (xr, yr) = (s * xr - 0 * yr, s * yr + 0 * xr) = (s * xr, s * yr)
+	* when s = 1
+		* 1 * (xr, xi) = (xr, xi)
+		* thus 1 is a neutral value in multiplication
+* complex numbers form a field
+	* proof of associativity of multiplication
+		* (x * y) * z = 
+		* ((xr, xi) * (yr, yi)) * (zr, zi) =
+		* (xr * yr - xi * yi, xr * yi + xi * yr) * (zr, zi) =
+		* ((xr * yr - xi * yi) * zr - (xr * yi + xi * yr) * zi, (xr * yr - xi * yi) * zi + (xr * yi + xi * yr) * zr) =
+		* (xr * yr * zr - xi * yi * zr - xr * yi * zi - xi * yr * zi, - xi * yi * zi + xr * yr * zi + xr * yi * zr + xi * yr * zr)
+		* this expression does not change by shuffling x, y, z, hence any other of the multiplication of x, y, z would result in this
+	* proof of existence of inverse in multiplication
+		* (xr, xi) * (yr, yi) = (1, 0) <=>
+		* (xr * yr - xi * yi, xr * yi + xi * yr) = (1, 0) <=>
+		* and
+			* xr * yr - xi * yi = 1
+			* xr * yi + xi * yr = 0
+		* rearranged
+			* xr * yr - xi * yi = 1
+			* xi * yr + xr * yi = 0
+		* for each (xr, xi) not = 0. this has exactly 1 solution in (yr, yi)
+			* because it is a linear equation system with 2 variables and 2 equations
+	* the rest is trivial
+* as a metric space complex numbers behave like a 2-dimensional real euclidean space
