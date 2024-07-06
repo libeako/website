@@ -24,3 +24,5 @@
 	* if a function is continuous somewhere then it is sequentially continuous there
 		* proof is trivial
 	* sequential continuity is preserved by function composition
+* a function is continuous at a point iff at that point its value is its limit
+	* proof is trivial
