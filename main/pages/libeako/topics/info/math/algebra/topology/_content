@@ -85,5 +85,9 @@
 		* a subset B of the set of open sets is "basis" of the topology iff all open sets are unions of members of B
 	* example: the open intervals are a basis of the standard real numbers topology
 	* the elements of a basis are the "basic" open sets of the topology
+	* a subset B of the open sets is "subbasis" ["subbase", "prebase", "prebasis"] iff the topology is the smallest which contains B as open sets
+		* then B "generates" the topology
+		* this is the same as iff (all the open sets are generatable from B by the topological methods [union, finite intersection])
+		* every base is a subbase
 * lax metric space
 	\ links-to internal xafubahzdsfozqkh
