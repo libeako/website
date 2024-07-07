@@ -92,6 +92,22 @@
 	* Cauchy <= convergent
 		* proof is trivial
 	* iff (Cauchy => convergent) then the space is said to be "complete"
+* limit of function
+	* sequential limit <=> limit
+		* proof
+			* let "f" mean the function and "x" mean the point where its limit is considered
+			* <= is true generally in topological space
+			* =>
+				* suppose the opposite
+					* exists neighborhood ny of y
+						* forall neighborhood nx of x
+							* exists point p in (nx \ {p})
+								* ny does not contain (f p)
+				* consider a (converging to zero) radius ball sequence with center x
+				* all these balls are neighbohoods of x, hence they contain such p
+				* these p points are inside (convering to zero) radius balls around the same center x, hence the sequence "s" of these p points converge to x
+				* by assumption that f has a sequential limit at x: (s >>> f) converges to (f x)
+				* hence (s >>> f) must step into ny somewhere; but s was constructed specifically to avoid that - this is contradiction
 * continuity
 	\ links-to internal crbnohxmjzbhgpwt
 * compactness

@@ -63,6 +63,8 @@
 * "limit" of function f at point x is y iff
 	* forall neirhborhood nx of x. exists neighborhood ny of y. forall point p in (nx \ {x}). f p is in ny
 		* this could have been phrased with open neighborhoods only, that is equivalent
+* "sequential limit" of function f at point x is y iff
+	* forall sequence s that converges to x and does not contain x. (s >>> f) converges to y
 * continuity
 	\ links-to internal ijidewelvrqswzry
 * compactness
