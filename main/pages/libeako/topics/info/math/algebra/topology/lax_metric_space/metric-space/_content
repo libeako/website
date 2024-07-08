@@ -4,3 +4,14 @@
 	\ links-to internal vqprearscrrvxdzk
 * the Euclidean space
 	\ links-to internal boijjcqmszcdutmq
+* "extreme value theorem"
+	* let
+		* C be a metric space, compact
+		* O be an totally ordered metric space
+		* f : C -> O, continuous
+	* f attains its extremums
+	* proof
+		* continuous image of comact set is comact; hence the image of f is bounded, hence it has its extremums
+		* suppose that the extremum is not attained; that implies that it is possible to construct an infinite sequence that converges to the extremum
+		* the inverse-f image of this sequence, being in a compact space, has a convergent subsequence
+		* f is continuous, hence at the limit of this seubsequence it takes the limit of the images of the elements of the sequence, which is the extremum
