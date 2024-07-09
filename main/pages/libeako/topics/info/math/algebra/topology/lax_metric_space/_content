@@ -108,10 +108,10 @@
 				* these p points are inside (convering to zero) radius balls around the same center x, hence the sequence "s" of these p points converge to x
 				* by assumption that f has a sequential limit at x: (s >>> f) converges to (f x)
 				* hence (s >>> f) must step into ny somewhere; but s was constructed specifically to avoid that - this is contradiction
-* continuity
-	\ links-to internal crbnohxmjzbhgpwt
 * compactness
 	\ links-to internal qwizbwhijbrppnyb
+* continuity
+	\ links-to internal crbnohxmjzbhgpwt
 * metric space
 	\ links-to internal utfnquidytfalntd
 * the quotient space (S / indiscernible) is a metric space

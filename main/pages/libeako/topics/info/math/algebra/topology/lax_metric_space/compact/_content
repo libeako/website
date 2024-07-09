@@ -44,3 +44,20 @@
 				* forall d > 0. exists finite d-net which covers the whole space
 				* because of its finiteness: at least 1 of the balls covers infinite number of points of the sequence; this is a subsequence in which the distance of all point-paris < d / 2; hence this subsequence is Cauchy
 			* by the assumption of the theorem: the space is complete; hence, as Cauchy, every subsequence converges; hence the space is compact
+* function: continuous on compact => uniformly continuous
+	* proof
+		* suppose the opposite: not uniformly continuous
+			* exists e > 0. forall d > 0. exist points x y. (distance (x, y) < d) and (distance (f x, f y) > e)
+			* take an infinite sequence of distances converging to zero; according to these distances create an infinite sequence of pairs such that the pairs violate uniform continuity, their first component are closer to each other than the current distance that they are mapped to and the function outputs there are further from each other than e
+			* compactness => this sequence has subsequence that converges, simultanously in both component of the pairs
+			* the distnace between the component of each pair convreges to zero, hence the 2 components converge to the same limit; let "l" mean this limit
+			* the function is continuous => 
+				* exists d. 
+					* forall point x.
+						* distance (x, l) < d => distance (f x1, f l) < e/2
+			* hence
+				* exists d. 
+					* forall points x1, x2.
+						* (distance (x1, l) < d) and (distance (x2, l)) < d =>
+						* distance (f x1, f x2) < e
+			* but from the convergent sequence: exist points x1, x2, both arbitrarily close to l. distance (f x1, f x2) > e - contradiction
