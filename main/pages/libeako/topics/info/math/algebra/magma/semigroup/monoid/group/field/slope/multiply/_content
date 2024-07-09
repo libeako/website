@@ -1,0 +1,35 @@
+\ id nuwvxmvnokbukfsm
+* slope (f * g) = (slope f) * g + f * (slope g)
+	* proof
+		* lemma		
+			* (f * g) (p + h) - (f * g) p =
+			* (f (p + h)) * g (p + h) - (f p) * (g p) = 
+			* (f (p + h)) * g (p + h) - (f p) * g (p + h) + - (f h) * g (p + h) - (f p) * (g p) = 
+			* (f (p + h) - f p) * g (p + h) + + (f p) * g (p + h) - (f p) * (g p) = 
+			* (f (p + h) - f p) * g (p + h) + + (f p) * (g (p + h) - g p) = 
+		* slope (f * g) p =
+		* limit p (f * g) =
+		* limit 0 (\ h -> ((f * g) (p + h) - (f * g) p) / h) =
+		* limit 0 (\ h -> ((f (p + h) - f p) * g (p + h) + (f p) * (g (p + h) - g p)) / h) =
+		* limit 0 (\ h -> (((f (p + h) - f p) / h) * g (p + h) + (f p) * ((g (p + h) - g p) / h)) =
+		* limit 0 (\ h -> (((f (p + h) - f p) / h) * g (p + h)) + limit 0 (\ h -> (f p) * ((g (p + h) - g p) / h)) =
+		* (slope f p) * (g p) + (f p) * (slope g p) =
+* slope (1 / g) = 
+	* proof
+		* lemma
+			* ((1 / g) (p + h) - (1 / g) p) / h =
+			* (1 / (g (p + h)) - 1 / (g p)) / h =
+			* (1 / (g (p + h)) - 1 / (g p)) / h =
+			* ((g p - g (p + h)) / (g (p + h) * (g p))) / h =
+			* (1 / (g (p + h) * (g p))) * ((g p - g (p + h)) / h) =
+		* slope (1 / g) p =
+		* limit p (1 / g) = 
+		* limit 0 (((1 / g) (p + h) - (1 / g) p) / h) =
+		* limit 0 ((1 / (g (p + h) * (g p))) * ((g p - g (p + h)) / h)) =
+		* ((1 / (square (g p))) * (- slope g p) = 
+		* - slope g p / (square (g p)) = 
+* slope (f / g) =
+	* slope (f * (1 / g)) =
+	* \ p -> slope f p / (g p) + f p * (- slope g p / (square (g p))) p =
+	* \ p -> (slope f p * g p - f p * slope g p) / (square (g p)) =
+	* (slope f * g - f * slope g) / (square g)
