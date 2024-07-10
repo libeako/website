@@ -1,0 +1,21 @@
+\ id ohlcolejdmqwpfpo
+* meaning
+	* let
+		* (+) : T -> T 
+			* associative
+		* e : N -> T
+	* series e n := fold (+) {forall i in {1, ..., n}. (e n)}
+	* the 'series' function transforms a sequence into another sequence, into the folding of the corresponding beginning of the input sequence, into the sequence of partial sums
+* a 'series is convergent' iff it is convergent as a sequence
+* rearrange
+	* associativity does not necessarily extend to infinite arguments
+		* the binary (+) is associative, that is a requirement for the interpretation of 'series'; but a series is an (+) with infinite arguments
+		* example
+			* 1 - 1 + 1 - 1 + 1 ...
+			* (1 - 1) + (1 - 1) + (1 - 1) ... = 0
+			* 1 + (- 1 + 1) + (- 1 + 1) + ... = 1 + 0 = 1
+	* "unconditional convergence"
+		* when all orderings of the series converges and to the same limit
+		* a series s is 'absolutely convergent' iff series (lift norm s) is convergent
+	* "conditional convergence"
+		* when the series is convergent but not absolutely convergent
