@@ -1,0 +1,9 @@
+\ id ohlcolejdmqwpfpo
+* meaning
+	* let
+		* (+) : T -> T 
+			* associative
+		* e : N -> T
+	* series e n := fold (+) {forall i in {1, ..., n}. (e n)}
+	* the 'series' function transforms a sequence into another sequence, into the folding of the corresponding beginning of the input sequence, into the sequence of partial sums
+* a 'series is convergent' iff it is convergent as a sequence
