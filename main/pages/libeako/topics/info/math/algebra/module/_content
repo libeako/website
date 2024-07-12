@@ -4,6 +4,7 @@
 		\ links-to internal hfxcdsrjxrqpmxaz
 * "module" representation
 	* a commutative group (G, (+))
+		* this is the base slot, these are the values of the module
 	* a ring (R, (+), (*)) 
 		* also said to be the "scalars"
 	* (×) : R -> G -> G
@@ -28,3 +29,5 @@
 	* theorem: forall x in G. -1 * x = -x
 		* proof
 			* -1 * x = -1 * x + 0 = -1 * x + (x - x) = (-1 * x + x) - x = (-1 + 1) * x - x = 0 * x - x = 0 - x = 0 + (-x) = -x
+* vector space
+	\ links-to internal pokrnkkzlywietmj
