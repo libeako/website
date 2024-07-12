@@ -1,0 +1,30 @@
+\ id cbqzexhigigcvcsq
+* this builds on
+	* group
+		\ links-to internal hfxcdsrjxrqpmxaz
+* "module" representation
+	* a commutative group (G, (+))
+	* a ring (R, (+), (*)) 
+		* also said to be the "scalars"
+	* (×) : R -> G -> G
+		* this also is said to be "multiplication and often the same formal name is used; i may also use "*" for both multiplications
+	* associativeity
+		* forall a b in R, x in G. a * (b * x) = (a * b) * x
+	* distributation over scalar addition
+		* forall a b in R, x in G. (a + b) * x = (a * x) + (b * x)
+	* distribution over module addition
+		* forall a in R, x y in G. a * (x + y) = (a * x) + (a * y)
+* "module with unity" is as it sounds, a module with unity
+	\ id hzuxpjajstflvopz
+	* unity is the scalar 1
+	* representation
+		* group G, ...
+		* forall x in G. 1 * x = x
+	* theorem: forall x in G. 0 * x = 0
+		* here the left 0 is the scalar 0, the right 0 is the module 0
+		* proof
+			* forall x in G.
+				* 0 * x = 0 * x + 0 = 0 * x + (x - x) = (0 * x + x) - x = (0 * x + 1 * x) - x = (0 + 1) * x - x = 1 * x - x = x - x = 0
+	* theorem: forall x in G. -1 * x = -x
+		* proof
+			* -1 * x = -1 * x + 0 = -1 * x + (x - x) = (-1 * x + x) - x = (-1 + 1) * x - x = 0 * x - x = 0 - x = 0 + (-x) = -x
