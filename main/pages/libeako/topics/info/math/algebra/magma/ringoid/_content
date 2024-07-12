@@ -1,0 +1,7 @@
+\ id igjvjeoskoxojwec
+* "ringoid" is (T, (+), (*)) such that (T, (+)) and (T, (*)) are magmas and (*) distributes over (+)
+* "semiring" is ringoid such that both magmas are semigroups
+	* this means that the methods are associative
+* "ring" is a semiring (T, (+), (*)) such that (T, (+)) is a commutative group
+	\ id hfxcdsrjxrqpmxaz
+* "unity" of a ring is the neutral element in the multiplication method of the ring
