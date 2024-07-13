@@ -4,6 +4,7 @@
 	* this means that the methods are associative
 * "ring" is a semiring (T, (+), (*)) such that (T, (+)) is a commutative group
 	\ id hfxcdsrjxrqpmxaz
+* "devision ring" is a ring where every non-0 element has a multiplication inverse
 * "unity" of a ring is the neutral element in the multiplication method of the ring
 * field
 	\ links-to internal zdpwouwoptyzxnxb
