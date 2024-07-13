@@ -1,0 +1,27 @@
+\ id vkdgfnixzncotxzk
+* "prenorm"
+	* is my term
+	* representation
+		* T : Type, monoid
+		* n : T -> (Real & non-negative)
+		* triangular inequality
+			* forall x y in T. n (x + y) <= n x + n y
+		* positive definiteness
+			* forall x in T. x = 0 <=> n x > 0
+* when T is rongoid
+	* "subadditive norm"
+		* norm with
+			* forall x y in T. n (x * y) <= n x * n y
+	* "additive norm"
+		* norm with
+			* forall x y in T. n (x * y)  = n x * n y
+* norm
+	* a better name for this concept would be "length"
+	* representation
+		* division ring (K, (+), (*)), with norm "ns"
+		* vector space V
+		* prenorm nv : V -> (Real & non-negative)
+		* forall a in K, x in V . nv (a * x) = ns a * nv x
+	* a norm on a vector space induces a metric
+* notation
+	* |_| and ||_|| are also used
