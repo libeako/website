@@ -1,0 +1,18 @@
+\ id onuejpwwcxqlfcxp
+* let
+	* V be a normed vector space
+	* s : Nat -> x
+* (series s is absolutely convergent => series s is convergent) <=> space is complete
+* proof
+	* <=
+		* this direction is easy
+		* take an absolutely converget series s
+		* series (lift norm s) is Cauchy
+		* sum (lift (s >>> norm) (from _ to _)) is diminishing
+		* hence, using the triangular inequality of norm
+		* norm (sum (lift s (from _ to _))) is diminishing
+		* hence s as a series is Cauchy
+		* hence, using the assumption that the space is complete
+		* s as a series is convergent
+	* =>
+		\ links-to external https://proofwiki.org/wiki/Absolutely_Convergent_Series_in_Normed_Vector_Space_is_Convergent_iff_Space_is_Banach/Sufficient_Condition

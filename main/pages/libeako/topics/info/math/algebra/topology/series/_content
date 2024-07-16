@@ -17,5 +17,7 @@
 	* "unconditional convergence"
 		* when all orderings of the series converges and to the same limit
 		* a series s is 'absolutely convergent' iff series (lift norm s) is convergent
+			* (absolutely convergent => convergent) <=> space is complete
+				\ links-to internal onuejpwwcxqlfcxp
 	* "conditional convergence"
 		* when the series is convergent but not absolutely convergent
