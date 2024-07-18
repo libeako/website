@@ -1,0 +1,17 @@
+\ id loqgcluavacwrlci
+* polynomials are most generally studied of rings; both the "indeterminate" [the argument of the polynomial] and the coefficients being of the same ring
+* univariate
+	* power n (x1 + x2) =
+		\ id fsgkszogqjxgojcl
+		* this builds on
+			* the binomial coefficient
+				\ links-to internal quhkmspipdwyahgu
+		* with
+			* component n i := * binomial-coeff n i * power i x1 * power (n - i) x2
+			* sum {forall i in [0, n]. component n i}
+	* (a - b) * sum {forall k1, k2, when k1 + k2 = n. (power k1 a) * (power k2 b)} = power n a - power n b
+		\ id kmpydpduqwlgygzj
+		* proof is easy, the components cancel each other except the 2 terminal components
+		* special case
+			* \ id oesysqwbigwdwhyr
+			* (a - 1) * sum (lift (flip power a) [1, ..., n]) = power n a - 1

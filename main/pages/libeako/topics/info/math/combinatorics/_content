@@ -1,0 +1,7 @@
+\ id hrjoqgmpieubzdre
+* binomial coefficients - number of subsets of finite set
+	\ id quhkmspipdwyahgu
+	* with
+		* n be the number of elements in a base set
+		* k be the number of elements to choose from the base set
+		* binomial-coeff n k := (factorial n / (factorial k * factorial (n-k)))
