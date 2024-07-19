@@ -26,7 +26,7 @@
 		* thus 1 is a neutral value in multiplication
 * complex numbers form a field
 	* proof of associativity of multiplication
-		* (x * y) * z = 
+		* (x * y) * z =
 		* ((xr, xi) * (yr, yi)) * (zr, zi) =
 		* (xr * yr - xi * yi, xr * yi + xi * yr) * (zr, zi) =
 		* ((xr * yr - xi * yi) * zr - (xr * yi + xi * yr) * zi, (xr * yr - xi * yi) * zi + (xr * yi + xi * yr) * zr) =
@@ -45,3 +45,23 @@
 			* because it is a linear equation system with 2 variables and 2 equations
 	* the rest is trivial
 * as a metric space complex numbers behave like a 2-dimensional real euclidean space
+	* hence the default metric is the euclidean
+	* norm x * norm y = norm (x * y)
+		* proof
+			* it is easier to prove the equality via the square of both sides
+			* remember the multiplication of complex numbers
+				* (xr, xi) * (yr, yi) := (xr * yr - xi * yi, xr * yi + xi * yr)
+				* note that in the result the real and imaginary components are in forms
+					* (a - b) and (c + d)
+				* their square will contain a middle component
+					* (-2 * a * b) and (2 * c * d)
+				* in this case these the sum of these is 0
+				* hence what remains are the simple squares of a, b, c, d
+				* to check the rest is easy
+* exp : Complex -> Complex
+	* definitions
+		* power series
+			* with
+				* shifted n z := power z n / factorial n
+					* -- remember (factorial 0 = 1)
+			* fun z -> series (fun n -> shifted (n - 1) z)
