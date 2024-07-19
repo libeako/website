@@ -1,0 +1,13 @@
+\ id dhfgjhunmdorydak
+* proposition
+	* if
+		* s is a sequence
+		* limit of (fun n -> norm (s (n + 1) / s n)) exists; lets name it by "l"
+	* then
+		* l > 1 => (series s) is divergent
+		* l < 1 => (series s) is convergent
+* proof
+	* l > 1 the components of the series grow, hence the series diverges
+	* l < 1
+		* the norms of Cauchy segments of the series are smaller then the Cauchy segments of the norms of the components [triangular inequality of the norm], which are smaller than of the geometric series, which converges
+* other names may be "Cauchy ratio test", "D'Alambert's test"

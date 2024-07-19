@@ -4,9 +4,10 @@
 		* (+) : T -> T 
 			* associative
 		* e : N -> T
-	* series e n := fold (+) {forall i in {1, ..., n}. (e n)}
-	* the 'series' function transforms a sequence into another sequence, into the folding of the corresponding beginning of the input sequence, into the sequence of partial sums
-* a 'series is convergent' iff it is convergent as a sequence
+	* front-sums e n := fun n -> fold (+) {forall i in {1, ..., n}. (e n)}
+	* the 'front-sums' function transforms a sequence into another sequence, into the folding of the corresponding beginning of the input sequence, into the sequence of the frontal partial sums
+	* i may use 'series e' as the series with the components of the sequence e but interpreted as a sequence
+* the convergence and the limit of a series is the same as of the sequence of its frontal sums
 * rearrange
 	* associativity does not necessarily extend to infinite arguments
 		* the binary (+) is associative, that is a requirement for the interpretation of 'series'; but a series is an (+) with infinite arguments
@@ -21,3 +22,7 @@
 				\ links-to internal onuejpwwcxqlfcxp
 	* "conditional convergence"
 		* when the series is convergent but not absolutely convergent
+* ratio test
+	\ links-to internal dhfgjhunmdorydak
+* power series
+	\ links-to internal enxfchjgqreltubz

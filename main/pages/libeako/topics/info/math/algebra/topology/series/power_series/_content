@@ -1,0 +1,61 @@
+\ id enxfchjgqreltubz
+* representation
+	* vector space V
+	* field F
+	* c : V
+		* the center of the power series
+	* coefficient : Nat -> F
+* means the series
+	* fun (x : V) -> series (fun n -> coefficient n * (power n (x - c)))
+* special case
+	* "geometric series"
+		* definition
+			* coefficients are all 1
+			* c = 0
+		* is convergent iff (norm x < 1), where norm is multiplicative
+			\ id uzlvgovkmxcpwzjn
+			* proof
+				* if norm x >= 1 then is divergent, obviously
+				* if norm x < 1 then
+					* the partial sums of geometric series are
+						* fun n x -> (1 - power n x) / (1 - x)
+						* see formula
+							\ links-to internal kmpydpduqwlgygzj
+					* this converges to (1 / (1 - x)) as n converges to infinity
+* the set of values ["x"] where the power series is convergent is the "sphere of convergence"
+	* the norm is multiplicative => this set is really a sphere
+		* proof
+			* let g be in the set of convergence
+			* then it is enough to prove
+				* forall s. (norm (s - c) < norm (g - c)) => s is in the set of convergence
+			* the following is this proof
+			* convergent series is bounded
+			* hence {forall n in Nat+. (norm ((coeff n) * power n (g - c)))} is bounded; let us name one bound with b
+			* r := ((s - c) / (g - c))
+			* norm r < 1
+			* we here study the convergence of
+				* series (fun n -> norm (coeff n * power n (s - c)))
+			* s - c = r * (g - c)
+			* norm (coeff n * power n (s - c)) =
+			* norm (coeff n * power n (r * (g - c))) =
+				* move r out
+			* norm (coeff n * power n (g - c)) * norm (power n r) <=
+			* b * norm (power n r)
+			* (flip power r) is the geometric sequence, whose series is convergent iff (norm r < 1) and the norm is multiplicative
+				* these conditions are fulfilled here
+		* if (fun n -> norm (coeff (n + 1) / coeff n)) converges [perhaps to an infinity]
+			* proposition
+				* let the limit of this sequence be l
+				* then the radius of convergence is (1 / l)
+			* proof is by application of the
+				* ratio test
+					\ links-to internal dhfgjhunmdorydak
+* over factorial
+	\ id obqjeeuatqmiyezv
+	* where (coeff n = 1 / factorial n)
+	* then 
+		* a simple application of the 
+		* ratio test
+			\ links-to internal dhfgjhunmdorydak
+		* results in that (the radius of convergence) is infinite
+		* hence such series is absolutely convergent everywhere
