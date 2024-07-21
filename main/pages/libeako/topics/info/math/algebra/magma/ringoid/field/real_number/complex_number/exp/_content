@@ -1,0 +1,26 @@
+\ id ivktizzvwbstdbcn
+* this builds on
+	* factorial 0 = 1
+* exp : Complex -> Complex
+	* definitions
+		* as power series
+			* with
+				* shifted n z := power n z / factorial n
+			* fun z -> series-from 0 (fun n -> shifted n z)
+			* this is valid definition, as this series converges
+				* this proposition is a special case of
+					* power series over factorial
+						\ links-to internal obqjeeuatqmiyezv
+* slope is itself
+	\ links-to internal uznzygjhaxrtwqpp
+	* this property is unique
+		* proposition
+			* if (slope f = f) then exists c. f = c * exp
+		* proof
+			* r := f / exp
+			* slope r = (slope f * exp - f * slope exp) / power 2 exp = 0
+				* see slope of division
+					\ links-to internal vxnmegdjnqkvkexb
+* exp (x + y) = exp x * exp y
+	* proof
+		* all of the series here converge absolutely; hence it is enough to prove that all components of the summation of one side are present at the other side too - this being true is easy to see

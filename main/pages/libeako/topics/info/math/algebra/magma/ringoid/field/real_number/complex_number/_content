@@ -58,10 +58,5 @@
 				* in this case these the sum of these is 0
 				* hence what remains are the simple squares of a, b, c, d
 				* to check the rest is easy
-* exp : Complex -> Complex
-	* definitions
-		* power series
-			* with
-				* shifted n z := power z n / factorial n
-					* -- remember (factorial 0 = 1)
-			* fun z -> series (fun n -> shifted (n - 1) z)
+* exp
+	\ links-to internal ivktizzvwbstdbcn
