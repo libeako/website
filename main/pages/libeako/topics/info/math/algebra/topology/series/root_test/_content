@@ -1,0 +1,16 @@
+\ id rxmbghycvgeishha
+* proposition
+	* with
+		* normed vector space V
+		* s : Nat+ -> V
+		* l := lim-sup (lift2 power (1 /) (s >>> norm))
+		* ss := lift2 power id s
+	* then
+		* l > 1 => ss diverges
+		* l < 1 => ss converges normedly
+* proof
+	* l > 1
+		* infinite number of n exists. (norm (s n) > 1); hence ss diverges
+	* l < 1
+		* exists k. (l < k < 1) and (for almost all n. power (1 / n) (norm (s n)) < k)
+		* hence (norm (ss n)) <= power n k; hence ss is absolutely convergent

@@ -50,6 +50,14 @@
 			* proof is by application of the
 				* ratio test
 					\ links-to internal dhfgjhunmdorydak
+		* Cauchy-Hadamard theorem
+			* proposition
+				* l := lim-sup (lift2 power (1 /) (coeff >>> norm))
+					* if exists
+				* then the radius of convergence is (1 / l)
+			* proof is by application of the
+				* root test
+					\ links-to internal rxmbghycvgeishha
 * over factorial
 	\ id obqjeeuatqmiyezv
 	* where (coeff n = 1 / factorial n)

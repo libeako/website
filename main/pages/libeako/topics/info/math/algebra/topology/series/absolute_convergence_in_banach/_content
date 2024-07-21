@@ -1,8 +1,10 @@
 \ id onuejpwwcxqlfcxp
-* let
-	* V be a normed vector space
-	* s : Nat -> x
-* (series s is absolutely convergent => series s is convergent) <=> space is complete
+* proposition
+	* if
+		* V be a normed vector space
+		* s : Nat -> x
+	* then
+		* (series s is absolutely convergent => series s is convergent) <=> space is complete
 * proof
 	* <=
 		* this direction is easy
