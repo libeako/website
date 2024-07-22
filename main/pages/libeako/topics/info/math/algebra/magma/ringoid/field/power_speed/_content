@@ -1,0 +1,7 @@
+\ id pwwnhfqujxczaglq
+* here is the speed ["derivative"] of the to-the-n-th-power function
+* proposition
+	* speed (power n) = power (n - 1) >>> (* n)
+* proof is easy via
+	* (power n x - power n p) / (x - p)
+		\ links-to internal kmpydpduqwlgygzj
