@@ -90,8 +90,6 @@
 	* a subset H of a space is "convergently compact" iff all infinite sequences of H contain subsequence which converges in H
 		* the name "convergently compact" is my invention
 			* i do not like the name "sequentially compact" because it does not involve the sequence notion more than the countably compactness does
-		* theorem: compact => convergently compact
-			* proof: countably finite sequence is sequence
 	* a space is "limit point compact" iff any infinite subset of the points have a limit point in the space
 * basis
 	* definition
