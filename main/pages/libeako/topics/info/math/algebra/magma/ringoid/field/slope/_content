@@ -22,6 +22,8 @@
 * slope (f + g) = slope f + slop g
 * multiplication
 	\ links-to internal nuwvxmvnokbukfsm
+* mean value theorems
+	\ links-to internal fspresemhcnedkhm
 * slope (pow n) = n * pow (n - 1)
 	* proof by induction
 		* k = 1 => slope (pow k) = const 1   <- okay
