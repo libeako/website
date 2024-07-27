@@ -1,0 +1,21 @@
+\ id gnjdvmoybecxgixt
+* names
+	* "integral"
+		* originally means 'total' or 'whole'
+	* "anti-slope", "anti-speed"
+* definite
+	\ links-to internal hwsaiogutdkpelrx
+* anti-slope
+	* alternative names - "primitive", "anti-derivative"
+	* F is 'anti-slope' of f iff f is slope of F
+	* the anti-slope equivalence classes 
+		* if F1, F2 are anti-slopes of f then
+		* slope (F1 - F2) = 0, on the whole interval
+		* hence [by the mean value theorem] (F1 - F2) is constant
+		* hence F1 and F2 differ from each other only by a constant addition
+* if F is an anti-slope of f then (integral f [a, b] = F b - F a)
+	* proof is trivial building on
+		* integral is anti-slope
+			\ links-to internal eidifgibmemuavvz
+* substitution theorem
+	\ links-to internal mitphxdwxtqjkpss

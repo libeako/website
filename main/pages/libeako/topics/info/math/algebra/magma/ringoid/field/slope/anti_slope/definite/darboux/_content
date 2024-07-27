@@ -1,0 +1,20 @@
+\ id jjhfelrffijxxwbo
+* the ('lower' | 'higher') Darboux output of a function on an interval is the (infimum | supremum) of the function on that interval
+* the 'Darboux sum' is
+	* sum {forall section of the division. the function's Darboux output on the section * the lenght of the section}
+* the lower Darboux sum <= any Riemann sum <= the higher Darboux sum
+* the (lower | higher) Darboux sum is (higher | lower) or equal if the division gets finer
+* for any pair of divisions (p, q): the lower Darboux sum on p <= the higher Darboux sum on q
+	* proof
+		* the lower Darboux sum on p
+		* <=
+			* because p <= (union p q)
+		* the lower Darboux sum on (union p q) <=
+			* comparison of lowe and higher Darboux sum on the same division
+		* the higher Darboux sum on (union p q)
+		* <=
+			* because q <= (union p q)
+		* the higher Darboux sum on q
+* the ('lower' | 'higher') 'Darboux integral' is the (supremum | infimum) over all the divisions of the interval of the (lower | higher) Darboux sum of that interval
+* the 'Darboux integral' exists and equals to l iff the higher and lower Darboux integrals equal to l
+* existence of the Darboux integral => the function is bounded

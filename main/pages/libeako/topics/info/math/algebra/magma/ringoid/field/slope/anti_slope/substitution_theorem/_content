@@ -1,0 +1,12 @@
+\ id mitphxdwxtqjkpss
+* proposition
+	* if
+		* interval [a, b]
+		* functions f, g, with slope
+	* then
+		* g (f b) - g (f a) = integrate ((f >>> slope g) * slope f) [a, b]
+* proof
+	* the chain rule of slopes
+		* slope (f >>> g) = (f >>> slope g) * slope f
+	* take the integral of both sides
+	* (f >>> g) b - (f >>> g) a = integrate ((f >>> slope g) * slope f) [a, b]

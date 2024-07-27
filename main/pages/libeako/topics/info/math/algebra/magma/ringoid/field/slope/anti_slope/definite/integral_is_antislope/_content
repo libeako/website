@@ -1,0 +1,25 @@
+\ id eidifgibmemuavvz
+* this is said to be the 'fundamental theorem of calculus'
+* proposition
+	* let f be a function, continuous on interval [a, b]
+	* slope (fun x -> integral f [a, x]) = f
+* proof
+	* slope (fun x -> integral f [a, x]) - f
+	* =
+		* by interpreting 'slope'
+	* limit (fun h -> (integral f [a, x + h] - integral f [a, x]) / h - f x) 0
+	* =
+		* by integral over divided interval
+	* limit (fun h -> (integral f [x, x + h]) / h - f x) 0
+	* =
+	* limit (fun h -> (integral f [x, x + h] - h * f x) / h) 0
+	* =
+		* by intergal of constant function
+	* limit (fun h -> (integral f [x, x + h] - integral [x, x + h] (const (f x))) / h) 0
+	* = 
+	* limit (fun h -> (integral (f - (const (f x))) [x, x + h]) / h) 0
+	* =
+		* maximize (f - (const (f x))
+			* this is possible because f is continuous
+		* the norm of the bound is arbitrarily small as h converges to 0
+	* 0

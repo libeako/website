@@ -1,0 +1,9 @@
+\ id ewegqxhylyycrfen
+* a 'Riemann sample' on a division is a set of points, one from each section of the division
+* a 'Riemann sum' is
+	* sum {forall section of the division. the function's output at the sample of the section * the length of the section}
+* the 'Riemann integral' exists and equals to l iff 
+	* forall dy > 0. exists dx > 0. forall division
+		* dx >= the max section length of the division
+		* =>
+		* dy >= distance (the Riemann sum over that division) l

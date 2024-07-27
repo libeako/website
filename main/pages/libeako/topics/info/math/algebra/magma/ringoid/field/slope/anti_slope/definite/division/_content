@@ -1,0 +1,8 @@
+\ id ipkcqkocdghpyiwo
+* the "division" of a real interval [a - b] is represented by a set of point inside it, dividing the interval into sub-intervals
+* the length of the biggest sub-interval is said to be the "norm" of the division by some mathematicians
+* alternative names
+	* "partition"
+		* this is wrong name, because it 'set partitioning' means something else; which partition would the dividing points belong?
+	* "dissection"
+* a divisian x is "finer" than a division y iff as sets of points x > y
