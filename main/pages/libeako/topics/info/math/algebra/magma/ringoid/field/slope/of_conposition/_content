@@ -1,0 +1,31 @@
+\ id zojgcwununceltsj
+* proposition
+	* slope (f >>> g) = (f >>> slope g) * slope f
+* proof
+	* incorrect proof
+		* slope (f >>> g) =
+		* limit (fun h -> (g (f (x + h)) - g (f x)) / h) 0 =
+		* limit (fun h -> ((g (f (x + h)) - g (f x)) / (f (x + h) - f x)) * ((f (x + h) - f x) / h) 0 =
+		* limit (fun h -> ((g (f (x + h)) - g (f x)) / (f (x + h) - f x))) 0 * limit (fun h -> (f (x + h) - f x) / h) 0 =
+		* limit (fun k -> ((g (f x + k) - g (f x)) / k)) 0 * slope f x =
+		* slope f (g x) * slope f x
+		* the glaring fault is the dividing by (f (x + h) - f x), which may be zero; still: the basic form of the proof seems correct and this seems to be only a technical problem; the solution is to use a different form of relationship between the slope and the deltas
+	* correct proof
+		* slope f t = limit ((f t - f x) / (t - x)) t
+			* the problematic part, as seen in the incorrect proof, is the presense of (t - x) as divider; the solution is the movement of it to the other side of the equation; but one can not just move something out from the limit taking; hence we get rid [temporarily] from the limit taking
+		* ratio f t x := ((f t - f x) / (t - x))
+			* this function does not have a proper output at t; but it does everywhere else and is continous everywhere and even at t it has a limit; thus it has a limit everywhere
+			* this limit is important at one point
+				* limit (ratio f t) t = slope f t
+		* limit (ratio f t) x = (f t - f x) / (t - x)
+		* we still have a problematic divider, but now it can be moved out
+		* (t - x) * limit (ratio f t) x = f t - f x
+		* this is the form of the relationship between the slope and the deltas, that can be used any time, without the problem of dividing by 0
+		* (f >>> g) t - (f >>> g) x = (t - x) * limit (ratio (f >>> g) t) x
+		* g (f t) - g (f x) = (f t - f x) * limit (ratio g (f t)) x
+		* (f >>> g) t - (f >>> g) x = g (f t) - g (f x)
+		* hence
+		* (t - x) * limit (ratio (f >>> g) t) x = (f t - f x) * limit (ratio g (f t)) x
+		* limit (ratio (f >>> g) t) x = limit (ratio g (f t)) x * ((f t - f x) / (t - x))
+		* taking the limit at t:
+		* slope (f >>> g) t = slope g (f t) * slope f t

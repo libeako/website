@@ -17,14 +17,17 @@
 	* proof is easy
 * slope (const k) = 0
 * slope (* k) = k
-* slope (inverse f) = 1 / (slope f)
-* slope (f >>> g) = slope f * (f >>> slope g)
-* slope (f + g) = slope f + slop g
+* slope of inverse
+	\ links-to internal lkmfzdacmimnswph
+* slope of composition
+	\ links-to internal zojgcwununceltsj
+* slope (f + g) = slope f + slope g
 * multiplication
 	\ links-to internal nuwvxmvnokbukfsm
 * mean value theorems
 	\ links-to internal fspresemhcnedkhm
 * slope (pow n) = n * pow (n - 1)
+	\ id ydwlodpxygavwphf
 	* proof by induction
 		* k = 1 => slope (pow k) = const 1   <- okay
 		* k = 2 => slope (pow k) = (2 *)     <- okay
@@ -34,5 +37,12 @@
 			* pow (n - 1) + id * ((n - 1) * pow (n - 2)) =
 			* pow (n - 1) + (n - 1) * pow (n - 1) = n * pow (n - 1)
 			* <- okay
-* anti-slope ["anti-terivative"]
+* speed of speed
+	* "n-th speed" := the speed of the speed of the ... - for n times
+* "slopy" or "speedy" := has speed
+* "continuously speedy" := has speed, which is continous
+	* 'n times contiuously speedy' - "Cn"
+		* n is said to be the "smoothness" of the function
+		* without extra relevant context: "smooth" = infinitely speedy
+* anti-slope ["anti-derivative"]
 	\ links-to internal gnjdvmoybecxgixt

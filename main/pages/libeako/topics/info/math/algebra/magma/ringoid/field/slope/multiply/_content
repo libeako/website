@@ -14,7 +14,7 @@
 		* limit 0 (\ h -> (((f (p + h) - f p) / h) * g (p + h) + (f p) * ((g (p + h) - g p) / h)) =
 		* limit 0 (\ h -> (((f (p + h) - f p) / h) * g (p + h)) + limit 0 (\ h -> (f p) * ((g (p + h) - g p) / h)) =
 		* (slope f p) * (g p) + (f p) * (slope g p) =
-* slope (1 / g) = 
+* slope (1 / g) = - slope g / (g >>> square)
 	* proof
 		* lemma
 			* ((1 / g) (p + h) - (1 / g) p) / h =
@@ -27,8 +27,9 @@
 		* limit 0 (((1 / g) (p + h) - (1 / g) p) / h) =
 		* limit 0 ((1 / (g (p + h) * (g p))) * ((g p - g (p + h)) / h)) =
 		* ((1 / (square (g p))) * (- slope g p) = 
-		* - slope g p / (square (g p)) = 
+		* - slope g p / (square (g p))
 * slope (f / g) =
+	\ id vxnmegdjnqkvkexb
 	* slope (f * (1 / g)) =
 	* \ p -> slope f p / (g p) + f p * (- slope g p / (square (g p))) p =
 	* \ p -> (slope f p * g p - f p * slope g p) / (square (g p)) =
