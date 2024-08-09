@@ -1,0 +1,21 @@
+\ id skicnhrmricltnsd
+* Darboux theorem [existence of intermediate value of slope]
+	* proposition
+		* if
+			* real interval I
+			* F : I -> R, has slope
+			* {a, b} <= I
+			* a < b
+			* slope f a < s < slope f a
+		* then
+			* exists m
+				* a < m < b
+				* slope f m = s
+	* proof
+		* it is easy to reduce the theorem to the special case when (s = 0)
+			* then 
+				* slope f a < 0 < slope f b
+		* f takes both extremums on [a, b]
+			* neither of them can be at a or at b becuase there the slope is not zero
+			* hence f takes its extremums in the interior of [a, b]
+		* (the slope where an extremum is taken) = 0

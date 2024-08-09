@@ -44,7 +44,9 @@
 	* proof
 		* keep halving the interval on the domain, continue with the half whose end-point values are mapped by f to different sides of the intermediate value
 		* the half-point sequence is Cuachy, hence converges; f maps its limit point to the intermediate value, because f is continuous
-* the image of a continuous function on an interval in continuous 
+* the image of a continuous function on an interval is continuous 
 	* easy consequence of the intermediate value theorem
+* Darboux theorem [existence of intermediate value of slope]
+	\ links-to internal skicnhrmricltnsd
 * complex numbers
 	\ links-to internal swzffxiiqpfldttf
