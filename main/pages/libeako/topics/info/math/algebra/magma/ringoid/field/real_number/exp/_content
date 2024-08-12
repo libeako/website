@@ -1,0 +1,76 @@
+\ id swwisxigezbeqnjc
+* this part is about (exp : Real -> Real)
+	* for the complex case
+		* go here
+			\ links-to internal ivktizzvwbstdbcn
+* we start from the reciprocal function 
+	* r : (Real+ -> Real+) := (1 /)
+* it is continous; hence it has antislope; 
+	* let the name be (ln : Real+ -> Real+)
+	* of the one that takes 0 at 1 [ln 1 = 0]
+* forall x y. ln (x * y) = ln x + ln y
+	* proof
+		* f x y := ln (x * y) - ln x - ln y
+		* slope (f x) y = (1 / (x * y)) * x - 0 - 1 / y = 0
+		* hence (f x) is constant
+		* f x 1 = (ln x - ln x) - ln 1 = 0 - 0 = 0
+		* hence f = const (const 0)
+* ln is strictly monotone, hence has invsrese; 
+* lets its name be (exp : Real+ -> Real+)
+* e := exp 1
+* slope exp = exp
+	* proof
+		* slope exp x = slope (inverse ln) x = 1 / (slope ln (exp x)) = 1 / (1 / exp x) = exp x
+* forall x y. exp (x + y) = exp x * exp y
+	* proof
+		* from the same theorem on ln
+		* the transmission is okay because ln is strictly monotone and surjective
+* forall p : Nat. exp (p * x) = power p (exp x)
+	* proof is trivial
+* exp (-x) = 1 / exp x
+	* proof
+		* exp (-x) - (1 / exp x) = 1 * (exp (-x) - (1 / exp x)) = (exp x / exp x) * (exp (-x) - (1 / exp x)) =
+		* (1 / exp x) * exp x * (exp (-x) - (1 / exp x)) =
+		* (1 / exp x) * (exp (-x) * exp x - (1 / exp x) * exp x) =
+		* (1 / exp x) * (exp (-x + x) - 1) = 0
+* forall p : Integer. exp (p * x) = power p (exp x)
+	* proof is trivial
+* forall q : Nat+. exp (x / q) = root q (exp x)
+	* proof
+		* power q (exp (x / q)) = exp (q * (x / q)) = exp x
+		* power q (root q (exp x)) = exp x
+			* by definition of 'root'
+		* (power q) is invertible
+* forall p, q : Nat+. exp ((p / q) * x) = power p (root q (exp x)) = power (p / q) (exp x)
+	* proof is trivial
+* forall r : Rational+. exp (r * x) = power r (exp x)
+	* this is the same as the previous proposition, just more terse
+* forall r : Real+. exp (r * x) = power r (exp x)
+	* this can be the definition of 'power' for irrational numbers
+* power k (power j i) = power (j * k) i
+	* proof is similar to the derivations of previous theorems
+	* i := e
+		* power k (exp j) = exp (j * k)
+		* hence
+		* power k b = exp (ln b * k)
+			* this can be a general definition of 'power'
+			* slope (power k) = power (k-1) * k
+				* proof
+					* slope (power k) = slope (ln >>> (* k) >>> exp) =
+					* slope (ln >>> (* k) >>> exp) = (ln >>> (* k) >>> slope exp) * slope (ln >>> (* k)) =
+					* (ln >>> (* k) >>> exp) * ((1 /) >>> (* k)) =
+					* power k * (1 /) * (* k) = k * power (k - 1)
+				* hence all level speed of (power _) exists and is positive on (0, infinity)
+				* hence (power _) is convex
+					* see convexity
+						\ links-to internal prcpsvmdkmijaizm
+					* hence the Jensen inequality is true
+						* forall (1-distribution w)
+							* (ws w >>> power k) <= (lift (power k) >>> ws w)
+* log b := inverse (flip power b)
+* log b p = k = ln p / ln b
+	* proof
+		* power (log b p) b = p
+		* power (ln p / ln b) b = exp (ln b * (ln p / ln b)) = p
+* geometric-arithmetic mean inequality
+	\ links-to internal qneguxqekvglunla

@@ -1,0 +1,36 @@
+\ id qneguxqekvglunla
+* weighed geometric-arithemetic mean inequality
+	* proposition
+		* if
+			* 1-distribution w
+			* non-negative reals x
+		* then
+			* product (lift2 power w x) <= dot-product w x
+	* proof
+		* exp (dot-product w y) <= dot-product w (lift exp y)
+		* y := lift ln x
+		* transforming both sides
+			* exp (dot-product w y) =
+				* exp (dot-product w (lift ln x)) =
+				* product (lift exp (w * lift ln x)) =
+				* product (lift2 power w x)
+			* dot-product w (lift exp y) =
+				* dot-product w (lift exp (lift ln x)) = 
+				* dot-product w (lift (exp <<< ln) x) = 
+				* dot-product w x
+		* hence
+			* product (lift2 power w x) <= dot-product w x
+	* corollary: geometric-arithmetic mean inequality
+		* n := the number of components
+		* all weights = 1 / n
+		* power (1 / n) (product x) <= sum x / n
+* Young's inequality is the same as the weighed geometric-arithmetic mean inequality, but the exponent flipped by its reciproc and the power flipped by the variable
+	* proposition
+		* if
+			* reciprocal 1-distribution w
+			* non-negative reals x
+	* then
+		* product x <= sum (lift2 power w x / w)
+	* proof
+		* can be derived from (the weighed geometric-arithemetic mean inequality), by doing the 2 flippings
+		* analogously to the proof of (the weighed geometric-arithemetic mean inequality), but starting from (the concavity of ln) instead of (the convexity of exp)
