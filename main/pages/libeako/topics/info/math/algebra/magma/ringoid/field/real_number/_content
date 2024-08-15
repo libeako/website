@@ -46,6 +46,8 @@
 		* the half-point sequence is Cuachy, hence converges; f maps its limit point to the intermediate value, because f is continuous
 * the image of a continuous function on an interval is continuous 
 	* easy consequence of the intermediate value theorem
+* mean value theorems
+	\ links-to internal fspresemhcnedkhm
 * Darboux theorem [existence of intermediate value of slope]
 	\ links-to internal skicnhrmricltnsd
 * exp : Real -> Real
