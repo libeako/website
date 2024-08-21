@@ -1,0 +1,69 @@
+\ id xyqpgfzqntkupmah
+* the situation
+	* open real interval I
+	* f : I -> I, has speed, which is not zero anywhere
+	* {c} < I
+	* f c = 0
+* tha task: find c
+* algorithm ["Newton series"]
+	* x 0 := any in I
+	* x (n + 1) := x n - f x / slope f x
+* convergence
+	* basic theorem
+		* proposition
+			* if
+				* f has continuous second speed
+				* s1bl is a low bound of (slope f >>> norm)
+				* s2bh is a high bound of (slope (slope f) >>> norm)
+			* then
+				* exists d > 0. starting from [c - d, c + d]
+					* the Newton series converges quadratically:
+						* forall natural n. norm (x (n + 1) - c) <= norm (x n - c) * (s1bl / s2bh)
+		* proof
+			* this builds on the
+				* mean speed theorem
+					\ links-to internal fspresemhcnedkhm
+			* by the mean speed theorem
+				* exists y : Nat -> I. forall Nat n
+					* (x n - c) * speed (y n) = (f (x n) - f c) = f (x n)
+				*  exists z : Nat -> I. forall Nat n
+					* (x n - y n) * speed (speed f) (z n) = (speed f (x n) - speed f (y n))
+			* norm (x (n + 1) - c) =
+			* norm (x (n + 1) - x n + x n - c)
+			* =
+				* just the Newton iteration
+			* norm (- f (x n) / speed f (x n) + x n - c)
+			* =
+				* x n - c = f (x n) / speed f (y n)
+					* by definition of y
+			* norm (- f (x n) / speed f (x n) + f (x n) / speed f (y n))
+			* =
+				* factor out (f (x n))
+			* norm (f (x n)) * norm (- 1 / speed f (x n) + 1 / speed f (y n))
+			* =
+				* bring onto common devisor
+			* norm (f (x n)) * norm ((- speed f (y n)  + speed f (x n)) / (speed f (x n) * speed f (y n)))
+			* =
+				* - speed f (y n)  + speed f (x n) = (x n - y n) * speed (speed f) (z n)
+					* by definition of z
+			* norm (f (x n)) * norm (((x n - y n) * speed (speed f) (z n)) / (speed f (x n) * speed f (y n))) =
+			* =
+				* f (x n) = f (x n) - 0 = f (x n) - f c = slope f (y n) * (x n - c)
+			* norm (slope f (y n) * (x n - c)) * norm (((x n - y n) * speed (speed f) (z n)) / (speed f (x n) * speed f (y n)))
+			* =
+				* delete (slope f (y n)) from both sides of the division
+			* norm (x n - c) * norm (((x n - y n) * speed (speed f) (z n)) / speed f (x n))
+			* <=
+				* (y n) is between (x n) and c, by definition
+			* norm (x n - c) * norm (((x n - c) * speed (speed f) (z n)) / speed f (x n))
+			* =
+				* bring the 2 ((x n - c)) together
+			* norm (square (x n - c)) * norm ((speed (speed f) (z n)) / speed f (x n)) <=
+			* norm (square (x n - c)) * (s2bh / s1bl)
+	* additional theorem
+		* proposition
+			* if
+				* not (slope f c = 0)
+				* slope (slope f) is continuous
+			* then exists neighborhood of c where the bounds in the condition part of the previous theorem do exist 
+		* proof is trivial
