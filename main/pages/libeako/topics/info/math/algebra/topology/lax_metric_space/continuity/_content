@@ -22,8 +22,21 @@
 			* consider the sequence of open-balls with center x and these decreasing radiuses
 			* the contrapositive assumption is that f is not continuous at x, which is (exist neighborhood K of (f x) such that all neighborhood of x contain a point whose image is outside of K)
 			* for neighborhoods of x consider the earlier mentioned balls with radiuses decreaing to zero; let "p" mean the points with outside of K image; then p converges to x, yet (p >>> f) does not converge to (f x); hence f is not sequentially continuous, which is the wanted contrapositive conclusion
-* uniform continuity
-	* f is "uniformly continuous" when
-		* forall dy > 0. exists dx > 0. forall x1 x2. d (x1, x2) < dx => d (f x1, f x2) < dy
-	* uniform continuity implies continuity
-		* proof is trivial
+* Lipschitz continuity
+	\ id tnoukzrxfztrgwpq
+	* f is Lipschitz continuous when
+		* exists Real k. forall x y. d (f x, f y) <= k * d (x, y)
+	* such f is said to be a "Lipschitz function"
+	* the smallest such k exists
+		* because the inequality is not strict
+		* it is named by "the Lipschitz constant", sometimes; sometimes any suitable k is considered to be a "Lipschitz constant"
+	* k = 1
+		* such function is said to be a "metric map", "nonexpansive map" or similar
+		* such functions form a category
+			* which is said to be the "category of metric spaces" ["Met"]
+	* uniform continuity
+		\ id htxvuggwcejkqvee
+		* f is "uniformly continuous" when
+			* forall dy > 0. exists dx > 0. forall x1 x2. d (x1, x2) < dx => d (f x1, f x2) < dy
+		* uniform continuity implies continuity
+			* proof is trivial
