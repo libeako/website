@@ -1,0 +1,36 @@
+\ id gxnihebphpoaznia
+* proposition
+	* if
+		* complete lax metric space (M, d)
+		* contraction f : M -> M
+			* with Lipschitz constant q
+		* x : Nat -> M
+			* (x 0) arbitrary
+			* x (n + 1) := f (x n)
+	* then x converges to the unique fixed point of f
+* proof
+	* d (x (n + 1), d (x n)) <= q * d (x n, x (n - 1)) <= ... <= power n q * d (x 1, x 0)
+	* x is Cauchy
+		* proof
+			* let (m n : Nat) be arbitrary, m > n
+			* d (x m, x n)
+			* <= 
+				* because of the triangular inequality of lax metric spaces
+			* d (x m, x (m - 1)) + d (x (m - 1), x (m - 2)) + ... + d (x (n + 1), x n) =
+			* sum (from n to m) (fun k -> power k q * d (x 1, x 0)) =
+			* d (x 1, x 0) *             sum (from n to m       ) (fun k -> power k q) =
+			* d (x 1, x 0) * power n q * sum (from 0 to (m - n) ) (fun k -> power k q) <=
+			* d (x 1, x 0) * power n q * sum (from 0 to infinity) (fun k -> power k q) =
+			* d (x 1, x 0) * power n q * (1 / (1 - q))
+			* - this converges to zero, as n converges to infinity
+	* the space is complete; hence x is convergent; let t be the limit
+	* t is fixed point
+		* proof
+			* f (t) = f (limit x)
+			* =
+				* because
+					* f is continuous
+						* because f contracts
+			* limit (x >>> f) = limit ((+ 1) >>> x) = limit x = t
+	* f may have at most 1 fixed point
+		* because f contracts
