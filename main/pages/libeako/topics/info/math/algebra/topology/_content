@@ -40,10 +40,16 @@
 	* dually: is closed = equals to its closure
 * theorem: the points of a closing of a set can be partitioned to its limit and isolated points
 	* proof is easy: the points [of the closing] either do or do not have other points of the set in all of their neighborhoods
-* "cluster" or "accumulation" or "limit" point of a set
+* "dense" or "cluster" or "accumulation" or "limit" point of a set
 	* intuitively these are the ones that have other points of the set arbitrariy close
 		* more formally: x is limit point of s iff all neighborhood of x contains other than x point from s
+	* name
+		* "dense" is not used by others, only by me
+		* i think all of "cluster" or "accumulation" or "limit" are bad, they do not fit well to the concept
+		* 'dense set' for me is one whose all points are dense
+			* i know that others used 'dense set' with different meaning, which i think is not intuitive
 	* the "derived" set of a set is the set of its limit points
+		* horrible name choice; perhaps "dense variant" would be better
 * "border points"
 	* intuitively these are the points which are arbitrarily close to both the set and its complement
 	* more formally
@@ -56,7 +62,7 @@
 	* theorem: set is open iff does not intersect with its boundary
 		* proof is trivial
 * function f at point x "converges to" y iff
-	* forall neighborhood nx of x. exists neighborhood ny of y. forall point p in (nx \ {x}). f p is in ny
+	* forall neighborhood ny of y. exists neighborhood nx of x. forall point p in (nx \ {x}). (f p) is in ny
 		* this could have been phrased with open neighborhoods only, that is equivalent
 	* an other phrase is "limit of function f at point x is y"
 	* special case is when the domain of the function is the extended natural numbers, the topology is the order topology and the point of focus is the infinity; then the function is a sequence and we say that "the sequence converges" to y
@@ -85,11 +91,11 @@
 	* a space S is "compact" iff all open covers of S have a finite sub-cover
 		* an open "cover" of S is a set of open sets whose union contains S
 		* a sub-cover is a subset which is also cover
-	* a space is "accumulatively" compact iff all sequencies have an accumulation point in the space
+	* a space is "accumulatively" compact iff all infinite sequencies have an accumulation point in the space
 		* this name is my invention; others use the name "countably compact"
 	* a subset H of a space is "convergently compact" iff all infinite sequences of H contain subsequence which converges in H
 		* the name "convergently compact" is my invention
-			* i do not like the name "sequentially compact" because it does not involve the sequence notion more than the countably compactness does
+			* i do not like the name "sequentially compact" because it does not involve the sequence notion more than 'countably compact'ness does
 	* a space is "limit point compact" iff any infinite subset of the points have a limit point in the space
 * basis
 	* definition

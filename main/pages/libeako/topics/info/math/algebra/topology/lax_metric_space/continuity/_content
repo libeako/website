@@ -30,10 +30,13 @@
 	* the smallest such k exists
 		* because the inequality is not strict
 		* it is named by "the Lipschitz constant", sometimes; sometimes any suitable k is considered to be a "Lipschitz constant"
-	* k = 1
+	* k <= 1
 		* such function is said to be a "metric map", "nonexpansive map" or similar
 		* such functions form a category
 			* which is said to be the "category of metric spaces" ["Met"]
+	* k < 1
+		* such function is said to be a "contraction"
+		* the number of fixed points of a contraction <= 1
 	* uniform continuity
 		\ id htxvuggwcejkqvee
 		* f is "uniformly continuous" when
