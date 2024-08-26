@@ -1,0 +1,95 @@
+\ id prcpsvmdkmijaizm
+* everything here is in Euclidean space
+* a set s of points is "convex" iff
+	* forall points x y in s. forall point p in the line section [x, y]. {p} <= s
+* a set s of points is "strictly convex" iff
+	* forall points x y in s
+		* forall point p in the line (interior (section [x, y])). {p} <= interiro s
+* the "epigraph" or "supergraph "of a function is the set of points that are on or above the function graph
+* this content builds on
+	* weighed sum
+		\ links-to internal awzlonrfndtibahn
+* Jensen inequality
+	* forall (1-distribution w) (point x). f (dp w x) <= dp w (lift f x)
+	* Jensen ineqaulity is equivalent to the special 2-point version of it [when (n = 2)]
+		* proof is by induction
+* linear parametric sum is equivalent to (weighed-sum in 2 dimensions)
+	* lps p (x, y) : = p * x + (1 - p) * y
+* a function f is convex iff its epigraph is convex
+* "secant graph inequality"
+	* forall x y. forall p in [0, 1]. f (lps p (x, y)) <= lps p (f x, f y)
+		* this is equivalent to the 2-point version of the Jensen inequality
+	* this is equivalent to being convex
+		* replacing <= with < we get the equivalent correspondent of being strictly convex
+		* the proof is easy
+	* f is "concave" iff -f is convex
+* secant-line f (x, y) := lift (flip lps ((x, f x), (y, f y))) [0, 1]
+* secant-slope f (x, y) := (f x - f y) / (x - y)
+* secant inequalities
+	* forall a b
+		* a < b =>
+		* forall x in (a, b)
+			* 2-secant variant
+				* secant-slope (a, x) <= secant-slope (a, b)
+			* 3-secant variant
+				* secant-slope (a, x) <= secant-slope (a, b) <= secant-slope (x, b)
+* the 2 variants of the secant inequalities are equivalent to being convex
+	* replacing <= with < we get the equivalent correspondent of being strictly convex
+	* the proof is easy
+* datatype LineStatus := Below | Support | Secant
+	* describes the relationship of a linear function to a function
+* FLine := (Function, LinearFunction)
+	* a pair type of functions
+	* interpret summation, multiplication on FLine component-wise
+* relation (f : Function) (lf : LinearFunction)
+	* | f is strictly above lf everywhere = Below
+	* | some of f is strictly below lf    = Secant
+	* otherwise                           = Support
+* relation is retained by summation and by multiplication by positive number; proof is easy
+	* proof: use that these functions are strictly monotone and retain linearity of functions
+	* corollary: these functions retain convexity
+* all (Real -> Real) convex functions are Lipschitz on any closed sub-interval of the interiors of their domains
+	* see Lipschitz function
+		\ links-to internal tnoukzrxfztrgwpq
+	* the theorem proposes the convexity only on the closed sub-intervals; hence at the ends of the interval we have a gap to play with, which makes the proof easy
+	* consequence: (f : I -> Real), I is open interval => f is continuous
+		* proof: f is continuous at every point
+			* proof: every point is contained by a closed interval which is inside the domain; on that inside closed interval the function is Lipschitz
+* theorem: f is convex <=> (slope f) monotone increases
+	* proof
+		* => use secant inequality
+		* <= prove by contradition
+			* use
+				* secant inequality
+				* mean value theorem
+					\ links-to internal fspresemhcnedkhm
+* theorem: f has second speed => (f is convex <=> speed (speed f) >= 0)
+	* proof
+		* by a previous theorem
+			* f is convex <=> (speed f) monotone increases
+			* g monotone increases <=> speed g >= 0
+				* g := speed f
+* theorem: convex speedy function is continuously speedy
+	* proof
+		* by a previous theorem
+			* convexity => the function monotone increases
+		* assume that the speed is not continuous; then
+		* must have a jump somewhere; that jump leaves a gap in the image, which nowhere gets filled because of the monotoneness of the speed
+		* but it must be filled becasue of the
+			* Darboux theorem
+				\ links-to internal skicnhrmricltnsd
+* theorem about extremum
+	* proposition
+		* if
+			* interval I <= Real
+			* f : I -> R, convex, has speed 
+			* {c} <= I
+			* speed f c = 0
+		* then
+			* c is a minimum-place
+			* c is a strict minimum place, except some constant neighborhood
+	* proof is easy
+		* one possible tactic is by contradiction and using the mean value theorem
+		* other easy proof is possible too
+* support line
+	\ links-to internal kdkfzepecxoegnqy

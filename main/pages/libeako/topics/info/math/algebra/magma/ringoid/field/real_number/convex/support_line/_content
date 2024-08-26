@@ -1,0 +1,31 @@
+\ id kdkfzepecxoegnqy
+* a "support line" of a function f is a linear function that contains at least 1 boundary point and zero interior points of the epigraph of f
+* intuitively the epigraph rests on the support line
+* equivalence of existing of all support lines
+	* proposition
+		* if
+			* interval I <= Real
+			* f : I -> Real
+		* then
+			* are equivalent
+				* f is convex
+				* f has support line everywhere
+	* proof
+		* =>
+			* take arbitrary point c
+			* proof 1
+				* the line containing (c, f c) and having slope (slope f c) is a support line
+					* proof
+						* the slope of the left -secant lines to c <= slope f c
+						* the slope of the right-secant lines to c >= slope f c
+			* proof 2
+				* g x := f x - slope f c * x
+					* slope g = slope f - slope f c
+					* => slope g c = 0
+				* by a previous theorem: g attains its minimum at c
+				* hence relation (g, const (g c)) = Support
+				* hence relation (f, (const (g c) + (slope f c *))) = Support
+		* <= by contradiction
+			* suppose f is not convex
+			* then exist a < c < b. secant-slope (a, c) > secant-slope (c, b)
+			* support line of f at c is not possible
