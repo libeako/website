@@ -1,0 +1,9 @@
+\ id awzlonrfndtibahn
+* weights are scalar values; we multiply with them some things and sum the results; this is a dot-product operation
+* dp := dotproduct
+* the weights form a vector
+* when the weights are >= 0 and <s and (their sum = s) then they are an "s-distribution"
+	* this term is invented by me
+	* the default value of s = 1
+	* the default "distribution" is a 1-distribution
+* reciprocal distribution is a vector of scalars whose reciprocs form a [1-]distribution
