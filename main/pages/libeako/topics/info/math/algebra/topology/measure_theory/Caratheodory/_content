@@ -1,0 +1,20 @@
+\ id kkvhgjsivdzjyifd
+* the Caratheodory method constructs a real measure from an outerish measure
+* in this part "m" is usual symbol of an outerish measure
+* restrict its domain by
+	* the Carathéodory measurability
+		\ links-to internal bmcldtazzqknporm
+* let "S" be the symbol for the resultant domain in this part; thus M is a set of measurable subsets of T
+* the restriction of the outerish measure onto the set of Caratheodory-measurable sets is a real measure
+	* it is additive
+		\ links-to internal xdxhjypyhatqrhiq
+	* it is a
+		* sigma algebra
+			\ links-to internal dqufiezwzuwwjmeq
+		* proof
+			\ links-to internal yildgocgemifgeou		
+* it is complete
+	\ links-to internal ptamcfzbwyziybje
+* it is equal to the original elementary volume-function
+	* Carathéodory extension theorem
+		\ links-to internal mdpdidaqsntqqijm

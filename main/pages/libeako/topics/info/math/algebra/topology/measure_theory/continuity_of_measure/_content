@@ -1,0 +1,67 @@
+\ id ifslvryguaturinf
+* take
+	* m is a measure
+	* s : Nat+ -> Set
+		* all measurable in a measure space
+* case increasing
+	* proposition
+		* if s is monotone leniently increasing
+		* then
+			* m (union s) = limit (s >>> m)
+	* proof
+		* let d be the shifting difference sequence of s
+			* d n := if n = 1 then s 1 else (s n - s (n - 1))
+		* m (union s)
+		* =
+			* the union of s and d are the same
+				* because d is the shifting difference sequence of s
+		* m (union d)
+		* =
+			* m is countably additivie
+				* m is a measure
+		* sum (d >>> m)
+		* =
+			* by definition of sum as limit of partial sums
+		* limit (s >>> m)
+* case decreasing
+	* proposition
+		* if s is monotone leniently decreasing and (s 1) is finite
+		* then
+			* m (intersect s) = limit (s >>> m)
+	* proof
+		* let d be the difference sequence of s relative to (s 1)
+			* d n := s 1 \ s (n + 1)
+		* then d is leniently increasing
+		* m (intersect s)
+		* =
+			* 
+		* m (s 1 \ union d)
+		* =
+			* additivity of m
+				* m is a measure
+				* (s 1) includes (union d)
+		* m (s 1) - m (union d)
+		* =
+			* using the 'increaseing' case of this theorem
+				* d is monotone leniently increasing
+		* m (s 1) - limit (d >>> m)
+		* =
+			* just move addition of a constant into the limit
+		* limit (fun n -> m (s 1) - m (d n))
+		* =
+			* additivity of m
+				* m is a measure
+				* (s 1) includes (union d)
+		* limit (fun n -> m (s 1 \ d n))
+		* =
+			* by definition of d
+		* limit (fun n -> m (s n))
+		* =
+			* delambdafy
+		* limit (s >>> m)
+	* note
+		* the finiteness condition is necessary
+			* example
+				* m := the number of elements of; s n := [n .. infinity]
+					* limit (s >>> m) = limit (const infinity) = infinity
+					* m (intersect s) = m (empty) = 0

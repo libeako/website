@@ -1,0 +1,13 @@
+\ id pfwhquvymryjbbtl
+* this is about the meaning of the Carathéodory condition
+* the equation in it refers to 2 sets: the subject set [the set whose measurability is the question] and a test set [over which the condition is universally quantified]
+* the subject set divides the test set to 2 parts: one with the points common with the subject set and the other is the rest
+* the equation says that the size of the test set equals to the sum of the sizes of those 2 parts of it
+	* this can be interpreted as either
+		* the subject set interacts with the test set nicely
+		* clean border
+			* the subject set divides the test set cleanly; with other phrasing: the dividing border between the 2 partitions is clean; that border is a segment of the border of the subject set; hence the condition can be interpreted as the border of the subject set being clean everywhere
+			* "clean" means that it is approximatable perfectly [without gap] with unions of elementary sets
+			* other source
+				* "Intuition behind Caratheodory’s Criterion: Think “Sharp Knife” and “Shrink Wrap”!" - Jonathan Manton
+					\ links-to external https://jmanton.wordpress.com/2017/08/24/intuition-behind-caratheodorys-criterion-think-sharp-knife-and-shrink-wrap/

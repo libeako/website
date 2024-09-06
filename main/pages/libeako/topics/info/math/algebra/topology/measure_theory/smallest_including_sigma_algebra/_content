@@ -1,0 +1,21 @@
+\ id eupxeczurplflvll
+* proposition
+	* informally
+		* forall set x. a smallest (sigma algebra containing x) exists
+	* more formally
+		* if
+			* T : Set
+			* x : Set
+			* x <= T
+			* c (s : Set) := (x <= s <= T) and (s is a sigma algebra)
+		* then
+			* exists s. (c s) and (forall b : Set. c b => s <= b)
+* proof
+	* P := the power-set of T
+	* c P
+	* SS : Set := { for s in P. c p }
+	* SS is not empty, as P is element of it
+	* hence we can form the intersection of all its member-sets
+	* s := intersect SS
+	* remains to prove (c s)
+		* just go through the definitions and whenever (you need to prove about a set that it is a member of s) then observe that it is a member of all the member-sets of SS

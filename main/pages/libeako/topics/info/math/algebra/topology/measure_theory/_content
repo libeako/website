@@ -1,0 +1,98 @@
+\ id juuhxihbzwuwfnpe
+* goal is to determine volumes of space, area, length, ...
+* the name "quantity" or "quantization" would perhaps be better
+* motivation: it is not easy
+	* example: [0, 1] and [0, 2] have different sizes intuitively, but the same number of points
+* consistency
+	* is a requirement for any theory
+	* in measure theory it requires
+		* preferrably additivity, but at least sub-additivity
+			* these requirements are for the countably many summations
+				* finite additivity is too weak, because in real number analysis countable sequences are too important to miss
+				* continuum additivity is
+					* too strong
+						* because for instance it would allow any (intuitively non-zero sized) sets [for example spheres] to have zero measure only because all its continuum number of points individually have zero measure
+					* not needed
+						* this is implied by
+							* of any set of non-negative real numbers with finite sum: only countably many members can be positive
+								* the proof is easy: forall n : Nat+. only finitely many can be above (1 / n)
+		* additivity for all subsets is not always possible
+			* 2 solutions are known
+				* use sub-additivity, via outer measure
+				* restrict the measure function to a subset of "measurable" subsets
+* algebras of subsets
+	* these depend on a base set
+	* 'semi-algebra of sets'
+		* sources differ much on the definition of "semi-algebra"
+		* definition: a set of sets such that
+			* has binary intersection
+			* complementer is semi-closed
+				* forall member sets. its complementer is a finite union of member sets
+	* "algebra"s are algebras having proper complementer method and intersections of not too many sets
+		* having proper complementer method makes requirements for either union or intersection equivalent to each other
+		* a "covering algebra" of subsets is one which contains the intersection of 0 number of subsets
+			* the result of such [0-argument] intersection is the full base set
+			* hence it contains {} too, via the complementer
+			* an 'algebra of sets' is a covering algebra which can union and intersection finite number of subsets
+				* algebras are semialgebras too
+				* "sigma algebra" is an algebra of sets which can under and intersec countable number of subsets
+					\ id dqufiezwzuwwjmeq
+					* smallest including sigma algebra
+						\ links-to internal eupxeczurplflvll
+* formal goal
+	* "measure" definition
+		* "premeasure"
+			* definition
+				* a function f : S -> [0 .. +infinity], such that
+					* S is an algebra of subsets of the base set
+					* countable additivity for the cases when the result of the union is element of S
+			* a consequence of this definition is (f {} = 0)
+		\ id samevamfsixnhjwx
+		* "measure" := premeasure such that S is sigma algebra
+	* requirement (f {} = 0) is fulfilled automatically if f takes a finite value
+		* proof via binary additivity
+	* "measurable space" (T, S, m)
+		\ id koelzeepineavtuc
+		* T is the base set
+		* S is a set of subsets of T, a sigma-algebra
+		* m is a measure
+	* (T, S) is a "measurable space"
+	* a "probability measure" maps the full set to 1
+	* completeness
+		\ links-to internal ovpnmvfdfcpoxgit
+* not every subset of the euclidean space is measureable, hence the measurment needs to be restricted to some subsets; this set of subsets need to contain some important subsets:
+* building a measure space from elementary sets
+	* elementary subsets
+		* generally
+			* these are very simple subsets of the space which you surely know the volume of
+			* now you have a mapping from elementary sets to real numbers, i will say this is your "elementary measure"
+			* include the empty set among the elementary sets and map 0 to it as its volume
+		* in the euclidean space
+			* interval
+				* 1 dimensional
+					* "half closed" or "half open" interval is one which is closed at the low end and open at the high end [[a, b)]
+				* multi-dimensional half closed interval is one being half-closed in all the dimensions
+				* a "brick" is a half-closed any-dimensional interval
+			* a "brick function" is one for which a brick exists in its domain such that the function maps the points of the brick to (a real value h) and the other points of the domain to 0
+			* if h = 1 then the function is a "brick indicator"
+			* that brick is said to be the "support" of the function
+			* for intervals the measure is intuitively trivial - just the volume of the interval [the product of its sizes in each dimension]
+	* extend the measure on the elementary subsets: construct
+		* "outer" or "exterior" measure
+			\ links-to internal feozlakvkjjyikee
+	* now you have an "outerish" measure
+	* Caratheodory measure construction
+		\ links-to internal kkvhgjsivdzjyifd
+	* continuity of measure
+		\ links-to internal ifslvryguaturinf
+* function measurability
+* the Borel sets are the smallest sigma algebra of sets including the open sets [or all the closed sets]
+	* see smallest including sigma algebra
+		\ links-to internal eupxeczurplflvll
+* in the equclidean space
+	\ links-to internal vhwtmcluzmaokkit
+* other sources
+	* the best so far for me
+		* some chapters of an (unknown to me) book
+			* https://www.uio.no/studier/emner/matnat/math/MAT2400/v13/mathanalch6.pdf
+			* https://www.uio.no/studier/emner/matnat/math/MAT2400/v13/mathanalch9.pdf

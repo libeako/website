@@ -1,0 +1,33 @@
+\ id xnunzqxmgcweunju
+* if
+	* f, g : S -> Extended Real
+		* measurable
+* then
+	* forall (c : Real). (c * f) is measurable
+	* negate f is measurable
+		* proof is trivial
+			* even by just using
+				* equivalence of definitions of function measurability
+					\ links-to internal nmkhnkwyodjluppn
+	* reciproc
+		* proof is easy, as of negation, but somewhat complicated with branching over negativity
+	* (f + g) is measurable
+		* proof
+			* take arbitrary (l : Real)
+			* X := keep ((fl, gl) -> ((fl + gl) < l)) (cross-power 2 Real)
+			* we need to prove (keep (x -> (f x + g x) < l) Real) is measurable
+			* keep (x -> (f x + g x) < l) Real
+			* =
+				* change to countable rational limits
+			* union (lift (lr -> keep (fun x -> (f x + g x) < lr) Real) (keep (< l) rational))
+			* countable union of measurable sets is measurable; hence we need to prove only
+				* for arbitrary lr
+					* (keep (x -> (f x + g x) < lr) Real) is measurable
+			* ((f x + g x) < lr) = or (exists fr gr : Rational. (fr + gr < lr) and (f x < fr and g x < gr))
+			* countable intersection of measurable sets is measurable; hence we need to prove only the measurability of
+				* keep (f >>> (< fr)) Real
+				* keep (g >>> (< gr)) Real
+			* which is given by the measurability of f and g
+	* (f * g) is measurable
+		* proof
+			* f * g = (power 2 (f + g) - (power 2 f + power 2 g)) / 2

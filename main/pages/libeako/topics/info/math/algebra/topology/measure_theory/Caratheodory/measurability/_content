@@ -1,0 +1,23 @@
+\ id bmcldtazzqknporm
+* definition
+	* if m is an 
+		* outerish measure
+			\ links-to internal xwtushdgpcpdhxms
+	* then
+		* a set c is Carathéodory m-measurably iff
+		* forall set s
+			* m s = m (intersect s c) + m (intersect s (complement c))
+				* this can be written also as
+					* with
+						* names
+							* im := intersect s >>> m
+						* im s = im c + im (complement c)
+* if m is
+	* outerish
+		\ links-to internal xwtushdgpcpdhxms
+	* then 
+		* <= is implied by the subadditivity of m being an outer measure
+		* hence to prove measurability: it is enough to prove >=
+* i may use the short "measurable" instead of "Carathéodory measurable"
+* intuition
+	\ links-to internal pfwhquvymryjbbtl
