@@ -1,0 +1,47 @@
+\ id mdpdidaqsntqqijm
+* proposition
+	* if
+		* T : Set Set
+		* A, included by T
+		* m : A -> Real
+			* premeasure
+		* mo is the outer measure on m, restricted to the Carathéodory sigma algebra S
+	* then
+		* forall s : A. (s is mo.measurable) and (mo s = m s)
+* proof:
+	* proving the measurability of x
+		* we have to prove
+			* forall s : A. forall t : T
+				* mo t >= mo (intersect t s) + mo (intersect t (complementer s))
+		* forall e > 0
+			* mo t + e
+			* >=
+				* exists such covering c of t
+			* sum (fun k -> m (c k))
+			* =
+				* divide (c k) to 2 parts by s
+			* sum (fun k -> m (union (intersect (c k) s) (intersect (c k) (complementer s))))
+			* =
+				* implied by m being countably additive
+			* sum (fun k -> m (intersect (c k) s) +  m (intersect (c k) (complementer s))
+			* =
+				* separating the 2 parallel components of the series
+					* we can do this because all those components are not negative
+			* sum (fun k -> m (intersect (c k) s)) + sum (fun k -> m (intersect (c k) (complementer s)))
+			* >=
+				* by mo being outer measure of m
+			* mo (intersect t s)) + mo (intersect t (complementer s)))
+	* proving the equality on A of m and mo
+		* mo s <= m s
+			* implied by mo being outer measure of m
+		* forall e > 0
+			* mo s + e
+			* >=
+				* exists such disjoint covering c of s which does not contain anything outside of s
+			* sum (fun k -> m (c k))
+			* =
+				* implied by m being countably additive
+			* m (union c)
+			* =
+				* implied by c being a covering of s and not containing anything outside it
+			* m s

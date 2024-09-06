@@ -1,0 +1,38 @@
+\ id fmpauwaexuhoyeix
+* union of countable number of disjoint outerishly measurable sets is measurable
+	* proposition
+		* if
+			* xs : Nat -> Set
+				* disjoint, all measurable
+			* s : Set
+		* then
+			* m s >= m (intersect s (union xs)) + m (intersec s (complementer (union xs)))
+	* proof
+		* "finite inequality"
+			* m s = 
+			* m (intersect s (union (till n) xs)) + m (intersec s (complementer (union (till n) xs)))
+			* >=
+				* implied by the monotonity of m
+			* m (intersect s (union (till n) xs)) + m (intersec s (complementer (union xs)))
+			* =
+				* by DeMorgan set equation
+			* m (union (till n) (fun k -> (intersect s (xs k))) + m (intersec s (complementer (union xs)))
+			* =
+				* implied by
+					* finite union with intersection is additive
+						\ links-to internal wuukonougaixhfrc
+			* sum (till n) (fun k -> m (intersect s (xs k))) + m (intersec s (complementer (union xs)))
+		* m s
+		* >=
+			* implied by a limit version of the "finite inequality"
+		* sum (till infinity) (fun k -> (m (intersect s (xs k)))) + m (intersec s (complementer (union xs)))
+		* >=
+			* by countable subadditivity of m:
+		* m (union (till infinity) (fun k -> (intersect s (xs k))))
+		* =
+			* by DeMorgan set equation
+		* m (intersect s (union xs))
+	* note: the theorem is true for zero number of measurable sets too
+* union of countable number of measurable sets is measurable
+	* this is a corollary of the disjoint version of this theorem
+	* proof: replace the measurable sets by a set of sets that has the same union and are disjoint
