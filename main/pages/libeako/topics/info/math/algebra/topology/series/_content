@@ -27,8 +27,16 @@
 					* take 2 big head sections of them, so big that all the head sections of the remaining tail sections are infinitesimally small, absolutely
 					* take the union of these head sections
 						* this must be infinitesimally close to both head sections, hence those head sections must be infinitesimally close together
-			* the sum of uncountably infinite number of positive numbers can be defined as the supremums of the sums of all finite subsets
-				* we can extend this definition to negative numbers too, by separating the positive and negative elements of the set and processing them parallelly
+			* uncountable sum
+				* the sum of uncountably infinite number of positive numbers can be defined as the supremums of the sums of all finite subsets
+					* we can extend this definition to negative numbers too, by separating the positive and negative elements of the set and processing them parallelly
+				* Tonelli's theorem
+					* proposition
+						* if
+							* f : T1 * T2 -> ExtendedReal+
+						* then
+							* sum f = sum (fun x1 -> sum (fun x2 -> f (x1, x2)))
+					* proof is easy
 	* "conditional convergence"
 		* when the series is convergent but not unconditionally convergent
 * the Cauchy product of 2 serieses is a series with components that are the diagonals of the input serieses as laid out as 2 dimensional grid
