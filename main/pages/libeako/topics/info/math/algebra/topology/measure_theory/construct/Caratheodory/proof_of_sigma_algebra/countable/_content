@@ -1,0 +1,48 @@
+\ id fmpauwaexuhoyeix
+* union
+	* of disjoint measurable sets
+		* proposition
+			* if
+				* xs : Nat -> S
+					* all measurable
+				* s : Set
+				* mis x := intersect s >>> m
+				* u := union xs
+			* then
+				* m s >= mis u + mis (complementer u)
+		* proof
+			* "finite inequality"
+				* m s
+				* =
+					* the theorem is proved for finite number of sets
+						\ links-to internal luvoknsoorgcdeof
+				* mis (union (till n) xs) + mis (complementer (union (till n) xs))
+				* =
+					* by unfolding mis
+				* m (intersect s (union (till n) xs)) + mis (complementer (union (till n) xs))
+				* >=
+					* implied by the monotonity of m
+				* m (intersect s (union (till n) xs)) + mis (complementer u)
+				* =
+					* by DeMorgan set equation
+				* m (union (uptill n) (k -> (intersect s (xs k))) + mis (complementer u)
+				* =
+					* implied by
+						* finite union with intersection is additive
+							\ links-to internal xdxhjypyhatqrhiq
+				* sum (till n) (k -> m (intersect s (xs k))) + mis (complementer u)
+			* m s
+			* >=
+				* implied by a limit version of the "finite inequality"
+			* sum (till infinity) (k -> (m (intersect s (xs k)))) + mis (complementer u)
+			* >=
+				* by countable subadditivity of m
+			* m (union (till infinity) (k -> (intersect s (xs k)))) + mis (complementer u)
+			* =
+				* by DeMorgan set equation
+			* m (intersect s (union xs)) + mis (complementer u)
+	* of any measurable sets
+		* this is a corollary of the disjoint version of this theorem
+		* proof: replace the measurable sets by a set of sets that has the same union and are disjoint
+* intersection
+	* is implied by the union via DeMorgan set-equality

@@ -1,0 +1,22 @@
+\ id lmuoifmlcvbuptcs
+* these depend on a base set
+* 'semi-algebra of sets'
+	\ id norbzvwtmfnxravy
+	* sources differ much on the definition of "semi-algebra"
+	* definition: a set of sets such that
+		* has binary intersection
+		* complementer is semi-closed
+			* forall member sets. its complementer is a finite union of member sets
+* "algebra"s are algebras having proper complementer method and intersections of not too many sets
+	* having proper complementer method makes requirements for either union or intersection equivalent to each other
+	* a "covering algebra" of subsets is one which contains the intersection of 0 number of subsets
+		* the result of such [0-argument] intersection is the full base set
+		* hence it contains {} too, via the complementer
+		* an 'algebra of sets' is a covering algebra which can union and intersection finite number of subsets
+			* algebras are semialgebras too
+			* building one from a semi-algebra
+				\ links-to internal apaucufqurnwkqjh
+			* "sigma algebra" is an algebra of sets which can intersect countable number of subsets
+				\ id dqufiezwzuwwjmeq
+				* smallest including sigma algebra
+					\ links-to internal eupxeczurplflvll

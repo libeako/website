@@ -1,0 +1,15 @@
+\ id pqywysctdtdaqcfd
+* proof
+	* take arbitrary
+		* (t, b, _) measure space
+			* t topological space
+			* b contains the Borel sigma algebra of t
+		* f : t -> Real
+			* continuous
+		* l : Real
+	* for the measurability we need to prove that the inverse image of [-infinity .. l) is measurable
+	* f does not have -infinity as value; hence [-infinity .. l) = (-infinity .. l)
+	* which is open
+	* inverse image of open set is open
+		\ links-to internal yiqeabgwikibcabb
+	* open sets are in the Borel sigma algebra b, hence open sets are measurable

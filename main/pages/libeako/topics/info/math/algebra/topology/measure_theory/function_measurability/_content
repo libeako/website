@@ -1,0 +1,17 @@
+\ id trbqjlpznysitshq
+* a function (f : i -> Extended Real) is "measurable" iff
+	* forall l : Real. (keep (f >>> (< l)) i) is measurable
+* equivalence of measurability definitions - measureability of inverse images of basic subsets
+	\ links-to internal nmkhnkwyodjluppn
+* this proof technique works from any of the other kind of half-infinite half-finite intervals; hence any of those kinds too could be used to define 'measurability of function'
+* all continuous functions are measurable
+	\ links-to internal pqywysctdtdaqcfd
+* if f is measurable and g is continuous then (f >>> g) is measurable
+	* proof is trivial
+* field methods on measurability
+	\ links-to internal xnunzqxmgcweunju
+* 'p almost everywhere' := (the set of points where not p) is measurable and its measure is zero
+* point-wise extremums and limits of function-sequence
+	\ links-to internal ubpcmljjbniytygd
+* squeeze theorem
+	\ links-to internal lvhilqtghqqjffha

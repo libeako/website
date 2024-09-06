@@ -1,0 +1,57 @@
+\ id mdpdidaqsntqqijm
+* proposition
+	* if
+		* R is an algebra of subsets of T
+		* pm is a premeasure on R
+		* om : R -> Real
+			* outer measure on pm
+		* S is the om-Caratheodory-measurable subsets of T
+		* cm is restriction of om to S
+	* then
+		* R <= S
+		* cm restricted to R = pm
+		* cp is complete
+* proof:
+	* S is a sigma algebra
+		* because it is the Caratheodory-measurable subsets of T
+			\ links-to internal dqufiezwzuwwjmeq
+	* proving (R <= S)
+		* we have to prove
+			* forall (x : R). forall (s : Subset of T)
+				* cm s >= cm (intersect s x) + cm (intersect s (complementer x))
+		* forall e > 0
+			* cm s + e
+			* >=
+				* exists such disjoint covering c of s
+			* sum (fun k -> pm (c k))
+			* =
+				* divide (c k) to 2 parts by x
+			* sum (fun k -> pm (union (intersect (c k) x) (intersect (c k) (complementer x))))
+			* =
+				* implied by pm being countably additive when result is element of R
+					* the results of unions here are elemets of R because R is an algebra os sets and these are only binary unions
+			* sum (fun k -> pm (intersect (c k) x) +  cm (intersect (c k) (complementer x))
+			* =
+				* separating the 2 parallel components of the series
+					* we can do this because all those components are non-negative
+			* sum (fun k -> pm (intersect (c k) x)) + sum (fun k -> pm (intersect (c k) (complementer x)))
+			* >=
+				* by cm being outer measure on pm
+			* cm (intersect s x)) + cm (intersect s (complementer x)))
+	* proving (cm restricted to R = pm)
+		* take arbitrary (x : R)
+		* cm x <= pm x
+			* implied by cm being a restriction of an outer measure on pm
+		* forall e > 0
+			* cm x + e
+			* >=
+				* exists such disjoint covering (c : Natural -> R) of x, which does not contain anything outside of x
+					* each any c set contained some element outside of x then we can intersect it with x [x is element of R]
+					* hence (union c = x)
+			* sum (c >>> pm)
+			* =
+				* implied by pm being countably additive if the union is in R
+					* in this case the union is in R, because (union c = x)
+			* cm (union c) = cm x
+	* cp being complete is a consequence of it being a Caratheodory restriction of an outer measure
+		\ links-to internal ptamcfzbwyziybje

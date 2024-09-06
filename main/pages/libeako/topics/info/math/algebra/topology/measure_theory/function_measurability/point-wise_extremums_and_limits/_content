@@ -1,0 +1,21 @@
+\ id ubpcmljjbniytygd
+* max | min of 2 measurable functions is measurable
+	* proof is trivial, as 'max' translates into the union of measurable sets
+	* this trivially extends to finite positive number of functions
+* point-wise (supremium | infimum), (limsup | liminf), limit of series of measurable functions is measurable
+	* proposition
+		* if
+			* (T, S, m) measure space
+			* f : Nat+ -> T -> Extended Real
+				* all measurable
+		* then the point-wise (supremium | infimum), (limsup | liminf), limit [if exists] functions of f are measurable
+	* proof
+		* for (supremum | infimum): the proof is essentially the same as for finite number of functions
+		* for (limit superior) | (limit inferior)
+			* g k := (+ k) >>> f
+			* forall k. point-wise supremum and infimum of (g k) are measurable
+				* this is the 'for (supremum | infimum)' part
+			* apply the 'for (supremum | infimum)' part to the infimum and supremum of g
+				* point-wise liminf of f is point-wise sup of g
+				* point-wise limsup of f is point-wise inf of g
+		* for limit [if exists]: limit [if exists] is limsup and liminf, hence this proof is essentially the use of the 'for (limit superior) | (limit inferior)' part

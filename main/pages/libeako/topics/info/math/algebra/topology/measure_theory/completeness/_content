@@ -1,0 +1,92 @@
+\ id ovpnmvfdfcpoxgit
+* a "null set" is a measurable set with measure 0
+* union of finite and countable null sets is null set
+	* proof is trivial by the countable additivity of measure
+* the "negligable sets" are the subsets of the null sets
+	* they may be not measurable
+	* empty is negligable
+	* this name is my invention
+* a measure space is "complete" iff all negligable sets are measurable
+* finite and countable union of negligable sets are negligable
+	* proof is trivial, as all of them are included by some null set and union of finite and countable null sets is null set
+* extension of a measure space with the negligable sets
+	* take (T, OS, om) measure space
+	* CS := {for (s in S), (n negligable set). union s n}
+	* CS is a sigma algebra, the smallest one including both OS and the neglibable sets
+		* proof
+			* being smallest
+				* any sigma algebra including both OS and (the negligable sets) must contain the unions of them
+			* being a sigma algebra
+				* empty is a member of both OS and the negligable sets
+				* proof of closedness on union is trivial
+				* complementer
+					* take (an s : OS) and (an ns negligable set)
+					* we need to prove that
+						* CS contains (complement (union s ns))
+					* n := ns \ s
+					* s and n are disjoint
+					* union s ns = union s n
+					* hence it is enough to prove
+						* CS contains (complement (union s n))
+					* n is negligable
+					* hence exists null set zs : S. zs includes n
+					* z := zs \ s
+					* z is null set
+					* s and z are disjoint
+					* z includes n
+						* implied by (s and n are disjoint)
+					* complement (union s n) = union (complement (union s z)) (z \ n)
+					* S contains (complement (union s z))
+						* implied by (S includes {s, z})
+					* (z \ n) is negligable
+	* extension of the measure
+		* forall (s : OS) (n negligable set). cm (union s n) := om s
+			* uniqueness of this definition
+				* proposition
+					* (union s1 n1 = union s2 n2) => (om s1 = om s2)
+				* proof
+					* let z1, z2 be null sets including n1, n2
+					* s1 <= union s1 n1 = union s2 n2 <= union s2 z2
+					* hence 
+						* om s1 <= om (union s2 z2) <= om s2 + om z2 = om s2
+					* symmetrically: om s2 <= om s1
+		* cm is an extension of om
+			* proof
+				* take arbitrary  (s : OS)
+				* cm s
+				* =
+				* cm (union s empty)
+				* =
+					* by definition of cm
+				* om s
+		* cm is a measure
+			* proof
+				* cm empty = cm (union empty empty) = om empty = 0
+				* countable additivity
+					* sn : Nat+ -> Set
+						* all in CS
+						* disjoint
+					* sn composes to 2 parallel sequences s and n
+					* cm (union sn)
+					* =
+						* by definition of cm
+					* om (union s)
+					* =
+						* implied by
+							* om is a measure
+							* the components of s are disjoint
+								* implied by (the components of sn are disjoint)
+					* sum (s >>> om)
+					* =
+						* cm is an extension of om
+					* sum (sn >>> cm)
+		* (T, CS, cm) is complete
+			* proof
+				* take arbitrary cn cm-negligable set
+				* from the cm-negligability of cn: exists (cz : CS). (cz contains cn) and (cm cz = 0)
+				* (CS contains cz), hence (exists (s : OS) (sn om-negligable set). cz = union s sn)
+				* sn is om-negligable, hence exists (oz : OS). (oz contains sn) and (om oz = 0)
+				* cm cz = 0, hence by definition of cm: (om s) = 0
+				* cn <= cz = union s sn <= union s oz
+				* om (union s oz) <= om s + om oz = 0 + 0 = 0
+				* hence cn is om-negligable; hence cn is contained by CS

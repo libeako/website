@@ -1,0 +1,41 @@
+\ id xdxhjypyhatqrhiq
+* proposition
+	* if
+		* s : Subset of T
+		* S is the set of measurable subsets of T
+		* K is a subset of S, containing at most countable number of elements
+	* then
+		* m (intersect s (union K)) = sum (lift (intersect s >>> m) K)
+* proof is branched according to the number of elements of K
+	* 0, 1: trivial
+	* 2
+		* proposition
+			* if
+				* x y : S
+					* disjoint
+			* then
+				* m (intersect s (union x y)) = m (intersect s x) + m (intersect s y)
+		* proof
+			* m (intersect s (union x y))
+			* =
+				* implied by x being measurable
+			* m (intersect (intersect s (union x y)) x) + m (intersect (intersect s (union x y)) (complementer x))
+			* =
+			* m (intersect s x) + m (intersect s y)
+	* finite: natural induction on case 2
+	* countable
+		* take
+			* xs : Nat -> K
+				* disjoint
+		* i aim to prove
+			* m (intersect s (union xs)) >= sum (fun n -> m (intersect s (xs n)))
+				* the other direction is implied by the sub-additivity of m being outerish
+			* forall (n : Nat)
+				* m (intersect s (union xs))
+				* >=
+					* implied by monotonicity of outerish measure
+				* m (intersect s (union (till n) xs))
+				* =
+					* implied by the finite version of this theorem
+				* sum (till n) (fun n -> m (intersect s (xs n)))
+			* hence it is also true for the limit

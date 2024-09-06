@@ -1,0 +1,47 @@
+\ id nmkhnkwyodjluppn
+* proposition
+	* if
+		* T : Set
+		* f : T -> Extended Real
+			* measurable
+	* then the inverse images of all intervals and all open and closed sets are measurable
+* proof
+	* i := lift (inverse f)
+	* the important tool in this proof is that set union, intersection, complementer commute with inverse image taking
+		* i (union y1 y2) = union (i y1) (i y2)
+			* for any number of union inputs
+		* i (intersect y1 y2) = intersect (i y1) (i y2)
+			* for any number of intersection inputs
+		* i (complementer y) = complementer (i y)
+	* for intervals
+		* take arbitrary (l : Extended Real)
+		* for half-finite half-infinite intervals
+			* for high-limitted intervals
+				* i [-infinity .. l) is measurable
+					* by the measurability of f
+				* i [-infinity .. l]
+					* =
+					* i (intersect (fun n -> [-infinity .. (l + 1 / n)]))
+					* =
+						* inverse image taking commutes with intersection
+					* intersect (fun n -> i ([-infinity .. (l + 1 / n)]))
+					* which is measurable, as intersection of countable measurable sets is measurable
+			* for (i [l .. +infinity]) and (i ( l .. +infinity)
+				* is deducable trivially
+					* from the high-limitted case
+					* by applying the commutation between inverse image taking and complementer taking
+		* for finite intervals
+			* is deducable trivially
+				* from the infinite cases
+				* by applying the commutation between inverse image taking and intersection
+					* finite intervals are intersection of half-finite intervals
+	* for open sets
+		* is deducable trivially by
+			* using 
+				* in 1 dimensional line: all open sets are countable unions of open intervals
+					\ id xlbnelkrsbsjhhvz
+					* proof
+						* all open sets are open intervals; each open interval is a union of some open intervals with rational limits; rationals are countable			
+			* applying the commutation between inverse image taking and union
+	* for closed sets
+		* is deducable trivially by applying the commutation between inverse image taking and complementer taking

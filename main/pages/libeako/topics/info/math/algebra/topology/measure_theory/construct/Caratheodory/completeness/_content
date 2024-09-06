@@ -1,0 +1,14 @@
+\ id ptamcfzbwyziybje
+* proposition
+	* if (c is negligable) then (c is measurable)
+* proof
+	* c is negligable, hence by monotonicity of m: m c = 0
+	* forall s : Set
+		* m (intersect s (complement c)) + m (intersect s c)
+		* =
+		* m (intersect s (complement c)) + 0
+		* =
+		* m (intersect s (complement c))
+		* <=
+			* implied by the monotonicity of m, which is implied by m being an outerish measure
+		* m s

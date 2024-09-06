@@ -1,0 +1,54 @@
+\ id feozlakvkjjyikee
+* outer measure construction
+	\ id iasieoscekffzrko
+	* definition
+		* dependencies
+			* a covering algebra 'R'
+			* a volume function (: R -> Extended Non-Negative Real)
+		* a "covering" of a set s is a set of sets whose union includes s
+		* the size of a set of sets is the sum of the sizes of the sets
+			* the order of the summation does not matter because the components are non-negative
+				* see absolute convergence of series
+					\ links-to internal vfgdmpmfxctsjljq
+		* the "outer measure" of a set is the infimum of the sizes of all the countable coverings of the set
+			* the name is from the fact that this construction is an approximation from the outside
+			* the result of such construction may be not a real measure, hence the name is misleading
+		* an "inner measure" can also be defined dually [by supremum of sizes of covered set-sets]
+	* properties
+		* the good property of outer measure is that it can be constructed from any subset of sets and initial set-volume-function
+		* the outer measure of empty sets is zero
+			* proof: empty sets are covered by empty sets of sets
+		* an outer measure is monotone
+			* proof is trivial, because a covering of a set is also a covering for all smaller sets
+		* an outer measure is countably [and finitely] sub-additive
+			* proof
+				* i deal with the countable subadditivity only, because the proof of the finite subadditivity is the same but simpler
+				* if any set component of the summation have size infinite then the proposed comparison is true trivially; otherwise:
+				* the series of the sizes of the set-components is absolutely convergent; hence it can be rearranged arbitrarily
+				* let us fix an order of them
+					* sn : Nat -> Set
+				* take an arbitrary positive number e
+				* the size is an outer measure, hence we can choose arbitrarily tight coverings for each set-component:
+					* covering n := a covering c of (sn n) such that
+						* size c - size (sn n) < e * (power n (1 / 2))
+				* these bounds of the distances ["closenesses"] is decreasing exponentially, hence their sum is finite and arbitrarily small, hence
+				* (the sum of the sizes of the set-components) is arbitrarily close to (the sum of the sizes of the coverings)
+				* sum (sizes of the coverings) = size (the union of the coverings)
+					* by the definition of (size of covering)
+				* size (the union of the coverings) >= size (the union of the sets)
+					* as the union of these coverings is a covering of the union
+				* summary: 
+					* size (the union of the sets) - the sum of the sizes of the sets < <arbitrarily small positive number>
+					* which implies the <= relationship between them
+* "outerish measure"
+	\ id xwtushdgpcpdhxms
+	* other sources use the name "outer measure", but i think we should reserve that for the 'outer measure construction'
+	* the "measure" in the name is misleading because it may be not a real measure
+	* definition
+		* by "outerish measure" i mean a conjunction of properties:
+			* maps 0 to the empty set
+			* is monotone increasing
+			* is countably and finitely subadditive
+		* which are characteristic of set-functions constructed with
+			* the 'outer' method
+				\ links-to internal iasieoscekffzrko

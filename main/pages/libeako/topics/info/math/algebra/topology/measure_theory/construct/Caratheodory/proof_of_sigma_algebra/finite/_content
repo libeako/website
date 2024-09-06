@@ -1,0 +1,46 @@
+\ id luvoknsoorgcdeof
+* the main structure of the proof will be a branching on the number of sets whose union or intersection is the subject:
+* 0
+	* {} is measurable
+		* proof is trivial in the definition of Carathéodory measurability
+	* hence full [as complementer of {}] is measurable too
+* 1: trivial
+* 2
+	* take x, y arbitrary measurable sets, s arbitrary set
+	* i aim to prove
+		* m s = m (intersect s (intersect x y)) + m (intersect s (complement (intersect x y)))
+	* from the measurability of x
+		* m s = m (intersect s x) + m (intersect s (complement x))
+	* from the measurability of y
+		* m (intersect s x) = m (intersect (intersect s x) y) + m (intersect (intersect s x) (complement y))
+			* (intersect s x) is used as the test set in the Caratheodory measurability
+	* starting from the first:
+	* m s = m (intersect s x) + m (intersect s (complement x))
+	* =
+		* using the second
+	* m (intersect (intersect s x) y) + m (intersect (intersect s x) (complement y)) + m (intersect s (complement x))
+	* =
+		* implied by the associativity of 'intersect'
+	* m (intersect s (intersect x y)) + m (intersect s (intersect x (complement y))) + m (intersect s (complement x))
+	* >=
+		* implied by subadditivity of m
+			* implied by (m is outerish)
+	* m (intersect s (intersect x y)) + m (union (intersect s (intersect x (complement y))) (intersect s (complement x)))
+	* =
+		* implied by DeMorgan set-equality
+	* m (intersect s (intersect x y)) + m (intersect s (union (intersect x (complement y)) (complement x)))
+	* =
+		* implied by DeMorgan set-equality
+	* m (intersect s (intersect x y)) + m (intersect s (intersect (union x (complement x)) (union (complement y) (complement x))))
+	* =
+		* union x (complement x) = full
+	* m (intersect s (intersect x y)) + m (intersect s (intersect full (union (complement y) (complement x))))
+	* =
+		* intersect full = id
+	* =
+	* m (intersect s (intersect x y)) + m (intersect s (union (complement y) (complement x)))
+	* =
+		* union of complements is complement of intersection
+	* m (intersect s (intersect x y)) + m (intersect s (complement (intersect x y)))
+* (> 2) and finite
+	* by natural induction on case '2'
