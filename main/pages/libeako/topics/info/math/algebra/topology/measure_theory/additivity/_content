@@ -1,0 +1,29 @@
+\ id xdxhjypyhatqrhiq
+* proposition
+	* if
+		* m is outerish measure
+		* m empty = 0
+	* then union of countable Carathéodory measurable sets is additive
+* the main proof structure is branching on the number of input measerable set to union
+	* 0: by supposition of the proposition
+	* 1: trivial
+	* 2
+		\ links-to internal wuukonougaixhfrc
+	* > 2: by natural induction
+	* countable
+		* take
+			* s : Set
+			* xs : Nat -> Set
+				* all measurable
+		* i aim to prove
+			* m (intersect s (union xs)) >= sum (fun n -> m (intersect s (xs n)))
+				* the other direction is implied by the sub-additivity of m being outerish
+			* forall (n : Nat)
+				* m (intersect s (union xs))
+				* >=
+					* implied by monotonicity of outerish measure
+				* m (intersect s (union (till n) xs))
+				* =
+					* implied by the finite version of this theorem
+				* sum (till n) (fun n -> m (intersect s (xs n)))
+			* hence it is also true for the limit

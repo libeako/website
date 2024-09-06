@@ -1,0 +1,31 @@
+\ id lvhilqtghqqjffha
+* almost everywhere equal measurable functions squeeze function between them to be measurable in complete measure space
+* proposition
+	* if
+		* (S, M, m) complete measure space
+		* fl, fm, fh : M -> Extended Real
+			* forall x : M. fl x <= fm x <= fh x
+			* fl, fh are measurable
+			* (fl = fh) almost everywhere
+	* then
+		* fm is measurable
+* proof
+	* take arbitrary (l : Extended Real)
+	* dom f := lift (inverse f) [-infinity .. l)
+	* we need to prove
+		* dom fm is measurable
+	* we know
+		* dom fl is measurable
+		* dom fh is measurable
+	* from ((fl = fh) almost everywhere)
+		* exists co, el, eh subsets of S
+			* co is measurable
+			* dom fl = union co el
+			* dom fh = union co eh
+			* m el = 0
+			* m eh = 0
+	* from (forall x : M. fl x <= fm x <= fh x)
+		* dom fl <= dom fm <= dom fh
+	* hence (exists em. el <= em <= eh. dom fm = union co em)
+	* from (em <= eh): m em = 0
+	* from (M is complete): m is measurable

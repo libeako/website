@@ -1,0 +1,16 @@
+\ id wuukonougaixhfrc
+* union of 2 measurable disjoint sets with intersection is additive
+	* proposition
+		* if
+			* x y : Set
+				* m-measurable and disjoint
+			* s : Set
+		* then
+			* m (intersect s (union x y)) = m (intersect s x) + m (intersect s y)
+	* proof
+		* m (intersect s (union x y))
+		* =
+			* implied by x being measurable
+		* m (intersect (intersect s (union x y)) x) + m (intersect (intersect s (union x y)) (complementer x))
+		* =
+		* m (intersect s x) + m (intersect s y)
