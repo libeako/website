@@ -1,0 +1,19 @@
+\ id ikafyohfuoekbmgs
+* meaning
+	* let
+		* i 1 : = {interval [0, 1]}
+		* i (n + 1) := the first and last third of all the intervals in (i n)
+	* the intersection of all i
+* legacy
+	* was perhaps really discovered by Henry John Stephen Smith
+* is closed
+	* as it is intersection of closed sets
+* has no isolated point
+	* easy to prove
+* has continuum number of points
+	* proof
+		* the points of it are those that (are in [0, 1]) and (in a 3-ary digit system lack digit 1)
+		* hence they are in bijection with the the ones that (are in [0, 1]) and (in a 2-ary digit system can be any)
+		* thus a bijection exist between the Cantor set and interval [0, 1]
+* the size is zero
+	* as it gets to its 2/3 at every iteration
