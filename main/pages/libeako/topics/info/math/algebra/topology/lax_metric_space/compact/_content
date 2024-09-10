@@ -51,7 +51,7 @@
 			* exists e > 0. forall d > 0. exist points x y. (distance (x, y) < d) and (distance (f x, f y) > e)
 			* take an infinite sequence of distances converging to zero; according to these distances create an infinite sequence of pairs such that the pairs violate uniform continuity, their first component are closer to each other than the current distance that they are mapped to and the function outputs there are further from each other than e
 			* compactness => this sequence has subsequence that converges, simultanously in both component of the pairs
-			* the distnace between the component of each pair convreges to zero, hence the 2 components converge to the same limit; let "l" mean this limit
+			* the distance between the component of each pair converges to zero, hence the 2 components converge to the same limit; let "l" mean this limit
 			* the function is continuous => 
 				* exists d. 
 					* forall point x.
