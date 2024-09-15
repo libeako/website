@@ -1,0 +1,20 @@
+\ id ymavqgcgzgwxhytv
+* proposition
+	* if
+		* 0 < t < the radius of convergence
+		* the 'inner sphere' is the center sphere with radius t
+	* then the power series is uniformly convergent on the inner sphere
+* proof
+	* exists a point b (inside the sphere of convergence) and (outside of the inner sphere)
+	* i will show a bound for the norms of the tails of the series that (does not depend on the position in the domain) and (converges to zero)
+	* forall part of the series. forall x inside the inner sphere
+		* the norm of the sum of the part at x
+		* <=
+			* because of the triangular inequality of the norm
+		* the sum of the norms of the part at x
+		* <=
+		* the sum of the norms of the part at b
+	* hence this latest expression is a valid bound
+	* its value does not depend on the position in the domain
+		* because it is fixed to b
+	* this value converges to zero, because the series is absolutely convergent at b

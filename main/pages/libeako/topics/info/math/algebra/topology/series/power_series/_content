@@ -7,57 +7,27 @@
 	* coefficient : Nat -> F
 * means the series
 	* fun (x : V) -> series (fun n -> coefficient n * (power n (x - c)))
+* the center of the series can be assumed to be 0, usually in proofs, without loss of generality
+	* i also may do so without further note
+* uniform convergence
+	\ links-to internal ymavqgcgzgwxhytv
 * special case
 	* "geometric series"
 		* definition
 			* coefficients are all 1
 			* c = 0
-		* is convergent iff (norm x < 1), where norm is multiplicative
+	* if norm is multiplicative
+		* is absolutely convergent iff (norm x < 1), otherwise is divergent
 			\ id uzlvgovkmxcpwzjn
 			* proof
-				* if norm x >= 1 then is divergent, obviously
-				* if norm x < 1 then
-					* the partial sums of geometric series are
-						* fun n x -> (1 - power n x) / (1 - x)
-						* see formula
-							\ links-to internal kmpydpduqwlgygzj
-					* this converges to (1 / (1 - x)) as n converges to infinity
-* the set of values ["x"] where the power series is convergent is the "sphere of convergence"
-	* the norm is multiplicative => this set is really a sphere
-		* proof
-			* let g be in the set of convergence
-			* then it is enough to prove
-				* forall s. (norm (s - c) < norm (g - c)) => s is in the set of convergence
-			* the following is this proof
-			* convergent series is bounded
-			* hence {forall n in Nat+. (norm ((coeff n) * power n (g - c)))} is bounded; let us name one bound with b
-			* r := ((s - c) / (g - c))
-			* norm r < 1
-			* we here study the convergence of
-				* series (fun n -> norm (coeff n * power n (s - c)))
-			* s - c = r * (g - c)
-			* norm (coeff n * power n (s - c)) =
-			* norm (coeff n * power n (r * (g - c))) =
-				* move r out
-			* norm (coeff n * power n (g - c)) * norm (power n r) <=
-			* b * norm (power n r)
-			* (flip power r) is the geometric sequence, whose series is convergent iff (norm r < 1) and the norm is multiplicative
-				* these conditions are fulfilled here
-		* if (fun n -> norm (coeff (n + 1) / coeff n)) converges [perhaps to an infinity]
-			* proposition
-				* let the limit of this sequence be l
-				* then the radius of convergence is (1 / l)
-			* proof is by application of the
-				* ratio test
-					\ links-to internal dhfgjhunmdorydak
-		* Cauchy-Hadamard theorem
-			* proposition
-				* l := lim-sup (lift2 power (1 /) (coeff >>> norm))
-					* if exists
-				* then the radius of convergence is (1 / l)
-			* proof is by application of the
-				* root test
-					\ links-to internal rxmbghycvgeishha
+				* the partial sums of geometric series are
+					* fun n x -> (1 - power n x) / (1 - x)
+					* see formula
+						\ links-to internal kmpydpduqwlgygzj
+					* if norm x < 1 then this converges to (1 / (1 - x)) as n converges to infinity
+					* if norm x >= 1 then this is divergent, as is not Cauchy
+* the set of values where the power series is convergent is the "sphere of convergence"
+	\ links-to internal jdkplalllvayissd
 * over factorial
 	\ id obqjeeuatqmiyezv
 	* where (coeff n = 1 / factorial n)
