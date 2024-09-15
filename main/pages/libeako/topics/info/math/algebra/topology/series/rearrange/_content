@@ -1,0 +1,31 @@
+\ id dnnlqbvnkwebmwrn
+* associativity does not necessarily extend to infinite number of arguments
+	* the binary (+) is associative, that is a requirement for the interpretation of 'series'; but a series is an (+) with infinite arguments
+	* example
+		* 1 - 1 + 1 - 1 + 1 ...
+		* (1 - 1) + (1 - 1) + (1 - 1) ... = 0
+		* 1 + (- 1 + 1) + (- 1 + 1) + ... = 1 + 0 = 1
+* a series s is 'absolutely convergent' iff series (lift norm s) is convergent
+	\ id vfgdmpmfxctsjljq
+	* a better name would probably be 'convergenence normedly'
+	* (absolutely convergent => convergent) <=> space is complete
+		\ links-to internal onuejpwwcxqlfcxp
+	* absolute convergent series converges to the same limit with any order
+		* proof
+			* take 2 arbitrary orders
+			* take 2 big head sections of them, so big that all the head sections of the remaining tail sections are infinitesimally small, absolutely
+			* take the union of these head sections
+				* this must be infinitesimally close to both head sections, hence those head sections must be infinitesimally close together
+	* uncountable sum
+		* the sum of uncountably infinite number of positive numbers can be defined as the supremums of the sums of all finite subsets
+			* we can extend this definition to negative numbers too, by separating the positive and negative elements of the set and processing them parallelly
+		* Tonelli's theorem
+			* proposition
+				* if
+					* f : T1 * T2 -> ExtendedReal+
+				* then
+					* sum f = sum (fun x1 -> sum (fun x2 -> f (x1, x2)))
+			* proof is easy
+	* the components of an absolute convergent series can be distributed into countable number of series - the sum of those series will be the same
+		* proof
+			* take out almost all head elements from the big series; what remains is infinitesimally small, even absolutely; hence they distributed into the small serieses do not change much those either

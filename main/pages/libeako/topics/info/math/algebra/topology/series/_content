@@ -8,37 +8,8 @@
 	* the 'front-sums' function transforms a sequence into another sequence, into the folding of the corresponding beginning of the input sequence, into the sequence of the frontal partial sums
 	* i may use 'series e' as the series with the components of the sequence e but interpreted as a sequence
 * the convergence and the limit of a series is the same as of the sequence of its frontal sums
-* rearrange
-	* associativity does not necessarily extend to infinite arguments
-		* the binary (+) is associative, that is a requirement for the interpretation of 'series'; but a series is an (+) with infinite arguments
-		* example
-			* 1 - 1 + 1 - 1 + 1 ...
-			* (1 - 1) + (1 - 1) + (1 - 1) ... = 0
-			* 1 + (- 1 + 1) + (- 1 + 1) + ... = 1 + 0 = 1
-	* "unconditional convergence"
-		* when all orderings of the series converges and to the same limit
-		* a series s is 'absolutely convergent' iff series (lift norm s) is convergent
-			* a better name would probably be 'convergenence normedly'
-			* (absolutely convergent => convergent) <=> space is complete
-				\ links-to internal onuejpwwcxqlfcxp
-			* absolute convergent series converges to the same limit with any order
-				* proof
-					* take 2 arbitrary orders
-					* take 2 big head sections of them, so big that all the head sections of the remaining tail sections are infinitesimally small, absolutely
-					* take the union of these head sections
-						* this must be infinitesimally close to both head sections, hence those head sections must be infinitesimally close together
-			* uncountable sum
-				* the sum of uncountably infinite number of positive numbers can be defined as the supremums of the sums of all finite subsets
-					* we can extend this definition to negative numbers too, by separating the positive and negative elements of the set and processing them parallelly
-				* Tonelli's theorem
-					* proposition
-						* if
-							* f : T1 * T2 -> ExtendedReal+
-						* then
-							* sum f = sum (fun x1 -> sum (fun x2 -> f (x1, x2)))
-					* proof is easy
-	* "conditional convergence"
-		* when the series is convergent but not unconditionally convergent
+* rearrange [absolute convergence]
+	\ links-to internal dnnlqbvnkwebmwrn
 * the Cauchy product of 2 serieses is a series with components that are the diagonals of the input serieses as laid out as 2 dimensional grid
 	* if the input serieses are absolutely convergent then the Cauchy product is absolutely convergent
 		* proof: it is monotone increasing and upper-bound by the product of the limits of the input serieses
