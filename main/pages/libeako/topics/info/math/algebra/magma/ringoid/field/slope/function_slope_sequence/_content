@@ -1,0 +1,46 @@
+\ id aanwugzozbngpuyw
+* proposition
+	* if
+		* fn : Nat -> Real -> Real
+		* forall n. (fn n) has continuous slope
+		* fn uniformly converges to f
+		* (fun n -> fn n >>> slope) uniformly converges to fs
+	* then (fs = slope f)
+* proof
+	* this builds on
+		* the mean value theorem
+			\ links-to internal fspresemhcnedkhm
+	* we prove: forall d. (norm (slope f d - fs d)) = 0
+	* norm (slope f d - fs d)
+	* =
+		* by definition of slope
+	* norm (limit (at x = d) ((f x - f d) / (x - d)) - fs d)
+	* =
+		* by using  uniform convergence of (fn n) to f as n converges to infinity
+			* uniformity is needed because the functions are applied to 2 different value [{x, d}]
+	* norm (limit (at x = d) (limit (at n = infinity) ((fn n x - fn n d) / (x - d)) - fs d))
+	* =
+		* by introducing (k n x) (in the interval from x to d)
+			* according to the mean value theorem
+			* (fn n x - fn n d) / (x - d) = slope (fn n) (k n x)
+	* norm (limit (at x = d) (limit (at n = infinity) (slope (fn n) (k n x)) - fs d))
+	* =
+		* by moving (fs d) into the limit
+	* norm (limit (at x = d) (limit (at n = infinity) (slope (fn n) (k n x) - fs d)))
+	* =
+		* by adding 0
+	* norm (limit (at x = d) (limit (at n = infinity) (slope (fn n) (k n x) - fs (k n x) + fs (k n x) - fs d)))
+	* =
+		* by moving a (+) out of a limit
+	* norm (limit (at x = d) (limit (at n = infinity) (slope (fn n) (k n x) - fs (k n x)) + limit (at n = infinity) (fs (k n x) - fs d)))
+	* =
+		* limit (at n = infinity) (slope (fn n) (k n x) - fs (k n x)) = 0
+			* implied by the uniform convergence of (slope (fn n)) to fs as n converges to infinity
+	* norm (limit (at x = d) (0 + limit (at n = infinity) (fs (k n x) - fs d)))
+	* =
+		* by deleting 0
+	* norm (limit (at x = d) (limit (at n = infinity) (fs (k n x) - fs d)))
+	* =
+		* implied by the continuity of fs
+			* continuity of fs is implied by being the uniform limit of continuous functions
+	* 0
