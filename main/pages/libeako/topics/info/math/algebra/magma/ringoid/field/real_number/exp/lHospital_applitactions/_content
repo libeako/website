@@ -1,0 +1,81 @@
+\ id zckslbogjwjppjrc
+* this builds on
+	* the lHospoital theorem
+		\ links-to internal xcibrzqtmarewtek
+* a > 0 => limit at +infinty (ln / power a) = 0
+	* proof
+		* limit at +infinty (ln / power a)
+		* =
+			* by application of l'Hospital theorem
+		* limit at +infinty ((1 /) / a * power (a-1))
+		* =
+		* limit at +infinty (1 / (a * power a)) = 0
+* limit at +infinity (exp / power a) = +infinity
+	* proof
+		* a <= 0 => trivial; otherwise:
+		* limit at +infinity (exp / power a) =
+		* limit at +infinity (power a (((/ a) >>> exp) / id))
+		* = [exchange positions of (power a) and limit]
+		* power a (limit at +infinity (((/ a) >>> exp) / id))
+		* =
+			* by application of l'Hospital theorem
+		* power a (limit at +infinity (((/ a) >>> exp) / a)) =
+		* power a +infinity
+* limit at 0 (id * ln) = 0
+	* proof
+		* limit at 0 (id * ln) = limit at 0 (ln / (1 /))
+		* =
+			* by application of l'Hospital theorem
+		* limit at 0 ((1 /) / (-1 / power 2)) = limit at 0 negate = 0
+* limit at 0 (1 / id - 1 / sin) = 0
+	* proof
+		* limit at 0 (1 / id - 1 / sin) =
+		* limit at 0 ((sin - id) / (id * sin)) =
+		* =
+			* by application of l'Hospital theorem
+		* limit at 0 ((cos - 1) / (id * cos + sin))
+		* =
+			* by application of l'Hospital theorem
+		* limit at 0 ((sin >>> negate) / (id * (sin >>> negate) + cos + cos)) = (0 / 1) = 0
+* limit at 1 (1 / ln - 1 / (- 1)) = 1 / 2
+	* proof
+		* limit at 1 (1 / ln - 1 / (- 1)) = limit at 1 ((id - 1 - ln) / (ln * (- 1)))
+		* =
+			* by application of l'Hospital theorem
+		* limit at 1 ((1 - 1 / id) / (ln + (1 / id) * (- 1)))
+		* =
+			* by application of l'Hospital theorem
+		* limit at 1 ((1 / power 2) / (1 / id + (1 / id) + (-1 / power 2) * (- 1))) = 1 / 2
+* limit at 0 (power x x) = 1
+	* proof
+		* limit at 0 (fun x -> power x x) =
+		* limit at 0 (fun x -> exp (x * ln x)) =
+		* exp (limit at 0 (fun x -> x * ln x)) =
+		* exp (limit at 0 (fun x -> ln x / (1 / x))) =
+		* =
+			* by application of l'Hospital theorem
+		* exp (limit at 0 (fun x -> (1 / x) / (negate 1 / power 2 x))) =
+		* exp (limit at 0 (fun x -> 1 / (negate 1 / x))) =
+		* exp (limit at 0 (fun x -> negate 1 / (1 / x))) =
+		* exp (limit at 0 (fun x -> negate x)) = exp 0 = 1
+* limit f = limit g = 0 => limit (fun x -> power (1 / g x) (1 + f x)) = ...
+	* proof
+		* limit (fun x -> power (1 / g x) (1 + f x)) =
+		* limit (fun x -> exp ((1 / g x) * ln (1 + f x))) =
+		* exp (limit (fun x -> (1 / g x) * ln (1 + f x))) =
+		* exp (limit (fun x -> ln (1 + f x) / (g x))) =
+		* =
+			* by application of l'Hospital theorem
+				* l'Hospital is applicable as
+					* limit f = limit g = 0
+		* exp (limit (fun x -> (slope f x / (1 + f x)) / slope g x)) =
+		* =
+			* as f converges to 0
+		* exp (limit (fun x -> (slope f x / (1 + 0)) / slope g x)) =
+		* exp (limit (fun x -> slope f x / slope g x)) =
+	* special case
+		* when
+			* f = id
+			* g = id
+		* limit (at 0) (fun x -> power (1 / x) (1 + x)) = exp 1
+		* conversely: limit (at +infinity) (fun x -> power x (1 + 1 / x)) = 1 / exp 1

@@ -16,17 +16,17 @@
 * proof
 	* will prove only (lim = limit-high a), the other side is symmetrical
 	* the frame of the proof is
-		* if (l < + infinity) then prove
+		* if (l < +infinity) then prove
 			* forall ll > l. exists c
 				* a < c < b
 				* forall x. (a < x < c) => f x / g x < ll
-		* dually for (l > - infinity)
+		* dually for (l > -infinity)
 		* note
-			* the conjunction of these 2 proposition squeezes (f/g) into arbitrarily narrow band around L, which implies that (f/g) converges to l
-			* this works in the case too when l is an infinity
-		* it is enough to prove the (L < + infinity) case, because the proof of its dual is the dual of the proof
+			* the conjunction of these 2 proposition squeezes (f/g) into arbitrarily narrow band around l, which implies that (f/g) converges to l
+			* this works also in the case when l is an infinity
+		* it is enough to prove the (l < +infinity) case, because the proof of its dual is the dual of the proof
 	* let lll be in (l, ll)
-	* exists cc in (a, c). forall x in (a, d). (slope f x / slope g x) < lll
+	* exists cc in (a, c). forall x in (a, cc). (slope f x / slope g x) < lll
 	* (g x - g y) may not be 0, because (slope g) is never 0
 	* hence we can apply the mean value theorem
 		* exists s : power 2 (a, cc) -> Real
@@ -51,3 +51,10 @@
 		* g converges to an infinity, hence (fun x -> ((lll * g y + f y) / g x)) converges to lll
 		* hence exists cccc in (a, ccc). x < cccc => f x / g x < lll + (lll + ll) / 2 < ll
 * though named after L'Hôpital', Bernoulli knew it sooner
+* transform problems to l'Hospital form
+	* f * g = f / (1 / g)
+	* f - g = (1 / g - 1 / f) / (1 / f * g)
+	* limit (fun x -> power (g x) (f x)) =
+		* limit (fun x -> exp (ln (f x) * (g x))) = 
+		* exp (limit (fun x -> ln (f x) * (g x))) =
+		* exp (limit (fun x -> ln (f x) / (1 / (g x))))
