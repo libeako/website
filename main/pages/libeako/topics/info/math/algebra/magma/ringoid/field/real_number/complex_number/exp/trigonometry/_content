@@ -1,0 +1,39 @@
+\ id eiseowogoygklvil
+* definition
+	* trigonometric c x :=
+		* with
+			* names
+				* m := 2 * n + c
+			* sum (series-from 0 (fun n -> power m x * power n (-1) / factorial m))
+	* cos x := trigonometric 0 x
+	* sin x := trigonometric 1 x
+	* tan x := sin x / cos x
+	* cot x := cos x / sin x
+* cos (negate x) = cos x
+* sin (negate x) = negate (sin x)
+* tan (negate x) = negate (tan x)
+* cot (negate x) = negate (cot x)
+* relationship with exp
+	* exp (         i * x) = cos x + i * sin x
+	* exp (negate (i * x)) = cos x - i * sin x
+	* hence
+		* cos x = (exp (i * x) + exp (negate i * x)) / 2
+		* sin x = (exp (i * x) - exp (negate i * x)) / (2 * i)
+		* square (cos x) + square (sin x) = 1
+			* proof
+				* square (cos x) + square (sin x) = (cos x + i * sin x) * (cos x - i * sin x)
+				* exp (i * x) * exp(negate (i * x)) = exp (i * x - i * x) = exp 0 = 1
+		* cos (x + y) = cos x * cos y - sin x * sin y
+			* proof
+				* 2 * cos (x + y) = exp (i * (x + y)) + exp (negate i * (x + y)) =
+				* exp (i * x) * exp (i * y) + exp (negate i * x) * exp (negate i * y) =
+				* (cos x + i * sin x) * (cos y + i * sin y) + (cos x - i * sin x) * (cos y - i * sin y) =
+				* 2 * (cos x * cos y - sin x * sin y)
+		* sin (x + y) = cos x * sin y + sin x * cos y
+			* proof
+				* 2 * i * sin (x + y) = exp (i * (x + y)) - exp (negate i * (x + y)) =
+				* exp (i * x) * exp (i * y) - exp (negate i * x) * exp (negate i * y) =
+				* (cos x + i * sin x) * (cos y + i * sin y) - (cos x - i * sin x) * (cos y - i * sin y) =
+				* 2 * i * (cos x * sin y + sin x * cos y)
+		* slope cos = negate sin
+		* slope sin = cos
