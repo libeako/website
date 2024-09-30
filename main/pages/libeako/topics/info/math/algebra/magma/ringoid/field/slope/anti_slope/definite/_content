@@ -2,7 +2,7 @@
 * "improper integral"
 	* meaning: limit of proper integrals
 	* name: instead of "proper" and "improper" i would like "raw" and "extended"
-* representations
+* Riemann-Darboux representations
 	* division
 		\ links-to internal ipkcqkocdghpyiwo
 	* Riemann
@@ -23,3 +23,5 @@
 		* the rest is trivial
 * integral is anti-slope
 	\ links-to internal eidifgibmemuavvz
+* Lebesgue integration
+	\ links-to internal giuumbfatzrxmmul
