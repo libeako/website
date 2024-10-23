@@ -1,0 +1,32 @@
+\ id zvltomdkctnzolbm
+* the stored sound data must get converted from discrete to analog representation and get amplified
+	* "DAC" is short form of "discrete to analog conversion"
+		* most people say "digital" intstead of "discrete", because they think that "discrete" is discrete only in the time domain and not in the amplitude domain, which i think is false; hence i think "discrete" is the correct word here; most people would disagree with me
+	* "amp" is short form of "amplifier"
+* DACs and amps are often bundled together into a common product but sometimes [rather with the more expensive ones] they are distributed separately
+* most personal computers contain a DAC+amp
+	* it is either integrated into the motherboard or is a discrete card
+	* the inside of the computer contains some electromagnetic noise; this may flow into the DAC+amp; this is a big reason why many people want an external DAC+amp
+		* for example the integrated DAC+amp in my cheap motherboard outputs slight hiss-like noise; slight enough that non-trained people would not notice it
+* amps matter less than headphones
+* DACs matter less than amps
+	* what matters in DACs is probably not the DAC itself but the  amplifier built into them; yes, DACs themselves may contain a small amplifier, which amplifies the analog output of the DAC to the line level
+* other sources
+	* The Headphone Show: What is a DAC and why do you need one?
+		\ links-to external https://youtu.be/HOvubnenXyo?si=ETl-vSqG-ktL1dxZ
+	* The Headphone Show: Audio amp classes as fast as possible!
+		\ links-to external https://youtu.be/d8ug0NbaIds?si=3wHGgrDcLxQAX29o
+* tube amp
+	\ links-to internal xpvehvlxeyfegzec
+* amp reviews
+	\ links-to internal zdbijnmknsilyzvd
+* Julian Krause: Built-In Audio vs USB DAC / Audio Interface
+	\ links-to external https://youtu.be/CZOZZclz4gY
+* my experience
+	* i had these amplifiers till now:
+		* Realtek® ALC887
+			* this is integrated onto my cheap motherboard
+		* Behringer UMC 22
+			* this is an "audio interface, mainly for input amplificaation, the headphone output amplification is only an addition for direct monitoring of the input, not intended for high quality music enjoyment
+		* FiiO E10K Olympus 2
+			* this is my 1st and only dedicated amp for music enjoyment
