@@ -2,13 +2,14 @@
 * name
 	* i use the name "lax metric" or "pre-metric" but others mostly use "pseudo-metric"; i refuse to use the "pseudo" prefix because it means 'false', which is not appropriate for this concept; this concept is not a false version of the real metric concept, but only a relaxation of its conditions so that the resultant condition-set is even more elegant in my opinion
 * definition
-	* (S : Set, d : (S * S) -> R) is "lax metric" space
+	* (S : Set, d : (S * S) -> Real) is "lax metric" space
 	* iff forall x y z in S
 		* d (x, x) = 0
 		* d (x, y) = d (y, x)
 		* d (x, y) + d (y, z) >= d (x, z)
-* "d" or "dist" or "distance" is the "metric"
-* elements of S are said to be the "points" of the space
+* "d" or "dist" or "distance" is the 'metric'
+* a "metric space" is a lax metric space where
+	* (d (x, y) = 0) => (x = 0)
 * reflexive, symmetric, transitive
 	* the defining properties of the metric resemble these properties of binary relations; but the metric is a binary function, not a relation
 	* but we can derive a relation from it:
@@ -23,21 +24,21 @@
 					* dually:
 					* d (x, y) >= d (c, x) - d (c, y)
 					* merged:
-					* d (x, y) >= abs (d (c, x) - d (c, y))
+					* d (x, y) >= norm (d (c, x) - d (c, y))
 			* r is an equivalence relation
 	* the r-equivalent points are not distinguishable via the metric
 		* proposition
-			* suppose
+			* if
 				* d (x, y) = 0
-			* then forall c.
-				* d (c, x) = d (c, y)
+			* then
+				* forall c
+					* d (c, x) = d (c, y)
 		* proof
 			* by transitivity:
 			* d (c, x) + d (x, y) >= d (c, y)
 			* by eliminating d (x, y), which is 0
 			* d (c, x) >= d (c, y)
 			* same way for the other comparison direction
-			* hence the 2 sides are equal
 	* hence 
 		* the name "indiscernible" is justified instead of r
 		* the r-quotient lax metric space exists and in it the distance between non-equal points is not zero [hence it is a metric space]
@@ -56,33 +57,32 @@
 * ball
 	* a "ball" with center c and pozitive radius r is 
 		* the points p. c (d (c, p)) r
-		* where c is a comparison: either strictly smaller or (smaller or equal)
+		* where c is a comparison: either (strictly smaller) or (smaller or equal)
 		* accordingly the ball is said to be "open" or "closed"
 		* notation: ball c r
-	* lax metric space induces a topology
+	* lax metric space induces topology
 		* open (s : Set) := forall point p in s. exists open-ball with center p and contained by s
 		* the set of subsets that are open according to this definition form a topology
 			* proof is trivial, because this property is preserved over unions and finite intersections
 		* forall point p in an open ball b: exists an open ball around p intirely inside b
 			* proof is trivial, using the transitivity property of the metric
-		* hence the open balls are open sets in the topology
-		* the closed balls are also closed in the topology
+		* hence the open balls are open topologically
+		* the closed balls are also closed topologically
 			* proof
 				* enough to prove that the complementer of any closed ball b is open
-				* the complementer points are all at a more than positive distance from the ball, hence some positive sized open ball contains them but not any content of b; hence all the complementer points are covered by open balls, not intersecting b, the union of the small open balls (which is the complementer of b) is open
+				* the complementer points are all at a positive distance from the ball, hence some positive sized open ball contains them but not any content of b; hence all the complementer points are covered by open balls, not intersecting b, the union of the small open balls (which is the complementer of b) is open
 	* a set n is neighborhood of point p iff exists positive e such that (open-ball e p ) is contained by n
 		* proof is trivial
 	* a set is open iff is union of open balls
 		* proof is trivial
-* the empty and full sets are clopen
-	* proof is trivial
 * a "net" is a set of points, the proximities of which cover the whole space
 	* a 'd-net' is a set of points P so that the (union (lift (ball d) P)) covers the whole space
-* a subset of a metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
+* a subset of a lax metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
 	* the space is bounded iff its entirety as a subset is bounded
-	* when the subset is non-empty then this is equivalent to
-		* exists point c. exists real number K. forall point p. d (p, c) <= K
-		* proof is trivial
+	* when the subset is non-empty then
+		* this is equivalent to
+			* exists (c : Point)  (K : Real). forall (p : Point). d (p, c) <= K
+			* the proof is trivial
 	* a space is "totally bounded" if it is covered by a finite d-net
 		* totally bounded => bounded; proof is trivial
 * Cauchy sequence

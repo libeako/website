@@ -4,20 +4,20 @@
 * let the name of the function be f and the name of the point be x, if not otherwise stated
 * these definitions are equivalent
 	* neighborhood inclusion
-		* forall neighbood of (f x) No: exist neighborhood of x Ni: f Ni <= No
+		* forall neighbood of (f x) No: exist neighborhood of x Ni: lift f Ni <= No
 		* this is the most intuitive definition and the general version of the definition often used in the scalar number fields
 	* open neighborhood inclusion
-		* same as 'neighborhood inclusion' but uses (open neighborhood) instead of neighborhood
+		* forall open neighbood of (f x) No: exist open neighborhood of x Ni: lift f Ni <= No
 		* proof of equivalence is trivial
 	* neighbohood's inverse image is neighborhood
-		* forall neighbohood of (f x) Ni: ((inverse f) Ni) is neighbohood of x
+		* forall neighbohood of (f x) No: (lift (inverse f) No) is neighbohood of x
 		* proof of equivalence with definition 'neighborhood inclusion' is trivial
 			* use these facts:
 				* the inverse image of a smaller set is smaller
 				* a set including a neighborhood is a neighborhood
 *  continuity is preserved by function composition
 	* proof is trivial
-* sequentially continuity
+* sequential continuity
 	* definition
 		* f is "sequentially continuous" at x iff
 			* forall sequence x. x converges to x' => (x >>> f) converges to f (x n)
@@ -26,3 +26,8 @@
 	* sequential continuity is preserved by function composition
 * a function is continuous at a point iff at that point its value is its limit
 	* proof is trivial
+* continuous everywhere <=> inverse images of all open sets are open sets
+	\ id yiqeabgwikibcabb
+	* proof
+		* <=: trivial
+		* =>: go through all the points of an arbitrary open set in the codomain
