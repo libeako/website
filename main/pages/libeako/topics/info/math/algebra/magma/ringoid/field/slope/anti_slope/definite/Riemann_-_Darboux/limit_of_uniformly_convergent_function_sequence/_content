@@ -1,0 +1,18 @@
+\ id hbtgxavwkkaxzref
+* proposition
+	* if
+		* f : Nat+ -> S -> Real
+			* all Riemann integrable
+			* uniformly convergent
+	* then
+		* integral (limit f) = limit (f >>> integral)
+* proof is trivial with
+	* lemma
+		* proposition
+			* if
+				* f, g : [a .. b] -> Real
+				* forall e : Real. e > 0 => forall x. norm (f x - g x) < e
+			* then
+				* forall partitioning of S. forall r in {riemann-sum-high, riemann-sum-low}
+					* norm (r f - r g ) < e * (b - a)
+		* proof is trivial

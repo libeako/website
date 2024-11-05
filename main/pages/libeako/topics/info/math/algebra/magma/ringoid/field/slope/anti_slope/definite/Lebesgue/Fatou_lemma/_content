@@ -1,0 +1,29 @@
+\ id ewcysgnuepqzmyyc
+* proposition
+	* if
+		* f : Nat+ -> S -> Extended Real
+			* all non-negative, measurable
+	* then
+		* integral (pointwise-liminf f) <= liminf (f >>> integral)
+* proof
+	* g n := pointwise-liminf ((+ (n - 1)) >>> f)
+	* g is monotone leniently increasing
+	* forall n. g n <= f n
+	* hence by
+		* pointwise-limit of g exists
+		* the monotone convergence theorem
+			* \ links-to internal odaoigvrimtqesfn
+		* integral (pointwise-limit g) = limit (g >>> integral)
+	*  integral (pointwise-liminf f)
+	* =
+		* liminf of sequence = supremum of infimums of tails of sequence
+	* integral (pointwise-supremum g)
+	* =
+		* g is monotone increasing
+	* integral (pointwise-limit g)
+	* =
+		* by the monotone convergence theorem
+	* limit (g >>> integral)
+	* <=
+		* g <= f
+	* limit (f >>> integral)
