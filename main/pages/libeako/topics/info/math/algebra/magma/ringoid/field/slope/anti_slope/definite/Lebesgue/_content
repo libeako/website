@@ -40,3 +40,8 @@
 * a non-negative function is "integrable" iff it is measurable and the integral is finite
 * Lebesgue integration subsumes Riemann integration
 	\ links-to internal tvtzyhjqszdumtrs
+* extending to negative function outputs
+	* a function is "integrable" iff it is measurable and the integrals of its positive and negative parts are finite
+		* the integral is defined as the difference between the integrals of the 2 parts
+	* a function is integrable iff its pointwise norm is integrable
+		* proof comprises of trivial parts
