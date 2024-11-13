@@ -17,7 +17,7 @@
 		* f = sum { for d : D. v d * m (p d) }
 	* a "step function" is a simple function with maximum 2 values
 * the Lebesgue integral of a simple function in standard form is as you expect
-	* null-sets do not contribute to the set, not even if the ouput of the integrated function is infinite
+	* null-sets do not contribute to the set, not even if the output of the integrated function is infinite
 		* this is the root of the (0 * infinite = 0) convention
 	* we can deviate from the standard form of the function to be integrated by dropping the condition that the output values are all distinct, we still get the same integral value
 		* this implies that the choice of the base partitioning does not matter either, as any 2 can be refined to a common one by taking the intersections
@@ -40,3 +40,8 @@
 * a non-negative function is "integrable" iff it is measurable and the integral is finite
 * Lebesgue integration subsumes Riemann integration
 	\ links-to internal tvtzyhjqszdumtrs
+* extending to negative function outputs
+	* a function is "integrable" iff it is measurable and the integrals of its positive and negative parts are finite
+		* the integral is defined as the difference between the integrals of the 2 parts
+	* a function is integrable iff its pointwise norm is integrable
+		* proof comprises of trivial parts
