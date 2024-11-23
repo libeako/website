@@ -1,0 +1,24 @@
+\ id xeohaciqjqiybuhk
+* Riemann-Darboux representations
+	* division
+		\ links-to internal ipkcqkocdghpyiwo
+	* Riemann
+		\ links-to internal ewegqxhylyycrfen
+	* Darboux
+		\ links-to internal jjhfelrffijxxwbo
+	* equivalence of the Riemann and Darboux representations
+		\ links-to internal ndyromovwzhwigwi
+* integral f (a, a) = 0
+* integral f (a, b) + integral f (b, c) = integral f (a, c)
+* integral (f >>> ( * k)) = k * integral f
+* integral (lift2 (+) f g) = integral f + integral g
+* (forall x. f x <= g x) => lift 2 (<) (integral f) (integral g)
+* continuity => integrability
+	* proof
+		* the domain being compact => continuity => uniform continuity
+			\ links-to internal ihhuehqaheenifdl
+		* the rest is trivial
+* integral is anti-slope
+	\ links-to internal eidifgibmemuavvz
+* limit and integration commute on uniformly convergent sequence of Riemann integrable functions
+	\ links-to internal hbtgxavwkkaxzref
