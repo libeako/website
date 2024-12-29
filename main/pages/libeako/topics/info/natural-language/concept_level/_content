@@ -1,0 +1,58 @@
+\ id ecegvitrtufytgnd
+* intro
+	* please say what you mean
+		* this is important
+		* it is not okay to have mistakes in expressing yourselve just because others also have the same mistakes and hence you are in harmony; being common and wise-spread makes a mistake much worse and is a good reason to object that mistake; be a hero, object mistakes that are stengthened by wide-spread habit, popularity
+* quantity unit
+	* "measurement unit" -> "quantity unit"
+		* a quantity type is not 'measured in a unit' but concrete quantities are 'expressed with' a unit
+		* the measurement is an act or a process, it obtains concrete quantities as information; once the quantity is known in some unit: it is also known in all other units of that quantity type; the conversion between units is just a simple multiplication; thus the measurement is not bound to a unit; units are for expressing concrete quantities
+			* whether those concrete quantities come from an earlier measurement or not
+				* they do not have to, they can be made up, like [for example] examples
+		* it is not the quantity type that is measured but concrete quantities
+	* quantity type, unit of quantity type
+		* they are distinct notions and neither of them is a special of the other; thus replacing one with the other is never valid
+		* unfortunately a lot of people has the bad habbit to use its unit instead of the quantity type
+		* here are the corrections in some common instances of mistakes of this type
+			* "milage" -> distance
+			* "tonnage" -> mass
+		* units are for expressing concrete quantitities; they are not good for anything else; thus the usages other than expressing concrete quantities are incorrect
+	* / unit quantity
+		* the word unit is erroneously said for the denominator
+		* suppose x, y are types of quantities; people often say that their ratio is "x / unit y"; why the "unit" in it?
+* "mean" -> "imply"
+	* "what does the outcome of the election mean for the automotive industry"?
+	* in the above example the word "mean" is incorrectly used; should be "imply" or "cause"
+	* only symbols can mean something
+* "electronic" -> "digital"
+	* they are distinct notions and neither of them is a special of the other; thus replacing one with the other is never valid
+	* unfortunately most people has the bad habit to use "electronic" when they mean "digital"
+		* for example "email" is a usually incorrect term
+			* because the underlying physical implementation
+				* is not intended to refer to
+				* is not even totally electronic
+					* a large part of current digital mailing is optical or magnetic
+* "{ left | right } hand side"
+	* "hand" is irrelevant here
+* a "telephone number" is not a number
+	* it is just an identifier
+	* a number expresses quantity
+	* it is only a tradition to use only digits in the identifier text
+	* hence please use "telephone identifier" or "tel id" for short instead of "telephone number"
+	* the story is the same with "car number plates"
+* "hard" -> "difficult"
+	* as you do not say "soft" instead of "easy" either
+* non-commutative infix binary functions - their symbol should indicate direction
+	\ links-to internal nxzlijntqwyqbotr
+* naming by writing convention is confusing
+	\ links-to internal lrqkxdxhiergjzbt
+* inertia of bad naming
+	\ links-to internal lzlbissatagvlidr
+* english
+	\ links-to internal psdnbveuovaulfvk
+* "model" -> "type"
+	* it became a habit, incorrectly, to say "model" instead of "type"
+		* examples
+			* Tesla Model Y
+				* in this name "type" should be instead of "model"
+				* model is just the files that are used only internally the firm to guide manufacturing, these files, the model tell the manufacturing deparments what exactly to manufacture; when you buy a car you 'buy a car with a type', or slightly distortedly you 'buy a type of car', but you surely do not buy a model, as you surely do not need and do not want a model, as you are not going to manufacture a car instance by it
