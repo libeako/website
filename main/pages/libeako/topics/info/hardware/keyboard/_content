@@ -1,0 +1,6 @@
+\ id suwvnfbjozjjiwif
+* key
+	* switch
+		* spring
+			* "weight" -> "stiffness"
+				* the weight of the spring is the gravitational force on the spring - it does not matter
