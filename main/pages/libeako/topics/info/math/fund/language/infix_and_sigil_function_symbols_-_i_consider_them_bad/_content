@@ -1,7 +1,7 @@
 \ id fjumpwympgxjnokk
 * naming
-	* by "ordinary function name": i mean things like "plus" "minus" "equal"
-	* by "special function name": i mean thing like "+" "-" "=="
+	* by "ordinary function name": i mean things like "plus", "minus", "equal"
+	* by "special function name": i mean thing like "+", "-", "=="
 		* most coders name these with "operator"
 			* i do not like the name "operator" because these things do not operate on their parameters any more or other way than the ordinarily named functions; the difference is only in the name syntax
 * i dislike special names because 2 causes: their infix syntax order, their special character content; both these hurt the uniformity, hence the ergonomics of the text
@@ -20,3 +20,25 @@
 	* heterogenous chains are rare and have precedence problems anyway
 	* for homogenous chains let the languages support a special syntax like "fold plus '[x y z]", where ' would mean that the list after it is special, is a list of arguments to the function before it and its application should be inlined
 		* this would eliminate the redundancy of "+" in "x + y + z", which smells like this is the right way
+* some concrete instances
+	* function application
+		* we should not have any infix name for basic function application. normal names like "apply_function" and "apply_argument" suffice and are better
+		* by syntax order
+			* argument, function
+				* it is usual to refer to the special infix name of this with "pipe operator"
+					* as some values were pushed through a pipe of functions
+					* usual name choice is "|>"
+						* i dislike this name choice; `|` to me feels like separation and function application feels to me rather like connection than separation; i would rather like something instead of `|` that visualizes a point, as it is intuitive for me to think about an argument as a point in the domain of the function
+				* this organization of code is bad practice, in my opinion
+					* in short: instead of writing `p |> x |> y |> z ` we should write `let f = x >>> y >>> z in f p`
+					* we should be leaning toward point-free coding; we should not be thinking in points and them flowing through a chain of functions
+					* Haskell tought me to love [monoidal] compositionality; we should be thinking in composable things and in their compositions; functions are composable; in the situations when we do need function application: we should do it in one single canonical way, which should be the basic juxtaposition
+			* function, argument
+				* it is common practice to use the special infix name for grouping, instead of round brackets
+					* this is possible because it has very low precednece
+					* this is a bad practice in my opinion
+						* this is a hack
+						* we have other methods to prevent the too many of brackets; if an expression contains too many brackets then it is ripe for a restructuring with introducing some names for its parts
+						* round brackets are awesome
+							* everyone knows and understands them
+							* they are much more readable than infix name precedences; they not only eliminate the need to do precedence memorization and calculation in our brain unconsciously but also provide a nice, immediately obvious visual boxing
