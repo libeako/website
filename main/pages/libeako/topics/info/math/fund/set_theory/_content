@@ -1,5 +1,8 @@
 \ id bdzbslajcgtwsrtp
 * in mathematics: reasoning about non-existent mathematical objects may lead to invalid judgements; hence it is necessary to know that a mathematical object exists before we use that object; the science field of existence is "ontology"
+* relationship name between set and subset
+	* a set is a "container" of its elements, but not a "container" of its subsets; hence a set does not "contain" its subsets
+	* i saw at many other writers that a set "includes" its subsets
 * ontology
 	* set theory is very good for ontology
 	* pure sets
