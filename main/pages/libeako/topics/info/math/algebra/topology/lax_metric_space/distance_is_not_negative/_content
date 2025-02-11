@@ -1,0 +1,9 @@
+\ id rgbsahrmlucxjjwp
+* proof
+	* 2 * d (x, y)
+	* =
+		* by symmetry
+	* d (x, y) + d (y, x)
+	* >=
+		* by triangle comparison
+	* d (x, x) = 0
