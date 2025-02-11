@@ -1,0 +1,23 @@
+\ id ftubbwasozvgllmw
+* (C, d-infinite) := the metric space of bounded continous real functions
+	\ links-to internal gjygcmzlozsrdrgg
+* proposition
+	* if
+		* (M, d) is a metric space
+	* then
+		* it has a completion 
+			* with other words: a metric space exists that contains a complete metric space that is isomorphic to (M, d)
+* proof
+	* g o m := curry d m - curry d o
+		* expresses how much further is a point from m than from o
+		* foreach (o : M)
+			* g o is injective
+			* foreach (m1 : M) (m2 : M)
+				* d (m1, m2)
+				* = 
+					* by triangular comparison
+				* norm-infinite (g o m1 - g o m2) = d-infinite (g o m1, g o m2)
+	* thus M is isomorphic to 
+		* a subset of (C, d-infinite)
+			* let its name be "MC"
+	* C is complete metric space, hence the closure of MC is also in C and is complete

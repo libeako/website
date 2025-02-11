@@ -1,0 +1,18 @@
+\ id hlqpwqlfcybwubmh
+* the 0-distance point-pairs are not distinguishable by the metric
+	* proposition
+		* if
+			* d (x, y) = 0
+		* then
+			* forall c
+				* d (c, x) = d (c, y)
+	* proof
+		* by triangle comparison:
+		* d (c, x) + d (x, y) >= d (c, y)
+		* by eliminating d (x, y), which is 0
+		* d (c, x) >= d (c, y)
+		* same way for the other comparison direction
+* indiscernable (x, y) := d (x, y) = 0
+	* is an equivalence relation
+		* proof is easy
+* implied by all of this: the indiscernable-quotient lax metric space exists and in it the distances between non-equal point-pairs are not zero

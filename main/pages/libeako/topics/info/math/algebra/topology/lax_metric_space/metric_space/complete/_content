@@ -1,8 +1,9 @@
 \ id vqprearscrrvxdzk
 * representations of completeness
 	* [C]: Cauchy => convergent
-	* [I]: forall (infinite nested sequence s of closed balls with radiuses converging to 0)
-		* the intersection of the elements of s is not empty
+	* [I]:
+		* forall (infinite nested sequence s of closed balls with radiuses converging to 0)
+			* the intersection of the elements of s is not empty
 * proof of equivalences
 	* C => I
 		* take an arbitrary sequence of balls as in I
@@ -17,5 +18,9 @@
 		* by assumption [I] the intersection is not empty
 		* it must consist of only 1 point, otherwise they could not all be contained by the small balls
 		* the taken Cauchy sequence converges to this single point; proof is easy
+* bounded continuous functions form a metric space
+	\ links-to internal gjygcmzlozsrdrgg
+* completion
+	\ links-to internal ftubbwasozvgllmw
 * the Euclidean space
 	\ links-to internal boijjcqmszcdutmq

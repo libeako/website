@@ -1,0 +1,37 @@
+\ id bwmxatzwwrqgygfa
+* proposition: 'compact' and 'sequentially compact' are equivalent
+* proof
+	* take arbitrary (S : Set)
+	* sequentially compact => compact
+		* let C be an open cover of S
+		* using
+			* the Lebesgue covering theorem
+				\ links-to internal iwfingcdiypxxeav
+		* let r be a Lebesgue radius of the covering
+		* using that
+			* sequentially compact set is totally bounded
+				\ links-to internal luiynasvgjfttrnw
+		* exists finite r-net that totally covers S
+			* let its centers be (c 1), (c 2), ... (c k)
+		* r is Lebesgue radius, hence
+			* forall (n in [1 .. k]). some element of C includes (open-ball r (c n))
+		* hence these finite number of elements of C are also a cover of S
+	* compact => sequentially compact
+		* take arbitrary x sequence in S; assume that it contains no subsequence converging to an element of S
+		* if any member of it occurs in it for infinite number than they form a convergent subsequent that we seek; otherwise:
+		* delete all the repetitions from the sequence, resulting in a subsequence of the original sequence; this new sequence will be proved to contain a subsequence that we seek; the name "x" will be continued to be used for this new, repetation-less sequence
+		* as-set x
+			* does not contain limit point
+			* hence it contains all its limit points
+			* hence it is closed
+			* hence its complementer is open
+		* forall (n : Nat+). exists (r > 0). (open-ball r (x n)) does not contain any other member of x
+			* otherwise that (x n) would be a limit point of the sequence which is not possible by assumption
+		* rather let "r" be such a sequence of radiuses
+		* union ({complement (as-set x)}, {for (n : Nat+). open-ball (r n) (x n)}) is an open cover of the space
+		* this open cover may not have a finite subcover, as then some of the members of x would not be covered; this is a contradiction
+* source
+	* 18.S190: Introduction to Metric Spaces
+		\ links-to external https://ocw.mit.edu/courses/18-s190-introduction-to-metric-spaces-january-iap-2023/mit18_s190iap23_lec4.pdf
+		* Lecturer: Paige Bright
+		* IAP 2023

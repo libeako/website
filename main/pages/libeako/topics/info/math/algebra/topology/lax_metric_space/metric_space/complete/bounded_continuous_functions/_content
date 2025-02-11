@@ -1,0 +1,12 @@
+\ id gjygcmzlozsrdrgg
+* proposition
+	* if
+		* M : Set
+		* F = { f : M -> Real | f is bounded and continuous }
+		* norm-infinite f = sup {foreach (x : M). norm (f x)}
+		* d-infinite (f1, f2) := norm-infinite (f1 x - f2 x)
+	* then
+		* (F, d-infinite) is a complete metric space
+* proof
+	* of (F, d-infinite) being metric space is easy
+	* of completeness is easy via the projections of F to individual points of M

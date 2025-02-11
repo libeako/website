@@ -1,0 +1,16 @@
+\ id bhvohpejqtlovwbf
+* generation method
+	* the open sets are the ones that are unions of open-balls
+	* this is a topology, proof of which is easy
+	* the open-balls are open sets in this topology, proof of which is trivial
+* neighborhood method
+	* open (s : Set) := forall point p in s. exists open-ball with center p and contained by s
+	* the set of subsets that are open according to this definition form a topology
+		* proof is trivial, because this property is preserved over unions and finite intersections
+	* forall point p in an open ball b: exists an open ball around p intirely inside b
+		* proof is trivial, using the transitivity property of the metric
+	* hence the open balls are open topologically
+* the closed balls are closed sets topologically
+	* proof
+		* enough to prove that the complementer of any closed ball b is open
+		* the complementer points are all at a positive distance from the ball, hence some positive sized open ball contains them but not any content of b; hence all the complementer points are covered by open balls, not intersecting b, the union of the small open balls (which is the complementer of b) is open

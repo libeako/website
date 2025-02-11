@@ -7,11 +7,13 @@
 		* f : X -> Y is continuous at x iff
 			* forall open-ball yb with center (f x) and inside Y
 				* exists open-ball xb around center x and inside X
-					* yb containes {f p | p in xb}
+					* yb containes (lift f xb)
 	* proof is trivial
 * theorem
 	* proposition
-		* if X, Y are metric spaces and f : X -> Y and (x : X)
+		* if
+			* X, Y are metric spaces and f : X -> Y and (x : X)
+		* then
 			* equivalent
 				* f is continuous at x
 				* f is sequentially continuous at x

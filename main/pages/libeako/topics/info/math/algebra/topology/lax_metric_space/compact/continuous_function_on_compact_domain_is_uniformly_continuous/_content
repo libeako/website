@@ -1,0 +1,30 @@
+\ id ihhuehqaheenifdl
+* let "f" be the name of the function
+* proofs
+	* via contradiction
+		* suppose the opposite: not uniformly continuous; then
+		* exists e > 0. forall d > 0. exist points x y. (distance (x, y) < d) and (distance (f x, f y) > e)
+		* take an infinite sequence of distances converging to zero; according to these distances create an infinite sequence of point-pairs such that the pairs violate uniform continuity, the distance inside the function input pairs converges to zero and the distance in the function output pair remains bigger than e
+		* the domain is compact by assumption, hence a common subsequence exists in which both components converge to the same limit point in the domain; let "l" mean this limit
+		* the function is continuous => 
+			* exists d
+				* forall point x
+					* distance (x, l) < d => distance (f x1, f l) < e/2
+		* hence
+			* exists d. 
+				* forall points x1, x2.
+					* (distance (x1, l) < d) and (distance (x2, l)) < d =>
+					* distance (f x1, f x2) < e
+		* but from the convergent sequence: exist points x1, x2, both arbitrarily close to l. distance (f x1, f x2) > e - contradiction
+	* directly 
+		* using
+			* Lebesgue covering theorem
+				\ links-to internal iwfingcdiypxxeav
+		* we can think about this theorem (to prove) as (compactness making continuity into uniform continuity)
+		* continuities are about closenesses
+		* take and arbitrary e (> 0); points in the outputs of the function closer to each other than this value will be considered 'close'
+			* inputs are close => outputs are close
+			* the inputs are in a common open-ball with a certain radius => the outputs are in a common open-ball with a radius = e
+		* continuity is assumed, it gives are a condition for the outputs being close: the inputs need to be close too, in an open-ball with radiuses depending on the point of the domain; this dependence is not allowed in uniform continuity; hence it is this dependence that we need to get rid of
+		* globality is what we need, and compactness does give us that. by the Lebesgue covering theorem; according to the Lebesgue theorem: a global radius value "d" exists, for which for each point p the (open-ball d p) is contained by one of the open-balls given by continuity
+		* technical detail: one needs to aim for (e / 2) closeness

@@ -1,0 +1,28 @@
+\ id iwfingcdiypxxeav
+* proposition
+	* if
+		* (M, d) lax metric space
+		* S <= M
+			* S is sequentially compact
+		* C : a set of open sets covering S
+	* then
+		* exists r > 0. forall (x : S). (open-ball r x) is included in some element of C
+* proof by contradition
+	* suppose
+		* forall r > 0. exists (x : S). (open-ball r x) is not included in any element of C
+	* then
+		* exists (x : Nat+ -> S). forall (n : Nat+). (open-ball (1 / n) (x n)) is not included in any element of C
+		* S is sequentially compact, hence x has subsequence converging to an element of S:
+		* exists (k : Nat+ -> Nat+) (p : S). (k >>> x) converges to p
+		* C is a covering of S, hence exists (O in C). O contains p
+		* O is open, hence exists r > 0. O includes (open-ball r p)
+		* choose (n : Nat+) big enough such that
+			* z : = x (k n)
+			* d (p, z) < r / 3
+				* this can be done as (k >>> x) converges to p
+			* 1 / (k n) < r / 3
+				* then (open-ball (r / 3) z) is not included in any element of C
+		* but O does include (open-ball (r / 3) z)
+			* as
+				* O contains (open-ball r p)
+				* d (p, z) < r / 3

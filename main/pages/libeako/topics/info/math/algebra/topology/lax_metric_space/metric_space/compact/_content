@@ -1,0 +1,23 @@
+\ id muxjxnuprefedlkv
+* see compactness generally in lax metric spaces
+	\ links-to internal qwizbwhijbrppnyb
+* inverse of continuous function on compact domain is continuous
+	\ id vihgtgynqpacutyi
+	* proof is by contradiction
+		* suppose the opposite - the inverse is not continuous at point oy
+		* ox := inverse f oy
+		* by non-continuity
+			* exists dx > 0. forall dy > 0. exists y. 
+				* distance (oy, y) < dy
+				* distance (ox, inverse f y) > dx
+		* by being in metric space:
+			* exists (dx > 0) (sequence sy). forall n.
+				* distance (sy n, oy) < power n (1/2)
+				* distance (ox, inverse f (sy n)) > dx
+		* sx := lift (inverse f) sy
+		* continuous image of compact domain is compact; hence both the domain and codomain are compact; hence both sx and sy have a convergent subsequence; let the names of their limits be "lx", "ly"
+		* by continuity of f: f lx = ly
+		* the tail of sy is arbitrarily close to oy; hence ly = oy
+		* the tail of sx is always further from ox than dx > 0; hence ox =/= lx
+		* ox = inverse f oy = inverse f ly = inverse f (f lx) = lx
+		* this is a contradiction

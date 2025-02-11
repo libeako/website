@@ -1,12 +1,12 @@
 \ id qwizbwhijbrppnyb
 * see compactness generally in topology
 	\ links-to internal ecmltgeunwukoeeb
-* i may treat convergently compactness as the main form of compactness
-	* i may use the simple "compact" term for it
-		* because
-			* though they mean different things in general topolgy
-			* in metric space the 2 notions are equivalent
-				* i do not prove this
+* Lebesgue covering theorem
+	\ links-to internal iwfingcdiypxxeav
+* sequentially compact space is totally bounded
+	\ links-to internal luiynasvgjfttrnw
+* compact is equivalent to sequentially compact
+	\ links-to internal bwmxatzwwrqgygfa
 * theorem
 	* proposition
 		* the following versions of compactness are equivalent: convergental [C], accumulative [A], limit point [L]
@@ -45,40 +45,4 @@
 				* because of its finiteness: at least 1 of the balls covers infinite number of points of the sequence; this is a subsequence in which the distance of all point-paris < d / 2; hence this subsequence is Cauchy
 			* by the assumption of the theorem: the space is complete; hence, as Cauchy, every subsequence converges; hence the space is compact
 * function: continuous on compact => uniformly continuous
-	\ id ihhuehqaheenifdl
-	* proof
-		* suppose the opposite: not uniformly continuous
-			* exists e > 0. forall d > 0. exist points x y. (distance (x, y) < d) and (distance (f x, f y) > e)
-			* take an infinite sequence of distances converging to zero; according to these distances create an infinite sequence of pairs such that the pairs violate uniform continuity, their first component are closer to each other than the current distance that they are mapped to and the function outputs there are further from each other than e
-			* compactness => this sequence has subsequence that converges, simultanously in both component of the pairs
-			* the distance between the component of each pair converges to zero, hence the 2 components converge to the same limit; let "l" mean this limit
-			* the function is continuous => 
-				* exists d. 
-					* forall point x.
-						* distance (x, l) < d => distance (f x1, f l) < e/2
-			* hence
-				* exists d. 
-					* forall points x1, x2.
-						* (distance (x1, l) < d) and (distance (x2, l)) < d =>
-						* distance (f x1, f x2) < e
-			* but from the convergent sequence: exist points x1, x2, both arbitrarily close to l. distance (f x1, f x2) > e - contradiction
-* inverse of continuous function on compact domain is continuous
-	\ id vihgtgynqpacutyi
-	* proof is by contradiction
-		* suppose the opposite - the inverse is not continuous at point oy
-		* ox := inverse f oy
-		* by non-continuity
-			* exists dx > 0. forall dy > 0. exists y. 
-				* distance (oy, y) < dy
-				* distance (ox, inverse f y) > dx
-		* by being in metric space:
-			* exists dx > 0. exists sequence sy. forall n.
-				* distance (sy n, oy) < power n (1/2)
-				* distance (ox, inverse f (sy n)) > dx
-		* sx := lift (inverse f) sy
-		* continuous image of compact domain is compact; hence both the domain and codomain are compact; hence both sx and sy have a convergent subsequence; let the names of their limits be "lx", "ly"
-		* by continuity of f: f lx = ly
-		* the tail of sy is arbitrarily close to oy; hence ly = oy
-		* the tail of sx is always further from ox than dx > 0; hence ox =/= lx
-		* ox = inverse f oy = inverse f ly = inverse f (f lx) = lx
-		* this is a contradiction
+	\ links-to internal ihhuehqaheenifdl

@@ -1,5 +1,17 @@
 \ id utfnquidytfalntd
-* "metric" space is like lax metric space but with an additional constraint: the distance between non-equal points is positive
+* "metric" space is lax metric space but with an additional constraint: the distance between non-equal points is positive
+* in metric space limit of sequence is unique
+* forall x. {x} is closed
+	* proof
+		* forall y. 
+			* not (y = x) => d (y, x) > 0
+			* hence (open-ball (d (y, x) / 2) y) is an open set containing y and not containing x
+		* all these open-balls cover the complement of {x}, without intersecting {x}
+		* hence the complement of {x} is open; hence {x} is closed
+* all finite sets are closed
+	* proof is as in previous theorem
+* compactness
+	\ links-to internal muxjxnuprefedlkv
 * completeness
 	\ links-to internal vqprearscrrvxdzk
 * the Euclidean space

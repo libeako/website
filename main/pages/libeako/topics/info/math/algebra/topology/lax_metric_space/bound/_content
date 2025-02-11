@@ -1,0 +1,14 @@
+\ id fiklckdlancmkdnn
+* a subset of a lax metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
+* the space is bounded iff its entirety as a subset is bounded
+* when the subset is non-empty then
+	* this is equivalent to
+		* exists (c : Point)  (K : Real). forall (p : Point). d (p, c) <= K
+		* the proof is trivial
+* a space is "totally bounded" iff for all e > 0. it is covered by a finite e-net
+	* totally bounded => bounded
+		* proof is trivial
+	* the opposite direction is not generally true
+		* counter-examples
+			* the discrete metric [maps 0 to equal, 1 to unequal point-pairs] on any infinite set
+			* (Real, \ (x, y) -> min {1, norm (x - y)})
