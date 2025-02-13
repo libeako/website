@@ -24,20 +24,14 @@
 		* notation: ball c r
 	* lax metric space induces topology
 		\ links-to internal bhvohpejqtlovwbf
-	* a set n is neighborhood of point p iff exists positive e such that (open-ball e p ) is contained by n
+	* a set n is neighborhood of point p iff exists positive e such that (open-ball e p) is contained by n
 		* proof is trivial
 	* a set is open iff is union of open balls
 		* proof is trivial
 * a "net" is a set of points, the proximities of which cover the whole space
 	* a 'd-net' is a set of points P so that the (union (lift (ball d) P)) covers the whole space
-* a subset of a lax metric space is "bounded" iff exists real number K. forall points x y of the subset. d (x, y) <= K
-	* the space is bounded iff its entirety as a subset is bounded
-	* when the subset is non-empty then
-		* this is equivalent to
-			* exists (c : Point)  (K : Real). forall (p : Point). d (p, c) <= K
-			* the proof is trivial
-	* a space is "totally bounded" if it is covered by a finite d-net
-		* totally bounded => bounded; proof is trivial
+* boundedness
+	\ links-to internal fiklckdlancmkdnn
 * Cauchy sequence
 	* definition
 		* a sequence x is "Cauchy" iff 
