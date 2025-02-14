@@ -7,7 +7,7 @@
 		* f : X -> Y is continuous at x iff
 			* forall open-ball yb with center (f x) and inside Y
 				* exists open-ball xb around center x and inside X
-					* yb containes {f p | p in xb}
+					* yb containes (lift f xb)
 	* proof is trivial
 * theorem
 	* proposition
