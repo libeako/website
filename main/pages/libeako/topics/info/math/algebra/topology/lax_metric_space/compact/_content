@@ -7,27 +7,6 @@
 	\ links-to internal luiynasvgjfttrnw
 * compact is equivalent to sequentially compact
 	\ links-to internal bwmxatzwwrqgygfa
-* theorem
-	* proposition
-		* the following versions of compactness are equivalent: convergental [C], accumulative [A], limit point [L]
-	* proof
-		* C => A
-			* take the subsequence that is convergent, then trivial
-		* A => L
-			* take an arbitrary infinite set
-			* create an infinite sequence of it
-				* this is possible because it is possible to create any but finite length such sequence
-				* the elements of the sequence come from a set, hence they are all different
-			* by [A] exists point p. forall neighborhood n of p. almost all of the sequence is element of n
-			* almost all of the sequence is an infinite amount of points; we also know they are all different => exist one of them which is not p - hence p is limit point
-		* L => C
-			* take an arbitrary infinite sequence
-			* take its set of elements; by assumption [L] it has a limit point; let the name of this point be p
-			* p being limit point = forall neighborhood n of p. exists x in n and not equal to p
-			* choose one such x point from all of 
-				* lift (ball p) (divide 1 : N+ -> R)
-					* this is where the fact is used that the space is metric [the existence of the balls]
-			* take a sub-sequence of this sequence of points which is descending in distance from p; this sub-sequence converges to p
 * theorem: compact <=> (complete and totally bounded)
 	* proof
 		* sub-theorem: compact space is complete
