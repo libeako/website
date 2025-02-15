@@ -21,3 +21,13 @@
 		* the tail of sx is always further from ox than dx > 0; hence ox =/= lx
 		* ox = inverse f oy = inverse f ly = inverse f (f lx) = lx
 		* this is a contradiction
+* compact => closed
+	\ id ovahhnvgqgtywtlu
+	* proof
+		* take a compact set S
+		* take an arbitrary limit point p of S
+		* because we are in metric space: it is possible to construct a sequence that converges to p
+		* S is sequentially compact:
+			\ links-to internal bwmxatzwwrqgygfa
+		* hence S must contain p
+		* hence S is closed

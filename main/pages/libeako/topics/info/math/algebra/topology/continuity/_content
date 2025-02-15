@@ -1,13 +1,12 @@
 \ id ijidewelvrqswzry
-* the "continuity" concept is most generally defined in topology
 * continuity is a property of a function between 2 toplogies at a certain point
 * let the name of the function be f and the name of the point be x, if not otherwise stated
 * these definitions are equivalent
 	* neighborhood inclusion
-		* forall neighbood of (f x) No: exist neighborhood of x Ni: lift f Ni <= No
+		* forall neighborhood of (f x) No: exist neighborhood of x Ni: lift f Ni <= No
 		* this is the most intuitive definition and the general version of the definition often used in the scalar number fields
 	* open neighborhood inclusion
-		* forall open neighbood of (f x) No: exist open neighborhood of x Ni: lift f Ni <= No
+		* forall open neighborhood of (f x) No: exist open neighborhood of x Ni: lift f Ni <= No
 		* proof of equivalence is trivial
 	* neighbohood's inverse image is neighborhood
 		* forall neighbohood of (f x) No: (lift (inverse f) No) is neighbohood of x
@@ -15,19 +14,25 @@
 			* use these facts:
 				* the inverse image of a smaller set is smaller
 				* a set including a neighborhood is a neighborhood
+* a function is continuous at a point iff at that point its value is its limit
+	* proof is trivial
 *  continuity is preserved by function composition
 	* proof is trivial
 * sequential continuity
 	* definition
 		* f is "sequentially continuous" at x iff
-			* forall sequence x. x converges to x' => (x >>> f) converges to f (x n)
+			* forall sequence x. x converges to x' => (x >>> f) converges to (f x')
 	* if a function is continuous somewhere then it is sequentially continuous there
 		* proof is trivial
 	* sequential continuity is preserved by function composition
-* a function is continuous at a point iff at that point its value is its limit
-	* proof is trivial
 * continuous everywhere <=> inverse images of all open sets are open sets
 	\ id yiqeabgwikibcabb
 	* proof
 		* <=: trivial
-		* =>: go through all the points of an arbitrary open set in the codomain
+		* =>:
+			* take an arbitrary open set o in the codomain
+			* go through all the points y of o
+				* go through the points x of the inverse image of y
+					* by continuity: an open neighborhood must exist containing x and being mapped into o
+			* all these open neighborhoods map into o
+			* the union of these open neighborhoods cover the inverse image of o

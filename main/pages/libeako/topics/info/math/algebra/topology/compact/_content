@@ -1,0 +1,33 @@
+\ id ecegvbgyxkieuvqc
+* a set S is "compact" iff all open covers of S have a finite sub-cover
+	* an open "cover" of S is a set of open sets whose union contains S
+	* a sub-cover is a subset of a cover which is also cover
+* a subset H of a space is "convergently compact" or "sequentially compact" iff all infinite sequences of H contain subsequence which converges in H
+	* the name "convergently compact" is my invention
+	* i do not like the name "sequentially compact" because it does not involve the sequence notion more than 'countably compact'ness does
+* continuous image of compact set is compact
+	* proof
+		* let f be a 
+			* continuous function
+				\ links-to internal ijidewelvrqswzry
+		* let K be a compact subset of the domain of f
+		* let UO be an open cover of the image of K
+		* let UI be the set of inverse images of members of UO
+			* the members of UI are open sets
+				* as they are inverse continuous images of open sets
+					\ links-to internal yiqeabgwikibcabb
+		* UI is an open cover of K
+		* K is compact, hence UI has a finite subcover
+* Cantor's intersection theorem: monotone decreasing sequence of non-empty sequentially compact sets have non-empty intersection
+	* proof
+		* choose a point from each set
+		* this sequence is in a sequentially compact set, hence has a subsequence with a limit point
+		* each set is sequentially compact, hence contains this limit point
+* finite intersection property
+	* a set of closed sets has "the finite intersection property" iff all finite subsets of the sets have a non-empty intersection
+	* (a set of closed sets having the finite intersection property implying their intersection to be non-empty) is equaivalent to (open covers having finite subcover)
+		* they are dual of each other; this duality is bridged by De Morgan set equalities
+	* other sources
+		* Introduction to Metric Spaces
+			\ links-to external https://ocw.mit.edu/courses/18-s190-introduction-to-metric-spaces-january-iap-2023/mit18_s190iap23_lec4.pdf
+			* Lecturer: Paige Bright
