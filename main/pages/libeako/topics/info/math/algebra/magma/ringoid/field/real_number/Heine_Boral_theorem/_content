@@ -1,0 +1,14 @@
+\ id sqmtczrxlolvnfsu
+* proposition: in Euclidean spaces: compact <=> closed and bounded
+	* proof
+		* =>
+			* closed
+				\ links-to internal ovahhnvgqgtywtlu
+			* bounded
+				\ links-to internal luiynasvgjfttrnw
+		* <=
+			* take an closed and bounded set and a sequence in it
+			* bounded sequence contains convergent subsequence
+				\ links-to internal tjtxwinuamfxqvwp
+			* the set is closed, hence contains the limit point; hence the sequence contains a convergent subsequence
+			* hence the set is compact
