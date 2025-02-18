@@ -1,17 +1,32 @@
 \ id kvfsrbzyulsgtyys
-* state politics
-	\ links-to internal kqgrxyhfgixllquc
-* economy
-	\ links-to internal xlqxaejapbblgozk
-* centerless media
-	\ links-to internal kwsgfslnvnykvmyp
-* watch Brian's life
-	\ links-to internal yyvmhrhbwgeqfpfx
-* lawyers' bias towards their customers
-	\ links-to internal vdhbbztdaacubbfi
-* superiority of theory
-	\ links-to internal oxfbbimzigfktedw
-* code of conduct is bad
-	\ links-to internal cgzrnccsysyohjvj
-* trans women in sport
-	\ links-to internal ttohxgusqxaufpkk
+* topics
+	* state politics
+		\ links-to internal kqgrxyhfgixllquc
+	* economy
+		\ links-to internal xlqxaejapbblgozk
+	* centerless media
+		\ links-to internal kwsgfslnvnykvmyp
+	* watch Brian's life
+		\ links-to internal yyvmhrhbwgeqfpfx
+	* lawyers' bias towards their customers
+		\ links-to internal vdhbbztdaacubbfi
+	* superiority of theory
+		\ links-to internal oxfbbimzigfktedw
+	* code of conduct is bad
+		\ links-to internal cgzrnccsysyohjvj
+	* trans women in sport
+		\ links-to internal ttohxgusqxaufpkk
+* other works of me
+	* my global political blog in english language
+		* main, with rss feed
+			\ links-to external http://a-libertarian-view.blogspot.com
+		* facebook
+			\ links-to external http://facebook.com/ALibertarianView
+		* google+
+			\ links-to external https://plus.google.com/u/0/collection/0P5vVE
+	* in hungarian language
+		* blog
+			* on Wordpress
+				\ links-to external http://szabadpolitika.wordpress.com
+			* on Facebook
+				\ links-to external https://www.facebook.com/SzabadPolitika/
