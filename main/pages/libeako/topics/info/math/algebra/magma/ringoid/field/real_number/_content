@@ -29,6 +29,7 @@
 * monotone bounded sequences converge to their extremums
 	* proof is trivial application of the extremum existing
 * bounded sequences contain convergent subsequence
+	\ id tjtxwinuamfxqvwp
 	* proof 1
 		* sequences contains monotone subsequence
 		* monotone sequences converge
@@ -39,6 +40,8 @@
 		* dropping this dimension and the rest of the sequence go back to the previous step
 	* this theorem says that the real and complex euclidean spaces are compact
 	* a name of this theorem is "Bolzano-Weierstrass"
+* Heine-Borel theorem
+	\ links-to internal sqmtczrxlolvnfsu
 * intermediate value theorem
 	* if f is continuous function then it takes all values from (f a) to (f b) on interval [a, b]
 	* proof
