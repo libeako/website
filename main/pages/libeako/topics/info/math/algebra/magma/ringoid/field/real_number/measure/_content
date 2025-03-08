@@ -1,0 +1,78 @@
+\ id fuhnmbosxkhzqehp
+* R := 
+	* union
+		* {{}, (-ifinity .. +infinity)}
+		* {foreach r : Real. (-ifinity .. r]}
+		* {foreach r : Real. (r .. +infinity)}
+		* {foreach (r1, 2 : Real). (r1 .. r2]}
+* R is a semi-algebra
+	* link to semi-algebra
+		\ links-to internal norbzvwtmfnxravy
+	* proof is trivial
+* m : (R -> Extended NonNegative Real) := 
+	* by-case
+		* {} -> 0
+		* (-ifinity .. +infinity)} -> infinity
+		* {foreach r : Real. (-ifinity .. r]} -> infinity
+		* {foreach r : Real. (r .. +infinity)} -> infinity
+		* {foreach (r1, 2 : Real). (r1 .. r2]} -> r2 - r1
+* m is sigma-additive for those cases when the union result is in R
+	* proof
+		* take arbitrary (s : Nat -> R) such that R contains (union s)
+		* we have to prove
+			* m (union s) = sum (s >>> m)
+		* >=
+			* foreach (n : Nat). m (union s) >= sum (from 1 to n) (s >>> m)
+			* the comparison is true for the limit too
+		* <=
+			* the main structure of the proof is branching on the finiteness of (m (union  s))
+				* finite
+					* foreach (n : Nat). m (s n) is finite
+					* take arbitrary e (> 0)
+					* create a new sequence of sets which is a slight increase of the originals
+						* foreach (n : Nat). (a .. b] -> (a .. b + (e / power n 2))
+					* this new sequence is bigger, hence also covers (union s)
+					* the members of this new sequence are open - this was the goal
+					* change (union s) too
+						* again, by moving an end of it by e
+						* but move the other [lower] end to make the interval closed
+						* move it inside, thus decreasing the interval
+					* we can apply compactness
+						* the decrease (union s) is covered by the increased s sequence
+						* the decreased (union s) is compact
+							* implied by it beeing closed
+								\ links-to internal sqmtczrxlolvnfsu
+						* the covering increased s members are open
+						* this is an open covering of a compact set
+						* such contains a finite subcover
+							* by definition of compactness
+						* being finite sequence: we can apply additivity
+							* m (union s) - e <= sum (s >>> m) + e
+						* e is taken arbitrarily, hence the comparison is true for vanishing e too
+							* m (union s) <= sum (s >>> m)
+				* infinite
+					* we prove this by using the finite case
+					* the key is the forming of intervals
+						* c (n : Nat) := (-n .. n]
+					* it is also key to observe
+						* limit (at infinity) (c >>> intersect (union s) >>> m) = infinity
+							* to see this observe that (after the sequence achived all finite boundaries of (union s)) the increments in the [measure] result is non-decreasing
+					* applying the finite case of the proof
+						* foreach (n : Nat). m (intersect (union s) (c n)) <= sum (s >>> intersect (c n) >>> m)
+					* we can drop (intersect (c n)) from the side side
+						* foreach (n : Nat). m (intersect (union s) (c n)) <= sum (s >>> m)
+					* the comparison is true for the limit too
+						* limit (n -> m (intersect (union s) (c n))) <= sum (s >>> m)
+					* using that that limit value is infinite
+						* infinite <= sum (s >>> m)
+					* hence
+						* m (union s) = sum (s >>> m)
+* because of this additivity
+	* we can build a measure space from (R, m)
+		\ links-to internal yhekyygfiuskaqvd
+	* this is the Lebesgue measure space
+		* i may use the notation '(Real, L, l)' for it
+* everything before here easily generalizes to multiple dimensionsional intervals
+* properties of the Lebesgue measure space
+	* approxability of measurable sets by open sets or by closed sets
+		\ links-to internal cvubzkxxczeshkmj

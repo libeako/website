@@ -1,0 +1,28 @@
+\ id cvubzkxxczeshkmj
+* proposition in 1 dimensional space
+	* measurable sets are approximable in measure by
+		* and
+			* an open set from the outisde 
+			* a closed set from the inside 
+	* formally
+		* if
+			* M : L
+		* then forall e > 0
+			* and
+				* exists open   (A : L). l (A \ M) < e
+				* exists closed (A : L). l (M \ A) < e
+	* proof
+		* open approximation
+			* in case (l M) is
+				* finite
+					* we are in the Lebesgue space, which is an outer measure construction on the semi-algebra R of half-open intervals including the corner cases; hence
+						* foreach ec > 0. exists (C : Nat+ -> R) covering of M. sum (C >>> l) - l M < ec
+					* A := union C
+					* extend these covering intervals to be open on their right sides too; but only with infinitesimally small amount and the sum of the extensions lenghts should be smaller than ec
+					* ec := e / 2
+				* infinite
+					* divide the Real space to [z .. z+1) subintervals; their count is countable
+					* foreach of them. apply the already proven finite case with such e values that their sum is smaller than the e in this case of the proof
+		* closed approximation
+			* apply the open case of this proof to (Real \ M)
+* this same proposition and its proof works for multi-dimensional cases too
