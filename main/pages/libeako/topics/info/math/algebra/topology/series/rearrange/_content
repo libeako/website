@@ -14,8 +14,10 @@
 		* proof
 			* take 2 arbitrary orders
 			* take 2 big head sections of them, so big that all the head sections of the remaining tail sections are infinitesimally small, absolutely
-			* take the union of these head sections
-				* this must be infinitesimally close to both head sections, hence those head sections must be infinitesimally close together
+			* take the union of the 2 head sections
+			* for each side. the sum of head section is arbitrarily close to the sum of the union
+			* hence they are arbitrarily close to each other too
+			* take a big enough head section size that contains both of these head sections
 	* uncountable sum
 		* the sum of uncountably infinite number of positive numbers can be defined as the supremums of the sums of all finite subsets
 			* we can extend this definition to negative numbers too, by separating the positive and negative elements of the set and processing them parallelly
