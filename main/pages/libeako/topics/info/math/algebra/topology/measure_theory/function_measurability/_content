@@ -1,17 +1,41 @@
 \ id trbqjlpznysitshq
-* a function (f : i -> Extended Real) is "measurable" iff
-	* forall l : Real. (keep (f >>> (< l)) i) is measurable
-* equivalence of measurability definitions - measureability of inverse images of basic subsets
-	\ links-to internal nmkhnkwyodjluppn
-* this proof technique works from any of the other kind of half-infinite half-finite intervals; hence any of those kinds too could be used to define 'measurability of function'
+* these following sets of sets all generate the Borel sigma algebra
+	* foreach a : Real. (a, .. +infinity)
+	* foreach a : Real. (-infinity, .. a)
+	* foreach a, b : Real constrained by (a < b). (a, .. b)
+	* foreach a, b : Real constrained by (a < b). [a, .. b)
+	* foreach a, b : Real constrained by (a < b). (a, .. b]
+	* foreach a, b : Real constrained by (a < b). [a, .. b]
+* definition of function measurability
+	* let G be any of the above set of sets
+	* a function (f : i -> Extended Real) is "measurable" iff
+		* forall g in G. (lift (inverse f) g) is measurable
+	* this definition is equivalent across all possible G choices because
+		* and
+			* the (function inverse image) commutes with the methods of sigma algebra [complementer, interection or union]
+			* these G choices generate the Borel sigma algebga and hence they generate each other
 * all continuous functions are measurable
 	\ links-to internal pqywysctdtdaqcfd
 * if f is measurable and g is continuous then (f >>> g) is measurable
 	* proof is trivial
-* field methods on measurability
+* Real field methods on measurable functions
 	\ links-to internal xnunzqxmgcweunju
-* 'p almost everywhere' := (the set of points where not p) is measurable and its measure is zero
+* 'p almost everywhere' := (the set of points where (not p)) is contained by a zero-measure set
 * point-wise extremums and limits of function-sequence
 	\ links-to internal ubpcmljjbniytygd
 * squeeze theorem
 	\ links-to internal lvhilqtghqqjffha
+* definition of the 'indicator' function
+	* indic : Set t -> t -> Real := s x -> if (x is element of s) then 1 else 0
+* definition of 'step function', 'simple function'
+	* X, Y : Type
+		* Y is a field
+	* P : Set (Set X)
+		* finite
+	* k : P -> Y
+	* f : X -> Y = sum (lift2 (*) k indic)
+	* if P consists of invtervals      then f is a step   function
+	* if P consists of measurable sets then f is a simple function
+	* f is said to be in 'canonical' [or 'standard'] form iff (P is disjunct and all outputs of k are different)
+		* the canonical form is unique
+			* proof is easy

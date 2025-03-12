@@ -1,0 +1,26 @@
+\ id blyijfcbfowwsoop
+* "measure"
+	\ id samevamfsixnhjwx
+	* "premeasure"
+		* definition
+			* a function f : S -> [0 .. +infinity], such that
+				* S is an algebra of subsets of the base set
+				* countable additivity for the cases when the result of the union is element of S
+		* additivity here contains nullary additivity
+			* a consequence: (f {} = 0)
+		* from finitely additive semi-algebra
+			\ links-to internal xmqxkenntcxfmmtl
+	* "measure" := premeasure such that S is sigma algebra
+* "measure space" (T, S, m)
+	\ id koelzeepineavtuc
+	* T is the base set
+	* S is a set of subsets of T, a sigma-algebra
+	* m is a measure
+* (T, S) is a "measurable space"
+* a "probability measure" maps the full set to 1
+* completeness
+	\ links-to internal ovpnmvfdfcpoxgit
+* continuity
+	\ links-to internal onfojfiwpsipndoy
+* constructing measure spaces from elementary sets
+	\ links-to internal onsxeqajeujepqwc

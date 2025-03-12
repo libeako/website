@@ -1,57 +1,12 @@
 \ id juuhxihbzwuwfnpe
-* goal is to determine volumes of space, area, length, ...
-* the name "quantity" or "quantization" would perhaps be better
-* motivation: it is not easy
-	* example: [0, 1] and [0, 2] have different sizes intuitively, but the same number of points
-* consistency
-	* is a requirement for any theory
-	* in measure theory it requires
-		* preferrably additivity, but at least sub-additivity
-			* these requirements are for the countably many summations
-				* finite additivity is too weak, because in real number analysis countable sequences are too important to miss
-				* continuum additivity is
-					* too strong
-						* because for instance it would allow any (intuitively non-zero sized) sets [for example spheres] to have zero measure only because all its continuum number of points individually have zero measure
-					* not needed
-						* this is implied by
-							* of any set of non-negative real numbers with finite sum: only countably many members can be positive
-								* the proof is easy: forall n : Nat+. only finitely many can be above (1 / n)
-		* additivity for all subsets is not always possible
-			* 2 solutions are known
-				* use sub-additivity, via outer measure
-				* restrict the measure function to a subset of "measurable" subsets
+* introduction
+	\ links-to internal wioiovmqkdpjgmli
 * algebras of subsets
 	\ links-to internal lmuoifmlcvbuptcs
-* formal goal
-	* "measure" definition
-		* "premeasure"
-			* definition
-				* a function f : S -> [0 .. +infinity], such that
-					* S is an algebra of subsets of the base set
-					* countable additivity for the cases when the result of the union is element of S
-			* a consequence of this definition is (f {} = 0)
-			* from finitely additive semi-algebra
-				\ links-to internal xmqxkenntcxfmmtl
-		\ id samevamfsixnhjwx
-		* "measure" := premeasure such that S is sigma algebra
-	* requirement (f {} = 0) is fulfilled automatically if f takes a finite value
-		* proof via binary additivity
-	* "measurable space" (T, S, m)
-		\ id koelzeepineavtuc
-		* T is the base set
-		* S is a set of subsets of T, a sigma-algebra
-		* m is a measure
-	* (T, S) is a "measurable space"
-	* a "probability measure" maps the full set to 1
-	* completeness
-		\ links-to internal ovpnmvfdfcpoxgit
-* not every subset of the euclidean space is measureable, hence the measurment needs to be restricted to some subsets; this set of subsets need to contain some important subsets:
-* constructing a measure space from elementary sets
-	\ links-to internal onsxeqajeujepqwc
+* measure space
+	\ links-to internal blyijfcbfowwsoop
 * function measurability
-* the Borel sets are the smallest sigma algebra of sets including the open sets [or all the closed sets]
-	* see smallest including sigma algebra
-		\ links-to internal eupxeczurplflvll
+	\ links-to internal trbqjlpznysitshq
 * other sources
 	* the best so far for me
 		* some chapters of an (unknown to me) book
