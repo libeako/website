@@ -7,9 +7,8 @@
 		* f : t -> Real
 			* continuous
 		* l : Real
-	* for the measurability we need to prove that the inverse image of [-infinity .. l) is measurable
-	* f does not have -infinity as value; hence [-infinity .. l) = (-infinity .. l)
-	* which is open
+	* measurability by definition is implied by 
+		* foreach open set s. (inverse f s) is measurable
 	* inverse image of open set is open
 		\ links-to internal yiqeabgwikibcabb
-	* open sets are in the Borel sigma algebra b, hence open sets are measurable
+	* open sets are in the Borel sigma algebra and hence (by assumption) in b, hence open sets are measurable

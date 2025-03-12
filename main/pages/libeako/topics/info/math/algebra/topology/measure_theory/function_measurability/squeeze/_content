@@ -4,8 +4,8 @@
 	* if
 		* (S, M, m) complete measure space
 		* fl, fm, fh : M -> Extended Real
-			* forall x : M. fl x <= fm x <= fh x
 			* fl, fh are measurable
+			* forall x : M. fl x <= fm x <= fh x
 			* (fl = fh) almost everywhere
 	* then
 		* fm is measurable
@@ -17,15 +17,17 @@
 	* we know
 		* dom fl is measurable
 		* dom fh is measurable
+	* co := intersect {dom fl, dom fh}
+		* is measurable
+	* el := dom fl \ co
+	* em := dom fm \ co
+	* eh := dom fh \ co
 	* from ((fl = fh) almost everywhere)
-		* exists co, el, eh subsets of S
-			* co is measurable
-			* dom fl = union co el
-			* dom fh = union co eh
-			* m el = 0
-			* m eh = 0
-	* from (forall x : M. fl x <= fm x <= fh x)
-		* dom fl <= dom fm <= dom fh
-	* hence (exists em. el <= em <= eh. dom fm = union co em)
-	* from (em <= eh): m em = 0
-	* from (M is complete): m is measurable
+		* m el = 0
+		* m eh = 0
+	* using the completeness of the measure space in the following
+	* from (foreach x : S. fl x <= fm x <= fh x)
+		* dom fh <= dom fm <= dom fl
+		* hence
+		* eh <= em <= el
+	* hence (m em = 0)

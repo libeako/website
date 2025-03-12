@@ -1,0 +1,55 @@
+\ id onfojfiwpsipndoy
+* proposition
+	* if
+		* (T, M, m) measure space
+		* S : Nat+ -> M
+			* monotone
+		* or
+			* S is growing
+			* (S is shrinking) and ((m (S 1)) is finite)
+	* then
+		* m (limit S) = limit (lift m S)
+* proof
+	* case (S is growing)
+		* D : Nat+ -> M := S 1 :: (n -> S (n + 1) \ S n)
+		* m (limit S)
+		* =
+			* implied by (S is monotone growing)
+		* m (union S)
+		* =
+			* implied by (union S = union D)
+		* m (union D)
+		* =
+			* implied by
+				* and
+					* m being a measure [and hence being countably additive]
+					* D being disjoint
+		* sum (lift m D)
+		* =
+			* by the definition of countable sum ["series"]
+		* limit (n -> sum (over [1 .. n]) (lift m D))
+		* =
+			* implied by
+				* and
+					* m being a measure [and hence being finitely additive]
+					* D being disjoint
+		* limit (n -> lift m (union (over [1 .. n]) D))
+		* =
+			* by definition of D
+		* limit (n -> lift m (S n))
+		* =
+		* limit (lift m S)
+	* case ((S is shrinking) and ((m (S 1)) is finite))
+		* m (limit S)
+		* =
+			* s \ (s \ x) = x
+		* m (limit (S >>> (S 1 \) >>> (S 1 \)))
+		* m (S 1 \ limit (S >>> (S 1 \)))
+		* =
+			* m (S 1) is finite
+		* m (S 1) - m (limit (S >>> (S 1 \)))
+		* =
+			* by the already proven [growing] case of this theorem
+		* m (S 1) - limit (lift m (S >>> (S 1 \)))
+		* limit (lift m (S >>> (S 1 \) >>> (S 1 \)))
+		* limit (lift m S)
