@@ -4,9 +4,9 @@
 		* if
 			* real interval I
 			* F : I -> R, has slope
-			* {a, b} <= I
 			* a < b
-			* slope f a < s < slope f a
+			* {a .. b} <= I
+			* slope f a < s < slope f b
 		* then
 			* exists m
 				* a < m < b
@@ -18,4 +18,3 @@
 		* f takes both extremums on [a, b]
 			* neither of them can be at a or at b becuase there the slope is not zero
 			* hence f takes its extremums in the interior of [a, b]
-		* (the slope where an extremum is taken) = 0

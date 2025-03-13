@@ -1,56 +1,68 @@
 \ id xcibrzqtmarewtek
+* this page is about the L'Hôpital theorem ["L'Hôpital's rule"]
+* this theorem is about ratios of limits of function and their slopes at a certain point; let "p" be the name of this point; p can be an infinity too
+* the theorem works for 1-sided limits; for the sake of simplicity of the writing: this page is only about the higher-sided limit; the other side is trivial dual
+* if not stated otherwise: "lim" means (the higher sided limit at point p)
+* some assumptions
+	* f, g : [p .. _] -> Real
+		* continuous
+		* for the whole interior of the domain
+			* and
+				* both functions have slope
+				* (slope g) is not 0
+	* or
+		* lim f = lim g = 0
+		* lim g = (+ or -) infinity
 * proposition
-	* if
-		* Real non-empty interval [a, b] 
-		* f, g : [a, b] -> Real
-			* have slope in the interior of the domain
-			* not exist x in internal (a, b). slope g x = 0
-		* l : ExtendedReal
-		* lim := (limit-low b) or (limit-high a)
-			* 'limit-low' and 'limit-high' here intend to be the one-sided limits
-		* or
-			* lim f = lim g = 0
-			* lim g = (+ or -) infinity
-		* lim (slope f / slope g) = l
-	* then lim (f / g) = l
+	* lim (f / g) = lim (slope f / slope g)
 * proof
-	* will prove only (lim = limit-high a), the other side is symmetrical
-	* the frame of the proof is
-		* if (l < +infinity) then prove
-			* forall ll > l. exists c
-				* a < c < b
-				* forall x. (a < x < c) => f x / g x < ll
-		* dually for (l > -infinity)
-		* note
-			* the conjunction of these 2 proposition squeezes (f/g) into arbitrarily narrow band around l, which implies that (f/g) converges to l
-			* this works also in the case when l is an infinity
-		* it is enough to prove the (l < +infinity) case, because the proof of its dual is the dual of the proof
-	* let lll be in (l, ll)
-	* exists cc in (a, c). forall x in (a, cc). (slope f x / slope g x) < lll
-	* (g x - g y) may not be 0, because (slope g) is never 0
-	* hence we can apply the mean value theorem
-		* exists s : power 2 (a, cc) -> Real
-			* forall x y in (a, cc). (slope f / slope g) (s (x, y)) = (f x - f y) / (g x - g y)
-	* hence forall x y in (a, cc). (f x - f y) / (g x - g y) < lll
-	* case (lim f = lim g = 0)
-		* fix x in (a, cc)
-		* as y converges to a: (f y) and (g y) converges to 0
-		* hence ((f x - f y) / (g x - g y)) converges to (f x / g x)
-		* the former < lll, hence (f x / g x) <= lll < ll
-	* case (lim g = (+ or -) infinity)
-		* fix y in (a, cc)
-		* exists ccc in (a, cc). x < e => ((g x - g y) / g x > 0)
-			* because g converges to an infinity
-		* hence we can multiply 
-			* (f x - f y) / (g x - g y) < lll
-			* by ((g x - g y) / g x)
-		* we get
-			* (f x - f y) / g x < lll * (g x - g y) / g x
-		* from that
-			* f x / g x < lll * (g x - g y) / g x + f y / g x = lll + (lll * g y + f y) / g x
-		* g converges to an infinity, hence (fun x -> ((lll * g y + f y) / g x)) converges to lll
-		* hence exists cccc in (a, ccc). x < cccc => f x / g x < lll + (lll + ll) / 2 < ll
-* though named after L'Hôpital', Bernoulli knew it sooner
+	* theorem "constrain inheritance"
+		* proposition
+			* if
+				* g does not output 0
+				* l : Extended Real
+				* f, g : [p .. q)
+				* slope f / slope g <= const l
+			* then
+				* exists r in [p .. q). forall x in [p .. r). f x / g x <= l
+		* proof
+			* forall x, y in [p .. q). (g x - g y) may not be 0, because (slope g) is never 0
+			* hence we can apply the 'mean value theorem'
+				* exists s : power 2 [p .. q) -> Real
+					* forall x y in [p .. q)
+						* (slope f / slope g) (s (x, y)) = (f x - f y) / (g x - g y)
+			* hence
+				* forall x, y in [p .. q)
+					* (f x - f y) / (g x - g y) <= l
+			* case (lim f = lim g = 0)
+				* take an arbitrary x in [p .. q)
+				* as y converges to p: (f y) and (g y) converges to 0
+				* hence
+					* ((f x - f y) / (g x - g y)) converges to (f x / g x)
+				* the former <= l, hence its limit [f x / g x] <= l too
+			* case (lim g = (+ or -) infinity)
+				* fix y in [p .. q)
+				* exists t in [p .. q). forall x in [p .. t]. (g x - g y) / g x > 0
+					* because g converges to an infinity
+				* hence on [p .. t] we can multiply
+					* (f x - f y) / (g x - g y) <= ll
+					* by ((g x - g y) / g x)
+				* we get
+					* (f x - f y) / g x <= l * (g x - g y) / g x
+				* from that
+					* f x / g x < l * (g x - g y) / g x + f y / g x
+				* g converges to an infinity, hence
+					* exists r in [p .. t]
+						* forall x in [p .. r). f x / g x <= l
+		* intuition
+			* this (constrain inheritance) theorem gives us condition with which
+				* whatever bound (slope f / slope g) has - (f / g) has that bound too on a neighborhood of p
+				* this (with the dual of this theorem) implies
+					* lim (f / g) / lim (slope f / slope g)
+	* hence we only need to proove that on some neighborhood of p g does not output zero
+		* g can not output (> 1) 0 values in its domain 
+			* if it did then (the mean value theorem) would imply that (slope g) outputs 0 at some point
+* though named after L'Hôpital', Bernoulli knew it earlier
 * transform problems to l'Hospital form
 	* f * g = f / (1 / g)
 	* f - g = (1 / g - 1 / f) / (1 / f * g)

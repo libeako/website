@@ -11,7 +11,7 @@
 		\ links-to internal awzlonrfndtibahn
 * Jensen inequality
 	* forall (1-distribution w) (point x). f (dp w x) <= dp w (lift f x)
-	* Jensen ineqaulity is equivalent to the special 2-point version of it [when (n = 2)]
+	* Jensen ineqaulity is equivalent to the special 2-point version of it [when (the number of points = 2)]
 		* proof is by induction
 * linear parametric sum is equivalent to (weighed-sum in 2 dimensions)
 	* lps p (x, y) : = p * x + (1 - p) * y
