@@ -5,11 +5,11 @@
 	* proposition
 		* f a = f b => exists x. (a <= x <= b) and (speed f x = 0)
 	* proof
-		* interval [a - b] is compact; hence f takes its maximum and minimum on it
-		* if f is constant on [a - b] 
-			* then the (speed f) is constantly 0 let m be the maximum or minimum 
+		* if f is constant on [a .. b] 
+			* then the (speed f) is constantly 0
 			* else
-				* let m be the minimum or maximum of f on [a - b], so that (f m) does not equal to (f a) and (f b)
+				* interval [a - b] is compact; hence f takes its maximum and minimum on it
+				* let m be the minimum or maximum of f on [a - b], so that (f m) does not equal to (f a) or (f b)
 				* speed f m = 0
 					* this is easy to prove
 * mean value theorem
@@ -25,12 +25,12 @@
 * generalized mean value theorem
 	* also known as "Cauchy mean value theorem"
 	* proposition
-		* exists x in [a - b]. (speed f x) (g a - g b) = (speed g x) * (f a - f b)
+		* exists x in [a .. b]. (speed f x) (g a - g b) = (speed g x) * (f a - f b)
 	* proof
 		* h x := (f x) (g a - g b) - (g x) * (f a - f b)
 		* h a = - (f a) * (g b) + (g a) * (f b)
 		* h b = (f b) * (g a) - (g b) * (f a) 
 		* hence (h a = h b), hence Rolle's theorem is applicable
 		* by Rolle's theorem: (exists x in [a - b]. speed h x = 0), from which the proposition of the theorem shortly follows
-	* if (speed g) does not equal 0 anywhere on [0 - b] then (g a =/= g b) and hence
-		* exists x in [a - b]. (speed f x) / (speed g x) = (f a - f b) / (g a - g b)
+	* if (speed g) does not equal 0 anywhere on [a .. b] then (g a =/= g b) and hence
+		* exists x in [a .. b]. (speed f x) / (speed g x) = (f a - f b) / (g a - g b)

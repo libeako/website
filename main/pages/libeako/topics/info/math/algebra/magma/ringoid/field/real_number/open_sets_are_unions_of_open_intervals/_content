@@ -1,0 +1,27 @@
+\ id tfudbcvhnmhualxa
+* proposition
+	* in a multidimensional Real space each open set is a countable union of open intervals
+	* in the 1 dimensional case this union is disjoint
+* proof
+	* take an arbitrary open set S
+	* ointis x := open interval ["brick"] neighborhoods of x (totally in S) (with rational bounds)
+		* is not empty
+			* proof
+				* x has an open-ball neighborhood totally in S
+					* by the definition of 'open set's in euclidean spaces
+				* open-ball intervals contain some brick neighbohoods with rational bounds
+	* gointis :=
+		* in the multi-dimensional case
+			* choose any non-empty neighborhood
+		* in the 1 dimensional case
+			* ointis >>> union
+				* the greatest such neighborhood is the union of such neighborhoods
+				* these being the greatest ones implies that they are disjoint [the union of any intersecting pair would be a greater one]
+	* K := lift (gointis) S
+		* the set of all greatest open-interval neighborhoods by points of S
+	* K = S
+		* K <= S
+			* as it is the union of sets that are included by S
+		* K >= S
+			* as it is the union of neighborhoods of each element of S
+	* each bound of each of these gathered open intervals is rational; hence they are countably many

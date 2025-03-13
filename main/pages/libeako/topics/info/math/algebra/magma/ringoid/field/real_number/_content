@@ -24,29 +24,28 @@
 		* any Cauchy sequence is bounded by a sequence of nested closed intervals whose size converges to zero
 		* the end-point-pairs of these intervals determine the side-sets of the symmetric cut rep
 * basic properties
-	* the metric space of the real numbers is complete
 	* the infimum and supremum of all bounded subsets of the real numbers exists
 * monotone bounded sequences converge to their extremums
 	* proof is trivial application of the extremum existing
 * bounded sequences contain convergent subsequence
 	\ id tjtxwinuamfxqvwp
-	* proof 1
+	* proof
 		* sequences contains monotone subsequence
 		* monotone sequences converge
-	* proof 2
-		* divide the bounded interval into 2 halves; at least one of them surely contain infinite number of elements of the sequence; continue recursively on it with those elements only; do this without end
 	* this extends to multiple dimensional space easily
 		* find a convergent subsequence in the first dimension
 		* dropping this dimension and the rest of the sequence go back to the previous step
-	* this theorem says that the real and complex euclidean spaces are compact
+	* this theorem says that the real (and complex) euclidean spaces are compact
 	* a name of this theorem is "Bolzano-Weierstrass"
-* Heine-Borel theorem
+* compact <=> closed and bounded
 	\ links-to internal sqmtczrxlolvnfsu
 * intermediate value theorem
 	* if f is continuous function then it takes all values from (f a) to (f b) on interval [a, b]
 	* proof
-		* keep halving the interval on the domain, continue with the half whose end-point values are mapped by f to different sides of the intermediate value
+		* keep halving the interval in the domain, continue with the half whose end-point values are mapped by f to different sides of the intermediate value
 		* the half-point sequence is Cuachy, hence converges; f maps its limit point to the intermediate value, because f is continuous
+* each open set is a countable union of open intervals
+	\ links-to internal tfudbcvhnmhualxa
 * Lebesgue measure
 	\ links-to internal fuhnmbosxkhzqehp
 * mean value theorems

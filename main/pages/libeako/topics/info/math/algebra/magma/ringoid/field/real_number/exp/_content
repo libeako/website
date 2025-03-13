@@ -6,8 +6,8 @@
 * we start from the reciprocal function 
 	* r : (Real+ -> Real+) := (1 /)
 * it is continous; hence it has antislope; 
-	* let the name be (ln : Real+ -> Real+)
-	* of the one that takes 0 at 1 [ln 1 = 0]
+	* let the name of the antislope be (ln : Real+ -> Real+)
+	* of the one definite antislopes takes 0 at 1 [ln 1 = 0]
 * forall x y. ln (x * y) = ln x + ln y
 	* proof
 		* f x y := ln (x * y) - ln x - ln y

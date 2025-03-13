@@ -76,3 +76,12 @@
 * properties of the Lebesgue measure space
 	* approxability of measurable sets by open sets or by closed sets
 		\ links-to internal cvubzkxxczeshkmj
+	* borders of intervals are measurable
+		* proof
+			* their complements are countably unions of measurable intervals
+	* hence all intervals are measurable
+	* all open sets are measurable
+		* proof
+			* they are countable unions of intervals
+				\ links-to internal tfudbcvhnmhualxa
+		* hence all closed sets are measurable too
