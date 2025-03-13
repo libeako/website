@@ -9,7 +9,7 @@
 		* forall e > 0. exists finite e-net covering S
 * proof by contradiction
 	* assume the opposite
-	* e > 0, ne finite covering e-net
+		* exists e > 0. not exists finite covering e-net
 	* then exists (x : Nat+ -> S)
 		* (x 0) is any point of S
 		* (x 1) is any point of (S \ open-ball e (x 0))
