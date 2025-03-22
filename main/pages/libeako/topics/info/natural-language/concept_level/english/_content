@@ -1,8 +1,7 @@
 \ id psdnbveuovaulfvk
 * last -> previous
-	* unfortunately  many people has the bad habit to use "last" when they mean "previous"
-	* they differ
-	* if more instances of the kind of event in discourse will happen then the previous one was not the last one
+	* unfortunately  many people has the bad habit to use 'last' when they mean 'previous'
+	* if more instances (of the kind of events in discourse) will happen then the previous one was not the last one
 	* the correct schema
 		* first
 		* ...
@@ -11,6 +10,8 @@
 		* next
 		* ...
 		* last
+	* would you say 'first' isntead of 'next'
+		* you would not, you are not even consistent
 * { she he } -> { it }
 	* the gender is
 		* rarely important
@@ -38,3 +39,6 @@
 		* the correct phrase would is - 'city that is Budapest', 'distance that is 5 meter'
 * 'rate' -> 'speed'
 	* people often say 'rate' when they mean spead; this is correct, but more specific is better; when the rate that you mean is spead [when its denominator is time] then it is good to use 'speed'
+* 'hard' -> 'difficult'
+	* would you say 'soft' instead of 'easy'?
+		* you would not, you are not even consistent
