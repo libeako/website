@@ -2,17 +2,15 @@
 * Riemann-Darboux representations
 	* division
 		\ links-to internal ipkcqkocdghpyiwo
+	* basic restriction
+		* the integrand must be bounded
+			* otherwise the summations would be problematic
 	* Riemann
 		\ links-to internal ewegqxhylyycrfen
 	* Darboux
 		\ links-to internal jjhfelrffijxxwbo
 	* equivalence of the Riemann and Darboux representations
 		\ links-to internal ndyromovwzhwigwi
-* integral f (a, a) = 0
-* integral f (a, b) + integral f (b, c) = integral f (a, c)
-* integral (f >>> ( * k)) = k * integral f
-* integral (lift2 (+) f g) = integral f + integral g
-* (forall x. f x <= g x) => lift 2 (<) (integral f) (integral g)
 * continuity => integrability
 	* proof
 		* the domain being compact => continuity => uniform continuity
@@ -22,3 +20,22 @@
 	\ links-to internal eidifgibmemuavvz
 * limit and integration commute on uniformly convergent sequence of Riemann integrable functions
 	\ links-to internal hbtgxavwkkaxzref
+* integral f (a, a) = 0
+* integral f (a, b) + integral f (b, c) = integral f (a, c)
+* integral (f >>> ( * k)) = k * integral f
+* integral (lift2 (+) f g) = integral f + integral g
+* (forall x. f x <= g x) => lift 2 (<) (integral f) (integral g)
+* f is integrable => (f >>> norm) is integrable
+	\ id dzwlkayzqvmcwodd
+	* integrability is about tightness of oscillation of f
+	* norm decreases the oscillation
+		* forall x, y
+			* norm (norm (f x) - norm (f y)) <= norm (f x - f y)
+* f is integrable => f+ and f- are integrable
+	\ id jykcsftzjbzvlvkx
+	* proof
+		* (f >>> norm) is integrable
+			* see theorem
+				\ links-to internal dzwlkayzqvmcwodd
+		* f+ = ((f >>> norm) + f) / 2
+		* f- = ((f >>> norm) - f) / (-2)

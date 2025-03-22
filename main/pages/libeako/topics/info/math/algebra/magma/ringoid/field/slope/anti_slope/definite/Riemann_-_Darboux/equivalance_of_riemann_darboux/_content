@@ -1,17 +1,25 @@
 \ id ndyromovwzhwigwi
 * the Riemann and Darboux representations of the integral are equaivalent; the proof follows
 * Riemann => Darboux
-	* the Riemann representation covers the integral with an arbitrarily narrow interval, by sufficient fineness of the division
+	* this proof works with bot variants of the Riemann integral
+	* the Riemann representation covers the integral with an arbitrarily narrow interval
 	* the lower and higher Darboux sums are Riemann sums, hence those too get covered by that narrow interval; those 2 surround the Darboux integral, which hence must be arbitrarily close to the Riemann integral and hence equal to it
 * Darboux => Riemann
-	* let do > 0 be arbitrary
-	* from the existence of the Darboux integral
-		* exists division div. do >= distance (the lower Darboux integral, the higher Darboux integral)
-		* the function is bounded, let m be the supremum of its distance from 0
-	* n := the number of division points in div
-	* di := do / (n * m * 2))
-	* take an arbitrary uniform division dd with section length smaller than di
-	* in the sections that contain division point of d
-		* the Riemann sum in them < (di * n * m) = do / 2
-	* in the other sections the Riemann integral is arbitrarily closely squeezed by the lower and upper Darboud integrals
-	* thus do >= distance (Reimann sum on dd, Darboux integral)
+	* intuitively
+		* take a close enough Darboux sum pair with common division D
+		* we will show that Riemann sums with fine enough uniform divisions are also close to the Darboux integral
+		* take an arbitrary uniform division R which is resolving enough
+		* the resolution of R can be big enough so that (the sum of the support sizes of all the sections that contain divisor point of D) is negligable
+		* in the rest of the sections: all possible Riamann sums are squezzed by the Darboux sums
+	* with more formalism
+		* let do > 0 be arbitrary
+		* from the existence of the Darboux integral
+			* exists division div. do >= distance (the lower Darboux integral, the higher Darboux integral)
+			* the integrand is bounded, let m be the supremum of its distance from 0
+		* n := the number of division points in div
+		* di := do / (n * m * 2))
+		* take an arbitrary uniform division dd with section length smaller than di
+		* in the sections that contain division point of div
+			* the Riemann sum in them < (di * n * m) = do / 2
+		* in the other sections the Riemann integral is arbitrarily closely squeezed by the lower and upper Darboud integrals
+		* thus do >= distance (Reimann sum on dd, Darboux integral)

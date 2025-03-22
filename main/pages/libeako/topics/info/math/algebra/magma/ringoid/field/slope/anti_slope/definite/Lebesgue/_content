@@ -1,4 +1,5 @@
 \ id giuumbfatzrxmmul
+* the usefulness of the Lebesgue integral is not computing it for exotic functions but as a tool for proving theorems
 * "indicator function" of a set outputs 1 on the set and 0 elsewhere
 * a "simple function" outputs finite number of values and for each its inverse image is measurable
 	* standard form of simple function f
