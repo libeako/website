@@ -1,5 +1,5 @@
 \ id ipkcqkocdghpyiwo
-* the "division" of a real interval [a - b] is represented by a set of point inside it, dividing the interval into sub-intervals
+* the "division" of a real interval [a .. b] is represented by a set of points inside it, dividing the interval into sub-intervals
 * the length of the biggest sub-interval is said to be the "norm" of the division by some mathematicians
 * alternative names
 	* "partition"

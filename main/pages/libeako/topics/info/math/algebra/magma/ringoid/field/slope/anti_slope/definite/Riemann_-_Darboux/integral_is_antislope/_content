@@ -2,24 +2,29 @@
 * this is said to be the 'fundamental theorem of calculus'
 * proposition
 	* let f be a function, continuous on interval [a, b]
-	* slope (fun x -> integral f [a, x]) = f
+	* slope (x -> integral [a, x] f) = f
 * proof
-	* slope (fun x -> integral f [a, x]) - f
+	* slope (x -> integral [a, x] f) - f
 	* =
 		* by interpreting 'slope'
-	* limit (fun h -> (integral f [a, x + h] - integral f [a, x]) / h - f x) 0
+	* limit (h -> (integral [a, x + h] f - integral [a, x] f) / h - f x) 0
 	* =
 		* by integral over divided interval
-	* limit (fun h -> (integral f [x, x + h]) / h - f x) 0
+	* limit (h -> (integral [x, x + h] f) / h - f x) 0
 	* =
-	* limit (fun h -> (integral f [x, x + h] - h * f x) / h) 0
+	* limit (h -> (integral [x, x + h] f - h * f x) / h) 0
 	* =
 		* by intergal of constant function
-	* limit (fun h -> (integral f [x, x + h] - integral [x, x + h] (const (f x))) / h) 0
+	* limit (h -> (integral [x, x + h] f - integral [x, x + h] (const (f x))) / h) 0
 	* = 
-	* limit (fun h -> (integral (f - (const (f x))) [x, x + h]) / h) 0
+	* limit (h -> (integral [x, x + h] (f - (const (f x)))) / h) 0
 	* =
 		* maximize (f - (const (f x))
 			* this is possible because f is continuous
 		* the norm of the bound is arbitrarily small as h converges to 0
 	* 0
+* a "second" part of the theorem exists too
+	* it does not require f to be continuous
+	* i omit it because
+		* the proof of it is lengthy
+		* probably rare to want to use for not coninuous f

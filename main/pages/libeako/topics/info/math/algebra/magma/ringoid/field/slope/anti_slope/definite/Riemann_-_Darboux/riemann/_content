@@ -1,9 +1,29 @@
 \ id ewegqxhylyycrfen
 * a 'Riemann sample' on a division is a set of points, one from each section of the division
 * a 'Riemann sum' is
-	* sum {forall section of the division. the function's output at the sample of the section * the length of the section}
-* the 'Riemann integral' exists and equals to l iff 
-	* forall dy > 0. exists dx > 0. forall division
-		* dx >= the max section length of the division
-		* =>
-		* dy >= distance (the Riemann sum over that division) l
+	* sum {forall partition of the division. the function's output at the sample of the section * the volume of the partition}
+* definition
+	* 2 versions exist
+		* both state the existance of some Riemann sums arbitrarily close to the integral value and the adherence of all Riemann sums on all samples of certain kind; the difference is in that kind - (smaller mesh norm) or (refinement of sample)
+	* the 'Riemann integral' exists and equals to l iff 
+		* forall dy > 0
+			* this is where the 2 variants branch
+				* variant 'smaller mesh norm'
+					* exists dx > 0. forall division d. forall Riemann sum r over d
+						* dx >= the max section length of d
+						* =>
+						* dy >= distance r l
+				* variant 'sample refinement'
+					* exists sample s
+						* forall refinement rs of s
+							* forall r (Riemann sum over rs)
+								* distance r l <= dy
+			* equivalence between the 2 variants
+				* smaller mesh norm => sample refinement
+					* proof is trivial
+						* refined sample have smaller norm
+				* sample refinement => smaller mesh norm
+					* sample refinement => Darboux integral exists and equals l
+					* Darboux integral exists and equals l => smaller mesh norm
+						* see equivalence of the Riemann and Darboux representations
+							\ links-to internal ndyromovwzhwigwi
