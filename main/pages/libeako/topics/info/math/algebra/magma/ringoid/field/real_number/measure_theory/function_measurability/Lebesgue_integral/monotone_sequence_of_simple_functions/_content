@@ -29,7 +29,7 @@
 			* hence (limit (g >>> integral)) >= m p * l
 	* simple function
 		* similarly to the previous theorem, but make the limit a simple function on the whole space instead of a constant on a measurable subset
-		* proof is trivial, just traverse the base sets of the limit function [where it is a constant] and for each of them use the previous theorem
+		* proof is trivial, just traverse the base sets of the limiting function [where it is a constant] and for each of them use the previous theorem
 * approximating functions
 	* take arbitrary
 		* f : S -> Extended Real+
@@ -60,15 +60,21 @@
 				* all non-negative measurable
 				* monotone leniently increasing
 				* g point-wise converges to f
-				* forall n : Nat+. 
+				* forall n : Nat+
 					* with
 						* h := flip power 2
 						* forall x : S. (norm (f x - g n x) <= 1 / n) or (g n x > h n)
 		* proof
-			* we devide the codomain to 2 parts
+			* plan
+				* construct partitions of the codomain with ever increasing resolution
+				* consider the inverse images of the partition members; they are measurable, because f is measurable
+				* construct the searched function so that it is a simple function with this base partitioning of its domain; for each partition. map the lower end of the corresponding codomain interval
+				* for each codomain interval
+					* the size of the interval is a limit of the difference between the f and the constructed approximator function; but that size is decreasing tas the resolution of the partitioning increases
+			* we devide the codomain to 2 parts, becasue the infinity case needs to be handled differently
 				* [0 .. h n)
 				* [h n .. +infinity]
-			* we further divide the first partition to m sub-partitions each with length (1 / h n)
+			* we further divide the first partition to sub-partitions each with length (1 / h n)
 				* hence the number of such sub-partition is (power 2 (h n))
 			* as n converges to infinity
 				* h converges to infinity [the first part covers every finite value eventually]
@@ -141,7 +147,7 @@
 			* the other direction inequality is trivial, as forall n. g n <= f
 		* the condition (g is increasing) of the theorem is necessary
 			* example
-				* (T, M, m) := the standard counting measure on the naturals
+				* m := the standard counting measure on the naturals
 				* g n x := 
 					* if x = n
 						* then 1

@@ -7,7 +7,7 @@
 	* r : (Real+ -> Real+) := (1 /)
 * it is continous; hence it has antislope; 
 	* let the name of the antislope be (ln : Real+ -> Real+)
-	* of the one definite antislopes takes 0 at 1 [ln 1 = 0]
+	* choose the definite one that takes 0 at 1 [ln 1 = 0]
 * forall x y. ln (x * y) = ln x + ln y
 	* proof
 		* f x y := ln (x * y) - ln x - ln y
