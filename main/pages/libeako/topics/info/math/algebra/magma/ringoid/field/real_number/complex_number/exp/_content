@@ -4,9 +4,7 @@
 * exp : Complex -> Complex
 	* definitions
 		* as power series
-			* with
-				* shifted n z := power n z / factorial n
-			* fun z -> series-from 0 (fun n -> shifted n z)
+			* z -> series-from 0 (n -> power n z / factorial n)
 			* this is valid definition, as this series converges
 				* this proposition is a special case of
 					* power series over factorial

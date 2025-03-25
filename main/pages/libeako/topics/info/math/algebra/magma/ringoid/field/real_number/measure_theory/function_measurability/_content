@@ -25,17 +25,5 @@
 	\ links-to internal ubpcmljjbniytygd
 * squeeze theorem
 	\ links-to internal lvhilqtghqqjffha
-* definition of the 'indicator' function
-	* indic : Set t -> t -> Real := s x -> if (x is element of s) then 1 else 0
-* definition of 'step function', 'simple function'
-	* X, Y : Type
-		* Y is a field
-	* P : Set (Set X)
-		* finite
-	* k : P -> Y
-	* f : X -> Y = sum (lift2 (*) k indic)
-	* if P consists of invtervals      then f is a step   function
-	* if P consists of measurable sets then f is a simple function
-	* f is said to be in 'canonical' [or 'standard'] form iff (P is disjunct and all outputs of k are different)
-		* the canonical form is unique
-			* proof is easy
+* Lebesgue integral
+	\ links-to internal giuumbfatzrxmmul
