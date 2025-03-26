@@ -1,0 +1,21 @@
+\ id isftydfvawhpvhus
+* proposition
+	* if
+		* X T : Set
+		* X is measured
+		* f : T -> X -> Real
+			* forall (x : X). flip f x is continuous
+		* g : X -> Real
+			* integrable
+		* forall (x : X). forall (t : T). norm (f t x) <= g x
+	* then
+		* f is integrable
+		* (f >>> integral) is continuous
+* proof
+	* the integrability of (f _) is implied by the dominance of the integrable (g _)
+	* F t := integral (f t)
+	* the continuity of F is equivalent to
+		* forall convergent (k : Nat -> T). F (limit k) = limit (k >>> F)
+		* this is given by
+			* the dominated convergence theorem of Lebesuge integrals
+				\ links-to internal kmhscotxvyuvfaxq

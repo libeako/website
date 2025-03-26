@@ -1,0 +1,36 @@
+\ id kmhscotxvyuvfaxq
+* proposition
+	* if
+		* f : Nat+ -> S -> Extended Real
+			* pointwise convergent
+			* all measurable
+		* g : S -> NonNegative Extended Real
+			* integrable
+		* forall (n : Nat+). norm (f n) <= g
+	* then
+		* integral (pointwise-limit f) = limit (f >>> integral)
+* proof
+	* by
+		* the theorem about the measurability of limit of sequence of measurable functions
+			\ links-to internal ubpcmljjbniytygd
+		* we get that (pointwise-limit f) is measurable
+	* the integrability of (pointwise-limit f) is implied by it being dominated by g
+	* this theorem is a generalization of the
+		* Fatou lemma
+			\ links-to internal ewcysgnuepqzmyyc
+		* which
+			* has the additional condition which is that the functions in the sequence are non-negative
+				* this can be remedied by shifting our functions upward by any function that is high engough to do the shift above zero everywhere
+				* this is why this theorem requires 'g'
+			* its conclusion is for 'liminf' instead of 'limit'
+				* this can be remedied by invoking the lemma from both sides [normally and in opposite direction]
+	* with this in mind we get the following statements from the Fatou lemma
+		* integral (g + pointwise-liminf f) <= liminf (g + f >>> integral)
+		* integral (g - pointwise-liminf f) <= liminf (g - f >>> integral)
+	* we need g no longer
+		* integral (g + pointwise-liminf f) <= liminf (g + f >>> integral)
+		* integral (g - pointwise-liminf f) <= liminf (g - f >>> integral)
+	* get rid of the negativities
+		* integral (pointwise-liminf f) <= liminf (f >>> integral)
+		* integral (pointwise-liminf f) >= limsup (f >>> integral)
+	* by combining these 2 inequalities by the transitivity of the inequality we get the conclusion of this theorem

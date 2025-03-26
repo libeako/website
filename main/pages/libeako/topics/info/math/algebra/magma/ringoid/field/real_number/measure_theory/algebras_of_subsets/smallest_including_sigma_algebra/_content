@@ -19,3 +19,10 @@
 	* s := intersect SS
 	* remains to prove (c s)
 		* just go through the definitions and whenever (you need to prove about a set that it is a member of s) then observe that it is a member of all the member-sets of SS
+* construction
+	* add to x all the possible (maxium countably infinite) unions of its elements
+	* add to x all the possible (maxium countably infinite) intersections of its elements
+	* ... - and so on forever
+	* proposition
+		* this construction produces the smallest sigma algebra containing x
+	* proof is easy

@@ -1,0 +1,35 @@
+\ id jouefbrfxvpjjuwt
+* definition of the 'indicator' function
+	* indic : Set t -> t -> Real := s x -> if (x is element of s) then 1 else 0
+* definition of 'step function', 'simple function'
+	* X, Y : Type
+		* Y is a field
+	* P : Set (Set X)
+		* finite
+		* name of these may be 'base sets' or 'support sets'
+	* k : P -> Y
+	* f : X -> Y = sum (lift2 (*) k indic)
+	* if P consists of invtervals      then f is a step   function
+	* if P consists of measurable sets then f is a simple function
+	* f is said to be in 'canonical' [or 'standard'] form iff (P is disjunct and all outputs of k are different)
+		* the canonical form is unique
+			* proof is easy
+* the Lebesgue integral of a simple non-negative function in canonical form is as you expect
+	* null-sets do not contribute to the set, not even if the output of the integrated function is infinite
+		* this is the root of the (0 * infinite = 0) convention
+	* we can deviate from the standard form of the function to be integrated by dropping the condition that the output values are all distinct, we still get the same integral value
+		* this implies that the choice of the base partitioning does not matter either, as any 2 can be refined to a common one by taking the intersections
+* integral of sum of finite number of non-negative simple functions = the sum of the integrals
+	* proof is trivial: traverse all the intersections of the measurable base-sets
+* if f1, f2 are simple non-negative functions and (f1 < f2) then (integral f1 < integral f2)
+	* proof is trivial: form a common domain partition by intersections of the domain partitions of f1 and f2
+* integral of non-negative functions
+	* f : S -> Hight
+		* non-negative, measurable
+	* integral f := sup (lift integral (all non-negative simple function g where (g <= f)))
+	* this definition is a generalization of (integral of simple functions)
+		* proof is trivial
+* monotone leniently increasing sequence of non-negative simple functions
+	\ links-to internal fvpdpfshqjsgtmyp
+* Fatou lemma
+	\ links-to internal ewcysgnuepqzmyyc

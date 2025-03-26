@@ -1,0 +1,23 @@
+\ id mqdkshbinqtmygwh
+* Hight := Extended NonNegative Real
+	* the output type of the functions of interest here
+* InF := (Nat+ -> (S -> Hight)), where the sequence is monotone leniently increasing
+* of non-negative simple functions
+	\ links-to internal jouefbrfxvpjjuwt
+* monotone convergence theorem
+	\ links-to internal mgrxyqxacdkpuwtd
+* the integral
+	* is scalar-multiplicative
+		* proof is trivial
+	* is additive
+		* proof is trivial application of
+			* the representation of the integral with monotone sequence
+				\ links-to internal enagrkkltaxhivfn
+	* is monotone
+		* forall f g. (f <= g) => (integral f <= integral g)
+			* proof
+				* integral g = integral (f + (g - f)) = integral f + integral (g - f)
+				* >=
+					* implied by (g - f >= 0)
+				* integral f
+* a non-negative function is "integrable" iff it is measurable and the integral is finite

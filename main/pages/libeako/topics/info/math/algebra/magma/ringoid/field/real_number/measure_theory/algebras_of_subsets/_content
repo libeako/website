@@ -7,12 +7,12 @@
 		* has binary intersection
 		* complementer is semi-closed
 			* forall member sets. its complementer is a finite union of member sets
-* "algebra"s are algebras having proper complementer method and intersections of not too many sets
+* 'algebra's are algebras having proper complementer method and intersections of not too many sets
 	* having proper complementer method makes requirements for either union or intersection equivalent to each other
 	* a "covering algebra" of subsets is one which contains the intersection of 0 number of subsets
 		* the result of such [0-argument] intersection is the full base set
 		* hence it contains {} too, via the complementer
-		* an 'algebra of sets' is a covering algebra which can union and intersection finite number of subsets
+		* an 'algebra of sets' is a covering algebra which can union and intersect finite number of subsets
 			* algebras are semialgebras too
 			* building one from a semi-algebra
 				\ links-to internal apaucufqurnwkqjh
@@ -23,3 +23,14 @@
 				* the Borel sets are the smallest sigma algebra of sets including the open sets [or all the closed sets]
 					* see smallest including sigma algebra
 						\ links-to internal eupxeczurplflvll
+* 'pi-system'
+	* definition
+		* an variety of non-empty algebras of subsets which is closed under non-empty finite intersections
+	* 'smallest' or 'generated' pi-system
+		* proposition
+			* forall set s of subset
+				* the intersection of all pi-systems containing s is a pi-system; it is the smallest such pi-system and is comprised by all the non-empty finite intersections among elements of s
+			* the proof is trivial
+* 'lambda-system'
+	* definition
+		* same as sigma-algebra, except that the union ability is on disjoint subsets only

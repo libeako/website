@@ -1,0 +1,18 @@
+\ id fvpdpfshqjsgtmyp
+* lower bound for limit of integrals of an InF
+	\ links-to internal  mryphwddxicmuzmp
+* convergence by InF
+	* take arbitrary
+		* f : S -> Hight
+			* measurable
+	* representation with approximating sequence
+		\ id enagrkkltaxhivfn
+		* proposition
+			* exists monotone leniently increasing sequence of simple on-negative functions g, point-wise converging to f, such that
+				* limit (g >>> integral) = integral f
+		* proof
+			* existence
+				\ links-to internal vgndtkinbxijcvdf
+			* integral equality
+				\ links-to internal birkhvgnkzkzupbd
+		* with this theorem in hand it is easy to prove (commutation between function addition and integration)

@@ -1,0 +1,53 @@
+\ id enyxmdajazdorylx
+* proposition
+	* if
+		* X : Set
+		* f : Real -> X -> Real
+			* forall t. (f t) is measurable
+			* forall x. (flip f x) has slope
+			* exists (u : Real). (f u) is integrable
+		* g : Real -> Real
+			* forall x, t. slope (flip f x) t <= g x
+	* then
+		* forall t. (f t ) is integrable
+		* forall (c : Real). slope (integral (f c)) = integral (x -> slope (flip f x) c)
+			* -- integral and slope commute
+* proof
+	* forall (v : Real). not (v = u) =>
+		* by
+			* the mean value theorem
+				\ links-to internal fspresemhcnedkhm
+		* exists (s : Real)
+			* norm (f v x - f u x)
+			* <=
+				* by the mean value theoream
+			* slope (flip f x) s * norm (v - u)
+			* <=
+				* assumption of this theorem
+			* <= g x * norm (v - u)
+		* hence forall x
+			* norm (f v x) <= norm (f u x) + g s * norm (v - u)
+		* hence (f v) is integrable
+	* forall (c : Real)
+		* slope (integral (f c))
+		* =
+		* limit (at c) (t -> ((f >>> integral) t - (f >>> integral) c) / (t - c))
+		* =
+		* limit (at c) (t -> (integral (f t) - integral (f c)) / (t - c))
+		* =
+		* limit (at c) (t -> integral (f t - f c) / (t - c))
+		* =
+			* by
+				* the dominated convergence theorem
+					\ links-to internal kmhscotxvyuvfaxq
+				* the application of which requires
+					* ((f t - f c) / (t - c)) be dominated by a function
+				* g is such a function
+					* by
+						* the mean value theorem
+							\ links-to internal fspresemhcnedkhm
+		* integral (x -> limit (at c) (t -> (f t x - f c x) / (t - c)))
+		* =
+		* integral (x -> slope (t -> f t x) c)
+		* =
+		* integral (x -> slope (flip f x) c)

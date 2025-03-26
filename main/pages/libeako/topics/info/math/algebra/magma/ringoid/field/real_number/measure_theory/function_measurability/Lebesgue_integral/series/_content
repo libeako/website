@@ -1,0 +1,29 @@
+\ id zrngveixekjgocjq
+* integration here is on the set of positive natural numbers with the counting measure [which maps sets to their number of elements]
+* proposition
+	* if
+		* f : Nat+ -> Extended Real
+	* then
+		* sum f = integral f
+* proof
+	* assume that f is non-negative
+		* g : Nat+ -> Nat+ -> Extended Real
+			* := n k -> if k <= n then f k else 0
+			* thus (g _) is like f but a tail section of it made zero
+			* g is monotone leniently increasing
+		* sum f = 
+		* limit (n -> sum (over [1 .. n]) f) =
+		* limit (n -> sum (over [1 .. n]) (g n))
+		* =
+			* this is a finite summation, hence the equality is trivially true
+		* limit (n -> integral (restrict-to ([1 .. n]) g n))
+		* =
+			* we can drop the restriction, because everywhere else g outputs zero
+		* limit (n -> integral (g n))
+		* =
+			* monotone convergence theorem
+				\ links-to internal mgrxyqxacdkpuwtd
+		* integral (limit g) = integral f
+	* extend to arbitrary f
+		* f = f+ + f-
+		* apply the non-negative part of this theorem (which is already proved) for each component
