@@ -1,0 +1,209 @@
+\ id iaetwpdttksgfcvc
+* i will prove that (the difference of them) = (const 0)
+* -
+	* slope (z -> series (from 0) (n -> s n * power n z))
+	* z -> series (from 1) (n -> s n * n * power (n - 1) z)
+* =
+	* from difference of functions to function of differences
+* z ->
+	* -
+		* limit (at z) ((x -> series (from 0) (n -> s n * power n x) - series (from 0) (n -> s n * power n z)) / (x - z))
+		* series (from 1) (n -> s n * n * power (n - 1) z)
+* remains to prove that forall z. the output of the (z ->) lambda is 0
+* -
+	* limit (at z) ((x -> series (from 0) (n -> s n * power n x) - series (from 0) (n -> s n * power n z)) / (x - z))
+	* series (from 1) (n -> s n * n * power (n - 1) z)
+* =
+	* the second term does not depend on x, hence it can be moved under to the limit
+* limit
+	* at z
+	* x -> 
+		* -
+			* (series (from 0) (n -> s n * power n x) - series (from 0) (n -> s n * power n z)) / (x - z)
+			* series (from 1) (n -> s n * n * power (n - 1) z)
+* it is enough to prove
+	* exists M. (the output of the (x ->) lambda) <= M * norm (x - z)
+* the output of the (x ->) lambda)
+* =
+* -
+	* (series (from 0) (n -> s n * power n x) - series (from 0) (n -> s n * power n z)) / (x - z)
+	* series (from 1) (n -> s n * n * power (n - 1) z)
+* =
+	* combining the 2 series of the first term
+* -
+	* series (from 0) (n -> s n * (power n x - power n z)) / (x - z)
+	* series (from 1) (n -> s n * n * power (n - 1) z)						
+* =
+	* power 0 _ = 1, hence we can drop case (n = 1) from the first term by making its indexing to start from 1 instead of 0
+* -
+	* series (from 1) (n -> s n * (power n x - power n z)) / (x - z)
+	* series (from 1) (n -> s n * n * power (n - 1) z)
+* =
+	* now the 2 series are indexed identically, hence we can combine them
+* series (from 1) (n -> s n * (power n x - power n z) / (x - z) - s n * n * power (n - 1) z)
+* =
+	* de-distribution of (s n)
+* series (from 1) (n -> s n * ((power n x - power n z) / (x - z) - n * power (n - 1) z))
+* =
+	* just reformat
+* series (with n from 1)
+	* *
+		* s n
+		* -
+			* (power n x - power n z) / (x - z)
+			* n * power (n - 1) z
+* =
+	* in case (n = 1) the term = 0
+* series (with n from 2)
+	* *
+		* s n
+		* -
+			* (power n x - power n z) / (x - z)
+			* n * power (n - 1) z
+* it is enough to prove
+	* exists v : Nat+ -> Complex
+		* and
+			* forall n
+				* <=
+					* norm
+						* *
+							* s n
+							* -
+								* (power n x - power n z) / (x - z)
+								* n * power (n - 1) z
+					* norm (x - z) *  v n
+			* sum v is convergent
+	* because then M := sum v
+* it is enough to prove
+	* exists w : Nat+ -> Complex
+		* and
+			* forall n
+				* <=
+					* norm
+						* -
+							* (power n x - power n z) / (x - z)
+							* n * power (n - 1) z
+					* w n
+			* limit (n -> w (n + 1) / w n) <= the radius of convergence
+		* because then
+			* v := lift2 (*) a w
+			* sum v is convergent by the ratio test
+* -
+	* (power n x - power n z) / (x - z)
+	* n * power (n - 1) z
+* =
+* -
+	* sum (with k over [0 .. n - 1]) (power k x * power (n - 1 - k) z)
+	* n * power (n - 1) z
+* =
+* -
+	* sum (with k over [0 .. n - 1]) (power k x * power (n - 1 - k) z)
+	* sum (with k over [0 .. n - 1]) (power (n - 1) z)
+* =
+* sum (with k over [0 .. n - 1]) 
+	* -
+		* power k x * power (n - 1 - k) z
+		* power (n - 1) z
+* =
+* sum (with k over [0 .. n - 1]) 
+	* * 
+		* power (n - 1 - k) z
+		* -
+			* power k x
+			* power k z
+* =
+* sum (with k over [0 .. n - 1]) 
+	* * 
+		* power (n - 1 - k) z
+		* * 
+			* x - z
+			* sum (with m over [0 .. k - 1])
+				* power m x * power (k - 1 - m) z
+* norm
+	* sum (with k over [0 .. n - 1]) 
+		* * 
+			* power (n - 1 - k) z
+			* * 
+				* x - z
+				* sum (with m over [0 .. k - 1])
+					* power m x * power (k - 1 - m) z
+* <=
+	* by triangular comparison
+* sum (with k over [0 .. n - 1]) 
+	* * 
+		* power (n - 1 - k) (norm z)
+		* * 
+			* norm (x - z)
+			* sum (with m over [0 .. k - 1])
+				* power m (norm x) * power (k - 1 - m) (norm z)
+* =
+	* move (norm (x - z)) out
+* *
+	* norm (x - z)
+	* sum (k over [0 .. n - 1]) 
+		* * 
+			* power (n - 1 - k) (norm z)
+			* sum (with m over [0 .. k - 1])
+				* power m (norm x) * power (k - 1 - m) (norm z)
+* <=
+	* exists q in the disk of convergence such that (norm q < max (norm x) (norm z))
+* *
+	* norm (x - z)
+	* sum (with k over [0 .. n - 1]) 
+		* * 
+			* power (n - 1 - k) (norm q)
+			* sum (with m over [0 .. k - 1])
+				* power m (norm q) * power (k - 1 - m) (norm q)
+* =
+	* elminate the usage of m
+* *
+	* norm (x - z)
+	* sum (with k over [0 .. n - 1]) 
+		* * 
+			* power (n - 1 - k) (norm q)
+			* sum (with m over [0 .. k - 1])
+				* power (k - 1) (norm q)
+* =
+	* eliminate sum over m
+* *
+	* norm (x - z)
+	* sum (with k over [0 .. n - 1]) 
+		* * 
+			* power (n - 1 - k) (norm q)
+			* k * power (k - 1) (norm q)
+* =
+	* cancel (power k)
+* *
+	* norm (x - z)
+	* sum (with k over [0 .. n - 1]) 
+		* k * power (n - 2) (norm q)
+* =
+* *
+	* norm (x - z)
+	* power (n - 2) (norm q)
+	* sum (with k over [0 .. n - 1]) k 
+* =
+	* sum (over [1 .. e]) id = e * (e + 1) / 2
+* *
+	* norm (x - z)
+	* power (n - 2) (norm q)
+	* (n - 1) * n / 2
+* w := n -> ((n - 1) * n / 2) * power (n - 2) (norm q)
+* remains to check the limit of the incrementation ratio
+	* limit (n -> w (n + 1) / w n)
+	* = 
+	* limit
+		* n -> 
+			* /
+				* (n * (n + 1)) * power (n - 1) (norm q)
+				* ((n - 1) * n) * power (n - 2) (norm q)
+	* =
+	* limit
+		* n ->
+			* /
+				* (n + 1) * norm q
+				* n - 1
+	* = 
+	* norm q
+	* <
+	* the radius of convergence

@@ -1,0 +1,31 @@
+\ id vhymynnsmvawyols
+* the conclusion of this theorem consists of 2 parts: slope, anti-slope; the anti-slope part is a trivial consequence of the slope part
+* if (norm z > r)
+	* (s n * power n z) is divergent
+	* hence
+	* s n * n * power (n - 1) z =
+	* s n * power n z * (n / z)
+	* is also absolutely divergent
+* if (norm z < r)
+	* let q be a real such that (norm z) < q < r
+	* then
+	* q is pozitive
+	* norm (s n * n * power (n - 1) z) =
+	* norm (s n * n * power (n - 1) ((z * q / q)) =
+	* norm (s n * n * power (n - 1) (z / q) * power (n - 1) q =
+	* norm (n * power (n - 1) (z / q) * s n * power (n - 1) q =
+	* norm (n * power (n - 1) (z / q)) * norm (s n * power (n - 1) q)
+	* <=
+		* norm (n * power (n - 1) (z / q)) is bounded
+			* because the series (n * power (n - 1) (z / q)) is convergent
+				* because
+					* the radius of convergence of (x -> series (n * power (n - 1) x) is 1
+						* this is easy to see from the ratio test
+					* z / q < 1
+		* let m be the name of an upper bound
+	* m * norm (s n * power (n - 1) q) =
+	* (m / q) * norm (s n * power n q)
+	* series (s n * power n q) is absolutely convergent
+		* because of
+			* (s n * power n q) is the original series component
+			* q < r

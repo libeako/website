@@ -1,8 +1,8 @@
 \ id rxmbghycvgeishha
 * proposition
 	* with
-		* normed vector space V
-		* s : Nat+ -> V
+		* normed field F
+		* s : Nat+ -> F
 		* l := lim-sup (lift2 power (1 /) (s >>> norm))
 		* ss := lift2 power id s
 	* then

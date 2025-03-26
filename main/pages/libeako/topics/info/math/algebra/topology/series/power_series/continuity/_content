@@ -1,0 +1,7 @@
+\ id dqoczsusadfbptqn
+* proposition
+	* each power series is continous in the interior of the sphere of convergence
+* proof
+	* the partial sum functions converge uniformly
+		\ links-to internal ymavqgcgzgwxhytv
+	* uniform convergence of functions imply continuity of the limit function

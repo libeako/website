@@ -1,41 +1,32 @@
 \ id jdkplalllvayissd
 * proposition
-	* the norm is multiplicative => the set of values ["x"] where the power series is convergent is a sphere and inside it the series is absolutely convergent
+	* the norm is multiplicative => the set of values ["x"] where a power series is convergent is a sphere and inside it the series is absolutely convergent
 * proof
 	* it is trivial to reduce the proposition to the special case when c is the origo; the following is a proof of only this
-	* if the set of convergence is empty than the proposition is trivially true; otherwise:
-	* rad := sup { for g at where the series is convergent. norm g }
-	* norm s < rad => the series is absolutely convergent at s
-		* proof
-			* let g be in the set of convergence and norm s < norm g < rad
-			* convergent series is bounded
-			* hence {forall n in Nat+. (norm ((coeff n) * power n g))} is bounded; let us name one bound with b
-			* r := s / g
-			* we here study the convergence of
-				* series (fun n -> norm (coeff n * power n s))
-			* s = r * g
-			* norm (coeff n * power n s) =
-			* norm (coeff n * power n (r * g))
-			* =
-				* move r out
-			* norm (coeff n * power n g) * norm (power n r) <=
-			* b * norm (power n r)
-			* (flip power r) is the geometric sequence, whose series is convergent if (norm r < 1) which is true here
-	* if rad is +infinity then the proposition is trivially true [the series is absolutely convergent everywhere]; otherwise:
-	* if norm s > rad then the series is divergent at s, by definition of rad
-	* if (fun n -> norm (coeff (n + 1) / coeff n)) converges [perhaps to an infinity]
-* 
-	* proposition
-		* let the limit of this sequence be l
-		* then the radius of convergence is (1 / l)
-	* proof is by application of the
-		* ratio test
-			\ links-to internal dhfgjhunmdorydak
-* Cauchy-Hadamard theorem
-	* proposition
-		* l := lim-sup (lift2 power (1 /) (coeff >>> norm))
-			* if exists
-		* then the radius of convergence is (1 / l)
-	* proof is by application of the
-		* root test
+	* it is enough to prove
+		* forall s g. (norm s < norm g) and the series is convergent at g => the series is convergent absolutely at s
+	* proof of it
+		* convergent series is Causchy-convergent, hence its components are bounded
+		* hence {forall n in Nat+. (norm ((coeff n) * power n g))} is bounded; let us name one bound with b
+		* r := s / g
+		* we here study the convergence of
+			* series (n -> norm (coeff n * power n s))
+		* s = r * g
+		* norm (coeff n * power n s) =
+		* norm (coeff n * power n (r * g))
+		* =
+			* move r out
+		* norm (coeff n * power n g) * norm (power n r) <= b * norm (power n r)
+		* (flip power r) is the geometric sequence, whose series is convergent absolutely if (norm r < 1) which is true here
+* calculation of the radius of convergence
+	* with the ratio test
+		* see the ratio test
+			* links-to internal dhfgjhunmdorydak
+		* if the limit exists
+			* l := limit (lift1 (/) ((+ 1) >>> coeff) coeff)
+			* the radius of convergence is (1 / l)
+	* with the root test
+		* see the root test
 			\ links-to internal rxmbghycvgeishha
+		* l := lim-sup (lift2 power (1 /) (coeff >>> norm))
+		* then the radius of convergence is (1 / l)

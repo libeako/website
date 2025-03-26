@@ -2,163 +2,33 @@
 * this builds on
 	* the slope of power
 		\ links-to internal ydwlodpxygavwphf
-* slope and anti-slope keep the radius of convergence
-	* this theorem states about the component-wise slope and anti-slope of power series
+* component-wise slope and anti-slope keep the radius of convergence
+	\ id ktzropoowwyfmpkj
 	* this theorem is about the radius of convergence of power series, which is invariant of the center of the power series; hence it is not a loss of generality to assume (center = origo)
 	* proposition
 		* if
-			* r is the radius of convergence of a (series-from 0 (fun n -> s n * power n z))
-		* then r is also the radius of convergence of
-			* series-from 1 (fun n -> s n * n * power (n - 1) z)
-			* series-from 0 (fun n -> (s n / (n+1)) * power (n+1) z)
+			* z : Complex
+			* s : Nat+ -> Complex
+			* r is the radius of convergence of (series (from 0) (n -> s n  * power n z))
+		* then
+			* r is also the radius of convergence of
+				* series (from 1) (n -> s n * n * power (n - 1) z)
+				* series (from 0) (n -> (s n / (n+1)) * power (n+1) z)
+	* proof of convergence
+		\ links-to internal vhymynnsmvawyols
+* each power-series is term-wise integrable and differentiable
 	* proof
-		* the conclusion of this theorem consists of 2 parts: slope, anti-slope; the anti-slope part is an easy consequence of the slope part
-		* if (norm z > r)
-			* (s n * power n z) is absolutely divergent
-			* hence
-			* s n * n * power (n - 1) z =
-			* s n * power n z * (n / z)
-			* is also absolutely divergent
-		* if (norm z < r)
-			* let q be a real such that (norm z) < q < r
-			* then
-			* norm (s n * n * power (n - 1) z) =
-			* norm (s n * n * power (n - 1) ((z * q / q)) =
-			* norm (s n * n * power (n - 1) (z / q) * power (n - 1) q =
-			* norm (n * power (n - 1) (z / q) * s n * power (n - 1) q =
-			* norm (n * power (n - 1) (z / q)) * norm (s n * power (n - 1) q)
-			* <=
-				* norm (n * power (n - 1) q) is bounded
-					* because the series (n * power (n - 1) q) is convergent
-						* because
-							* q / r < 1
-							* the radius of its convergent is 1
-								* this is easy to see from the ratio test
-				* let m be the name of an upper bound
-			* m * norm (s n * power (n - 1) q) =
-			* (m / q) * norm (s n * power n q)
-			* series (s n * power n q) is absolutely convergent
-				* because of the conjunction of
-					* (s n * power n q) is the original series component
-					* q < r
-* slope (fun z -> series-from 0 (fun n -> s n * power n z)) = fun z -> series-from 1 (fun n -> s n * n * power (n - 1) z)
-	* proof
-		* this build on
-			* the binomial coefficient
-				\ links-to internal quhkmspipdwyahgu
-		* let t be arbitrary in the sphere of convergence
-		* g h := 
-			* series-from 0
-				* (fun n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (fun n -> s n * n * power (n - 1) t)
-		* it is enough to prove that (limit (norm g) 0 = 0)
-		* let r be the radius of convergence
-			* by the previous theorem: this is the same for both the original series and its slope
-		* let bh be such that (norm t + bh < r)
-		* let h > 0 be such that (norm h < bh)
-		* norm g =
-		* norm
-			* series-from 0 (fun n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (fun n -> s n * n * power (n - 1) t)
-		* =
-			* power 0 (t + h)) - power 0 t = 0
-		* norm
-			* series-from 1 (fun n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (fun n -> s n * n * power (n - 1) t)
-		* =
-		* norm
-			* series-from 1
-				* fun n ->
-					* s n * (power n (t + h) - power n t) / h - s n * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 1
-				* fun n ->
-					* s n *
-					* (power n (t + h) - power n t) / h - n * power (n - 1) t
-		* =
-		* norm
-			* series-from 1
-				* fun n ->
-					* (s n / h) *
-					* power n (t + h) - power n t - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* power n (t + h) - power n t - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* power n (t + h) - power n t - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* sum {forall i in [0 .. n]. binomial-coeff n i * power (n - i) t * power i h} - power n t - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* sum {forall i in [1 .. n]. binomial-coeff n i * power (n - i) t * power i h} - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h} + binomial-coeff n 1 * power (n - 1) t * power 1 h - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h} + n * power (n - 1) t * h - h * n * power (n - 1) t
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n / h) *
-					* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h}
-		* =
-		* norm
-			* series-from 2
-				* fun n ->
-					* (s n * h) *
-					* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power (i - 2) h}
-		* <=
-		* series-from 2
-			* fun n ->
-				* norm (s n * h) *
-				* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power (i - 2) (norm h)}
-		* <=
-		* series-from 2
-			* fun n ->
-				* norm (s n * h) *
-				* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power (i - 2) bh}
-		* <=
-		* series-from 2
-			* fun n ->
-				* norm (s n * h / bh) *
-				* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power i bh}
-		* <=
-			* adding 2 components
-		* series-from 2
-			* fun n ->
-				* norm (s n * h / bh) *
-				* sum {forall i in [0 .. n]. binomial-coeff n i * power (n - i) (norm t) * power i bh}
-		* =
-		* series-from 2
-			* fun n ->
-				* norm (s n * h / bh) * power n (norm t + bh)
-		* =
-		* *
-			* h / bh
-			* series-from 2
-				* fun n ->
-					* norm (s n * power n (norm t + bh))
-		* <
-			* norm t + bh < r
-		* infinity
-* the theorem remains true if the center of the power series is shifted
+		* the key is the observation of
+			* term-wise integration and differentiation keep the spehere of radius
+				\ links-to internal ktzropoowwyfmpkj
+		* being convergent power serieses: they converge uniformly on compact subsets of the sphere of convergence
+			* see theorem
+				\ links-to internal ymavqgcgzgwxhytv
+		* this implies
+			* the term-wise integrability
+				\ links-to internal hbtgxavwkkaxzref
+			* the term-wise differentiability
+				\ links-to internal aanwugzozbngpuyw
+		* more down-to-earth proofs are possible too, but they are more complex and less elegant
+			* here are ones for the differentiability
+				\ links-to internal viodqoyicnralaym

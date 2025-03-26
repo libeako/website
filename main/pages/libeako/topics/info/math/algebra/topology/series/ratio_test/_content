@@ -2,12 +2,13 @@
 * proposition
 	* if
 		* s is a sequence
-		* limit of (fun n -> norm (s (n + 1) / s n)) exists; lets name it by "l"
+		* r n := norm (s (n + 1) / s n)
 	* then
-		* l > 1 => (series s) is divergent
-		* l < 1 => (series s) is convergent
+		* if (limsup r) < 1 then s converges absolutely
+		* if (liminf r) > 1 then s diverges
 * proof
-	* l > 1 the components of the series grow, hence the series diverges
-	* l < 1
-		* the norms of Cauchy segments of the series are smaller then the Cauchy segments of the norms of the components [triangular inequality of the norm], which are smaller than of the geometric series, which converges
+	* if (liminf r > 1)
+		* the components of the series grow at almost each step, hence the series diverges
+	* if (limsup r < 1)
+		* (s >>> norm) decreases faster than geometric series, hence s is absolutely convergent
 * other names may be "Cauchy ratio test", "D'Alambert's test"

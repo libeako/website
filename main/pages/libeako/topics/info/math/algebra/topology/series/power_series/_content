@@ -4,13 +4,11 @@
 	* field F
 	* c : V
 		* the center of the power series
-	* coefficient : Nat -> F
+	* coefficient : Nat+ -> F
 * means the series
-	* fun (x : V) -> series (fun n -> coefficient n * (power n (x - c)))
+	* (x : V) -> series (lift2 (*) coefficient (flip power (x - c)))
 * the center of the series can be assumed to be 0, usually in proofs, without loss of generality
 	* i also may do so without further note
-* uniform convergence
-	\ links-to internal ymavqgcgzgwxhytv
 * special case
 	* "geometric series"
 		* definition
@@ -21,13 +19,17 @@
 			\ id uzlvgovkmxcpwzjn
 			* proof
 				* the partial sums of geometric series are
-					* fun n x -> (1 - power n x) / (1 - x)
+					* n x -> (1 - power n x) / (1 - x)
 					* see formula
 						\ links-to internal kmpydpduqwlgygzj
 					* if norm x < 1 then this converges to (1 / (1 - x)) as n converges to infinity
 					* if norm x >= 1 then this is divergent, as is not Cauchy
 * the set of values where the power series is convergent is the "sphere of convergence"
 	\ links-to internal jdkplalllvayissd
+* uniform convergence
+	\ links-to internal ymavqgcgzgwxhytv
+* continuity
+	\ links-to internal dqoczsusadfbptqn
 * over factorial
 	\ id obqjeeuatqmiyezv
 	* where (coeff n = 1 / factorial n)

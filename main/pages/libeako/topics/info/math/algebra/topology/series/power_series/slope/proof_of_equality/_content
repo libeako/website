@@ -1,0 +1,7 @@
+\ id viodqoyicnralaym
+* proposition
+	* slope (z -> series-from 0 (n -> s n * power n z)) = z -> series-from 1 (n -> s n * n * power (n - 1) z)
+* simple proof
+	\ links-to internal iaetwpdttksgfcvc
+* unnecessarily complex proof via binominal coefficients
+	\ links-to internal xvhmaslanyvlycuf

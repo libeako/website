@@ -1,0 +1,118 @@
+\ id xvhmaslanyvlycuf
+* this builds on
+	* the binomial coefficient
+		\ links-to internal quhkmspipdwyahgu
+* let t be arbitrary in the sphere of convergence
+* g h := 
+	* series-from 0 (n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (n -> s n * n * power (n - 1) t)
+* it is enough to prove that (limit (norm g) 0 = 0)
+* let r be the radius of convergence
+	* by the previous theorem: this is the same for both the original series and its slope
+* let bh be such that (norm t + bh < r)
+* let h > 0 be such that (norm h < bh)
+* norm g =
+* norm
+	* series-from 0 (n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (n -> s n * n * power (n - 1) t)
+* =
+	* power 0 (t + h)) - power 0 t = 0
+* norm
+	* series-from 1 (n -> s n * (power n (t + h) - power n t) / h) - series-from 1 (n -> s n * n * power (n - 1) t)
+* =
+* norm
+	* series-from 1
+		* fun n ->
+			* s n * (power n (t + h) - power n t) / h - s n * n * power (n - 1) t
+* =
+* norm
+	* series-from 1
+		* fun n ->
+			* s n *
+			* (power n (t + h) - power n t) / h - n * power (n - 1) t
+* =
+* norm
+	* series-from 1
+		* fun n ->
+			* (s n / h) *
+			* power n (t + h) - power n t - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* power n (t + h) - power n t - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* power n (t + h) - power n t - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* sum {forall i in [0 .. n]. binomial-coeff n i * power (n - i) t * power i h} - power n t - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* sum {forall i in [1 .. n]. binomial-coeff n i * power (n - i) t * power i h} - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h} + binomial-coeff n 1 * power (n - 1) t * power 1 h - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h} + n * power (n - 1) t * h - h * n * power (n - 1) t
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n / h) *
+			* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power i h}
+* =
+* norm
+	* series-from 2
+		* fun n ->
+			* (s n * h) *
+			* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) t * power (i - 2) h}
+* <=
+* series-from 2
+	* fun n ->
+		* norm (s n * h) *
+		* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power (i - 2) (norm h)}
+* <=
+* series-from 2
+	* fun n ->
+		* norm (s n * h) *
+		* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power (i - 2) bh}
+* <=
+* series-from 2
+	* fun n ->
+		* norm (s n * h / bh) *
+		* sum {forall i in [2 .. n]. binomial-coeff n i * power (n - i) (norm t) * power i bh}
+* <=
+	* adding 2 components
+* series-from 2
+	* fun n ->
+		* norm (s n * h / bh) *
+		* sum {forall i in [0 .. n]. binomial-coeff n i * power (n - i) (norm t) * power i bh}
+* =
+* series-from 2
+	* fun n ->
+		* norm (s n * h / bh) * power n (norm t + bh)
+* =
+* *
+	* h / bh
+	* series-from 2
+		* fun n ->
+			* norm (s n * power n (norm t + bh))
+* <
+	* norm t + bh < r
+* infinity

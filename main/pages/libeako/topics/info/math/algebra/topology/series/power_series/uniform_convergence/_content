@@ -1,19 +1,21 @@
 \ id ymavqgcgzgwxhytv
 * proposition
-	* if
-		* 0 < t < the radius of convergence
-		* the 'inner sphere' is the center sphere with radius t
-	* then the power series is uniformly convergent on the inner sphere
+	* each power series is uniformly convergent on each compact subset of their sphere of convergence
 * proof
-	* exists a point b (inside the sphere of convergence) and (outside of the inner sphere)
+	* take arbitrary compact subset of the sphere of convergence
+	* exists point b (inside the interior of the sphere of convergence) and (outside s)
+		* (distance origo) is a continuous function
+		* continuous function on compact set has maximum place
+		* that maximum-place is inside the interior of the sphere of convergence
+		* hence that maximum radius < the radius of convergence
 	* i will show a bound for the norms of the tails of the series that (does not depend on the position in the domain) and (converges to zero)
 	* forall part of the series. forall x inside the inner sphere
-		* the norm of the sum of the part at x
+		* the norm of the sum of the parts at x
 		* <=
 			* because of the triangular inequality of the norm
-		* the sum of the norms of the part at x
+		* the sum of the norms of the parts at x
 		* <=
-		* the sum of the norms of the part at b
+		* the sum of the norms of the parts at b
 	* hence this latest expression is a valid bound
 	* its value does not depend on the position in the domain
 		* because it is fixed to b
