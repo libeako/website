@@ -2,7 +2,7 @@
 * proposition
 	* if
 		* s is a sequence
-		* limit of (fun n -> norm (s (n + 1) / s n)) exists; lets name it by "l"
+		* limit of (n -> norm (s (n + 1) / s n)) exists; lets name it by "l"
 	* then
 		* l > 1 => (series s) is divergent
 		* l < 1 => (series s) is convergent
