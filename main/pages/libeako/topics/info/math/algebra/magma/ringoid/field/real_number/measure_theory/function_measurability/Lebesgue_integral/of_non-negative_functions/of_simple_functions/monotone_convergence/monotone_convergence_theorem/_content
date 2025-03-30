@@ -1,0 +1,21 @@
+\ id birkhvgnkzkzupbd
+* converging functions converge in their integrals too
+* proposition
+	* if
+		* g : Inf
+			* all simple
+		* g point-wise-converges to f 
+	* then
+		* integral f = limit (g >>> integral)
+* proof
+	* the measurability of f comes from
+		* point-wise limit of measurable functions is measurable
+			\ links-to internal ubpcmljjbniytygd
+		* <= is trivial
+		* >= is easy
+			* take arbitrary simple funcrion h, such that (h <= f)
+			* we only need to prove that
+				* limit (g >>> integral) >= integral h
+			* this is given by
+				* theorem about increasing functions reaching limit
+					\ links-to internal mryphwddxicmuzmp

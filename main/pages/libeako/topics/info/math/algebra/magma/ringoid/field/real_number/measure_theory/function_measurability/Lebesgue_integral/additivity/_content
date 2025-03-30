@@ -1,0 +1,54 @@
+\ id wmmjyubiryscfckt
+* proposition
+	* if
+		* g h are integrable functions
+		* f = where defined (g + h)
+	* then
+		* f is integrable
+		* integral f = integral g + integral h
+* proof
+	* from (f g are integrable): almost everywhere f g are finite
+	* hence almost everywhere
+		* f = g + h
+		* norm f = norm (g + h) <= norm g + norm h
+			* using
+				* the theorem about integrability of normed function
+					\ links-to internal sndbxfxrzqpoliuz
+			* g h are integrable
+			* hence (norm g) (norm h) are integrable
+			* hence (norm f) is integrable
+			* hence f is integrable
+		* f+ - h = f- + g
+			* hence integral (f+ - h) = integral (f- + g)
+			* if (g is non-negative) and (h is non-positive)
+				* integral (f+ + (lift negate h)) = integral (f- + g)
+				* all the terms here are non-negative, hence by using the additivity of the integral on non-negative functions
+				* integral f+ + integral (lift negate h) = integral f- + integral g
+				* integral f+ - integral h = integral f- + integral g
+				* integral f+ - integral f- = integral g + integral h
+				* integral (f+ - f-) = integral g + integral h
+				* integral f = integral g + integral h
+			* generally
+				* intgegral f
+				* =
+					* almost everywhere the arguments are equal
+				* integral (g + h)
+				* =
+					* by the definition of integral
+				* integral ((g+ + h+) - (g- + h-))
+				* =
+					* making it an integral of an addition
+				* integral ((g+ + h+) + (lift negate (g- + h-)))
+				* = 
+					* by using the already proved case when of the addition one argument is non-negative and the other argument is non-positive
+				* integral (g+ + h+) + integral (lift negate (g- + h-)))
+				* =
+				* integral (g+ + h+) - integral (g- + h-)
+				* =
+					* using the additivity of the integral on non-negative functions
+				* (integral g+ + integral h+) - (integral g- + integral h-)
+				* =
+				* (integral g+ - integral g-) + (integral h+ - integral h-)
+				* =
+					* by the definition of integral
+				* integral g + integral h

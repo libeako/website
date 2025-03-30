@@ -1,0 +1,32 @@
+\ id vgndtkinbxijcvdf
+* proposition
+	* exists g : InF
+		* all measurable
+		* g point-wise-converges to f
+		* forall n : Nat+
+			* with
+				* h := flip power 2
+				* forall x : S. (norm (f x - g n x) <= 1 / n) or (g n x > h n)
+* proof
+	* plan
+		* construct partitions of the codomain with ever increasing resolution
+		* consider the inverse images of the partition members; they are measurable, because f is measurable
+		* construct the searched function so that it is a simple function with this base partitioning of its domain; for each partition. map the lower end of the corresponding codomain interval
+		* for each codomain interval
+			* the size of the interval is a limit of the difference between the f and the constructed approximator function; but that size is decreasing tas the resolution of the partitioning increases
+	* we devide the codomain to 2 parts, becasue the infinity case needs to be handled differently
+		* [0 .. h n)
+		* [h n .. +infinity]
+	* we further divide the first partition to sub-partitions each with length (1 / h n)
+		* hence the number of such sub-partition is (power 2 (h n))
+	* as n converges to infinity
+		* h converges to infinity [the first part covers every finite value eventually]
+		* the resolution of the first part grows
+	* D k := lift (inverse f) (k-th subpartition of the codomain)
+		* is measurable, because f is measurable
+	* DD := lift (inverse f) [h n .. +infinity]
+		* is measurable, because f is measurable
+	* g x :=
+		* +
+			* sum (lift (k -> (k / h n) * indicator-function-of (D k)) [0 .. h n))
+			* h n * indicator-function-of DD

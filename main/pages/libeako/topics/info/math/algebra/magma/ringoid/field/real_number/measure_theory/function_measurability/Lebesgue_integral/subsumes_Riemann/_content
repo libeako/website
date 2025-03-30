@@ -1,40 +1,57 @@
 \ id tvtzyhjqszdumtrs
 * proposition: Lebesgue integration subsumes Riemann integration
 * proof
-	* take arbitrary Riemann integrable function f
-	* the Riemann sums are simple functions, hence are measurable
-	* consider the set of lower Riemann sums
-	* by Riemann integrability of f: exists 2 sequences of Riemann partitionings such that
-		* the lower and upper Riemann sums of f on them are monotone
-		* let the names of these Riemann approximation function sequences be "fl", "fh"
-		* we can make those 2 sequences of Riemann partitionings common
-			* by forming the merger of them both with the other sides and with the previous partitionings
-			* the mergers refine the partitionings, hence the convergence property is kept
-		* limit (fl >>> integral) = limit (fh >>> integral)
-			* condition of Riemann integrability - the lower and higher Riemann approximation integrals converge to each other
-	* form the difference
-		* limit (fh - fl >>> integral) = 0
-	* by
-		* the Fatou lemma
-			\ links-to internal ewcysgnuepqzmyyc
-		* integral (pointwise-liminf (fh - fl)) <= liminf (fh - fl >>> integral)
-	* (fh - fl) monotone decreases, hence the limits exist, hence
-		* integral (pointwise-limit (fh - fl)) <= limit (fh - fl >>> integral)
-	* by transitivity
-		* integral (pointwise-limit (fh - fl)) <= 0
-	* hence (pointwise-limit (fh - fl) = 0) almost everywhere
-	* because fh, fl are monotone
-		* their pointwise-limit exist
-		* pointwise-limit (fh - fl) = pointwise-limit fh - pointwise-limit fl
-	* applying
-		* theorem about limits of simple functions
-			\ links-to internal ubpcmljjbniytygd
-	* we get that (pointwise-limit fh) and (pointwise-limit fl) are measurable
-		* applying
-			* the squeeze theorem
-				\ links-to internal lvhilqtghqqjffha
-			* on (pointwise-limit fh) and (pointwise-limit fl)
-		* we get that the function f between them is measurable
-	* because of the measurability of (pointwise-limit fh) and (pointwise-limit fl):
-		* their Lebesgue integral exists, and by Riemann condition: those integrals are equal
-	* hence they squeeze (the Lebesgue integral of f) to be equal to them, that is - to the Riemann integral
+	* if the integrand is non-negative
+		* on 1 dimensional domain
+			* take arbitrary non-negative Riemann integrable function f
+			* the Riemann sums are simple functions, hence are measurable and their Riemann and Lebesgue integrals are finite and equal
+			* consider the set of lower Riemann sums
+			* by Riemann integrability of f: exists 2 sequences of Riemann partitionings such that
+				* the lower and upper Riemann sums of f on them are monotone
+				* let the names of these Riemann approximation function sequences be "fl", "fh"
+				* we can make those 2 sequences of Riemann partitionings common
+					* by forming the merger of them both with the other sides and with the previous partitionings
+					* the mergers refine the partitionings, hence the convergence property is kept
+			* (pointwise-limit fl) and (pointwise-limit fh) 
+				* exist
+					* implied by (fh, fl are monotone)
+				* are equal almost everywhere
+					* proof
+						* condition of Riemann integrability - the lower and higher Riemann approximation integrals converge to each other
+							* limit (fl >>> integral) = limit (fh >>> integral)
+						* form the difference of the 2 sides of the equality
+							* limit (fh - fl >>> integral) = 0
+						* by
+							* the Fatou lemma
+								\ links-to internal ewcysgnuepqzmyyc
+							* integral (pointwise-liminf (fh - fl)) <= liminf (fh - fl >>> integral)
+						* (fh - fl) monotone decreases, hence the limits exist, hence
+							* integral (pointwise-limit (fh - fl)) <= limit (fh - fl >>> integral)
+						* by transitivity
+							* integral (pointwise-limit (fh - fl)) <= 0
+						* hence (pointwise-limit (fh - fl) = 0) almost everywhere
+						* hence (pointwise-limit fh = pointwise-limit fl) almost everywhere
+				* are measurable
+					* proof
+						* apply
+							* theorem about limits of simple functions
+								\ links-to internal ubpcmljjbniytygd
+			* f is measurable
+				* proof
+					* it is squeezed by 2 almost everywhere equal measurable functions
+						* see the squeeze theorem
+							\ links-to internal lvhilqtghqqjffha
+			* hence the Lebesgue integral of f exists
+				* and is finite
+					* implied by
+						* and
+							* f being smaller than the upper Riemann sums which are finite
+							* the domain of f being bounded
+								* the Riemann integral is defined with this constraint
+			* the equality between the Lebesgue and Riemann integrals is implied trivially by the squeezing by the Riemann step functions
+		* on multi-dimensional domain the proof is the same
+	* if the integrand may be negative
+		* the positive and negative parts of the integrand are Riemann integrable
+			* see theorem
+				\ links-to internal jykcsftzjbzvlvkx
+		* apply (the case of the theorem for non-negative integrand, which is already proved) for the positive and negative parts of the integrand individually

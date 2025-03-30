@@ -1,0 +1,28 @@
+\ id  mryphwddxicmuzmp
+* g : InF
+* constant function
+	* proposition
+		* if
+			* l : Real
+			* limit g >= constant l
+		* then
+			* limit (g >>> integral) >= m S * l
+	* proof
+		* take arbitrary k < l
+		* where-above : (S -> Extended Real) -> SubsetOf S
+			* := (lift (>= k)) >>> from-predicate-to-set >>> intersect p
+		* q := g >>> where-above
+			* q is monotone leniently increasing
+			* the limit of q-s is S, as g reaches k at every point of S at some place in the sequence
+		* apply
+			* the continuity of measure
+				* \ links-to internal ifslvryguaturinf
+			* to deduce
+		* m (limit q) = limit (q >>> m)
+		* hence forall (e : Real+). exists n : Nat+ -> m (q n) > m S - e
+		* hence (integral (g n) >= m (q n) * k >= (m S - e) * k)
+		* (e is arbitrarily close to 0) and (k is arbitrarily close to l)
+		* hence (limit (g >>> integral)) >= m S * l
+* simple function
+	* similarly to the previous theorem, but make the limit a simple function on the whole space instead of a constant on a measurable subset
+	* proof is trivial, just traverse the base sets of the limiting function [where it is a constant] and for each of them use the previous theorem
