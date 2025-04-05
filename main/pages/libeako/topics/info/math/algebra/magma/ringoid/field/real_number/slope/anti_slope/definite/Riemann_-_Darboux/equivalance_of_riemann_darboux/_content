@@ -1,7 +1,7 @@
 \ id ndyromovwzhwigwi
 * the Riemann and Darboux representations of the integral are equaivalent; the proof follows
 * Riemann => Darboux
-	* this proof works with bot variants of the Riemann integral
+	* this proof works with both variants of the Riemann integral
 	* the Riemann representation covers the integral with an arbitrarily narrow interval
 	* the lower and higher Darboux sums are Riemann sums, hence those too get covered by that narrow interval; those 2 surround the Darboux integral, which hence must be arbitrarily close to the Riemann integral and hence equal to it
 * Darboux => Riemann

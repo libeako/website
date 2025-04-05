@@ -24,6 +24,7 @@
 						* refined sample have smaller norm
 				* sample refinement => smaller mesh norm
 					* sample refinement => Darboux integral exists and equals l
+						* proof is trivial
 					* Darboux integral exists and equals l => smaller mesh norm
 						* see equivalence of the Riemann and Darboux representations
 							\ links-to internal ndyromovwzhwigwi

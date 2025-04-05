@@ -10,9 +10,9 @@
 	* lemma
 		* proposition
 			* if
-				* f, g : [a .. b] -> Real
+				* f, g : S -> Real
 				* forall e : Real. e > 0 => forall x. norm (f x - g x) < e
 			* then
 				* forall partitioning of S. forall r in {riemann-sum-high, riemann-sum-low}
-					* norm (r f - r g ) < e * (b - a)
+					* norm (r f - r g ) < e * measure S
 		* proof is trivial

@@ -2,8 +2,8 @@
 * the ('lower' | 'higher') Darboux output of a function on an interval is the (infimum | supremum) of the function on that interval
 * the 'Darboux sum' is
 	* sum {forall section of the division. the function's Darboux output on the section * the lenght of the section}
-* the lower Darboux sum <= any Riemann sum <= the higher Darboux sum
-* the (lower | higher) Darboux sum is (higher | lower) or equal if the division gets finer
+* forall division. the lower Darboux sum <= any Riemann sum <= the higher Darboux sum
+* the (lower | higher) Darboux sum is (higher | lower) or equal when the division is finer
 * for any pair of divisions (p, q): the lower Darboux sum on p <= the higher Darboux sum on q
 	* proof
 		* the lower Darboux sum on p

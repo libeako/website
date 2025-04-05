@@ -5,13 +5,14 @@
 	* p be in T
 	* slope f p := 
 		* <the following versions are equivalent>
-		* limit p (\ x -> (f x - f p) / (x - p))
-		* limit 0 (\ h -> (f (p + h) - f p) / h)
+		* limit p (x -> (f x - f p) / (x - p))
+		* limit 0 (h -> (f (p + h) - f p) / h)
 * slope does not necessarily exist
 * some mathematicians insist that the domain of the function must be topologically open; i do not see why
 * naming
 	* most usual name of slope is "derivative"
 		* this is a stupid name choice, as many things can be derived from a function [integral, dispersion, ...]
+	* a name that is often used and is acceptable for me is "differential"
 	* the best name, IMO, would probably be "speed"
 * existence of slope => continuity
 	* proof is easy

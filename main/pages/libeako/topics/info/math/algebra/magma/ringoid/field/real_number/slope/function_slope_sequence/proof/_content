@@ -1,0 +1,57 @@
+\ id eqfzuuollutwrzwc
+* proof of convergence of fn everywhere
+	* t := the point where f is convergent
+	* take arbitrary x point; i will prove that fn is convergent at x
+	* the convergence will be proved by the Cauchy condition
+	* forall m n
+		* fn m x - fn n x
+		* = 
+		* (fn m - fn n) x - (fn m - fn n) t + (fn m - fn n) t
+		* ((fn m - fn n) x - (fn m - fn n) t) + (fn m - fn n) t
+		* =
+			* the mean value theorem
+				\ links-to internal fspresemhcnedkhm
+			* gives such t, q
+		* slope (fn m - fn n) (t (m, n) x) + (fn m - fn n) t
+		* the first term converges to 0
+			* implied by the convergence of fn at t, which is a condition of this theorem
+* f := limit fn
+* fs := limit (fn >>> slope)
+* this builds on
+	* the mean value theorem
+		\ links-to internal fspresemhcnedkhm
+* we will prove: forall t. (norm (slope f t - fs t)) = 0
+* slope f t - fs t
+* =
+	* by definition of slope
+* limit (at x = t) ((f x - f t) / (x - t)) - fs t
+* =
+	* by using convergence of fn to f
+* limit (at x = t) (limit ((fn n x - fn n t) / (x - t)) - fs t)
+* =
+	* by introducing (m n x) (in (x .. t))
+		* according to the mean value theorem
+		* (fn n x - fn n t) / (x - t) = slope (fn n) (m n x)
+* limit (at x = t) (limit (slope (fn n) (m n x)) - fs t)
+* =
+	* by moving (fs t) into the limit
+* limit (at x = t) (limit (slope (fn n) (m n x) - fs t))
+* =
+	* by adding 0
+* limit (at x = t) (limit (slope (fn n) (m n x) - fs (m n x) + fs (m n x) - fs t))
+* =
+	* distribute limit over (+)
+* limit (at x = t) (limit (slope (fn n) (m n x) - fs (m n x)) + limit (fs (m n x) - fs t))
+* =
+	* limit (slope (fn n) (m n x) - fs (m n x)) = 0
+		* implied by the uniform convergence of (fn >>> slope) to fs
+			* the uniformity of the convergence is necessary because we both the function [(fn >>> slope) n] and its argument [m n x] depends on n
+* limit (at x = t) (0 + limit (fs (m n x) - fs t))
+* =
+	* by deleting 0
+* limit (at x = t) (limit (fs (m n x) - fs t))
+* =
+* limit (at x = t) (fs (m n x) - fs t)
+* =
+	* implied by the continuity of fs
+* 0
