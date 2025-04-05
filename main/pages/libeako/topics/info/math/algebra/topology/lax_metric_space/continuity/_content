@@ -32,3 +32,5 @@
 		* proof is trivial
 	* Lipschitz continuity
 		\ links-to internal tnoukzrxfztrgwpq
+* if (f : Nat+ -> M) continuous functions converge uniformly to g then g is continuous
+	* proof is trivial
