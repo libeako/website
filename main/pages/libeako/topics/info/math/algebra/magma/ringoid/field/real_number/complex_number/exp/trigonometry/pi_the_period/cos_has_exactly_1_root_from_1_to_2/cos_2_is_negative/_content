@@ -1,0 +1,95 @@
+\ id kzjohawwlbqbfczh
+* proposition
+	* cos 2 < 0
+* proof
+	* sum (from 0) (n -> power n (-1) * power (2 * n) 2 / factorial (2 * n))
+	* =
+		* separate the first component
+	* +
+		* (n -> power n (-1) * power (2 * n) 2 / factorial (2 * n)) 0
+		* sum (from 1) (n -> power n (-1) * power (2 * n) 2 / factorial (2 * n))
+	* =
+	* 1 + sum (from 1) (n -> power n (-1) * power (2 * n) 2 / factorial (2 * n))
+	* =
+		* group adjacent pairs
+	* +
+		* 1
+		* sum (from 1) (m -> power (2 * m) (-1) * power (2 * (2 * m)) 2 / factorial (2 * (2 * m)))
+		* sum (from 1) (m -> power (2 * m - 1) (-1) * power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1)))
+	* =
+		* merge the 2 lambdas
+	* +
+		* 1
+		* sum (from 1)
+			* m ->
+				* +
+					* power (2 * m) (-1) * power (2 * (2 * m)) 2 / factorial (2 * (2 * m))
+					* power (2 * m - 1) (-1) * power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1))
+	* =
+		* developing the series part:
+		* sum (from 1)
+			* m ->
+				* +
+					* power (2 * m) (-1) * power (2 * (2 * m)) 2 / factorial (2 * (2 * m))
+					* power (2 * m - 1) (-1) * power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1))
+		* =
+			* developing the component
+			* +
+				* power (2 * m) (-1) * power (2 * (2 * m)) 2 / factorial (2 * (2 * m))
+				* power (2 * m - 1) (-1) * power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1))
+			* =
+				* cancel the powering of (-1)
+			* +
+				* power (2 * (2 * m)) 2 / factorial (2 * (2 * m))
+				* (-1) * power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1))
+			* =
+			* -
+				* power (2 * (2 * m))     2 / factorial (2 * (2 * m))
+				* power (2 * (2 * m - 1)) 2 / factorial (2 * (2 * m - 1))
+			* =
+			* *
+				* power (2 * (2 * m - 1)) 2
+				* 1 / factorial (4 * m)
+				* -
+					* 4
+					* (4 * m - 1) * (4 * m)
+			* =
+			* *
+				* power (2 * (2 * m - 1)) 2
+				* 4 / factorial (4 * m)
+				* -
+					* 1
+					* (4 * m - 1) * m
+		* <
+			* by that negativity: we can drop any tail section
+			* i keep only the first component
+		* let m = 1 in 
+			* *
+				* power (2 * (2 * m - 1)) 2
+				* 4 / factorial (4 * m)
+				* -
+					* 1
+					* (4 * m - 1) * m
+		* =
+		* *
+			* power (2 * (2 * 1 - 1)) 2
+			* 4 / factorial (4 * 1)
+			* -
+				* 1
+				* (4 * 1 - 1) * 1
+		* =
+		* *
+			* 4
+			* 1 / factorial 3
+			* -
+				* 1
+				* 3
+		* =
+		* *
+			* - 8 / 6
+	* =
+	* +
+		* 1
+		* *
+			* - 8 / 6
+	* < 0

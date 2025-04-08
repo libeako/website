@@ -1,0 +1,39 @@
+\ id eegxzyzmozkwhncc
+* proposition
+	* forall x. x is in (0 .. power (1 / 2) 2) => cos x > 0
+* proof
+	* cos x = sum (from 0) (n -> power n (-1) * power (2 * n) x / factorial (2 * n))
+	* =
+	* sum (from 0)
+		* n ->
+			* +
+				*  power (2 * n    ) (-1) * power (2 * (2 * n     )) x / factorial (2 * (2 * n    ))
+				*  power (2 * n + 1) (-1) * power (2 * (2 * n + 1))) x / factorial (2 * (2 * n + 1))
+	* =
+	* sum (from 0)
+		* n ->
+			* +
+				*  power (2 * n    ) (-1) * power (4 * n     ) x / factorial (4 * n    )
+				*  power (2 * n + 1) (-1) * power (4 * n + 2)) x / factorial (4 * n + 2)
+	* =
+		* cancel the power of (-1)
+	* sum (from 0)
+		* n ->
+			* -
+				*  power (4 * n     ) x / factorial (4 * n    )
+				*  power (4 * n + 2)) x / factorial (4 * n + 2)
+	* =
+	* sum (from 0)
+		* n ->
+			* -
+				*  power (4 * n) x * (4 * n + 1) * (4 * n + 2)) / (factorial (4 * n) * (4 * n + 1) * (4 * n + 2))
+				*  power (4 * n) x * power 2 x                  / (factorial (4 * n) * (4 * n + 1) * (4 * n + 2))
+	* =
+	* sum (from 0)
+		* n ->
+			* *
+				* power (4 * n) x / (factorial (4 * n) * (4 * n + 1) * (4 * n + 2))
+				* -
+					* (4 * n + 1) * (4 * n + 2))
+					* power 2 x
+					* -- this is positive

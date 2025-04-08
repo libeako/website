@@ -1,0 +1,11 @@
+\ id uckryaftthbepwfy
+* proposition
+	* cos has negative output
+* proof
+	* suppose the opposite, that cos is non-negative everywhere
+	* then
+	* slope (slope cos) = slope (sin >>> negate) = cos >>> negate
+	* is non-positive everywhere
+	* which implies that it is concave
+	* bounded concave function is constant
+	* but cos is not constant

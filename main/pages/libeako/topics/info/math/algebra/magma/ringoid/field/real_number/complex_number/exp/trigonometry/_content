@@ -3,23 +3,28 @@
 	* trigonometric c x :=
 		* with
 			* names
-				* m := 2 * n + c
-			* sum (series-from 0 (fun n -> power m x * power n (-1) / factorial m))
-	* cos x := trigonometric 0 x
-	* sin x := trigonometric 1 x
-	* tan x := sin x / cos x
-	* cot x := cos x / sin x
-* cos (negate x) = cos x
-* sin (negate x) = negate (sin x)
-* tan (negate x) = negate (tan x)
-* cot (negate x) = negate (cot x)
+				* m n := 2 * n + c
+			* sum (series (from 0) (n -> power (m n) x * power n (-1) / factorial (m n)))
+	* cos := trigonometric 0
+	* sin := trigonometric 1
+	* tan := lift2 (/) sin cos
+	* cot := lift2 (/) cos sin
+* even though they are defined for complex numbers: these are Real functions too
+* negate >>> cos = cos
+* negate >>> sin = sin >>> negate
+* negate >>> tan = tan >>> negate
+* negate >>> cot = cot >>> negate
 * relationship with exp
-	* exp (         i * x) = cos x + i * sin x
+	* x is Real => norm (exp x) = 1
+		* proof: use (forall x. norm x = square-root (x * conjugate x))
+	* exp (        i * x ) = cos x + i * sin x
 	* exp (negate (i * x)) = cos x - i * sin x
 	* hence
+		* square (cos x) + square (sin x) = 1
 		* cos x = (exp (i * x) + exp (negate i * x)) / 2
 		* sin x = (exp (i * x) - exp (negate i * x)) / (2 * i)
-		* square (cos x) + square (sin x) = 1
+		* slope cos = sin >>> negate
+		* slope sin = cos
 			* proof
 				* square (cos x) + square (sin x) = (cos x + i * sin x) * (cos x - i * sin x)
 				* exp (i * x) * exp(negate (i * x)) = exp (i * x - i * x) = exp 0 = 1
@@ -35,5 +40,7 @@
 				* exp (i * x) * exp (i * y) - exp (negate i * x) * exp (negate i * y) =
 				* (cos x + i * sin x) * (cos y + i * sin y) - (cos x - i * sin x) * (cos y - i * sin y) =
 				* 2 * i * (cos x * sin y + sin x * cos y)
-		* slope cos = negate sin
-		* slope sin = cos
+* Real versions
+	\ links-to internal fgryusgpbecrdtzk
+* Pi - the period
+	\ links-to internal qyvxcendlpvtjalt

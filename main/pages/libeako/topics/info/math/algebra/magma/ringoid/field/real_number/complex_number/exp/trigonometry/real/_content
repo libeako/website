@@ -1,0 +1,17 @@
+\ id fgryusgpbecrdtzk
+* cos, sin are bounded
+	* proof is trivial from (forall x. square (cos x) + square (sin x) = 1)
+* cos has positive output value
+	* proof: cos 0 = 1
+* hence cos is increasing at some 0
+* hence cos is not constant
+* cos has negative output
+	\ links-to internal uckryaftthbepwfy
+* exists x. cos x = 0
+	* proof: cas has positive and negative output value
+* limit (at 0) (sin / id) = 0
+	* proof is trivial usage of
+		* L'Hôpital's rule
+			\ links-to internal xcibrzqtmarewtek
+	* this implies that the length of circle is (2 * pi * radius)
+		* limit (at zero) (sin / arc length) = 1

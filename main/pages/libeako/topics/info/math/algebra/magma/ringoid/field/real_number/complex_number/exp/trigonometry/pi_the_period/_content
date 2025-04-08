@@ -1,0 +1,5 @@
+\ id qyvxcendlpvtjalt
+* exists unique x in (1 .. 2). => cos x = 0
+	\ links-to internal cgtvpqhjceebesha
+	* pi := 2 * x
+* hence the trigonometric functions are periodic with period = 2 * pi

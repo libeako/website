@@ -1,0 +1,17 @@
+\ id cgtvpqhjceebesha
+* proposition
+	* exists unique x in (1 .. 2). cos x = 0
+* proof
+	* cos x = sum (from 0) (n -> power n (-1) * power (2 * n) x / factorial (2 * n))
+	* cos 0 = 0
+	* cos 2 < 0
+		\ links-to internal kzjohawwlbqbfczh
+	* of existence
+		* from (cos 1 > 0) and (cos 2 < 0)
+	* of uniqueness
+		* suppose the opposite-
+			* exists a b in (1 .. 2). (a < b) and (cos a = cos b = 0)
+		* then
+			* b - a < 1
+			* cos (b - a) = cos a * cos b + sin a * sin b = 0 * 0 + 1 * 1 = 1
+			* this is impossible, as cos is increasing on (0 .. 1) and hence does not take its maximum, which is 1
