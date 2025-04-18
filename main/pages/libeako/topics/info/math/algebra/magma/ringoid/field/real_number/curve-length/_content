@@ -1,0 +1,42 @@
+\ id oxlprweosifqkjhf
+* the length of a curve is the supremum of the lengths of the polgyons along it
+* when the curve is parametric
+	* d : Nat+
+		* the number of dimensions
+	* a, b : Real
+		* a < b
+	* f : [a .. b] -> power d Real
+		* continuously differentiable
+	* proposition
+		* length f = integral [a .. b] (slope f >>> norm)
+	* proof
+		* length f = sup (over all polygon p along f) (length p)
+		* the proof of this theorem is an easy application of
+			* proposition
+				* if
+					* p is a concrete polygon along f
+				* by keeping halving all its sections
+					* the lengths of the resultant polygons
+					* converges up to
+					* (integral [a .. b] (slope f >>> norm))
+			* proof
+				* jp n := the position [parameter] of the n-th joint of p
+				* length p
+				* =
+				* sum (for n in [1 .. (number of joints of of p) - 1]) (norm (f (jp (n + 1)) - f (jp n)))
+				* =
+				* sum (for n in [1 .. (number of joints of p) - 1])
+					* *
+						* norm (f (jp (n + 1)) - f (jp n)) / (jp (n + 1) - jp n)
+						* jp (n + 1) - jp n
+				* using
+					* the mean value theorem
+						\ links-to internal fspresemhcnedkhm
+					* norm (f (jp (n + 1)) - f (jp n)) / (jp (n + 1) - jp n)
+					* can be replaced by some tuple s of (slope f) components on [jp n .. jp (n + 1)]
+						* the different components may be at different parameter, but that will not be a problem
+				* the domain of f is compact, hence the continuity of (slope f) is uniform
+				* hence by halving the sections of p
+					* the length of the maximum section [the 'norm' of the polygon] converges to zero
+					* hence s converges to (slope f)
+				* the upwardness of the convergence is implied by (finer polygons are longer)
