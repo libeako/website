@@ -1,16 +1,12 @@
 \ id dyezpvkpfilzwsel
 * the technical side of democracy is the election; if that can be cheated then the ruler does not have to follow the will of the people to be elected, that is autocracy; hence the security of elections is fundamentally important
-* still : developed countries left this wisdom by running insecure election systems; such countries were USA, Lithuania, Germany, Hungary and probably many more
-	* cyber voting
-		\ links-to external https://en.wikipedia.org/wiki/Electronic_voting_by_country
 * necessary requirements of an election system
-	* security of an election system must include the following properties :
 	* accuracy
-		* the published result must correctly show the rightful votes of the people
+		* the election-result published by the state must be true: correctly show the rightful votes of the people
 			* every person with right to vote must be able to vote and only for once
 			* the published result must be the sum of the actual individual votes
 	* verifiability
-		* the people must be able to verify that the actual accuracy is reasonably good enough
+		* the people must be able to verify that the actual accuracy of the election is reasonably good enough
 		* at least envoys of the competing political parties must be able to directly verify this
 	* secrecy
 		* the votes of individuals must not be known by anyone else than the voter itself
@@ -18,8 +14,9 @@
 			* even the suspicion alone by the voter that its vote may not be secret affects the vote
 		* even the voter itself must be not able to prove its vote
 			* without this the votes can be bought or pressured
-* the paper ballot method
-	* these requirements are fulfilled by the traditional paper ballot method; at least for some fundamental degree
-* often applied, but not secure methods
+* the only secure method - the paper ballot method
+	* the security requirements are fulfilled by the traditional paper ballot method; at least for some fundamental degree
+* not secure methods
 	\ links-to internal qsasyixbgzwwhvuh
-* the fact that (the people accepted the application of not secure voting systems) proves that it is much too easy to decieve the people to give up democracy
+* the people do not care about the security of voting
+	\ links-to internal zruqdzqnehimrtpd

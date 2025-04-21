@@ -1,22 +1,24 @@
 \ id qsasyixbgzwwhvuh
-* cyber
-	* in the traditional (paper ballot - urn) method the ballots are observable physically; an ordinary human can observe an urn, count ballots, interpret the votes, without special equipment or competence
-	* but computers work as black boxes for humans; humans can not verify the internal operation of computers
-	* usual stupid arguments about the security of internet voting
-		* "the "Lithuanian model" has been working for many years and their is not complaint against its operation"
-			* not only in Lithuania; but : the lack of complaints is not because the system is secure, but because they do not care
-		* "we can securely bank online, hence we can securely vote online"
-			* we can fly with aricaft safely, we still can not submerge in the sea with aircaft safely
-			* the security of internet banking is only the security of the communication channel between the bank and its client
-	* never, nowhere was a secure cyber voting held; instead the security of cyber voting is only in the speeches of the politicians and in the stupid brains of the ordinary people, but with full confidence there
-	* why is it difficult to design a cyber voting system ?
-		* try and you will see; spend the effort : invent a secure system, only a theoretical one; i bet you have never ever even thought about it; instead you readily believed without doubt and even spread the lie that the cyber voting systems are secure; after all : what you gave up by this is only the democracy; now try and invent a secure cyber system, try at least for some minutes
-		* i guess you do not understand, not even what is the task [meanwhile perhaps you are very sure that it is already solved]; i help you by repeating some of the requirement for a secure voting system [though you should know them on your own]
-			* the state [the operator of the election system] must be able to aggregate the votes; the state must not know the individual votes; the state must be able to prove to voter x that x's vote was taken into account correctly; the voter must not be able to prove its vote
-			* what is difficult in this ?
-				* the state must not know the votes, but still has to take them into account and even to prove to the voter what the voter voted for, and the voter must not be able to forward the proof to other person
 * by paper mail
-	* the voter can prove its vote by preparing and sending it in front of the person to whom the voter want to prove its vote
+	* if the originality of the signatures is not verified [mostly this is the case because of the difficulty of verifying hand writing signatures] then it is possible to vote under someone else's name; all is needed is to know about someone that that person itself is not going to vote, which is often not difficult
+	* the voter can prove its vote by preparing and sending the vote in front of an other person
 	* the vote may be compromised in the mail service
-	* if the originality of the signatures is not verified [mostly this is the case because of the difficulty of verifying hand writing signatures] then it is possible to vote in someone else's name; all is needed is to know about someone that that person itself is not going to vote
-	* if the voter is an inhabitant of an other country then even the fact (that the voter is still alive) can not be verified
+		* this can happen selectively, like dropping the votes from those whose votes are expected to be for or not for some candidate
+			* for example people may go around and offer their help in performing the voting and those voters who refuse may be listed
+* cyber
+	\ id etmuzxrjimicxhga
+	* in the traditional (paper ballot - urn) method the ballots are observable physically; an ordinary human can observe an urn, count ballots, interpret the votes, without special equipment or competence
+	* but actual computers work as black boxes for humans; humans can not verify the internal operation of computers
+	* usual stupid arguments about the security of internet voting
+		* "the "Estonian model" has been working for many years and their is not complaint against its operation"
+			* the lack of complaints is not a security guarantee
+			* the lack of complaints is often not because the system is secure, but because the citizens do not care about the security
+		* "we can securely bank online, hence we can securely vote online"
+			* this argument is so sound as the following: 'we are able to safely fly with aricafts, hence we must be able to safely submerge in sea with aircafts
+	* never, nowhere was a secure cyber voting held
+	* instead the security of cyber voting is only in the speeches of the lords and in the [stupid] brains of the ordinary citizens, but with full confidence there
+	* why is it difficult to design a cyber voting system?
+		* try yourself and you will see; spend the effort: invent a secure system, just the theoretical fundamentals
+			* try at least for some minutes
+		* what is difficult in this?
+			* the election operator must take the votes into account which it may not even know individually [the votes must be secret]; this is difficult enough [try to solve it, most people would not be able to solve even these requirements], but this taking into account must also be done provably [the operator must prove to the voter that its vote was taken into account correctly]; with this proof the task is even more difficult, but also this proof has to be done so that the voter can not forward it [he may not be able to prove his own vote]
