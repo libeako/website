@@ -1,0 +1,44 @@
+\ id nhdfyudfzceediay
+* proposition
+	* if
+		* S : Set
+			* not empty
+		* P : Set (Subset of S)
+			* pi-system
+		* PL = lambda P
+		* PS = sigma P
+	* then
+		* PL = PS
+* proof
+	* we trivially have
+		* PL <= PS
+	* hence we need only 
+		* PL >= PS
+	* for this we need only
+		* PL >= pi P
+	* with natural words: pi-system remains pi-system if extended to lambda-system
+		* proof [not intuitive]
+			* we need to prove (forall (a, b: PL). (intersect {a, b} : PL))
+			* fix a
+			* L := PL constrained by (x -> intersect {a, x} : PL)
+			* L = PL
+				* proof
+					* L is a lambda-system
+						* proof is easy check of definition of lambda-system
+					* P <= L
+						* proof
+							* we aim to prove
+								* forall (p : P). forall (x : PL). (intersect {p, x} : PL)
+							* fix p
+							* we need to prove
+								* forall (x : PL). (intersect {p, x} : PL)
+							* M := PL constrained by (x -> (intersect {p, x} : PL))
+							* M = PL
+								* proof
+									* M <= PL
+										* trivial from the definition of M
+									* M >= PL
+										* P <= M
+											* trivial from the defintion of M
+										* M is lambda-system
+											* proof is easy check of definition of lambda-system

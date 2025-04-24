@@ -23,14 +23,5 @@
 				* the Borel sets are the smallest sigma algebra of sets including the open sets [or all the closed sets]
 					* see smallest including sigma algebra
 						\ links-to internal eupxeczurplflvll
-* 'pi-system'
-	* definition
-		* an variety of non-empty algebras of subsets which is closed under non-empty finite intersections
-	* 'smallest' or 'generated' pi-system
-		* proposition
-			* forall set s of subset
-				* the intersection of all pi-systems containing s is a pi-system; it is the smallest such pi-system and is comprised by all the non-empty finite intersections among elements of s
-			* the proof is trivial
-* 'lambda-system'
-	* definition
-		* same as sigma-algebra, except that the union ability is on disjoint subsets only
+* 'pi' and 'lambda' systems
+	\ links-to internal qzgoyckorguuufan
