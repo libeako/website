@@ -5,6 +5,12 @@
 		* {foreach r : Real. (-ifinity .. r]}
 		* {foreach r : Real. (r .. +infinity)}
 		* {foreach (r1, 2 : Real). (r1 .. r2]}
+* R is a pi-system
+	* see pi-systems
+		\ links-to internal qzgoyckorguuufan
+	* hence determining a measure's values aon R determines its values on (sigma R) too
+		* seee theorem about this
+			\ links-to internal jevqwanbvtglvfhq
 * R is a semi-algebra
 	* link to semi-algebra
 		\ links-to internal norbzvwtmfnxravy
