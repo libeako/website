@@ -1,0 +1,11 @@
+\ id dqufiezwzuwwjmeq
+* "sigma algebra" is an algebra of sets which can intersect countable number of subsets
+* smallest including sigma algebra
+	\ links-to internal eupxeczurplflvll
+* the Borel sets are the smallest sigma algebra of sets including the open sets [or all the closed sets]
+	* see smallest including sigma algebra
+		\ links-to internal eupxeczurplflvll
+* definition: the "product" of sigma-algebras is the sigma-algebra of their cartesian product
+	* product is associative
+		* proof
+			\ links-to internal iwfenxtlwaiscnnn

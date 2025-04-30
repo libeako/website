@@ -1,0 +1,39 @@
+\ id iwfenxtlwaiscnnn
+* proposition
+	* product is associative
+* proof
+	* (*) := the cartesian product function
+	* let s1, s2, s3 be sigma algebras
+	* it is enough to prove
+		* sigma (s1 * s2 * s3) = sigma (s1 * sigma (s2 * s3))
+	* this will be proved by proving the inclusion by one of the other in both direction
+	* this trivial lemma will be used
+		* proposition
+			* forall (x, y : Set)
+				* (sigma x <= sigma y) <=> (x <= sigma y)
+		* proof is trivial consequence of the fact that the generated sigma-algebra is the minimal one containing the generating set
+	* s1 * s2 * s3 <= sigma (s1 * sigma (s2 * s3))
+		* proof is trivial
+	* s1 * sigma (s2 * s3) <= sigma (s1 * s2 * s3)
+		* proof
+			* this is intuitive statement, as on the left side the sigma algebra generation is more constrained
+			* more formal proof
+				* it is enough to prove
+					* forall (t in S1)
+						* forall (v in sigma (s2 * s3)). (t, fst v, snd v) is in (sigma (s1 * s2 * s3))
+						* proof of the immediate above statement
+							* L := (sigma (s2 * s3)) constrained by (v -> (t, fst v, snd v) is in (sigma (s1 * s2 * s3)))
+							* L = (sigma (s2 * s3))
+								* proof
+									* L >= (s2 * s3)
+										* proof is trivial
+									* L is a lambda system
+										* see lambda-system
+											\ links-to internal qzgoyckorguuufan
+										* proof
+											* trivial checking of the requirements of lambda-system, the variant which requires union of monotonly increasing sets
+									* apply
+										* the pi-lambda theorem
+											\ links-to internal nhdfyudfzceediay
+* other source
+	* \ links-to external https://math.stackexchange.com/questions/1382169/associativity-of-product-measures/1423219#1423219
