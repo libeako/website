@@ -12,7 +12,7 @@
 	* proof is trivial, as all of them are included by some null set and union of finite and countable null sets is null set
 * extension of a measure space with the negligable sets
 	* take (S, OM, om) measure space
-	* CM := (S, the negligable sets) lifted by union
+	* CM := (OM, the negligable sets) lifted by union
 	* CM is a sigma algebra, the smallest one including both OM and the neglibable sets
 		* proof
 			* being smallest
