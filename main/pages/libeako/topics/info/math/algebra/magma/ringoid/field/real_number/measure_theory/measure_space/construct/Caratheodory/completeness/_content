@@ -1,14 +1,64 @@
 \ id ptamcfzbwyziybje
-* proposition
-	* if (c is negligable) then (c is measurable)
-* proof
-	* c is negligable, hence by monotonicity of m: m c = 0
-	* forall s : Set
-		* m (intersect s (complement c)) + m (intersect s c)
-		* =
-		* m (intersect s (complement c)) + 0
-		* =
-		* m (intersect s (complement c))
-		* <=
-			* implied by the monotonicity of m, which is implied by m being an outerish measure
-		* m s
+* 'completeness' of outerish measures construction
+	\ id apklbaqtewghmulb
+	* proposition
+		* if m is outerish measure then if (c is negligable) then (c is measurable)
+	* proof
+		* c is negligable, hence by monotonicity of m: m c = 0
+		* forall s : Set
+			* m (intersect s (complement c)) + m (intersect s c)
+			* =
+			* m (intersect s (complement c)) + 0
+			* =
+			* m (intersect s (complement c))
+			* <=
+				* implied by the monotonicity of m
+			* m s
+* the Carathéodory construction produces an outerish measure, which hence is complete
+* sigma algebra generation: minimal versus Carathéodory
+	* proposition
+		* if
+			* (S : Set) - a space
+			* A : (Algebra of (Subset of S))
+			* v : A -> Extended NonNegative Real
+				* finitely additive
+			* (M : Subset, m : M -> Extended NonNegative Real)
+				* the result of the Carathéodory measure construction
+			* S is m-sigma-finite
+			* V := (sigma A, M restricted by (m >>> (= 0))) lifted by (uncurry (-))
+			* U := (sigma A, M restricted by (m >>> (= 0))) lifted by (uncurry union)
+		* then
+			* V = M = U
+	* proof
+		* assume (m S < infinity)
+			* union V U <= M
+				* proof
+					* sigma A <= M
+					* S restricted by (m >>> (= 0)) <= M
+						* implied by m being outerish measure
+							* see theorem
+								\ links-to internal apklbaqtewghmulb
+			* M <= V
+				* proof
+					* take arbitrary (x in M)
+					* forall e > 0. exists (a in (sigma A))
+						* (a >= x) and (m a - m x < e)
+							* hence (m (a - x) < e)
+					* hence we can construct from these a's a monotone decreasing sequence
+						* (a : Nat+ -> sigma A). lim (a >>> (- x) >>> m) = 0
+					* by using
+						* continuity of measure
+							\ links-to internal onfojfiwpsipndoy
+					* we get
+						* m (lim (a >>> (- x))) = 0
+					* l := lim (a >>> (- x))
+					* hence (l = intersect a - x)
+					* hence
+						* m l = 0
+						* x = intersect a - l
+			* M <= V
+				* proof
+					* take arbitrary (x in M)
+					* use the already proved (M <= V) case on (S - x)
+		* otherwise
+			* use the theorem condition (S is sigma finite)
