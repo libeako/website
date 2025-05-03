@@ -1,0 +1,55 @@
+\ id rixkaetkubquihvy
+* this part is about 'the monotone class theorem'
+* proposition
+	* if
+		* (S : Set) - the space
+		* A : Set (Subset of S)
+			* subset algebra
+		* mc : Set (SubSet of S) -> Set (SubSet of S)
+			* the minimal monotone class including the input
+	* then
+		* mc A = sigma A
+* proof
+	* * mc A <= sigma A
+		* implied by all monotone classes being sigma algebras
+	* * mc A >= sigma A
+		* it is enough to prove that (mc A) is a sigma algebra; so i will do
+		* it is enough to prove that (mc A) is an algebra
+			* implied by
+				* sigma-algebra <= (algebra and monotone class)
+					\ links-to internal ewxkgjwhdufvskhp
+		* so i will do
+		* it is enough to prove that (mc A) is closed under difference, intersection; so i will do
+		* the trick is to fix one of the inputs of these functions
+		* F y : mc A -> Subset of (mc A) :=
+			* (mc A) constrained by
+			* x -> {x - y, y - x, intersect x y} <= mc A
+		* a symmetry of F
+			* forall x, y in (mc A)
+				* x is in (F y) <=> y is in (F x)
+		* forall y in (mc A)
+			* F y = mc A
+				* F y <= mc A
+					* trivial from the definition of F
+				* F y >= mc A
+					* enough to prove the conjunction of
+						* (F y) is monotone class
+							* proof is trivial
+						* (F y) >= A
+							* proof
+								* take arbitrary a in A
+								* F a >= A
+									* proof is trivial by the definition of F
+								* F a >= mc A
+									* implied by the conjunction of
+										* (F a) is a monotone class
+											* implied by the conjunction of
+												* forall x in (mc A). (F x) is monotone class
+													* this is already proved
+												* mc A >= A
+										* and (mc A) is the smallest monotone class
+								* hence
+								* F a >= {y}
+								* hence by symmetry of F
+								* F y >= {a}
+		* hence (mc A) is an algebra

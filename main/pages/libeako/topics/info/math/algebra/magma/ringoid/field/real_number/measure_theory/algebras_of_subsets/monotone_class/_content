@@ -1,0 +1,13 @@
+\ id skoxrounqgfpkrbg
+* definition
+	* iff a set of sets is closed under both
+		*        union of countable monotone leniently increasing sets
+		* intersection of countable monotone leniently decreasing sets
+	* then is is a 'monotone class'
+* sigma-algebra <=> (algebra and monotone class)
+	\ id ewxkgjwhdufvskhp
+	* proposition
+		* a set of sets is sigma algebra iff it is both an algebra and a monotone class
+	* proof is trivial
+* the 'monotone class' theorem
+	\ links-to internal rixkaetkubquihvy
