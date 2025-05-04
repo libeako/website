@@ -1,7 +1,7 @@
 \ id qzgoyckorguuufan
 * 'pi-system'
 	* definition
-		* an variety of non-empty algebras of subsets which is closed under non-empty finite intersections
+		* a variety of non-empty algebras of subsets which is closed under non-empty finite intersections
 	* 'smallest' or 'generated' pi-system
 		* proposition
 			* forall set s of subset
