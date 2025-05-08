@@ -1,0 +1,29 @@
+\ id tsgeqzycindwwzwq
+* if
+	* (S : Set) - the space
+	* A, M, B : Set (Subset of S)
+	* A is an algebra
+	* (M, m)
+		* the Carathéodory restriction of the outerish extension of some (premeasure on A)
+	* (B, b)
+		* some measure space on S
+	* A <= B <= M
+	* on B. b = m
+* then
+	* b <= m
+		* proof
+			* take arbitrary (x in B)
+			* forall (c : Nat+ -> A) cover of x
+				* b x <= sum (c >>> b) = sum (c >>> m)
+					* note: (m x) is the infimum of such sums
+			* hence b x <= m x
+	* forall (a in A). (m a < infinity) => b a = m a
+		* proof
+			* take arbitrary (a : in A) and assume (m a < infinity)
+			* exists (c : Nat+ -> A) cover of a such that
+				* sum (c >>> m) < infinity
+				* c is disjoint
+			* b a + b (c - a) = b (union c) = sum (c >>> b) = sum (c >>> m) = m (union c) = m a + m (c - a)
+			* from the previous, proved part
+				* forall x in {a, c - a}. b x <= m x
+			* hence (b a = m a)

@@ -7,11 +7,12 @@
 		* S : Set
 		* P : Set (Subset of S)
 			* pi-system
+		* union P = S
 		* m1, m2 measures on (sigma P)
 			* equal on P
 			* equal and sigma-finite at (sigma P)
-		* m1 (sigma P) < infinity
-		* m2 (sigma P) < infinity
+		* m1 S < infinity
+		* m2 S < infinity
 	* then
 		* m1 = m2 on (sigma P) too
 * proof
@@ -19,7 +20,7 @@
 	* L is a lambda-system
 		* proof
 			* this needs the usage of the theorem condinion
-				* (equal and sigma-finite at (sigma P))
+				* equal and sigma-finite at S
 			* check the requirements of definition of lambda-system in the ascending chain variant
 	* sigma P
 	* =

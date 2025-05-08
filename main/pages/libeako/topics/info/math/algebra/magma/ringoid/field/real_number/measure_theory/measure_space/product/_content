@@ -1,0 +1,27 @@
+\ id ypwpqgsnitgxuiev
+* take 2 arbitrary measure spaces
+	* (S1, M1, m1)
+	* (S2, M2, m2)
+* definition: a 'measurable rectangle' is (r1 * r2), where (r1 is in M1) and (r2 is in M2)
+* the set of measurable rectangles is a semi-algebra
+	* proof is trivial
+* in the following "R" will stand for the set of measurable rectangles
+* l : R -> Extended NonNegative Real
+	* := a1 a2 -> m1 a1 * m2 a2
+* l is sigma-additive on R
+	* proof
+		\ links-to internal mkbwxjjcydgohocr
+* hence (S, R, l) is a pre-measure-space
+* hence (by the (outerish approximation; Carathéodory extension)) a measure exists on (sigma R) extending l
+* if S1 and S2 are sigma-finite then this measure is unique
+	* see theorem
+		\ links-to internal tsgeqzycindwwzwq
+* hence the definition of product-measure is
+	* if [S1, S2] are sigma-finite then the product-measure is
+		* (S1 * S2, sigma (M1 * M2), (unique measure extension of l))
+* the product-measure is associative
+	* proof
+		* the sigma algebra product is associativei
+			\ links-to internal iwfenxtlwaiscnnn
+		* proof of the associativity of the measure
+			* use the uniqueness of it

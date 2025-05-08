@@ -1,0 +1,39 @@
+\ id mkbwxjjcydgohocr
+* l by integration
+	* forall ((a1, a2) : R)
+		* m1 a1 * m2 a 2 = integral (on S1) (x -> integral (on S2) (y -> indicator (a1 * a2) (x, y)))
+			* proof
+				* m1 a1 * m2 a 2
+				* =
+				* *
+					* integral (on S1) (x -> indicator a1 x)
+					* integral (on S2) (y -> indicator a1 y)
+				* =
+				* integral (on S1) (x -> indicator a1 x * (integral (on S2) (y -> indicator a1 y)))
+				* =
+				* integral (on S1) (x -> integral (on S2) (y -> indicator a1 x * indicator a1 y))
+				* =
+				* integral (on S1) (x -> integral (on S2) (y -> indicator (a1 * a2) (x, y)))
+* take arbitrary (c : Nat+ -> R)
+* assume (union c) is a measurable rectangle
+* l (union c) = sum (c >>> l)
+	* proof
+		* using (l by integration)
+		* it is enough to prove
+			* =
+				* 
+					* integral (on S1) (x -> 
+					* integral (on S2) (y ->
+					* indicator (union (c >>> fst) * union (c >>> snd)) (x, y)
+					* ))
+				* sum (n ->
+					* 
+						* integral (on S1) (x -> 
+						* integral (on S2) (y ->
+						* indicator (fst (c n) * snd (c n)) (x, y)
+						* ))
+					* )
+		* the proof of this is easy
+			* moving the summation inside the 2 integrals by 2 applications of
+				* the monotone convergence theorem
+					\ links-to internal mgrxyqxacdkpuwtd

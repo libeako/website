@@ -2,7 +2,7 @@
 * given
 	* (A : Set) - an algebra os sets
 	* (v : A -> Extended Positive Real) - a finitely additive volume function on A
-	* m -  the outer measure build on (A, v)
+	* m - the outer measure build on (A, v)
 * the Caratheodory method constructs a real measure from an outerish measure
 * in this part "m" is usual symbol of an outerish measure
 * restrict its domain by
