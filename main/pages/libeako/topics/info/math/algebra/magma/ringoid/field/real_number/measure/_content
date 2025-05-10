@@ -29,7 +29,15 @@
 		\ links-to internal yhekyygfiuskaqvd
 	* this is the Lebesgue measure space
 		* i may use the notation '(Real, L, l)' for it
-* everything before here easily generalizes to multiple dimensionsional intervals
+* multiple dimensions
+	* everything before here easily generalizes to multi-dimensionsional intervals
+	* it is also possible to define the multi-dimensional Lebesuge space as
+		* the completion
+			\ links-to internal ovpnmvfdfcpoxgit
+		* of
+		* the product
+			\ links-to internal ypwpqgsnitgxuiev
+		* of 1-dimensional Borel measure-spaces
 * properties of the Lebesgue measure space
 	* approxability of measurable sets by open sets or by closed sets
 		\ links-to internal cvubzkxxczeshkmj
