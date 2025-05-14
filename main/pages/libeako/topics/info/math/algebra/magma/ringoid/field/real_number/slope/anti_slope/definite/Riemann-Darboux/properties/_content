@@ -1,16 +1,4 @@
-\ id xeohaciqjqiybuhk
-* Riemann-Darboux representations
-	* division
-		\ links-to internal ipkcqkocdghpyiwo
-	* basic restriction
-		* the integrand must be bounded
-			* otherwise the summations would be problematic
-	* Riemann
-		\ links-to internal ewegqxhylyycrfen
-	* Darboux
-		\ links-to internal jjhfelrffijxxwbo
-	* equivalence of the Riemann and Darboux representations
-		\ links-to internal ndyromovwzhwigwi
+\ id tsyjzfutpkaqcrvg
 * continuity => integrability
 	* proof
 		* the domain being compact => continuity => uniform continuity
@@ -39,3 +27,15 @@
 				\ links-to internal dzwlkayzqvmcwodd
 		* f+ = ((f >>> norm) + f) / 2
 		* f- = ((f >>> norm) - f) / (-2)
+* norm of integrable function is integrable
+	\ id cogycdvhpmzoiaaq
+	* proof
+		* use the Darboux representation
+		* use the fact that oscillations are not bigger in the normed version of the function
+* pointwise min and max of 2 integrable functions are integrable
+	* proof
+		* use
+			* norm of integrable function is integrable
+				\ links-to internal cogycdvhpmzoiaaq
+		* pointwise-min {f, g} = ((f + g) - norm (f - g)) / 2
+		* pointwise-max {f, g} = ((f + g) + norm (f - g)) / 2
