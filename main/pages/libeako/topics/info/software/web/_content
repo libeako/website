@@ -1,5 +1,40 @@
 \ id csgcntvodjxkxzmd
 * distributed
 	\ links-to internal mcvsbrzappckoqtk
-* cookies
-	\ links-to internal pvdfmooquubhactr
+* website look
+	* the number of menus should be 1, not 2 or 3
+		* multiplicity of menus makes it ambiguous for the user which menu to search
+	* do not distribute the buttons around the site, collect them into one single menu
+	* use menus to group stuff
+		* do not list all cantact options on the main page, put them into a separate page behind a 'contact' element in a menu
+	* menus should be at the top, not at the bottom of the page
+		* the menu at the bottom is still costly, readers need to parse everything they see in order to dismiss them
+	* stop rendering items of a list with alternating sides [left and right]
+		* uniformity is simple, elegnat, clean and easy to read
+		* alternation is fancy destruction of readability
+	* stop using images without honest real messages
+		* in current [2010-2025] practice most of the images are just to make (very false) impression of prefessionality
+* privacy
+	* the attitude in the design of the web is hugely mistaken
+		* browsers should not send any info to the website host without the user's explicit command
+			* do not send the following infos
+				* screen size
+					* just make the web content possible to lay out in any sized window automatically by the browser
+				* fonts
+					* the websites should specify some lists of font preferences and let the browser decide; the website design should not depend on the availability of fonts
+				* browser version
+				* time-zone
+				* under the browser
+					* the operating system
+						* why the hell should the web depend on the OS used?
+					* the hardware under the browser
+				* how things are rendered
+					* "convas fingerprint"
+					* pixels are for the human vier
+				* the set of browser extensions
+				* ...
+		* browsers should not play any audio or video automatically
+		* browsers should not run scripts without the consent of the user
+			* the vast majority of the honest web operation does not require any script
+	* cookies
+		\ links-to internal pvdfmooquubhactr
