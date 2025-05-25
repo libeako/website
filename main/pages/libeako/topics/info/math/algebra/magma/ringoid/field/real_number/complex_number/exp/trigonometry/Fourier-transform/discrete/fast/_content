@@ -1,0 +1,11 @@
+\ id lkxxoytxdtgykezh
+* "fast" calculation of the DFT := the one taking not more than O (n -> n * log n) time
+* Cooley-Tukey algorithm
+	* radix-2
+		* requires the size of the input [n] to be power of 2
+		* y k :=
+			* +
+				* sum (with m over [0 .. n / 2 - 1]) (x (2 * m    ) * exp (-i * 2 * pi * (2 * m    ) * k / n))
+				* sum (with m over [0 .. n / 2 - 1]) (x (2 * m + 1) * exp (-i * 2 * pi * (2 * m + 1) * k / n))
+			* both of these terms are DFTs of halves of the input [the even and odd indexed halves]
+	* this divide and conquere idea works with any facetorization of n

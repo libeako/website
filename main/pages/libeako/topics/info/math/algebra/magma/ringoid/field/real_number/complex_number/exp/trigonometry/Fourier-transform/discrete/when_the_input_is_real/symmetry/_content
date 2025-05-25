@@ -1,0 +1,17 @@
+\ id wyokldkmxrsqnmak
+* the input is real =>
+* forall m in [1 .. n]
+	* proposition
+		* y (n - m) = c (y m)
+	* proof
+		* y (n - m)
+		* =
+		* (1 / sqrt n) * sum (with t over [1 .. n]) (x t * exp (-i * 2 * pi * (n - m) * t / n))
+		* =
+			* cancel 2 factors of (-1)
+		* (1 / sqrt n) * sum (with t over [1 .. n]) (x t * exp (i * 2 * pi * (m - n) * t / n))
+		* =
+			* by the periodicity of exp
+		* (1 / sqrt n) * sum (with t over [1 .. n]) (x t * exp (-i * 2 * pi * m * t / n))
+		* =
+		* c (y m)

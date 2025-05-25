@@ -1,0 +1,24 @@
+\ id apwayxqrshmjxjbw
+* c := complex-conjugate
+* ct := conjugate-transpose
+	* of a matrix
+* n : Nat+
+	* the number of data points
+* x : [0 .. n - 1] -> Complex
+	* the input vector, the data points in normal space ["time domain"]
+* dft x k := sum (with m over [0 .. n - 1]) (sqrt n * x m * exp (-i * 2 * pi * m * k / n))
+* the DFT matrix
+	* dftm k m := sqrt n * exp (-i * 2 * pi * m * k / n)
+	* dft = (dftm *)
+* ct dftm * dftm
+	\ links-to internal fkgcmbdblyfqtiwp
+* y : [0 .. n - 1] -> Complex
+	* the output vector, the data points in fourier space ["frequency domain"]
+* (y 0) is the shift, the mean of x
+* multi-dimensional vectors
+	* the DFT is separable
+		* this is easy to prove
+* when the input is real
+	\ links-to internal hcuxcqeqbznkksdy
+* fast calculation
+	\ links-to internal lkxxoytxdtgykezh

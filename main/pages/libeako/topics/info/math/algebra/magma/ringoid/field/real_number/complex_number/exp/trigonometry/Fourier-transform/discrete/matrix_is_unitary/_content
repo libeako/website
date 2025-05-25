@@ -1,0 +1,27 @@
+\ id fkgcmbdblyfqtiwp
+* proposition: ct dftm * dftm
+* proof
+	* (c dftm * dftm) k m
+	* =
+		* by definition of matrix multiplication
+	* sum (with t over [0 .. n - 1]) (c dftm k t * dftm t m)
+	* =
+		* by definition of dftm
+	* sum (with t over [0 .. n - 1]) ((1 / sqrt n) * exp (i * 2 * pi * k * t / n) * (1 / sqrt n) * exp (-i * 2 * pi * m * t / n))
+	* =
+		* factoring out occurrences of (1 / sqrt n)
+	* (1 / n) * sum (with t over [0 .. n - 1]) (exp (i * 2 * pi * k * t / n) * exp (-i * 2 * pi * m * t / n))
+	* =
+	* (1 / n) * sum (with t over [0 .. n - 1]) (exp (i * 2 * pi * t * (k - m) / n))
+	* =
+	* (1 / n) * sum (with t over [0 .. n - 1]) (power t (exp (i * 2 * pi * (k - m) / n)))
+	* =
+	* z := exp (i * 2 * pi * (k - m) / n)
+	* (1 / n) * sum (with t over [0 .. n - 1]) (power t z)
+	* =
+		* geometric series
+	* (1 / n) * (power n z - 1) / (z - 1)
+	* =
+	* if k = m
+		* then 1
+		* else 0
