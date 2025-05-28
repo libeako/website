@@ -15,7 +15,7 @@
 * the integral is monotone
 	* formally: forall f g. (f <= g) => (integral f <= integral g)
 	* proof: integral g - integral f = integral (g - f) >= 0
-* Lebesgue integration subsumes Riemann integration
+* Lebesgue integration subsumes Darboux integration
 	\ links-to internal tvtzyhjqszdumtrs
 * dominated convergence theorem
 	\ links-to internal kmhscotxvyuvfaxq

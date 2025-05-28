@@ -1,15 +1,15 @@
 \ id tvtzyhjqszdumtrs
-* proposition: Lebesgue integration subsumes Riemann integration
+* proposition: Lebesgue integration subsumes Darboux integration
 * proof
 	* if the integrand is non-negative
 		* on 1 dimensional domain
-			* take arbitrary non-negative Riemann integrable function f
-			* the Riemann sums are simple functions, hence are measurable and their Riemann and Lebesgue integrals are finite and equal
-			* consider the set of lower Riemann sums
-			* by Riemann integrability of f: exists 2 sequences of Riemann partitionings such that
-				* the lower and upper Riemann sums of f on them are monotone
-				* let the names of these Riemann approximation function sequences be "fl", "fh"
-				* we can make those 2 sequences of Riemann partitionings common
+			* take arbitrary non-negative Darboux integrable function f
+			* the Darboux sums are simple functions, hence are measurable and their Darboux and Lebesgue integrals are finite and equal
+			* consider the set of lower Darboux sums
+			* by Darboux integrability of f: exists 2 sequences of Darboux partitionings such that
+				* the lower and upper Darboux sums of f on them are monotone
+				* let the names of these Darboux approximation function sequences be "fl", "fh"
+				* we can make those 2 sequences of Darboux partitionings common
 					* by forming the merger of them both with the other sides and with the previous partitionings
 					* the mergers refine the partitionings, hence the convergence property is kept
 			* (pointwise-limit fl) and (pointwise-limit fh) 
@@ -17,7 +17,7 @@
 					* implied by (fh, fl are monotone)
 				* are equal almost everywhere
 					* proof
-						* condition of Riemann integrability - the lower and higher Riemann approximation integrals converge to each other
+						* condition of Darboux integrability - the lower and higher Darboux approximation integrals converge to each other
 							* limit (fl >>> integral) = limit (fh >>> integral)
 						* form the difference of the 2 sides of the equality
 							* limit (fh - fl >>> integral) = 0
@@ -45,13 +45,13 @@
 				* and is finite
 					* implied by
 						* and
-							* f being smaller than the upper Riemann sums which are finite
+							* f being smaller than the upper Darboux sums which are finite
 							* the domain of f being bounded
-								* the Riemann integral is defined with this constraint
-			* the equality between the Lebesgue and Riemann integrals is implied trivially by the squeezing by the Riemann step functions
+								* the Darboux integral is defined with this constraint
+			* the equality between the Lebesgue and Darboux integrals is implied trivially by the squeezing by the Darboux step functions
 		* on multi-dimensional domain the proof is the same
 	* if the integrand may be negative
-		* the positive and negative parts of the integrand are Riemann integrable
+		* the positive and negative parts of the integrand are Darboux integrable
 			* see theorem
 				\ links-to internal jykcsftzjbzvlvkx
 		* apply (the case of the theorem for non-negative integrand, which is already proved) for the positive and negative parts of the integrand individually
