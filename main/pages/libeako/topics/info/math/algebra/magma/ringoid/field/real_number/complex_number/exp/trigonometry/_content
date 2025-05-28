@@ -15,7 +15,7 @@
 * negate >>> tan = tan >>> negate
 * negate >>> cot = cot >>> negate
 * relationship with exp
-	* x is Real => norm (exp x) = 1
+	* x is Imaginary => norm (exp x) = 1
 		* proof: use (forall x. norm x = square-root (x * conjugate x))
 	* exp (        i * x ) = cos x + i * sin x
 	* exp (negate (i * x)) = cos x - i * sin x
