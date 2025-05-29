@@ -4,17 +4,20 @@
 	* forall points x y in s. forall point p in the line section [x, y]. {p} <= s
 * a set s of points is "strictly convex" iff
 	* forall points x y in s
-		* forall point p in the line (interior (section [x, y])). {p} <= interiro s
+		* forall point p in the line (interior (section [x, y])). {p} <= interior s
 * the "epigraph" or "supergraph "of a function is the set of points that are on or above the function graph
 * this content builds on
 	* weighed sum
 		\ links-to internal awzlonrfndtibahn
 * Jensen inequality
-	* forall (1-distribution w) (point x). f (dp w x) <= dp w (lift f x)
+	\ id luvukbhzqwcogeqe
+	* proposition
+		* forall (1-distribution w) (point x). f (dp w x) <= dp w (lift f x)
+		* equality => (x is constant) or (f is linear)
 	* Jensen ineqaulity is equivalent to the special 2-point version of it [when (the number of points = 2)]
 		* proof is by induction
 * linear parametric sum is equivalent to (weighed-sum in 2 dimensions)
-	* lps p (x, y) : = p * x + (1 - p) * y
+	* lps p (x, y) := p * x + (1 - p) * y
 * a function f is convex iff its epigraph is convex
 * "secant graph inequality"
 	* forall x y. forall p in [0, 1]. f (lps p (x, y)) <= lps p (f x, f y)
