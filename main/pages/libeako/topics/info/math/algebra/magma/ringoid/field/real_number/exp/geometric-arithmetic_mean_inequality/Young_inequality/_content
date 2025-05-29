@@ -1,0 +1,22 @@
+\ id clwougymsfpqoakn
+* Young's inequality is the same as the weighed geometric-arithmetic mean inequality, but the exponent flipped by its reciproc and the power flipped by the variable
+	* proposition
+		* if
+			* reciprocal 1-distribution w
+			* non-negative reals x
+	* then
+		* product x <= sum (lift2 (power w) x / w)
+		* equality iff ((lift2 (power w) x) is constant)
+	* proofs
+		* analogously to the proof of (the weighed geometric-arithemetic mean inequality), but starting from (the concavity of ln) instead of (the convexity of exp)
+		* derived from (the weighed geometric-arithemetic mean inequality), by doing the 2 flippings
+			* from the weighted geometric-arithmetic mean inequality
+				* product (lift2 power (1/w) y) <= dot-product (1/w) y
+				* equality iff (y is contant)
+			* x := lift2 (power (1/w)) y
+			* y = lift2 lg (1/w) x = lift2 (power w) x
+			* product x
+			* <=
+			* dot-product (1/w) (lift2 (power w) x)
+			* =
+			* sum (lift2 (power w) x / w)
