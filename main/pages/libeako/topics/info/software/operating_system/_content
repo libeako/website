@@ -1,6 +1,11 @@
 \ id zdfgvdvqeqrydzsl
 * concrete
-	* debian
-		\ links-to internal xpvvsvhaifsisqzw
-	* nix
-		\ links-to internal kfhbsukddagsjjny
+	* linux
+		* (terminal - x) copy-paste
+			* for it to work: just install package 'xsel'
+				* i did not believe it either untill i tried it
+		* distros
+			* debian
+				\ links-to internal xpvvsvhaifsisqzw
+			* nix
+				\ links-to internal kfhbsukddagsjjny
