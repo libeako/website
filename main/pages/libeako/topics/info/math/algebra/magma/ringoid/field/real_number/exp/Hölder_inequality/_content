@@ -1,0 +1,53 @@
+\ id altgezurhuvkozdy
+* proposition
+	* if
+		* F field (Real or Complex)
+		* S : Set
+			* with measure
+		* n : Nat+
+		* f : [1 .. n] -> S -> F
+			* each measurable
+		* p : [1 .. n] -> [1 .. infinite]
+			* sum (p >>> (1/)) = 1
+	* then
+		* norm 1 (product f) <= product (lift2 (norm p) f)
+* proof
+	* if exists k. norm (p k) (f k) = 0
+		* then (f k) = 0 almost everywhere and hence (the left side of the inequality to prove = 0)
+	* hence we can continue with the assumption
+		* forall k. norm (p k) (f k) >= 0
+	* hence we can form
+		* r : [1 .. n] -> F
+			* := k s -> norm 1 (f k s) / norm (p k) (f k)
+	* note
+		* forall k
+			* integral (power (p k) (r k)) = 1
+				* implied by
+					* integral (s -> power (p k) (norm 1 (f k s))) = power (p k) (norm (p k) (f k))
+	* if exists k. norm (p k) (f k) = infinite
+		* then (the right side of the inequality to prove) = infinity
+	* hence we can continue with the assumption
+		* forall k. norm (p k) (f k) is in (0 .. infinity)
+	* if exists k. p k = infinity
+		* then
+			* norm 1 (f k) <= norm (p k) (f k)
+		* and (the inequality to prove) for the rest of the components can be proved with induction on n
+	* hence we can continue with the assumption
+		* forall k. (p k) is in (1 .. infinity)
+	* by
+		* the Young inequality
+			\ links-to internal clwougymsfpqoakn
+		* we have
+			* forall (s : S)
+				* product r s <= sum (k -> power (p k) (r k s) / (p k))
+		* this will be integrated
+	* norm 1 (product f) / product (lift2 norm p f)
+	* <=
+		* by the result from the Young inequality
+	* sum (integral (flip r s / p))
+	* =
+		* implied by an earlier note about the integral of r
+	* sum (const 1 / p)
+	* =
+		* assumption of the theorem
+	* 1
