@@ -1,0 +1,22 @@
+\ id wxandlrvblaoepon
+* proposition
+	* if
+		* ABC triangle with opposite sides a, b, c
+	* then
+		* square c = square a + square b - 2 * a * b * cos C
+* proof
+	* create a 2D coordinate system
+		* C = (0, 0)
+		* B = (a, 0)
+		* A = b * (cos C, sin C)
+			* this is true even if C is obtuse
+	* the essence of the proof is simple usage of the Pythagoras theorem
+	* square c = square AB = square-length (B - A) = square.length (b * cos C - a, b * sin C) =
+	* square (b * cos C - a) + square (b * sin C) =
+	* square b * square (cos C) + square a - 2 * a * b * cos C + square b * square (sin C) =
+	* square a + square b * (square (cos C) + square (sin C)) - 2 * a * b * cos C =
+	* square a + square b - 2 * a * b * cos C
+* names
+	* rule of cosines
+	* cosine rule
+	* cosine law
