@@ -9,12 +9,12 @@
 		* also said to be the "scalars"
 	* (×) : R -> G -> G
 		* this also is said to be "multiplication and often the same formal name is used; i may also use "*" for both multiplications
-	* associativeity
-		* forall a b in R, x in G. a * (b * x) = (a * b) * x
-	* distributation over scalar addition
-		* forall a b in R, x in G. (a + b) * x = (a * x) + (b * x)
-	* distribution over module addition
-		* forall a in R, x y in G. a * (x + y) = (a * x) + (a * y)
+		* associativity
+			* forall a b in R, x in G. a * (b * x) = (a * b) * x
+		* distributation over scalar addition
+			* forall a b in R, x in G. (a + b) * x = (a * x) + (b * x)
+		* distribution over module addition
+			* forall a in R, x y in G. a * (x + y) = (a * x) + (a * y)
 * "module with unity" is as it sounds, a module with unity
 	\ id hzuxpjajstflvopz
 	* unity is the scalar 1
@@ -29,5 +29,9 @@
 	* theorem: forall x in G. -1 * x = -x
 		* proof
 			* -1 * x = -1 * x + 0 = -1 * x + (x - x) = (-1 * x + x) - x = (-1 + 1) * x - x = 0 * x - x = 0 - x = 0 + (-x) = -x
+	* theorem: forall s in R. s * 0 = 0
+		* proof: s * 0 = s * (0 - 0) = s * (1 * 0 + (-1) * 0) = s * (0 * 0) = (s * 0) * 0 = 0
+	* theorem: R is a division-ring => forall (s in R) (v in G). (s * v = 0 => (s = 0 or v = 0))
+		* proof is trivial [assume s =/= 0, then (s / s) * v = 0, ...]
 * vector space
 	\ links-to internal pokrnkkzlywietmj

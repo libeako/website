@@ -2,6 +2,10 @@
 * this builds on
 	* module with unity
 		\ links-to internal hzuxpjajstflvopz
-* "vector space" representation
-	* just a module with unity such that the scalar slot is not only group but field
+* 'vector space' is just a module with unity such that the scalar slot is not only ring but field
 * a vector space is "Banach" iff it is normed and complete
+* linear dependence
+	* some vectors are 'linearly dependent' iff one of them is in the span of the others
+	* 'linearly independent' iff not linearly dependent
+* subspace
+	\ links-to internal ysnfpnvaxazcmfiy
