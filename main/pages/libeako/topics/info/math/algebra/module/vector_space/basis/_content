@@ -1,0 +1,27 @@
+\ id hujdecvrxmuhzajf
+* definition
+	* in a vector space: a set of vectors which
+		* are linearly independend
+			\ links-to internal zlxfaxjjkvjcqgql
+		* space the whole space
+* replacement of basis vector with a foreign vector
+	\ id qqikgrmtohkunfzg
+	* proposition
+		* if
+			* (p1, ..., pn, q1, ..., qm) is a basis
+			* (y, p1, ..., pn) are
+				* independent
+					\ links-to internal zlxfaxjjkvjcqgql
+		* then
+			* exists a q such that replacing it with y in the basis results in a basis still
+	* proof is trivial
+	* corollaries
+		* all finite basises have the same number of vectors
+			\ id xkyeqrewuusztfgu
+			* proof is trivial
+			* corollaries
+				* finite vector spaces have a number of dimensions, which is the number of vectors in all basises
+					\ id mrfqrbeqjhmhpbla
+					* usually denoted with "dim"
+		* all linearly independent set of vectors can be extended to be a basis
+			\ id qdjdnbaaplzeasgd

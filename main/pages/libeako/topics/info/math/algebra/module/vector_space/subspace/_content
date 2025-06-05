@@ -1,0 +1,16 @@
+\ id ysnfpnvaxazcmfiy
+* equivalent conditions
+	* proposition
+		* are equivalent
+			* U is subspace
+			* and
+				* 0 is in U
+				* forall x1, x2 in U. (x1 + x2) in u
+				* forall (s scalar) (u in U). (s * u) in U
+	* proof is trivial
+* 'sum of subspaces' is just sums over their value-sets
+	* trivial to prove that the sum is a subspace
+* the sum is the smallest containing subspace
+	* proof is trivial
+* some subspaces are 'linearly dependent' iff one of them has non-trivial [containing more than the 0 vector] intersection with the span of the others
+* 'direct sum' is same as sum but is defined only for linearly independent subspaces
