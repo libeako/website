@@ -1,0 +1,14 @@
+\ id kwgienlsbfagxypk
+* recursion is like
+	* h := ... h ...
+* let us give name for the (... ...)
+	* h := f h
+* we are searching for the "fixed point" of f
+	* let us name it by (Y f)
+* the problem: the right side does not have an h
+* the solution: let us pass it as an input; for that we need to make h a function [that takes itself as input]
+	* h k := f (k k)
+* (h h) is a fixed point of f
+* h = k -> f (k k)
+* hence Y f = (h h) = (k -> f (k k)) (k -> f (k k))
+* the Y combinator needs lazy evaluation, otherwise its evaluation is an infinite loop
