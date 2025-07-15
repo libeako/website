@@ -1,0 +1,28 @@
+\ id mhckrodbyomwksdw
+* I : Set
+	* a commutative group
+* F : Set
+	* a field
+* f, g : I -> F
+* convolute-2 f g i := sum (I * I) |> (fi, gi) -> if (fi + gi = i) then (f fi * g gi) else 0)
+	* often one of the inputs is considered to be 'the signal' and the other 'the kernel'
+* convolute-2 is commutative
+	* proof is trivial
+* convolute-2 is associative
+	* proof is trivial
+	* convolute : List F -> F := fold-with convolute-2
+	* enables separability of multi-dimensional kernels which are convolutions of less-dimensional kernels
+* convolution is shift-invariant
+	* proof is trivial
+		* shift is a convolution ["delay filter"]
+		* chain of equations
+			* convolute-2 kernal (shift signal)
+			* convolute-2 kernel (convolute-2 kernel-of-shift signal)
+			* convolute [kernel, kernel-of-shift, signal]
+			* convolute [kernel-of-shift, kernel, signal]
+			* convolute-2 kernal-of-shift (convolute-2 kernel signal)
+			* shift (convolute-2 kernel signal)
+* convolution is linear
+	* proof is trivial
+		* treat scalar multiplication of signals as convolution with a 1-element kernel
+		* then use basic properties of convolution as in the proof of shift-invariance
