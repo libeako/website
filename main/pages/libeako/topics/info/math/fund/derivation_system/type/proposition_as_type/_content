@@ -1,16 +1,25 @@
 \ id kdtdlfyrudrcnrrl
-* logic emerges from type theory; logical concepts can be represented by the most basic type theoretical concepts; logical propsitions can be represented by types, logical proofs can be represented by constructed objects; the importance of this simple and natural idea is fundamental and huge
-	* it is not overstatement that this is a most fundamental development science in the 20th century
-* this idea can be used both in mathematics and in programming and gives a simple, natural and powerful theoretical foundation for both of them
-	* the similarities between math and programming is not a coincidence, the outer-most layer of programming is math, as both of them are just about construction of mathematial objects, programs are mathematical objects, even if their use case of the program is not specially mathematical
-* it is one of the greatest piece of knowledge i have ever learned in programming
-* the name of this idea is "propositions as types" or sometimes "Curry Howard correspondence"
-* this idea connects the logical and the constructive worlds, by expressing logics with type-theory; what are these 2 worlds? the constructive world lets us construct mathematical objects, like lambda calculus; the logical world is the propositions and their proofs; of course the constructive world can and always could express anything generally, including logical concepts, but before 'propositions as types' the logical part existed above the constructive world, treated separately, had a separate dedicated language and separate rules [of validity]; with 'props as types' the logical world exists inside the constructive world [same level], does not need a separate language (other than the language of construction) and can be about the objects of the constructive world
-* this idea is not tricky, it is not only a human invention; instead it has a deep and simple and natural theoretical foundation; here is the 
+* logic emerges from type theory; logical concepts can be represented by the most basic type theoretical concepts; logical propositions can be represented by types; the importance of this simple and natural idea is fundamental and huge
+* the name of this idea
+	* is "propositions as types"
+		* because it represents propositions as types
+	* sometimes the name "Curry Howard correspondence" is used
+	* it is not overstatement that this is a most fundamental science development in the 20th century
+	* this is one of the greatest piece of knowledge i have ever learned in programming
+* this idea can be used both in mathematics and in programming
+	* the similarities between math and programming is not a coincidence, the outer-most layer of programming is math, as both of them are just about construction of mathematial objects
+		* programs are mathematical objects
+			* even if their use case is not specially mathematical
+* we need logic
+	* on what we construct: we want to make sure that certain properties are true; for that we need to be able to express these properties formally as propositions, prove them and verify the proof automatically
+* the logic must be about the program itself, not about its data
+	* of course the constructive world can and always could express anything generally, including logical concepts; for example we can write a program that lets the user edit propositions, proofs and verify the proofs; but this would work only on the data layer of the program; those propositions would be about data layer objects; but we want to prove properties of our program itself
+* this idea achieves this goal by letting logic emerge from the typing of the constructive language
+	* hence logic does not need a separate language (other than the language of construction)
 * derivation of the core idea
 	\ links-to internal ekondytrrodzxtui
 * the core idea
-	* the proposition represented by a type is true if and only if the type is inhabitedthe proposition represented by a type is true if and only if the type is inhabited
+	* the proposition represented by a type is true if and only if the type is inhabited
 * how can we prove a proposition? the question translates to types as follows: how can we prove that a type is inhabited? the answer is trivial: we show an instance of the type; by 'show' i mean we declare it to have that type and give a definition to it; the static type-checking is the verification of the proof
 * examples of representing simple statements
 	* equality
