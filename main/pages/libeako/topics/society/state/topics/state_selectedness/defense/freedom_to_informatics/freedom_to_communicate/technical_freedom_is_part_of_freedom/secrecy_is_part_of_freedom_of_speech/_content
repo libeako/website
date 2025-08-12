@@ -1,16 +1,16 @@
 \ id yawcudfhhugogbwf
 * being able to keep secret from government is an important defense against tyranny; because people must be not afraid to speak and organize against the government; a best way of this is to do it secretly, anonymously; hence the constitution should deny the prohibition of secret speech
 * some possible consequences of prohibition
-	* the ruler can see into the secrets of opposing politicians, gaining blackmailing extra-power over them
+	* the ruler can see into the secrets of opposing politicians, gaining blackmail-ability extra-power over them
 	* the ruler can see the revealing material of investigative journalists, including the identities of whistleblowers
-	* the ruler can see the technological and business secrets of firms, handing those over to cronies, who can use it as unfair competitive advantage
+	* the ruler can see the technical and business secrets of firms, handing those over to cronies, who can use it as unfair competitive advantage
 * serious criminals dodge the prohibition
-	* serious criminals can easily walk around the technical constrains of the state and are likely to ignore the state's prohibition of secret speech; hence the prohibition of secret speech is ineffective against serious criminals
-* anonimity
-	* anonymity is a special case of secret speech, when the secret is the identity of the speaker
-	* anonymity must be allowed
-		* the state must not prohibit the anonym usage of the technical communication channels [computer and phone networks, ...]
-		* because anonymity decreases the fear of speech by much
-		* though the state could still investigate the identity of an anonym person
-* encryption
-	* as part of an effort to weaken secrecy of speech : many politicians wants to ban encryption without having a backdoor for the state; this is technically not possible without significantly decreasing the secrecy against other parties too
+	* serious criminals can easily walk around the technical constrains of the state and are probable to ignore the state's prohibition of secret speech; hence the prohibition of secret speech is ineffective against serious criminals
+* by type of secret
+	* secrecy of participant ["anonimity"]
+		* anonymity is a special case of secret speech, when the secret is the identity of the speaker
+		* anonymity must be allowed
+			* the state must not prohibit the anonym usage of the technical communication channels [computer and phone networks, ...]
+			* though the state could still investigate the identity of an anonym person
+	* secrecy of message content ["encryption"]
+		* as part of an effort to weaken secrecy of speech: many politicians wants to ban encryption (without having a backdoor for the state); this is technically not possible without significantly decreasing the secrecy against other parties too
