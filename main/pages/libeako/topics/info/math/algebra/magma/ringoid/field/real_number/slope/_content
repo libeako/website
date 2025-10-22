@@ -14,6 +14,7 @@
 		* this is a stupid name choice, as many things can be derived from a function [integral, dispersion, ...]
 	* a name that is often used and is acceptable for me is "differential"
 	* the best name, IMO, would probably be "speed"
+* the Leibniz notation for slope is bad; it is literally nonsense, it is confusing; stop it already
 * existence of slope => continuity
 	* proof is easy
 * slope (const k) = 0
@@ -47,3 +48,5 @@
 	\ links-to internal aanwugzozbngpuyw
 * anti-slope ["anti-derivative"]
 	\ links-to internal gnjdvmoybecxgixt
+* sequence ratio by speed ["L'Hôpital's rule"]
+	\ links-to internal xcibrzqtmarewtek
