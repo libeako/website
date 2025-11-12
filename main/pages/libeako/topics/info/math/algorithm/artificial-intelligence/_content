@@ -1,31 +1,5 @@
 \ id hbwdssttspuujqod
 * neuron network
-	* introduction
-		* Michael Nielsen: Neural Networks and Deep Learning
-			* good for intro
-			* biggest negative is verbosity
-		* by Brandon Rohrer
-			\ links-to external https://www.youtube.com/watch?v=ILsA4nyG7I0
-		*  3Blue1Brown:
-			* But what is a Neural Network? | Deep learning, chapter 1
-				\ links-to external https://youtu.be/aircAruvnKk
-			* Gradient descent, how neural networks learn | Deep learning, chapter 2
-				\ links-to external https://youtu.be/IHZwWFHWa-w
-			* What is backpropagation really doing? | Deep learning, chapter 3
-				\ links-to external https://youtu.be/Ilg3gGewQ5U
-			* Backpropagation calculus | Deep learning, chapter 4
-				\ links-to external https://youtu.be/tIeHLnjs5U8
+	\ links-to internal mncnlpkvvoprgvij
 * natural language
-	* vectorization of words
-		* intuition for the simplest algorithm
-			* the initial vectors are random
-			* loop
-				* take a couple of words near each other
-				* move their vectors somewhat closer to each other
-	* attention mechanism
-		* “Attention is All You Need”
-		* the Q, K, V neural-nets
-			* are constant inside an attention block
-			* they learn the language
-			* 3Blue1Brown: Attention in transformers, step-by-step
-				\ links-to external https://youtu.be/eMlx5fFNoYc?si=SJdLPX0Phw7ZEgs0
+	\ links-to internal goicodjefpqovtot

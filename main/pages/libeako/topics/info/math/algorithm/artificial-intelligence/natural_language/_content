@@ -1,0 +1,14 @@
+\ id goicodjefpqovtot
+* vectorization of words
+	* intuition for the simplest algorithm
+		* the initial vectors are random
+		* loop
+			* take a couple of words near each other
+			* move their vectors somewhat closer to each other
+* attention mechanism
+	* “Attention is All You Need”
+	* the Q, K, V neural-nets
+		* are constant inside an attention block
+		* they learn the language
+		* 3Blue1Brown: Attention in transformers, step-by-step
+			\ links-to external https://youtu.be/eMlx5fFNoYc?si=SJdLPX0Phw7ZEgs0
