@@ -1,0 +1,6 @@
+\ id rnviyatmyjycuncn
+* intuition of the equation contrain version
+	* the bases of the intuition is infinitesimal movements along the constrain manifold
+	* movement in one coordinate requires movement in an other; the ration of the speeds of these movements must be equal to the ration of the corresponding speeds in the object function; otherwise it becomes possible to do a small movement on the constrain manifold with improvement-move in the object function
+		* by 'improvement-move' i mean stepping closer to the searched extremum
+	* thus the key is that the differentials of the object and the constrain function must equal

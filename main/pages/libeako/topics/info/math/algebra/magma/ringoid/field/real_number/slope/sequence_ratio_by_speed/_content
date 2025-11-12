@@ -70,3 +70,11 @@
 		* limit (fun x -> exp (ln (f x) * (g x))) = 
 		* exp (limit (fun x -> ln (f x) * (g x))) =
 		* exp (limit (fun x -> ln (f x) / (1 / (g x))))
+* applications
+	* Taylor series
+		* the Wikipedia article
+			\ links-to external https://en.wikipedia.org/wiki/Taylor%27s_theorem#Proofs
+			* is good
+				* both the general discussion and the proofs
+					* the first proof is very simple and understandable; i did not read the long proof
+				* read the base form and the "mean-value" form of the residual; the proofs of both are easy
