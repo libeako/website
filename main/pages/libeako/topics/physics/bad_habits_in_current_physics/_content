@@ -1,0 +1,8 @@
+\ id qzvegrpnjnwuhtlc
+* confuse (f x) and x
+	* they say (f x) is a function, but generally it is not a function, it is the output value of the function at input value x
+	* they even say the absudity 'f = f x'
+		* i almost can not find a pysics book that does not say this absurdity
+		* they say this regulary, throughout the whole book
+	* they should just use normal type-annotations to cure this bad habit out
+		* f : _ -> _

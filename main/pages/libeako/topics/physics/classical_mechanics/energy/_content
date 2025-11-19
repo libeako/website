@@ -1,0 +1,30 @@
+\ id pyobrtkhzlympgop
+* work
+	* intuition
+		* imagine we are paid to carry load up on a staircase
+		* for simplicity: neglect the own human body weight
+		* work is force * distance
+* kinetic energy
+	* notation
+		* w  = work
+		* f  = force
+		* d  = distance
+		* s  = speed
+		* ss = start speed
+		* sf = final speed
+		* t  = time
+		* a  = accelaration
+	* work-energy theorem
+		* w = f * d = f * (s * t) = f * (((sf + ss) / 2) * ((sf - ss) / a)) = m * (sf^2 - ss^2) / 2
+		* motivates the definition of 'kinetic energy' as (m * s^2 / 2)
+	* in a purely conservative [path-independent force-field]
+		* see
+			* the gradient theorem
+				\ links-to internal igbeaukwebqyciip
+		* it is trivial to derive the conservation of (potential energy + kinetic energy)
+* thermodynamics
+	* law 2
+		* explanation by Mike Merrifield
+			\ links-to external https://youtu.be/C0fGk1d4oIc
+		* Entropy by John Lienhard
+			\ links-to external https://youtu.be/870y6GUKbwc
