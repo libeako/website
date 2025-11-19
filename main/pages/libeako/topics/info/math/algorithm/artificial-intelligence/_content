@@ -1,5 +1,26 @@
 \ id hbwdssttspuujqod
 * neuron network
 	\ links-to internal mncnlpkvvoprgvij
+	* gradient descent
+		* EZlearn AI: Stochastic Gradient Descent
+			\ links-to external https://youtu.be/5h8yx6zalXM?si=x9UArEcoaG8jRsnj
 * natural language
 	\ links-to internal goicodjefpqovtot
+* Kullback–Leibler divergence as error function
+	* in my opinion
+		* this is wrong choice
+		* my alternative
+			* with
+				* 
+					* f := log >>> square >>> exp
+				* f (q / p) + f ((1 - q) / (1 - p))
+			* notes
+				* i eliminate the log with an exp, because i do want high difference between the probability values to be punished highly
+				* i punish the difference from the other side too with (1 - )
+* autoencoder
+	* variational
+		* other sources
+			* Deepia: Variational Autoencoders | Generative AI Animated
+				\ links-to external https://youtu.be/qJeaCHQ1k2w?si=-aefpMsgsEkSOlFZ
+			* DataMListic: Variational Autoencoder - Explained
+				\ links-to external https://youtu.be/geH5HnRapRs?si=VBnjQM5cD19hLzU7
