@@ -1,13 +1,28 @@
 \ id btgigxqxmuifcxqz
 * meaning of "slope"
-	* let T be a metric field
-	* f : T -> T
-	* p be in T
-	* slope f p := 
-		* <the following versions are equivalent>
-		* limit p (x -> (f x - f p) / (x - p))
-		* limit 0 (h -> (f (p + h) - f p) / h)
-* slope does not necessarily exist
+	* simple
+		* let T be a metric field
+		* f : T -> T
+		* p be in T
+		* slope f p := 
+			* <the following versions are equivalent>
+			* limit p (x -> (f x - f p) / (x - p))
+			* limit 0 (h -> (f (p + h) - f p) / h)
+	* Fréchet
+		* n, m : Nat+
+		* f : T ^ n -> T ^ m
+		* the slope is S iff 
+			* lim 0 (h -> (f (x + h) - f x - inner-product S h) / (norm h)) = 0
+			* easy to see that
+				* all such S values are equal
+				* the slope in direction s = inner product S s
+			* S is said to be the "Jacobian" matrix
+		* the transpose of this multivariate definition is said to be the "gradient" of f
+			* the gradient is the most steep direction
+				* this can be proved by the
+					* Cauchy inequality
+						\ links-to internal txtljjtjzzmiwdec
+	* slope does not necessarily exist
 * some mathematicians insist that the domain of the function must be topologically open; i do not see why
 * naming
 	* most usual name of slope is "derivative"

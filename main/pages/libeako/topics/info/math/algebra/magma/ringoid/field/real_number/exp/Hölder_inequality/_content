@@ -5,9 +5,10 @@
 		* S : Set
 			* with measure
 		* n : Nat+
-		* f : [1 .. n] -> S -> F
+		* N = [1 .. n]
+		* f : N -> S -> F
 			* each measurable
-		* p : [1 .. n] -> [1 .. infinite]
+		* p : N -> [1 .. infinite]
 			* sum (p >>> (1/)) = 1
 	* then
 		* norm 1 (product f) <= product (lift2 (norm p) f)
@@ -17,7 +18,7 @@
 	* hence we can continue with the assumption
 		* forall k. norm (p k) (f k) >= 0
 	* hence we can form
-		* r : [1 .. n] -> F
+		* r : N -> F
 			* := k s -> norm 1 (f k s) / norm (p k) (f k)
 	* note
 		* forall k
@@ -51,3 +52,6 @@
 	* =
 		* assumption of the theorem
 	* 1
+* Cauchy inequality
+	\ id txtljjtjzzmiwdec
+	* is a special case of Hölder inequality when (N = [1 .. 2] and p is constant)

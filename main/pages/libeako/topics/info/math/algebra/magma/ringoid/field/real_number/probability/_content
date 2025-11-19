@@ -1,0 +1,12 @@
+\ id vwehoopbettayqxi
+* Gibbs inequality
+	\ id nciapxlilgcvjyzc
+	* proof
+		* use Jensen inequality on log
+			\ links-to external https://en.wikipedia.org/wiki/Gibbs%27_inequality
+* information theory
+	* entropy
+		* entropy <= cross-entropy
+			* proof via
+				* Gibbs inequality
+					\ links-to internal nciapxlilgcvjyzc
