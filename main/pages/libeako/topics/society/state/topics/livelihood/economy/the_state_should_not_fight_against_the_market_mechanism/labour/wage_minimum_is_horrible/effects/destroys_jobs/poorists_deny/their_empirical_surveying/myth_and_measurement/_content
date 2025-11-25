@@ -14,13 +14,23 @@
 		* a crucial scientific requirement for sample-based arguments is that the number of samples should be high, so that the probability of non-representative sampling be low; but this measurement contains not only not enoughly many samples, but only 1 sample-pair; because the samples are the 2 states; the employees can not be considered to be the samples, because they are dependent, they are under the same state, effected by the same laws
 		* if in medicine somebody would suggest a 1 sample-pair sampling measurement as scientific - that person would be unonimously cinsidered to be a lunitic, not a scientist; but in economics this is treated okay, as economics is practiced not as science but as religion
 		* though the authors mention that they had a few similar measurements about some other states in the past
+	* the data is number of employees, but should be amount of worked time
+	* the data does not take into account the changes compensation types other than wages
 	* the survey was telephone questioning of restaurant managers about their employments
 		* the questioned may have been biased to answer the popular answer
 	* the managers may have anticipated the wage minimum increase before the survey, then the wage minimum effect may have got realized before the survey, hence not showing up in the by-time-difference
+		* the plan to increase the wage minimum was announced 2 years before it really was law
 	* several other effects may have masked the effect of the wage minimum increase
 		* wealth effect
 			* if people are more rich then they buy more service, including restaurant service
 		* tax or other burdon decrease on restaurants
+	* other sources
+		* The Daily Economy: Why This Year’s Nobel Prize in Economics Changes Nothing on the Minimum Wage Debate
+			\ links-to external https://thedailyeconomy.org/article/why-this-years-nobel-prize-in-economics-changes-nothing-on-the-minimum-wage-debate/
+		* "National Bureau of Economic Research": Myth or Measurement: What Does the New Minimum Wage Research Say about Minimum Wages and Job Loss in the United States?
+			\ links-to external https://www.nber.org/papers/w28388
+		* Employment Policies Institute: The 20th anniversary of the myth that won’t quit
+			\ links-to external https://epionline.org/oped/the-20th-anniversary-of-the-myth-that-wont-quit/
 * the authors say that their findings are evidence that wage minimum does not destroy jobs
 	* no, it is not evidence
 		* not only we do not have reason to believe their numbers but even if those were genuine: they are still just very thin unreliable sampling
