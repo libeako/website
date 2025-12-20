@@ -13,9 +13,7 @@
 		* slope (F1 - F2) = 0, on the whole interval
 		* hence [by the mean value theorem] (F1 - F2) is constant
 		* hence F1 and F2 differ from each other only by a constant addition
-* if F is an anti-slope of f then (integral f [a, b] = F b - F a)
-	* proof is trivial building on
-		* integral is anti-slope
-			\ links-to internal eidifgibmemuavvz
+* fundamental theorem [of "calculus"]
+	\ links-to internal igbeaukwebqyciip
 * substitution theorem
 	\ links-to internal mitphxdwxtqjkpss

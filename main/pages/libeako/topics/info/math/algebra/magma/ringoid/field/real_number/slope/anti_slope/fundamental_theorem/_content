@@ -1,0 +1,61 @@
+\ id igbeaukwebqyciip
+* if F is an anti-slope of f then (integral (over [a .. b] f = F b - F a)
+	* proof is trivial building on
+		* integral is anti-slope
+			\ links-to internal eidifgibmemuavvz
+* generalization to curves
+	* n : Nat+
+	* the gradient theorem
+		* proposition
+			* if
+				* x1, x2 : R
+					* x1 <= x2
+				* c : [x1 .. x2] -> Real ^ n
+					* has slope
+				* P : Real ^ n -> Real
+					* has continuous slope
+			* then
+				* integral (over c) (slope P) = P (c x2) - P (c x1)
+		* proof
+			* "chain rule" application
+				* slope (c >>> P) x = (slope P) (c x) * (slope c x)
+			* integral (over c) (slope P)
+			* = 
+				* definition of integration over a curve
+			* integral [over [x1 .. x2]] (x -> (slope P) (c x) * (slope c x))
+			* =
+				* "chain rule" application
+			* integral [over [x1 .. x2]] slope (c >>> P)
+			* =
+				* the fundamental theorem over real interval
+			* lift2 (c >>> P) (-) x2 x1
+		* it is trivial to generalize this theorem to functions P with piecewise continuous slope
+	* converse of the gradient theorem
+		* proposition
+			* if
+				* p : Real ^ n -> Real ^ n
+					* continuous
+					* path-independent
+			* then
+				* exists P : Real ^ n -> Real . slope P = p
+		* proof
+			* let (o : Real ^ n) be random
+			* P x := integral (over any curve between x and o) p
+			* slope (in direction v) P x
+			* =
+				* by the definition of directional slope
+			* limit (at 0) (t -> (P (x + t * v) - P x) / t)
+			* =
+				* we can integrate over any path, because p is path-independent
+				* we choose a straight line between x and (x + t * v)
+					* u s : = x + s * v
+			* limit (at 0) (t -> integral (over u) p / t)
+			* =
+				* by definition of integration over a curve
+			* limit (at 0) (t -> integral (over [0 .. t]) (s -> p (u s) * slope u s / t)
+			* =
+				* using that p is continuous
+			* p (u 0) * v
+			* = 
+			* p x * v
+			* hence p is the gradient of P
