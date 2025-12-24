@@ -1,0 +1,74 @@
+\ id riivzyiqseyawmjz
+* M : (m : Line, m ts = m te = 0)
+	* a deviation line
+* le m e := l + e * m
+* l is extremum argument of A <=> (forall m . slope (le m >>> A) 0 = 0)
+	* proof is very easy
+* forall m
+	* le m >>> A >>> slope
+	* =
+		* just using the definition of {le, A}
+	* le m >>> eval f >>> integral >>> slope
+	* =
+		* fundamental theorem of calculus
+			\ links-to internal igbeaukwebqyciip
+	* le m >>> eval f >>> slope >>> integral
+	* hence
+	* slope (le m >>> A) 0
+	* =
+	* (le m >>> eval f >>> slope >>> integral) 0
+	* =
+	* integral (t -> slope (e -> eval f (le m e) t) 0)
+	* =
+	* integral (t -> sum
+		* eval (slope-0 f) (le m 0) t * 0
+		* eval (slope-1 f) (le m 0) t * slope (e -> le m e t) 0
+		* eval (slope-2 f) (le m 0) t * slope (e -> slope (le m e) t)) 0
+		* )
+	* =
+		* le m 0 = l
+	* integral (t -> sum
+		* eval (slope-0 f) l t * 0
+		* eval (slope-1 f) l t * slope (e -> le m e t) 0
+		* eval (slope-2 f) l t * slope (e -> slope (le m e) t)) 0
+		* )
+	* =
+		* l does not depend on e, hence we can drop it from the slope of le
+	* integral (t -> sum
+		* eval (slope-1 f) l t * slope (e -> e * m t) 0
+		* eval (slope-2 f) l t * slope (e -> (e * slope m t)) 0
+		* )
+	* =
+		* slope of multiplication with a scalar constant is that scalar constant 
+	* integral (t -> sum
+		* eval (slope-1 f) l t * m t
+		* eval (slope-2 f) l t * slope m t
+		* )
+	* =
+		* drop point t
+	* integral (sum
+		* eval (slope-1 f) l * m
+		* eval (slope-2 f) l * slope m
+		* )
+	* =
+		* with
+			* p := eval (slope-2 f) l
+			* q := m
+		* integral (eval (slope-2 f) l * slope m)
+		* =
+		* integral (p * slope q)
+		* =
+			* applying integration by parts on functions p, q
+		* lift2 (p * q) (-) ts te - integral (slope p * q)
+		* =
+			* m ts = m te = 0
+		* 0 - integral (slope p * q)
+		* =
+		* - integral (slope (eval (slope-2 f) l) * m)
+	* integral
+		* + eval (slope-1 f) l * m
+		* - slope (eval (slope-2 f) l) * m
+	* =
+	* integral
+		* m * (eval (slope-1 f) l - slope (eval (slope-2 f) l))
+* because this is true for all m: the other factor of the integrand product must be 0

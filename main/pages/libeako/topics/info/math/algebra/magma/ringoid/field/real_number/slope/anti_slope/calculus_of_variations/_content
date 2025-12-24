@@ -1,0 +1,27 @@
+\ id zzpzgcowyfxoguzr
+* the main result is
+	* certain type of line-integrals have extremum where the Euler equation is true
+		\ id wdxehzwqtplkmncw
+	* proposition
+		* if
+			* n : Nat+
+				* the number of dimensions of the space
+			* ts, te : Real
+				* ts < te
+			* I := [ts .. te]
+			* Line := (I -> Real ^ n, having continuous slope)
+			* f : (Real, Real ^ n, Real ^ n) -> Real
+				* the function integrated over l
+				* has continuous slope
+			* eval f l t := f (t, l t, slope l t)
+			* A : Line -> Real := eval f >>> integral (over I)
+			* slope-k - the partial slope of a function in its (k+1)-th input
+		* then
+			* l is extremum argument of A
+			* <=>
+			* eval (slope-1 f) l = slope (eval (slope-2 f) l)
+	* proof
+		\ links-to internal riivzyiqseyawmjz
+	* other sources
+		* Dougles Cline
+			\ links-to external https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Variational_Principles_in_Classical_Mechanics_(Cline)/05%3A_Calculus_of_Variations/5.02%3A_Eulers_Differential_Equation
