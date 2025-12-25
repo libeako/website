@@ -1,0 +1,42 @@
+\ id ugzrzggachwdnvph
+* the Newtonian formulation of classical mechanics is great, by its simplicity and intuitiveness; but it is too difficult to use in complex situations [complex constraints]
+* derivation from the Newtonian formulation
+	* we want to work with energy, instead of forces in complex situations; hence our aim is to find a formulation of classical mechanics which is equivalent to the Newtonian and uses energies instead of forces
+	* the Newtonian formulation is the law (f = m * a)
+	* suppose x is the from time to position function
+	* f = - gradient P
+		* but we are interested only along x
+			* fx = slope (along x) (-P)
+	* a, v, K depending on time
+		* m * a = slope (m * v)
+		* =
+			* we need to have v^2 to get kinetic energy
+		* slope (slope (along v) (m * v^2 / 2))
+		* =
+		* slope (slope (along v) K)
+	* hence
+		* slope (along x) (-P) = slope (slope (along v) K)
+	* note that
+		* K depends on velicity but not on distance, hence
+			* slope (along x) K = 0
+		* P does not depend on velocity, hence
+			* slope (along v) P = 0
+	* hence we can just add to each side's energy the energy of the other side
+		* slope (along x) (K + -P) = slope (slope (along v) (K - P))
+	* with L := K - P
+		* slope (along x) L = slope (slope (along v) L)
+	* L is the "Lagrangian"
+	* this is a variant of the mathematical Euler differential equation on
+		* L (t, d, v) = m * v^2 / 2 - U d
+		* d depending on t
+		* v being the slope of d depending on t
+	* hence the name "Euler-Lagrange equation" of this physical variant
+	* hence
+		\ links-to internal wdxehzwqtplkmncw
+		* the path of the object of interest is where the integral of the Lagrangian is stationary
+	* other sources
+		* Hakim at StackExchange
+			\ links-to external https://math.stackexchange.com/a/676355
+* the integral of the lagrangian is said to be the "action"
+* the action being a line-integral does not depend on the parameterization of the line; hence by equivalence the Euler-Lagrange equation is true for all parameterizations too [for all coordinate systems with full independence among its coordinates]
+	* this is the big advantage of the Lagrangian formulation of classical mechanics
