@@ -1,0 +1,51 @@
+\ id wtoqldqxgpwiwlih
+* builds on the
+	* Legendre transform
+		\ links-to internal zeyldjmzebebncfh
+* i do not understand the motivation leading to the Hamiltonian, but something like this
+	* a goal may be to use a function other than the Lagrangian, though equivalent; it would take the momentum instead of the velocity as input
+* the momentum is the partial derivative of the Lagrangian along its velocity input [this is the definition of the 'generelized momentum']
+	* this relation resembles the Legendre transform, so lets move on with that
+* definition of 'the Hamiltonian' - is the Legendre transform of the Lagrangian
+* hence
+* whenever
+	* condition
+		* p  = slope-2 L q'
+		* or equivalently
+		* q' = slope-2 H p
+	* then
+		* H (q, p, t) + L (q, q', t) = p * q'
+* slopes of L, H
+	* slope-2 L = p
+		* definition of momentum
+	* slope-1 L = p'
+		* proof
+			* slope-1 L
+			* = 
+				* Euler-Lagrange equation
+			* slope (slope-2 L)
+			* =
+				* definition of momentum
+			* slope p
+	* slope-2 H = q'
+		* Legendre transform property
+	* slope-1 H = - p'
+		* proof
+			* slope-1 H
+			* =
+				* Legendre transform property
+			* - slope-1 L
+			* =
+				* another slope property, see above
+			* - p'
+* the 2 of these equations about the slopes of H are the "Hamiltonian equtions of motions"
+* the Euler-Lagrange equation on the Lagrangian is similarly easily derivable from the Hamiltonian formulation
+* the Hamiltonian is (kinetic + potential) energy
+	* proof
+		* the Lagrangian is (kinetic - potential) energy
+		* (p * q') is the kinetic energy
+* other sources
+	* Dr. Jorge S. Diaz: The origin of Hamiltonian Mechanics
+		\ links-to external https://youtu.be/m-r1ji9zRVI?si=ZZkyV7UZ_GSz9PoN
+		* tells as Hamilton did
+		* does not reference the Legendre tranform
