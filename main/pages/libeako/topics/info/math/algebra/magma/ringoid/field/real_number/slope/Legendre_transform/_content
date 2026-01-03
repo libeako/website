@@ -1,0 +1,45 @@
+\ id zeyldjmzebebncfh
+* definition
+	* 2 functions are Legendre transform of each other when their slopes are inverses of each other
+	* this definition does not fully determine one function from the other, but it does up to shifts with a constant
+* suppose f and g have iverible slopes
+* proposition
+	* are equivalent
+		* slope g = inverse (slope f)
+			* "slopes connection"
+		* forall x, y
+			* (y = slope f x) or (x = slope g y)
+				* "variable connection"
+			* f x + g y = x * y
+				* upto constant shift
+				* "sum equation"
+* proof
+	* =>
+		* equation for an anti-slope generally
+			* forall h x. h x = integral (from 0 to x) (slope h)
+		* take arbitrary x, y
+			* substitute the anti-slope formula for f and g into the "sum equation"
+				* integral (from 0 to y) (inverse (slope f)) + integral (from 0 to x) (slope g) = x * y
+					* this equation is true
+						* proof
+							* geometrically
+								* the sum of (the integral of function) and (the integral of its inverse) extend each other to a rectangle area
+									* with size (x * y)
+	* <=
+		* take the equation that determines g in terms of f and the slope of it and the inverse of that
+		* take the slope of this equation; do not get frightened by the multiplicity of slopes and inverses, the complex terms will cancel each other out, really
+* properties
+	* if f, g have other and common variable then in that variables
+		* slopes (f + g) = 0
+		* this is a consequence  of the "sum equation"
+	* this gives a suitable definition for such a g
+		* g y
+		* =
+			* the "sum equation"
+		* x * y - f x
+		* =
+			* "variable connection" - substitute (inverse (slope f) y) for x
+		* ...
+* other sources
+	* Jess Riedel
+		\ links-to external https://blog.jessriedel.com/2017/06/28/legendre-transform/
