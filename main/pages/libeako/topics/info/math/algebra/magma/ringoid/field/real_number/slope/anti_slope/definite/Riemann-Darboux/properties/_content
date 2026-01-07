@@ -39,3 +39,10 @@
 				\ links-to internal cogycdvhpmzoiaaq
 		* pointwise-min {f, g} = ((f + g) - norm (f - g)) / 2
 		* pointwise-max {f, g} = ((f + g) + norm (f - g)) / 2
+* for uniformly continuous bivariate functions
+	* integrations over the different variables commutes
+		\ id zfzinxrqukzupbdf
+		* proof
+			* with subdividing the domain to ever more resolution
+			* is easy to imagine
+			* Titchmarsh proved it

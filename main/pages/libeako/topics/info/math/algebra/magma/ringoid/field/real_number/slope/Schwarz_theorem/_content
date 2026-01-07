@@ -1,0 +1,81 @@
+\ id vwpfweblzqqkyzty
+* proposition: partial slopes of continuously slopy bivariate functions commute
+	* if
+		* f: R^2 -> R
+			* has all second-slopes, all continous
+	* then
+		* on f
+			* slope-1 >>> slope-2 = slope-2 >>> slope-1
+* proofs
+	* simple intuitive
+		* let the point of interest be the origo
+		* let h, k be infinitessimally close to zero
+		* let ~ be approximate equality
+		* then
+			* slope1-2 (slope-1 f) (0, 0)
+			* ~
+			* (slope-1 f (0, k) - slope1-1 f (0, 0)) / k
+			* ~
+			* ((f (h, k) - f (0, k)) / h - (f (h, 0) - f (0, 0)) / h) / k
+			* ~
+			* (f (h, k) - f (0, k) - f (h, 0) + f (0, 0)) / (h * k)
+			* observe that this is symmetric in {h, k}, hence taking the slopes in the opposite order equals to this same, hence the order of the sloping does not matter
+		* more accurately
+			\ links-to external https://www.ime.usp.br/~oliveira/ELE-SchwarzTheorem.pdf
+	* via integration
+		* we can derive the commutativity of sloping from
+			* the commutativity of anti-sloping
+				\ links-to internal zfzinxrqukzupbdf
+		* let [xs, xe], [ys, ye] be arbitrary interval surrounding the point of interest
+		* integral (over [xs, xe])
+			* integral (over [[ys, ye]])
+				* slope-2 (slope-1) f
+		* =
+			* fundamental theorem of calculus
+				\ links-to internal eidifgibmemuavvz
+		* integral (over [xs, xe])
+			* x -> (slope-1) f (x, ye) - (slope-1) f (x, ys)
+		* =
+			* fundamental theorem of calculus
+				\ links-to internal eidifgibmemuavvz
+		* +
+			* + (f (xe, ye) - f (xs, ye))
+			* - (f (xe, ys) - f (xs, ys))
+		* observe that this is symmetric in {x, y}, hence
+		* =
+			* integral (over [xs, xe])
+				* integral (over [[ys, ye]])
+					* slope-2 (slope-1) f
+			* integral (over [ys, ye])
+				* integral (over [[xs, xe]])
+					* slope-1 (slope-2) f
+		* by the commutativity of the anti-slope: we can swap the integral-taking of one of these to arrive at same anti-sloping to be able to sum them
+		* 0
+		* =
+		* -
+			* integral (over [xs, xe])
+				* integral (over [[ys, ye]])
+					* slope-2 (slope-1) f
+			* integral (over [ys, ye])
+				* integral (over [[xs, xe]])
+					* slope-1 (slope-2) f
+		* =
+		* -
+			* integral (over [xs, xe])
+				* integral (over [[ys, ye]])
+					* slope-2 (slope-1) f
+			* integral (over [[xs, xe]])
+				* integral (over [ys, ye])
+					* slope-1 (slope-2) f
+		* =
+			* integral (over [xs, xe])
+				* integral (over [[ys, ye]])
+					* -
+						* slope-2 (slope-1) f
+						* slope-1 (slope-2) f
+		* we got that the integral of a continuous integrand over arbitrary intervals are 0
+		* this implies that the integrand is 0 everywhere
+		* thus
+			* =
+				* slope-2 (slope-1) f
+				* slope-1 (slope-2) f
