@@ -1,0 +1,11 @@
+\ id bucmtlexsibzxifq
+* from Newton: F - ma = 0
+* a vector being euqal to 0 is equivalent to its dot-products with each vector being 0
+* forall dr . (F - ma) * dr = 0
+	* (force-vector * space-vector) is work
+	* but not real physical work, only imagined work, that could potentially happen if the particle moved that way
+* if we restrict the virtual displacements to along the tangent of movement
+	* dr is said to be a "virtual displacement"
+	* the work is said to be "virtual work"
+	* crucial observation:
+		* the virtual displacement is perpendicual to the constraint forces, hence those do not matter, we can remove them from the equality
