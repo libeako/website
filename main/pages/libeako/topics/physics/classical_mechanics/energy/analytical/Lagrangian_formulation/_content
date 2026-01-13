@@ -1,0 +1,23 @@
+\ id ugzrzggachwdnvph
+* the Newtonian formulation of classical mechanics is great, by its simplicity and intuitiveness; but it is too difficult to use in complex situations [complex constraints]
+* definition og the "Lagrangian"
+	* L := K - P
+* equation of motion
+	* slope (along x) L = slope (slope (along v) L)
+	* equivalen to Newton' second law
+		* proof
+			\ links-to internal njuahwglqbzdpmsd
+	* this is a variant of the mathematical Euler differential equation on
+		* L (t, d, v) = m * v^2 / 2 - U d
+		* d depending on t
+		* v being the slope of d depending on t
+		* hence the name "Euler-Lagrange equation" of this physical variant
+		* hence
+			\ links-to internal wdxehzwqtplkmncw
+			* the path of the object of interest is where the integral of the Lagrangian is stationary
+	* conservation of total momentum in some of the coordinates falls out trivially from the equation of motion and the supposition that the Lagrangian does not explicitly depend on those coorindates
+* the integral of the lagrangian is said to be the "action"
+* the action being a line-integral does not depend on the parameterization of the line; hence by equivalence the Euler-Lagrange equation is true for all parameterizations too [for all coordinate systems with full independence among its coordinates]
+	* this is the big advantage of the Lagrangian formulation of classical mechanics
+* when no explicit dependence on time
+	\ links-to internal sioukufbajdjaghq

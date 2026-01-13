@@ -1,0 +1,35 @@
+\ id tslyxaumcvixgxep
+* conservation of total momentum in some of the coordinates falls out trivially from the equation of motion and the supposition that the Lagrangian does not explicitly depend on those coorindates
+* more generally:
+	* proposition
+		* if 
+			* forall t. slope (e -> L (x e t, (x e)' t)) = 0
+		* then
+			* (slope (along input velocity) L * (slope (along e) x)) is constant
+	* proof
+		* forall t
+			* 0
+			* =
+				* supposition of the theorem
+			* slope (along e) (L (x e t, slope (along t) (x e' t))))
+			* =
+			* +
+				* slope (along input position) L * slope (along e)                  (x e t)
+				* slope (along input velocity) L * slope (along e) (slope (along t) (x e t))
+			* =
+			* +
+				* slope (along t) (slope (along input velocity) L) * slope (along e)                  (x e t)
+				*                  slope (along input velocity) L  * slope (along e) (slope (along t) (x e t))
+			* +
+				* slope (along t) (slope (along input velocity) L) *                  slope (along e) (x e t)
+				*                  slope (along input velocity) L  * slope (along t) (slope (along e) (x e t))
+			* =
+			* slope (along t) (slope (along input velocity) L * slope (along e) (x e t))
+* important special case
+	* x e t := q t + e
+		* (slope (along e) x = 1)
+		* (slope (along input velocity) L) is constant
+			* this is the momentum
+* other sources
+	* Your Daily Equation #25: Noether's Amazing Theorem: Symmetry and Conservation
+		\ links-to external https://youtu.be/w7Q5mQA_74o?si=NsKT_em7kiNTaIjG

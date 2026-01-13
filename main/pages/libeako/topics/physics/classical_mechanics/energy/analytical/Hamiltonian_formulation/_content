@@ -15,6 +15,9 @@
 		* q' = slope-2 H p
 	* then
 		* H (q, p, t) + L (q, q', t) = p * q'
+			\ id fitjdgnmlftqdnba
+* notation
+	* "r" be the physical position of the particles
 * slopes of L, H
 	* slope-2 L = p
 		* definition of momentum
@@ -38,6 +41,8 @@
 			* =
 				* another slope property, see above
 			* - p'
+* equality with total energy
+	\ links-to internal iwnhxzqdxjfywlut
 * the 2 of these equations about the slopes of H are the "Hamiltonian equtions of motions"
 * the Euler-Lagrange equation on the Lagrangian is similarly easily derivable from the Hamiltonian formulation
 * the Hamiltonian is (kinetic + potential) energy

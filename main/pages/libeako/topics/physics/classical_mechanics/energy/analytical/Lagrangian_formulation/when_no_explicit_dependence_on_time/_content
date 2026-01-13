@@ -1,0 +1,42 @@
+\ id sioukufbajdjaghq
+* the Hamiltonian is conserved
+	* consequence
+		* energy conservation
+			* as the Hamiltonian = the total energy
+				\ links-to internal iwnhxzqdxjfywlut
+	* proof
+		* 0
+		* =
+			* assumption of the theorem
+		* - slope (along input time) L
+		* =
+		* +
+			* - slope L
+			* + sum (over index i) (slope (along input (q  i)) * (q i)' )
+			* + sum (over index i) (slope (along input (q' i)) * (q i)'')
+		* =
+			* using the definition of (abstract momentum)
+		* +
+			* - slope L
+			* + sum (over index i) (slope (along input (q  i)) * (q i)' )
+			* + sum (over index i) (                    p  i ) * (q i)'')
+		* =
+			* using the Euler-Lagrange equation
+		* +
+			* - slope L
+			* + sum (over index i) (                    p'  i ) * (q i)' )
+			* + sum (over index i) (                    p   i ) * (q i)'')
+		* =
+		* +
+			* - slope L
+			* + sum (over index i) (p' i) * (q i)' )
+			* + sum (over index i) (p  i) * (q i)'')
+		* =
+			* differentiate product
+		* +
+			* - slope L
+			* + sum (over index i) (slope (p i * (q i)'))
+		* =
+			* definition of the Hamiltonian
+				\ links-to internal fitjdgnmlftqdnba
+		* H

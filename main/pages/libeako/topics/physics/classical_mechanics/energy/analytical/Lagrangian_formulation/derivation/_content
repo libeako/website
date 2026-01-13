@@ -20,22 +20,12 @@
 			* slope (along x) K = 0
 		* P does not depend on velocity, hence
 			* slope (along v) P = 0
-	* hence we can just add to each side's energy the energy of the other side
-		* slope (along x) (K + -P) = slope (slope (along v) (K - P))
-	* with L := K - P
-		* slope (along x) L = slope (slope (along v) L)
-	* L is the "Lagrangian"
-	* this is a variant of the mathematical Euler differential equation on
-		* L (t, d, v) = m * v^2 / 2 - U d
-		* d depending on t
-		* v being the slope of d depending on t
-	* hence the name "Euler-Lagrange equation" of this physical variant
-	* hence
-		\ links-to internal wdxehzwqtplkmncw
-		* the path of the object of interest is where the integral of the Lagrangian is stationary
 	* other sources
 		* Hakim at StackExchange
 			\ links-to external https://math.stackexchange.com/a/676355
+	* hence we can just add to each side's energy the energy of the other side
+		* slope (along x) (K + -P) = slope (slope (along v) (K - P))
+	* each step works in the flipped direction too, hence equivalence is proved
 * from D'Alambert theorem for general coordinate
 	* link to the D'Alambert theorem
 		\ links-to internal bucmtlexsibzxifq

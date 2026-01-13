@@ -1,0 +1,82 @@
+\ id iwnhxzqdxjfywlut
+* the physical position "r" of the particles is a function of the abstract coordinates "q", which are function of time
+* if r does not depend on time explicitly then the Hamiltonian is the total energy
+* proof
+	* the total kinetic energy
+		* T
+		* =
+			* by the definition of "kinetic energy"
+		* = (1/2) * (sum (index k) (m k * (r k)'^2))
+		* =
+			* change r  to the abstract coordinates
+		* *
+			* * sum (index k)
+				* * m k
+				* * sum (index i) (slope (along input i) (r k) * (q i)')
+				* * sum (index j) (slope (along input j) (r k) * (q j)')
+			* / 2
+		* =
+			* swap order of summation
+		* *
+			* * sum (index (i, j))
+				* sum (index k)
+					* * m k
+					* * slope (along input i) (r k)
+					* * slope (along input j) (r k)
+				* (q i)' * (q j)'
+			* / 2
+				* =
+			* introduce A :=
+				* sum (index k)
+					* * m k
+					* * slope (along input i) (r k)
+					* * slope (along input j) (r k)
+		* sum (index (i, j)) (A i j * (q i)' * (q j)') / 2
+	* the momentum
+		* p i
+		* =
+			* by definition of (abstract momentum) from the Lagrangian
+		* slope (along input (q i)') L
+		* =
+			* drop the potential energy term of the Lagrangian
+				* this can be done because it does not depend velocities
+		* slope (along input (q i)') T
+		* =
+			* by former result about T
+		* slope (along input (q i)') (sum (index (i, j)) (A i j * (q i)' * (q j)') / 2)
+		* =
+			* move (1 / 2) out
+		* *
+			* * slope (along input (q i)') (sum (index (i, j)) (A i j * (q i)' * (q j)'))
+			* / 2
+		* =
+			* by differentiation of products
+		* *
+			* +
+				* sum (index k) (A i k * (q k)')
+				* sum (index l) (A l i * (q l)')
+			* / 2
+		* =
+			* A is symmetric
+		* sum (index k) (A i k * (q k)')
+	* * H (q, p, t)
+	* =
+		* basic property of the Hamiltonian
+			\ links-to internal fitjdgnmlftqdnba
+	* sum (index i) (p i * (q i)') - L (q, q', t)
+	* =
+		* inserting value of momentum
+	* sum (index i) (sum (index j) (A i j * (q j)' * (q i)') - L (q, q', t)
+	* =
+		* merge the summations
+	* sum (index (i, j)) (A i j * (q j)' * (q i)') - L (q, q', t)
+	* =
+		* using former result about T
+	* 2 * T - (T - U)
+	* = T + U
+* other sources
+	* University of California San Diego, Department of Physics 
+		\ links-to external http://courses.physics.ucsd.edu/2009/Fall/physics110a/
+		* 18 Lecture 11-9
+			\ links-to external https://courses.physics.ucsd.edu/2009/Fall/physics110a/documents/Lecture11-6.pdf
+			* page 4
