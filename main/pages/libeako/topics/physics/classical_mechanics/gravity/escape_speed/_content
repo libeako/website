@@ -1,0 +1,29 @@
+\ id ruhvqogsippvnpzi
+* the escape speed can be derived easily based on
+	* energy conservation
+		\ links-to internal iwnhxzqdxjfywlut
+* assumptions
+	* M - the big mass to escape from
+	* m - the small mass, which escapes
+	* the big mass is concentrated in a point
+	* r - the distance from the big mass
+* energy just needed to escape = work done over the way away
+	* =
+	* integral (over [r, infinity)) (x -> G * M * m / r ^ 2)
+	* =
+	* G * M * m * integral (over [r, infinity)) (x -> 1 / r ^ 2)
+	* =
+	* G * M * m / r
+	* =
+	* m * g * r
+* escape speed
+	* = ((kinetic energy) * 2 / m) ^ (1/2)
+	* =
+	* = ((G * M * m / r) * 2 / m) ^ (1/2)
+	* =
+	* = ((G * M / r) * 2) ^ (1/2)
+	* =
+	* = ((g * r) * 2) ^ (1/2)
+* other sources
+	* Wikipedia
+		\ links-to external https://en.wikipedia.org/wiki/Escape_velocity
