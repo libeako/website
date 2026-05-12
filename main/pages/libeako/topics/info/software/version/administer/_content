@@ -3,6 +3,14 @@
 	* good video introduction about the basics
 		* LearnThatStack: Git Will Finally Make Sense After This
 			\ links-to external https://youtu.be/Ala6PHlYjmw?si=-hlAmC3f2Vzv5SQw
+	* folder layout
+		* "working tree" - where the versioned data is
+			* configure in git config file under section "core" as 'worktree = ...'
+		* "git directory" - were the git data is
+			* it is normally the ".git" folder but when not then a ".git" file takes its place, in which configure as "gitdir: ..."
+		* other sources
+			* Ooker on Stackoverflow
+				\ links-to external https://stackoverflow.com/a/72586248
 	* deleting history
 		* to save storage cost for github hosting a website
 		* this algorithm deletes all the history

@@ -1,0 +1,6 @@
+\ id zagcjqlvcvgzlwrm
+* how to query the folder of the currently run script-file
+	* "$(dirname "$(realpath "$0")")"
+		* example to invoke an other script-file in the same folder
+			* readonly path_here="$(dirname "$(realpath "$0")")"
+			* "$path_here"/other-script.sh

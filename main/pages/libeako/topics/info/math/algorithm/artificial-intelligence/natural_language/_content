@@ -5,10 +5,18 @@
 		* loop
 			* take a couple of words near each other
 			* move their vectors somewhat closer to each other
+* high dimensional vector search
+	* "hierarchical navigable small worlds"
+		\ links-to external https://youtu.be/77QH0Y2PYKg?si=Q3rWz5gIuniPcwz_
 * attention mechanism
 	* “Attention is All You Need”
+	* making the latent representation more accurate
+		* the general latent representation of words is the same for the same word even with different meanings [example: "bank of river", "bank of money"]; the attention mechanism moves this common latent representation with a function of the context
 	* the Q, K, V neural-nets
 		* are constant inside an attention block
 		* they learn the language
 		* 3Blue1Brown: Attention in transformers, step-by-step
 			\ links-to external https://youtu.be/eMlx5fFNoYc?si=SJdLPX0Phw7ZEgs0
+	* multi-head
+		* multiple attention "head"s do the same thing independently on the whole token-series
+			* thus computes multiple aspects of an attender
