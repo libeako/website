@@ -1,8 +1,66 @@
 \ id ofkaceiyrpugjkfg
+* staging is unnecessary complication of the version control system
 * git
-	* good video introduction about the basics
-		* LearnThatStack: Git Will Finally Make Sense After This
-			\ links-to external https://youtu.be/Ala6PHlYjmw?si=-hlAmC3f2Vzv5SQw
+	* UI design is bad
+	* main concepts to understand
+		* DAG of nodes
+		* nodes can be viewed as commits or changesets or snapshots
+		* branches are [represented by] just pointers to nodes
+		* "HEAD" is a pointer to a node or to a branch
+			* when it points not to a branch then it is said to be "detached"
+		* good video introduction about the basics
+			* LearnThatStack: Git Will Finally Make Sense After This
+				\ links-to external https://youtu.be/Ala6PHlYjmw?si=-hlAmC3f2Vzv5SQw
+	* commands
+		* command 'checkout' moves the HEAD pointer where nodes are commits or changesets or snapshots depending on how to and updates the working directory
+		* command 'reset' moves HEAD 
+			* if points to a branch [pointer] then that gets moved too
+			* makes (the rest of the branch from the new HEAD position) "orphan"ed
+			* versions
+				* '--soft'
+					* only changes the branch pointer, does not change the stage or the working dir
+					* can be used for example to combine later changesets
+				* '--mixed' [the default]
+					* like 'soft' but also empties the stage
+					* can be used for example to split a changeset
+				* '--hard' [very dangerous]
+					* like 'mixed' but also resets the working dir to the new HEAD position, hence loses all later changesets
+			* in a 'git reset HEAD' "head" refers not to as what is moved (because it is always the HEAD that is moved) but as the target position of the movement
+				* such command is used to destage files
+					* more modern versions of git provide 'git restore --staged' for this purpose
+						* which is still ugly IMO
+					* the good UI design would be
+						* git stage add    <file>
+						* git stage remove <file>
+		* command 'revert x' at HEAD creates a new commit which is the opposite of x
+		* command 'rebase'
+			* recreates given branch from given point
+				* the newly created nodes
+				* have equivalent [relatively to the position] content
+				* new hash [as they are not the same nodes]
+					* hence do not rebase public branch
+		* command 'reflog' shows the orphaned nodes which are not yet garbage-collected
+	* how to
+		* edit a deep changeset
+			* 'git rebase -i'
+			* 'git reset HEAD~'
+				* do not omit "~" from the end of "HEAD"
+		* deleting history
+			* to save storage cost for github hosting a website
+			* this algorithm deletes all the history
+				* take the storage of the history away from git
+					* mv .git .git-backup
+				* create the repository like it would not exist before
+					* git init
+				* get back the configuration of the repository
+					* cp .git-backup/config .git/config
+				* create a first commit in the new history
+					* git add --all git commit -m "1"
+				* push this whole renewal of the history to the server
+					* git push -u --force origin master
+				* delete folder .git-backup
+			* to delete only part of the history is also possible
+				\ links-to external https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history
 	* folder layout
 		* "working tree" - where the versioned data is
 			* configure in git config file under section "core" as 'worktree = ...'
@@ -11,19 +69,3 @@
 		* other sources
 			* Ooker on Stackoverflow
 				\ links-to external https://stackoverflow.com/a/72586248
-	* deleting history
-		* to save storage cost for github hosting a website
-		* this algorithm deletes all the history
-			* take the storage of the history away from git
-				* mv .git .git-backup
-			* create the repository like it would not exist before
-				* git init
-			* get back the configuration of the repository
-				* cp .git-backup/config .git/config
-			* create a first commit in the new history
-				* git add --all git commit -m "1"
-			* push this whole renewal of the history to the server
-				* git push -u --force origin master
-			* delete folder .git-backup
-		* to delete only part of the history is also possible
-			\ links-to external https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history
