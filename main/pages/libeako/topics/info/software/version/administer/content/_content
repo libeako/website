@@ -1,0 +1,29 @@
+\ id rsmnxoxswtjpkshf
+* command 'checkout' moves the HEAD pointer where nodes are commits or changesets or snapshots depending on how to and updates the working directory
+* command 'reset' moves HEAD 
+	* if points to a branch [pointer] then that gets moved too
+	* makes (the rest of the branch from the new HEAD position) "orphan"ed
+	* versions
+		* '--soft'
+			* only changes the branch pointer, does not change the stage or the working dir
+			* can be used for example to combine later changesets
+		* '--mixed' [the default]
+			* like 'soft' but also empties the stage
+			* can be used for example to split a changeset
+		* '--hard' [very dangerous]
+			* like 'mixed' but also resets the working dir to the new HEAD position, hence loses all later changesets
+	* in a 'git reset HEAD' "head" refers not to as what is moved (because it is always the HEAD that is moved) but as the target position of the movement
+		* such command is used to destage files
+			* more modern versions of git provide 'git restore --staged' for this purpose
+				* which is still ugly IMO
+			* the good UI design would be
+				* git stage add    <file>
+				* git stage remove <file>
+* command 'revert x' at HEAD creates a new commit which is the opposite of x
+* command 'rebase'
+	* recreates given branch from given point
+		* the newly created nodes
+		* have equivalent [relatively to the position] content
+		* new hash [as they are not the same nodes]
+			* hence do not rebase public branch
+* command 'reflog' shows the orphaned nodes which are not yet garbage-collected
