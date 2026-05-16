@@ -1,7 +1,11 @@
 \ id lfqqfmkcdtjpvsll
-* keyboard
-	\ links-to internal suwvnfbjozjjiwif
-* curved monitors - are bad
-	\ links-to internal frpzqkzecbtuflgh
-* sound
-	\ links-to internal rirdlrmjdhjwnpkv
+* memory
+	* Bit Byte Talks: DRAM v/s SRAM difference explained for Beginners
+		\ links-to external https://youtu.be/l-QEmf2hA-s?si=6bSX3hyFU3IWoSa5
+* peripherals
+	* keyboard
+		\ links-to internal suwvnfbjozjjiwif
+	* curved monitors - are bad
+		\ links-to internal frpzqkzecbtuflgh
+	* sound
+		\ links-to internal rirdlrmjdhjwnpkv
