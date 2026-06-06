@@ -12,14 +12,17 @@
 		\ links-to internal iqurvwnknaaskphu
 	* combinatorics
 		\ links-to internal hrjoqgmpieubzdre
+	* continuous
+		\ links-to internal rotagwdyyrgmtwzb
+* applied
 	* cryptology
 		\ links-to internal flywgepfcilbuavn
 	* geometry
 		\ links-to internal bdpvvrypwomoanzc
-	* continuous
-		\ links-to internal rotagwdyyrgmtwzb
-* algorithm
-	\ links-to internal jqfejjmyqvtfjdzf
+	* probability
+		\ links-to internal ghxtwhwyptmixyhd
+	* algorithm
+		\ links-to internal jqfejjmyqvtfjdzf
 * other sources
 	* ProofWiki
 		\ links-to external https://proofwiki.org/

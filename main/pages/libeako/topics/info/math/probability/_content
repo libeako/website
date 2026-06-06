@@ -1,0 +1,6 @@
+\ id ghxtwhwyptmixyhd
+* Kalman filter
+	* introduction
+		* DataMListic: Kalman Filter is Just a Product of Gaussians
+			\ links-to external https://youtu.be/HZgv6B9Sq1E?si=IMch9vEIZq8ztuLV
+			* the math [product of Gaussians is Gaussian] is trivial to check
