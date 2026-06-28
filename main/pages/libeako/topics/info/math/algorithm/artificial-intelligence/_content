@@ -10,7 +10,7 @@
 * natural language
 	\ links-to internal goicodjefpqovtot
 * Kullback–Leibler divergence as error function
-	* in my opinion
+	* in my noob opinion
 		* this is wrong choice
 		* my alternative
 			* with
@@ -27,3 +27,6 @@
 				\ links-to external https://youtu.be/qJeaCHQ1k2w?si=-aefpMsgsEkSOlFZ
 			* DataMListic: Variational Autoencoder - Explained
 				\ links-to external https://youtu.be/geH5HnRapRs?si=VBnjQM5cD19hLzU7
+* retrival augmented generation
+	* Luis Serrano Academy: Retrieval Augmented Generation (RAG), Search, and Vector Databases
+		\ links-to external https://youtu.be/sKcfJwjLiuA?si=-5NrXbVEhBEw4HG_
