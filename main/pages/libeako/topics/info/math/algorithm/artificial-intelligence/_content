@@ -9,17 +9,8 @@
 		\ links-to external https://youtu.be/SgC6AZss478?si=6-8rIB46aMEK34UZ
 * natural language
 	\ links-to internal goicodjefpqovtot
-* Kullback–Leibler divergence as error function
-	* in my noob opinion
-		* this is wrong choice
-		* my alternative
-			* with
-				* 
-					* f := log >>> square >>> exp
-				* f (q / p) + f ((1 - q) / (1 - p))
-			* notes
-				* i eliminate the log with an exp, because i do want high difference between the probability values to be punished highly
-				* i punish the difference from the other side too with (1 - )
+* distribution-distancing
+	\ links-to internal xshihlippyjvtgcc
 * autoencoder
 	* variational
 		* other sources

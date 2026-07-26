@@ -1,0 +1,10 @@
+\ id xshihlippyjvtgcc
+* Kullback–Leibler divergence as error function
+* my invention for even i do not know what
+	* with
+		* 
+			* f := log >>> square >>> exp
+		* f (q / p) + f ((1 - q) / (1 - p))
+	* notes
+		* i eliminate the log with an exp, because i do want high difference between the probability values to be punished highly
+		* i punish the difference from the other side too with (1 - )
