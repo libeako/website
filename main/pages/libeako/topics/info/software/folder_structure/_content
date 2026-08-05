@@ -1,0 +1,22 @@
+\ id isoiiagkazaqohgh
+* against hidden files
+	* they cause a lot of problems
+		* we need a mechanism to switch their visibility and all methods of file-management do have such method
+			* sometimes we accidentally leave the hidden files
+				* visible, and because of that include them into the selected files for deletion
+				* invisible, and then we miss them from noticing or from intended processing
+	* we do not need them; instead use separation
+		* for distiguishing the 'config' folder, use a separate 'data' folder:
+			* home
+				* data
+				* config
+		* for safety backupping use a separate 'important' folder:
+			* data
+				* important
+				* other
+		* for version-control:
+			* project
+				* source
+					* working
+					* git
+				* build
