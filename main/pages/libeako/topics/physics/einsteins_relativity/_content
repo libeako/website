@@ -1,6 +1,15 @@
 \ id tgaghplcnwyqlkec
-* einstein's relativity is a mind-blending; i started to learn it because i wanted to learn quantum physics and quickly recognized that some basic knowledge of einstein's relativity is desirable for that; the opposite is false, that is: quantum physics is not necessary for relativity; hence it is good to learn relativity before quantum physics
+* einstein's relativity is a mind-bending; i started to learn it because i wanted to learn quantum physics and quickly recognized that some basic knowledge of einstein's relativity is desirable for that; the opposite is false, that is: quantum physics is not necessary for relativity; hence it is good to learn relativity before quantum physics
 * special
+	* the Lorentz transform
+		\ links-to internal lhrvwwyesiaggykd
+		* i think it is best to start with this
+	* time dilation and length contraction
+		* both can be derived easily from the Lorentz transform
+			* for both
+				* transform from which coordsys to which coordys [2 of them play a role: stationary and the moving relative to the watch or rod]
+					* exactly one of the directions is usable
+						* the other one is not usable because we need to take care of the other property [distance for time, time for distance]
 	* Special Relativity with Brian Greene 
 		* this is the best educational material that i have seen till now
 		* he does not require knowledge of physics or math, still manages to make the student understand the basic concepts, in very short time
