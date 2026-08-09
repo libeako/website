@@ -1,0 +1,40 @@
+\ id rqjziummgnieryhh
+* the derivation
+	* proposition
+		* KE = (m * c^2) * (y - 1)
+	* proof
+		* KE
+		* = 
+			* by the work done to accelerate an object from speed 0
+		* sum (from 0 to x-end) (F * dx)
+		* =
+		* m * sum (by x) (from 0 to x-end)  (y^3 * a * x)
+			* where y = 1 / (1 - v-end^2 / c^2)
+		* =
+			* a * dx = (dv / dt) * dx = dv * dx / dt = v * dv
+		* m * sum (by v) (from 0 to v-end) (y^3 * v * v)
+		* =
+			* z := 1 - v^2 / c^2
+				* then
+					* z-start = 1
+					* 
+						* dz / dt = (-2/c^2) * v * (dv / dt)
+						* dz = (-2/c^2) * v * dv
+						* v * dv = (-1/2) * c^2 * dz
+		* (- m * c^2 / 2) * sum (by z) (from 1 to z-end) (z^(-3/2))
+		* =
+		* (- m * c^2 / 2) * lift2 (-) (z^(-1/2) / (-1/2)) z-end 1
+		* =
+			* cancelling constants
+		* (m * c^2) * lift2 (-) (z^(-1/2))) z-end 1
+		* =
+		* (m * c^2) * (1 / sqrt (1 - v-end^2 / c^2) - 1)
+		* =
+		* (m * c^2) * (y - 1)
+* connection with the classical case is when v is small
+	* (as v converges down to 0) (relativistic KE being close to classical KE)
+	* is equivalent to
+	* (as x converges down to 0) ((1 / sqrt (1 - x) - 1) being close to (x / 2))
+		* x playing as (v^2/ c^2)
+* other source
+	\ links-to external https://astro.dur.ac.uk/~done/SR6.pdf
