@@ -1,11 +1,12 @@
 \ id lhrvwwyesiaggykd
-* with (g v = 1 / sqrt (1 - v ^ 2 / c ^ 2))
+* with (y v = 1 / sqrt (1 - v ^ 2 / c ^ 2))
 	* forward
-		* x' = (g v) * (x  - v * t )
-		* t' = (g v) * (t  + (v / c ^ 2) * x )
+		* x' = (y v) * (x  - v * t )
+		* t' = (y v) * (t  + (v / c ^ 2) * x )
 	* backward [the negativity-change of v]
-		* x  = (g v) * (x' + v * t')
-		* t  = (g v) * (t' - (v / c ^ 2) * x')
+		* x  = (y v) * (x' + v * t')
+		* t  = (y v) * (t' - (v / c ^ 2) * x')
+* in ASCII "y" is the usual name of the Lorentz factor, because it is visually the closest to the greek gamma character, which is the traditional name
 * can be derived from elementary space properties like homogeneity, isotropy, ... and relativity
 	* one good source is
 		* Nianjun Tan, Hangzhou, China: A Symmetry-First Elementary Derivation of the Lorentz Transformation
