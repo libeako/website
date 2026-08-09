@@ -1,0 +1,36 @@
+\ id gmzjcrvpvwzqvpxc
+* lemma
+	* proposition
+		* (d/dt) y = y^3 * v * a / c^2 
+	* proof
+		* (d/dt) y
+		* =
+		* (d/dt) (1 - v^2 / c^2) ^ (-1/2)
+		* =
+		* (-1/2) * (1 - v^2 / c^2) ^ (-3/2) * (-1 / c^2) * 2 * v * (dv/dt)
+		* =
+		* (1 - v^2 / c^2) ^ (-3/2) * v * (dv/dt) / c^2
+		* =
+		* y^3 * v * a / c^2
+* derivation of force
+	* F
+	* =
+		* in classical mechanics force is defined as F = m * a; relativity breaks this, as it has a speed limit [acceleration must slow down over time]
+		* so we have to use the other definition, via momentum
+	* dp / dt
+	* =
+	* (d/dt) (y * m * v)
+	* =
+		* differentiate product
+	* m * ((d/dt) y * v + y * (d/dt) v)
+	* =
+		* using the lemma about ((d/dt) y) 
+	* m * (y^3 * v * a * v / c^2 + y * a)
+	* =
+	* m * a * y * (y^2 * v^2 / c^2 + 1)
+	* =
+	* m * a * y * y ^ 2
+	* =
+	* y ^ 3 * m * a
+* additional source
+	\ links-to external https://www.sparknotes.com/physics/specialrelativity/dynamics/section3/

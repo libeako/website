@@ -13,8 +13,7 @@
 	* momentum
 		* in classical mechanics the main property of momentum is preservation, hence we want preservation in relativity too; the classical momentum is not preserved in the relativistic world; the momentum contains one and only one factor which is different in the classical and relativistic worlds - time; but we can correct time with a simple Lorentz transform of it: prel = pclass * y
 	* force
-		* in classical mechanics force is defined as F = m * a; relativity breaks this, as it has a speed limit [acceleration must slow down over time]
-		* so we have to use the other definition, via momentum: F = dp / dt
+		\ links-to internal gmzjcrvpvwzqvpxc
 	* Special Relativity with Brian Greene 
 		* this is the best educational material that i have seen till now
 		* he does not require knowledge of physics or math, still manages to make the student understand the basic concepts, in very short time
