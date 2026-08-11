@@ -16,6 +16,15 @@
 		\ links-to internal gmzjcrvpvwzqvpxc
 	* kinetic energy
 		\ links-to internal rqjziummgnieryhh
+	* total energy "E" := y * m * c^2
+	* energy-momentum relation
+		* for massive objects
+			* proposition
+				* E^2 = (p*c)^2 + (m*c^2)^2
+			* proof is trivial
+		* for massless objects
+			* i just accept that it is true empirically
+			* can be deduced from Lagrangian too
 	* Special Relativity with Brian Greene 
 		* this is the best educational material that i have seen till now
 		* he does not require knowledge of physics or math, still manages to make the student understand the basic concepts, in very short time
